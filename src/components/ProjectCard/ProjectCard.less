@@ -1,8 +1,11 @@
-@project-card-bg: rgba(61, 47, 188, 0.5);
+@project-card-bg: rgb(141, 128, 254);
 
 .project-card{
-	width: 480px;
-	height: 320px;
+	// width: 420px;// 靠 flex 来计算宽度，而不是写死
+	height: 220px;
+	padding: 1.5rem;
 	background:@project-card-bg;
 	border-radius: 1.5rem;
+	flex: 1;
+	transition: all 0.3s ease-in-out;
 }

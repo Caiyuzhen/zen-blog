@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const MainContainer:FC<IProps> = ():ReactElement => {
-	// const[]
+
 
 	return (
 		<>

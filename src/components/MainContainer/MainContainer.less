@@ -1,5 +1,11 @@
+// 项目卡片的布局
 .context-container{
 	display: flex;
-	flex-direction: column;
+	// 平均分配三张卡片的宽度
+	flex-direction: row;
+	gap: 2rem;
+	width: 100%;
+	overflow: auto;
 	place-items: center; //flex 内元素全部居中	
+	transition: all 0.3s ease-in-out;
 }
