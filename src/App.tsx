@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState, useEffect, useRef } from 'react'
+import './App.less'
+import TitleBar from './components/TitleBar/TitleBar'
+import MainContainer from './components/MainContainer/MainContainer'
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
- 
+		<TitleBar/>
+		<MainContainer/>
     </div>
   )
 }
