@@ -1,2 +1,2 @@
-# zen-blog
-Zen' blog &amp; website
+# 启动项目
+npm run dev
