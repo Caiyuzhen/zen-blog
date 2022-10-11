@@ -1,13 +1,24 @@
 @filter-container-bg: rgba(240, 240, 240, 0.5);
-@contact-color: rgba(253, 252, 255, 0.5);
+@filter-selector: rgba(255, 255, 255, 0.5);
+@contact-color: rgba(171, 159, 196, 0.5);
+@tab-font-normal: rgba(194, 187, 209, 0.5);
+@tab-font-selector: rgba(58, 44, 88, 0.5);
+
 
 
 .main-nav{
 	display: flex;
 	justify-content: space-between;
 	place-items: center; //flex 内元素全部居中
-	padding: 32px;
+	padding: 0rem 1.5rem 2rem 1.5rem;
 	// align-items: center;
+
+	.page-logo{
+		img {
+			//增加圆角
+			border-radius: 0.5rem;
+		}
+	}
 	
 	.filter-container{
 		display: flex;
@@ -17,15 +28,27 @@
 		border-radius: 4rem;
 		transition: all 0.3s ease-in-out;
 
+		//Tab 未选中
 		.filter-option{
 			font-weight: 600;
 			transition: all 0.3s ease-in-out;
+			color: @tab-font-normal;
+		}
+
+		//Tab 已选中
+		.filter-option-active{
+			font-weight: 600;
+			transition: all 0.3s ease-in-out;
+			background-color:@filter-selector;
+			border-radius: 4rem;
+			height: 100%;
+			width: 44px;
+			color: @tab-font-selector;
 		}
 	}
 
 	.contact{
 		font-weight: 600;
-		color: @contact-color;
 	}
 }
 

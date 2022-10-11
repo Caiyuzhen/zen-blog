@@ -4,7 +4,7 @@ import HALO from "vanta/dist/vanta.halo.min";//⚡️更改这个名称来改变
 import * as THREE from "three";
 import TitleBar from '../TitleBar/TitleBar';
 import MainContainer from '../MainContainer/MainContainer';
-
+import './HomePage.less'
 
 
 interface IProps  {
@@ -17,6 +17,7 @@ interface IProps  {
 const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 
 	const [vantaEffect, setVantaEffect] = useState(0);
+
 	const vantaRef = useRef(null)
 
 	const children = props.children
@@ -38,16 +39,16 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 			)
 		}
 		console.log('重新渲染了')
-		// return () => { //渲染完后，销毁掉 setVantaEffect
-		// 	// if(vantaEffect) vantaEffect.destroy()//❓如何销毁？
-		// }
+		return () => { 
+			// vantaRef.current = null //如果依赖 Ref 变化才有可能要销毁
+		}
 
 	},[])
 
 	return (
 		<div className='home-page'>
 			
-			<div className="vanta-bg" style={{zIndex: -1, height:'100vh', width:'100v'}} ref={vantaRef}>
+			<div className="vanta-bg" style={{zIndex: -1}} ref={vantaRef}>
 				{/* 👇这里相当于是子组件 */}
 				{children}
 			</div>
