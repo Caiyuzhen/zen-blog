@@ -1,8 +1,8 @@
 @filter-container-bg: rgba(240, 240, 240, 0.5);
 @filter-selector: rgba(255, 255, 255, 0.5);
 @contact-color: rgba(171, 159, 196, 0.5);
-@tab-font-normal: rgba(194, 187, 209, 0.5);
-@tab-font-selector: rgba(58, 44, 88, 0.5);
+@tab-font-normal: rgba(77, 74, 117);
+@tab-font-selector: rgba(18, 16, 51);
 
 
 
@@ -10,13 +10,24 @@
 	display: flex;
 	justify-content: space-between;
 	place-items: center; //flex 内元素全部居中
-	padding: 0rem 1.5rem 2rem 1.5rem;
-	// align-items: center;
+	gap: 0.5em;//最小间距
+	padding: 2.5rem 1.5rem 4rem 1.5rem;
+	position: sticky; //子元素吸顶，记住，父元素不能设置 overflow-x:hidden;
+	top: 0; //子元素吸顶，记住，父元素不能设置 overflow-x:hidden;
+	z-index: 10;
+	// align-items: center;    
+	// position: fixed;
+    // top: 40px;
+	// z-index: 10;
+
 
 	.page-logo{
 		img {
 			//增加圆角
 			border-radius: 0.5rem;
+			box-shadow: 
+				0px 0px 1px rgba(32, 28, 94, 0.1),
+				4px 8px 16px rgba(32, 28, 94, 0.2);
 		}
 	}
 	
@@ -27,6 +38,7 @@
 		padding: 0.5rem 1.5rem;
 		border-radius: 4rem;
 		transition: all 0.3s ease-in-out;
+		backdrop-filter: blur(10px);//🔥毛玻璃效果
 
 		//Tab 未选中
 		.filter-option{

@@ -2,9 +2,8 @@
 	width: 100%;
 
 	.vanta-bg { //🔥这一层是 Card 的父元素
-		padding: 3.5rem;
-		height: 100%; //设置后，让父元素跟随子元素拉高
-		overflow: hidden; //设置后，让父元素跟随子元素拉高
-		overflow-x:hidden;
+		padding: 0rem 3.5rem 3.5rem 3.5rem;//上的空间交给 titlebar 来控制
+		// overflow-x:hidden; //⚡️不能设置，父元素设置后子元素的 sticky 就不生效了
+		position: relative;
 	}
 }
