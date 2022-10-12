@@ -7,12 +7,16 @@ import MainContainer from './MainContainer/MainContainer'
 import './HomePage.less'
 import AboutMe from './AboutMe/AboutMe' ;
 import Articles from './Articles/Articles';
+import TabContext from '../../utils/Tabcontext'
+
+
 
 
 interface IProps  {
 	// children? : ReactElement | ReactElement[] 
 	children? : React.ReactNode | React.ReactNode[],//⚡️如果要在上层嵌套平行组件，则需对 children 进行声明
 }
+
 
 
 // 爷组件
@@ -63,12 +67,16 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 				{/* 👇子组件 */}
 				{/* {children} */}
 
-				{/* 📦传递给下层数据 */}
-				<TitleBar showPage={showPage} changePage={changePage}/> 
-				{showPage==='tab1' ? <MainContainer/> : ''}
-				{showPage==='tab2' ? <AboutMe/> : ''}
-				{showPage==='tab3' ? <Articles/> : ''} 
-
+				{/* 📦传递给下层数据(挫一点的写法就是一层层传) */}
+				{/* <TitleBar showPage={showPage} changePage={changePage}/>  */}
+				{/* 📦传递给下层数据(优雅一点的写法) */}
+				<TabContext.Provider value={{showPage, changePage}}>
+					<TitleBar/>
+					{showPage==='tab1' ? <MainContainer/> : ''}
+					{showPage==='tab2' ? <AboutMe/> : ''}
+					{showPage==='tab3' ? <Articles/> : ''} 
+				</TabContext.Provider>
+				
 			</div>
 
 		</div> //🔥 children 相当于子组件！

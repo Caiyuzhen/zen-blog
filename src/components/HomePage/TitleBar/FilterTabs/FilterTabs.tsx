@@ -1,22 +1,26 @@
-import React, { FC,createContext, useEffect } from 'react'
+import React, { FC,createContext, useEffect, useContext } from 'react'
 import './Filter.less'
-
+import TabContext from '../../../../utils/Tabcontext' //createContext + use Context
 
 
 interface IProps {
 	isActive: string,//判断 tab 是否选中了
 	onChangeTab: (isActive: string) => void, //⚡️由父组件传的方法给子组件
-	showPage: string;//判断显示哪个页面
-	changePage: (showPage: string) => void;//⚡️由父组件传的方法给子组件
+	// showPage: string;//判断显示哪个页面
+	// changePage: (showPage: string) => void;//⚡️由父组件传的方法给子组件
 }
 
 
 // 孙组件
-const FilterTabs:FC<IProps> = ( {isActive, onChangeTab, showPage, changePage} ) => {
+const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {
+
+
+	//⚡️从爷组件传过来的数据, 利用 useContext 来获取
+	const {showPage, changePage} = useContext(TabContext) 
 
 	useEffect(()=>{
-		console.log(showPage)
-	},[showPage])
+		console.log('当前的页数:' + showPage)
+	})
 
 	return (
 		<div>

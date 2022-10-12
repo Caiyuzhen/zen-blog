@@ -5,13 +5,13 @@ import './TitleBar.less'
 
 
 interface IProps {
-	showPage: string;
-	changePage: (showPage: string) => void;
+	showPage? : string;
+	changePage? : (showPage: string) => void;
 }
 
 
 //⚡️Tab 核心思路，【TitleBar 父组件】把【方法】跟【初始状态】传给【FilterTabs 子组件】，子组件调用父组件的方法去改变父组件的状态值
-const TitleBar:FC<IProps> = ( {showPage,changePage} ):ReactElement => {
+const TitleBar:FC<IProps> = ( {showPage, changePage} ):ReactElement => {
 
 	const[isActive, setIsActive] = useState('tab1')
 
@@ -30,8 +30,8 @@ const TitleBar:FC<IProps> = ( {showPage,changePage} ):ReactElement => {
 				<FilterTabs 
 					isActive={isActive} //变量 跟 方法传递给子组件
 					onChangeTab={changeTab}
-					showPage={showPage}
-					changePage={changePage}
+					// showPage={showPage}
+					// changePage={changePage}
 					/>
 				<div className="contact"><p>Contact</p></div>
 			</div>
