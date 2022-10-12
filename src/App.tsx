@@ -1,9 +1,8 @@
 import { useEffect,} from 'react'
 import './App.less'
 import HomePage from './components/HomePage/HomePage'
-import TitleBar from './components/TitleBar/TitleBar'
-import MainContainer from './components/MainContainer/MainContainer'
-import AboutMe from './components/AboutMe/AboutMe'
+import MainContainer from './components/HomePage/MainContainer/MainContainer'
+
 
 
 

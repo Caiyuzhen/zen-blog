@@ -1,11 +1,12 @@
-import React, {FC,ReactElement} from 'react'
+import React, { FC,ReactElement, createContext } from 'react'
 import { useState, useEffect, useRef } from 'react'
 import HALO from "vanta/dist/vanta.halo.min";//⚡️更改这个名称来改变背景效果
 import * as THREE from "three";
-import TitleBar from '../TitleBar/TitleBar';
-import MainContainer from '../MainContainer/MainContainer';
+import TitleBar from './TitleBar/TitleBar';
+import MainContainer from './MainContainer/MainContainer'
 import './HomePage.less'
-import AboutMe from '../AboutMe/AboutMe';
+import AboutMe from './AboutMe/AboutMe' ;
+import Articles from './Articles/Articles';
 
 
 interface IProps  {
@@ -14,16 +15,24 @@ interface IProps  {
 }
 
 
-
+// 爷组件
 const HomePage:FC<IProps> = (props: IProps):ReactElement => {
-
+	
+	// 渲染 vanta 背景用
 	const [vantaEffect, setVantaEffect] = useState(0);
-
 	const vantaRef = useRef(null)
 
+
+	// 内嵌子组件用
 	const children = props.children
 
-	const [showPage, setShowPage] = useState('all')
+
+	// 🔥展示哪个 Tab 用 (⚡️showPage、setShowPage 传给子组件去改变显示哪个 tab)
+	const [showPage, setShowPage] = useState('tab1')
+
+	function changePage(showPage: string) {//与 hook 关联, 传给子组件, 子组件调用来改变父组件的状态值, 相当于可以直接 changePage('tab2') 来改变 showPage 的值!
+		setShowPage(showPage)
+	}
 
 
 	useEffect(() => {
@@ -45,17 +54,21 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 		return () => { 
 		// vantaRef.current = null //如果依赖 Ref 变化才有可能要销毁
 		}
-
 	},[])
+
 
 	return (
 		<div className='home-page'>
 			<div className="vanta-bg" ref={vantaRef}>
 				{/* 👇子组件 */}
 				{/* {children} */}
-				<TitleBar/>
-				{showPage==='all' && <MainContainer/>}
-				{showPage==='aboutMe' && <AboutMe/>}
+
+				{/* 📦传递给下层数据 */}
+				<TitleBar showPage={showPage} changePage={changePage}/> 
+				{showPage==='tab1' ? <MainContainer/> : ''}
+				{showPage==='tab2' ? <AboutMe/> : ''}
+				{showPage==='tab3' ? <Articles/> : ''} 
+
 			</div>
 
 		</div> //🔥 children 相当于子组件！

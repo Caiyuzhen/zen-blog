@@ -1,5 +1,5 @@
 import React, { FC,ReactElement } from 'react'
-import ProjectCard from '../ProjectCard/ProjectCard'
+import ProjectCard from './ProjectCard/ProjectCard'
 import './MainContainer.less'
 
 interface IProps {
