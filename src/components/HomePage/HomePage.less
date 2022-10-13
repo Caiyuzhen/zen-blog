@@ -5,5 +5,14 @@
 		padding: 0rem 3.5rem 3.5rem 3.5rem;//上的空间交给 titlebar 来控制
 		// overflow-x:hidden; //⚡️不能设置，父元素设置后子元素的 sticky 就不生效了
 		position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+	.home-page-container {
+		position: relative;
 	}
 }

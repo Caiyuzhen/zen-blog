@@ -9,7 +9,7 @@ const ProjectCard:FC<IProps> = (): ReactElement => {
   return (
 	<>	
 		<div className='project-card'>
-			<h2>ProjectX</h2>
+			<h2>ABCD</h2>
 			<p>Your Pages site will use the layout and styles from the Jekyll theme you have selected in your </p>
 		</div>
 	</>

@@ -20,7 +20,7 @@
 // @media screen and (max-width: 1680px) {
 // 	.context-container{
 // 		display: grid;
-// 		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); //🔥🔥repeat(3, 100px) 表示每个 100px，自适应 3 列， auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
+// 		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度  |   另一种方式: repeat(3, 100px) 表示每个 100px，自适应 3 列，
 // 		grid-template-rows: repeat(3, auto-fit);
 // 		grid-gap:1rem 1rem;  //行间距 列间距
 // 	}
@@ -30,7 +30,16 @@
 @media screen and (max-width: 1440px) {
 	.context-container{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); //🔥🔥repeat(3, 100px) 表示每个 100px，自适应 3 列， auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
+		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
+		grid-template-rows: repeat(4, auto-fit);
+		grid-gap:1rem 1rem;  //行间距 列间距
+	}
+}
+
+@media screen and (max-width: 1180px) {
+	.context-container{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
 		grid-template-rows: repeat(3, auto-fit);
 		grid-gap:1rem 1rem;  //行间距 列间距
 	}
@@ -39,8 +48,8 @@
 @media screen and (max-width: 960px) {
 	.context-container{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); //🔥🔥repeat(3, 100px) 表示每个 100px，自适应 3 列， auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
-		grid-template-rows: repeat(3, auto-fit);
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
+		grid-template-rows: repeat(2, auto-fit);
 		grid-gap:1rem 1rem;  //行间距 列间距
 	}
 }
@@ -48,7 +57,7 @@
 @media screen and (max-width: 640px) {
 	.context-container{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); //🔥🔥repeat(3, 100px) 表示每个 100px，自适应 3 列， auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
 		grid-template-rows: repeat(1, auto-fit);
 		grid-gap:1rem 1rem;  //行间距 列间距
 	}

@@ -11,7 +11,6 @@ import TabContext from '../../utils/Tabcontext'
 
 
 
-
 interface IProps  {
 	// children? : ReactElement | ReactElement[] 
 	children? : React.ReactNode | React.ReactNode[],//⚡️如果要在上层嵌套平行组件，则需对 children 进行声明
@@ -63,23 +62,25 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 
 	return (
 		<div className='home-page'>
-			<div className="vanta-bg" ref={vantaRef}>
-				{/* 👇子组件 */}
-				{/* {children} */}
+			<div className='home-page-container'>
 
 				{/* 📦传递给下层数据(挫一点的写法就是一层层传) */}
 				{/* <TitleBar showPage={showPage} changePage={changePage}/>  */}
 				{/* 📦传递给下层数据(优雅一点的写法) */}
 				<TabContext.Provider value={{showPage, changePage}}>
-					<TitleBar/>
-					{showPage==='tab1' ? <MainContainer/> : ''}
-					{showPage==='tab2' ? <AboutMe/> : ''}
-					{showPage==='tab3' ? <Articles/> : ''} 
-				</TabContext.Provider>
-				
+						<TitleBar/>
+						{showPage==='tab1' ? <MainContainer/> : ''}
+						{showPage==='tab2' ? <AboutMe/> : ''}
+						{showPage==='tab3' ? <Articles/> : ''} 
+					</TabContext.Provider>
+				<div className="vanta-bg" ref={vantaRef}>
+					{/* 👇子组件 */}
+					{/* {children} */}
+	
+					
+				</div>
 			</div>
-
-		</div> //🔥 children 相当于子组件！
+		</div> 
 	)
 }
 
