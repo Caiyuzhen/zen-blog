@@ -76,8 +76,6 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 				<div className="vanta-bg" ref={vantaRef}>
 					{/* 👇子组件 */}
 					{/* {children} */}
-	
-					
 				</div>
 			</div>
 		</div> 

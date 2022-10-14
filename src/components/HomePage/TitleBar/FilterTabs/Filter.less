@@ -6,28 +6,49 @@
 
 .filter-container{
 	display: flex;
-	gap: 1.5em;
+	// gap: 1.5em; //⚡️设置的话会影响 tab 底部颜色的距离
 	background-color:@filter-container-bg;
-	padding: 0.5rem 1.5rem;
+	padding: 0.5rem 0.5rem;
 	border-radius: 4rem;
 	transition: all 0.3s ease-in-out;
 	backdrop-filter: blur(10px);//🔥毛玻璃效果
+	cursor: pointer;
+
+	// tab 底部颜色
+	.filter-bg{
+		position: absolute;
+		left: 0;
+		transform: translate(8px, -4px);//🔥tab 底部色块的初始距离, 与 tab 的 padding 还有 margin 相关，需要细调！
+		transition: transform .3s ease-in-out;
+		z-index: -1;
+		width: 4rem;
+    	height: 2rem;
+		border-radius: 2rem;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 36px 36px 42px rgba(176, 112, 63, 0.2);	
+	}
+
+	.tab-styles{
+		width: 3rem;
+		margin: 0 0.5rem;
+	}
 
 	//Tab 未选中
 	.filter-option{
-		font-weight: 600;
-		transition: all 0.3s ease-in-out;
 		color: @tab-font-normal;
+		font-weight: 600;
+	// 	transition: all 0.3s ease-in-out;
+		
 	}
 
 	//Tab 已选中
 	.filter-option-active{
-		font-weight: 600;
-		transition: all 0.3s ease-in-out;
-		background-color:@filter-selector;
-		border-radius: 4rem;
-		height: 100%;
-		width: 44px;
 		color: @tab-font-selector;
+		font-weight: 600;
+		// transition: all 0.3s ease-in-out;
+		// background-color:@filter-selector;
+		// border-radius: 4rem;
+		// height: 100%;
+		// width: 44px;
 	}
 }
