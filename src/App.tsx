@@ -2,13 +2,12 @@ import { useEffect,} from 'react'
 import './App.less'
 import HomePage from './components/HomePage/HomePage'
 import MainContainer from './components/HomePage/MainContainer/MainContainer'
-
-
-
+import {Test2} from './api/index'
 
 
 function App() {
 
+	// 引入 vanta 库的初始化定义，用于渲染背景
 	useEffect(() => {
 		const threeScript = document.createElement('script')
 		threeScript.setAttribute('id', 'threeScript')
@@ -20,8 +19,9 @@ function App() {
 	
 	return (
 		<div className="App">
-			<HomePage>
-			</HomePage>
+			<Test2/>
+			{/* <HomePage> */}
+			{/* </HomePage> */}
 		</div>
 	)
 }
