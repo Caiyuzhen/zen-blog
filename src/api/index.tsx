@@ -33,7 +33,7 @@ const QUERY_PROJECT = gql`
 
 
 //4. 封装成获取数据的函数
-export async function getProjectData() {
+export async function getProjectData(): Promise<ProjectData> {
 
 	//发送 query 请求获取数据
 	const {projects} = await client.request(QUERY_PROJECT) 
@@ -45,6 +45,8 @@ export async function getProjectData() {
 
 
 //5. 定义返回数据的接口
+type ProjectData = Iitem[];
+
 interface ICover {
 	id: string
 }
@@ -56,7 +58,7 @@ interface Iitem {
 	description: string,
 	category: string,
 	content: HTMLElement,
-	datePublished: Date,
+	datePublished: string,
 }
 
 
@@ -65,22 +67,25 @@ interface Iitem {
 const Test2:FC = () => {
 
 	// 7. 定义接受数据的 hook
-	const [data, setData] = useState()
+	const [data, setData] = useState<ProjectData>()
 
 	//8. 调用 api 函数获取数据
 	useEffect(()=>{
 		getProjectData().then((data) => {
 			setData(data)
 			console.log(data)
+		}).catch((err)=>{
+			alert(err)//请求失败，超时等的处理, 不用 setTimeout 了, 因为会进入这一步
 		})
 	},[])
 		
 	return (
 		<>	
+			{/* 9. 遍历数据并进行渲染 */}
 			<div>{
 				data && data.map((item: Iitem) => {
 					return (
-						<div>
+						<div key={item.id}>
 							<h1>{item.projectTitle}</h1>
 							<p>{item.description}</p>
 							<p>{item.datePublished}</p>

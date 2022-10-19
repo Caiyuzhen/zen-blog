@@ -13,9 +13,9 @@ interface IProps {
 //⚡️Tab 核心思路，【TitleBar 父组件】把【方法】跟【初始状态】传给【FilterTabs 子组件】，子组件调用父组件的方法去改变父组件的状态值
 const TitleBar:FC<IProps> = ( {showPage, changePage} ):ReactElement => {
 
-	const[isActive, setIsActive] = useState('tab1')
+	const[isActive, setIsActive] = useState('tab1')//🔥本质上孙组件的 onChangeTab 是执行的这个方法！
 
-	function changeTab(isActive:string) { //与 hook 关联, 传给子组件, 子组件调用来改变父组件的状态值
+	function changeTab(isActive: string) { //与 hook 关联, 传给子组件, 子组件调用来改变父组件的状态值
 		setIsActive(isActive)
 		console.log(isActive)
 	}

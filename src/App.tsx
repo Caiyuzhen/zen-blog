@@ -19,9 +19,9 @@ function App() {
 	
 	return (
 		<div className="App">
-			<Test2/>
-			{/* <HomePage> */}
-			{/* </HomePage> */}
+			{/* <Test2/> */}
+			<HomePage>
+			</HomePage>
 		</div>
 	)
 }

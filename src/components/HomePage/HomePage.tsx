@@ -30,7 +30,7 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 	const children = props.children
 
 
-	// 🔥展示哪个 Tab 用 (⚡️showPage、setShowPage 传给子组件去改变显示哪个 tab)
+	// 🔥用于展示哪个 Tab  (⚡️showPage、setShowPage 传给子组件去改变显示哪个 tab)
 	const [showPage, setShowPage] = useState('tab1')
 
 	function changePage(showPage: string) {//与 hook 关联, 传给子组件, 子组件调用来改变父组件的状态值, 相当于可以直接 changePage('tab2') 来改变 showPage 的值!
@@ -38,6 +38,7 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 	}
 
 
+	//渲染渐变背景
 	useEffect(() => {
 		if(!vantaEffect){
 			setVantaEffect(
@@ -72,11 +73,8 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 						{showPage==='tab1' ? <MainContainer/> : ''}
 						{showPage==='tab2' ? <AboutMe/> : ''}
 						{showPage==='tab3' ? <Articles/> : ''} 
-					</TabContext.Provider>
-				<div className="vanta-bg" ref={vantaRef}>
-					{/* 👇子组件 */}
-					{/* {children} */}
-				</div>
+				</TabContext.Provider>
+				<div className="vanta-bg" ref={vantaRef}></div>
 			</div>
 		</div> 
 	)
