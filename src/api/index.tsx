@@ -23,13 +23,6 @@ const QUERY_PROJECT = gql`
 		}
 	}
 `
-//几个 Q
-//1.如何监听 resolve 的状态?
-//2.如何在 useEffect 中使用 async await? 调用时候如何 setTimeout 来避免请求超时？
-//2.如何定义 data 的类型? never 时候不存在 map 属性?
-//4.如何定义日期的类型?
-
-
 
 
 //4. 封装成获取数据的函数

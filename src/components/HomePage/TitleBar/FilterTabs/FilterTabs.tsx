@@ -7,10 +7,10 @@ import { ITabState, ITabsActionType } from '../../../../store/reducers/tabs'
 
 
 interface IProps {
-	isActive: string,//判断 tab 是否选中了
-	onChangeTab: (isActive: string) => void, //⚡️由父组件传的方法给子组件
-	// showPage: string;//判断显示哪个页面
-	// changePage: (showPage: string) => void;//⚡️由父组件传的方法给子组件
+	isActive: string,//判断 tab 是否选中了, 用来改变【底色的位置】跟【字体粗细】等样式
+	onChangeTab: (isActive: string) => void, //⚡️回调函数，由父组件传的方法给子组件
+	// showPage: string;//判断显示哪个页面(不易用一层层传了，👇直接用 useContext 来接收)
+	// changePage: (showPage: string) => void;//⚡️由父组件传的方法给子组件(不易用一层层传了，👇直接用 useContext 来接收)
 }
 
 
@@ -18,8 +18,9 @@ interface IProps {
 const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件的 hook 
 
 
-	//⚡️从爷组件传过来的数据, 利用 useContext 来获取, TanContext 已经封装成了 utils, 里边包含一个 hook， 有 showPage 跟 changePage
+	//⚡️接收从爷组件传过来的数据, 利用 useContext 来获取, TanContext 已经封装成了 utils, 里边包含一个 hook， 有 showPage 跟 changePage
 	const {showPage, changePage} = useContext(TabContext) 
+
 
 
 	//Tab 底色 ————————————————————————————
@@ -36,7 +37,7 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 	}
 
 
-	//⚡️封装个改变 tab 的位置的函数(方法一), 利用 e.target 来获取当前点击的 tab 的位置，然后把 ref={bottomTabBar} 的初始位置加上点击的这个位置就是要移动过去的位置
+	//⚡️封装个改变 tab 位置的函数(方法一), 利用 e.target 来获取当前点击的 tab 的位置，然后把 ref={bottomTabBar} 的初始位置加上点击的这个位置就是要移动过去的位置
 	function changeBottomColor(e: MouseEvent): void {
 		if(bottomTabBar.current !== null) {
 			if(isActive){
@@ -62,6 +63,7 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 		// }
 	// 	changeBottomColor()
 	// },[isActive])
+
 
 
 	//Redux ————————————————————————————
