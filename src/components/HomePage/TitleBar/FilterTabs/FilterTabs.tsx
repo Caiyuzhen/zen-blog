@@ -36,17 +36,22 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 		baseY: -4,
 	}
 
-
+	
 	//⚡️封装个改变 tab 位置的函数(方法一), 利用 e.target 来获取当前点击的 tab 的位置，然后把 ref={bottomTabBar} 的初始位置加上点击的这个位置就是要移动过去的位置
-	function changeBottomColor(e: MouseEvent): void {
+	function changeBottomColor(target: HTMLElement): void {
 		if(bottomTabBar.current !== null) {
 			if(isActive){
-				bottomTabBar.current.style.transform = `translate(${Position.baseX + (e.target as HTMLElement).offsetLeft}px, ${Position.baseY}px)`//等于当前选中的 tab 的 offset 加上基础位置
+				bottomTabBar.current.style.transform = `translate(${Position.baseX + (target).offsetLeft}px, ${Position.baseY}px)`//等于当前选中的 tab 的 offset 加上基础位置
 			}
 		}
-		console.log((e.target as HTMLElement).offsetLeft)
+		console.log((target as HTMLElement).offsetLeft)
 		// event.preventDefault();
 	}
+
+	useEffect(()=>{
+		const dom = document.querySelector(`#${isActive}`);
+		changeBottomColor(dom as HTMLElement);
+	}, [])
 
 	//⚡️改变 tab 的位置（方法二，比较挫，一个个改）
 	// useEffect(()=>{
@@ -91,25 +96,26 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 			})
 	}
 
+	console.log( isActive);
 	return (
 		<div>
 			<div className="filter-container">
 				<div 
 					id='tab1'
 					className={`tab-styles ${isActive==='tab1' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
-					onClick={ (e)=> { changeTabReduxAndTabActive('tab1'); changePage('tab1'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
+					onClick={ (e)=> { changeTabReduxAndTabActive('tab1'); changePage('tab1'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{onChangeTab('tab1'); changePage('tab1'); changeBottomColor(e)} }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
 					>All</div>
 				<div 
 					id='tab2'
 					className={`tab-styles ${isActive==='tab2' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
-					onClick={ (e)=> { changeTabReduxAndTabActive('tab2'); changePage('tab2'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
+					onClick={ (e)=> { changeTabReduxAndTabActive('tab2'); changePage('tab2'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{ onChangeTab('tab2'); changePage('tab2'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
 					>About</div>
 				<div 
 					id='tab3'
 					className={`tab-styles ${isActive==='tab3' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
-					onClick={ (e)=> { changeTabReduxAndTabActive('tab3'); changePage('tab3'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
+					onClick={ (e)=> { changeTabReduxAndTabActive('tab3'); changePage('tab3'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{ onChangeTab('tab3'); changePage('tab3'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
 					>Project</div>
 				<div className="filter-bg" ref={bottomTabBar}></div>

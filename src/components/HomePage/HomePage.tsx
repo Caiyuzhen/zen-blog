@@ -28,7 +28,7 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 
 
 
-	// 🔥用于展示哪个 Tab  (showPage、setShowPage 传给子组件去改变，然后回调显示哪个 tab) ——————————————————
+	//用于展示哪个 Tab  (showPage、setShowPage 传给子组件去改变，然后回调显示哪个 tab) ——————————————————
 	//🛢️获取本地存的 showPage 数据
 	
 	const loadState = ():string => { 
@@ -37,16 +37,16 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 		if (localShowPageState = null) {
 			return 'tab1'
 		} else {
-			const showPageData = (JSON.parse(localStorage.getItem('localShowPageState') as string))
+			const showPageData = (localStorage.getItem('showPageState') as string)
 			return showPageData
 		}
 	}
 
-	//问题：为什么返回 null 了？
+	//⚡️问题：为什么返回 null 了？(因为不需要通过 stringify 转换成字符串，直接返回就行了，其次是上一次的色块的位置是通过 e.target 算出来的，再次加载的时候需要通过 useEffect 执行一下)
 	useEffect(() => {
 		loadState()
-		console.log(JSON.parse(localStorage.getItem('localShowPageState') as string))
-	},[])
+		console.log(localStorage.getItem('showPageState') as string)
+	},[loadState])
 	
 
 

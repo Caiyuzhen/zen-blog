@@ -19,7 +19,7 @@ const loadState = () => {
 	if (localTabState === null) {
 		return {tabName: 'tab1'}
 	} else {
-		return {tabName: JSON.parse(localTabState)}
+		return {tabName: localTabState}
 	}
 }
 

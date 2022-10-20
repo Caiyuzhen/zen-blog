@@ -16,7 +16,7 @@ export type rootState = ReturnType<typeof reducers>
 
 //【3-3】🛢️状态保存到本地的方法: 只要状态改变, 就保存到本地 (方法二: 本地存储)
 const saveState = (state: string) => {
-	localStorage.setItem('tabState', JSON.stringify(state))
+	localStorage.setItem('tabState', state)
 }
 
 // store.subscribe(() => { //🛢️在状态改变的时候存储(影响性能)

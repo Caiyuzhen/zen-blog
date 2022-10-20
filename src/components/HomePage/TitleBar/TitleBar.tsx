@@ -21,8 +21,8 @@ const TitleBar:FC<IProps> = ():ReactElement => {
 		if(localActiveState === null) {
 			return 'tab1'
 		} else {
-			const activeData = (JSON.parse(localStorage.getItem('localActiveState') as string ))
-			return activeData
+			const activeData = localStorage.getItem('activeState') as string
+			return activeData;
 		}
 	}
 
@@ -35,7 +35,7 @@ const TitleBar:FC<IProps> = ():ReactElement => {
 		setIsActive(isActive)
 
 		//🛢️改变后, 把 active 数据保存到本地
-		localStorage.setItem('activeState', JSON.stringify(isActive)) 
+		localStorage.setItem('activeState', isActive) 
 		// console.log(isActive)
 	}
 
