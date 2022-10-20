@@ -44,7 +44,7 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 				bottomTabBar.current.style.transform = `translate(${Position.baseX + (target).offsetLeft}px, ${Position.baseY}px)`//等于当前选中的 tab 的 offset 加上基础位置
 			}
 		}
-		console.log((target as HTMLElement).offsetLeft)
+		// console.log((target as HTMLElement).offsetLeft)
 		// event.preventDefault();
 	}
 
@@ -96,7 +96,7 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 			})
 	}
 
-	console.log( isActive);
+	// console.log(isActive);
 	return (
 		<div>
 			<div className="filter-container">

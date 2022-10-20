@@ -25,7 +25,7 @@ const QUERY_PROJECT = gql`
 `
 
 
-//4. 封装成获取数据的函数
+//4. 封装成获取数据的 API 函数 
 export async function getProjectData(): Promise<ProjectData> {
 
 	//发送 query 请求获取数据
@@ -38,13 +38,11 @@ export async function getProjectData(): Promise<ProjectData> {
 
 
 //5. 定义返回数据的接口
-type ProjectData = Iitem[];
-
 interface ICover {
 	id: string
 }
 
-interface Iitem {
+export interface Iitem {
 	id: string,
 	projectTitle: string,
 	cover: ICover,
@@ -53,6 +51,8 @@ interface Iitem {
 	content: HTMLElement,
 	datePublished: string,
 }
+
+type ProjectData = Iitem[]
 
 
 
@@ -66,7 +66,7 @@ const Test2:FC = () => {
 	useEffect(()=>{
 		getProjectData().then((data) => {
 			setData(data)
-			console.log(data)
+			// console.log(data)
 		}).catch((err)=>{
 			alert(err)//请求失败，超时等的处理, 不用 setTimeout 了, 因为会进入这一步
 		})

@@ -30,23 +30,26 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 
 	//用于展示哪个 Tab  (showPage、setShowPage 传给子组件去改变，然后回调显示哪个 tab) ——————————————————
 	//🛢️获取本地存的 showPage 数据
-	
 	const loadState = ():string => { 
+		// 首次进入时，先判断一下是否有本地存储
 		let localShowPageState = localStorage.getItem('showPageState') 
-
-		if (localShowPageState = null) {
-			return 'tab1'
+		//如果没有本地存储的话，就在本地存一份数据为 tab1
+		if (!localShowPageState) {
+			localStorage.setItem('showPageState', 'tab1') 
+			let defaultState = (localStorage.getItem('showPageState') as string)
+			return defaultState
 		} else {
-			const showPageData = (localStorage.getItem('showPageState') as string)
+			let showPageData = (localStorage.getItem('showPageState') as string)
 			return showPageData
 		}
 	}
 
 	//⚡️问题：为什么返回 null 了？(因为不需要通过 stringify 转换成字符串，直接返回就行了，其次是上一次的色块的位置是通过 e.target 算出来的，再次加载的时候需要通过 useEffect 执行一下)
 	useEffect(() => {
-		loadState()
-		console.log(localStorage.getItem('showPageState') as string)
-	},[loadState])
+		loadState()//需要执行一下，否则不会显示上一次的 tab
+		console.log(loadState())
+		// console.log(localStorage.getItem('showPageState'))
+	},[loadState()])
 	
 
 
@@ -82,7 +85,7 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 					touchControls: true,
 					gyroControls: false,
 					minHeight: 400.00,
-					minWidth: 400.00,
+					// minWidth: 400.00,
 					size: 2.50
 				})
 			)
