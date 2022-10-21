@@ -8,9 +8,9 @@
 	// float: left;
 	overflow: auto;
 	height: 100%;
+	width: 100%;
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-	width: 100%;
 	grid-gap:1rem 1rem;  //行间距 列间距
 	transition: all 0.3s ease-in-out;
 }
@@ -27,7 +27,7 @@
 // }
 
 // 响应式布局
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 192px) {
 	.context-container{
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度

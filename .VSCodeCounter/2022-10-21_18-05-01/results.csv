@@ -1,0 +1,64 @@
+"filename", "language", "TypeScript React", "Less", "XML", "JSON with Comments", "TypeScript", "CSS", "JSON", "JavaScript", "HTML", "Markdown", "comment", "blank", "total"
+"/Users/zen/Desktop/zen-blog/README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 3
+"/Users/zen/Desktop/zen-blog/config/env.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 59, 0, 0, 35, 11, 105
+"/Users/zen/Desktop/zen-blog/config/getHttpsConfig.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 51, 0, 0, 7, 9, 67
+"/Users/zen/Desktop/zen-blog/config/jest/babelTransform.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 5, 30
+"/Users/zen/Desktop/zen-blog/config/jest/cssTransform.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 3, 3, 15
+"/Users/zen/Desktop/zen-blog/config/jest/fileTransform.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 4, 6, 41
+"/Users/zen/Desktop/zen-blog/config/modules.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 80, 0, 0, 30, 25, 135
+"/Users/zen/Desktop/zen-blog/config/paths.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 55, 0, 0, 10, 13, 78
+"/Users/zen/Desktop/zen-blog/config/webpack.config.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 587, 0, 0, 180, 30, 797
+"/Users/zen/Desktop/zen-blog/config/webpack/persistentCache/createEnvironmentHash.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 3, 10
+"/Users/zen/Desktop/zen-blog/config/webpackDevServer.config.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 58, 7, 128
+"/Users/zen/Desktop/zen-blog/index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 1, 14
+"/Users/zen/Desktop/zen-blog/package-lock.json", "JSON", 0, 0, 0, 0, 0, 0, 27863, 0, 0, 0, 0, 1, 27864
+"/Users/zen/Desktop/zen-blog/package.json", "JSON", 0, 0, 0, 0, 0, 0, 137, 0, 0, 0, 0, 1, 138
+"/Users/zen/Desktop/zen-blog/public/vite.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/zen/Desktop/zen-blog/scripts/build.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 174, 0, 0, 21, 23, 218
+"/Users/zen/Desktop/zen-blog/scripts/start.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 122, 0, 0, 17, 16, 155
+"/Users/zen/Desktop/zen-blog/scripts/test.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 36, 0, 0, 7, 10, 53
+"/Users/zen/Desktop/zen-blog/src/App.less", "Less", 0, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 57
+"/Users/zen/Desktop/zen-blog/src/App.tsx", "TypeScript React", 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 30
+"/Users/zen/Desktop/zen-blog/src/api/index.tsx", "TypeScript React", 65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 24, 101
+"/Users/zen/Desktop/zen-blog/src/assets/react.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-book.svg", "XML", 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-contact.svg", "XML", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-discord.svg", "XML", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-download.svg", "XML", 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-dribble.svg", "XML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-facebook.svg", "XML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-github.svg", "XML", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-instagram.svg", "XML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-jueJin.svg", "XML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-okjike.svg", "XML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-tiktok.svg", "XML", 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 1, 17
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-titter.svg", "XML", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-tran.svg", "XML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-whatApp.svg", "XML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"/Users/zen/Desktop/zen-blog/src/assets/svg/icon-zhihu.svg", "XML", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/AboutMe/AboutMe.less", "Less", 0, 237, 0, 0, 0, 0, 0, 0, 0, 0, 61, 52, 350
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/AboutMe/AboutMe.tsx", "TypeScript React", 94, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 99
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/Articles/Articles.less", "Less", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/Articles/Articles.tsx", "TypeScript React", 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 11
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/HomePage.less", "Less", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 21
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/HomePage.tsx", "TypeScript React", 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 30, 118
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/MainContainer/MainContainer.less", "Less", 0, 41, 0, 0, 0, 0, 0, 0, 0, 0, 17, 7, 65
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/MainContainer/MainContainer.tsx", "TypeScript React", 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 10, 57
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/MainContainer/ProjectCard/ProjectCard.less", "Less", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 11
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/MainContainer/ProjectCard/ProjectCard.tsx", "TypeScript React", 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 23
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/TitleBar/FilterTabs/Filter.less", "Less", 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 54
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/TitleBar/FilterTabs/FilterTabs.tsx", "TypeScript React", 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 28, 128
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/TitleBar/TitleBar.less", "Less", 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 35
+"/Users/zen/Desktop/zen-blog/src/components/HomePage/TitleBar/TitleBar.tsx", "TypeScript React", 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 13, 60
+"/Users/zen/Desktop/zen-blog/src/index.css", "CSS", 0, 0, 0, 0, 0, 60, 0, 0, 0, 0, 2, 8, 70
+"/Users/zen/Desktop/zen-blog/src/main.tsx", "TypeScript React", 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 18
+"/Users/zen/Desktop/zen-blog/src/store/index.tsx", "TypeScript React", 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 11, 31
+"/Users/zen/Desktop/zen-blog/src/store/reducers/index.tsx", "TypeScript React", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 7
+"/Users/zen/Desktop/zen-blog/src/store/reducers/tabs.tsx", "TypeScript React", 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 15, 51
+"/Users/zen/Desktop/zen-blog/src/types/vanta.birds.min.d.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 2, 3, 9
+"/Users/zen/Desktop/zen-blog/src/utils/Tabcontext.tsx", "TypeScript React", 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 9
+"/Users/zen/Desktop/zen-blog/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 1, 3, 9
+"/Users/zen/Desktop/zen-blog/tsconfig.json", "JSON with Comments", 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 1, 22
+"/Users/zen/Desktop/zen-blog/tsconfig.node.json", "JSON", 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+"/Users/zen/Desktop/zen-blog/vite.config.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 1, 2, 8
+"Total", "-", 470, 405, 116, 21, 14, 60, 28009, 1299, 13, 2, 586, 452, 31447

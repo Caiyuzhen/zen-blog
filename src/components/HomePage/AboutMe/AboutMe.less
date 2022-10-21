@@ -16,8 +16,8 @@
 	position: relative;//水平居中-1
 
 	> img{ //卡片的所有子 svg
-		width: 88;
-		height: 88;
+		width: 78px;
+		height: 78px;
 		top: 0;//垂直居中-1
 		bottom: 0;//垂直居中-2
 		margin: auto;//垂直居中-3
@@ -27,7 +27,8 @@
 	}
 }
 
-@card-width-M: 325px;//325px
+// 卡片的最大最小宽高
+@card-width-M: 325px;
 @card-width-L: 734px;
 @card-height-M: 280px;
 @card-height-L: 636px;
@@ -35,160 +36,315 @@
 
 
 // 具体实现
-.top-container {
+.aboutMe-container {
 
-	margin-top: 80px;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-
-	.title {
-		height: auto;
-		color: white;
-		font-size: 80px;
-		font-weight: 900;
-		font-family: 'RammettoOne';
-	}
-
-	.description {
-		height: 48px;
-		color: white;
-		font-size: 20px;
-	}
-}
-
-
-.bottom-container > * { //所以卡片的高度都一样
-	height: @card-height;
+	overflow: auto;
+	height: 100%;//对齐父元素的宽度
+	width: 100%;//对齐父元素的宽度
 	
-}
+	//上方大标题以及描述文案
+	.top-container {
 
-.bottom-containner {
+		margin-top: 80px;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 
-	margin-top: 80px;
-	display: grid; //网格布局
-	grid-template-columns: repeat(auto-fill);
-	grid-template-areas: 
-		"personal personal github twitter"
-		"okJike instagram contactInfo twitter"
-		"facebook whatApp whatApp profilePDF"
-		"tikTok tikTok zhiHu dribble"
-		"discord jueJin jueJin dribble";
-	column-gap: 28px; //列间距
-	row-gap: 28px; //行间距
+		.title {
+			height: auto;
+			color: white;
+			font-size: 80px;
+			font-weight: 900;
+			font-family: 'RammettoOne';
+		}
 
-	.card-personal {
-		height: @card-height-M;
-		width: @card-width-L;
-		.card-base-styles();
-		background-color:  rgba(240, 240, 240, 0.8);
-		grid-area: personal;
+		.description {
+			height: 48px;
+			color: white;
+			font-size: 20px;
+		}
 	}
 
-	.card-github {
-		height: @card-height-M;
-		width:@card-width-M;
-		.card-base-styles();
-		background-color:  rgba(16, 16, 16, 0.7);
-		grid-area: github;
-	}
 
-	.card-twitter {
-		height: @card-height-L;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(37, 173, 236, 0.7);
-		grid-area: twitter;
+	//底部社交卡片的布局
+	.bottom-container {
+
+		//修改所有子 card 的样式
+		& > * {
+			.card-base-styles();
+		}
+
+		margin-top: 80px;
+		display: grid; 
+		grid-template-columns: repeat(4, 1fr); //占 4 列 ，列的宽度为 1 fr
+		grid-template-rows: repeat(5, 280px); //占 5 行, 每行高度为 280px 
+		column-gap: 28px; //列间距
+		row-gap: 28px; //行间距
+		// grid-template-areas: 
+		// 	"personal personal github twitter"
+		// 	"okJike instagram contactInfo twitter"
+		// 	"facebook whatApp whatApp profilePDF"
+		// 	"tikTok tikTok zhiHu dribble"
+		// 	"discord jueJin jueJin dribble";
+
+
+
+		// ⚡️响应式布局
+		@media screen and (max-width: 1920px) {	
+			.card-personal {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(240, 240, 240, 0.8);
+				// grid-area: 1 / 1 / 2 / 3;
+				grid-column-start: 1;//横 1
+				grid-column-end: 3;//横 3
+				grid-row-start: 1;//纵 1
+				grid-row-end: 2;//纵 2
+
+				.avatar-container{
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+
+					> .avatar { //avatar
+						width: 56px;	
+					}
+
+					// hover 时,changeAvatar 旋转360度
+					> .changeAvatar {
+						width: 20px;
+						height: 20px;
+						padding: 16px;
+						background-color: #F0F0F0;
+						border-radius: 50%;
+						transition: all 0.2s ease-in-out;
+
+						// hover 时旋转一圈
+						&:hover {
+							transform: rotate(360deg);
+							// animation: rotate 1s linear infinite;
+						}
+					}
+				}
+
+				.personal-descrip {
+					// 文字居左
+					text-align: left;
+				}
+			}
+
+			.card-github {
+				// height: @card-height-M;
+				// width:@card-width-M;
+				background-color:  rgba(16, 16, 16, 0.7);
+				// grid-area: 1 / 3 / 2 / 4;
+				grid-column-start: 3;//横 3
+				grid-column-end: 4;//横 4
+				grid-row-start: 1;//纵 1
+				grid-row-end: 2;//纵 2
+			}
+
+			.card-twitter {
+				// height: @card-height-L;
+				// width: @card-width-M;
+				background-color:  rgba(37, 173, 236, 0.7);
+				// grid-area: 1 / 4 / 3 / 5;
+				grid-column-start: 4;//横 4
+				grid-column-end: 4;//横 4
+				grid-row-start: 1;//纵 1
+				grid-row-end: 3;//纵 3
+			}
+
+			.card-okJike {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(224, 218, 50, 0.994);
+				// grid-area: 2 / 1 / 3 / 2;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2;//横 2
+				grid-row-start: 2;//纵 2
+				grid-row-end: 3;//纵 3
+			}
+
+			.card-instagram {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				// grid-area: 2 / 2 / 3 / 3;
+				grid-column-start: 2;//横 2
+				grid-column-end: 3;//横 3
+				grid-row-start: 2;//纵 2
+				grid-row-end: 3;//纵 3
+
+			}
+
+			.card-contactInfo {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(240, 240, 240, 0.8);
+				// grid-area: 2 / 3 / 3 / 4;
+				grid-column-start: 3;//横 3
+				grid-column-end: 4;//横 4
+				grid-row-start: 2;//纵 2
+				grid-row-end: 3;//纵 3
+
+				.title-contact{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 0.5em;
+
+					// 第二个子元素(也就是标题字）
+					> :nth-child(2) {
+						font-weight: 800;
+						font-size: 20px;
+					}
+				}
+				.detail-info{
+					margin-top: 12px;
+					display: flex;
+					flex-direction: column;
+
+					.info{
+						height: 44px;
+						font-weight: 600;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+
+						.info-text {
+							font-weight: 400;
+						}
+					}
+				}
+			}
+			
+			.card-facebook {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(43, 72, 236, 0.7);
+				// grid-area: 3 / 1 / 4 / 2;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2;//横 2
+				grid-row-start: 3;//纵 3
+				grid-row-end: 4;//纵 4
+			}
+
+			.card-whatApp {
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(42, 227, 88, 0.7);
+				// grid-area: 3 / 2 / 4 / 4;
+				grid-column-start: 2;//横 2
+				grid-column-end: 4;//横 4
+				grid-row-start: 3;//纵 3
+				grid-row-end: 4;//纵 4
+			}
+
+			.card-profilePDF {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(240, 240, 240, 0.8);
+				// grid-area: 3 / 4 / 4 / 5;
+				grid-column-start: 4;//横 4
+				grid-column-end: 5;//横 5
+				grid-row-start: 3;//纵 3
+				grid-row-end: 4;//纵 4
+
+				.title-pdfDL {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 0.5em;
+
+					// 第二个子元素(也就是标题字）
+					> :nth-child(2) {
+						font-weight: 800;
+						font-size: 20px;
+					}
+				}
+
+				> img {
+					width: 48px;
+					height: 48px;
+					padding: 16px;
+					background-color: #F0F0F0;
+					border-radius: 50%;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+
+			.card-tikTok {
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(16, 16, 16, 0.7);
+				// grid-area: 4 / 1 / 5 / 3;
+				grid-column-start: 1;//横 1
+				grid-column-end: 3;//横 3
+				grid-row-start: 4;//纵 4
+				grid-row-end: 5;//纵 5
+			}
+
+			.card-zhiHu {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(43, 72, 236, 0.7);
+				// grid-area: 4 / 3 / 5 / 4;
+				grid-column-start: 3;//横 3
+				grid-column-end: 4;//横 4
+				grid-row-start: 4;//纵 4
+				grid-row-end: 5;//纵 5
+			}
+
+			.card-dribble {
+				// height: @card-height-L;
+				// width: @card-width-M;
+				background-color:  rgba(236, 49, 139, 0.7);
+				// grid-area: 4 / 4 / 6 / 5;
+				grid-column-start: 4;//横 4
+				grid-column-end: 5;//横 5
+				grid-row-start: 4;//纵 4
+				grid-row-end: 6;//纵 6
+			}
+
+			.card-discord {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(103, 56, 245, 0.7);
+				// grid-area: 5 / 1 / 6 / 2;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2 ;//横 2
+				grid-row-start: 5;//纵 5
+				grid-row-end: 6;//纵 6	
+			}
+
+			.card-jueJin {
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(37, 173, 236, 0.7);
+				// grid-area: 5 / 2 / 6 / 4;
+				grid-column-start: 2;//横 2
+				grid-column-end: 4 ;//横 4
+				grid-row-start: 5;//纵 6
+				grid-row-end: 5;//纵 6
+			}
+		}
+
+		@media screen and (max-width: 1180px) {
+			
+		}
+
+		@media screen and (max-width: 960px) {
+			
+		}
+
+		@media screen and (max-width: 640px) {
+			
+		}
 		
-	}
-
-	.card-okJike {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(224, 218, 50, 0.994);
-		grid-area: okJike;
-	}
-
-	.card-instagram {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		grid-area: instagram;
-	}
-
-	.card-contactInfo {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(240, 240, 240, 0.8);
-		grid-area: contactInfo;
-	}
-	
-	.card-facebook {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(43, 72, 236, 0.7);
-		grid-area: facebook;
-	}
-
-	.card-whatApp {
-		height: @card-height-M;
-		width: @card-width-L;
-		.card-base-styles();
-		background-color:  rgba(42, 227, 88, 0.7);
-		grid-area: whatApp;
-	}
-
-	.card-profilePDF {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(240, 240, 240, 0.8);
-		grid-area: profilePDF;
-	}
-
-	.card-tikTok {
-		height: @card-height-M;
-		width: @card-width-L;
-		.card-base-styles();
-		background-color:  rgba(16, 16, 16, 0.7);
-		grid-area: tikTok;
-	}
-
-	.card-zhiHu {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(43, 72, 236, 0.7);
-		grid-area: zhiHu;
-	}
-
-	.card-dribble {
-		height: @card-height-L;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(236, 49, 139, 0.7);
-		grid-area: dribble;
-	}
-
-	.card-discord {
-		height: @card-height-M;
-		width: @card-width-M;
-		.card-base-styles();
-		background-color:  rgba(103, 56, 245, 0.7);
-		grid-area: discord;
-		
-	}
-
-	.card-jueJin {
-		height: @card-height-M;
-		width: @card-width-L;
-		.card-base-styles();
-		background-color:  rgba(37, 173, 236, 0.7);
-		grid-area: jueJin;
 	}
 }
