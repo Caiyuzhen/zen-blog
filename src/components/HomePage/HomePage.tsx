@@ -103,8 +103,8 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 				{/* 📦用 Context 包裹来传递给下层数据(优雅一点的写法) */}
 				<TabContext.Provider value={{showPage, changePage}}>
 						<TitleBar/>
-						{showPage==='tab1' ? <MainContainer/> : ''}
-						{showPage==='tab2' ? <AboutMe/> : ''}
+						{showPage==='tab1' ? <AboutMe/> : ''}
+						{showPage==='tab2' ? <MainContainer/> : ''}
 						{showPage==='tab3' ? <Articles/> : ''} 
 				</TabContext.Provider>
 				<div className="vanta-bg" ref={vantaRef}></div>

@@ -105,19 +105,19 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 					className={`tab-styles ${isActive==='tab1' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
 					onClick={ (e)=> { changeTabReduxAndTabActive('tab1'); changePage('tab1'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{onChangeTab('tab1'); changePage('tab1'); changeBottomColor(e)} }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
-					>All</div>
+					>About</div>
 				<div 
 					id='tab2'
 					className={`tab-styles ${isActive==='tab2' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
 					onClick={ (e)=> { changeTabReduxAndTabActive('tab2'); changePage('tab2'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{ onChangeTab('tab2'); changePage('tab2'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
-					>About</div>
+					>Project</div>
 				<div 
 					id='tab3'
 					className={`tab-styles ${isActive==='tab3' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
 					onClick={ (e)=> { changeTabReduxAndTabActive('tab3'); changePage('tab3'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{ onChangeTab('tab3'); changePage('tab3'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
-					>Project</div>
+					>Article</div>
 				<div className="filter-bg" ref={bottomTabBar}></div>
 			</div>
 		</div>

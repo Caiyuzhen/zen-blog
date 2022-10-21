@@ -1,0 +1,194 @@
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+// 卡片的公共样式
+@card-height: 280px;
+@card-borderRadius: 20px;
+@card-padding: 24px;
+
+.card-base-styles(){
+	border-radius: 20px;
+	padding: 24px;
+	backdrop-filter: blur(10px);//🔥毛玻璃效果
+	cursor: pointer;
+	position: relative;//水平居中-1
+
+	> img{ //卡片的所有子 svg
+		width: 88;
+		height: 88;
+		top: 0;//垂直居中-1
+		bottom: 0;//垂直居中-2
+		margin: auto;//垂直居中-3
+		position: absolute;
+		left: 50%;//水平居中-2
+  		transform: translateX(-50%);//水平居中	-3
+	}
+}
+
+@card-width-M: 325px;//325px
+@card-width-L: 734px;
+@card-height-M: 280px;
+@card-height-L: 636px;
+
+
+
+// 具体实现
+.top-container {
+
+	margin-top: 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	.title {
+		height: auto;
+		color: white;
+		font-size: 80px;
+		font-weight: 900;
+		font-family: 'RammettoOne';
+	}
+
+	.description {
+		height: 48px;
+		color: white;
+		font-size: 20px;
+	}
+}
+
+
+.bottom-container > * { //所以卡片的高度都一样
+	height: @card-height;
+	
+}
+
+.bottom-containner {
+
+	margin-top: 80px;
+	display: grid; //网格布局
+	grid-template-columns: repeat(auto-fill);
+	grid-template-areas: 
+		"personal personal github twitter"
+		"okJike instagram contactInfo twitter"
+		"facebook whatApp whatApp profilePDF"
+		"tikTok tikTok zhiHu dribble"
+		"discord jueJin jueJin dribble";
+	column-gap: 28px; //列间距
+	row-gap: 28px; //行间距
+
+	.card-personal {
+		height: @card-height-M;
+		width: @card-width-L;
+		.card-base-styles();
+		background-color:  rgba(240, 240, 240, 0.8);
+		grid-area: personal;
+	}
+
+	.card-github {
+		height: @card-height-M;
+		width:@card-width-M;
+		.card-base-styles();
+		background-color:  rgba(16, 16, 16, 0.7);
+		grid-area: github;
+	}
+
+	.card-twitter {
+		height: @card-height-L;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(37, 173, 236, 0.7);
+		grid-area: twitter;
+		
+	}
+
+	.card-okJike {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(224, 218, 50, 0.994);
+		grid-area: okJike;
+	}
+
+	.card-instagram {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		grid-area: instagram;
+	}
+
+	.card-contactInfo {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(240, 240, 240, 0.8);
+		grid-area: contactInfo;
+	}
+	
+	.card-facebook {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(43, 72, 236, 0.7);
+		grid-area: facebook;
+	}
+
+	.card-whatApp {
+		height: @card-height-M;
+		width: @card-width-L;
+		.card-base-styles();
+		background-color:  rgba(42, 227, 88, 0.7);
+		grid-area: whatApp;
+	}
+
+	.card-profilePDF {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(240, 240, 240, 0.8);
+		grid-area: profilePDF;
+	}
+
+	.card-tikTok {
+		height: @card-height-M;
+		width: @card-width-L;
+		.card-base-styles();
+		background-color:  rgba(16, 16, 16, 0.7);
+		grid-area: tikTok;
+	}
+
+	.card-zhiHu {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(43, 72, 236, 0.7);
+		grid-area: zhiHu;
+	}
+
+	.card-dribble {
+		height: @card-height-L;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(236, 49, 139, 0.7);
+		grid-area: dribble;
+	}
+
+	.card-discord {
+		height: @card-height-M;
+		width: @card-width-M;
+		.card-base-styles();
+		background-color:  rgba(103, 56, 245, 0.7);
+		grid-area: discord;
+		
+	}
+
+	.card-jueJin {
+		height: @card-height-M;
+		width: @card-width-L;
+		.card-base-styles();
+		background-color:  rgba(37, 173, 236, 0.7);
+		grid-area: jueJin;
+	}
+}
