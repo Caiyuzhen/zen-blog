@@ -1,18 +1,20 @@
 import React, { FC, ReactElement } from 'react'
 import './ProjectCard.less'
-import {Iitem} from '../../../../api/index'
+import {Iitem, ProjectData} from '../../../../api/index'
 
 
 interface IProps {
-	content ? : Iitem[] | undefined
+	content ? : Iitem
 }
 
 const ProjectCard:FC<IProps> = ({content}): ReactElement => {
   return (
 	<>	
 		<div className='project-card'>
-			<h2>Title</h2>
-			<p>Your Pages site will use the layout and styles from the Jekyll theme you have selected in your </p>
+			{/* 非空断言！ */}
+			<h2>{content!.projectTitle}</h2>
+			<p>{content!.description}</p>
+			<p>{content!.datePublished}</p>
 		</div>
 	</>
   )

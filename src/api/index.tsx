@@ -52,7 +52,7 @@ export interface Iitem {
 	datePublished: string,
 }
 
-type ProjectData = Iitem[]
+export type ProjectData = Iitem[]
 
 
 
