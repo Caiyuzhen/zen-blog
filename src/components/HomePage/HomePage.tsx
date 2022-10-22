@@ -84,9 +84,9 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 					mouseControls: true,
 					touchControls: true,
 					gyroControls: false,
-					minHeight: 400.00,
-					// minWidth: 400.00,
-					size: 2.50
+					minHeight: 900,
+					minWidth: 800,
+					size: 1.70
 				})
 			)
 		}

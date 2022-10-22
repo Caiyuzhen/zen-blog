@@ -48,6 +48,7 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 		// event.preventDefault();
 	}
 
+	//🔥初次进入页面时，需要把色块的位置设置为上次 tab 的位置！
 	useEffect(()=>{
 		const dom = document.querySelector(`#${isActive}`);
 		changeBottomColor(dom as HTMLElement);
