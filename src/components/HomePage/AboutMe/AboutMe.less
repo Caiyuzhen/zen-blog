@@ -14,6 +14,11 @@
 	backdrop-filter: blur(10px);//🔥毛玻璃效果
 	cursor: pointer;
 	position: relative;//水平居中-1
+	// hover 后卡片变大
+	&:hover{
+		transform: scale(1.025);
+	}
+	transition: all 0.25s ease-in-out;
 
 	> img{ //卡片的所有子 svg
 		width: 78px;
@@ -261,6 +266,7 @@
 					}
 
 					> img {
+						z-index: 10;
 						width: 48px;
 						height: 48px;
 						padding: 16px;
@@ -523,6 +529,7 @@
 					}
 
 					> img {
+						z-index: 10;
 						width: 48px;
 						height: 48px;
 						padding: 16px;
@@ -769,6 +776,7 @@
 					}
 
 					> img {
+						z-index: 10;
 						width: 48px;
 						height: 48px;
 						padding: 16px;
@@ -1015,6 +1023,7 @@
 					}
 
 					> img {
+						z-index: 10;
 						width: 48px;
 						height: 48px;
 						padding: 16px;
