@@ -2,7 +2,7 @@ import { useEffect,} from 'react'
 import './App.less'
 import HomePage from './components/HomePage/HomePage'
 import MainContainer from './components/HomePage/MainContainer/MainContainer'
-import {Test2} from './api/index'
+import {Test2} from './api/hygraph'
 
 
 function App() {

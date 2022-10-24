@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react'
 import './ProjectCard.less'
-import {Iitem, ProjectData} from '../../../../api/index'
+// import {Iitem} from '../../../../api/hygraph'
+import { Iitem } from '../../../../types/global'
 
 
 interface IProps {
@@ -12,9 +13,9 @@ const ProjectCard:FC<IProps> = ({content}): ReactElement => {
 	<>	
 		<div className='project-card'>
 			{/* 非空断言！ */}
-			<h2>{content!.projectTitle}</h2>
-			<p>{content!.description}</p>
-			<p>{content!.datePublished}</p>
+			<h2>{content!.title}</h2>
+			<p>{content!.content}</p>
+			{/* <p>{content!.description}</p> */}
 		</div>
 	</>
   )
