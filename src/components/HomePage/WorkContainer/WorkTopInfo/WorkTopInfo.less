@@ -3,6 +3,7 @@
 	font-family: 'RammettoOne';
 	src: url('../../../assets/font/RammettoOne-Regular.ttf');
 };
+@mainTitlecolor: linear-gradient( rgba(61, 12, 255), rgba(61, 12, 255) ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 .workTopInfo-container {
@@ -30,17 +31,26 @@
 		gap: 4px;
 		align-items: flex-start;
 	
-		> .bigTitle {
+
+
+		> .bigTitle{
+			position: absolute;
 			font-family: RammettoOne;
+			background-image: linear-gradient(to right, #f0f5ff, #c5d9ff, #d8bfff);
+      		-webkit-background-clip: text;
+      		color: transparent;
 			font-size: 60px;
-			color: @text-color
+			height: 60px;
+    		line-height: 68px;
 		}
+
 	
 		.trim {
+			margin-top: 52px;
 			display: block;
 			height: 6px;
 			width: 100%;
-			background-color: @text-color;
+			background: linear-gradient(to right, #f0f5ff, #B1CBFF, #8C45FF);
 		}
 	}
 	

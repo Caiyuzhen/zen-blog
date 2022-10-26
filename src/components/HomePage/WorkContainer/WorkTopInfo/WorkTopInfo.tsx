@@ -13,8 +13,8 @@ export const WorkTopInfo:FC = () => {
 			</div>
 			{/* 中间大标题 */}
 			<div className="bigTitle-container">
-				<div className="bigTitle">Main Works</div>
-				<span className="trim"></span>
+				<div className="bigTitle text">Main Works</div>
+				<div className="trim"></div>
 			</div>
 			{/* 底部时间轴 */}
 			<div className="timeLine-container">

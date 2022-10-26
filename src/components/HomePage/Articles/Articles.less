@@ -41,81 +41,32 @@
 		.article-top-leftText  {
 			margin-top: 248px;
 			color: #3F07B6;
-			width: 2px;
+			width: 10px;
+			left: 12px;
+			top:302px;
+			position: absolute;
 			display: block;
 			font-family: 'RammettoOne';
-			font-size: 80px;
+			font-size: 100px;
 			z-index: 1;
 			transform: rotate(270deg);
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: #3ac4ff;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
 		}
 	
 		.article-top-rightContainer {
+			width: 100%;
 			z-index: 3;
 			display: flex;
-			flex-direction: row;
-			margin-left: 72px;
+			flex-direction: column;
+			margin-left: 48px;
 			gap: 24px;
 
-			> img {
-				width: 200px;
-				height: 148px;
-				border-radius: 10px;
-			}
-
-			.right-container {
-				display: flex;
-				flex-direction: column;
-				color: white;
-
-				.title {
-					font-family: 'RammettoOne';
-					font-size: 18px;
-					text-align: left;
-				}
-
-				p {
-					text-align: left;
-					width: 680px;
-				}
-
-				.metaInfo {
-					display: flex;
-					align-items: center;
-					gap: 12px;
-
-					.inline-author {
-						display: flex;
-						align-items: center;
-						gap: 10px;
-						font-weight: 600;
-
-						img {
-							width: 16px;
-							height: 16px;
-							border-radius: 50%;
-							margin-bottom: 2px; //视觉居中
-						}
-
-						.author {
-							font-size: 12px;
-						}
-					}
-
-					.time {
-						font-size: 12px;
-						color: #f2f2f2;
-					}
-
-					.hashTag {
-						font-size: 12px;
-						padding: 2px 6px 2px 6px;
-						width: auto;
-						border-radius: 6px;
-						background-color:  rgba(172, 171, 255, 0.4);
-						backdrop-filter: blur(10px);//🔥毛玻璃效果
-					}
-				}
-			}
 		}
 	}
 }
