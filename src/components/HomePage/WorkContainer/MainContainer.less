@@ -3,21 +3,37 @@
 	flex-direction: column;
 	gap: 28px;
 	padding: 8px;
+	align-items: center;
+	
 	// display: grid;
 	// grid-template-columns: 1fr 1fr 1fr;
 	// grid-gap:1rem 1rem;  //行间距 列间距
 	// place-items: center; //flex 内元素全部居中	
 	// float: left;
 
-	
+	// 装饰
 	.BgCircle {
 		width: 580px;
-		// 固定在左上角的布局
-		position: absolute;
+		position: absolute;// 固定在左上角的布局
 		top: 480px;
 		left: -222px;
 		z-index: 1;
+	}
 
+	// 装饰
+	.squareIcon {
+		width: 32px;
+		padding: 24px;
+		opacity: .6;
+	}
+
+	// 装饰
+	.gear {
+		width: 320px;
+		position: absolute;
+		right: -160px;
+		bottom: 160px;
+		z-index: 1;
 	}
 
 	// work 卡片的响应式布局

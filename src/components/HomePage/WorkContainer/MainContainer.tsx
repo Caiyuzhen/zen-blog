@@ -7,6 +7,8 @@ import { BannerCard } from './BannerCard/BannerCard'
 import BgCircle  from '../../../../src/assets/svg/icon-circle.svg'
 import ProjectTwo from '../../../../assets/img/work-2.jpg'
 import ProjectThree from '../../../../assets/img/work-3.jpg'
+import squareGraphicIcon from '../../../assets/svg/icon-squareGraphic.svg'
+import gear from '../../../assets/svg/icon-gear.svg'
 // import {ProjectData, Iitem, getProjectData} from '../../../api/hygraph'
 
 
@@ -53,6 +55,8 @@ const MainContainer:FC = ():ReactElement => {
 					}
 				</div>
 				<img src={BgCircle} alt="" className="BgCircle"/>
+				<img src={squareGraphicIcon} alt="" className="squareIcon"/>
+				<img src={gear} alt="" className="gear"/>
 			</div>
 		</>
 	)
