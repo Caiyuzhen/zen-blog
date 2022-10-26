@@ -1,0 +1,122 @@
+@import '../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../assets/font/RammettoOne-Regular.ttf');
+};
+
+
+.article-main-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap:68px;
+	padding: 10px;
+
+	.article-top-trim {
+		display: flex;
+		align-items: center;
+		justify-self: center;
+		width: 100%;
+		height: 24px;
+		gap: 48px;
+
+		img {
+			width: 24px;
+			height: 24px;
+		}
+
+		span {
+			width: 100%;
+			height: 2px;
+			background-color:  rgba(172, 171, 255, 0.4);
+			margin-left: auto;// 对齐右侧
+		}
+	}
+	
+	.article-top-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+
+		.article-top-leftText  {
+			margin-top: 248px;
+			color: #3F07B6;
+			width: 2px;
+			display: block;
+			font-family: 'RammettoOne';
+			font-size: 80px;
+			z-index: 1;
+			transform: rotate(270deg);
+		}
+	
+		.article-top-rightContainer {
+			z-index: 3;
+			display: flex;
+			flex-direction: row;
+			margin-left: 72px;
+			gap: 24px;
+
+			> img {
+				width: 200px;
+				height: 148px;
+				border-radius: 10px;
+			}
+
+			.right-container {
+				display: flex;
+				flex-direction: column;
+				color: white;
+
+				.title {
+					font-family: 'RammettoOne';
+					font-size: 18px;
+					text-align: left;
+				}
+
+				p {
+					text-align: left;
+					width: 680px;
+				}
+
+				.metaInfo {
+					display: flex;
+					align-items: center;
+					gap: 12px;
+
+					.inline-author {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						font-weight: 600;
+
+						img {
+							width: 16px;
+							height: 16px;
+							border-radius: 50%;
+							margin-bottom: 2px; //视觉居中
+						}
+
+						.author {
+							font-size: 12px;
+						}
+					}
+
+					.time {
+						font-size: 12px;
+						color: #f2f2f2;
+					}
+
+					.hashTag {
+						font-size: 12px;
+						padding: 2px 6px 2px 6px;
+						width: auto;
+						border-radius: 6px;
+						background-color:  rgba(172, 171, 255, 0.4);
+						backdrop-filter: blur(10px);//🔥毛玻璃效果
+					}
+				}
+			}
+		}
+	}
+}
+

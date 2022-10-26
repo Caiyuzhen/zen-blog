@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import HALO from "vanta/dist/vanta.halo.min";//⚡️更改这个名称来改变背景效果
 import * as THREE from "three";
 import TitleBar from './TitleBar/TitleBar';
-import MainContainer from './MainContainer/MainContainer'
+import MainContainer from './WorkContainer/MainContainer'
 import './HomePage.less'
 import AboutMe from './AboutMe/AboutMe' ;
 import Articles from './Articles/Articles';

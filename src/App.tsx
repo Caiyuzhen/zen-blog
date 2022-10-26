@@ -1,7 +1,7 @@
 import { useEffect,} from 'react'
 import './App.less'
 import HomePage from './components/HomePage/HomePage'
-import MainContainer from './components/HomePage/MainContainer/MainContainer'
+import MainContainer from './components/HomePage/WorkContainer/MainContainer'
 import {Test2} from './api/hygraph'
 
 

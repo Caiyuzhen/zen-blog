@@ -1,0 +1,86 @@
+@import '../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../assets/font/RammettoOne-Regular.ttf');
+};
+
+
+.workTopInfo-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 128px;
+
+	.baseInfo-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 24px;
+	
+		> p {
+			color: @text-color;
+			width: 600px;
+			text-align: left;	
+		}
+	}
+	
+	.bigTitle-container {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		align-items: flex-start;
+	
+		> .bigTitle {
+			font-family: RammettoOne;
+			font-size: 60px;
+			color: @text-color
+		}
+	
+		.trim {
+			display: block;
+			height: 6px;
+			width: 100%;
+			background-color: @text-color;
+		}
+	}
+	
+	
+	.timeLine-container {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: space-between;
+	
+		.timeline {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+	
+			.timeline-title {
+				color: @text-color;
+				margin: 0;
+				font-size: 16px;
+				font-family: RammettoOne;
+			}
+		
+			.timeline-des {
+				color: @description-color;
+				margin: 0;
+			}
+		}
+
+		.circle {
+			// 圆形
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: @text-color;
+			opacity: 0.4;
+		}
+
+		.timeline-Step-two, .timeline-Step-three, .timeline-Step-four {
+			// 透明度变为 0.5
+			opacity: 0.4;
+		}
+	}
+}
