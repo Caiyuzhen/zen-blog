@@ -29,8 +29,6 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: start;
-		justify-self: center;
 		gap: 16px;
 
 		.content-title {
@@ -39,6 +37,11 @@
 			font-family: 'RammettoOne';
 			color: @tab-font-selector;
 			margin: 0;
+			text-align: left;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			width: 100%;
+			text-overflow: ellipsis;
 		}
 
 		.content-subtitle {
@@ -46,6 +49,42 @@
 			font-weight: 400;
 			margin: 0;
 			text-align: start;
+			height: 100%;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 7;
+			display: -webkit-box;
+			text-overflow: ellipsis;
+		}
+
+		.navDot-container {
+			display: flex;
+			justify-content: space-between;
+
+			.navDotGroup {
+				display: flex;
+				gap: 10px;
+				align-items: center;
+
+				>span {
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: rgba(255, 255, 255, 0.7);
+					box-shadow: 
+						0px 0px 1px rgba(32, 28, 94, 0.1),
+						4px 8px 16px rgba(32, 28, 94, 0.2);
+				}
+
+				.dot-Selector {
+					width: 14px;
+					height: 14px;
+					border-radius: 50%;
+					background-color: rgba(255, 255, 255, 1);
+				}
+			}
+			> img {
+				width: 48px;
+			}
 		}
 	}
 }

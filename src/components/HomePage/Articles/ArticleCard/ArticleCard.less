@@ -10,6 +10,9 @@
 		width: 220px;
 		height: 168px;
 		border-radius: 10px;
+		box-shadow: 
+			0px 0px 1px rgba(32, 28, 94, 0.1),
+			4px 8px 16px rgba(32, 28, 94, 0.2);
 	}
 
 	.right-container {
@@ -27,6 +30,7 @@
 			font-size: 22px;
 			line-height: 1.6;
 			//👇最多 2 行，超过则 ...
+			display: -webkit-box;
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 1;
 			overflow: hidden;
@@ -36,12 +40,15 @@
 		p {
 			text-align: left;
 			width: 100%;
-			display: -webkit-box;
 			//👇最多 3 行，超过则 ...
+			display: -webkit-box;
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 3;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			text-shadow: 
+				0px 0px 1px rgba(32, 28, 94, 0.1),
+				4px 8px 16px rgba(32, 28, 94, 0.2);
 		}
 
 		.metaInfo {
