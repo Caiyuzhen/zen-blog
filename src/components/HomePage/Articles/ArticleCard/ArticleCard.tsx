@@ -13,8 +13,8 @@ export const ArticleCard = () => {
 			<div className="right-container">
 				<p className="title">Product Archaeology in UX:What is memory?</p>
 				<p>Desinging and defining digital is inherently complex and iterative design exerience,and tweaks constantly change and alter the user experience.</p>
+				
 				<div className="metaInfo">
-
 					<div className="inline-author">
 						<img src={Zeno} alt=""/>
 						<div className="author">Zeno</div>

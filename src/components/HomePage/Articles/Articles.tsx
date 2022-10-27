@@ -4,6 +4,10 @@ import { ArticleCard } from './ArticleCard/ArticleCard'
 import rightGridImg from '../../../assets/img/rightGrid.png'
 import doubleCircle from '../../../assets/svg/Icon-doubleCircle.svg'
 import quota from '../../../assets/svg/Icon-quota.svg'
+import { SideNav } from './SideNav/SideNav'
+import { InspiraCard } from './InspiraCard/InspiraCard'
+import Zeno from '../../../assets/img/Zen.png'
+
 
 
 const Articles = () => {
@@ -33,19 +37,33 @@ const Articles = () => {
 		
 		<div className="article-bottom-container">
 			<div className="article-bottom-rightText">Inspiration</div>
-			<div className="article-bottom-leftContainer">
-				<div className="nav">
-					<div className="nav-item-design">Design</div>
-					<div className="nav-item-product">Product</div>
-					<div className="nav-item-business">Business</div>
-					<div className="nav-item-sthFun">Sth Fun</div>
-				</div>
+			
+			<div className="article-bottom-container">
+				<SideNav />
+				
 				<div className="content-container">
-					<div className="item-con">Sometimes, advice on how not to do turns out to be the most practical, because simple guides and recommendations always leave room for wrong decisions. </div>
-					<div className="item-con">We are all aware of the fact that the internet has changed our lives in a number of ways. </div>
-					<div className="item-con">Meet the 10 most upvoted apps this month — via ProductHunt. Sometimes all we need is a helping hand to raise us to greatness.</div>
-					<div className="item-con">Previously, I was a fan of apps like Notion, OverNote, Coda. They really made life easier for me and my team. </div>
-					<div className="item-con">Previously, I was a fan of apps like Notion, OverNote, Coda. They really made life easier for me and my team. </div>
+					<InspiraCard 
+						content='Sometimes, advice on how not to do turns out to be the most practical, because simple guides and recommendations always leave room for wrong decisions.'
+						avatar={Zeno}
+						author='Zeno'
+						time={'2 days ago'}//先写死
+						hashTag={'#inspiration'}//先写死
+					/>
+					<InspiraCard 
+						content='We are all aware of the fact that the internet has changed our lives in a number of ways.'
+						avatar={Zeno}
+						author='Zeno'
+						time={'2 days ago'}//先写死
+						hashTag={'#inspiration'}//先写死
+					/>
+					<InspiraCard 
+						content='Meet the 10 most upvoted apps this month — via ProductHunt. Sometimes all we need is a helping hand to raise us to greatness.'
+						avatar={Zeno}
+						author='Zeno'
+						time={'2 days ago'}//先写死
+						hashTag={'#inspiration'}//先写死
+					/>
+
 				</div>
 			</div>
 		</div>

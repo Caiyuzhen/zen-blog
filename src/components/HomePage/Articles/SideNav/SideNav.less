@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../assets/font/RammettoOne-Regular.ttf');
+};
+
+.nav-items {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	background: //卡片背景
+		linear-gradient(163.08deg, rgba(98, 71, 255, 0.64) 2.61%, 
+		rgba(98, 71, 255, 0.24) 98.53%);
+	backdrop-filter: blur(16px);
+	width: 338px;
+	height: 496px;
+	left: 166px;
+	top: 0px;
+	box-sizing: border-box;
+	border-radius: 20px 80px;
+	padding: 36px 28px;
+
+	// 导航项
+	.item-selected {
+		//border 渐变效果
+		background-image: 
+		linear-gradient(to bottom right, #221d6d, #37159c),
+		linear-gradient(to bottom right, #6ba4fa, #8c88db, #660c8f);
+		padding: 1.5px; //用来控制 border 的粗细
+		border-radius: 18px;
+		background-clip: content-box,padding-box;
+		transition: filter .5s ease;
+		opacity: 1 !important;
+	}
+
+	.item {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		border: none;
+		width: 282px;
+		height: 68px;
+		gap: 12px;
+		opacity: 0.6;
+		
+	
+		.inline {
+			display: flex;
+			margin-left: 24px;
+			gap: 16px;
+
+			> img {
+				width: 32px;
+			}
+	
+			> p {
+				font-size: 20px;
+				color: white;
+				font-family: 'RammettoOne';
+			}
+		}
+		
+
+		//顺手再加个渐变动画 hue 360 度旋转
+		// animation: huerotate 6s infinite linear;
+		// filter: hue-rotate(360deg); 
+
+	}
+	// @keyframes huerotate {
+	// 	0% {
+	// 		filter: hue-rotate(0deg);
+	// 	}
+	// 	100% {
+	// 		filter: hue-rorate(360deg);
+	// 	}
+	// }
+}
