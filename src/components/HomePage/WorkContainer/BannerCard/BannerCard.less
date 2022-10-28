@@ -22,12 +22,42 @@
 		z-index: 5;
 		overflow-y: hidden;
 	
-		> img {
-			width: 540px;
-			height: 320px;
-			border-radius: 20px;
+		.imgMask-box {
+			position: relative; 
+			width: 100%;
+			height: 264px;
+    		overflow: hidden;
+			border-radius: 16px;
+
+			.mainWork {//540px X 320px
+				// width: 100%; 
+				// height: 264px;
+				border-radius: 20px;
+				object-fit: cover;
+			}
+
+			.work-0 {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				z-index: 3;
+			}
+
+			.work-1 {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+
+			.work-2 {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+
 		}
-	
 		.content-conatiner {
 			width: 100%;
 			display: flex;
@@ -69,6 +99,7 @@
 					align-items: center;
 	
 					>span {
+						cursor: pointer;
 						width: 8px;
 						height: 8px;
 						border-radius: 50%;
@@ -111,11 +142,41 @@
 		backdrop-filter: blur(10px);//🔥毛玻璃效果
 		z-index: 5;
 		overflow-y: hidden;
-	
-		> img {
+
+
+		.imgMask-box {
+			position: relative; 
 			width: 100%;
-			height: auto;
-			border-radius: 20px;
+			height: 264px;
+    		overflow:hidden;
+
+			.mainWork {//540px X 320px
+				width: 100%; 
+				height: 264px;
+				border-radius: 20px;
+			}
+
+			.work-0 {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				z-index: 3;
+			}
+
+			.work-1 {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+
+			.work-2 {
+				position: absolute; 
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+
 		}
 	
 		.content-conatiner {
