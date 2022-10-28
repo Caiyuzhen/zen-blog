@@ -7,7 +7,7 @@ import detailIcon from '../../../../assets/svg/icon-detail.svg'
 export const BannerCard:FC = () => {
 	return (
 		<>
-			<div className="mainWork-container">
+			<div className="mainWork-banner-container">
 				<img src={mainWork} alt="" className="mainWork"/>
 				<div className="content-conatiner">
 					<p className="content-title">UI&UX Design</p>

@@ -38,9 +38,10 @@ const Articles = () => {
 		<div className="article-bottom-container">
 			<div className="article-bottom-rightText">Inspiration</div>
 			
-			<div className="article-bottom-container">
-				<SideNav />
+			<div className="article-inspired-container">
 				
+				<SideNav />
+
 				<div className="content-container">
 					<InspiraCard 
 						content='Sometimes, advice on how not to do turns out to be the most practical, because simple guides and recommendations always leave room for wrong decisions.'
@@ -63,8 +64,8 @@ const Articles = () => {
 						time={'2 days ago'}//先写死
 						hashTag={'#inspiration'}//先写死
 					/>
-
 				</div>
+				
 			</div>
 		</div>
 		<img src={rightGridImg} alt="" className="rightGridImg"/>
