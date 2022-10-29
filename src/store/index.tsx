@@ -23,9 +23,9 @@ const saveState = (state: string) => {
 // 	saveState(store.getState().tabs.tabName)
 // })
 
-window.onbeforeunload = () => { //🛢️在关闭窗口一瞬间存储
+window.onbeforeunload = () => { //🛢️在关闭窗口一瞬间存储这个 state
 	saveState(store.getState().tabs.tabName)
 }
 
 
-export default store
+export default store//可以在外部引入来订阅 store 内的值
