@@ -3,7 +3,7 @@ import './App.less'
 import HomePage from './components/HomePage/HomePage'
 import MainContainer from './components/HomePage/WorkContainer/MainContainer'
 import {Test2} from './api/hygraph'
-
+import MouseDot from './components/Mouse/MouseDot'
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
 	return (
 		<div className="App">
 			{/* <Test2/> */}
+			<MouseDot/>
 			<HomePage>
 			</HomePage>
 		</div>

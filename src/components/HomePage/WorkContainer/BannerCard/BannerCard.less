@@ -3,6 +3,19 @@
 	font-family: 'RammettoOne';
 	src: url('../../../assets/font/RammettoOne-Regular.ttf');
 };
+.bgcolorFn(){//less 混合, 公共颜色
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient( 45deg, hsl(300deg, 100%, 50%), hsl(200deg, 100%, 50%), rgb(0, 255, 217) );
+	border-radius: 8px;
+	filter: blur(24px);
+	z-index: -1;
+}
+
 
 //响应式布局
 @media screen and (max-width: 4200px) {	
@@ -21,6 +34,7 @@
 		backdrop-filter: blur(10px);//🔥毛玻璃效果
 		z-index: 5;
 		overflow-y: hidden;
+
 	
 		.imgMask-box {
 			position: relative; 
@@ -99,15 +113,21 @@
 					gap: 10px;
 					align-items: center;
 	
-					>span {
+					.dot {
+						position: relative;//扩大热区
 						cursor: pointer;
-						width: 8px;
-						height: 8px;
+						width: 8px; height: 8px;
 						border-radius: 50%;
 						background-color: rgba(255, 255, 255, 0.7);
 						box-shadow: 
 							0px 0px 1px rgba(32, 28, 94, 0.1),
 							4px 8px 16px rgba(32, 28, 94, 0.2);
+					}
+
+					.dot::before { //伪元素，扩大热区
+						content: '';
+						position: absolute;
+						top: -4px; right: -4px; bottom: -4px; left: -4px;
 					}
 	
 					.dot-Selector {
@@ -122,7 +142,12 @@
 				}
 			}
 		}
+
+		&::before{
+			.bgcolorFn();
+		}
 	}
+
 }
 
 
@@ -221,7 +246,8 @@
 					gap: 10px;
 					align-items: center;
 	
-					>span {
+					.dot {
+						position: relative;//扩大热区
 						width: 8px;
 						height: 8px;
 						border-radius: 50%;
@@ -235,7 +261,13 @@
 							background-color: rgba(255, 255, 255, 1);
 						}
 					}
-	
+
+					.dot::before { //伪元素，扩大热区
+						content: '';
+						position: absolute;
+						top: -4px; right: -4px; bottom: -4px; left: -4px;
+					}
+
 					.dot-Selector {
 						width: 14px;
 						height: 14px;
@@ -247,6 +279,10 @@
 					width: 48px;
 				}
 			}
+		}
+
+		&::before{
+			.bgcolorFn();
 		}
 	}
 }
