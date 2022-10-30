@@ -10,7 +10,7 @@ type IMouseContextType = {
 	cursorChangeHandler: (cursorType: string) => void
 }
 
-// 工具 1 - 包裹上下文
+// 工具 1 - 包裹上下文 --- one 快递车 MouseContext
 export const MouseContext = createContext<IMouseContextType>({
 	cursorType: "", 
 	cursorChangeHandler: () => {},
@@ -23,7 +23,7 @@ export const MouseContext = createContext<IMouseContextType>({
 
 // 创建一个包裹上下文 context 值的工具函数, 会把值传递给 children 子组件
 type IMouseContextProps = {
-	children: React.ReactNode
+	children: React.ReactNode //要执行 cursorChangeHandler 的组件
 }
 
 // 工具 2 - 获得实际的值
@@ -34,15 +34,16 @@ const MouseContextProvider = ( {children}:IMouseContextProps ) => {
 		setCursorType(cursorType)
 	}
 
+	// 定义个对象来接收最终的值，更方便些
 	const value = {
 		cursorType: cursorType,
 		cursorChangeHandler: cursorChangeHandler
 	}
 
 	return (
-		// 把值包裹给上面的 MouseContext
-		<MouseContext.Provider value={value}> 
-			{/* 子组件将获得 value */}
+		// 把值包裹给上面的 MouseContext -- two 快递货
+		<MouseContext.Provider value={value}>  
+			{/* 子组件将获得 value( 包含一个 cursorChangeHandler 跟 cursorType 值) */}
 			{children}
 		</MouseContext.Provider> 
 	)

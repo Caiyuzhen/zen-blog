@@ -11,6 +11,7 @@ import store from '../../../../store'
 import { MouseContext } from '../../../Mouse/useMouseContent'
 
 
+
 export const BannerCard:FC = () => {
 
 	const [dotIndex, setDotIndex] = useState(0) //最开始是第 0 张 | 用来定位圆点的样式
@@ -91,14 +92,14 @@ export const BannerCard:FC = () => {
 
 	return (
 		<>
-			<div className="mainWork-banner-container">
+			<div className="mainWork-banner-container"
+				//【 🏹️（7）】鼠标把鼠标进入的状态传递给 context, 改变 cursorType 为 hovered
+				onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+				onMouseLeave={ ()=>cursorChangeHandler('') }
+			>
 
 				{/*  用 mask 来规定显示的尺寸大小 */}
-				<div className="imgMask-box"
-					//【 🏹️（7）】鼠标把鼠标进入的状态传递给 context, 改变 cursorType 为 hovered
-					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
-					onMouseLeave={ ()=>cursorChangeHandler('') }
-				>
+				<div className="imgMask-box">
 					{/* 所有图片 */}
 					<img src={mainWork0} alt="" className="mainWork work-0" />
 					<img src={mainWork1} alt="" className="mainWork work-1" />

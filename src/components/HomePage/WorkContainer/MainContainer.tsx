@@ -9,6 +9,7 @@ import ProjectTwo from '../../../../assets/img/work-2.jpg'
 import ProjectThree from '../../../../assets/img/work-3.jpg'
 import squareGraphicIcon from '../../../assets/svg/icon-squareGraphic.svg'
 import gear from '../../../assets/svg/icon-gear.svg'
+import Tilty from 'react-tilty'
 // import {ProjectData, Iitem, getProjectData} from '../../../api/hygraph'
 
 
@@ -43,7 +44,16 @@ const MainContainer:FC = ():ReactElement => {
 		<>
 			<div className="context-container">
 				<WorkTopInfo />
-				<BannerCard />
+				<Tilty 
+					className="tilty" 
+					style={{zIndex: 10, padding:0, transformStyle: "preserve-3d"}}
+					settings={{
+						glare: true,
+						"max-glare": 0.5
+					  }}
+				>
+					<BannerCard />
+				</Tilty>
 				<div className="works-container">
 					{
 						// 遍历数据并进行渲染
