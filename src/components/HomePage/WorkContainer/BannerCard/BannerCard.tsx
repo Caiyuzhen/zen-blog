@@ -1,4 +1,4 @@
-import React, { FC, useRef, useEffect, useState } from 'react'
+import React, { FC, useRef, useEffect, useState, useContext } from 'react'
 import './BannerCard.less'
 import mainWork0 from '../../../../assets/img/work-1.jpg'
 import mainWork1 from '../../../../assets/img/work-2.jpg'
@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { rootState } from '../../../../store'
 import { IBannerDotsState, IBannerDotStateActionType } from '../../../../store/reducers/bannerDots'
 import store from '../../../../store'
+import { MouseContext } from '../../../Mouse/useMouseContent'
 
 
 export const BannerCard:FC = () => {
@@ -19,6 +20,7 @@ export const BannerCard:FC = () => {
 	const work1 = document.querySelector('.work-1') as HTMLImageElement
 	const work2 = document.querySelector('.work-2') as HTMLImageElement
 
+	const { cursorChangeHandler } = useContext(MouseContext)//【 🏹️（（6）】用来改变 cursorType ，在下面的 render 中监听鼠标进入了哪个元素
 
 	
 
@@ -35,12 +37,12 @@ export const BannerCard:FC = () => {
 		})
 	}
 
+	// console.log(dotsArr)
 
 	
 	//【第二步】【🔥实时的】监听 Store 内 State 的变化, 根据改变后的【状态】来进行轮播方法
 	store.subscribe(() => {
 		const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据
-		// console.log('监听中', bannerDotState)
 
 		if(bannerDotState === 0){ //点了第一张, 因为是实时监听的数据，所以会直接变
 			if(work0 !== null) {
@@ -74,9 +76,9 @@ export const BannerCard:FC = () => {
 
 	//切换显示大 dot 的方法
 	useEffect(() => {
-		// console.log(dotIndex)
 		dotsArr.forEach((item, index) => {
 			if(index === dotIndex) {
+				console.log('index', index, dotIndex)
 				item.classList.add('dot-Selector')
 			} else {
 				item.classList.remove('dot-Selector')
@@ -86,12 +88,17 @@ export const BannerCard:FC = () => {
 
 
 
+
 	return (
 		<>
 			<div className="mainWork-banner-container">
 
 				{/*  用 mask 来规定显示的尺寸大小 */}
-				<div className="imgMask-box">
+				<div className="imgMask-box"
+					//【 🏹️（7）】鼠标把鼠标进入的状态传递给 context, 改变 cursorType 为 hovered
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					{/* 所有图片 */}
 					<img src={mainWork0} alt="" className="mainWork work-0" />
 					<img src={mainWork1} alt="" className="mainWork work-1" />
@@ -104,18 +111,19 @@ export const BannerCard:FC = () => {
 				<div className="content-conatiner">
 					<p className="content-title">UI&UX Design</p>
 					<p className="content-subtitle">A simple note app, some desctiptions, and some examples of how to use it.A simple note app, some desctiptions, and some examples of how to use it.</p>
-					<div className="navDot-container">
+					<div className="navDot-container"
+					>
 						{/* 导航的小点点 */}
 						<div className="navDotGroup">
-							<span className="dot dot-Selector" onClick={ (e) => {
-								changeDotState(0);
-								}}></span>
-							<span className="dot" onClick={ (e) => {
-								changeDotState(1);
-								}}></span>
-							<span className="dot " onClick={ (e) => {
-								changeDotState(2);
-								}}></span>
+							<div className="dot dot-Selector" 
+								  onClick={ (e) => {changeDotState(0)}}
+							></div>
+							<div className="dot" 
+								  onClick={ (e) => {changeDotState(1)}}
+							></div>
+							<div className="dot " 
+								  onClick={ (e) => {changeDotState(2)}}
+							></div>
 						</div>
 						<img src={detailIcon} alt="" />
 					</div>

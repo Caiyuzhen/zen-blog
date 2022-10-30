@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Trottle from '../../src/utils/Trottle'
 
 
+//【 🏹️（（1）】 定义获得鼠标坐标的 hooks
+
 // 鼠标坐标参数的类型
 type MousePos = { x: number, y: number }
 
@@ -16,16 +18,19 @@ export default function getMousePosition(): MousePos {
 
 	useEffect(() => {
 
+		// 定义湖区鼠标坐标的函数
 		const mouseMoveHandler = (e:MouseEvent) => {
 			const { clientX, clientY } = e //🔥从鼠标事件中解构出鼠标的 X , Y 坐标
 			setMousePosition({ x: clientX, y: clientY }) //🔥把鼠标的 X , Y 坐标存储到 mousePosition 中
 		}
 
-		// 节流函数
+		// 调用节流函数，传入上面的函数
 		const mouseMove = Trottle(mouseMoveHandler, 50)
 
+		//真正执行节流函数（获取坐标的函数，延迟）
 		document.addEventListener('mousemove', mouseMove) //监听鼠标移动事件, 执行函数 mouseMoveHandler 来获得坐标
 
+		// 停止执行函数
 		return () => {
 			document.removeEventListener('mousemove', mouseMove) //组件卸载时, 移除鼠标移动事件的监听 
 		}

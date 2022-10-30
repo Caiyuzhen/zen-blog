@@ -5,8 +5,8 @@ import MainContainer from './components/HomePage/WorkContainer/MainContainer'
 import {Test2} from './api/hygraph'
 import MouseDot from './components/Mouse/MouseDot'
 
-function App() {
 
+function App() {
 	// 引入 vanta 库的初始化定义，用于渲染背景
 	useEffect(() => {
 		const threeScript = document.createElement('script')
@@ -15,14 +15,11 @@ function App() {
 		document.getElementsByTagName('head')[0].appendChild(threeScript)//🔥🔥把脚本添加到head中
 	},[])
 
-
-	
 	return (
 		<div className="App">
 			{/* <Test2/> */}
 			<MouseDot/>
-			<HomePage>
-			</HomePage>
+			<HomePage/>
 		</div>
 	)
 }

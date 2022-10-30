@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, {FC, useContext} from 'react'
 import './AboutMe.less'
 import githubIcon from '../../../assets/svg/icon-github.svg'
 import twitterIcon from '../../../assets/svg/icon-titter.svg'
@@ -17,9 +17,12 @@ import contactInfo from '../../../assets/svg/icon-contact.svg'
 import book from '../../../assets/svg/icon-book.svg'
 import download from '../../../assets/svg/icon-download.svg'
 import profilePDF from '../../../assets/pdf/test.pdf'
+import { MouseContext } from '../../Mouse/useMouseContent'
 
 
 const AboutMe:FC = () => {
+
+	const { cursorType, cursorChangeHandler } = useContext(MouseContext)//引入添加样式
 
 	const pdfURL = profilePDF //获得 pdf 的链接
 
@@ -45,7 +48,10 @@ const AboutMe:FC = () => {
 			</div>
 
 			<div className="bottom-container">
-				<div className="card-personal"> 
+				<div className="card-personal"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				> 
 					<div className="avatar-container">
 						<img className="avatar" src={ZenoAvatar} alt="" />
 						<img className="changeAvatar" src={changeIcon} alt="" />
@@ -54,19 +60,34 @@ const AboutMe:FC = () => {
 						<p>I'm a UX designer  and Front-end development enthusiasts from HongKong, Now I live in Shenzhen. My previous experience has focused on efficiency tools and communication tools. I'm also interested in some development libraries, so please feel free to share with me! 👏 </p>
 					</div>
 				</div>
-				<div className="card-github">
+				<div className="card-github"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={githubIcon} alt=""/>
 				</div>
-				<div className="card-twitter">
+				<div className="card-twitter"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={twitterIcon} alt=""/>
 				</div>
-				<div className="card-okJike">
+				<div className="card-okJike"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={okJikeIcon} alt=""/>
 				</div>
-				<div className="card-instagram">
+				<div className="card-instagram"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={instagramIcon} alt=""/>
 				</div>
-				<div className="card-contactInfo">
+				<div className="card-contactInfo"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<div className="title-contact">
 						<img src={contactInfo} alt="" />
 						<div>Contact</div>
@@ -78,32 +99,56 @@ const AboutMe:FC = () => {
 						<div className="info">QQ: <p className="info-text">418590624</p></div>
 					</div>
 				</div>
-				<div className="card-facebook">
+				<div className="card-facebook"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={facebookIcon} alt=""/>
 				</div>
-				<div className="card-whatApp">
+				<div className="card-whatApp"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={whatAppIcon} alt=""/>
 				</div>
-				<div className="card-profilePDF">
+				<div className="card-profilePDF"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<div className="title-pdfDL" >
 						<img src={book} alt=""/>
 						<div>Profile</div>
 					</div>
 					<img src={download} alt="" onClick={ ()=> downloadPDF(pdfURL) }/>
 				</div>
-				<div className="card-tikTok">
+				<div className="card-tikTok"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={tikTok} alt=""/>
 				</div>
-				<div className="card-zhiHu">
+				<div className="card-zhiHu"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={zhiHu} alt=""/>
 				</div>
-				<div className="card-dribble">
+				<div className="card-dribble"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={dribble} alt=""/>
 				</div>
-				<div className="card-discord">
+				<div className="card-discord"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={discord} alt=""/>
 				</div>
-				<div className="card-jueJin">
+				<div className="card-jueJin"
+					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
+					onMouseLeave={ ()=>cursorChangeHandler('') }
+				>
 					<img src={jueJin} alt=""/>
 				</div>
 			</div>
