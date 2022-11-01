@@ -1,4 +1,4 @@
-// 测试 api 用的，不会真正的打包进去
+// 测试 api 用的, 不会真正的打包进去, 只是本地跑一下看看数据
 
 //express.jx 基本配置
 import { Client } from "@notionhq/client"

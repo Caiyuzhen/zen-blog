@@ -9,6 +9,9 @@ import { rootState } from '../../../../store'
 import { IBannerDotsState, IBannerDotStateActionType } from '../../../../store/reducers/bannerDots'
 import store from '../../../../store'
 import { MouseContext } from '../../../Mouse/useMouseContent'
+import axios from 'axios'
+import { IBannerCard, ApiResponse } from '../../../../types/global'
+import { BannerText } from './BannerText'
 
 
 
@@ -79,7 +82,7 @@ export const BannerCard:FC = () => {
 	useEffect(() => {
 		dotsArr.forEach((item, index) => {
 			if(index === dotIndex) {
-				console.log('index', index, dotIndex)
+				// console.log('index', index, dotIndex)
 				item.classList.add('dot-Selector')
 			} else {
 				item.classList.remove('dot-Selector')
@@ -87,6 +90,25 @@ export const BannerCard:FC = () => {
 		})
 	},[dotIndex])
 
+
+	// 加载 bannerCard 静态数据的方法
+	const [bannerData, setBannerData] = useState<IBannerCard[]>([])  //实际存储数据的 hook
+
+	async function getBannerCardData() {
+		// 🌟 范型 ApiResponse 内的 data 是 IBannerCard 类型的数组[], 参考 https://juejin.cn/post/7084490905616384008
+		const res = await axios.get<ApiResponse<IBannerCard[]>>('../../../../../content/works/bannerContent.json')
+		if(res !== undefined) {
+			// console.log(res.data.data);
+			const resBannerCardData = res.data.data
+			// console.log(resBannerCardData)
+			setBannerData(resBannerCardData)
+		}
+	}
+
+	useEffect(() => {
+		getBannerCardData()
+		// console.log('bannerDara',bannerData)
+	},[])
 
 
 
@@ -108,13 +130,20 @@ export const BannerCard:FC = () => {
 					{/* <img src={mainWork0} alt="" className="mainWork work-0" /> */}
 				</div>
 				
-				{/* 右侧内容 */}
+				
 				<div className="content-conatiner">
-					<p className="content-title">UI&UX Design</p>
-					<p className="content-subtitle">A simple note app, some desctiptions, and some examples of how to use it.A simple note app, some desctiptions, and some examples of how to use it.</p>
-					<div className="navDot-container"
-					>
-						{/* 导航的小点点 */}
+					{/* 右侧文字内容 */}
+					{/* 遍历上面 api 请求回来的本地数据 */}
+					{
+						bannerData && bannerData.map((item, index:number) => {
+							return (
+								<BannerText key={index} id={item.id} title={item.title} subTitle={item.des}/>
+							)
+						})
+					}
+
+					{/* 导航的小点点 */}
+					<div className="navDot-container">
 						<div className="navDotGroup">
 							<div className="dot dot-Selector" 
 								  onClick={ (e) => {changeDotState(0)}}

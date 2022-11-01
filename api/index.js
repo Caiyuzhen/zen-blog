@@ -1,4 +1,4 @@
-//express.jx 基本配置
+//express.jx 基本配置(这个是要被真正打包进 Vercel 的函数)
 import { Client } from "@notionhq/client"
 
 import express from "express"

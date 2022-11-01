@@ -81,8 +81,8 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 					el: vantaRef.current,
 					THREE,
 					// 👇额外的效果(不同背景的额外参数放这里，可以在官网调试看效果)
-					mouseControls: true,
-					touchControls: true,
+					mouseControls: false, //性能有点卡，先关闭了
+					touchControls: false, //性能有点卡，先关闭了
 					gyroControls: false,
 					minHeight: 900,
 					minWidth: 800,
