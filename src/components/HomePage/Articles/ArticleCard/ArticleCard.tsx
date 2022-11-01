@@ -9,14 +9,15 @@ import './ArticleCard.less'
 
 export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 
+	const {id,title,des,date,hashTag,img} = props//解构赋值
 	
 	return (
 	<>
-		<div className="article-card">
-			<img src={ProjectThree} alt="" />
+		<div className="article-card" id={id}>
+			<img src={img} alt="" />
 			<div className="right-container">
-				<p className="title">Product Archaeology in UX:What is memory?</p>
-				<p>Desinging and defining digital is inherently complex and iterative design exerience,and tweaks constantly change and alter the user experience.</p>
+				<p className="title">{title}</p>
+				<p>{des}</p>
 				
 				<div className="metaInfo">
 					<div className="inline-author">
@@ -24,9 +25,9 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 						<div className="author">Zeno</div>
 					</div>
 
-					<div className="time">29 Jun 2022</div>
+					<div className="time">{date}</div>
 					
-					<div className="hashTag">Design thinking</div>
+					<div className="hashTag">{hashTag}</div>
 				</div>
 			</div>
 		</div>

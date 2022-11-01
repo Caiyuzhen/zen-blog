@@ -10,6 +10,7 @@ import Zeno from '../../../assets/img/Zen.png'
 import { MouseContext } from '../../Mouse/useMouseContext'
 import axios from 'axios'
 import { ApiResponse, IArticleList} from '../../../types/global'
+// import img1 from '../../../../src/assets/img/article-img-01.jpg'
 
 const Articles = () => {
 
@@ -27,7 +28,7 @@ const Articles = () => {
 
 	useEffect(() => {
 		getArticleListData()
-		// console.log('articleList', articleList)//获得数据
+		console.log('得到 articleList', articleList)//获得数据
 	}, [])
 
 
@@ -47,9 +48,23 @@ const Articles = () => {
 				 onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
 				 onMouseLeave={ ()=>cursorChangeHandler('') }
 			>
-				<ArticleCard />
-				<ArticleCard />
-				<ArticleCard />
+				{/* 渲染 ArticleList 数据 */}
+				{
+					articleList && articleList.map((articleData, index:number) => {
+						return (
+							<div key={index}>
+								<ArticleCard 
+									id={articleData.id}
+									title={articleData.title}
+									des={articleData.des}
+									date={articleData.date}
+									hashTag={articleData.hashTag}
+									img={articleData.img}
+								/>
+							</div>
+						)
+					})
+				}
 			</div>
 		</div>
 

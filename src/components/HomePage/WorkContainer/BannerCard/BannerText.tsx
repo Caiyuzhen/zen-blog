@@ -12,7 +12,7 @@ export const BannerText:FC<IProps> = (props: IProps) => {
 	const {id, title, subTitle} = props //解构出数据
 
 	return (
-		<div className="banner-text-container" key={id}>
+		<div className="banner-text-container" id={id}>
 			<p className="content-title">{title}</p>
 			<p className="content-subtitle">{subTitle}</p>
 		</div>

@@ -33,9 +33,10 @@ export interface ApiResponse<T> {
 
 // ArticleList 组件的数据类型 IArticleList[]
 export type IArticleList = {
-	id: number,
+	id: string,
 	title: string,
 	des: string,
 	date: string,
 	hashTag: string,
+	img? : string, //string 类型
 }

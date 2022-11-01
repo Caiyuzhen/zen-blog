@@ -4,24 +4,26 @@
 		"id": 1,
 		"title": "Product Archaeology in UX: What  is memory?",
 		"date": "29 Jun 2022",
-		"description": "Designing and defining digital products is inherently complex; iterative design, experiments, and tweaks constantly change and alter the user experience.",
+		"des": "Designing and defining digital products is inherently complex; iterative design, experiments, and tweaks constantly change and alter the user experience.",
 		"hashTag": "Design Thinking",
-		"img": "../../"
+		"img": "../../../../src/assets/img/article-img-01.jpg"
 
 	  },
 	  {
 		"id": 2,
 		"title": "Notion dead? A new generation of knowledge management tools",
 		"date": "28 Jun 2022",
-		"description": "Designing and defining digital products is inherently complex; iterative design, experiments, and tweaks constantly change and alter the user experience.",
-		"hashTag": "Design Thinking"
+		"des": "Designing and defining digital products is inherently complex; iterative design, experiments, and tweaks constantly change and alter the user experience.",
+		"hashTag": "Design Thinking",
+		"img": "../../../../src/assets/img/article-img-02.jpg"
 	  },
 	  {
 		"id": 3,
 		"title": "Apple just challenged Figma",
 		"date": "05 Jun 2022",
-		"description": "Designing and defining digital products is inherently complex; iterative design, experiments, and tweaks constantly change and alter the user experience.",
-		"hashTag": "Design Thinking"
+		"des": "Designing and defining digital products is inherently complex; iterative design, experiments, and tweaks constantly change and alter the user experience.",
+		"hashTag": "Design Thinking",
+		"img": "../../../../src/assets/img/article-img-03.jpg"
 	  }
 	]
 }

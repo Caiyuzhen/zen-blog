@@ -135,11 +135,11 @@ export const BannerCard:FC = () => {
 					{/* 右侧文字内容 */}
 					{/* 遍历上面 api 请求回来的本地数据 */}
 					{
-						bannerData && bannerData.map((item, index:number) => {
+						bannerData && bannerData.map((item:IBannerCard, index:number) => {
 							// 🔥🔥根据 dotIndex 来判断显示哪个 text 内容
 							if(index === dotIndex){
 								return (
-										<BannerText key={index} id={item.id} title={item.title} subTitle={item.des}/>
+									<BannerText key={index} id={item.id} title={item.title} subTitle={item.des}/>
 								)
 							}
 						})
