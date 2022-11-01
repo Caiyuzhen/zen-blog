@@ -43,7 +43,7 @@ async function getAllTitles() {
 
 }
 
-// 获取 db 数据的 api
+// 定义获取 db 数据的 api
 server.get("/getTitles", async (req, res) => {
 	try {
 		let titlesData = await getAllTitles() //接受上面获取 title 数据的结果

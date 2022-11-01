@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 import { Provider } from 'react-redux'
 import store from './store'
-import MouseContextProvider from './components/Mouse/useMouseContent'
+import MouseContextProvider from './components/Mouse/useMouseContext'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

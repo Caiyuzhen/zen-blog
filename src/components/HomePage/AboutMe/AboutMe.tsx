@@ -17,7 +17,7 @@ import contactInfo from '../../../assets/svg/icon-contact.svg'
 import book from '../../../assets/svg/icon-book.svg'
 import download from '../../../assets/svg/icon-download.svg'
 import profilePDF from '../../../assets/pdf/test.pdf'
-import { MouseContext } from '../../Mouse/useMouseContent'
+import { MouseContext } from '../../Mouse/useMouseContext'
 
 
 const AboutMe:FC = () => {

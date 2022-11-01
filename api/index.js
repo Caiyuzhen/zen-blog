@@ -45,7 +45,7 @@ async function getAllTitles() {
 
 
 
-//处理 get title 请求的函数
+//定义处理 get title 请求的函数
 server.get("/api/getTitles", async (req, res) => {
 	try {
 		let titlesData = await getAllTitles() //接受上面获取 title 数据的结果

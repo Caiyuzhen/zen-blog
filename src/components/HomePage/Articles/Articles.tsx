@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Articles.less'
 import { ArticleCard } from './ArticleCard/ArticleCard'
 import rightGridImg from '../../../assets/img/rightGrid.png'
@@ -7,11 +7,32 @@ import quota from '../../../assets/svg/Icon-quota.svg'
 import { SideNav } from './SideNav/SideNav'
 import { InspiraCard } from './InspiraCard/InspiraCard'
 import Zeno from '../../../assets/img/Zen.png'
-
-
+import { MouseContext } from '../../Mouse/useMouseContext'
+import axios from 'axios'
+import { ApiResponse, IArticleList} from '../../../types/global'
 
 const Articles = () => {
-  return (
+
+	// 鼠标圆圈放大效果
+	const { cursorChangeHandler } = useContext(MouseContext)
+
+	// 获取文章数据
+	const [articleList, setArticleList] = useState<IArticleList[]>([])
+
+	async function getArticleListData(): Promise<void> {
+		const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleContainer/articleContainer.json')
+		const listData = res.data.data
+		setArticleList(listData)
+	}
+
+	useEffect(() => {
+		getArticleListData()
+		// console.log('articleList', articleList)//获得数据
+	}, [])
+
+
+
+	return (
 	<div className="article-main-container">
 
 		{/* 分割线 */}
@@ -22,7 +43,10 @@ const Articles = () => {
 
 		<div className="article-top-container">
 			<div className="article-top-leftText">Blogs</div>
-			<div className="article-top-rightContainer">
+			<div className="article-top-rightContainer"
+				 onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
+				 onMouseLeave={ ()=>cursorChangeHandler('') }
+			>
 				<ArticleCard />
 				<ArticleCard />
 				<ArticleCard />
@@ -70,7 +94,7 @@ const Articles = () => {
 		</div>
 		<img src={rightGridImg} alt="" className="rightGridImg"/>
 	</div>
-  )
+	)
 }
 
 export default Articles

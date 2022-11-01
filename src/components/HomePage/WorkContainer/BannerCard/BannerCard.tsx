@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { rootState } from '../../../../store'
 import { IBannerDotsState, IBannerDotStateActionType } from '../../../../store/reducers/bannerDots'
 import store from '../../../../store'
-import { MouseContext } from '../../../Mouse/useMouseContent'
+import { MouseContext } from '../../../Mouse/useMouseContext'
 import axios from 'axios'
 import { IBannerCard, ApiResponse } from '../../../../types/global'
 import { BannerText } from './BannerText'
@@ -136,9 +136,12 @@ export const BannerCard:FC = () => {
 					{/* 遍历上面 api 请求回来的本地数据 */}
 					{
 						bannerData && bannerData.map((item, index:number) => {
-							return (
-								<BannerText key={index} id={item.id} title={item.title} subTitle={item.des}/>
-							)
+							// 🔥🔥根据 dotIndex 来判断显示哪个 text 内容
+							if(index === dotIndex){
+								return (
+										<BannerText key={index} id={item.id} title={item.title} subTitle={item.des}/>
+								)
+							}
 						})
 					}
 

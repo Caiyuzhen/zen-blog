@@ -10,7 +10,7 @@ type IMouseContextType = {
 	cursorChangeHandler: (cursorType: string) => void
 }
 
-// 工具 1 - 包裹上下文 --- one 快递车 MouseContext
+// 工具 1 - 包裹上下文 --- one 快递车 MouseContext,实际传送的值就是这个【MouseContext】
 export const MouseContext = createContext<IMouseContextType>({
 	cursorType: "", 
 	cursorChangeHandler: () => {},

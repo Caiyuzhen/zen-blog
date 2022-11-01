@@ -13,7 +13,9 @@ interface IProps {
 }
 
 const ProjectCard:FC<IProps> = ({content}): ReactElement => {
-  return (
+
+
+	return (
 	<>	
 		<div className='project-card'>
 			{/* 非空断言！ */}
@@ -29,7 +31,7 @@ const ProjectCard:FC<IProps> = ({content}): ReactElement => {
 			{/* <p>{content!.description}</p> */}
 		</div>
 	</>
-  )
+	)
 }
 
 export default ProjectCard

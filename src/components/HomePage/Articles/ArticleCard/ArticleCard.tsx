@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { FC, useContext } from 'react'
 import ProjectThree from '../../../../assets/img/work-3.jpg'
 import Zeno from '../../../../assets/img/Zen.png'
+import { IArticleList } from '../../../../types/global'
 import './ArticleCard.less'   
 
 
+// IArticleList 为全局类型, 包含 id, title, des, date, hashTag
 
-export const ArticleCard = () => {
-  return (
+export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
+
+	
+	return (
 	<>
 		<div className="article-card">
 			<img src={ProjectThree} alt="" />
@@ -27,5 +31,5 @@ export const ArticleCard = () => {
 			</div>
 		</div>
 	</>
-  )
+	)
 }

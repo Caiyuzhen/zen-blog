@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './MouseDot.less'
 import getMousePosition from '../../hooks/getMousePosition'
-import { MouseContext } from '../Mouse/useMouseContent'
+import { MouseContext } from './useMouseContext'
 
 
 //【 🏹️（2）】渲染鼠标的圆点组件及样式
