@@ -45,37 +45,41 @@ export const BannerCard:FC = () => {
 
 	
 	//【第二步】【🔥实时的】监听 Store 内 State 的变化, 根据改变后的【状态】来进行轮播方法
-	store.subscribe(() => {
-		const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据
-
-		if(bannerDotState === 0){ //点了第一张, 因为是实时监听的数据，所以会直接变
-			if(work0 !== null) {
-				work0.style.transform = `translate(0px)`
-				work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState+1)}px)`
-				work2.style.transform = `translate(-${work2.offsetWidth * (bannerDotState+1)}px)`
-				setDotIndex(0)
-				return
+	setInterval(()=>{
+		// console.log('监听中')
+		store.subscribe(() => {
+			const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据
+	
+			if(bannerDotState === 0){ //点了第一张, 因为是实时监听的数据，所以会直接变
+				if(work0 !== null) {
+					work0.style.transform = `translate(0px)`
+					work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState+1)}px)`
+					work2.style.transform = `translate(-${work2.offsetWidth * (bannerDotState+1)}px)`
+					setDotIndex(0)
+					return
+				}
+			} 
+			else if (bannerDotState === 1) { //点了第二张, 因为是实时监听的数据，所以会直接变
+				if(work1 !== null) {
+					work1.style.transform = `translate(0px)`
+					work0.style.transform = `translate(-${work0.offsetWidth * bannerDotState}px)`
+					work2.style.transform = `translate(-${work2.offsetWidth * bannerDotState}px)`
+					setDotIndex(1)
+					return
+				}
 			}
-		} 
-		else if (bannerDotState === 1) { //点了第二张, 因为是实时监听的数据，所以会直接变
-			if(work1 !== null) {
-				work1.style.transform = `translate(0px)`
-				work0.style.transform = `translate(-${work0.offsetWidth * bannerDotState}px)`
-				work2.style.transform = `translate(-${work2.offsetWidth * bannerDotState}px)`
-				setDotIndex(1)
-				return
+			else if (bannerDotState === 2) { //点了第三张, 因为是实时监听的数据，所以会直接变
+				if(work2 !== null) {
+					work2.style.transform = `translate(0px)`
+					work0.style.transform = `translate(-${work0.offsetWidth * (bannerDotState-1)}px)`
+					work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState-1)}px)` //只向左移一格就好了，所以 -1
+					setDotIndex(2)
+					return
+				}
 			}
-		}
-		else if (bannerDotState === 2) { //点了第三张, 因为是实时监听的数据，所以会直接变
-			if(work2 !== null) {
-				work2.style.transform = `translate(0px)`
-				work0.style.transform = `translate(-${work0.offsetWidth * (bannerDotState-1)}px)`
-				work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState-1)}px)` //只向左移一格就好了，所以 -1
-				setDotIndex(2)
-				return
-			}
-		}
-	})
+		})
+	},500)
+	
 
 
 	//切换显示大 dot 的方法
