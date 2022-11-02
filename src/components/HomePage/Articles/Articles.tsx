@@ -12,6 +12,7 @@ import axios from 'axios'
 import { ApiResponse, IArticleList} from '../../../types/global'
 // import img1 from '../../../../src/assets/img/article-img-01.jpg'
 
+
 const Articles = () => {
 
 	// 鼠标圆圈放大效果
@@ -21,14 +22,14 @@ const Articles = () => {
 	const [articleList, setArticleList] = useState<IArticleList[]>([])
 
 	async function getArticleListData(): Promise<void> {
-		const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleContainer/articleContainer.json')
+		const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleList/articleList.json')
 		const listData = res.data.data
 		setArticleList(listData)
+		// console.log('得到 articleList', articleList)//获得数据
 	}
 
 	useEffect(() => {
 		getArticleListData()
-		console.log('得到 articleList', articleList)//获得数据
 	}, [])
 
 

@@ -40,3 +40,11 @@ export type IArticleList = {
 	hashTag: string,
 	img? : string, //string 类型
 }
+
+
+// 灵感卡片的导航列表类型
+export type IinspireNav = {
+	id: string,
+	icon: string,
+	item: string
+}
