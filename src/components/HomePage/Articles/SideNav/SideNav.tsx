@@ -16,10 +16,10 @@ export const SideNav:FC = () => {
 
 	// 💎【先打住，等 InspiraCard 渲染好后再用 useContext 传递这个状态值】获取 redux 中的数据,把并且把数据存入 hook 中
 	const navRedux = useSelector((state: rootState) => state.inspireNavState)
-	const [navState, setNavState] = useState(navRedux) //初始值为 redux 中的数据
+	const [navState, setNavState] = useState(navRedux) //初始值为 redux 中的数据, 也就是第几个 nav
 
 	
-	// 改变 redux 状态的方法: 获取元素 id, 通过 id (id 绑定了对应的 index)找到对应的元素, 然后把这个元素的状态改变
+	// 改变 redux 中的 nav 状态: 获取元素 id, 通过 id (id 绑定了对应的 index)找到对应的元素, 然后把这个元素的状态改变
 	const dispatch = useDispatch()
 
 	function changeNavState (id:string) {
@@ -35,7 +35,7 @@ export const SideNav:FC = () => {
 	}
 
 	useEffect(()=>{
-		console.log('nav'+':'+navState)
+		console.log('点了这个导航' + ':' + navState)
 	},[navState])
 
 	// store.subscribe(()=>{
