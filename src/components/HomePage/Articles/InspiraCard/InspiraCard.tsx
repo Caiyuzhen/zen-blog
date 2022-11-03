@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import './InspiraCard.less'
-
+import axios from 'axios'
 
 interface Iprops {
 	content: string,
@@ -17,6 +17,14 @@ export const InspiraCard: FC<Iprops> = ({
 	author,
 	time, 
 	hashTag})  => {
+
+
+	async function getInspiraCardList() {
+		const res = await axios.get("")
+	}
+	useEffect(() => {
+		
+	},[])
 
 	return (
 		<>
