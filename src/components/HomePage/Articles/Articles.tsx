@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState, useCallback } from 'react'
 import './Articles.less'
 import { ArticleCard } from './ArticleCard/ArticleCard'
 import rightGridImg from '../../../assets/img/rightGrid.png'
@@ -8,8 +8,8 @@ import { SideNav } from './SideNav/SideNav'
 import { InspiraCard } from './InspiraCard/InspiraCard'
 import Zeno from '../../../assets/img/Zen.png'
 import { MouseContext } from '../../Mouse/useMouseContext'
-import axios from 'axios'
-import { ApiResponse, IArticleList} from '../../../types/global'
+import axios from 'axios' //导入 axios 库
+import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/global' //导入全局类型
 // import img1 from '../../../../src/assets/img/article-img-01.jpg'
 
 
@@ -18,19 +18,58 @@ const Articles = () => {
 	// 鼠标圆圈放大效果
 	const { cursorChangeHandler } = useContext(MouseContext)
 
+
 	// 获取文章数据
 	const [articleList, setArticleList] = useState<IArticleList[]>([])
-
 	async function getArticleListData(): Promise<void> {
 		const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleList/articleList.json')
-		const listData = res.data.data
+		const listData = res.data.data ? res.data.data : []
 		setArticleList(listData)
 		// console.log('得到 articleList', articleList)//获得数据
 	}
-
 	useEffect(() => {
 		getArticleListData()
 	}, [])
+
+
+	// 获取灵感卡片数据
+	const [inspireContextData, setInspireContextData] = useState<IinspireCardContent[]>([]) 
+	async function getInspiraCardList() {
+		const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
+		const inspireCard = res.data.data
+		setInspireContextData(inspireCard)
+	}
+	useEffect(() => {
+		getInspiraCardList()
+	},[])
+	
+
+
+	// 前端分页的方法
+	//【当前页】、一页展示的【数量】、【总的数据量】
+	const [currentPage, setCurrentPage] = useState(function() { //初始值为函数的返回值
+		return {
+			current: 2, //当前页
+			pagination: 4, //总页数
+		}
+	})
+
+	// 使用 useCallback 函数包裹【缓存分页处理函数返回的数据】, 执行后把参数传入来改变为最新的值
+	const changePage = useCallback((current: number, pagination: number) => {
+		setCurrentPage(
+			{
+				current: current, //传参改变 hook 的值
+				pagination: pagination, //传参改变 hook 的值
+			}
+		)
+	},[])
+
+	useEffect(() => {
+		changePage(2, 8) //🔥执行实际控制要展示多少页的函数
+		console.log(currentPage.current)
+	},[])
+
+
 
 
 
@@ -49,7 +88,7 @@ const Articles = () => {
 				 onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
 				 onMouseLeave={ ()=>cursorChangeHandler('') }
 			>
-				{/* 渲染 ArticleList 数据 */}
+				{/* 渲染 [文章列表] 数据 */}
 				{
 					articleList && articleList.map((articleData, index:number) => {
 						return (
@@ -83,27 +122,24 @@ const Articles = () => {
 				<SideNav />
 
 				<div className="content-container">
-					<InspiraCard 
-						content='Sometimes, advice on how not to do turns out to be the most practical, because simple guides and recommendations always leave room for wrong decisions.'
-						avatar={Zeno}
-						author='Zeno'
-						time={'2 days ago'}//先写死
-						hashTag={'#inspiration'}//先写死
-					/>
-					<InspiraCard 
-						content='We are all aware of the fact that the internet has changed our lives in a number of ways.'
-						avatar={Zeno}
-						author='Zeno'
-						time={'2 days ago'}//先写死
-						hashTag={'#inspiration'}//先写死
-					/>
-					<InspiraCard 
-						content='Meet the 10 most upvoted apps this month — via ProductHunt. Sometimes all we need is a helping hand to raise us to greatness.'
-						avatar={Zeno}
-						author='Zeno'
-						time={'2 days ago'}//先写死
-						hashTag={'#inspiration'}//先写死
-					/>
+					{/* 渲染 [灵感卡片] 数据*/}
+					{
+						inspireContextData && inspireContextData.map((inspireCardData: IinspireCardContent, index: number) => {
+							if(index <= currentPage.current) { //🔥只渲染前 X 个
+								return (
+									<div key={index}>
+									<InspiraCard 
+										id={inspireCardData.id}
+										content={inspireCardData.content}
+										time={inspireCardData.time}
+										author={inspireCardData.author}
+										hashTag={inspireCardData.hashTag}
+									/>
+								</div>
+								)
+							} else return (null)
+						})
+					}
 				</div>
 				
 			</div>

@@ -48,3 +48,12 @@ export type IinspireNav = {
 	icon: string,
 	item: string
 }
+
+// 灵感卡片内容的类型
+export type IinspireCardContent = {
+	id: string,
+	content: string,
+	time: string,
+	author: string,
+	hashTag: string,
+}

@@ -1,38 +1,29 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import './InspiraCard.less'
-import axios from 'axios'
+import Zeno from '../../../../assets/img/Zen.png'
+import { IinspireCardContent } from '../../../../types/global'
 
-interface Iprops {
-	content: string,
-	avatar: string,
-	author: string,
-	time: string,
-	hashTag: string,
+
+// 接口继承
+interface IProps extends IinspireCardContent {
+	
 }
 
 
-export const InspiraCard: FC<Iprops> = ({
+export const InspiraCard: FC<IProps> = ({
+	id,
 	content, 
-	avatar, 
-	author,
 	time, 
+	author,
 	hashTag})  => {
-
-
-	async function getInspiraCardList() {
-		const res = await axios.get("")
-	}
-	useEffect(() => {
-		
-	},[])
 
 	return (
 		<>
-			<div className="card-container">
+			<div className="card-container" id={id}>
 				<p> {content} </p>
 				<div className="metaInfo">
 					<div className="inline-author">
-						<img src={avatar} alt=""/>
+						<img src={Zeno} alt=""/>
 						<div className="author">{author}</div>
 					</div>
 					<span className="time"> {time} </span>

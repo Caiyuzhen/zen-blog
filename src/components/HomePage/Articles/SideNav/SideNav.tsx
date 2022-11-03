@@ -43,7 +43,6 @@ export const SideNav:FC = () => {
 	// 	console.log(navRedux)
 	// })
 
-	
 
 	
 
