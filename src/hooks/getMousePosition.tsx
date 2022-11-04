@@ -18,7 +18,7 @@ export default function getMousePosition(): MousePos {
 
 	useEffect(() => {
 
-		// 定义湖区鼠标坐标的函数
+		// 定义获取鼠标坐标的函数
 		const mouseMoveHandler = (e:MouseEvent) => {
 			const { clientX, clientY } = e //🔥从鼠标事件中解构出鼠标的 X , Y 坐标
 			setMousePosition({ x: clientX, y: clientY }) //🔥把鼠标的 X , Y 坐标存储到 mousePosition 中

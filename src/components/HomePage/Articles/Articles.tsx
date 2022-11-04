@@ -13,6 +13,8 @@ import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/gl
 // import img1 from '../../../../src/assets/img/article-img-01.jpg'
 
 
+
+
 const Articles = () => {
 
 	// 鼠标圆圈放大效果
@@ -35,12 +37,12 @@ const Articles = () => {
 
 
 	// 获取灵感卡片的数据
-	const [inspireContextData, setInspireContextData] = useState<IinspireCardContent[]>([]) //存放所有数据
+	const [allinspireContextData, setallinspireContextData] = useState<IinspireCardContent[]>([]) //存放所有数据
 	
 	async function getInspiraCardList() {
 		const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
 		const inspireCard = res.data.data
-		setInspireContextData(inspireCard)
+		setallinspireContextData(inspireCard)
 	}
 
 	useEffect(() => {
@@ -48,48 +50,60 @@ const Articles = () => {
 	},[])
 
 
+	/*
+	💎前端分页思路: 
+		通过 SideNav 的数字 context 来获得当前是第几个 tab
+		然后根据不同的 tab 传入不同的值  
+		splice 为浅拷贝
+		reference: https://juejin.cn/post/6993273415163445278
+	*/
 
-	// 前端分页(通过反回的数据长度，splice 浅拷贝数据，分为 X 页)
 
-	//【当前页】、一页展示的【数量】、【总的数据量】
+	//【当前页】、【总的页数】
 	const [currentPage, setCurrentPage] = useState(function() { //初始值为函数的返回值
 		return {
-			current: 2, //当前页, 取值需要通过 currentPage.current
-			totalPage: 4, //总页数 currentPage.pagination
+			current: 1, //当前页, 取值需要通过 currentPage.current
 		}
 	})
-
-	// 使用 useCallback 函数包裹【缓存分页处理函数返回的数据】, 执行后把参数传入来改变为最新的值
-	const changePage = useCallback((current: number, totalPage: number) => {
+	// 包裹【缓存分页处理函数返回的数据】, 传入为最新的值
+	const changePage = useCallback((current: number) => {
 		setCurrentPage({
 				current: current, //传参改变 hook 的值
-				totalPage: totalPage, //传参改变 hook 的值
 			})
 	},[])
+	// changePage(1) 
 
 
 
-	const [inspireArr, setInspireArr] = useState<IinspireCardContent[]>([]) //存放单独的一组数据
+	// inspireArr 用来存放独立的一组组 {} {} 数据
+	const [inspireArr, setInspireArr] = useState<Array<IinspireCardContent[]>>([]) 
+	
+	// 分割数据的方法 Array + 什么对象组成的数组
+	function createNewArr(allArrObj: Array<IinspireCardContent>, num:number) { //分割的【对象 allArrObj】及【分多少组 num】
+		const allLength = allinspireContextData.length//总数 12
+
+		const newArray:[IinspireCardContent[]] = [[]] //不能强行 push ，因为这样就新增加了一个内存地址，不会触发更新
+		for(let i = 0; i < allLength;) { 	//i 一开始是 0, 每次循环后 + num, 直到 i > allLength 停止
+			newArray.push(allArrObj.slice(i, i += num))  //i=i+num, 依次截取出 splice(0, 3) , splice(3, 6) , splice(6, 9) , splice(9, 12)	
+			// 	console.log(i) //i = 0,3,6,9,
+		}
+		newArray.shift() //删除掉第一个空数据 []
+		// console.log(newArray)
+		setInspireArr([...newArray]) //把切分的数据存入 hook 内
+	}
+
+
 
 	useEffect(() => {
-		// 💎思路: 通过 SideNav 的数字 context 来获得当前是第几个 tab，然后根据不同的 tab 传入不同的值
-		const allLength = inspireContextData.length//获取数据总数 12
-
-		changePage(2, allLength) //🔥本质就是 hook 的值, 传入总的页数
-		// console.log(currentPage.totalPage)
-
-		// 头晕了, 先写到这 reference: https://juejin.cn/post/6993273415163445278
-		const averageShowList = inspireContextData.slice((currentPage.totalPage)*3,  ((currentPage.totalPage) - (currentPage.current) + 1)*3 ) //每页展示的数量 3 个
-		console.log(averageShowList)
-
-		// const designTab = inspireContextData.slice(0,3) //切分为四组内容
-		// const businessTab = inspireContextData.slice(3,6) //切分为四组内容
-		// const productTab = inspireContextData.slice(6,9) //切分为四组内容
-		// const othersTab = inspireContextData.slice(10,13) //切分为四组内容
-		// console.log(designTab, businessTab, productTab, othersTab)
-	}, [inspireContextData])
+		createNewArr(allinspireContextData, 3)//执行切割方法
+		// console.log('最终的数据:',inspireArr);
+		// console.log(inspireArr[2])//最终每个 tab 的数据
+		// console.log(inspireArr[4])//最终每个 tab 的数据
+	}, [allinspireContextData])//获得 api 数据后再切割
 
 
+	// const designTab = allinspireContextData.slice(0,3) //切分为四组内容
+	// const businessTab = allinspireContextData.slice(3,6) //切分为四组内容
 
 
 
@@ -144,7 +158,7 @@ const Articles = () => {
 					<div className="content-container">
 						{/* 渲染 [灵感卡片] 数据*/}
 						{
-							inspireContextData && inspireContextData.map((inspireCardData: IinspireCardContent, index: number) => {
+							allinspireContextData && allinspireContextData.map((inspireCardData: IinspireCardContent, index: number) => {
 								if(index <= currentPage.current) { //🔥只渲染前 X 个, 也就是 currentPage.current 的值
 									return (
 										<div key={index}>
