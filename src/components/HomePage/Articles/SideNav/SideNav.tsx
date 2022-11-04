@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useEffect, useState, createContext, useContext } from 'react'
 import './SideNav.less'
 import designIcon from '../../../../assets/svg/icon-designIcon.svg'
 import iconBusiness from '../../../../assets/svg/icon-business.svg'
@@ -10,15 +10,21 @@ import { IinspireNavStateActionType } from '../../../../store/reducers/inspireNa
 import { useDispatch, useSelector } from 'react-redux'
 import { rootState } from '../../../../store'
 import store from '../../../../store'
+import { InspireNavContext } from '../../../../utils/Tabcontext'
+
 
 
 export const SideNav:FC = () => {
 
-	// 💎【先打住，等 InspiraCard 渲染好后再用 useContext 传递这个状态值】获取 redux 中的数据,把并且把数据存入 hook 中
+	//🚗二：获得 InspireNavContext 内打包好的值
+	const { changeNav } = useContext(InspireNavContext)
+
+
 	const navRedux = useSelector((state: rootState) => state.inspireNavState)
 	const [navState, setNavState] = useState(navRedux) //初始值为 redux 中的数据, 也就是第几个 nav
 
-	
+
+
 	// 改变 redux 中的 nav 状态: 获取元素 id, 通过 id (id 绑定了对应的 index)找到对应的元素, 然后把这个元素的状态改变
 	const dispatch = useDispatch()
 
@@ -32,10 +38,13 @@ export const SideNav:FC = () => {
 			}
 		})
 		setNavState(id) //设置 hook 内的值
+		const changeNavNum = parseInt(id) // parseInt 转换为数字, 因为 id 是 string 格式
+		console.log(changeNavNum);
+		changeNav(changeNavNum)
 	}
 
 	useEffect(()=>{
-		console.log('点了这个导航' + ':' + navState)
+		// console.log('点了这个导航' + ':' + navState)
 	},[navState])
 
 	// store.subscribe(()=>{

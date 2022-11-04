@@ -1,7 +1,7 @@
 import React , { createContext, FC, useState } from 'react'
 
 
-//【 🏹️（4）】定义包裹值的工具函数（本质上在在子组件内传递 class 的值）
+//【 🏹️（4）】定义包裹值的工具函数（本质上在在子组件内传递 class 的值）, 因为全局都要使用，所以抽象出来
 
 
 // 定义创建一个上下文 context 的函数（⚡️本质上是包裹了一个 hooks！用 cursorChangeHandler 去改变 cursorType 的值）, cursorType 是当 onMouseEnter 时要添加的 class
@@ -30,14 +30,14 @@ type IMouseContextProps = {
 const MouseContextProvider = ( {children}:IMouseContextProps ) => {
 	const [cursorType, setCursorType] = useState<string>('')
 
-	const cursorChangeHandler = (cursorType:string) => {//把值设置进 cursorType
+	const cursorChangeHandler = (cursorType:string) => {//执行这个函数就会把值设置进上面的 hooks 内
 		setCursorType(cursorType)
 	}
 
 	// 定义个对象来接收最终的值，更方便些
 	const value = {
-		cursorType: cursorType,
-		cursorChangeHandler: cursorChangeHandler
+		cursorType: cursorType, //hook 的值
+		cursorChangeHandler: cursorChangeHandler //上面的函数, 给到子组件去执行
 	}
 
 	return (

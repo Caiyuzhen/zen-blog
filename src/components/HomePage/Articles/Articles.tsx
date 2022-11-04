@@ -10,6 +10,7 @@ import Zeno from '../../../assets/img/Zen.png'
 import { MouseContext } from '../../Mouse/useMouseContext'
 import axios from 'axios' //导入 axios 库
 import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/global' //导入全局类型
+import {InspireNavContext} from '../../../utils/Tabcontext'
 // import img1 from '../../../../src/assets/img/article-img-01.jpg'
 
 
@@ -35,8 +36,18 @@ const Articles = () => {
 
 
 
+	/*
+	💎前端分页思路:  reference: https://juejin.cn/post/6993273415163445278
+		1. 通过 axios 获取【所有数据】，用 hook 存放 allinspireContextData
+		2. 定义一个工具，来更换【当前页】 currentPage.current, 并通过 useContext 包裹起来分发给 Nav 组件来使用(⚡️可以使用全局封装好的 utils)
+		3. 封装一个切分数组的方法，得到【总页数】、【要分为多少页】，通过 for 循环， slice 切割数组，得到 4 个数组, 并且存入 hook 中
+		4. map 3 中的 hook 来渲染数组, 本质上是通过 -> hook 数组【0】 等取到哪组数据！！
+		5. 在 SideNav 组件中去改变 3 中的 hook 来实现切换内容
+	*/
 
-	// 获取灵感卡片的数据
+
+
+	// 【💎第一步 - 获得全量数据】获取灵感卡片的数据
 	const [allinspireContextData, setallinspireContextData] = useState<IinspireCardContent[]>([]) //存放所有数据
 	
 	async function getInspiraCardList() {
@@ -50,19 +61,13 @@ const Articles = () => {
 	},[])
 
 
-	/*
-	💎前端分页思路: 
-		通过 SideNav 的数字 context 来获得当前是第几个 tab
-		然后根据不同的 tab 传入不同的值  
-		splice 为浅拷贝
-		reference: https://juejin.cn/post/6993273415163445278
-	*/
 
 
-	//【当前页】、【总的页数】
+
+	//【💎第二步 - 定义改变页数的 hook】定义改变当前页的工具函数, 然后需要把这个工具函数暴露给 Nav 组件, 以便 Nav 组件可以改变当前页
 	const [currentPage, setCurrentPage] = useState(function() { //初始值为函数的返回值
 		return {
-			current: 1, //当前页, 取值需要通过 currentPage.current
+			current: 0, //当前渲染哪一页, 🔥取值需要通过【currentPage.current】！, 默认为第一页 0, 然后需要传递给下面的 div 渲染来判断渲染哪一页！
 		}
 	})
 	// 包裹【缓存分页处理函数返回的数据】, 传入为最新的值
@@ -71,14 +76,24 @@ const Articles = () => {
 				current: current, //传参改变 hook 的值
 			})
 	},[])
-	// changePage(1) 
+
+
+	const value = {//🚗一：定义要传递 useContext 的值！
+		// showNav: currentPage.current,
+		changeNav: changePage  //用 changePage 来改变 currentPage.current 的值, 🤔想想好像也不需要把 showNav 的值传递给子组件
+	}
+
+	useEffect(()=>{
+		console.log('currentPage', currentPage.current)
+	},[currentPage])
 
 
 
-	// inspireArr 用来存放独立的一组组 {} {} 数据
+	
+	//【💎第三步 - 分割数组为 X 份数据】, 并且用 hook 来存放独立的一组组 {} {} 数据
 	const [inspireArr, setInspireArr] = useState<Array<IinspireCardContent[]>>([]) 
 	
-	// 分割数据的方法 Array + 什么对象组成的数组
+	// 封装一个分割数据的方法
 	function createNewArr(allArrObj: Array<IinspireCardContent>, num:number) { //分割的【对象 allArrObj】及【分多少组 num】
 		const allLength = allinspireContextData.length//总数 12
 
@@ -88,24 +103,18 @@ const Articles = () => {
 			// 	console.log(i) //i = 0,3,6,9,
 		}
 		newArray.shift() //删除掉第一个空数据 []
-		// console.log(newArray)
-		setInspireArr([...newArray]) //把切分的数据存入 hook 内
+		setInspireArr([...newArray]) //把切分好的数据存入 hook 内
 	}
-
-
 
 	useEffect(() => {
 		createNewArr(allinspireContextData, 3)//执行切割方法
-		// console.log('最终的数据:',inspireArr);
+		// console.log('最终的数据:',inspireArr[0]);
 		// console.log(inspireArr[2])//最终每个 tab 的数据
-		// console.log(inspireArr[4])//最终每个 tab 的数据
 	}, [allinspireContextData])//获得 api 数据后再切割
-
-
 	// const designTab = allinspireContextData.slice(0,3) //切分为四组内容
-	// const businessTab = allinspireContextData.slice(3,6) //切分为四组内容
 
 
+	
 
 	return (
 		<div className="article-main-container">
@@ -152,29 +161,31 @@ const Articles = () => {
 				<div className="article-bottom-rightText">Inspiration</div>
 				
 				<div className="article-inspired-container">
-					
-					<SideNav />
 
-					<div className="content-container">
-						{/* 渲染 [灵感卡片] 数据*/}
-						{
-							allinspireContextData && allinspireContextData.map((inspireCardData: IinspireCardContent, index: number) => {
-								if(index <= currentPage.current) { //🔥只渲染前 X 个, 也就是 currentPage.current 的值
-									return (
-										<div key={index}>
-											<InspiraCard 
-												id={inspireCardData.id}
-												content={inspireCardData.content}
-												time={inspireCardData.time}
-												author={inspireCardData.author}
-												hashTag={inspireCardData.hashTag}
-											/>
-										</div>
-									)
-								} else return (null)
-							})
-						}
-					</div>
+					{/* 🚗二：打包要传递 useContext 的值！🔥🔥记得把 <SideNav/> 组件包裹进去！不然它不能获得数据！！ */}
+					<InspireNavContext.Provider value={value} >
+						<SideNav />
+						<div className="content-container">
+							{/* 【💎第四步 - 根据 ‘当前页’ 的 hook 来显示哪一页（本质是显示哪一组数组）】, 最终实现渲染（灵感卡片） 数据的渲染*/}
+							{
+								inspireArr[currentPage.current] && inspireArr[currentPage.current].map((inspireCardData: IinspireCardContent, index: number) => {
+									// if(index <= currentPage.current) { //🔥只渲染前 X 个(分页), 也就是 currentPage.current 的值
+										return (
+											<div key={index}>
+												<InspiraCard 
+													id={inspireCardData.id}
+													content={inspireCardData.content}
+													time={inspireCardData.time}
+													author={inspireCardData.author}
+													hashTag={inspireCardData.hashTag}
+												/>
+											</div>
+										)
+									// } else return (null)
+								})
+							}
+						</div>
+					</InspireNavContext.Provider>
 					
 				</div>
 			</div>
