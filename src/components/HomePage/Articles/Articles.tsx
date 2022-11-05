@@ -151,16 +151,25 @@ const Articles = () => {
 				</div>
 			</div>
 
+
+
+
 			{/* 分割线 */}
 			<div className="article-bottom-trim">
 				<span></span>
 				<img src={quota} alt="" className="quota"/>
 			</div>
 			
+
+
+
 			<div className="article-bottom-container">
 				<div className="article-bottom-rightText">Inspiration</div>
 				
-				<div className="article-inspired-container">
+				<div className="article-inspired-container"
+					 onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
+					 onMouseLeave={ ()=>{cursorChangeHandler('')} }
+				>
 
 					{/* 🚗二：打包要传递 useContext 的值！🔥🔥记得把 <SideNav/> 组件包裹进去！不然它不能获得数据！！ */}
 					<InspireNavContext.Provider value={value} >

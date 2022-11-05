@@ -1,98 +1,204 @@
 @import '../../../../design/color/Global.less'; //引入全局样式库
 @font-face {
 	font-family: 'RammettoOne';
-	src: url('../../../assets/font/RammettoOne-Regular.ttf');
+	src: url('../../../../assets/font/RammettoOne-Regular.ttf');
 };
 @mainTitlecolor: linear-gradient( rgba(61, 12, 255), rgba(61, 12, 255) ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-.workTopInfo-container {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 128px;
-	margin-bottom: 68px;
-
-	.baseInfo-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 24px;
-	
-		> p {
-			color: @text-color;
-			width: 600px;
-			text-align: left;	
-		}
-	}
-	
-	.bigTitle-container {
+@media screen and (max-width: 4200px) {
+	.workTopInfo-container {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
-		align-items: flex-start;
-	
-
-
-		> .bigTitle{
-			position: absolute;
-			font-family: RammettoOne;
-			background-image: linear-gradient(to right, #f0f5ff, #c5d9ff, #d8bfff);
-      		-webkit-background-clip: text;
-      		color: transparent;
-			font-size: 60px;
-			height: 60px;
-    		line-height: 68px;
-		}
-
-	
-		.trim {
-			margin-top: 52px;
-			display: block;
-			height: 6px;
-			width: 100%;
-			background: linear-gradient(to right, #f0f5ff, #B1CBFF, #8C45FF);
-		}
-	}
-	
-	
-	.timeLine-container {
-		display: flex;
-		gap: 10px;
-		align-items: center;
 		justify-content: space-between;
-	
-		.timeline {
+		gap: 128px;
+		margin-bottom: 68px;
+
+		.baseInfo-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 24px;
+		
+			> p {
+				color: @text-color;
+				width: 600px;
+				text-align: left;	
+			}
+		}
+		
+		.bigTitle-container {
 			display: flex;
 			flex-direction: column;
-			align-items: start;
-	
-			.timeline-title {
-				color: @text-color;
-				margin: 0;
-				font-size: 16px;
-				font-family: RammettoOne;
-			}
+			gap: 4px;
+			align-items: flex-start;
 		
-			.timeline-des {
-				color: @description-color;
-				margin: 0;
+
+
+			> .bigTitle{
+				position: absolute;
+				font-family: RammettoOne;
+				background-image: linear-gradient(to right, #f0f5ff, #c5d9ff, #d8bfff);
+				-webkit-background-clip: text;
+				color: transparent;
+				font-size: 60px;
+				height: 60px;
+				line-height: 68px;
+			}
+
+		
+			.trim {
+				margin-top: 52px;
+				display: block;
+				height: 6px;
+				width: 100%;
+				background: linear-gradient(to right, #f0f5ff, #B1CBFF, #8C45FF);
 			}
 		}
+		
+		
+		.timeLine-container {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			justify-content: space-between;
+		
+			.timeline {
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+		
+				.timeline-title {
+					color: @text-color;
+					margin: 0;
+					font-size: 16px;
+					font-family: RammettoOne;
+				}
+			
+				.timeline-des {
+					color: @description-color;
+					margin: 0;
+				}
+			}
 
-		.circle {
-			// 圆形
-			width: 12px;
-			height: 12px;
-			border-radius: 50%;
-			background-color: @text-color;
-			opacity: 0.4;
+			.circle {
+				// 圆形
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: @text-color;
+				opacity: 0.4;
+			}
+
+			.timeline-Step-two, .timeline-Step-three, .timeline-Step-four {
+				// 透明度变为 0.5
+				opacity: 0.4;
+			}
 		}
+	}
+}
 
-		.timeline-Step-two, .timeline-Step-three, .timeline-Step-four {
-			// 透明度变为 0.5
-			opacity: 0.4;
+
+
+
+@media screen and (max-width: 520px) {
+	.workTopInfo-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 68px;
+		margin-bottom: 28px;
+
+		.baseInfo-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 24px;
+			flex-direction: column;
+		
+			> p {
+				color: @text-color;
+				width: 100%;
+				text-align: left;	
+			}
+		}
+		
+		.bigTitle-container {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			align-items: flex-start;
+		
+
+
+			> .bigTitle{
+				position: absolute;
+				font-family: RammettoOne;
+				background-image: linear-gradient(to right, #f0f5ff, #c5d9ff, #d8bfff);
+				-webkit-background-clip: text;
+				color: transparent;
+				font-size: 60px;
+				height: 60px;
+				line-height: 68px;
+				word-wrap: break-word; //折行
+				width: 100%;
+				height: auto;
+				text-align: left;
+			}
+
+		
+			.trim {
+				margin-top: 120px;
+				display: block;
+				height: 6px;
+				width: 100%;
+				background: linear-gradient(to right, #f0f5ff, #B1CBFF, #8C45FF);
+			}
+		}
+		
+		
+		.timeLine-container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 10px;
+			align-items: center;
+			justify-content: space-between;
+		
+			.timeline {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+		
+				.timeline-title {
+					color: @text-color;
+					margin: 0;
+					font-size: 16px;
+					font-family: RammettoOne;
+				}
+			
+				.timeline-des {
+					color: @description-color;
+					margin: 0;
+				}
+			}
+
+			.circle {
+				// 圆形
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: @text-color;
+				opacity: 0;
+			}
+
+			.timeline-Step-two, .timeline-Step-three, .timeline-Step-four {
+				// 透明度变为 0.5
+				opacity: 0.4;
+			}
 		}
 	}
 }

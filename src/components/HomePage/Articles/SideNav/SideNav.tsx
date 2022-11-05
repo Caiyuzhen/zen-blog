@@ -11,17 +11,22 @@ import { useDispatch, useSelector } from 'react-redux'
 import { rootState } from '../../../../store'
 import store from '../../../../store'
 import { InspireNavContext } from '../../../../utils/Tabcontext'
+import { MouseContext } from '../../../Mouse/useMouseContext'
 
 
 
 export const SideNav:FC = () => {
 
-	//🚗二：获得 InspireNavContext 内打包好的值
+
+	// 鼠标圆圈放大效果
+	const { cursorChangeHandler } = useContext(MouseContext)
+	
+
+	//🚗二：获得 InspireNavContext 内打包好的工具函数,去改变 InspireNavContext 内的数据
 	const { changeNav } = useContext(InspireNavContext)
 
-
 	const navRedux = useSelector((state: rootState) => state.inspireNavState)
-	const [navState, setNavState] = useState(navRedux) //初始值为 redux 中的数据, 也就是第几个 nav
+	const [navState, setNavState] = useState(0) //初始值, 也就是第几个 nav, 用来判断高亮哪个 tab
 
 
 
@@ -37,13 +42,15 @@ export const SideNav:FC = () => {
 				inspireNavState: id //传入值
 			}
 		})
-		setNavState(id) //设置 hook 内的值
+	
 		const changeNavNum = parseInt(id) // parseInt 转换为数字, 因为 id 是 string 格式
+		setNavState(changeNavNum) //设置 hook 内的值, 用来判断高亮哪个 tab
+		changeNav(changeNavNum) //设置 context 工具函数内的值, 用来判断显示哪组数据
 		console.log(changeNavNum);
-		changeNav(changeNavNum)
 	}
 
 	useEffect(()=>{
+		console.log('navRedux:',navRedux);
 		// console.log('点了这个导航' + ':' + navState)
 	},[navState])
 
@@ -54,8 +61,6 @@ export const SideNav:FC = () => {
 
 
 	
-
-
 
 	// 获取 nav 的渲染数据
 	const [inspireNavItem, setInspireNavItem] = useState<IinspireNav[]>([])
@@ -70,16 +75,20 @@ export const SideNav:FC = () => {
 		getNavItem()
 	},[])
 
-	// item-selected
+
+
 
 	return (
 		<>
-			<div className="nav-items">
+			<div className="nav-items"
+				 onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
+				 onMouseLeave={ ()=>{cursorChangeHandler('')} }
+				>
 				{
 					inspireNavItem && inspireNavItem.map((item, index)=>{
 						return (
 							<div 
-								className={`item nav-item-${index}`} 
+								className={navState===index ? `item nav-item-${index} item-selected` : `item nav-item-${index}`} 
 								key={index} 
 								id={item.id}
 								onClick={ (e)=>changeNavState(item.id) }//🔥点击元素时，获取对应元素的 id， 传入 item.id 即可, 去改变你 store 中的状态

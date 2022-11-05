@@ -16,15 +16,15 @@ export default function getMousePosition(): MousePos {
 
 	const [mousePosition, setMousePosition] = useState<MousePos>({ x: 0, y: 0 }) //用来存储鼠标的位置	
 
-	useEffect(() => {
 
+	useEffect(() => {
 		// 定义获取鼠标坐标的函数
 		const mouseMoveHandler = (e:MouseEvent) => {
 			const { clientX, clientY } = e //🔥从鼠标事件中解构出鼠标的 X , Y 坐标
 			setMousePosition({ x: clientX, y: clientY }) //🔥把鼠标的 X , Y 坐标存储到 mousePosition 中
 		}
 
-		// 调用节流函数，传入上面的函数
+		// 调用节流函数，传入上面的函数来获得坐标
 		const mouseMove = Trottle(mouseMoveHandler, 50)
 
 		//真正执行节流函数（并执行获取坐标的函数来获得 e + 延迟秒数）

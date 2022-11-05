@@ -1,16 +1,21 @@
 import React , { createContext, FC, useState } from 'react'
 
 
-//【 🏹️（4）】定义包裹值的工具函数（本质上在在子组件内传递 class 的值）, 因为全局都要使用，所以抽象出来
+/*
+	【 🏹️（4）】定义包裹值的工具函数（本质上在在子组件内传递 class 的值, 然后去改变⭕️圆圈的大小!!）
+	因为全局都要使用，所以抽象出来
+*/
 
 
-// 定义创建一个上下文 context 的函数（⚡️本质上是包裹了一个 hooks！用 cursorChangeHandler 去改变 cursorType 的值）, cursorType 是当 onMouseEnter 时要添加的 class
+// 上下文函数的类型
 type IMouseContextType = {
 	cursorType: string,
 	cursorChangeHandler: (cursorType: string) => void
 }
 
-// 工具 1 - 包裹上下文 --- one 快递车 MouseContext,实际传送的值就是这个【MouseContext】
+
+// 工具 1 - 定义创建一个上下文 context 的函数来包裹上下文 --- one 快递车 MouseContext,实际传送的值就是这个【MouseContext】
+//（⚡️本质上是包裹了一个 hooks！用 cursorChangeHandler 去改变 cursorType 的值）, cursorType 是当 onMouseEnter 时要添加的 class
 export const MouseContext = createContext<IMouseContextType>({
 	cursorType: "", 
 	cursorChangeHandler: () => {},
