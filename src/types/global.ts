@@ -6,7 +6,8 @@ interface ICover {
 export interface Iitem {
 	id: string,
 	title: string,
-	cover? : ICover,
+	// cover? : ICover,
+	cover : string,
 	description? : string,
 	category? : string,
 	content? : string,

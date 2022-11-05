@@ -26,11 +26,11 @@
 		.item-selected {
 			//border 渐变效果
 			background-image: 
-			linear-gradient(to bottom right, #221d6d, #37159c),
-			linear-gradient(to bottom right, #6ba4fa, #8c88db, #660c8f);
+				linear-gradient(to bottom right, #221d6d, #37159c),
+				linear-gradient(to bottom right, #6ba4fa, #8c88db, #660c8f);
 			padding: 1.5px; //用来控制 border 的粗细
 			border-radius: 18px;
-			background-clip: content-box,padding-box;
+			background-clip: content-box, padding-box;
 			transition: 
 				filter .5s ease-in-out, 
 				background-image .5s ease-in-out,
@@ -52,6 +52,8 @@
 			height: 68px;
 			gap: 12px;
 			opacity: 0.6;
+			padding: 1.5px; //用来控制 border 的粗细, 在未选中状态时也加上, 这样选中后不会抖动了
+			border-radius: 18px;
 			
 		
 			.inline {
@@ -157,6 +159,8 @@
 			height: 68px;
 			gap: 12px;
 			opacity: 0.6;
+			padding: 1.5px; //用来控制 border 的粗细, 在未选中状态时也加上, 这样选中后不会抖动了
+			border-radius: 18px;
 			
 		
 			.inline {

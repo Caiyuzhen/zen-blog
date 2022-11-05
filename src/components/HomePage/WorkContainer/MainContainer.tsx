@@ -46,7 +46,7 @@ const MainContainer:FC = ():ReactElement => {
 				<WorkTopInfo />
 				<Tilty 
 					className="tilty" 
-					style={{zIndex: 10, padding:0, transformStyle: "preserve-3d"}}
+					style={{zIndex: 10, padding:0, width:'100%', transformStyle: "preserve-3d"}}
 					settings={{
 						glare: true,
 						"max-glare": 0.5
@@ -56,8 +56,8 @@ const MainContainer:FC = ():ReactElement => {
 				</Tilty>
 				<div className="works-container">
 					{
-						// 遍历数据并进行渲染
-						projectData && projectData.map((item:Iitem, index) => {
+						// 遍历接从 notion api 接收回来的 work 数据并进行渲染
+						projectData && projectData.map((item:Iitem, index:number) => {
 							return (
 								<ProjectCard content={item} key={item.id} />
 							)

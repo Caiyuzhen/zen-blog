@@ -23,17 +23,18 @@ async function getAllTitles() {
 	const result = await notion.databases.query({ database_id: NOTION_DB_ID })
 	const titles = new Map()
 
-	//遍历 db 中的 page
+	//遍历 db 中的 page, 把数据转化为简单的结构
 	result.results.forEach((page) => {
 		titles.set(page.id, {
 			id: page.id,
 			title: page.properties.Title.title[0].plain_text,
 			createTime: page.created_time,
-			content: page.properties.detail.rich_text[0].text.content
+			content: page.properties.detail.rich_text[0].text.content,
+			cover: page.properties.Cover.files[0].file.url
 		})
 	})
 
-	//组装数据
+	//组装数据, reduce 能够把元素累加起来
 	let titleDa = [...titles.values()].reduce((acc, curr) => {
 		acc.push(curr)
 		return acc
