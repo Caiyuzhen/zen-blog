@@ -93,10 +93,10 @@ const AboutMe:FC = () => {
 						<div>Contact</div>
 					</div>
 					<div className="detail-info">
-						<div className="info">Tel: <p className="info-text">13622382958</p></div>
-						<div className="info">Mail: <p className="info-text">caiyuzhen00@gmail.com</p></div>
-						<div className="info">Mail: <p className="info-text">c-y-zhen</p></div>
-						<div className="info">QQ: <p className="info-text">418590624</p></div>
+						<div className="info">Tel: <p className="info-text">&nbsp;&nbsp;13622382958</p></div>
+						<div className="info">Mail: <p className="info-text">&nbsp;&nbsp;caiyuzhen00@gmail.com</p></div>
+						<div className="info">Mail: <p className="info-text">&nbsp;&nbsp;c-y-zhen</p></div>
+						<div className="info">QQ: <p className="info-text">&nbsp;&nbsp;418590624</p></div>
 					</div>
 				</div>
 				<div className="card-facebook"

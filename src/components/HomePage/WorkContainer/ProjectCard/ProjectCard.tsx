@@ -8,7 +8,6 @@ import { MouseContext } from '../../../Mouse/useMouseContext'
 
 
 // 项目卡片的类型
-
 interface IProps {
 	content ? : Iitem
 }
