@@ -1,8 +1,29 @@
 @import '../../../../design/color/Global.less'; //引入全局样式库
 @font-face {
-	font-family: 'RammettoOne';
+	font-family: 'RammettoOne-Regular';
 	src: url('../../../../assets/font/RammettoOne-Regular.ttf');
 };
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
 @mainTitlecolor: linear-gradient( rgba(61, 12, 255), rgba(61, 12, 255) ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
@@ -23,8 +44,10 @@
 		
 			> p {
 				color: @text-color;
-				width: 600px;
+				width: 800px;
 				text-align: left;	
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
 			}
 		}
 		
@@ -38,7 +61,7 @@
 
 			> .bigTitle{
 				position: absolute;
-				font-family: RammettoOne;
+				font-family: 'RammettoOne-Regular';
 				background-image: linear-gradient(to right, #f0f5ff, #c5d9ff, #d8bfff);
 				-webkit-background-clip: text;
 				color: transparent;
@@ -68,16 +91,18 @@
 				display: flex;
 				flex-direction: column;
 				align-items: start;
+				gap: 8px;
 		
 				.timeline-title {
 					color: @text-color;
 					margin: 0;
-					font-size: 16px;
-					font-family: RammettoOne;
+					font-size: 24px;
+					font-family: 'GTEestiProText-Bold';
 				}
 			
 				.timeline-des {
 					color: @description-color;
+					font-family: 'GTEestiProText-Regular';
 					margin: 0;
 				}
 			}
@@ -122,6 +147,8 @@
 				color: @text-color;
 				width: 100%;
 				text-align: left;	
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
 			}
 		}
 		
@@ -135,7 +162,7 @@
 
 			> .bigTitle{
 				position: absolute;
-				font-family: RammettoOne;
+				font-family: 'RammettoOne-Regular';
 				background-image: linear-gradient(to right, #f0f5ff, #c5d9ff, #d8bfff);
 				-webkit-background-clip: text;
 				color: transparent;
@@ -172,17 +199,19 @@
 				display: flex;
 				flex-direction: column;
 				align-items: start;
+				gap: 8px;
 		
 				.timeline-title {
 					color: @text-color;
 					margin: 0;
 					font-size: 16px;
-					font-family: RammettoOne;
+					font-family: 'GTEestiProText-Bold';
 				}
 			
 				.timeline-des {
 					color: @description-color;
 					margin: 0;
+					font-family: 'GTEestiProText-Regular';
 				}
 			}
 

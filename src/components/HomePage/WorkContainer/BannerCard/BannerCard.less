@@ -1,8 +1,28 @@
 @import '../../../../design/color/Global.less'; //引入全局样式库
 @font-face {
-	font-family: 'RammettoOne';
+	font-family: 'RammettoOne-Regular';
 	src: url('../../../../assets/font/RammettoOne-Regular.ttf');
 };
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
 .bgcolorFn(){//less 混合, 公共颜色
 	content: "";
 	position: absolute;
@@ -79,6 +99,9 @@
 			gap: 16px;
 	
 			.banner-text-container {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
 
 				.content-title {
 					font-size: 28px;
@@ -94,7 +117,7 @@
 				}
 		
 				.content-subtitle {
-					font-size: 16px;
+					font-size: 20px;
 					font-weight: 400;
 					margin: 0;
 					text-align: start;
@@ -103,6 +126,7 @@
 					-webkit-line-clamp: 7;
 					display: -webkit-box;
 					text-overflow: ellipsis;
+					font-family: 'GTEestiProText-Regular';
 				}
 			}
 			.navDot-container {
@@ -219,6 +243,9 @@
 			gap: 16px;
 	
 			.banner-text-container {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
 
 				.content-title {
 					font-size: 28px;
@@ -234,7 +261,7 @@
 				}
 		
 				.content-subtitle {
-					font-size: 16px;
+					font-size: 20px;
 					font-weight: 400;
 					margin: 0;
 					text-align: start;
@@ -243,6 +270,7 @@
 					-webkit-line-clamp: 7;
 					display: -webkit-box;
 					text-overflow: ellipsis;
+					font-family: 'GTEestiProText-Regular';
 				}
 			}
 	

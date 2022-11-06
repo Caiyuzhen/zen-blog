@@ -1,3 +1,22 @@
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../assets/font/GTEestiProText-Regular.ttf');
+}
 
 .card-container {
 	// width: 100%;
@@ -18,7 +37,6 @@
 	p {
 		width: 100%;
 		margin: 16px 0 12px 0;
-		font-size: 16px;
 		color: #f2f2f2;
 		text-align: left;
 		//👇最多 3 行，超过则 ...
@@ -27,6 +45,8 @@
 		-webkit-line-clamp: 2;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		font-size: 16px;
+		font-family: 'GTEestiProText-Medium';
 	}
 
 	.metaInfo {
@@ -51,12 +71,16 @@
 			.author {
 				font-size: 12px;
 				color: #f2f2f2;
+				font-size: 14px;
+				font-family: 'GTEestiProText-Medium';
 			}
 		}
 
 		.time {
 			font-size: 12px;
 			color: #f2f2f2;
+			font-size: 14px;
+			font-family: 'GTEestiProText-Medium';
 		}
 
 		.hashTag {
@@ -67,6 +91,8 @@
 			background-color:  rgba(172, 171, 255, 0.4);
 			backdrop-filter: blur(10px);//🔥毛玻璃效果
 			color: #f2f2f2;
+			font-size: 14px;
+			font-family: 'GTEestiProText-Medium';
 		}
 	}
 }
