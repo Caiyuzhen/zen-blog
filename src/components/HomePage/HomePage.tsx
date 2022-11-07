@@ -8,6 +8,7 @@ import './HomePage.less'
 import AboutMe from './AboutMe/AboutMe' ;
 import Articles from './Articles/Articles';
 import TabContext from '../../utils/Tabcontext'
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -99,10 +100,11 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 	return (
 		<div className='home-page'>
 			<div className='home-page-container'>
-
 				{/* 📦用 Context 包裹来传递给下层数据(优雅一点的写法) */}
 				<TabContext.Provider value={{showPage, changePage}}>
 						<TitleBar/>
+						{/* ⚡️下面为二级路由的出口 */}
+						<Outlet />
 						{showPage==='tab1' ? <AboutMe/> : ''}
 						{showPage==='tab2' ? <MainContainer/> : ''}
 						{showPage==='tab3' ? <Articles/> : ''} 

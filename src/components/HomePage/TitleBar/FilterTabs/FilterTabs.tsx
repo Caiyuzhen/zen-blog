@@ -4,7 +4,7 @@ import TabContext from '../../../../utils/Tabcontext' //createContext + use Cont
 import { useDispatch, useSelector } from 'react-redux';
 import { rootState } from '../../../../store'
 import { ITabState, ITabsActionType } from '../../../../store/reducers/tabs'
-
+import { Link } from 'react-router-dom'
 
 interface IProps {
 	isActive: string,//判断 tab 是否选中了, 用来改变【底色的位置】跟【字体粗细】等样式
@@ -105,19 +105,24 @@ const FilterTabs:FC<IProps> = ( {isActive, onChangeTab} ) => {//传入父组件�
 					className={`tab-styles ${isActive==='tab1' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
 					onClick={ (e)=> { changeTabReduxAndTabActive('tab1'); changePage('tab1'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{onChangeTab('tab1'); changePage('tab1'); changeBottomColor(e)} }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
-					>About</div>
+					><Link to="/homepage/about"> About </Link>			
+				</div>
+
 				<div 
 					id='tab2'
 					className={`tab-styles ${isActive==='tab2' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
 					onClick={ (e)=> { changeTabReduxAndTabActive('tab2'); changePage('tab2'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{ onChangeTab('tab2'); changePage('tab2'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
-					>Project</div>
+					><Link to="/homepage/works"> Works </Link>
+				</div>
+
 				<div 
 					id='tab3'
 					className={`tab-styles ${isActive==='tab3' ? 'filter-option-active' : 'filter-option'}`} //模板字符串添加多个类名的写法
 					onClick={ (e)=> { changeTabReduxAndTabActive('tab3'); changePage('tab3'); changeBottomColor(e.target as HTMLElement) } }//🔥本质上是执行了父组件的函数, 封装一个函数的写法, ⚡️更直观的同时修改 payload 和 hook
 					// onClick={ (e)=>{ onChangeTab('tab3'); changePage('tab3'); changeBottomColor(e) } }//🔥本质上是执行了父组件的函数, 直接 (e)=>{onChangeTab('tab1')} 来执行 hook 的写法
-					>Article</div>
+					><Link to="/homepage/articles"> Article </Link>
+				</div>
 				<div className="filter-bg" ref={bottomTabBar}></div>
 			</div>
 		</div>

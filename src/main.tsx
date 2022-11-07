@@ -5,6 +5,9 @@ import './index.css'
 import { Provider } from 'react-redux'
 import store from './store'
 import MouseContextProvider from './components/Mouse/useMouseContext'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import router from './router/index'
+
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -13,7 +16,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<Provider store={store}>
 		{/* 【 🏹️（（5）】在全局内传递鼠标坐标的 provider */}
 		<MouseContextProvider>
-    		<App />
+    		{/* <App /> */}
+			<RouterProvider router={router}/>
 		</MouseContextProvider>
 	</Provider>
 
