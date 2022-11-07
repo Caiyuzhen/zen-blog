@@ -37,7 +37,7 @@ const MainContainer:FC = ():ReactElement => {
 		// .catch((err) => {
 		// 	alert(err)
 		// })
-		// console.log('🌞得到数据了')
+		// console.log('🌞得到数据了'+projectData)
 	},[])
 
 	return (
@@ -59,7 +59,8 @@ const MainContainer:FC = ():ReactElement => {
 						// 遍历接从 notion api 接收回来的 work 数据并进行渲染
 						projectData && projectData.map((item:Iitem, index:number) => {
 							return (
-								<ProjectCard content={item} key={item.id} />
+								// 传入 id，用于判读路由 Link 哪一页
+								<ProjectCard content={item} key={index} index={index}/>
 							)
 						})
 					}

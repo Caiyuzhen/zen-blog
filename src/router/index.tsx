@@ -6,6 +6,8 @@ import Articles from '../../src/components/HomePage/Articles/Articles'
 import MainContainer from '../../src/components/HomePage/WorkContainer/MainContainer'
 import AboutMe from '../components/HomePage/AboutMe/AboutMe'
 import NotFound from '../../src/components/NotFound/NotFound'
+import ProjectA from '../components/HomePage/WorkContainer/pages/ProjectA'
+
 
 // 生成路由实例(管路径，管组件渲染 【Link to 更改路径】、【Outlet 路由渲染】)
 const router = createBrowserRouter([
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
 		element: <HomePage/>,
 		children: [
 			{
-				path: '/homepage/about',
+				path: '/homepage/hhh',
 				element: <AboutMe/>
 			},
 			{
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
 				element: <Articles/>
 			}
 		]
+	},
+	{
+		path: '/homepage/works/projectA',
+		element: <ProjectA/>
 	},
 	{
 		path: '*',

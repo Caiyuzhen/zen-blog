@@ -46,7 +46,7 @@ export const BannerCard:FC = () => {
 	
 	//【第二步】【🔥实时的】监听 Store 内 State 的变化, 根据改变后的【状态】来进行轮播方法
 	setInterval(()=>{
-		console.log('监听中')
+		// console.log('监听中')
 		store.subscribe(() => {
 			const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据
 	
