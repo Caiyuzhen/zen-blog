@@ -25,14 +25,13 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 
 	const navigate = useNavigate()
 
-	function goProjectA (target: HTMLElement): void {
+	function goProjectA(target: HTMLElement): void {
 
 		// 🔥在上游把 index 传递下来, 设置到元素的 data-XXX 属性身上了！所以可以根据这个值来判断要跳转到哪个路由详情页！
 		if (target.dataset.index === '0') {
 			navigate('/homepage/works/projectA')
 			// console.log('A')
 		} 
-
 		// 🔥打印 target 元素身上设置的数据
 		console.log(target.dataset.index)
 	}
