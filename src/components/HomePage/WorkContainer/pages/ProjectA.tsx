@@ -77,10 +77,7 @@ export const ProjectA = () => {
 	})
 
 
-
-
 	
-
 	//备份用🌟🌟
 	// 	// 封装一个交叉观察器（看元素是否进入视口内, 可以传入【对象】，最终返回 true or false）
 	// 	function getIntersectionObserver(target: HTMLElement):boolean { //目标元素 执行的动画
@@ -117,14 +114,8 @@ export const ProjectA = () => {
 	// 	}
 	
 	
-	// 	// 先获得元素, 然后判断展示什么样式
-	// 	const [isShow, setIsShow] = useState<boolean>(false) 
 	
-	// 	const bottomContainer = document.querySelector('.basic-info-topContainer') as HTMLElement
-	// //🌟🌟
-	
-	
-	
+
 	
 
 
