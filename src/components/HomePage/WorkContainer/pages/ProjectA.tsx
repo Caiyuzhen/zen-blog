@@ -116,10 +116,6 @@ export const ProjectA = () => {
 	
 	
 
-	
-
-
-
 	// 返回上一页的函数
 	const navigate = useNavigate()
 	function goBack(): void {
