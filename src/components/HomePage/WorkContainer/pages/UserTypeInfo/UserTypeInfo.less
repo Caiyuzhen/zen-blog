@@ -1,0 +1,254 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.card-bg() {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 448px;
+	background: linear-gradient(180deg, #E9E8F6 0%, rgba(233, 232, 246, 0.7) 46.88%, rgba(233, 232, 246, 0.3) 100%);
+	border-radius: 10px;
+}
+
+
+
+
+.main-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	justify-content: space-between;
+	padding: 84px;
+	position: relative;
+
+	// 第 1 组
+	.type-container {
+		flex: 20%;
+
+		.title-text {
+			font-size: 28px;
+			font-family: 'GTEestiProText-Bold';
+			color: @text-color;
+		}
+
+		.type-content {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 18px;
+			font-family: 'GTEestiProText-Regular';
+			color: @text-color;
+			margin: 0;
+		}
+
+		// 第 1、2、3、4 个子元素
+		.type-content :nth-child(1) {
+			width: 100%;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			font-family: 'GTEestiProText-Regular';
+			background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+			border-radius: 10px;
+			margin: 0;
+		}
+
+		.type-content :nth-child(2) {
+			width: 100%;
+			height: 130px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			font-family: 'GTEestiProText-Regular';
+			background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+			border-radius: 10px;
+			margin: 0;
+		}
+
+		.type-content :nth-child(3) {
+			width: 100%;
+			height: 108px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			font-family: 'GTEestiProText-Regular';
+			background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+			border-radius: 10px;
+			margin: 0;
+		}
+
+		.type-content :nth-child(4) {
+			width: 100%;
+			height: 130px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			align-items: center;
+			justify-content: center;
+			font-family: 'GTEestiProText-Regular';
+			background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+			border-radius: 10px;
+			margin: 0;
+		}
+	}
+
+	// 第 2 组
+	.link-group {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 108px;
+		height: 448px;
+		position: relative;
+		flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
+
+		.link-purple {
+			position: absolute;
+			top: 102px;
+		}
+
+		.link-blue {
+			position: absolute;
+			top: 130px;
+		}
+
+		.link-orange {
+			position: absolute;
+			top: 322px;
+		}
+
+		.link-green {
+			position: absolute;
+			top: 458px;
+		}
+	}
+
+	// 第 3～4 组的背景
+	.who-content, .what-content, .why-content{
+		.card-bg()
+	}
+
+	// 第 3～4 组
+	.threeW {
+		width: 100%;
+		display: flex;
+		gap: 24px;
+		flex-direction: row;
+
+
+		> img {
+			margin-top: 64px; //居中一下
+		}
+
+		// 第 3 组
+		.who-container {
+			width: 100%;
+
+			.title-text {
+				width: 100%;
+				font-size: 28px;
+				font-family: 'GTEestiProText-Bold';
+				color: @text-color;
+			}
+
+			.who-content {
+				padding:12px 0;
+				height: auto;
+				display: flex;
+				gap: 10px;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				align-items: center;
+				justify-content: center;
+				font-family: 'GTEestiProText-Regular';
+			}
+		}
+
+		// 第 4 组
+		.what-container {
+			width: 100%;
+
+			.title-text {
+				width: 100%;
+				font-size: 28px;
+				font-family: 'GTEestiProText-Bold';
+				color: @text-color;
+			}
+
+			.what-content {
+				padding:12px 0;
+				height: auto;
+				display: flex;
+				gap: 10px;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				align-items: center;
+				justify-content: center;
+				font-family: 'GTEestiProText-Regular';
+			}
+		}
+
+		// 第 5 组
+		.why-container {
+			width: 100%;
+
+			.title-text {
+				width: 100%;
+				font-size: 28px;
+				font-family: 'GTEestiProText-Bold';
+				color: @text-color;
+			}
+
+			.why-content {
+				padding:12px 0;
+				height: auto;
+				display: flex;
+				gap: 10px;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				align-items: center;
+				justify-content: center;
+				font-family: 'GTEestiProText-Regular';
+			}
+		}
+	}
+}
