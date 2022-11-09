@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+// 通过注释来动态的引入 babel 的翻译器，用 emotion 的翻译器！
 import React, { RefObject, useEffect, useRef, useState } from 'react'
 import topImg from '../../../../assets/img/ProjectA-topImg.jpg'
 import gradualArrow from '../../../../assets/svg/icon-gradualArrow.svg'
@@ -6,6 +9,8 @@ import backIcon from '../../../../assets/svg/icon-back.svg'
 import './ProjectA.less'
 import { useNavigate } from 'react-router-dom'
 import Trottle from '../../../../utils/Trottle'
+
+
 
 
 type IOptions = {
@@ -135,9 +140,16 @@ export const ProjectA = () => {
 							</div>
 						</div>
 
-						{/* 测试一下动态样式，可以能要用 css style 库 ？*/}
-						<div className={isVisible ? "basic-info-bottomContainer-disable" : "basic-info-bottomContainer" } 
-							 ref={containerRef}>
+						{/* 💡使用 emotion 的 css 来增加额外的样式，更直观一些*/}
+						<div className="basic-info-bottomContainer" 
+							 ref={containerRef}
+							 // 👇引入 emotion 后，会增加个 css 的模板语法，可以用来添加 hover 等选择器的样式
+							css={isVisible && css`
+									opacity: 1 !important; //交叉观察器 isVisible 后，就显示
+									transform: translateY(0px) !important;// 交叉观察器 isVisible 后，就位移
+									transition: all .3s ease-in-out !important;
+								`}
+							 >
 							<div className="basic-info-bottomLeft">
 								<div className="main-title">The rise of the creator economy</div>
 								<div className="main-content">In the era of Web 2.0, big platforms monopolized the ownership of content, but in the era of Web 3.0, the ownership of content will return to creators, and the environment has also spawned more freelancers. We also found that more and more The NCLC platform has sprung up like mushrooms after a rain, and the entire industry has ushered in a bonus period.</div>

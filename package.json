@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@emotion/css": "^11.10.0",
+    "@emotion/css": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@notionhq/client": "^2.2.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^6.4.0",

@@ -155,71 +155,7 @@
 				}
 			}
 
-			// 🌟测试
-			.basic-info-bottomContainer-disable {
-				display: flex;
-				flex-direction: row;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				transition: transform, width font-size .3s ease-in-out;
-				opacity: 0.1;
-				// transform: scale(1.2);
 
-				.basic-info-bottomLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
-
-					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
-						color: @text-color;
-					}
-
-					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: 16px;
-						color: @description-color;
-					}
-				}
-
-				.basic-info-bottomRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-between;
-					width: 100%;
-					
-
-					.circle {
-						width: 140px;  //1 比 1 正圆形
-						height: 140px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
-
-
-						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
-						}
-					}
-
-					> img {
-						width: 32px;
-					}
-				}
-			}
-
-			// 🌟测试
 			.basic-info-bottomContainer {
 				display: flex;
 				flex-direction: row;
@@ -228,8 +164,10 @@
 				gap: 48px;
 				justify-content: space-between;
 				transform: scale(1);
-				transition: transform, width font-size .3s ease-in-out;
-				// opacity: 0;// 动画
+				transition: all .3s ease-in-out;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(50px);// 动画向下位移 200px
+
 
 				
 				.basic-info-bottomLeft {
