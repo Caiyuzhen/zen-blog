@@ -36,22 +36,32 @@ export const ProjectA = () => {
 
 		return scrollY	//返回页面滚动的距离
 	}
-	getScrollY()
+	// getScrollY()
 
 
 
 
-	// 封装一个交叉观察器（看元素是否进入视口内, 可以传入【对象】，最终返回 true or false）
-	function useEleOnScreen(options: IOptions) { //目标元素 执行的动画
+	// 封装一个交叉观察器（看元素是否进入视口内）
+	function useEleOnScreen(options: IOptions): [React.MutableRefObject<HTMLDivElement | null>, boolean] { //目标元素 执行的动画
 
 		const containRef = useRef<HTMLDivElement | null>(null)
 		const [isVisible, setIsVisible] = useState<boolean>(false) //返回 true 就添加动画，false 就移除动画
 
-		const callBackFn = (entries: any) => {
-			const [entry] = entries
-			setIsVisible(entry.isIntersecting) //判断元素是否进入视口内, 进入视口内就返回 true, 把这个值设置到 hook 内
+		const callBackFn = (entries: IntersectionObserverEntry[]) => {
+			
+			
+			entries.forEach(item => {
+				if(item.intersectionRatio >= 0.5) {  //（出现）判断相交比例是否 >= 0.5 (比如向上滚动达到 0.5 的相交比例，则显示)
+					const [entry] = entries
+					setIsVisible(entry.isIntersecting) //= true, 表示相交了, 就把值设置给 hook
+					// console.log(item.intersectionRatio.toFixed(2))
+				} else if (item.intersectionRatio <= 0.5) {  //（复原）判断相交比例是 <= 0.5  (比如向下滚动达到 0.5 的相交比例，则显示)
+					const [entry] = entries
+					setIsVisible(false) //= false, 表示没相交, 就把值设置给 hook
+					// console.log(item.intersectionRatio.toFixed(2))
+				}
+			})
 		}
-
 
 		useEffect(() => {
 			const obs = new IntersectionObserver(callBackFn, options) //创建一个观察器实例
@@ -63,13 +73,12 @@ export const ProjectA = () => {
 					obs.unobserve(containRef.current) //组件卸载时就不监听了
 				}
 			}
-			
-		},[containRef, options])
+		},[containRef, options]) //有元素, 有参数才开始观察
 
-		return [[containRef, isVisible]]
+		return [containRef, isVisible]
 	}
 
-
+	//传参后再解构赋值出闭包的值
 	const [ containerRef, isVisible ] = useEleOnScreen({ 
 		rootMargin:'5px 2% 0px 0px', //这个一定要带单位! 可以改变相交区域的位置(相当于给它加上、右、下、左的 margin），一定要带单位, 如果相交目标是浏览器窗口的为参照的话，一定要带百分比(🌟-50%就是窗口的一半!)。（ + 正值向外延伸， - 负值向内缩小）
 		threshold: [0, 0.5, 1] //相交的比例（0～1）的范围，还可以传数组，设置多个比例，比如[0.2, 0.4, 0.6],每达到某个比例的话都会触发
@@ -78,40 +87,7 @@ export const ProjectA = () => {
 
 
 	
-	//备份用🌟🌟
-	// 	// 封装一个交叉观察器（看元素是否进入视口内, 可以传入【对象】，最终返回 true or false）
-	// 	function getIntersectionObserver(target: HTMLElement):boolean { //目标元素 执行的动画
-
-	// 		const [isEnter, setIsEnter] = useState<boolean>(false) //返回 true 就添加动画，false 就移除动画
 	
-	// 		useEffect(() => {
-	// 			const obserHandle = (entries: IntersectionObserverEntry[]) => {
-	// 				entries.forEach(item => { //判断相交比例是否 >= 1 
-	// 					if(item.intersectionRatio >= 1) {
-	// 						setIsEnter(true)
-	// 						// console.log(item.intersectionRatio);
-	// 					} else if (item.intersectionRatio < 0.5) { //判断相交比例是 <= 0.5 
-	// 						setIsEnter(false)
-	// 						// console.log(item.intersectionRatio);
-	// 					} 
-	// 				})
-	// 			}
-		
-	// 			const options = {
-	// 				rootMargin:'5px 2% 0px 0px', //这个一定要带单位! 可以改变相交区域的位置(相当于给它加上、右、下、左的 margin），一定要带单位, 如果相交目标是浏览器窗口的为参照的话，一定要带百分比(🌟-50%就是窗口的一半!)。（ + 正值向外延伸， - 负值向内缩小）
-	// 				threshold: [0, 0.5, 1] //相交的比例（0～1）的范围，还可以传数组，设置多个比例，比如[0.2, 0.4, 0.6],每达到某个比例的话都会触发
-	// 				// threshold: 1 // 1 就是相交比例为 100% 相交时会触发一次
-	// 			}
-	
-	// 			const obs = new IntersectionObserver(obserHandle, options) //创建一个观察器实例, 记得顺序要放在函数的下面!
-	
-	// 			if(target) {
-	// 				obs.observe(target) //观察目标元素
-	// 			}		
-	// 		},[isEnter])
-	// 		console.log(isEnter);
-	// 		return isEnter //条件判断是否添加动画
-	// 	}
 	
 	
 	
@@ -143,7 +119,7 @@ export const ProjectA = () => {
 
 				{/* 首屏 */}
 				<div className="basic-info">
-					<p className="main-bigTitle">ProjectA</p>
+					<p className="main-bigTitle">ABC</p>
 
 					<div className="basic-container">
 
@@ -160,7 +136,8 @@ export const ProjectA = () => {
 						</div>
 
 						{/* 测试一下动态样式，可以能要用 css style 库 ？*/}
-						<div className={isVisible ? "basic-info-bottomContainer" : "basic-info-bottomContainer-disable" } ref={containerRef}>
+						<div className={isVisible ? "basic-info-bottomContainer-disable" : "basic-info-bottomContainer" } 
+							 ref={containerRef}>
 							<div className="basic-info-bottomLeft">
 								<div className="main-title">The rise of the creator economy</div>
 								<div className="main-content">In the era of Web 2.0, big platforms monopolized the ownership of content, but in the era of Web 3.0, the ownership of content will return to creators, and the environment has also spawned more freelancers. We also found that more and more The NCLC platform has sprung up like mushrooms after a rain, and the entire industry has ushered in a bonus period.</div>
