@@ -14,7 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+	"jsxImportSource": "@emotion/react",//试一下，引入 emotion 库
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

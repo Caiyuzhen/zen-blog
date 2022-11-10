@@ -10,6 +10,9 @@ import Trottle from '../../../../utils/Trottle'
 import BasicInfo from '../pages/BasicInfo/BasicInfo'
 import Border from '../../../Border/Border'
 import UserTypeInfo from '../pages/UserTypeInfo/UserTypeInfo'
+import UserFeedback from '../pages/UserFeedback/Userfeedback'
+
+
 
 export const ProjectA = () => {
 
@@ -70,6 +73,9 @@ export const ProjectA = () => {
 
 				{/* UserType */}
 				<UserTypeInfo />
+
+				{/* 用户反馈 */}
+				<UserFeedback />
 
 			</div>
 		</>

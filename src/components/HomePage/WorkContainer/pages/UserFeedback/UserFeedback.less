@@ -1,0 +1,326 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+
+
+.main-fb-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 52px;
+	box-sizing: border-box;
+	
+	.main-bg {
+		// position: absolute;
+		height: 814px;
+		width: 100%;
+		left: 44px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+		background: linear-gradient(to bottom right, rgba(46, 43, 97, 0.9), rgba(17,15,56,0.8) );
+		border-radius: 36px;
+		box-sizing: border-box;
+
+		.circle-text-container {
+			position: relative;
+			
+			.popLeftTop { //比较 hack 的写法
+				left: -172px;
+				top: 128px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 300px;
+				height: 76px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-leftTop.svg') center center no-repeat;
+				backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 228px;
+					margin-right: 12px;
+					margin-bottom: 0;
+					margin-top: 0;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color-normal;
+				}
+			}
+
+			.popTopLeft { //比较 hack 的写法
+				left: 62px;
+				top: -28px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 334px;
+				height: 76px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-TopLeft.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 280px;
+					margin-bottom: 14px;
+					margin-top: 0;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.popTopRight { //比较 hack 的写法
+				left: 592px;
+				top: -28px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 338px;
+				height: 82px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-TopRight.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 220px;
+					margin-bottom: 14px;
+					margin-top: 0;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color-normal;
+				}
+			}
+
+			.popLeftBottom { //比较 hack 的写法
+				left: -180px;
+				top: 300px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 310px;
+				height: 76px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-leftBottom.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 228px;
+					margin-right: 12px;
+					margin-bottom: 0;
+					margin-top: 0;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.popBottomLeft { //比较 hack 的写法
+				left: 42px;
+				top: 428px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 312px;
+				height: 86px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-BottomLeft.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 268px;
+					margin-bottom: 0;
+					margin-top: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color-normal;
+				}
+			}
+
+			.popBottomRight { //比较 hack 的写法
+				left: 624px;
+				top: 428px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 352px;
+				height: 86px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-BottomRight.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 268px;
+					margin-bottom: 0;
+					margin-top: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.popRightBottom { //比较 hack 的写法
+				left: 826px;
+				top: 302px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 356px;
+				height: 94px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-RightBottom.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 268px;
+					margin-bottom: 14px;
+					margin-left: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color-normal;
+				}
+			}
+
+			.popRightTop { //比较 hack 的写法
+				left: 826px;
+				top: 118px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 356px;
+				height: 94px;
+				position: absolute;
+				z-index: 11;
+				background: url('../../../../../assets/svg/pop-RightTop.svg') center center no-repeat;
+				// backdrop-filter: blur(2px);//毛玻璃效果
+
+				> p {
+					width: 268px;
+					margin-bottom: 14px;
+					margin-left: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.circle-container {
+				width: 100%;
+				height: auto;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+		
+				.big-circle {
+					height: 500px;
+					width: 500px;
+					border-radius: 50%;
+					background: #352f67;
+					width: 500px;
+					height: 500px;
+				}
+		
+				.big-circle-1 {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transform: translateX(40px);
+
+					.medium-circle-1 {
+						width: 334px;
+						height: 334px;
+						border-radius: 50%;
+						background: rgba(233, 232, 246, .15);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.small-circle-1 {
+							width: 228px;
+							height: 228px;
+							background: rgb(217, 215, 247);
+							border-radius: 50%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+
+							> img {
+								width: 48px;
+								height: 48px;
+							}
+
+							> p {
+								font-family: 'GTEestiProText-Bold';
+								font-size: 20px;
+							}
+						}
+					}
+				}
+		
+				.big-circle-2 {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transform: translateX(-40px);
+					
+					.medium-circle-2 {
+						width: 334px;
+						height: 334px;
+						border-radius: 50%;
+						background: rgba(233, 232, 246, .15);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.small-circle-2 {
+							width: 228px;
+							height: 228px;
+							background: rgb(217, 215, 247);
+							border-radius: 50%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+
+							> img {
+								width: 48px;
+								height: 48px;
+							}
+
+							> p {
+								font-family: 'GTEestiProText-Bold';
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
