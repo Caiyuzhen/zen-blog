@@ -14,7 +14,7 @@ import {IOptions} from '../../../../../types/global'
 
 export const UserTypeInfo = () => {
 
-	//🔥🔥获得要添加交叉观察器的元素
+	//🔥🔥一、获得要添加交叉观察器的元素
 	const [Type_isVisible, setType_isVisible] = useState<boolean>(false) //返回 true 就添加动画，false 就移除动画
 	const [Who_isVisible, setWho_isVisible] = useState<boolean>(false) //返回 true 就添加动画，false 就移除动画
 	const [What_isVisible, setWhat_isVisible] = useState<boolean>(false) //返回 true 就添加动画，false 就移除动画
@@ -27,9 +27,8 @@ export const UserTypeInfo = () => {
 	const Link_Ref = useRef<HTMLDivElement>(null)
 
 
-
-	//🔥🔥封装一个交叉观察器的 utils，需要传入【想监听的元素】、【hook 的状态】、【hook 状态改变的 useState函数】
-	function useEleOnScreen(
+	//🔥🔥二、封装一个交叉观察器的 utils，需要传入【想监听的元素】、【hook 的状态】、【hook 状态改变的 useState函数】
+	function useEleOnScreen (
 		obj: React.RefObject<HTMLDivElement>, 
 		isVisibleState: boolean, 
 		setisVisibleStateFn: (state: boolean) => void): [boolean] { //目标元素
@@ -46,10 +45,10 @@ export const UserTypeInfo = () => {
 					const [entry] = entries
 					setisVisibleStateFn(entry.isIntersecting) // true, 表示相交了, 就把值设置给 hook
 				} 
-				else if (item.intersectionRatio <= 0.5) {  //（复原）判断相交比例是 <= 0.5  (比如向下滚动达到 0.5 的相交比例，则显示)
-					const [entry] = entries
-					setisVisibleStateFn(false) //= false, 表示没相交, 就把值设置给 hook
-				}
+				// else if (item.intersectionRatio <= 0.5) {  //（复原）判断相交比例是 <= 0.5  (比如向下滚动达到 0.5 的相交比例，则显示)
+				// 	const [entry] = entries
+				// 	setisVisibleStateFn(false) //= false, 表示没相交, 就把值设置给 hook
+				// }
 			})
 		}
 
@@ -64,12 +63,12 @@ export const UserTypeInfo = () => {
 				}
 			}
 		},[obj, options]) //有元素, 有参数才开始观察
-		console.log(isVisibleState);
+		// console.log(isVisibleState);
 		return [isVisibleState]//最终把参数的值返回出去
 	}
 
 
-	//🔥🔥传参后再调用函数, 【解构】再【赋值】出【函数闭包】内的值, 下面再通过这些变量的值来判断样式！
+	//🔥🔥三、传参后再调用函数, 【解构】再【赋值】出【函数闭包】内的值, 下面再通过这些变量的值来判断样式！
 	const [ TypeIsVisible ] = useEleOnScreen(Type_Ref, Type_isVisible, setType_isVisible) 
 	const [ WhoIsVisible ] = useEleOnScreen(Type_Ref, Who_isVisible, setWho_isVisible)
 	const [ WhatIsVisible ] = useEleOnScreen(Type_Ref, What_isVisible, setWhat_isVisible)
@@ -136,7 +135,15 @@ export const UserTypeInfo = () => {
 						</div>
 					</div>
 
-					<img src={gradualArrow} alt="" />
+					{/* 箭头 */}
+					<img src={gradualArrow} alt="" 
+						 className="gradualArrow"
+						 css={Who_isVisible && css`
+							opacity: 1 !important;
+							transition: all .45s ease-in-out !important; 
+							transition-delay: 0.4s !important; //延迟一小会儿出现
+						`}
+					/>
 
 					<div className="what-container"
 						 ref={What_Ref}
@@ -159,7 +166,15 @@ export const UserTypeInfo = () => {
 						</div>
 					</div>
 
-					<img src={gradualArrow} alt="" />
+					{/* 箭头 */}
+					<img src={gradualArrow} alt="" 
+						 className="gradualArrow"
+						 css={Who_isVisible && css`
+						 		opacity: 1 !important;
+								transition: all .45s ease-in-out !important; 
+								transition-delay: 0.55s !important; //延迟一小会儿出现
+						 `}
+					/>
 					
 					<div className="why-container"
 						 ref={Why_Ref}

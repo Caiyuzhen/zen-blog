@@ -15,6 +15,7 @@ import { MouseContext } from '../../../Mouse/useMouseContext'
 
 
 
+
 export const SideNav:FC = () => {
 
 
@@ -45,7 +46,7 @@ export const SideNav:FC = () => {
 	
 		const changeNavNum = parseInt(id) // parseInt 转换为数字, 因为 id 是 string 格式
 		setNavState(changeNavNum) //设置 hook 内的值, 用来判断高亮哪个 tab
-		changeNav(changeNavNum) //设置 context 工具函数内的值, 用来判断显示哪组数据
+		changeNav(changeNavNum) //设置 context 工具函数内的值, 用来判断显示哪组数据(在 Nav 内执行，去改变 Inspired 内的数据)
 		console.log(changeNavNum);
 	}
 
@@ -88,6 +89,7 @@ export const SideNav:FC = () => {
 					inspireNavItem && inspireNavItem.map((item, index)=>{
 						return (
 							<div 
+								// navState 用来判断高亮哪个 tab，结合 redux 来判断
 								className={navState===index ? `item nav-item-${index} item-selected` : `item nav-item-${index}`} 
 								key={index} 
 								id={item.id}

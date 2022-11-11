@@ -7,6 +7,7 @@ const TabContext = React.createContext({
 })
 
 
+// 🔥用来传递灵感卡片的 index ，用来高亮哪个 tab!
 export const InspireNavContext = React.createContext({
 	// showNav: 0,//默认值为 0
 	changeNav: (showNav: number): void => {}

@@ -11,7 +11,7 @@ import BasicInfo from '../pages/BasicInfo/BasicInfo'
 import Border from '../../../Border/Border'
 import UserTypeInfo from '../pages/UserTypeInfo/UserTypeInfo'
 import UserFeedback from '../pages/UserFeedback/UserFeedback'
-
+import BusinessGoals from '../pages/BusinessGoals/BusinessGoals'
 
 
 export const ProjectA = () => {
@@ -76,6 +76,9 @@ export const ProjectA = () => {
 
 				{/* 用户反馈 */}
 				<UserFeedback />
+
+				{/* 业务目标 */}
+				<BusinessGoals />
 
 			</div>
 		</>
