@@ -1,6 +1,5 @@
 import React from 'react'
 import './UserFeedback.less'
-import userFeedBack from '../../../../../assets/svg/userfeedback.svg'
 import personal from '../../../../../assets/svg/icon-personal.svg'
 import user from '../../../../../assets/svg/icon-user.svg'
 import popLeftTop from '../../../../../assets/svg/pop-leftTop.svg'

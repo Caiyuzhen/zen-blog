@@ -10,7 +10,7 @@ import Trottle from '../../../../utils/Trottle'
 import BasicInfo from '../pages/BasicInfo/BasicInfo'
 import Border from '../../../Border/Border'
 import UserTypeInfo from '../pages/UserTypeInfo/UserTypeInfo'
-import UserFeedback from '../pages/UserFeedback/Userfeedback'
+import UserFeedback from '../pages/UserFeedback/UserFeedback'
 
 
 

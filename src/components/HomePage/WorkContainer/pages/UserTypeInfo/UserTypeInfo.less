@@ -49,6 +49,9 @@
 	// 第 1 组
 	.type-container {
 		flex: 20%;
+		opacity: 0.2;// 透明度动画
+		transform: translateY(50px);// 初始时向下位移 50px
+		transition: all .3s ease-in-out;
 
 		.title-text {
 			font-size: 28px;
@@ -137,6 +140,9 @@
 		height: 448px;
 		position: relative;
 		flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
+		opacity: 0.2;// 透明度动画
+		transform: translateY(75px);// 初始时向下位移 75px
+		transition: all .3s ease-in-out;
 
 		.link-purple {
 			position: absolute;
@@ -159,12 +165,12 @@
 		}
 	}
 
-	// 第 3～4 组的背景
+	// 第 3～5 组的背景
 	.who-content, .what-content, .why-content{
 		.card-bg()
 	}
 
-	// 第 3～4 组
+	// 第 3～5 组
 	.threeW {
 		width: 100%;
 		display: flex;
@@ -179,6 +185,9 @@
 		// 第 3 组
 		.who-container {
 			width: 100%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(100px);// 初始时向下位移 100px
+			transition: all .3s ease-in-out;
 
 			.title-text {
 				width: 100%;
@@ -204,6 +213,9 @@
 		// 第 4 组
 		.what-container {
 			width: 100%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(125px);// 初始时向下位移 125px
+			transition: all .3s ease-in-out;
 
 			.title-text {
 				width: 100%;
@@ -229,6 +241,9 @@
 		// 第 5 组
 		.why-container {
 			width: 100%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(150px);// 初始时向下位移 150px
+			transition: all .3s ease-in-out;
 
 			.title-text {
 				width: 100%;

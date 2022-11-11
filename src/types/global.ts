@@ -58,3 +58,9 @@ export type IinspireCardContent = {
 	author: string,
 	hashTag: string,
 }
+
+// 交叉观察器的类型
+export type IOptions = {
+    rootMargin: string;
+    threshold: number[];
+}
