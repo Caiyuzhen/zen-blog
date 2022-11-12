@@ -12,7 +12,7 @@ import Border from '../../../Border/Border'
 import UserTypeInfo from '../pages/UserTypeInfo/UserTypeInfo'
 import UserFeedback from '../pages/UserFeedback/UserFeedback'
 import BusinessGoals from '../pages/BusinessGoals/BusinessGoals'
-
+import UxStategy from '../pages/UxStategy/UxStategy'
 
 export const ProjectA = () => {
 
@@ -51,20 +51,16 @@ export const ProjectA = () => {
 	return (
 		<>
 			<div className='projectA-container'>
-				
 				{/* 头图 */}
 				<div className="top-img">
-
 					{/* 导航 */}
 					<div className="top-nav">
 						<img src={backIcon} alt="" onClick={ ()=>goBack() }/>
 						<p>Project A Name</p>
 					</div>
-
 					<img src={topImg} alt="" />
 				</div>
 				
-
 				{/* 首屏 */}
 				<BasicInfo />
 
@@ -79,6 +75,12 @@ export const ProjectA = () => {
 
 				{/* 业务目标 */}
 				<BusinessGoals />
+
+				{/* 分割线 */}
+				<Border />
+
+				{/* 设计策略 */}
+				<UxStategy />
 
 			</div>
 		</>

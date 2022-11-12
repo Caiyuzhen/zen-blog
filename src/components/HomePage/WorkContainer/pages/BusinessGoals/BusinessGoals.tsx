@@ -10,21 +10,54 @@ export const BusinessGoals = () => {
 		<>
 			<div className="business-goal-container">
 				<div className="business-goal-text-container">
-					<p>Business Goals</p>
-					<p>As an experimental and innovative product, we have divided it into three phases, each with a word business goal, ultimately to become the Digital Hub for personal or teams.</p>
+					<p className="goal-title">Business Goals</p>
+					<p className="goal-description">As an experimental and innovative product, we have divided it into three phases, each with a word business goal, ultimately to become the Digital Hub for personal or teams.</p>
 				</div>
+
 				<div className="business-goal-graphic-container">
-					<div className="goal-state">
-						<p>Strategy</p>
-						<img src={upArrow} alt="" />
-						<p>Tactics</p>
-						<img src={upArrow} alt="" />
-						<p>Campaign</p>
-					</div>
 					<div className="goal-modelGraphic">
-						<img src={tranglesTop} alt="" />
-						<img src={tranglesMedium} alt="" />
-						<img src={tranglesBottom} alt="" />
+						<div className="model-graphic-top">
+
+							<div className="graphic-top-textContainer">
+								<p>Strategy</p>
+								<img src={upArrow} alt="" />
+							</div>
+							<span className="dotted-line"></span>
+							<div className="tranglesTop-container">
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<img src={tranglesTop} alt="" className="tranglesTop-des"/>
+							</div>
+						</div>
+
+						<div className="model-graphic-medium">
+							<p>Tactics</p>
+							<span className="dotted-line"></span>
+							<div className="tranglesMedium-container">
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<img src={tranglesMedium} alt="" className="tranglesMedium-des"/>
+							</div>
+						</div>
+
+						<div className="model-graphic-bottom">
+							<div className="graphic-bottom-textContainer">
+							<img src={upArrow} alt="" />
+								<p>Campaign</p>
+							</div>
+							<span className="dotted-line"></span>
+							<div className="tranglesBottom-container">
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<span className="dotted-line"></span>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<img src={tranglesBottom} alt="" className="tranglesBottom-des"/>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>

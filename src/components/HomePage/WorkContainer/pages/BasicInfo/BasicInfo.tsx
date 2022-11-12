@@ -69,7 +69,7 @@ export const BasicInfo = () => {
 	return (
 		<>
 			<div className="basic-info">
-				<p className="main-bigTitle">ABC</p>
+				<p className="main-bigTitle">Project A</p>
 
 				<div className="basic-container">
 					<div className="basic-info-topContainer"
