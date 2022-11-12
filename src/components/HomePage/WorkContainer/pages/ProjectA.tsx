@@ -13,6 +13,10 @@ import UserTypeInfo from '../pages/UserTypeInfo/UserTypeInfo'
 import UserFeedback from '../pages/UserFeedback/UserFeedback'
 import BusinessGoals from '../pages/BusinessGoals/BusinessGoals'
 import UxStategy from '../pages/UxStategy/UxStategy'
+import Editoral from '../pages/Editorial/Editoral'
+import DefinitionBlock from '../pages/DefinitionBlock/DefinitionBlock'
+
+
 
 export const ProjectA = () => {
 
@@ -81,6 +85,12 @@ export const ProjectA = () => {
 
 				{/* 设计策略 */}
 				<UxStategy />
+
+				{/* Editorial */}
+				<Editoral />
+
+				{/* DefinitionBlock */}
+				<DefinitionBlock />
 
 			</div>
 		</>

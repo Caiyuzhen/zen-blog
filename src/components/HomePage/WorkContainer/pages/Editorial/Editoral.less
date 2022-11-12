@@ -1,0 +1,170 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.editoral-main-container {
+	width: 100%;
+	// height: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 48px;
+	box-sizing: border-box;
+	padding: 84px;
+	align-items: center;
+	justify-content: space-between;
+
+	// 左侧内容
+	.editoral-left-container {
+		width: 648px;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+
+		.editoral-text-container {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 20px;
+
+			.editoral-title {
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				margin: 0;
+			}
+
+			> p {
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @description-color;
+				text-align: start;
+				margin: 0;
+			}
+		}
+
+		.editoral-graphic-container {
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+			align-items: center;
+
+			// 三个圆
+			.editoral-graphic {
+				width: 102px;
+				height: 102px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
+				border: 1px solid @text-color;
+				color: @text-color;
+				font-family: 'GTEestiProText-Book';
+				font-size: @text-DescriptionSize;
+			}
+
+			//箭头
+			> img {
+				width: 84px;
+				height: 84px;
+			}
+
+		}
+	
+	}
+
+	// 右侧内容
+	.editoral-right-container {
+		margin-top: 68px;
+		margin-left: 148px;
+		width: 896px;
+		height: 675px;
+		position: relative;
+		// border: 1px solid @text-color; //临时查看下显示范围
+
+		.Pointer {
+			width: 120px;
+			border-radius: 12px;
+			position: absolute;
+			transform: translate(416px,346px); // 向右上位移
+			left: 0;
+			z-index: 9;
+		}
+
+		.bg-homePage-rightCard {
+			width: 480px;
+			border-radius: 12px;
+			position: absolute;
+			transform: translate(306px,248px); // 向右上位移
+			left: 0;
+			z-index: 8;
+			box-shadow: 
+					0px 0px 1px rgba(32, 28, 94, 0.1),
+					4px 8px 48px rgba(32, 28, 94, 0.2);
+		}
+
+		.bg-homePage-leftCard {
+			width: 382px;
+			border-radius: 12px;
+			position: absolute;
+			transform: translate(-92px,248px); // 向右上位移
+			left: 0;
+			z-index: 7;
+			box-shadow: 
+					0px 0px 1px rgba(32, 28, 94, 0.1),
+					4px 8px 48px rgba(32, 28, 94, 0.2);
+
+		}
+
+		.page-homePage {
+			width: 512px;
+			border-radius: 16px;
+			position: absolute;
+			transform: translate(48px, -48px); // 向右上位移
+			left: 0;
+			z-index: 6;
+		}
+
+		.pageBg-center {
+			width: 512px;
+			opacity: 1;
+			position: absolute;
+			left: 0;
+			transform: translate(24px, -24px); // 向右上位移
+			backdrop-filter: blur(24px);//背景模糊
+			border-radius: 16px;
+			z-index: 5;
+		}
+
+		.pageBg-bottom {
+			width: 512px;
+			opacity: 0.5;
+			position: absolute;
+			border-radius: 16px;
+			left: 0;
+		}
+	}
+}
