@@ -16,6 +16,7 @@ import UxStategy from '../pages/UxStategy/UxStategy'
 import Editoral from '../pages/Editorial/Editoral'
 import DefinitionBlock from '../pages/DefinitionBlock/DefinitionBlock'
 import ExpandPlayground from './ExpandPlayground/ExpandPlayground'
+import CanvasBlock from './CanvasBlock/CanvasBlock'
 
 
 
@@ -96,6 +97,8 @@ export const ProjectA = () => {
 				{/* Expand playground */}
 				<ExpandPlayground />
 
+				{/* Canvas block  */}
+				<CanvasBlock />
 			</div>
 		</>
 	)

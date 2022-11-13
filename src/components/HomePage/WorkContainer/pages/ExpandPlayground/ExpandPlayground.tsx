@@ -3,27 +3,71 @@ import './ExpandPlayground.less'
 import playgroundTemplate from '../../../../../assets/img/page-playgroundTemplate.jpg'
 import playgroundEffect from '../../../../../assets/img/page-playgroundEffect.jpg'
 import playgroundEditor from '../../../../../assets/img/page-playgroundEditor.jpg'
+import DbSquare from '../../../../../assets/svg/graphic-doubleSquare.svg'
+
 
 export const ExpandPlayground = () => {
 	return (
 		<>
 			<div className="expandPlayground-main-container">
-				<div className="expandPlayground-main-leftContainer">
-					<img src={playgroundTemplate} alt="" />
-					<img src={playgroundEffect} alt="" />
-					<img src={playgroundEditor} alt="" />
-				</div>
-				<div className="expandPlayground-main-rightContainer">
-					<div className="expandPlayground-right-baseinfo">
-						<div className="expandPlayground-right-baseinfo-title">Expand XXX XXX </div>
-						<p className="expandPlayground-right-baseinfo-des">description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock</p>
+				<img src={DbSquare} alt="" className="DbSquare"/>
+				<div className="expandPlayground-inside-container">
+					{/* 左边的 page */}
+					<div className="expandPlayground-main-leftContainer">
+						<img src={playgroundTemplate} alt="" />
+						<img src={playgroundEffect} alt="" />
+						<img src={playgroundEditor} alt="" />
 					</div>
-					<div className="expandPlayground-right-Graphic">
-						<span>Developers Make Block</span>
-						<div></div>
-						<span>XXXXXX</span>
-						<div></div>
-						<span>User Use Block</span>
+
+					{/* 右边的图形+文字 */}
+					<div className="expandPlayground-main-rightContainer">
+						<div className="expandPlayground-right-baseinfo">
+							<div className="expandPlayground-right-baseinfo-title">Expand XXX XXX </div>
+							<p className="expandPlayground-right-baseinfo-des">description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock</p>
+						</div>
+						<div className="expandPlayground-right-Graphic">
+							<span className="expandPlayground-right-Graphic-leftText">Developers Make Block</span>
+							
+							{/* 箭头+文字 */}
+							<div className="tranArrAndText-all-container-01">
+								<div className="tranArrAndText-container-01">
+									<p>Shared Ecology</p>
+									<div className="trianArrowRight-01">
+										<span className="dotted-line"></span>
+										<span className="trianArrow-01"></span>
+									</div>
+								</div>
+								<div className="tranArrAndText-container-02">
+									<div className="trianArrowRight-02">
+										<span className="trianArrow-02"></span>
+										<span className="dotted-line"></span>
+									</div>
+									<p>Provide revenue</p>
+								</div>
+							</div>
+
+							<span className="expandPlayground-right-Graphic-centerText">XXXXXX</span>
+							
+								{/* 箭头+文字 */}
+								<div className="tranArrAndText-all-container-01">
+								<div className="tranArrAndText-container-01">
+									<p>Platform value</p>
+									<div className="trianArrowRight-01">
+										<span className="dotted-line"></span>
+										<span className="trianArrow-01"></span>
+									</div>
+								</div>
+								<div className="tranArrAndText-container-02">
+									<div className="trianArrowRight-02">
+										<span className="trianArrow-02"></span>
+										<span className="dotted-line"></span>
+									</div>
+									<p>Validate value</p>
+								</div>
+							</div>
+
+							<span className="expandPlayground-right-Graphic-rightText">User Use Block</span>
+						</div>
 					</div>
 				</div>
 			</div>
