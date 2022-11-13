@@ -15,6 +15,7 @@ import BusinessGoals from '../pages/BusinessGoals/BusinessGoals'
 import UxStategy from '../pages/UxStategy/UxStategy'
 import Editoral from '../pages/Editorial/Editoral'
 import DefinitionBlock from '../pages/DefinitionBlock/DefinitionBlock'
+import ExpandPlayground from './ExpandPlayground/ExpandPlayground'
 
 
 
@@ -91,6 +92,9 @@ export const ProjectA = () => {
 
 				{/* DefinitionBlock */}
 				<DefinitionBlock />
+
+				{/* Expand playground */}
+				<ExpandPlayground />
 
 			</div>
 		</>

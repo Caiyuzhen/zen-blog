@@ -24,18 +24,9 @@
 	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
 }
 
-.card-bg() {//所有卡片的背景
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	height: 448px;
-	background: linear-gradient(180deg, #E9E8F6 0%, rgba(233, 232, 246, 0.7) 46.88%, rgba(233, 232, 246, 0.3) 100%);
-	border-radius: 10px;
-}
 
 
-
-
+// 外容器, 用来放置圆形元素
 .definitionBlock-main-container {
 	width: 100%;
 	box-sizing: border-box;
@@ -47,12 +38,17 @@
 		top: -200px;
 	}
 
-	.DefinitionBlock-inside-container {
+	// 内容器, 用来增加 padding
+	.definitionBlock-inside-container {
 		width: 100%;
 		box-sizing: border-box;
 		padding: 84px;
+		display: flex;
+		flex-direction: column;
+		gap: 64px;
 
-		.DefinitionBlock-topContainer {
+		// 顶部信息
+		.definitionBlock-topContainer {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -60,9 +56,9 @@
 
 			.DefinitionBlock-title  {
 				font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					margin: 0;
+				font-size: @text-TitleSize;
+				color: @text-color;
+				margin: 0;
 			}
 
 			> p {
@@ -73,5 +69,68 @@
 				margin: 0;
 			}
 		}
+
+		// 底部卡片
+		.definitionBlock-bottomContent {
+			width: 100%;
+			box-sizing: border-box;
+			display: flex;
+			gap: 18px;
+			flex-direction: row;
+
+			.format-container {
+				width: 100%;
+				display: flex;
+				gap: 18px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				> img {
+					width: 100%;
+				}
+			}
+
+			.sandBoxAndMedia-container {
+				width: 100%;
+				display: flex;
+				gap: 18px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				> img {
+					width: 100%;
+				}
+			}
+
+			.collAndLayout-container {
+				width: 100%;
+				display: flex;
+				gap: 18px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				> img {
+					width: 100%;
+				}
+			}
+
+			.wbAndData-container {
+				width: 100%;
+				display: flex;
+				gap: 18px;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				> img {
+					width: 100%;
+				}
+			}
+		}
 	}
+
+	
 }
