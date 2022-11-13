@@ -17,6 +17,7 @@ import Editoral from '../pages/Editorial/Editoral'
 import DefinitionBlock from '../pages/DefinitionBlock/DefinitionBlock'
 import ExpandPlayground from './ExpandPlayground/ExpandPlayground'
 import CanvasBlock from './CanvasBlock/CanvasBlock'
+import Automation from './Automation/Automation'
 
 
 
@@ -99,6 +100,12 @@ export const ProjectA = () => {
 
 				{/* Canvas block  */}
 				<CanvasBlock />
+
+				{/* 分割线 */}
+				<Border />
+
+				{/* automation */}
+				<Automation />
 			</div>
 		</>
 	)

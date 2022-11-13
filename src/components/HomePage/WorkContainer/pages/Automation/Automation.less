@@ -1,0 +1,145 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.automation-main-container {
+	width: 100%;
+	height: auto;
+	margin-top: 80px;
+	box-sizing: border-box;
+	position: relative;
+
+	.automation-inside-content {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 64px;
+		padding: 124px;
+		box-sizing: border-box;
+
+		.automation-topContainer {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+
+			.automation-title {
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				margin: 0;
+			}
+			.automation-des {
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @description-color;
+				text-align: start;
+				margin: 0;
+				line-height: 1.6;
+			}
+		}
+
+		.automation-bottomContainer {
+			height: auto;
+			position: relative;
+			
+				.jiraIcon {
+					border-radius: 50%;
+					width: 7.5%;
+					position: absolute;
+					left: 154px;
+					top: 52px;
+					z-index: 2;
+				}
+
+				.mondayIcon {
+					border-radius: 50%;
+					width: 7.5%;
+					position: absolute;
+					left: 44px;
+					top: 138px;
+					z-index: 2;
+				}
+
+				.asanaIcon {
+					border-radius: 50%;
+					width: 7.5%;
+					position: absolute;
+					left: 154px;
+					bottom: 64px;
+					z-index: 2;
+				}
+
+				
+
+				
+				.discordIcon {
+					border-radius: 50%;
+					width: 7.5%;
+					position: absolute;
+					right: 154px;
+					top: 64px;
+					z-index: 2;
+				}
+
+				.slackIcon {
+					border-radius: 50%;
+					width: 7.5%;
+					position: absolute;
+					right: 44px;
+					top: 138px;
+					z-index: 2;
+				}
+
+				.gmailIcon {
+					border-radius: 50%;
+					width: 7.5%;
+					position: absolute;
+					right: 154px;
+					bottom: 64px;
+					z-index: 2;
+				}
+			}
+
+			.automationGtaphic {
+				width: 702px;
+				position: absolute;
+				top: 32px;
+				left: 50%; 
+				transform: translateX(-50%); 
+				-webkit-transform: translateX(-50%);
+				z-index: 2;
+			}
+
+			.automationBg {
+				width: 100%;
+			}
+	}
+}
