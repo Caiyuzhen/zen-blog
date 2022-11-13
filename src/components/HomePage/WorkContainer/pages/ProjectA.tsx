@@ -15,9 +15,10 @@ import BusinessGoals from '../pages/BusinessGoals/BusinessGoals'
 import UxStategy from '../pages/UxStategy/UxStategy'
 import Editoral from '../pages/Editorial/Editoral'
 import DefinitionBlock from '../pages/DefinitionBlock/DefinitionBlock'
-import ExpandPlayground from './ExpandPlayground/ExpandPlayground'
-import CanvasBlock from './CanvasBlock/CanvasBlock'
-import Automation from './Automation/Automation'
+import ExpandPlayground from '../pages/ExpandPlayground/ExpandPlayground'
+import CanvasBlock from '../pages/CanvasBlock/CanvasBlock'
+import Automation from '../pages/Automation/Automation'
+import Intergation from '../pages/Intergation/Intergation'
 
 
 
@@ -45,14 +46,12 @@ export const ProjectA = () => {
 	}
 	// getScrollY()
 
-	
 
 	// 返回上一页的函数
 	const navigate = useNavigate()
 	function goBack(): void {
 		navigate('/homepage/works')
 	}
-
 
 
 	return (
@@ -106,6 +105,9 @@ export const ProjectA = () => {
 
 				{/* automation */}
 				<Automation />
+
+				{/* 集成 */}
+				<Intergation />
 			</div>
 		</>
 	)

@@ -1,0 +1,205 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.intergation-container {
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 64px;
+	padding: 24px 124px 124px 124px;
+	box-sizing: border-box;
+
+	// 左侧的描述跟数据 
+	.intergation-info-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 64px;
+
+		.intergation-info-text {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+
+			.intergation-title {
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				margin: 0;
+			}
+
+			.intergation-sub {
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @description-color;
+				text-align: start;
+				margin: 0;
+				line-height: 1.6;
+			}
+		}
+
+		// 下面整组数据
+		.intergation-number-mainContainer {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 100px;
+
+			// 数据
+			.intergation-number-TopContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				gap: 60px;
+
+				.numberTopLeft {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 32px;
+
+					.intergation-number {
+						font-family: 'RammettoOne';
+						font-size: 32px;
+						color: @text-color;
+						margin: 0;
+					}
+				}
+
+				.numberTopCenter {
+					width: 100%;
+					width: 24px;
+					margin-right: 12px;
+				}
+
+				.numberTopRight {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 32px;
+
+					.intergation-number {
+						font-family: 'RammettoOne';
+						font-size: 32px;
+						color: @text-color;
+						margin: 0;
+					}
+				}
+			}
+
+			.intergation-number-BottomContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				gap: 60px;
+				margin-top: 214px;
+
+				.numberTopLeft {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 32px;
+
+					.intergation-number {
+						font-family: 'RammettoOne';
+						font-size: 32px;
+						color: @text-color;
+						margin: 0;
+					}
+				}
+
+				.numberBottomCenter {
+					width: 100%;
+					width: 24px;
+					margin-right: 12px;
+				}
+
+				.numberBottomRight {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 32px;
+
+					.intergation-number {
+						font-family: 'RammettoOne';
+						font-size: 32px;
+						color: @text-color;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// 右侧的 page
+	.intergation-info-pageContainer {
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 48px;
+		margin-top: 122px;
+
+		.intergation-info-pageSlack {
+			position: relative;
+
+			> img {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
+			}
+		}
+
+		.intergation-info-pageJira {
+			position: relative;
+
+			.jiraIcon {
+				width: 25%;
+				position: absolute;
+				bottom: 12px;
+				left: -64px
+			}
+
+			> img {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
+			}
+		}
+	}
+}
