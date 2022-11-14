@@ -2,6 +2,11 @@ import React from 'react'
 import './AutoStep.less'
 import whenPage from '../../../../../assets/img/page-autopmated-step-one.jpg'
 import thenPage from '../../../../../assets/img/page-autopmated-step-two.jpg'
+import autoStepOne from '../../../../../assets/img/automated-Step-1.png'
+import autoStepTwo from '../../../../../assets/img/automated-Step-2.png'
+import autoStepThree from '../../../../../assets/img/automated-Step-3.png'
+
+
 
 export const AutoStep = () => {
 	return (
@@ -26,9 +31,9 @@ export const AutoStep = () => {
 						<p className="autoStep-rightText-info-des">We provide users with an automated way to interact with bulk slack account associations and bulk Jira Issue imports, greatly simplifying the interaction steps.</p>
 					</div>
 					<div className="sutpStep-rightImg-StepGroup">
-						<div className="sutpStep-rightImg-StepGroup-stepOne"></div>
-						<div className="sutpStep-rightImg-StepGroup-stepTwo"></div>
-						<div className="sutpStep-rightImg-StepGroup-stepThree"></div>
+						<img src={autoStepOne} alt="" className="autoStepOne"/>
+						<img src={autoStepTwo} alt="" className="autoStepTwo"/>
+						<img src={autoStepThree} alt="" className="autoStepThree"/>
 					</div>
 				</div>
 			</div>

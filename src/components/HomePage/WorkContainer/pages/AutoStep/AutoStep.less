@@ -24,6 +24,12 @@
 	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
 }
 
+// 引入谷歌字体
+@font-face {
+	font-family: 'Nanum Pen';
+	src: url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+}
+
 
 .autoStep-main-container {
 	width: 100%;
@@ -32,8 +38,8 @@
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	gap: 64px;
+	align-items: flex-start;
+	gap: 96px;
 	padding: 24px 124px 124px 124px;
 	margin-top: 48px;
 	box-sizing: border-box;
@@ -55,8 +61,8 @@
 
 			> p {
 				flex: 1;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
+				font-family: 'Nanum Pen', 'GTEestiProText-Bold';
+				font-size: 48px;
 				color: @text-color;
 				margin: 0;
 				margin-bottom: 24px;
@@ -107,6 +113,23 @@
 				color: @description-color;
 				text-align: left;
 			}
+		}
+	}
+
+	.sutpStep-rightImg-StepGroup {
+		display: flex;
+		flex-direction: column;
+		
+		.autoStepOne {
+			width: 75%;
+		}
+
+		.autoStepTwo {
+			width: 75%;
+		}
+
+		.autoStepThree {
+			width: 75%;
 		}
 	}
 }
