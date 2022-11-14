@@ -1,0 +1,112 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.autoStep-main-container {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 64px;
+	padding: 24px 124px 124px 124px;
+	margin-top: 48px;
+	box-sizing: border-box;
+
+	// 左边的图文
+	.autoStep-leftPage-container {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+
+		.autoStep-leftPage-topText-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 24px;
+
+			> p {
+				flex: 1;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				margin: 0;
+				margin-bottom: 24px;
+				text-align: left;
+			}
+		}
+
+		// 左边的图文的 page-step
+		.autoStep-leftPage-bottomPic-container {
+			display: flex;
+			flex-direction: row;
+			gap: 24px;
+
+			> img {
+				width: 50%;
+				border-radius: 10px;
+			}
+		}
+	}
+
+	// 右边的流程
+	.autoStep-rightText-container {
+		width: 100%;
+		display: column; 
+		gap:24px;
+		
+		.autoStep-rightText-info {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+
+			.autoStep-rightText-info-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				color: @text-color;
+				text-align: left;
+			}
+
+			.autoStep-rightText-info-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+				text-align: left;
+			}
+		}
+	}
+}

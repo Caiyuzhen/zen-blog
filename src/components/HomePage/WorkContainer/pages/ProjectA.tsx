@@ -19,6 +19,8 @@ import ExpandPlayground from '../pages/ExpandPlayground/ExpandPlayground'
 import CanvasBlock from '../pages/CanvasBlock/CanvasBlock'
 import Automation from '../pages/Automation/Automation'
 import Intergation from '../pages/Intergation/Intergation'
+import AutoStep from '../pages/AutoStep/AutoStep'
+import KMGrowth from '../pages/KMGrowth/KMGrowth'
 
 
 
@@ -108,6 +110,12 @@ export const ProjectA = () => {
 
 				{/* 集成 */}
 				<Intergation />
+
+				{/* Auto Step */}
+				<AutoStep />
+
+				{/* KMGrowth, Circle Graphic */}
+				<KMGrowth />
 			</div>
 		</>
 	)

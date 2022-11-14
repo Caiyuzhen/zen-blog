@@ -1,0 +1,76 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+
+.KMGrowth-main-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 52px;
+	box-sizing: border-box;
+	flex-direction: column;
+
+	.KMGrowth-main-container-topInfo {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		margin-bottom: 48px;
+		padding: 24px;
+
+		.KMGrowth-topInfo-title {
+			width: 100%;
+			height: auto;
+			font-family: 'GTEestiProText-Bold';
+			font-size: 24px;
+			color: @text-color;
+		}
+
+		.KMGrowth-topInfo-des {
+			width: 100%;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.6;
+			color: @description-color;
+		}
+	}
+
+	.KMGrowth-main-container-bottomInfo {
+		height: 614px;
+		width: 100%;
+		left: 44px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+		background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+		border-radius: 36px;
+		box-sizing: border-box;
+	}
+}
