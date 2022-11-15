@@ -23,6 +23,7 @@ import AutoStep from '../pages/AutoStep/AutoStep'
 import KMGrowth from '../pages/KMGrowth/KMGrowth'
 import BlockReference from '../pages/BlockReference/BlockReference'
 import HashtagDM from '../pages/HashtagDM/HashtagDM'
+import KnowledgeGraphic from '../pages/KnowledgeGraphic/KnowledgeGraphic'
 
 
 export const ProjectA = () => {
@@ -123,6 +124,9 @@ export const ProjectA = () => {
 
 				{/* Hashtag 页面 */}
 				<HashtagDM />
+
+				{/* 图谱 */}
+				<KnowledgeGraphic />
 			</div>
 		</>
 	)
