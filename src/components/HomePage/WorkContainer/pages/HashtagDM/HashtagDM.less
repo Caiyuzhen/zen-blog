@@ -1,0 +1,218 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+
+.hashtagDM-mainContainer {
+	width: 100%;
+	height: 800px;
+	padding: 124px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	flex-direction: row;
+	position: relative;
+	gap: 48px;
+	
+
+	// 左侧信息
+	.hashtagDM-mainContainer-left {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		box-sizing: border-box;
+
+		.hashtagDM-mainContainer-leftInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			box-sizing: border-box;
+
+			// 左上基础信息
+			.hashtagDM-mainContainer-leftInfo-top {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.hashtagDM-mainContainer-leftInfo-topTitle {
+					width: 100%;
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+				}
+
+				.hashtagDM-mainContainer-leftInfo-topDes {
+					width: 100%;
+					margin: 0;
+					text-align: left;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			}
+
+			//左下图形化信息
+			.hashtagDM-mainContainer-leftInfo-bottom {
+				margin-top: 24px;
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 8px;
+				justify-content: flex-start;
+				box-sizing: border-box;
+				// align-items: center;
+
+				// 图形化圆角矩形文字
+				.hashtagDM-mainContainer-bottomMain {
+					padding: 16px;
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 24px;
+					box-sizing: border-box;
+
+					// ✏️ Creation scenes
+					.hashtagDM-mainContainer-bottomMain-Creation {
+						// width: 100%;
+						height: auto;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						color: @description-color;
+						font-family: 'GTEestiProText-Bold';
+						gap:24px;
+
+						.hashtagDM-mainContainer-bottomMain-circle{
+							width: 188px;
+							height: 60px;
+							aspect-ratio: 1/1;
+							border-radius: 200px;
+							border: 1px solid @text-color;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							color: @description-color;
+							font-size: 14px;
+							font-family: 'GTEestiProText-Regular';
+						}
+					}
+
+					// 📁 Management scenes
+					.hashtagDM-mainContainer-bottomMain-Management {
+						// width: 100%;
+						height: auto;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						color: @description-color;
+						font-family: 'GTEestiProText-Bold';
+						gap:24px;
+
+						.hashtagDM-mainContainer-bottomMain-circle{
+							width: 188px;
+							height: 60px;
+							aspect-ratio: 1/1;
+							border-radius: 200px;
+							border: 1px solid @text-color;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							color: @description-color;
+							font-size: 14px;
+							font-family: 'GTEestiProText-Regular';
+						}
+					}
+				}
+
+				// 左下图形化信息(线 + 下方文字)
+				.hashtagDM-mainContainer-bottomLineAndDes {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+
+					
+					// 图形化信息-线
+					.hashtagDM-mainContainer-bottomLine {
+						width: 272px;
+						// padding: 0 24px;
+						color: @description-color;
+						margin-left: 74px;
+					}
+					//文案
+					.hashtagDM-mainContainer-bottomDes {
+						width: 272px;
+						margin: 0;
+						text-align: left;
+						font-family: 'GTEestiProText-Regular';
+						font-size: 12px;
+						line-height: 1.6;
+						color: @description-color;
+						text-align: center;
+						margin-left: 74px;
+						margin-top: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	// 右侧图片
+	.hashtagDM-mainContainer-right {
+		overflow: visible;
+		width: 1400px;
+		height: 458px;
+		position: relative;
+		// background-color: #3370FF;
+
+		.HashtagPage {
+			border-radius: 12px;
+			position: absolute;
+			left: 0;
+			width: 974px;
+			height: 568px;
+		}
+	}
+}

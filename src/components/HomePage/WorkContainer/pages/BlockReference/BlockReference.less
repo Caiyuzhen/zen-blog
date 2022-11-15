@@ -35,7 +35,8 @@
 	flex-direction: column;
 	position: relative;
 
-	.blockReference-topCintainer{
+	// 顶部信息
+	.blockReference-topContainer{
 		width: 100%;
 		height: auto;
 		display: flex;
@@ -47,7 +48,7 @@
 		box-sizing: border-box;
 		z-index: 5;
 
-		.blockReference-topCintainer-leftInfoContainer {
+		.blockReference-topContainer-leftInfoContainer {
 			width: 100%;
 			height: auto;
 			display: flex;
@@ -75,29 +76,219 @@
 			}
 		}
 
-		.blockReference-topCintainer-rightPageContainner {
+		.blockReference-topContainer-rightPageContainer {
 			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: row;
 			gap: 48px;
 
-			.ReferpageOne {
+			.ReferpageOne { //页面
+				border-radius: 12px;
 				width: 300px;
 				margin-bottom: 48px;
+				z-index: 5;
 			}
 
-			.ReferpageTwo {
+			.ReferpageTwo { //页面
+				border-radius: 12px;
 				width: 300px;
 				margin-top: 48px;
+				z-index: 5;
 			}
 		}
 	}
 
-	.blockReference-bottomCintainer {
+	// 底部信息
+	.blockReference-bottomContainer {
 		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+		margin-bottom: 48px;
+		padding: 48px;
+		box-sizing: border-box;
+		z-index: 5;
+
+
+		.blockReference-bottomContainer-leftPageContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+
+			.ReferpageThree {//页面
+				width: 666px;
+				z-index: 5;
+			}
+		}
+
+		.blockReference-topContainer-bottomRightInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			
+			.blockReference-bottomRightInfo-title {
+				width: 100%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				color: @text-color;
+			}
+	
+			.blockReference-bottomRightInfo-des{
+				width: 100%;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+
+			.blockReference-bottomRightInfo-graphic {
+				display: flex;
+				width: 100%;
+				height: auto;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				// 底部图形描述 1
+				.blockReference-bottomRightInfo-topGroup {
+					display: flex;
+					width: 100%;
+					height: auto;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					box-sizing: border-box;
+					font-size: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: @description-color;
+
+					.blockReference-bottomRightInfo-circle {
+						width: 192px;
+						height: 60px;
+						border-radius: 200px;
+						border: 1px solid @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanA {
+						width: 18px;
+						height: 18px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanB {
+						width: 12px;
+						height: 12px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanC {
+						width: 8px;
+						height: 8px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+				}
+
+				// 底部图形描述 2
+				.blockReference-bottomRightInfo-bottomGroup {
+					display: flex;
+					width: 100%;
+					height: auto;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					box-sizing: border-box;
+					font-size: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: @description-color;
+
+					.blockReference-bottomRightInfo-circle {
+						width: 192px;
+						height: 60px;
+						border-radius: 200px;
+						border: 1px solid @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanA {
+						width: 18px;
+						height: 18px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanB {
+						width: 12px;
+						height: 12px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanC {
+						width: 8px;
+						height: 8px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+				}
+			}
+		}
 	}
 
+	// 底部的色块
 	.tiBg {
 		width: 100%;
 		top: 828px;
@@ -107,5 +298,7 @@
 		margin: auto;
 		position: absolute;  
 		z-index: 0;
+		padding: 44px;
+		box-sizing: border-box;
 	}
 }

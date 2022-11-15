@@ -22,7 +22,7 @@ import Intergation from '../pages/Intergation/Intergation'
 import AutoStep from '../pages/AutoStep/AutoStep'
 import KMGrowth from '../pages/KMGrowth/KMGrowth'
 import BlockReference from '../pages/BlockReference/BlockReference'
-
+import HashtagDM from '../pages/HashtagDM/HashtagDM'
 
 
 export const ProjectA = () => {
@@ -120,6 +120,9 @@ export const ProjectA = () => {
 
 				{/* Block Reference and Bidirectional link */}
 				<BlockReference />
+
+				{/* Hashtag 页面 */}
+				<HashtagDM />
 			</div>
 		</>
 	)
