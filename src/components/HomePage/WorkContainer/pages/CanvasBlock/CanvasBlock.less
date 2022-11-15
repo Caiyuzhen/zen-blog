@@ -32,30 +32,6 @@
 	box-sizing: border-box;
 	position: relative;
 
-	.cursor-red {
-		position: absolute;
-		top: -165px;
-		left: 868px;
-		width: 114px;
-		z-index: 5;
-	}
-
-	.cursor-yellow {
-		position: absolute;
-		bottom: 132px;
-		right: 692px;
-		width: 268px;
-		z-index: 5;
-	}
-
-	.cursor-blue {
-		position: absolute;
-		right: 35px;
-    	bottom: 472px;
-		width: 248px;
-		z-index: 5;
-	}
-
 	.canvasBlock-inside-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -168,7 +144,7 @@
 						}
 					}
 
-				// 左箭头 + 文字
+					// 左箭头 + 文字
 					.tranArrAndText-container-02 {
 						width: 100%;
 						margin-right: 4px;
@@ -229,10 +205,44 @@
 		}
 
 		// 页面 page
-		.canvas-page{
-			position: absolute;
-			width: 50%;
-			right: -5%;
+		.canvas-page-group {
+			overflow: visible;
+			width: 742px;
+			height: 458px;
+			position: relative;
+
+			.cursor-red {
+				position: absolute;
+				top: -56px;
+				left: -132px;
+				width: 136px;
+				z-index: 5;
+			}
+
+			.cursor-yellow {
+				position: absolute;
+				bottom: -46px;
+				right: 320px;
+				width: 268px;
+				z-index: 5;
+			}
+
+			.cursor-blue {
+				position: absolute;
+				right: -114px;
+    			bottom: -16px;
+				width: 208px;
+				z-index: 5;
+			}
+
+			.canvas-page{
+				position: absolute;
+				width: 742px;
+				height: 458px;
+				right: -30%;
+			}
 		}
+
+		
 	}
 }

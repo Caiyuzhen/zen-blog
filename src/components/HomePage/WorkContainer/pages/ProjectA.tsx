@@ -21,6 +21,7 @@ import Automation from '../pages/Automation/Automation'
 import Intergation from '../pages/Intergation/Intergation'
 import AutoStep from '../pages/AutoStep/AutoStep'
 import KMGrowth from '../pages/KMGrowth/KMGrowth'
+import BlockReference from '../pages/BlockReference/BlockReference'
 
 
 
@@ -116,6 +117,9 @@ export const ProjectA = () => {
 
 				{/* KMGrowth, Circle Graphic */}
 				<KMGrowth />
+
+				{/* Block Reference and Bidirectional link */}
+				<BlockReference />
 			</div>
 		</>
 	)

@@ -10,12 +10,7 @@ import CursorBlue from '../../../../../assets/img/cursor-03.png'
 export const CanvasBlock = () => {
 	return (
 		<>
-			<div className="canvasBlock-main-container">
-				{/* 协同头像 */}
-				<img src={CursorRed} alt="" className="cursor-red"/>
-				<img src={CursorYellow} alt="" className="cursor-yellow"/>
-				<img src={CursorBlue} alt="" className="cursor-blue"/>
-				
+			<div className="canvasBlock-main-container">	
 
 				<div className="canvasBlock-inside-container">
 
@@ -55,8 +50,16 @@ export const CanvasBlock = () => {
 						</div>
 					</div>
 
-					{/* 右边的 page */}
-					<img src={CanvasPage} alt="" className="canvas-page"/>
+					{/* 右边的 page + 协同头像*/}
+					<div className="canvas-page-group">
+						{/* 协同头像 */}
+						<img src={CursorRed} alt="" className="cursor-red"/>
+						<img src={CursorYellow} alt="" className="cursor-yellow"/>
+						<img src={CursorBlue} alt="" className="cursor-blue"/>
+						{/* 页面 */}
+						<img src={CanvasPage} alt="" className="canvas-page"/>
+					</div>
+					
 	
 				</div>
 			</div>

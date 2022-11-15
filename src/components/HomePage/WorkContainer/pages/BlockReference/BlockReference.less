@@ -1,0 +1,111 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+
+.blockReference-mainContainer {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 52px;
+	box-sizing: border-box;
+	flex-direction: column;
+	position: relative;
+
+	.blockReference-topCintainer{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+		margin-bottom: 48px;
+		padding: 48px;
+		box-sizing: border-box;
+		z-index: 5;
+
+		.blockReference-topCintainer-leftInfoContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+
+			.blockReference-topLeftInfo-title {
+				width: 100%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				color: @text-color;
+			}
+			.blockReference-topLeftInfo-des {
+				width: 100%;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.blockReference-topCintainer-rightPageContainner {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+
+			.ReferpageOne {
+				width: 300px;
+				margin-bottom: 48px;
+			}
+
+			.ReferpageTwo {
+				width: 300px;
+				margin-top: 48px;
+			}
+		}
+	}
+
+	.blockReference-bottomCintainer {
+		width: 100%;
+	}
+
+	.tiBg {
+		width: 100%;
+		top: 828px;
+    	left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		position: absolute;  
+		z-index: 0;
+	}
+}
