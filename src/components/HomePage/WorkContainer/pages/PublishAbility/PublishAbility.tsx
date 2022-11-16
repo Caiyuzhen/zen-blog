@@ -1,8 +1,35 @@
-import React from 'react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+// 通过注释来动态的引入 babel 的翻译器，用 emotion 的翻译器！
+import React, { useEffect, useState } from 'react'
 import './PublishAbility.less'
+import webBrowsing from '../../../../../assets/svg/icon-webBrowsing.svg'
+import webBuilding from '../../../../../assets/svg/icon-webBuilding.svg'
+import dashDotLeft from '../../../../../assets/svg/line-dashDot-left.svg'
+import dashDotRight from '../../../../../assets/svg/line-dashDot-right.svg'
+import shadowBg from '../../../../../assets/svg/bg-shadow.svg'
+
+
+type isHover = {
+	left? : boolean,
+	right? : boolean,
+}
 
 
 export const PublishAbility = () => {
+
+	const [isHover, setIsHover] = useState<isHover>(function(): isHover{
+		return {
+			left : false,
+			right: false,
+		}
+	})
+
+	useEffect(()=>{
+		console.log(isHover)
+	},[isHover])
+
+
 	return (
 		<>
 			<div className="publishAbility-main-container">
@@ -17,15 +44,46 @@ export const PublishAbility = () => {
 						<p>infoinfo</p>
 						<p>infoinfo</p>
 					</div>
+					{/* 中间两个圆 */}
 					<div className="publishAbility-bottomInfo-centerItem">
-						<div className="publishAbility-bottomInfo-leftCircle">
-							<img src="" alt="" />
+						<img src={dashDotLeft} alt="" className="dashDotLeft"/> 
+						<img src={dashDotRight} alt="" className="dashDotRight"/>
+
+
+
+						{/* 左圆 */}
+						<div className="publishAbility-bottomInfo-leftCircle"
+							 onMouseEnter={()=>{setIsHover({left: true})}}
+							 onMouseLeave={()=>{setIsHover({left: false})}}
+						>
+							<img src={webBrowsing} alt="" />
 							<p>XXX XXX <br/>experience</p>
 						</div>
-						<div className="publishAbility-bottomInfo-rightCircle">
-							<img src="" alt="" />
+						<img src={shadowBg} alt="" 
+							 className="shadowBgLeft" 
+							 css={(isHover.left) && css`
+							 	opacity: 1 !important;
+								transition: all .3s ease-in-out !important;
+							 `}
+						/>
+
+
+
+						{/* 右圆 */}
+						<div className="publishAbility-bottomInfo-rightCircle"
+							 onMouseEnter={()=>{setIsHover({right: true})}}
+							 onMouseLeave={()=>{setIsHover({right: false})}}
+						>
+							<img src={webBuilding} alt="" />
 							<p>XXX XXX<br/>cabilities</p>
 						</div>
+						<img src={shadowBg} alt="" 
+							 className="shadowBgRight" 
+							 css={(isHover.right) && css`
+							 	opacity: 1 !important;
+								transition: all .3s ease-in-out !important;
+							 `}
+						/>
 					</div>
 					<div className="publishAbility-bottomInfo-rightItem">
 						<p>infoinfo</p>

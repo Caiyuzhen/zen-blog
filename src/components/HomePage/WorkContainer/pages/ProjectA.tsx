@@ -25,6 +25,7 @@ import BlockReference from '../pages/BlockReference/BlockReference'
 import HashtagDM from '../pages/HashtagDM/HashtagDM'
 import KnowledgeGraphic from '../pages/KnowledgeGraphic/KnowledgeGraphic'
 import PublishAbility from '../pages/PublishAbility/PublishAbility'
+import Interactive from '../pages/Interactive/Interactive'
 
 
 export const ProjectA = () => {
@@ -131,6 +132,9 @@ export const ProjectA = () => {
 
 				{/* 建站能力 */}
 				<PublishAbility />
+
+				{/* 互动能力 */}
+				<Interactive />
 			</div>
 		</>
 	)
