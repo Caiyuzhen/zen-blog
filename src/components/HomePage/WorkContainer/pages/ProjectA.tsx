@@ -24,6 +24,7 @@ import KMGrowth from '../pages/KMGrowth/KMGrowth'
 import BlockReference from '../pages/BlockReference/BlockReference'
 import HashtagDM from '../pages/HashtagDM/HashtagDM'
 import KnowledgeGraphic from '../pages/KnowledgeGraphic/KnowledgeGraphic'
+import PublishAbility from '../pages/PublishAbility/PublishAbility'
 
 
 export const ProjectA = () => {
@@ -127,6 +128,9 @@ export const ProjectA = () => {
 
 				{/* 图谱 */}
 				<KnowledgeGraphic />
+
+				{/* 建站能力 */}
+				<PublishAbility />
 			</div>
 		</>
 	)
