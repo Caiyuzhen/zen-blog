@@ -31,7 +31,7 @@ export function useEleOnScreen (
 			obs.observe(obj.current as HTMLDivElement)
 		}
 		return () => {
-			if(obj) {
+			if(obj.current) {
 				obs.unobserve(obj.current as HTMLDivElement) //组件卸载时就不监听了
 			}
 		}

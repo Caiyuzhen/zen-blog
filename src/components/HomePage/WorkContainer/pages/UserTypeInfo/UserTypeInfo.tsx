@@ -58,8 +58,8 @@ export const UserTypeInfo = () => {
 				obs.observe(obj.current as HTMLDivElement)
 			}
 			return () => {
-				if(obj) {
-					obs.unobserve(obj.current as HTMLDivElement) //组件卸载时就不监听了
+				if(obj.current) {
+					obs.unobserve(obj.current as HTMLDivElement) 
 				}
 			}
 		},[obj, options]) //有元素, 有参数才开始观察

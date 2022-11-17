@@ -26,6 +26,11 @@ import HashtagDM from '../pages/HashtagDM/HashtagDM'
 import KnowledgeGraphic from '../pages/KnowledgeGraphic/KnowledgeGraphic'
 import PublishAbility from '../pages/PublishAbility/PublishAbility'
 import Interactive from '../pages/Interactive/Interactive'
+import MutilPage from '../pages/MutilPage/MutilPage'
+import NestedLayout from '../pages/NestedLayout/NestedLayout'
+import PageLinkStyle from '../pages/PageLinkStyle/PageLinkStyle'
+
+
 
 
 export const ProjectA = () => {
@@ -36,11 +41,11 @@ export const ProjectA = () => {
 
 		useEffect(() => {
 			const pageMoveHandler = () => {
-				const scrollY_Value = parseInt(window.scrollY.toFixed(2))
+				const scrollY_Value = parseInt(window.scrollY.toFixed(2)) //取小数点后两位
 				setScrollY(scrollY_Value) //把值设置进 hook 内
 			}
 
-			const pageMove = Trottle(pageMoveHandler, 50) //引入节流方法
+			const pageMove = Trottle(pageMoveHandler, 50) //引入节流方法包裹函数
 
 			window.addEventListener('scroll', pageMove!) //执行监听包裹节流方法的函数
 			return () => window.removeEventListener("scroll", pageMove!)
@@ -135,6 +140,15 @@ export const ProjectA = () => {
 
 				{/* 互动能力 */}
 				<Interactive />
+
+				{/* 多页 */}
+				<MutilPage />
+
+				{/* 页面主题 */}
+				<PageLinkStyle />
+
+				{/* 多栏 */}
+				<NestedLayout />
 			</div>
 		</>
 	)

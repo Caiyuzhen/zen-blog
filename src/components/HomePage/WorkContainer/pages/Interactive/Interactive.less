@@ -1,9 +1,140 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+
+
 .interactive-main-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 124px;
+	display: flex;
+	gap: 24px;
+	box-sizing: border-box;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
 
 	// 左侧信息
 	.interactive-leftInfo-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 24px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
 
+		.interactive-leftInfo-textGroup {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.interactive-leftInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				color: @text-color;
+			}
+			.interactive-leftInfo-des {
+				margin: 0;
+				text-align: left;
+				width: 80%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		} 
+
+		.interactive-leftInfo-imgGroup {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 44px;
+
+			.likeCard {
+				width: 102px;
+			}
+
+			.gradualArrow {
+				width: 38px;
+			}
+
+			.emojiPanel {
+				width: 284px;
+				margin-top: 8px;
+			}
+		}
 	}
 
 	// 右侧图片
+	.interactive-rightInfo-container {
+		overflow: visible;
+		width: 760px;
+		height: 822px;
+		position: relative;
+
+		.ballons {
+			position: absolute;
+			top: 134px;
+    		left: -86px;
+			width: 120px;
+			font-size: 100px;
+			z-index: 1;
+		}
+
+		.scattered {
+			position: absolute;
+			top: 228px;
+			right: -46px;
+			width: 120px;
+			font-size: 100px;
+			z-index: 1;
+		}
+
+		.cryLaugh {
+			position: absolute;
+			top: 566px;
+    		left: 72px;
+			width: 120px;
+			font-size: 100px;
+			z-index: 1;
+		}
+
+		.interactivePage {
+			width: 612px;
+		}
+	}
 }

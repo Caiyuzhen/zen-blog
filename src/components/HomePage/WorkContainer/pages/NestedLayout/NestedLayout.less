@@ -1,0 +1,83 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+
+.nestedLayout-main-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 124px;
+	display: flex;
+	gap: 24px;
+	box-sizing: border-box;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+
+	// 左侧信息
+	.nestedLayout-mainLeft-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 24px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		.nestedLayout-mainLeft-title {
+			height: auto;
+			text-align: left;
+			font-family: 'GTEestiProText-Bold';
+			font-size: 24px;
+			color: @text-color;
+		}	
+
+		.nestedLayout-mainLeft-des {
+			margin: 0;
+			text-align: left;
+			width: 80%;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.6;
+			color: @description-color;
+		}
+	}
+
+	// 右侧图片
+	.nestedLayout-mainRight-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		gap: 24px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+	}
+}

@@ -1,0 +1,124 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.pageLinkStyle-main-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 124px;
+	display: flex;
+	gap: 48px;
+	box-sizing: border-box;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+
+	.pageLinkStyle-leftPagesInfo-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		gap: 36px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		// 左页
+		.pageLinkStyle-leftDetailPages-group {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			> p {
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 22px;
+			}
+
+			.pageThemeBefore {
+				width: 344px;
+				height: 504px;
+			}
+		}
+
+		// 右页
+		.pageLinkStyle-rightDetailPages-group {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			> p {
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 22px;
+			}
+
+			.pageThemeAfter {
+				width: 344px;
+				height: 504px;
+			}
+		}
+	}	
+	
+	.pageLinkStyle-rightInfo {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 24px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		.pageLinkStyle-rightInfo-title {
+			height: auto;
+			text-align: left;
+			font-family: 'GTEestiProText-Bold';
+			font-size: 24px;
+			color: @text-color;
+
+		}
+
+		.pageLinkStyle-rightInfo-des {
+			margin: 0;
+			text-align: left;
+			width: 100%;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.6;
+			color: @description-color;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+.mutilPage-main-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 124px;
+	display: flex;
+	gap: 24px;
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	.mutilPage-main-topInfo {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 24px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		.mutilPage-main-topInfo-title {
+			height: auto;
+			text-align: left;
+			font-family: 'GTEestiProText-Bold';
+			font-size: 24px;
+			color: @text-color;
+		}
+
+		.mutilPage-main-topInfo-des{
+			margin: 0;
+			text-align: left;
+			width: 100%;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.6;
+			color: @description-color;
+		}
+	}
+
+	.mutilPage-main-bottomPage {
+		width: 1336px;
+		height: 600px;
+		position: relative;
+		left: 12px;
+
+		.slidesOne {
+			width: 320px;
+			height: 428px;
+			position: absolute;
+			box-shadow: 
+				0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+			z-index: 1;
+			left: 208px; //核心位移
+			top: 32px;
+		}
+
+		.slidesTwo {
+			width: 320px;
+			height: 428px;
+			position: absolute;
+			box-shadow: 
+				0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+			z-index: 2;
+			left: 332px; //核心位移
+			top: 32px;
+		}
+		
+		.slidesThree {
+			width: 368px;
+			height: 492px;
+			position: absolute;
+			box-shadow: 
+				0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+			z-index: 3;
+			left: 462px; //核心位移
+		}
+
+		.slidesFour {
+			width: 412px;
+			height: 550px;
+			position: absolute;
+			box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+			box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+			box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+			z-index: 4;
+			left: 612px; //核心位移
+			top: -32px;
+		}
+
+		.slidesFive {
+			width: 456px;
+			height: 604px;
+			position: absolute;
+			box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+			box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+			box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+			z-index: 6;
+			left: 742px; //核心位移
+			top: -60px;
+		}
+
+		.slidesSix {
+			width: 320px;
+			height: 428px;
+			position: absolute;
+			z-index: 5;
+			left: 1000px; //核心位移
+		}
+
+		.frameWorkPage {
+			width: 734px;
+			height: 460px;
+			position: absolute;
+			left: 0px;
+		}
+	}
+}
