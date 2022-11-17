@@ -11,8 +11,8 @@ import shadowBg from '../../../../../assets/svg/bg-shadow.svg'
 
 
 type isHover = {
-	left? : boolean,
-	right? : boolean,
+	left : boolean,
+	right : boolean,
 }
 
 
@@ -53,8 +53,8 @@ export const PublishAbility = () => {
 
 						{/* 左圆 */}
 						<div className="publishAbility-bottomInfo-leftCircle"
-							 onMouseEnter={()=>{setIsHover({left: true})}}
-							 onMouseLeave={()=>{setIsHover({left: false})}}
+							 onMouseEnter={()=>{setIsHover({left: true, right: false})}} //左右都得赋值，不然就会 undefined！
+							 onMouseLeave={()=>{setIsHover({left: false, right: false})}}
 						>
 							<img src={webBrowsing} alt="" />
 							<p>XXX XXX <br/>experience</p>
@@ -71,8 +71,8 @@ export const PublishAbility = () => {
 
 						{/* 右圆 */}
 						<div className="publishAbility-bottomInfo-rightCircle"
-							 onMouseEnter={()=>{setIsHover({right: true})}}
-							 onMouseLeave={()=>{setIsHover({right: false})}}
+							 onMouseEnter={()=>{setIsHover({left: false, right: true})}}
+							 onMouseLeave={()=>{setIsHover({left: false, right: false})}}
 						>
 							<img src={webBuilding} alt="" />
 							<p>XXX XXX<br/>cabilities</p>
