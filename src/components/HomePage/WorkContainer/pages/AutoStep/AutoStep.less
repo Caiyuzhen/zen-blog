@@ -44,6 +44,13 @@
 	margin-top: 48px;
 	box-sizing: border-box;
 
+	.TriangleTexture {
+		position: absolute;
+		top: -308px;
+    	left: -150px;
+		width: 388px;
+	}
+
 	// 左边的图文
 	.autoStep-leftPage-container {
 		width: 100%;
@@ -59,8 +66,12 @@
 			justify-content: flex-start;
 			gap: 24px;
 
+			.rightHandDrawn {
+				width: 150px;
+				padding: 0px 36px 12px 36px;
+			}
+
 			> p {
-				flex: 1;
 				font-family: 'Nanum Pen', 'GTEestiProText-Bold';
 				font-size: 48px;
 				color: @text-color;
@@ -100,7 +111,7 @@
 			.autoStep-rightText-info-title {
 				width: 100%;
 				font-family: 'GTEestiProText-Bold';
-				font-size: 24px;
+				font-size: @text-TitleSize;
 				color: @text-color;
 				text-align: left;
 			}

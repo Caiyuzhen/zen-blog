@@ -1,0 +1,120 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+.pagetheme-main-container {
+	width: 100%;
+	box-sizing: border-box;
+    position: relative;
+	overflow: visible;
+
+
+	.circleRipple {
+		position: absolute;
+		top: -108px;
+		left: -136px;
+		width: 456px;
+	}
+
+	.pagetheme-main-container-inside {
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		align-items: start;
+		display: flex;
+		gap: 48px;
+		padding: 124px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		// 左侧图片
+		.pageThemePic {
+			width: 452px;
+		}
+
+		// 右侧信息
+		.pagetheme-rightInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.pagetheme-rightInfo-top {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+				.pagetheme-rightInfo-container-title {
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+				}
+
+				.pagetheme-rightInfo-container-des {
+					margin: 0;
+					text-align: left;
+					width: 100%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			}
+
+			.pagetheme-rightInfo-bottom {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 24px;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+				.pagetheme-framework {
+					width: 374px;
+				}
+
+				.gradualArrow {
+					width: 36px;
+				}
+
+				.pagetheme-page {
+					width: 374px;
+				}
+			}
+		}
+	}	
+}

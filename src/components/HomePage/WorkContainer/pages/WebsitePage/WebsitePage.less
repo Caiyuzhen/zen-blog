@@ -1,0 +1,183 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+// 引入谷歌字体
+@font-face {
+	font-family: 'Readex-Pro-medium';
+	src: url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap');
+}
+
+
+.webSitePage-main-container {
+	width: 100%;
+	height: auto;
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	padding: 124px;
+	margin-bottom: 48px;
+	box-sizing: border-box;
+
+	// 左侧页面
+	.webSitePage-leftPage {
+		width: 860px;
+	}
+
+	// 右侧信息
+	.webSitePage-rightInfo-Container {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+		display: flex;
+		gap: 48px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		.webSitePage-rightInfo-top {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			display: flex;
+			gap: 48px;
+			box-sizing: border-box;
+
+			.webSitePage-rightInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.webSitePage-rightInfo-des {
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.webSitePage-rightInfo-bottom {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			display: flex;
+			gap: 48px;
+			box-sizing: border-box;
+
+			.webSitePage-register-container {
+				width: 100%;
+				height: auto;
+				flex-direction: row;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 16px;
+				box-sizing: border-box;
+
+				.register-text {
+					width: 100%;
+					height: auto;
+					flex-direction: column;
+					display: flex;
+					box-sizing: border-box;
+
+					.register-numTitle {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'Readex-Pro-medium';
+						font-weight: 500;
+						font-size: 40px;
+						line-height: 1.6;
+						color: @text-color;
+					}
+
+					.register-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.arrUp {
+					width: 58px;
+				}
+			}
+
+			.webSitePage-upVoteUser-container {
+				width: 100%;
+				height: auto;
+				flex-direction: row;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-sizing: border-box;
+
+				.upVoteUser-text {
+					width: 100%;
+					height: auto;
+					flex-direction: column;
+					display: flex;
+					box-sizing: border-box;
+
+					.upVote-numTitle {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'Readex-Pro-medium';
+						font-weight: 500;
+						font-size: 40px;
+						line-height: 1.6;
+						color: @text-color;
+					}
+
+					.upVote-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.arrUp {
+					width: 58px;
+				}
+			}
+		}
+	}
+}

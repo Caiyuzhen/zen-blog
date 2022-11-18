@@ -5,18 +5,20 @@ import thenPage from '../../../../../assets/img/page-autopmated-step-two.jpg'
 import autoStepOne from '../../../../../assets/img/automated-Step-1.png'
 import autoStepTwo from '../../../../../assets/img/automated-Step-2.png'
 import autoStepThree from '../../../../../assets/img/automated-Step-3.png'
-
+import TriangleTexture from '../../../../../assets/svg/icon-TriangleTexture.svg'
+import rightHandDrawn from '../../../../../assets/svg/icon-rightHandDrawn.svg'
 
 
 export const AutoStep = () => {
 	return (
 		<>
 			<div className="autoStep-main-container">
+				<img src={TriangleTexture} alt="" className="TriangleTexture"/>
 				{/* 左边的图文 */}
 				<div className="autoStep-leftPage-container">
 					<div className="autoStep-leftPage-topText-container">
 						<p>When</p>
-						{/* <img src="" alt="" /> */}
+						<img src={rightHandDrawn} alt="" className="rightHandDrawn"/>
 						<p>Then</p>
 					</div>
 					<div className="autoStep-leftPage-bottomPic-container">
