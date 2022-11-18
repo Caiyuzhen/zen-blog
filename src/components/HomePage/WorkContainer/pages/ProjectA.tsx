@@ -29,7 +29,8 @@ import Interactive from '../pages/Interactive/Interactive'
 import MutilPage from '../pages/MutilPage/MutilPage'
 import NestedLayout from '../pages/NestedLayout/NestedLayout'
 import PageLinkStyle from '../pages/PageLinkStyle/PageLinkStyle'
-
+import PageTheme from '../pages/PageTheme/PageTheme'
+import WebsitePage from '../pages/WebsitePage/WebsitePage'
 
 
 
@@ -149,6 +150,12 @@ export const ProjectA = () => {
 
 				{/* 多栏 */}
 				<NestedLayout />
+
+				{/* 页面主题 */}
+				<PageTheme />
+
+				{/* 官网页面 */}
+				<WebsitePage />
 			</div>
 		</>
 	)

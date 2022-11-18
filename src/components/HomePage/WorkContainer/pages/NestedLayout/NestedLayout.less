@@ -46,7 +46,6 @@
 		flex-direction: column;
 		align-items: start;
 		gap: 24px;
-		margin-bottom: 48px;
 		box-sizing: border-box;
 
 		.nestedLayout-mainLeft-title {
@@ -76,8 +75,60 @@
 		flex-direction: row;
 		align-items: start;
 		gap: 24px;
-		margin-bottom: 48px;
 		box-sizing: border-box;
 
+		.nestedLayout-nestedLogic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.nestedLogicTop {
+				width: 400px;
+			}
+
+			.nestedLogicBottom {
+				width: 400px;
+			}
+		}
+
+		.nestedLayout-actualResult {
+			width: 100%;
+			height: auto;
+			display: grid;
+			flex-direction: row;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.actualResultTop {
+				width: 400px;
+				grid-column-start: 1;//横 1
+				grid-column-end: 3;//横 3
+				grid-row-start: 1;//纵 1
+				grid-row-end: 2;//纵 2
+			}
+
+			.actualResultBottomLeft {
+				width: 188px;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2;//横 2
+				grid-row-start: 2;//纵 2
+				grid-row-end: 4;//纵 4
+			}
+
+			.actualResultBottomRight {
+				width: 188px;
+				grid-column-start: 2;//横 2
+				grid-column-end: 3;//横 3
+				grid-row-start: 2;//纵 2
+				grid-row-end: 4;//纵 4
+			}
+		}
 	}
 }
