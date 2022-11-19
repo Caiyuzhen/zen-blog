@@ -29,7 +29,7 @@ export const WebsitePage = () => {
 						<div className="webSitePage-upVoteUser-container">
 							<div className="upVoteUser-text">
 								<p className="upVote-numTitle">0000 +</p> 
-								<p className="upVote-des">Upote User</p> 
+								<p className="upVote-des">Upvote User</p> 
 							</div>
 							<img src={arrUp} alt="" className="arrUp"/> 
 						</div>

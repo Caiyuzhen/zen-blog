@@ -38,13 +38,14 @@
 	display: flex;
 	align-items: center;
 	gap: 48px;
-	padding: 124px;
+	padding: 124px 124px 124px 0;
 	margin-bottom: 48px;
 	box-sizing: border-box;
+	position: relative;
 
 	// 左侧页面
 	.webSitePage-leftPage {
-		width: 860px;
+		width: 45%;
 	}
 
 	// 右侧信息
@@ -91,19 +92,19 @@
 			display: flex;
 			gap: 48px;
 			box-sizing: border-box;
+			justify-content: space-between;
 
 			.webSitePage-register-container {
 				width: 100%;
 				height: auto;
 				flex-direction: row;
 				display: flex;
-				justify-content: center;
 				align-items: center;
 				gap: 16px;
 				box-sizing: border-box;
 
 				.register-text {
-					width: 100%;
+					width: 50%;
 					height: auto;
 					flex-direction: column;
 					display: flex;
@@ -146,7 +147,7 @@
 				box-sizing: border-box;
 
 				.upVoteUser-text {
-					width: 100%;
+					width: 50%;
 					height: auto;
 					flex-direction: column;
 					display: flex;

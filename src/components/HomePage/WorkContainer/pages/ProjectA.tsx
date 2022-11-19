@@ -31,7 +31,10 @@ import NestedLayout from '../pages/NestedLayout/NestedLayout'
 import PageLinkStyle from '../pages/PageLinkStyle/PageLinkStyle'
 import PageTheme from '../pages/PageTheme/PageTheme'
 import WebsitePage from '../pages/WebsitePage/WebsitePage'
+import BackToTop from '../pages/BackToTop/BackToTop'
+import BG from '../../../../assets/img/project-A-bg.jpg'
 
+// background: url('../../../../assets/img/project-A-bg.jpg') center center no-repeat;
 
 
 export const ProjectA = () => {
@@ -156,6 +159,11 @@ export const ProjectA = () => {
 
 				{/* 官网页面 */}
 				<WebsitePage />
+
+				{/* 返回顶部 */}
+				<BackToTop />
+
+				<img src={BG} alt="" className="projectA-BG"/>
 			</div>
 		</>
 	)

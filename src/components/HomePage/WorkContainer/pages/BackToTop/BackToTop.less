@@ -1,0 +1,25 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+
+.backToTop-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 124px;
+	cursor: pointer;
+	
+	> p {
+		color: @description-color;
+		font-size: 24px;
+		font-family: 'GTEestiProText-Bold';
+	}
+
+	.backToTop {
+		width: 58px;
+	}
+}

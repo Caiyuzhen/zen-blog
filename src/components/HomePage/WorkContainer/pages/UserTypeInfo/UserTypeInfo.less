@@ -39,235 +39,1508 @@
 
 
 
-
-
-.main-container {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	box-sizing: border-box;
-	justify-content: space-between;
-	padding: 124px;
-	position: relative;
-
-	// 第 1 组
-	.type-container {
-		flex: 20%;
-		opacity: 0.2;// 透明度动画
-		transform: translateY(50px);// 初始时向下位移 50px
-		transition: all .3s ease-in-out;
-
-		.title-text {
-			font-size: 28px;
-			font-family: 'GTEestiProText-Bold';
-			color: @text-color;
-		}
-
-		.type-content {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			gap: 18px;
-			font-family: 'GTEestiProText-Regular';
-			color: @text-color;
-			margin: 0;
-		}
-
-		// 第 1、2、3、4 个子元素
-		.type-content :nth-child(1) {
-			width: 100%;
-			height: 80px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			align-items: center;
-			justify-content: center;
-			font-size: 18px;
-			font-family: 'GTEestiProText-Regular';
-			background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
-			border-radius: 10px;
-			margin: 0;
-		}
-
-		.type-content :nth-child(2) {
-			width: 100%;
-			height: 130px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			align-items: center;
-			justify-content: center;
-			font-size: 18px;
-			font-family: 'GTEestiProText-Regular';
-			background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
-			border-radius: 10px;
-			margin: 0;
-		}
-
-		.type-content :nth-child(3) {
-			width: 100%;
-			height: 108px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			align-items: center;
-			justify-content: center;
-			font-size: 18px;
-			font-family: 'GTEestiProText-Regular';
-			background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
-			border-radius: 10px;
-			margin: 0;
-		}
-
-		.type-content :nth-child(4) {
-			width: 100%;
-			height: 130px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 18px;
-			align-items: center;
-			justify-content: center;
-			font-family: 'GTEestiProText-Regular';
-			background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
-			border-radius: 10px;
-			margin: 0;
-		}
-	}
-
-	// 第 2 组
-	.link-group {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		width: 108px;
-		height: 448px;
-		position: relative;
-		flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
-		opacity: 0.2;// 透明度动画
-		transform: translateY(75px);// 初始时向下位移 75px
-		transition: all .3s ease-in-out;
-
-		.link-purple {
-			position: absolute;
-			top: 102px;
-		}
-
-		.link-blue {
-			position: absolute;
-			top: 130px;
-		}
-
-		.link-orange {
-			position: absolute;
-			top: 322px;
-		}
-
-		.link-green {
-			position: absolute;
-			top: 458px;
-		}
-	}
-
-	// 第 3～5 组的背景
-	.who-content, .what-content, .why-content{
-		.card-bg()
-	}
-
-	// 第 3～5 组
-	.threeW {
+@media screen and (max-width: @mediaWidth-Max) {	//4200px
+	.main-container {
 		width: 100%;
 		display: flex;
-		gap: 24px;
 		flex-direction: row;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 124px;
+		position: relative;
 
-
-		.gradualArrow {
-			margin-top: 64px; //居中一下
+		// 第 1 组
+		.type-container {
+			flex: 20%;
 			opacity: 0.2;// 透明度动画
-		}
-
-		// 第 3 组
-		.who-container {
-			width: 100%;
-			opacity: 0.2;// 透明度动画
-			transform: translateY(100px);// 初始时向下位移 100px
+			transform: translateY(50px);// 初始时向下位移 50px
 			transition: all .3s ease-in-out;
 
 			.title-text {
-				width: 100%;
 				font-size: 28px;
 				font-family: 'GTEestiProText-Bold';
 				color: @text-color;
 			}
 
-			.who-content {
-				padding:12px 0;
-				height: auto;
+			.type-content {
+				width: 100%;
 				display: flex;
-				gap: 10px;
+				flex-direction: column;
+				gap: 18px;
+				font-family: 'GTEestiProText-Regular';
+				color: @text-color;
+				margin: 0;
+			}
+
+			// 第 1、2、3、4 个子元素
+			.type-content :nth-child(1) {
+				width: 100%;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(2) {
+				width: 100%;
+				height: 130px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(3) {
+				width: 100%;
+				height: 108px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(4) {
+				width: 100%;
+				height: 130px;
+				display: flex;
 				align-items: center;
 				justify-content: center;
 				font-size: 18px;
 				align-items: center;
 				justify-content: center;
 				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
 			}
 		}
 
-		// 第 4 组
-		.what-container {
-			width: 100%;
+		// 第 2 组
+		.link-group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 108px;
+			height: 448px;
+			position: relative;
+			flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
 			opacity: 0.2;// 透明度动画
-			transform: translateY(125px);// 初始时向下位移 125px
+			transform: translateY(75px);// 初始时向下位移 75px
+			transition: all .3s ease-in-out;
+
+			.link-purple {
+				position: absolute;
+				top: 118px;
+			}
+
+			.link-blue {
+				position: absolute;
+				top: 150px;
+			}
+
+			.link-orange {
+				position: absolute;
+				top: 336px;
+			}
+
+			.link-green {
+				position: absolute;
+				top: 468px;
+			}
+		}
+
+		// 第 3～5 组的背景
+		.who-content, .what-content, .why-content{
+			.card-bg()
+		}
+
+		// 第 3～5 组
+		.threeW {
+			width: 100%;
+			display: flex;
+			gap: 24px;
+			flex-direction: row;
+
+
+			.gradualArrow {
+				width: 54px;
+				margin-top: 64px; //居中一下
+				opacity: 0.2;// 透明度动画
+			}
+
+			// 第 3 组
+			.who-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(100px);// 初始时向下位移 100px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.who-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 18px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 4 组
+			.what-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(125px);// 初始时向下位移 125px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.what-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 18px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 5 组
+			.why-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(150px);// 初始时向下位移 150px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.why-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 18px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1600px) {	
+	.main-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 124px;
+		position: relative;
+
+		// 第 1 组
+		.type-container {
+			flex: 20%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 初始时向下位移 50px
 			transition: all .3s ease-in-out;
 
 			.title-text {
-				width: 100%;
 				font-size: 28px;
 				font-family: 'GTEestiProText-Bold';
 				color: @text-color;
 			}
 
-			.what-content {
-				padding:12px 0;
-				height: auto;
+			.type-content {
+				width: 100%;
 				display: flex;
-				gap: 10px;
+				flex-direction: column;
+				gap: 18px;
+				font-family: 'GTEestiProText-Regular';
+				color: @text-color;
+				margin: 0;
+			}
+
+			// 第 1、2、3、4 个子元素
+			.type-content :nth-child(1) {
+				width: 100%;
+				height: 80px;
+				display: flex;
 				align-items: center;
 				justify-content: center;
-				font-size: 18px;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(2) {
+				width: 100%;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(3) {
+				width: 100%;
+				height: 108px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(4) {
+				width: 100%;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
 				align-items: center;
 				justify-content: center;
 				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
 			}
 		}
 
-		// 第 5 组
-		.why-container {
-			width: 100%;
+		// 第 2 组
+		.link-group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 108px;
+			height: 448px;
+			position: relative;
+			flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
 			opacity: 0.2;// 透明度动画
-			transform: translateY(150px);// 初始时向下位移 150px
+			transform: translateY(75px);// 初始时向下位移 75px
 			transition: all .3s ease-in-out;
 
-			.title-text {
+			.link-purple {
+				position: absolute;
+				top: 112px;
+			}
+
+			.link-blue {
+				position: absolute;
+				top: 140px;
+			}
+
+			.link-orange {
+				position: absolute;
+				top: 322px;
+			}
+
+			.link-green {
+				position: absolute;
+				top: 448px;
+			}
+		}
+
+		// 第 3～5 组的背景
+		.who-content, .what-content, .why-content{
+			.card-bg()
+		}
+
+		// 第 3～5 组
+		.threeW {
+			width: 100%;
+			display: flex;
+			gap: 24px;
+			flex-direction: row;
+
+
+			.gradualArrow {
+				margin-top: 64px; //居中一下
+				opacity: 0.2;// 透明度动画
+			}
+
+			// 第 3 组
+			.who-container {
 				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(100px);// 初始时向下位移 100px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.who-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 4 组
+			.what-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(125px);// 初始时向下位移 125px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.what-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 5 组
+			.why-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(150px);// 初始时向下位移 150px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.why-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {	
+	.main-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 124px;
+		position: relative;
+
+		// 第 1 组
+		.type-container {
+			flex: 20%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 初始时向下位移 50px
+			transition: all .3s ease-in-out;
+			display: none;
+
+			.title-text {
 				font-size: 28px;
 				font-family: 'GTEestiProText-Bold';
 				color: @text-color;
 			}
 
-			.why-content {
-				padding:12px 0;
-				height: auto;
+			.type-content {
+				width: 154px;
 				display: flex;
-				gap: 10px;
+				flex-direction: column;
+				gap: 18px;
+				font-family: 'GTEestiProText-Regular';
+				color: @text-color;
+				margin: 0;
+			}
+
+			// 第 1、2、3、4 个子元素
+			.type-content :nth-child(1) {
+				width: 154px;
+				height: 80px;
+				display: flex;
 				align-items: center;
 				justify-content: center;
-				font-size: 18px;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(2) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(3) {
+				width: 154px;
+				height: 108px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(4) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
 				align-items: center;
 				justify-content: center;
 				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+		}
+
+		// 第 2 组
+		.link-group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 108px;
+			height: 448px;
+			position: relative;
+			flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
+			opacity: 0.2;// 透明度动画
+			transform: translateY(75px);// 初始时向下位移 75px
+			transition: all .3s ease-in-out;
+			display: none;
+
+
+			.link-purple {
+				position: absolute;
+				top: 112px;
+			}
+
+			.link-blue {
+				position: absolute;
+				top: 140px;
+			}
+
+			.link-orange {
+				position: absolute;
+				top: 322px;
+			}
+
+			.link-green {
+				position: absolute;
+				top: 448px;
+			}
+		}
+
+		// 第 3～5 组的背景
+		.who-content, .what-content, .why-content{
+			.card-bg()
+		}
+
+		// 第 3～5 组
+		.threeW {
+			width: 100%;
+			display: flex;
+			gap: 24px;
+			flex-direction: row;
+
+
+			.gradualArrow {
+				margin-top: 64px; //居中一下
+				opacity: 0.2;// 透明度动画
+			}
+
+			// 第 3 组
+			.who-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(100px);// 初始时向下位移 100px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.who-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 14px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 4 组
+			.what-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(125px);// 初始时向下位移 125px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.what-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 14px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 5 组
+			.why-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(150px);// 初始时向下位移 150px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.why-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 14px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1080px) {	
+	.main-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 124px;
+		position: relative;
+
+		// 第 1 组
+		.type-container {
+			flex: 20%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 初始时向下位移 50px
+			transition: all .3s ease-in-out;
+			display: none;
+
+			// .title-text {
+			// 	font-size: 28px;
+			// 	font-family: 'GTEestiProText-Bold';
+			// 	color: @text-color;
+			// }
+
+			// .type-content {
+			// 	width: 154px;
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	gap: 18px;
+			// 	font-family: 'GTEestiProText-Regular';
+			// 	color: @text-color;
+			// 	margin: 0;
+			// }
+
+			// 第 1、2、3、4 个子元素
+			.type-content :nth-child(1) {
+				width: 154px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(2) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(3) {
+				width: 154px;
+				height: 108px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(4) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				align-items: center;
+				justify-content: center;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+		}
+
+		// 第 2 组
+		.link-group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 108px;
+			height: 448px;
+			position: relative;
+			flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
+			opacity: 0.2;// 透明度动画
+			transform: translateY(75px);// 初始时向下位移 75px
+			transition: all .3s ease-in-out;
+			display: none;
+
+
+			.link-purple {
+				position: absolute;
+				top: 112px;
+			}
+
+			.link-blue {
+				position: absolute;
+				top: 140px;
+			}
+
+			.link-orange {
+				position: absolute;
+				top: 322px;
+			}
+
+			.link-green {
+				position: absolute;
+				top: 448px;
+			}
+		}
+
+		// 第 3～5 组的背景
+		.who-content, .what-content, .why-content{
+			.card-bg()
+		}
+
+		// 第 3～5 组
+		.threeW {
+			width: 100%;
+			display: flex;
+			gap: 24px;
+			flex-direction: row;
+
+
+			.gradualArrow {
+				width: 32px;
+				margin-top: 64px; //居中一下
+				opacity: 0.2;// 透明度动画
+			}
+
+			// 第 3 组
+			.who-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(100px);// 初始时向下位移 100px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.who-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 12px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 4 组
+			.what-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(125px);// 初始时向下位移 125px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.what-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 12px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 5 组
+			.why-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(150px);// 初始时向下位移 150px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.why-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 12px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 880px) {	
+	.main-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 52px;
+		position: relative;
+
+		// 第 1 组
+		.type-container {
+			flex: 20%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 初始时向下位移 50px
+			transition: all .3s ease-in-out;
+			display: none;
+
+			// .title-text {
+			// 	font-size: 28px;
+			// 	font-family: 'GTEestiProText-Bold';
+			// 	color: @text-color;
+			// }
+
+			// .type-content {
+			// 	width: 154px;
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	gap: 18px;
+			// 	font-family: 'GTEestiProText-Regular';
+			// 	color: @text-color;
+			// 	margin: 0;
+			// }
+
+			// 第 1、2、3、4 个子元素
+			.type-content :nth-child(1) {
+				width: 154px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(2) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(3) {
+				width: 154px;
+				height: 108px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(4) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				align-items: center;
+				justify-content: center;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+		}
+
+		// 第 2 组
+		.link-group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 108px;
+			height: 448px;
+			position: relative;
+			flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
+			opacity: 0.2;// 透明度动画
+			transform: translateY(75px);// 初始时向下位移 75px
+			transition: all .3s ease-in-out;
+			display: none;
+
+
+			.link-purple {
+				position: absolute;
+				top: 112px;
+			}
+
+			.link-blue {
+				position: absolute;
+				top: 140px;
+			}
+
+			.link-orange {
+				position: absolute;
+				top: 322px;
+			}
+
+			.link-green {
+				position: absolute;
+				top: 448px;
+			}
+		}
+
+		// 第 3～5 组的背景
+		.who-content, .what-content, .why-content{
+			.card-bg()
+		}
+
+		// 第 3～5 组
+		.threeW {
+			width: 100%;
+			display: flex;
+			gap: 24px;
+			flex-direction: row;
+
+
+			.gradualArrow {
+				width: 32px;
+				margin-top: 64px; //居中一下
+				opacity: 0.2;// 透明度动画
+				display: none;
+			}
+
+			// 第 3 组
+			.who-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(100px);// 初始时向下位移 100px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.who-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 12px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 4 组
+			.what-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(125px);// 初始时向下位移 125px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.what-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 12px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 5 组
+			.why-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(150px);// 初始时向下位移 150px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.why-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 12px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @mediaWidth-Min) {	
+	.main-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 52px;
+		position: relative;
+
+		// 第 1 组
+		.type-container {
+			flex: 20%;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 初始时向下位移 50px
+			transition: all .3s ease-in-out;
+			display: none;
+
+			// .title-text {
+			// 	font-size: 28px;
+			// 	font-family: 'GTEestiProText-Bold';
+			// 	color: @text-color;
+			// }
+
+			// .type-content {
+			// 	width: 154px;
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	gap: 18px;
+			// 	font-family: 'GTEestiProText-Regular';
+			// 	color: @text-color;
+			// 	margin: 0;
+			// }
+
+			// 第 1、2、3、4 个子元素
+			.type-content :nth-child(1) {
+				width: 154px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #7357B5 0%, rgba(115, 87, 181, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(2) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #6D6FE6 0%, rgba(109, 111, 230, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(3) {
+				width: 154px;
+				height: 108px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #FFA654 0%, rgba(255, 166, 84, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+
+			.type-content :nth-child(4) {
+				width: 154px;
+				height: 116px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				align-items: center;
+				justify-content: center;
+				font-family: 'GTEestiProText-Regular';
+				background: linear-gradient(180deg, #22C5B8 0%, rgba(34, 197, 184, 0.2) 100%);
+				border-radius: 10px;
+				margin: 0;
+			}
+		}
+
+		// 第 2 组
+		.link-group {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 108px;
+			height: 448px;
+			position: relative;
+			flex-shrink:0; //⚡️禁止被压缩！不然会坍塌！
+			opacity: 0.2;// 透明度动画
+			transform: translateY(75px);// 初始时向下位移 75px
+			transition: all .3s ease-in-out;
+			display: none;
+
+
+			.link-purple {
+				position: absolute;
+				top: 112px;
+			}
+
+			.link-blue {
+				position: absolute;
+				top: 140px;
+			}
+
+			.link-orange {
+				position: absolute;
+				top: 322px;
+			}
+
+			.link-green {
+				position: absolute;
+				top: 448px;
+			}
+		}
+
+		// 第 3～5 组的背景
+		.who-content, .what-content, .why-content{
+			.card-bg()
+		}
+
+		// 第 3～5 组
+		.threeW {
+			width: 100%;
+			display: flex;
+			gap: 24px;
+			flex-direction: row;
+
+
+			.gradualArrow {
+				width: 32px;
+				margin-top: 64px; //居中一下
+				opacity: 0.2;// 透明度动画
+				display: none;
+			}
+
+			// 第 3 组
+			.who-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(100px);// 初始时向下位移 100px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.who-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 11px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 4 组
+			.what-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(125px);// 初始时向下位移 125px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.what-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 11px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
+			}
+
+			// 第 5 组
+			.why-container {
+				width: 100%;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(150px);// 初始时向下位移 150px
+				transition: all .3s ease-in-out;
+
+				.title-text {
+					width: 100%;
+					font-size: 28px;
+					font-family: 'GTEestiProText-Bold';
+					color: @text-color;
+				}
+
+				.why-content {
+					padding:12px 0;
+					height: auto;
+					display: flex;
+					gap: 0px;
+					align-items: center;
+					justify-content: center;
+					align-items: center;
+					justify-content: center;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 11px;
+					width: 100%;
+					overflow: hidden;
+    				text-overflow: ellipsis;
+					white-space: nowrap;
+					align-items: center;
+				}
 			}
 		}
 	}
