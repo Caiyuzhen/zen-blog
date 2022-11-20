@@ -116,7 +116,7 @@ export const ProjectA = () => {
 				<CanvasBlock />
 
 				{/* 分割线 */}
-				<Border />
+				{/* <Border /> */}
 
 				{/* automation */}
 				<Automation />

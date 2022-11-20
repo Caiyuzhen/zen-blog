@@ -25,224 +25,2400 @@
 }
 
 
-.canvasBlock-main-container {
-	width: 100%;
-	height: 720px;
-	margin-top: 180px;
-	box-sizing: border-box;
-	position: relative;
-
-	.canvasBlock-inside-container {
+@media screen and (max-width: @mediaWidth-Max) {	//4200px
+	.canvasBlock-main-container {
 		width: 100%;
+		height: 720px;
+		margin-top: 80px;
 		box-sizing: border-box;
 		position: relative;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 64px;
-		padding: 124px;
-		margin-top: 80px;
 
-		// 文字+流程图
-		.canvasBlock-baseInfo-container {
-			width: 780px;
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 800px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 100%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 126px;
+						height:126px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 126px;
+						height:126px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+
+				.cursor-red {
+					position: absolute;
+					top: -56px;
+					left: -132px;
+					width: 136px;
+					z-index: 5;
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+					z-index: 5;
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 1.25;
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+@media screen and (max-width: 1560px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 600px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 100%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 126px;
+						height:126px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 126px;
+						height:126px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+
+				.cursor-red {
+					position: absolute;
+					top: -56px;
+					left: -132px;
+					width: 136px;
+					z-index: 5;
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+					z-index: 5;
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 1.15;
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+@media screen and (max-width: 1340px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 400px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+
+				.cursor-red {
+					position: absolute;
+					top: -56px;
+					left: -132px;
+					width: 136px;
+					z-index: 5;
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+					z-index: 5;
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 1.05;
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+@media screen and (max-width: 1240px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 400px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+
+				.cursor-red {
+					position: absolute;
+					top: -56px;
+					left: -132px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.9;
+					transform: translateX(200px);
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 220px;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
 			display: flex;
 			flex-direction: column;
-			align-items: start;
-			gap: 24px;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
 
-			.canvasBlock-baseInfo {
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
-				align-items: start;
-				gap: 20px;
-
-				.canvasBlock-baseInfo-title {
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					margin: 0;
-				}
-
-				.canvasBlock-baseInfo-des {
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @description-color;
-					text-align: start;
-					line-height: 1.6;
-					margin: 0;
-				}
-			}
-
-			.canvasBlock-graphic-container {
-				width: 100%;
-				display: flex;
-				gap: 24px;
 				align-items: center;
-				justify-content: space-evenly;
-				margin-left: -82px;
+				gap: 24px;
 
-				.circleLeft {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 126px;
-					height:126px;
-					aspect-ratio: 1/1;
-					background: @primary-color;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					color: @text-color;
-					font-size: 14px;
-					font-family: 'GTEestiProText-Medium';
-					line-height: 1.5;
-				}
-
-				.tranArrAndText-all-container-01 {
+				.canvasBlock-baseInfo {
+					width: 100%;
 					display: flex;
 					flex-direction: column;
-					gap: 18px;
+					align-items: start;
+					gap: 20px;
 
-					// 右箭头 + 文字
-					.tranArrAndText-container-01 {
-						width: 100%;
-						margin-left: 4px;
-						
-						.trianArrowRight-01 {
-							width: 138px;
-							height: 1px;
-							display: flex;
-							align-items: center;
-							justify-content: space-between;
-
-							.dotted-line {
-								width: 100%;
-								height: 1px;
-								border-radius: 0;
-								border: 0; //避免 child(1) 的影响
-								border-bottom: 1px dashed @description-color; //虚线
-								// transform: rotate(180deg);
-							}
-
-							.trianArrow-01 {
-								border:6px solid @text-color;
-								border-radius: 0;
-								border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
-								border-color: transparent transparent transparent @description-color;
-							}
-						}
-
-						// 箭头上的文案
-						> p {
-							width: 120px;
-							font-size: 10px;
-							margin: 0;
-							margin-bottom: 4px;
-							color: @description-color;
-							margin-left: 6px;
-						}
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
 					}
 
-					// 左箭头 + 文字
-					.tranArrAndText-container-02 {
-						width: 100%;
-						margin-right: 4px;
-
-						.trianArrowRight-02 {
-							width: 138px;
-							height: 1px;
-							display: flex;
-							align-items: center;
-							justify-content: space-between;
-
-							.dotted-line {
-								width: 100%;
-								height: 1px;
-								border-radius: 0;
-								border: 0; //避免 child(1) 的影响
-								border-bottom: 1px dashed @description-color; //虚线
-								// transform: rotate(180deg);
-							}
-
-							.trianArrow-02 {
-								border:6px solid @text-color;
-								border-radius: 0;
-								border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
-								border-color: transparent transparent transparent @description-color;
-								transform: rotatey(180deg); 
-							}
-						}
-
-						// 箭头上的文案
-						> p {
-							width: 120px;
-							font-size: 10px;
-							margin: 0;
-							margin-bottom: 4px;
-							color: @description-color;
-							margin-left: 12px;
-						}
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
 					}
 				}
 
-				.circleRight {
+				.canvasBlock-graphic-container {
+					width: 80%;
 					display: flex;
-					justify-content: center;
+					gap: 24px;
 					align-items: center;
-					width: 126px;
-					height:126px;
-					aspect-ratio: 1/1;
-					border: 1px solid @text-color;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					color: @text-color;
-					font-size: 14px;
-					font-family: 'GTEestiProText-Medium';
-					line-height: 1.5;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
 				}
 			}
-		}
 
-		// 页面 page
-		.canvas-page-group {
-			overflow: visible;
-			width: 742px;
-			height: 458px;
-			position: relative;
-
-			.cursor-red {
-				position: absolute;
-				top: -56px;
-				left: -132px;
-				width: 136px;
-				z-index: 5;
-			}
-
-			.cursor-yellow {
-				position: absolute;
-				bottom: -46px;
-				right: 320px;
-				width: 268px;
-				z-index: 5;
-			}
-
-			.cursor-blue {
-				position: absolute;
-				right: -114px;
-    			bottom: -16px;
-				width: 208px;
-				z-index: 5;
-			}
-
-			.canvas-page{
-				position: absolute;
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
 				width: 742px;
 				height: 458px;
-				right: -30%;
-			}
-		}
+				position: relative;
 
-		
+				.cursor-red {
+					position: absolute;
+					top: -26px;
+					left: -82px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: -46px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.9;
+					transform: translateX(-260px);
+				}
+			}
+
+			
+		}
 	}
 }
+
+
+@media screen and (max-width: 920px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 220px;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+
+				.cursor-red {
+					position: absolute;
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.8);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: 16px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.8);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -30px;
+					bottom: 26px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.8);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.8;
+					transform: translate(-300px, -50px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 220px;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+				scale: 0.85;
+
+				.cursor-red {
+					position: absolute;
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.8) translate(0, -100px);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: 16px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.8) translate(0, -100px);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -30px;
+					bottom: 26px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.8) translate(0, -100px);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.8;
+					transform: translate(-300px, -100px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: -400px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 20px;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+				scale: 0.75;
+
+				.cursor-red {
+					position: absolute;
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.8) translate(0, -180px);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: 16px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.8) translate(0, -180px);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -30px;
+					bottom: 26px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.8) translate(0, -180px);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.75;
+					transform: translate(-280px, -180px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: -200px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: -80px;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 54px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-40px);
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 106px;
+						height:106px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+				scale: 0.65;
+
+				.cursor-red {
+					position: absolute;
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.8) translate(40px, -260px);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: 16px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.8) translate(60px, -260px);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -30px;
+					bottom: 26px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.8) translate(-20px, -260px);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.8;
+					transform: translate(-280px, -260px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px) {	//4200px
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+		margin-bottom: 220px;
+
+		.canvasBlock-inside-container {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 54px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				.canvasBlock-baseInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 20px;
+
+					.canvasBlock-baseInfo-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+						margin: 0;
+					}
+
+					.canvasBlock-baseInfo-des {
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+						text-align: start;
+						line-height: 1.6;
+						margin: 0;
+					}
+				}
+
+				.canvasBlock-graphic-container {
+					width: 80%;
+					display: flex;
+					gap: 24px;
+					align-items: center;
+					justify-content: space-between;
+					padding: 0 24px;
+					transform: translateX(-62px);
+					scale: 0.8;
+					// margin-left: -82px;
+
+					.circleLeft {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 86px;
+						height:86px;
+						aspect-ratio: 1/1;
+						background: @primary-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+
+					.tranArrAndText-all-container-01 {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						gap: 18px;
+
+						// 右箭头 + 文字
+						.tranArrAndText-container-01 {
+							width: 100%;
+							margin-left: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							.trianArrowRight-01 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-01 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 6px;
+							}
+						}
+
+						// 左箭头 + 文字
+						.tranArrAndText-container-02 {
+							width: 100%;
+							margin-right: 4px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+
+							.trianArrowRight-02 {
+								width: 100%;
+								height: 1px;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+
+								.dotted-line {
+									width: 100%;
+									height: 1px;
+									border-radius: 0;
+									border: 0; //避免 child(1) 的影响
+									border-bottom: 1px dashed @description-color; //虚线
+									// transform: rotate(180deg);
+								}
+
+								.trianArrow-02 {
+									border:6px solid @text-color;
+									border-radius: 0;
+									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+									border-color: transparent transparent transparent @description-color;
+									transform: rotatey(180deg); 
+								}
+							}
+
+							// 箭头上的文案
+							> p {
+								width: 100%;
+								font-size: 10px;
+								margin: 0;
+								margin-bottom: 4px;
+								color: @description-color;
+								margin-left: 12px;
+							}
+						}
+					}
+
+					.circleRight {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 86px;
+						height:86px;
+						aspect-ratio: 1/1;
+						border: 1px solid @text-color;
+						aspect-ratio: 1/1;
+						border-radius: 50%;
+						color: @text-color;
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+						line-height: 1.5;
+					}
+				}
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+				scale: 0.65;
+
+				.cursor-red {
+					position: absolute;
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.65) translate(140px, -360px);
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: 16px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.65) translate(160px, -460px);
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -30px;
+					bottom: 26px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.65) translate(-160px, -460px);
+				}
+
+				.canvas-page{
+					position: absolute;
+					width: 742px;
+					height: 458px;
+					right: -30%;
+					scale: 0.6;
+					transform: translate(-372px, -460px);
+				}
+			}
+		}
+	}
+}
+
+

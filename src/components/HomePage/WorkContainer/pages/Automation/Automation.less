@@ -25,123 +25,1513 @@
 }
 
 
-.automation-main-container {
-	width: 100%;
-	height: auto;
-	margin-top: 80px;
-	box-sizing: border-box;
-	position: relative;
-
-	.automation-inside-content {
+@media screen and (max-width: @mediaWidth-Max) {	//4200px
+	.automation-main-container {
 		width: 100%;
+		height: auto;
+		margin-top: 80px;
 		box-sizing: border-box;
 		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 64px;
-		padding: 124px;
-		box-sizing: border-box;
 
-		.automation-topContainer {
+		.automation-inside-content {
 			width: 100%;
+			box-sizing: border-box;
+			position: relative;
 			display: flex;
 			flex-direction: column;
-			align-items: start;
-			gap: 24px;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
 
-			.automation-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-			.automation-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-				line-height: 1.6;
-			}
-		}
-
-		.automation-bottomContainer {
-			height: auto;
-			position: relative;
-			
-				.jiraIcon {
-					border-radius: 50%;
-					width: 7.5%;
-					position: absolute;
-					left: 154px;
-					top: 52px;
-					z-index: 2;
-				}
-
-				.mondayIcon {
-					border-radius: 50%;
-					width: 7.5%;
-					position: absolute;
-					left: 44px;
-					top: 138px;
-					z-index: 2;
-				}
-
-				.asanaIcon {
-					border-radius: 50%;
-					width: 7.5%;
-					position: absolute;
-					left: 154px;
-					bottom: 64px;
-					z-index: 2;
-				}
-				
-				.discordIcon {
-					border-radius: 50%;
-					width: 7.5%;
-					position: absolute;
-					right: 154px;
-					top: 64px;
-					z-index: 2;
-				}
-
-				.slackIcon {
-					border-radius: 50%;
-					width: 7.5%;
-					position: absolute;
-					right: 44px;
-					top: 138px;
-					z-index: 2;
-				}
-
-				.gmailIcon {
-					border-radius: 50%;
-					width: 7.5%;
-					position: absolute;
-					right: 154px;
-					bottom: 64px;
-					z-index: 2;
-				}
-			}
-
-			.automationGtaphic {
-				width: 702px;
-				position: absolute;
-				top: 32px;
-				// left: 50%; 
-				// transform: translateX(-50%); 
-				// -webkit-transform: translateX(-50%);
-				left: 0; 
-				top: 0; 
-				right: 0; 
-				bottom: 0;
-				margin: auto;  /* 有了这个就自动居中了 */
-				z-index: 2;
-			}
-
-			.automationBg {
+			.automation-topContainer {
 				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
 			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 154px;
+						top: 52px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 154px;
+						bottom: 64px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 154px;
+						top: 64px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 154px;
+						bottom: 64px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 702px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1440px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 154px;
+						top: 52px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 154px;
+						bottom: 64px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 154px;
+						top:52px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 154px;
+						bottom: 62px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 562px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1280px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 144px;
+						top: 42px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 144px;
+						bottom: 54px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 144px;
+						top: 42px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 144px;
+						bottom: 54px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 482px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1180px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 124px;
+						top: 32px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 124px;
+						bottom: 44px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 124px;
+						top: 32px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 124px;
+						bottom: 44px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 452px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1100px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 114px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 114px;
+						bottom: 28px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 114px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 44px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 114px;
+						bottom: 28px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 412px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 980px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 74px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 24px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 74px;
+						bottom: 28px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 74px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 24px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 74px;
+						bottom: 28px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 382px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 74px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 24px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 74px;
+						bottom: 28px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 74px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 24px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 74px;
+						bottom: 28px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 312px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 74px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 24px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 74px;
+						bottom: 28px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 74px;
+						top: 24px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 24px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 74px;
+						bottom: 28px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 212px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 660px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						top: 10px;
+						z-index: 2;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 12px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						bottom: 18px;
+						z-index: 2;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						top: 10px;
+						z-index: 2;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 12px;
+						top: 34%;
+						z-index: 2;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						bottom: 18px;
+						z-index: 2;
+					}
+				}
+
+				.automationGtaphic {
+					width: 212px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 44px;
+			padding: 124px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						top: 10px;
+						z-index: 2;
+						display: none;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 12px;
+						top: 34%;
+						z-index: 2;
+						display: none;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						bottom: 18px;
+						z-index: 2;
+						display: none;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						top: 10px;
+						z-index: 2;
+						display: none;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 12px;
+						top: 34%;
+						z-index: 2;
+						display: none;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						bottom: 18px;
+						z-index: 2;
+						display: none;
+					}
+				}
+
+				.automationGtaphic {
+					width: 292px;
+					transform: translateY(-4px);
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: 80px;
+		margin-bottom: 40px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 54px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						top: 10px;
+						z-index: 2;
+						display: none;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 12px;
+						top: 34%;
+						z-index: 2;
+						display: none;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						bottom: 18px;
+						z-index: 2;
+						display: none;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						top: 10px;
+						z-index: 2;
+						display: none;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 12px;
+						top: 34%;
+						z-index: 2;
+						display: none;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						bottom: 18px;
+						z-index: 2;
+						display: none;
+					}
+				}
+
+				.automationGtaphic {
+					width: 392px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					// transform: translateX(-50%); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+				}
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px) {	//4200px
+	.automation-main-container {
+		width: 100%;
+		height: auto;
+		margin-top: -280px;
+		margin-bottom: 40px;
+		box-sizing: border-box;
+		position: relative;
+
+		.automation-inside-content {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			padding: 54px;
+			box-sizing: border-box;
+
+			.automation-topContainer {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+
+				.automation-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+				.automation-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					margin: 0;
+					line-height: 1.6;
+				}
+			}
+
+			.automation-bottomContainer {
+				height: auto;
+				position: relative;
+				
+					.jiraIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						top: 10px;
+						z-index: 2;
+						display: none;
+					}
+
+					.mondayIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 12px;
+						top: 34%;
+						z-index: 2;
+						display: none;
+					}
+
+					.asanaIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						left: 38px;
+						bottom: 18px;
+						z-index: 2;
+						display: none;
+					}
+					
+					.discordIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						top: 10px;
+						z-index: 2;
+						display: none;
+					}
+
+					.slackIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 12px;
+						top: 34%;
+						z-index: 2;
+						display: none;
+					}
+
+					.gmailIcon {
+						border-radius: 50%;
+						width: 7.5%;
+						position: absolute;
+						right: 38px;
+						bottom: 18px;
+						z-index: 2;
+						display: none;
+					}
+				}
+
+				.automationGtaphic {
+					width: 282px;
+					position: absolute;
+					top: 32px;
+					// left: 50%; 
+					transform: translateX(-4px); 
+					// -webkit-transform: translateX(-50%);
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					z-index: 2;
+				}
+
+				.automationBg {
+					width: 100%;
+					scale: 1.1;
+					transform: translate(3px, 4px);
+				}
+		}
 	}
 }
