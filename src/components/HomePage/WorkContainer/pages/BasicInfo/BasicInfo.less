@@ -511,6 +511,7 @@
 	}
 }
 
+
 @media screen and (max-width: @mediaWidth-Min) {	  //1280px
 	.basic-info {
 		width: 100%;
@@ -660,6 +661,173 @@
 							color: @text-color;
 							text-align: center; //文字内容本身水平居中
 							font-size: 14px;
+						}
+					}
+
+					> img {
+						width: 32px;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+@media screen and (max-width: @mediaWidth-Iphone) {	  //1280px
+	.basic-info {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 52px;
+		gap: 24px;
+		box-sizing: border-box;
+
+
+		.main-bigTitle {
+			font-family: 'RammettoOne';
+			font-size: @text-TitleSize;
+			color: @text-color;
+		}
+
+		.basic-container {
+			display: flex;
+			flex-direction: column;
+			gap: 68px;
+			width: 100%;
+
+
+			.basic-info-topContainer {
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				align-items: center;
+				gap: 20px;
+				justify-content: space-between;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(50px);// 动画向下位移 50x
+
+
+				.basic-info-topLeft {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					width: 100%;
+
+					.main-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: 24px;
+						color: @text-color;
+					}
+
+					.main-content {
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.basic-info-topRight {
+					display: flex;
+					align-items: center;
+					flex-direction: row;
+					gap: 20px;
+					justify-content: space-evenly;
+					margin-left: -12px;
+					width: 100%;
+
+
+					.circle {
+						width: 80px;  //1 比 1 正圆形
+						height: 80px;  //1 比 1 正圆形
+						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
+						border-radius: 50%;
+						border: 2px solid @text-color;
+						display: flex;
+						align-items:center;
+						justify-content:center;
+
+						> p {
+							color: @text-color;
+							text-align: center; //文字内容本身水平居中
+							font-size: 12px;
+							scale: 0.8;
+							line-height: 1.35;
+						}
+					}
+
+					> img {
+						width: 32px;
+					}
+				}
+			}
+
+
+			.basic-info-bottomContainer {
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				align-items: center;
+				gap: 20px;
+				justify-content: space-between;
+				transform: scale(1);
+				transition: all .3s ease-in-out;
+				opacity: 0.2;// 透明度动画
+				transform: translateY(50px);// 动画向下位移 50px
+
+
+				
+				.basic-info-bottomLeft {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					width: 100%;
+
+					.main-title {
+						font-family: 'GTEestiProText-Bold';
+						font-size: 24px;
+						color: @text-color;
+					}
+
+					.main-content {
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @description-color;
+					}
+				}
+
+				.basic-info-bottomRight {
+					display: flex;
+					align-items: center;
+					flex-direction: row;
+					gap: 20px;
+					justify-content: space-evenly;
+					margin-left: -12px;
+					width: 100%;
+					
+
+					.circle {
+						width: 80px;  //1 比 1 正圆形
+						height: 80px;  //1 比 1 正圆形
+						aspect-ratio: 1/1; //1 比 1 正圆形
+						border-radius: 50%;
+						border: 2px solid @text-color;
+						display: flex;
+						align-items:center;
+						justify-content:center;
+
+
+						> p {
+							color: @text-color;
+							text-align: center; //文字内容本身水平居中
+							font-size: 12px;
+							scale: 0.8;
+							line-height: 1.35;
 						}
 					}
 

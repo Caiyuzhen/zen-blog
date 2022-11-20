@@ -70,9 +70,9 @@ export const UserTypeInfo = () => {
 
 	//🔥🔥三、传参后再调用函数, 【解构】再【赋值】出【函数闭包】内的值, 下面再通过这些变量的值来判断样式！
 	const [ TypeIsVisible ] = useEleOnScreen(Type_Ref, Type_isVisible, setType_isVisible) 
-	const [ WhoIsVisible ] = useEleOnScreen(Type_Ref, Who_isVisible, setWho_isVisible)
-	const [ WhatIsVisible ] = useEleOnScreen(Type_Ref, What_isVisible, setWhat_isVisible)
-	const [ WhyIsVisible ] = useEleOnScreen(Type_Ref, Why_isVisible, setWhy_isVisible)
+	const [ WhoIsVisible ] = useEleOnScreen(Who_Ref, Who_isVisible, setWho_isVisible)
+	const [ WhatIsVisible ] = useEleOnScreen(What_Ref, What_isVisible, setWhat_isVisible)
+	const [ WhyIsVisible ] = useEleOnScreen(Why_Ref, Why_isVisible, setWhy_isVisible)
 	const [ LinkIsVisible ] = useEleOnScreen(Link_Ref, Link_isVisible, setLink_isVisible)
 
 	
