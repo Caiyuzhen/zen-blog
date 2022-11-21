@@ -281,7 +281,7 @@
 }
 
 
-@media screen and (max-width: 2080px) {	//4200px
+@media screen and (max-width: 2080px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -536,7 +536,7 @@
 }
 
 
-@media screen and (max-width: 1980px) {	//4200px
+@media screen and (max-width: 1980px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -794,7 +794,7 @@
 }
 
 
-@media screen and (max-width: 1760px) {	//4200px
+@media screen and (max-width: 1760px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -1048,7 +1048,7 @@
 }
 
 
-@media screen and (max-width: 1680px) {	//4200px
+@media screen and (max-width: 1680px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -1301,7 +1301,7 @@
 }
 
 
-@media screen and (max-width: 1560px) {	//4200px
+@media screen and (max-width: 1560px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -1555,7 +1555,7 @@
 }
 
 
-@media screen and (max-width: 1440px) {	//4200px
+@media screen and (max-width: 1440px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -1812,7 +1812,7 @@
 }
 
 
-@media screen and (max-width: 1380px) {	//4200px
+@media screen and (max-width: 1380px) {
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -1893,7 +1893,7 @@
 				flex-direction: column;
 				align-items: start;
 				gap: 28px;
-				transform: translateX(-100px);
+				transform: translateX(-70px);
 
 				.expandPlayground-right-baseinfo {
 					width: 100%;
@@ -2069,7 +2069,7 @@
 }
 
 
-@media screen and (max-width: 1280px) {	//4200px
+@media screen and (max-width: 1280px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -2145,7 +2145,7 @@
 
 			// 右侧的文案
 			.expandPlayground-main-rightContainer {
-				width: 548px;
+				width: 480px;
 				display: flex;
 				flex-direction: column;
 				align-items: start;
@@ -2326,264 +2326,7 @@
 }
 
 
-@media screen and (max-width: 1280px) {	//4200px
-	.expandPlayground-main-container {
-		width: 100%;
-		box-sizing: border-box;
-		position: relative;
-
-		.DbSquare {
-			position: absolute;
-			right: -164px;
-			top: -94px;
-		}
-
-		.expandPlayground-inside-container {
-			width: 100%;
-			box-sizing: border-box;
-			position: relative;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 64px;
-			padding: 124px;
-			margin-top: 80px;
-
-			// 左边的 page
-			.expandPlayground-main-leftContainer {
-				width: 580px;
-				position: relative;
-				height: 500px;
-				margin-left: 42px;
-				scale: 0.62;
-				transform: translateX(60px);
-
-				:nth-child(1) {
-					width: 378px;
-					height: 306px;
-					border-radius: 12px;
-					position: absolute;
-					left: -160px;
-					top: -20px;
-					z-index: 3;
-					transform: translate(298px, 160px);
-					box-shadow: 
-						0px 0px 1px rgba(32, 28, 94, 0.1),
-						4px 8px 48px rgba(32, 28, 94, 0.2);
-				}
-
-				:nth-child(2) {
-					width: 582px;
-					height: 376px;
-					border-radius: 12px;
-					position: absolute;
-					left: -160px;
-					top: -20px;
-					z-index: 2;
-					transform: translate(58px, 58px);
-					box-shadow: 
-						0px 0px 1px rgba(32, 28, 94, 0.1),
-						4px 8px 48px rgba(32, 28, 94, 0.2);
-				}
-
-				:nth-child(3) {
-					width: 582px;
-					height: 376px;
-					border-radius: 12px;
-					position: absolute;
-					left: -160px;
-					top: -20px;
-					z-index: 1;
-					box-shadow: 
-						0px 0px 1px rgba(32, 28, 94, 0.1),
-						4px 8px 48px rgba(32, 28, 94, 0.2);
-				}
-			}
-
-			// 右侧的文案
-			.expandPlayground-main-rightContainer {
-				width: 548px;
-				display: flex;
-				flex-direction: column;
-				align-items: start;
-				gap: 28px;
-				transform: translateX(-200px);
-
-				.expandPlayground-right-baseinfo {
-					width: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: start;
-					gap: 20px;
-
-					.expandPlayground-right-baseinfo-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: @text-TitleSize;
-						color: @text-color;
-						margin: 0;
-					}
-
-					.expandPlayground-right-baseinfo-des {
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
-						color: @description-color;
-						text-align: start;
-						line-height: 1.6;
-						margin: 0;
-					}
-				}
-
-				.expandPlayground-right-Graphic {
-					width: 548px;
-					display: flex;
-					gap: 2px;
-					align-items: center;
-					justify-content: space-between;
-					margin-left: 2px;
-					scale: 0.8;
-					margin-left: -52px;
-
-					.expandPlayground-right-Graphic-leftText {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 76px;
-						height:72px;
-						aspect-ratio: 1/1;
-						border: 1px solid @text-color;
-						border-radius: 12px;
-						color: @text-color;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Medium';
-						line-height: 1.5;
-					}
-
-					.tranArrAndText-all-container-01 {
-						display: flex;
-						width: 80px;
-						gap: 18px;
-						transform: translateX(-22px)
-						scale(0.8);
-						// 右箭头 + 文字
-						.tranArrAndText-container-01 {
-							width: 100%;
-							margin-left: 4px;
-							
-							.trianArrowRight-01 {
-								width: 138px;
-								height: 1px;
-								display: flex;
-								align-items: center;
-								justify-content: space-between;
-
-								.dotted-line {
-									width: 100%;
-									height: 1px;
-									border-radius: 0;
-									border: 0; //避免 child(1) 的影响
-									border-bottom: 1px dashed @description-color; //虚线
-									// transform: rotate(180deg);
-								}
-
-								.trianArrow-01 {
-									border:6px solid @text-color;
-									border-radius: 0;
-									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
-									border-color: transparent transparent transparent @description-color;
-								}
-							}
-
-							// 箭头上的文案
-							> p {
-								width: 120px;
-								font-size: 10px;
-								margin: 0;
-								margin-bottom: 4px;
-								color: @description-color;
-								margin-left: 6px;
-							}
-						}
-
-					// 左箭头 + 文字
-						.tranArrAndText-container-02 {
-							width: 80px;
-							margin-right: 4px;
-
-							.trianArrowRight-02 {
-								width: 138px;
-								height: 1px;
-								display: flex;
-								align-items: center;
-								justify-content: space-between;
-
-								.dotted-line {
-									width: 100%;
-									height: 1px;
-									border-radius: 0;
-									border: 0; //避免 child(1) 的影响
-									border-bottom: 1px dashed @description-color; //虚线
-									// transform: rotate(180deg);
-								}
-
-								.trianArrow-02 {
-									border:6px solid @text-color;
-									border-radius: 0;
-									border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
-									border-color: transparent transparent transparent @description-color;
-									transform: rotatey(180deg); 
-								}
-							}
-
-							// 箭头上的文案
-							> p {
-								width: 120px;
-								font-size: 10px;
-								margin: 0;
-								margin-bottom: 4px;
-								color: @description-color;
-								margin-left: 12px;
-							}
-						}
-					}
-
-					.expandPlayground-right-Graphic-centerText {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 86px;
-						height:86px;
-						aspect-ratio: 1/1;
-						background-color: @primary-color;
-						border-radius: 50%;
-						color: @text-color;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Medium';
-						line-height: 1.5;
-					}
-
-					.expandPlayground-right-Graphic-rightText {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 100px;
-						height:72px;
-						aspect-ratio: 1/1;
-						border: 1px solid @text-color;
-						border-radius: 12px;
-						color: @text-color;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Medium';
-						line-height: 1.5;
-					}
-
-				}
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: 1080px) {	//4200px
+@media screen and (max-width: 1080px) {	
 	.expandPlayground-main-container {
 		width: 100%;
 		box-sizing: border-box;
@@ -2613,7 +2356,7 @@
 				position: relative;
 				height: 500px;
 				margin-left: 42px;
-				scale: 1.05;
+				scale: 1.08;
 				transform: translate(90px, 48px);
 
 				:nth-child(1) {
@@ -4141,6 +3884,7 @@
 		width: 100%;
 		box-sizing: border-box;
 		position: relative;
+		margin-bottom: -360px;
 
 		.DbSquare {
 			position: absolute;
