@@ -14,7 +14,7 @@ export const BlockReference = () => {
 				<div className="blockReference-topContainer">
 					<div className="blockReference-topContainer-leftInfoContainer">
 						<div className="blockReference-topLeftInfo-title">XXXX XXXXXXXX</div>
-						<p className="blockReference-topLeftInfo-des">XXXXXXXX XXXXXXXX XXXXXXXX XXXXXXXX XXXXXXXXXXXXX XXXXXXXX XXXXXXXXXXX</p>
+						<p className="blockReference-topLeftInfo-des">XXX XX XXX XX XXX XXX XXX XXXXX XXX XXXXX XXXXX XX XXXXXX XX XXXXXX XXXXX XXXXXX</p>
 					</div>
 					<div className="blockReference-topContainer-rightPageContainer">
 						<img src={ReferpageOne} alt="" className="ReferpageOne"/>
@@ -29,7 +29,7 @@ export const BlockReference = () => {
 					</div>
 					<div className="blockReference-topContainer-bottomRightInfo">
 						<div className="blockReference-bottomRightInfo-title">XXXX XXXXX</div>
-						<p className="blockReference-bottomRightInfo-des">XXXXXXXX XXXXXXXX XXXXXXXX XXXXXXXX XXXXXXXXXXXXX XXXXXXXX XXXXXXXXXXX</p>
+						<p className="blockReference-bottomRightInfo-des">XXX XX XXX XX XXX XXX XXX XXXXX XXX XXXXX XXXXX XX XXXXXX XX XXXXXX XXXXX XXXXXX</p>
 						<div className="blockReference-bottomRightInfo-graphic">
 							<div className="blockReference-bottomRightInfo-topGroup">
 								<span className="blockReference-bottomRightInfo-circle">Recommended links</span>
