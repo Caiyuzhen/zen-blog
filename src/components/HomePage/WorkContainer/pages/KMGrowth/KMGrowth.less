@@ -25,338 +25,4591 @@
 }
 
 
-
-.KMGrowth-main-container {
-	width: 100%;
-	height: auto;
-	position: relative;
-	padding: 52px;
-	box-sizing: border-box;
-	flex-direction: column;
-	position: relative;
-
-	// 顶部文字
-	.KMGrowth-main-container-topInfo {
+@media screen and (max-width: @mediaWidth-Max) {
+	.KMGrowth-main-container {
 		width: 100%;
 		height: auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 24px;
-		margin-bottom: 48px;
-		padding: 48px;
-		box-sizing: border-box;
-
-		.KMGrowth-topInfo-title {
-			width: 100%;
-			height: auto;
-			font-family: 'GTEestiProText-Bold';
-			font-size: @text-TitleSize;
-			color: @text-color;
-		}
-
-		.KMGrowth-topInfo-des {
-			width: 100%;
-			font-family: 'GTEestiProText-Regular';
-			font-size: @text-DescriptionSize;
-			line-height: 1.6;
-			color: @description-color;
-		}
-	}
-
-	// 底部图形容器
-	.KMGrowth-main-container-bottomInfo {
-		height: 714px;
-		width: 100%;
-		left: 44px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
-		background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
-		border-radius: 36px;
-		box-sizing: border-box;
 		position: relative;
-		left: 0;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
 
-		// 左信息
-		.KMGrowth-bottomInfo-textAndGraphic-left {
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: column;
-			z-index: 5;
-			// 👇这两个是给无序列表的样式！
-			font-family: 'GTEestiProText-Regular';
-			color: @description-color;
-			font-size: 18px;
-			text-align: left;
-			margin: 0;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 12px;
+			padding: 48px;
+			box-sizing: border-box;
 
-			.KMGrowth-bottomInfo-title {
+			.KMGrowth-topInfo-title {
 				width: 100%;
+				height: auto;
 				font-family: 'GTEestiProText-Bold';
-				font-size: 24px;
+				font-size: @text-TitleSize;
 				color: @text-color;
-				margin: 0 0 0 20px;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
 			}
 		}
 
-		// 中间图形
-		.KMGrowth-bottomInfo-circleGraphic {
-			position: relative;
-			width: 780px;
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 714px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 32px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
 			box-sizing: border-box;
-			z-index: 5;
+			position: relative;
+			left: 0;
 
-			// 中心圆
-			.KMGrowth-centerCircle {
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 1100px;
+				position: absolute;
+				left: -40px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
 				position: absolute;
 				left: 0; 
 				top: 0; 
 				right: 0; 
 				bottom: 0;
 				margin: auto;  /* 有了这个就自动居中了 */
-				width: 264px;
-				height: 264px;
-				border-radius: 50%;
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
 				aspect-ratio: 1/1;
-				background-color: #170645;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				z-index: 7;
+			}
 
-				> p {
-					width: 148px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					line-height: 1.3;
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+		left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				// background-color: #4b445e;//测试位置
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
 					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
 				}
-			}
-		}
 
-		// 右信息
-		.KMGrowth-bottomInfo-textAndGraphic-right {
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			z-index: 5;
-			// 👇这两个是给无序列表的样式！
-			font-family: 'GTEestiProText-Regular';
-			color: @description-color;
-			font-size: 18px;
-			text-align: left;
-			margin: 0;
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
 
-			.KMGrowth-bottomInfo-title {
-				width: 100%;
-				font-family: 'GTEestiProText-Bold';
-				font-size: 24px;
-				color: @text-color;
-				margin: 0 0 0 20px;
-			}
-		}
-
-		// 放射线
-		.radiaLine {
-			width: 70%;
-			position: absolute;
-			left: 0; 
-			top: 0; 
-			right: 0; 
-			bottom: 0;
-			margin: auto;  /* 有了这个就自动居中了 */
-		}
-
-		// 圆环
-		.insideLine {
-			width: 322px;
-			height: 322px;
-			aspect-ratio: 1/1;
-			position: absolute;
-			left: 0; 
-			top: 0; 
-			right: 0; 
-			bottom: 0;
-			margin: auto;  /* 有了这个就自动居中了 */
-		}
-
-		// 圆环
-		.centerLine {
-			width: 454px;
-			height: 454px;
-			aspect-ratio: 1/1;
-			position: absolute;
-			left: 0; 
-			top: 0; 
-			right: 0; 
-			bottom: 0;
-			margin: auto;  /* 有了这个就自动居中了 */
-		}
-
-		// 圆环
-		.outLine {
-			width: 556px;
-			height: 556px;
-			aspect-ratio: 1/1;
-			position: absolute;
-			left: 0; 
-			top: 0; 
-			right: 0; 
-			bottom: 0;
-			margin: auto;  /* 有了这个就自动居中了 */
-		}
-
-		// 标签以及小圆
-		.hashTagLeftTop {
-			width: 110px;
-			height: 40px;
-			aspect-ratio: 1/1;
-			background: rgba(160, 226, 246, 1);
-			padding: 2px 6px;
-			border-radius: 88px;
-			font-family: 'GTEestiProText-regular';
-			color: rgb(21, 91, 112);
-			box-shadow: 
-				0px 8px 24px 0px rgba(176, 240, 232, 0.3);
-			position: absolute;
-			top: 234px;
-    		left: -40px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 7;
-		}
-
-		.hashTagLeftBottom {
-			width: 110px;
-			height: 40px;
-			aspect-ratio: 1/1;
-			background: rgb(246, 218, 194);
-			padding: 2px 6px;
-			border-radius: 88px;
-			font-family: 'GTEestiProText-regular';
-			color: rgb(189, 111, 47);
-			box-shadow: 
-				0px 8px 24px 0px rgba(255, 233, 214, 0.3);
-			position: absolute;
-			top: 396px;
-			left: -2px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 7;
-		}
-
-		.hashTagRightTop {
-			width: 110px;
-			height: 40px;
-			aspect-ratio: 1/1;
-			background: rgba(160, 227, 220, 1);
-			padding: 2px 6px;
-			border-radius: 88px;
-			font-family: 'GTEestiProText-regular';
-			color: rgb(23, 105, 97);
-			box-shadow: 
-				0px 8px 24px 0px rgba(160, 227, 220, 0.3);
-			position: absolute;
-			top: 118px;
-    		left: 388px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 7;
-		}
-
-		.hashTagRightBottom {
-			width: 110px;
-			height: 40px;
-			aspect-ratio: 1/1;
-			background: rgba(214, 215, 255, 1);
-			padding: 2px 6px;
-			border-radius: 88px;
-			font-family: 'GTEestiProText-regular';
-			color: rgb(53, 30, 129);
-			box-shadow: 
-				0px 8px 24px 0px rgba(128, 95, 247, 0.3);
-			position: absolute;
-			top: 410px;
-    left: 414px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 7;
-		}
-
-
-
-		.KMGrowth-hashTagAndDotsGroup {
-			width: 556px;
-			height: 556px;
-			position: absolute;
-			left: 0; 
-			top: 0; 
-			right: 0; 
-			bottom: 0;
-			margin: auto;  /* 有了这个就自动居中了 */
-			// background-color: #4b445e;//测试位置
-
-			// 左小圆
-			.KMGrowth-leftDot {
-				width: 84px;
-				height: 84px;
-				aspect-ratio: 1/1;
-				position: relative;
-				z-index: 6;
-				background-color: #170645;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				left: 64px;
-				top: 94px;
-				color: @text-color;
-				font-family: 'GTEestiProText-regular';
-				font-size: 14px;
-			}
-
-			// 右小圆
-			.KMGrowth-rightDot {
-				width: 84px;
-				height: 84px;
-				aspect-ratio: 1/1;
-				position: absolute;
-				z-index: 6;
-				background-color: #170645;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				left: 456px;
-				top: 238px;
-				color: @text-color;
-				font-family: 'GTEestiProText-regular';
-				font-size: 14px;
-			}
-
-			// 左下小圆
-			.KMGrowth-bottomDot {
-				width: 84px;
-				height: 84px;
-				aspect-ratio: 1/1;
-				position: absolute;
-				z-index: 6;
-				background-color: #170645;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				left: 190px;
-				top: 454px;
-				color: @text-color;
-				font-family: 'GTEestiProText-regular';
-				font-size: 14px;
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
 			}
 		}
 	}
 }
+
+
+@media screen and (max-width: 1440px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 12px;
+			padding: 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 714px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 1100px;
+				position: absolute;
+				left: -40px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+		left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				// background-color: #4b445e;//测试位置
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 12px;
+			padding: 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 1100px;
+				scale: 0.9;
+				position: absolute;
+				left: -40px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+		left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				// background-color: #4b445e;//测试位置
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1180px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 12px;
+			padding: 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 900px;
+				scale: 0.9;
+				position: absolute;
+				left: -40px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+		left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				// background-color: #4b445e;//测试位置
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 12px;
+			padding: 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 900px;
+				scale: 0.9;
+				position: absolute;
+				left: -40px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 980px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 12px;
+			padding: 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.4) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 840px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 48px 48px 0px 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.8);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 48px 48px 0px 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 564px;
+			width: 100%;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.8);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+				display: none;
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 48px 48px 0px 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 564px;
+			width: 564px;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.8);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+				display: none;
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 620px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 48px 48px 0px 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 564px;
+			width: 564px;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.7) translateX(-40px);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+				display: none;
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 48px 48px 0px 48px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 564px;
+			width: 564px;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.7) translate(-74px, -48px);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+				display: none;
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 0px;
+			box-sizing: border-box;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 564px;
+			width: 564px;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.7) translate(-114px, -48px);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+				display: none;
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 454px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -2px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 388px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px) {
+	.KMGrowth-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 52px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		transform: translateY(-300px);
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 2px;
+			padding: 0px;
+			box-sizing: border-box;
+			text-align: left;
+
+			.KMGrowth-topInfo-title {
+				width: 100%;
+				height: auto;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.KMGrowth-topInfo-des {
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 504px;
+			width: 494px;
+			left: 44px;
+			display: flex;
+			padding: 0 20px;
+			justify-content: center;
+			align-items: center;
+			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+			background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+			border-radius: 36px;
+			box-sizing: border-box;
+			position: relative;
+			left: 0;
+			transform: scale(0.6) translate(-188px, -98px);
+
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				position: relative;
+				width: 780px;
+				box-sizing: border-box;
+				z-index: 5;
+				transform: scale(0.8);
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: -20px; 
+					top: 0; 
+					right: 0; 
+					bottom: 0;
+					margin: auto;  /* 有了这个就自动居中了 */
+					width: 264px;
+					height: 264px;
+					border-radius: 50%;
+					aspect-ratio: 1/1;
+					background-color: #170645;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						width: 148px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						line-height: 1.3;
+						color: @text-color;
+					}
+				}
+			}
+
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				z-index: 5;
+				// 👇这两个是给无序列表的样式！
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 18px;
+				text-align: left;
+				margin: 0;
+				scale: 0.85;
+				display: none;
+
+				.KMGrowth-bottomInfo-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+					margin: 0 0 0 20px;
+				}
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 600px;
+				transform: scale(1.38) translateX(-12px);
+				position: absolute;
+				left: 0; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				z-index: 2;
+				margin: auto;  /* 有了这个就自动居中了 */
+				display: none;
+			}
+
+			// 圆环
+			.insideLine {
+				width: 322px;
+				height: 322px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: -20px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				width: 424px;
+				height: 454px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: -10px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				width: 530px;
+				height: 530px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: -20px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 226, 246, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(21, 91, 112);
+				box-shadow: 
+					0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+				position: absolute;
+				top: 234px;
+				left: -68px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgb(246, 218, 194);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(189, 111, 47);
+				box-shadow: 
+					0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+				position: absolute;
+				top: 396px;
+				left: -28px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(160, 227, 220, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(23, 105, 97);
+				box-shadow: 
+					0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+				position: absolute;
+				top: 118px;
+				left: 368px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px;
+				aspect-ratio: 1/1;
+				background: rgba(214, 215, 255, 1);
+				padding: 2px 6px;
+				border-radius: 88px;
+				font-family: 'GTEestiProText-regular';
+				color: rgb(53, 30, 129);
+				box-shadow: 
+					0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+				position: absolute;
+				top: 410px;
+				left: 414px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 7;
+				transform: scale(0.8);
+			}
+
+
+
+			.KMGrowth-hashTagAndDotsGroup {
+				width: 556px;
+				height: 556px;
+				position: absolute;
+				left: -28px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				scale: 0.9;
+				z-index: 4;
+				// background-color: #4b445e;//测试位置
+				transform: scale(0.8);
+
+				// 左小圆
+				.KMGrowth-leftDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: relative;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 64px;
+					top: 94px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 456px;
+					top: 238px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot {
+					width: 84px;
+					height: 84px;
+					aspect-ratio: 1/1;
+					position: absolute;
+					z-index: 6;
+					background-color: #170645;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					left: 190px;
+					top: 454px;
+					color: @text-color;
+					font-family: 'GTEestiProText-regular';
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
