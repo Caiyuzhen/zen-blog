@@ -26,31 +26,21 @@
 
 
 
-
-.interactive-main-container {
-	width: 100%;
-	height: auto;
-	position: relative;
-	padding: 124px;
-	display: flex;
-	gap: 24px;
-	box-sizing: border-box;
-	flex-direction: row;
-	align-items: center;
-	position: relative;
-
-	// 左侧信息
-	.interactive-leftInfo-container {
+@media screen and (max-width: @mediaWidth-Max) {
+	.interactive-main-container {
 		width: 100%;
 		height: auto;
+		position: relative;
+		padding: 124px;
 		display: flex;
-		flex-direction: column;
-		align-items: start;
 		gap: 24px;
-		margin-bottom: 48px;
 		box-sizing: border-box;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
 
-		.interactive-leftInfo-textGroup {
+		// 左侧信息
+		.interactive-leftInfo-container {
 			width: 100%;
 			height: auto;
 			display: flex;
@@ -60,81 +50,584 @@
 			margin-bottom: 48px;
 			box-sizing: border-box;
 
-			.interactive-leftInfo-title {
+			.interactive-leftInfo-textGroup {
+				width: 100%;
 				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-			.interactive-leftInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 80%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		} 
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 48px;
+				box-sizing: border-box;
 
-		.interactive-leftInfo-imgGroup {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 44px;
+				.interactive-leftInfo-title {
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					line-height: 1.5;
+				}
+				.interactive-leftInfo-des {
+					margin: 0;
+					text-align: left;
+					width: 80%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			} 
 
-			.likeCard {
-				width: 102px;
+			.interactive-leftInfo-imgGroup {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 44px;
+
+				.likeCard {
+					width: 102px;
+				}
+
+				.gradualArrow {
+					width: 38px;
+					margin-left: 16px;
+				}
+
+				.emojiPanel {
+					width: 284px;
+					margin-top: 8px;
+				}
+			}
+		}
+
+		// 右侧图片
+		.interactive-rightInfo-container {
+			overflow: visible;
+			width: 760px;
+			height: 822px;
+			position: relative;
+
+			.ballons {
+				position: absolute;
+				top: 134px;
+				left: -86px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
 			}
 
-			.gradualArrow {
-				width: 38px;
+			.scattered {
+				position: absolute;
+				top: 228px;
+				right: -46px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
 			}
 
-			.emojiPanel {
-				width: 284px;
-				margin-top: 8px;
+			.cryLaugh {
+				position: absolute;
+				top: 566px;
+				left: 72px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.interactivePage {
+				width: 612px;
 			}
 		}
 	}
+}
 
-	// 右侧图片
-	.interactive-rightInfo-container {
-		overflow: visible;
-		width: 760px;
-		height: 822px;
+
+@media screen and (max-width: 1480px) {
+	.interactive-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: row;
+		align-items: center;
 		position: relative;
 
-		.ballons {
-			position: absolute;
-			top: 134px;
-    		left: -86px;
-			width: 120px;
-			font-size: 100px;
-			z-index: 1;
+		// 左侧信息
+		.interactive-leftInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 36px;
+			box-sizing: border-box;
+
+			.interactive-leftInfo-textGroup {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 36px;
+				box-sizing: border-box;
+
+				.interactive-leftInfo-title {
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					line-height: 1.5;
+				}
+				.interactive-leftInfo-des {
+					margin: 0;
+					text-align: left;
+					width: 80%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			} 
+
+			.interactive-leftInfo-imgGroup {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 44px;
+				scale: 0.85;
+				transform: translateX(-48px);
+
+				.likeCard {
+					width: 102px;
+				}
+
+				.gradualArrow {
+					width: 38px;
+					margin-left: 16px;
+				}
+
+				.emojiPanel {
+					width: 284px;
+					margin-top: 8px;
+				}
+			}
 		}
 
-		.scattered {
-			position: absolute;
-			top: 228px;
-			right: -46px;
-			width: 120px;
-			font-size: 100px;
-			z-index: 1;
+		// 右侧图片
+		.interactive-rightInfo-container {
+			overflow: visible;
+			width: 100%;
+			height: auto;
+			position: relative;
+			scale: 0.9;
+
+			.ballons {
+				position: absolute;
+				top: 134px;
+				left: -86px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.scattered {
+				position: absolute;
+				top: 228px;
+				right: -46px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.cryLaugh {
+				position: absolute;
+				top: 566px;
+				left: 72px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.interactivePage {
+				width: 612px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1320px) {
+	.interactive-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
+		margin-top: -10px;
+
+		// 左侧信息
+		.interactive-leftInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 36px;
+			box-sizing: border-box;
+
+			.interactive-leftInfo-textGroup {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 0px;
+				box-sizing: border-box;
+				margin-top: 20px;
+
+				.interactive-leftInfo-title {
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					line-height: 1.5;
+				}
+				.interactive-leftInfo-des {
+					margin: 0;
+					text-align: left;
+					width: 80%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			} 
+
+			.interactive-leftInfo-imgGroup {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 44px;
+				scale: 0.75;
+				transform: translateX(-88px);
+
+				.likeCard {
+					width: 102px;
+				}
+
+				.gradualArrow {
+					width: 38px;
+					margin-left: 16px;
+				}
+
+				.emojiPanel {
+					width: 284px;
+					margin-top: 8px;
+				}
+			}
 		}
 
-		.cryLaugh {
-			position: absolute;
-			top: 566px;
-    		left: 72px;
-			width: 120px;
-			font-size: 100px;
-			z-index: 1;
+		// 右侧图片
+		.interactive-rightInfo-container {
+			overflow: visible;
+			width: 100%;
+			height: auto;
+			position: relative;
+			scale: 0.8;
+			transform: translateX(-44px);
+
+			.ballons {
+				position: absolute;
+				top: 134px;
+				left: -86px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.scattered {
+				position: absolute;
+				top: 228px;
+				right: -46px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.cryLaugh {
+				position: absolute;
+				top: 566px;
+				left: 72px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.interactivePage {
+				width: 612px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1240px) {
+	.interactive-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
+		margin-top: -10px;
+
+		// 左侧信息
+		.interactive-leftInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 36px;
+			box-sizing: border-box;
+
+			.interactive-leftInfo-textGroup {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 0px;
+				box-sizing: border-box;
+				margin-top: 20px;
+
+				.interactive-leftInfo-title {
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					line-height: 1.5;
+				}
+				.interactive-leftInfo-des {
+					margin: 0;
+					text-align: left;
+					width: 80%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			} 
+
+			.interactive-leftInfo-imgGroup {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 44px;
+				scale: 0.75;
+				transform: translateX(-88px);
+
+				.likeCard {
+					width: 102px;
+				}
+
+				.gradualArrow {
+					width: 38px;
+					margin-left: 16px;
+				}
+
+				.emojiPanel {
+					width: 284px;
+					margin-top: 8px;
+				}
+			}
 		}
 
-		.interactivePage {
-			width: 612px;
+		// 右侧图片
+		.interactive-rightInfo-container {
+			overflow: visible;
+			width: 100%;
+			height: auto;
+			position: relative;
+			scale: 0.75;
+			transform: translateX(-144px);
+
+			.ballons {
+				position: absolute;
+				top: 134px;
+				left: -86px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.scattered {
+				position: absolute;
+				top: 228px;
+				right: -46px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.cryLaugh {
+				position: absolute;
+				top: 566px;
+				left: 72px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.interactivePage {
+				width: 612px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1140px) {
+	.interactive-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
+		margin-top: -10px;
+
+		// 左侧信息
+		.interactive-leftInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 0px;
+			margin-bottom: 0px;
+			box-sizing: border-box;
+
+			.interactive-leftInfo-textGroup {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 0px;
+				box-sizing: border-box;
+				margin-top: 20px;
+
+				.interactive-leftInfo-title {
+					width: 60%;
+					height: auto;
+					text-align: left;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					line-height: 1.5;
+				}
+				.interactive-leftInfo-des {
+					margin: 0;
+					text-align: left;
+					width: 80%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			} 
+
+			.interactive-leftInfo-imgGroup {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 44px;
+				scale: 0.65;
+				transform: translateX(-138px);
+
+				.likeCard {
+					width: 102px;
+				}
+
+				.gradualArrow {
+					width: 38px;
+					margin-left: 16px;
+				}
+
+				.emojiPanel {
+					width: 284px;
+					margin-top: 8px;
+				}
+			}
+		}
+
+		// 右侧图片
+		.interactive-rightInfo-container {
+			overflow: visible;
+			width: 100%;
+			height: auto;
+			position: relative;
+			scale: 0.7;
+			transform: translateX(-234px);
+
+			.ballons {
+				position: absolute;
+				top: 134px;
+				left: -86px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.scattered {
+				position: absolute;
+				top: 228px;
+				right: -46px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.cryLaugh {
+				position: absolute;
+				top: 566px;
+				left: 72px;
+				width: 120px;
+				font-size: 100px;
+				z-index: 1;
+			}
+
+			.interactivePage {
+				width: 612px;
+			}
 		}
 	}
 }

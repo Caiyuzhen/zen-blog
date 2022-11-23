@@ -43,7 +43,7 @@
 			height: auto;
 			display: flex;
 			flex-direction: row;
-			align-items: start;
+			align-items: space-between;
 			gap: 24px;
 			margin-bottom: 48px;
 			box-sizing: border-box;
@@ -116,13 +116,13 @@
 				.dashDotLeft {
 					position: absolute;
 					left: -90px;
-					top: 50%;
+					top: 48%;
 				}
 
 				.dashDotRight {
 					position: absolute;
 					right: -90px;
-					top: 50%;
+					top: 48%;
 				}
 
 				// 左圆
@@ -211,8 +211,7 @@
 }
 
 
-
-@media screen and (max-width: @mediaWidth-Max) {
+@media screen and (max-width: 1280px) {
 	.publishAbility-main-container {
 		width: 100%;
 		height: auto;
@@ -223,6 +222,7 @@
 		flex-direction: column;
 		position: relative;
 		margin-bottom: 100px;
+		margin-top: -260px;
 
 		// 顶部信息
 		.publishAbility-topInfo-container {
@@ -296,13 +296,13 @@
 				.dashDotLeft {
 					position: absolute;
 					left: -90px;
-					top: 50%;
+					top: 48%;
 				}
 
 				.dashDotRight {
 					position: absolute;
 					right: -90px;
-					top: 50%;
+					top: 48%;
 				}
 
 				// 左圆
@@ -378,6 +378,1466 @@
 				align-items: center;
 				gap: 24px;
 				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -280px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				flex: 3;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.95;
+			transform: translateX(-50px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 980px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -380px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.87;
+			transform: translateX(-70px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -400px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.75;
+			transform: translate(-120px,-38px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -400px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.6;
+			transform: translate(-180px,-78px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -400px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.5;
+			transform: translate(-280px,-158px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -380px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.4;
+			transform: translate(-280px,-258px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 54px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -510px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.4;
+			transform: translate(-280px,-258px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+@media screen and (max-width: @mediaWidth-Iphone) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 54px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+		margin-top: -510px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				// flex: 35%;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				// flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+			scale: 0.4;
+			transform: translate(-206px,-258px);
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+				display: none;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 48%;
+					display: none;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 48%;
+					display: none;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+				display: none;
 
 				:nth-child(1),:nth-child(2)  {
 					font-size: 22px;
