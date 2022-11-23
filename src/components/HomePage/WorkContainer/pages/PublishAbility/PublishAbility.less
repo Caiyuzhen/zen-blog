@@ -25,183 +25,367 @@
 }
 
 
-.publishAbility-main-container {
-	width: 100%;
-	height: auto;
-	position: relative;
-	padding: 124px;
-	gap: 24px;
-	box-sizing: border-box;
-	flex-direction: column;
-	position: relative;
-
-	// 顶部信息
-	.publishAbility-topInfo-container {
+@media screen and (max-width: @mediaWidth-Max) {
+	.publishAbility-main-container {
 		width: 100%;
 		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: start;
-		gap: 24px;
-		margin-bottom: 48px;
-		box-sizing: border-box;
-
-		.publishAbility-topInfo-title {
-			flex: 3;
-			height: auto;
-			text-align: left;
-			font-family: 'GTEestiProText-Bold';
-			font-size: @text-TitleSize;
-			color: @text-color;
-		}
-		
-		.publishAbility-topInfo-des {
-			flex: 7;
-			margin: 0;
-			text-align: left;
-			font-family: 'GTEestiProText-Regular';
-			font-size: @text-DescriptionSize;
-			line-height: 1.6;
-			color: @description-color;
-		}
-	}
-
-	// 底部信息
-	.publishAbility-bottomInfo-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+		position: relative;
+		padding: 124px;
 		gap: 24px;
 		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
 
-		.publishAbility-bottomInfo-leftItem {
-			flex: 2;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
-
-			:nth-child(1),:nth-child(2)  {
-				font-size: 22px;
-				font-family: 'GTEestiProText-Regular';
-				color: @text-color;
-			}
-		}
-
-		.publishAbility-bottomInfo-centerItem {
-			width: 636px;
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: row;
-			border-radius: 800px;
-			border: 3px dashed @description-color;
-			padding: 18px;
+			align-items: start;
 			gap: 24px;
-			position: relative;
-			// border: 1px dashed transparent;
-			// background: linear-gradient(white,white) padding-box,
-			// repeating-linear-gradient(-45deg,#ccc 0, #ccc 0.25em,white 0,white 0.75em);
+			margin-bottom: 48px;
+			box-sizing: border-box;
 
-			// transform:scale(4);
-			 // background-image: linear-gradient(to right, black 0%, black 50%, transparent 50%);
-    		// background-size: 8px 1px;
-
-			.dashDotLeft {
-				position: absolute;
-				left: -90px;
-				top: 50%;
-			}
-
-			.dashDotRight {
-				position: absolute;
-				right: -90px;
-				top: 50%;
-			}
-
-			// 左圆
-			.publishAbility-bottomInfo-leftCircle {
-				width: 306px;
+			.publishAbility-topInfo-title {
+				flex: 3;
 				height: auto;
-				aspect-ratio: 1/1;
-				border-radius: 50%;
-				background: #E9E8F5;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				z-index: 5;
-
-				> p {
-					color: #170645;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 22px;
-				}
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+				line-height: 1.5;
 			}
-
-			// hover 的渐变色
-			.shadowBgLeft {
-				width: 412px;
-				height: 412px;
-				border-radius: 50%;
-				position: absolute;
-				left: -36px;
-    			top: -28px;
-				opacity: 0;
-				transition: all .3s ease-in-out !important;
-			}
-
-			// 右圆
-			.publishAbility-bottomInfo-rightCircle {
-				width: 306px;
-				height: auto;
-				aspect-ratio: 1/1;
-				border-radius: 50%;
-				background: #170645;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				z-index: 5;
-
-				> p {
-					color: @text-color;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 22px;
-				}
-			}
-
-			// hover 的渐变色
-			.shadowBgRight {
-				width: 412px;
-				height: 412px;
-				border-radius: 50%;
-				position: absolute;
-				right: -36px;
-    			top: -28px;
-				opacity: 0;
-				transition: all .3s ease-in-out !important;
+			
+			.publishAbility-topInfo-des {
+				flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
 			}
 		}
 
-		.publishAbility-bottomInfo-rightItem {
-			flex: 2;
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
 			height: auto;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			align-items: center;
 			gap: 24px;
 			box-sizing: border-box;
 
-			:nth-child(1),:nth-child(2)  {
-				font-size: 22px;
-				font-family: 'GTEestiProText-Regular';
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+				// border: 1px dashed transparent;
+				// background: linear-gradient(white,white) padding-box,
+				// repeating-linear-gradient(-45deg,#ccc 0, #ccc 0.25em,white 0,white 0.75em);
+
+				// transform:scale(4);
+				// background-image: linear-gradient(to right, black 0%, black 50%, transparent 50%);
+				// background-size: 8px 1px;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 50%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 50%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+@media screen and (max-width: @mediaWidth-Max) {
+	.publishAbility-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		position: relative;
+		margin-bottom: 100px;
+
+		// 顶部信息
+		.publishAbility-topInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.publishAbility-topInfo-title {
+				flex: 3;
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
 				color: @text-color;
+				line-height: 1.5;
+			}
+			
+			.publishAbility-topInfo-des {
+				flex: 7;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
 			}
 		}
 
+		// 底部信息
+		.publishAbility-bottomInfo-container {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+
+			.publishAbility-bottomInfo-leftItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				border-radius: 800px;
+				border: 3px dashed @description-color;
+				padding: 18px;
+				gap: 24px;
+				position: relative;
+
+				.dashDotLeft {
+					position: absolute;
+					left: -90px;
+					top: 50%;
+				}
+
+				.dashDotRight {
+					position: absolute;
+					right: -90px;
+					top: 50%;
+				}
+
+				// 左圆
+				.publishAbility-bottomInfo-leftCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #E9E8F5;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: #170645;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgLeft {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					left: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+
+				// 右圆
+				.publishAbility-bottomInfo-rightCircle {
+					width: 306px;
+					height: auto;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					background: #170645;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					z-index: 5;
+
+					> p {
+						color: @text-color;
+						font-family: 'GTEestiProText-Bold';
+						font-size: 22px;
+					}
+				}
+
+				// hover 的渐变色
+				.shadowBgRight {
+					width: 412px;
+					height: 412px;
+					border-radius: 50%;
+					position: absolute;
+					right: -36px;
+					top: -28px;
+					opacity: 0;
+					transition: all .3s ease-in-out !important;
+				}
+			}
+
+			.publishAbility-bottomInfo-rightItem {
+				flex: 2;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				box-sizing: border-box;
+
+				:nth-child(1),:nth-child(2)  {
+					font-size: 22px;
+					font-family: 'GTEestiProText-Regular';
+					color: @text-color;
+				}
+			}
+
+		}
 	}
 }
