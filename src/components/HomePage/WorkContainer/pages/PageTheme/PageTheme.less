@@ -24,97 +24,1578 @@
 	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
 }
 
-.pagetheme-main-container {
-	width: 100%;
-	box-sizing: border-box;
-    position: relative;
-	overflow: visible;
 
-
-	.circleRipple {
-		position: absolute;
-		top: -108px;
-		left: -136px;
-		width: 456px;
-	}
-
-	.pagetheme-main-container-inside {
+@media screen and (max-width: @mediaWidth-Max) {
+	.pagetheme-main-container {
 		width: 100%;
-		height: auto;
-		flex-direction: row;
-		align-items: start;
-		display: flex;
-		gap: 48px;
-		padding: 124px;
-		margin-bottom: 48px;
 		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
 
-		// 左侧图片
-		.pageThemePic {
-			width: 452px;
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
 		}
 
-		// 右侧信息
-		.pagetheme-rightInfo-container {
+		.pagetheme-main-container-inside {
 			width: 100%;
 			height: auto;
+			flex-direction: row;
+			align-items: start;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
+			gap: 68px;
+			padding: 124px;
 			margin-bottom: 48px;
 			box-sizing: border-box;
 
-			.pagetheme-rightInfo-top {
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
 				width: 100%;
 				height: auto;
 				display: flex;
 				flex-direction: column;
-				align-items: start;
-				gap: 24px;
+				align-items: center;
 				margin-bottom: 48px;
 				box-sizing: border-box;
 
-				.pagetheme-rightInfo-container-title {
+				.pagetheme-rightInfo-top {
+					width: 100%;
 					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+
+					.pagetheme-rightInfo-container-title {
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
 				}
 
-				.pagetheme-rightInfo-container-des {
-					margin: 0;
-					text-align: left;
+				.pagetheme-rightInfo-bottom {
 					width: 100%;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
 				}
 			}
+		}	
+	}
+}
 
-			.pagetheme-rightInfo-bottom {
+
+@media screen and (max-width: 1560px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			align-items: start;
+			display: flex;
+			gap: 68px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 710px;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.85;
+					transform: translate(-68px, -56px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 1440px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			align-items: start;
+			display: flex;
+			gap: 18px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.9;
+				transform: translate(-24px, -46px);
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 680px;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.8;
+					transform: translate(-88px, -86px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 1340px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			align-items: start;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.8;
+				transform: translate(-56px, -108px);
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 580px;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+				transform: translateX(-40px);
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.7;
+					transform: translate(-124px, -136px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			align-items: start;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.7;
+				transform: translate(-96px, -188px);
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 580px;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+				transform: translateX(-40px);
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(-24px, 14px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.6;
+					transform: translate(-244px, -214px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 1180px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -160px 0 -270px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			align-items: start;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.63;
+				transform: translate(-130px, -252px);
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 550px;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+				transform: translateX(-96px);
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(-12px, 24px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.47;
+					transform: translate(-334px, -356px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -160px 0 -270px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			align-items: start;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				transform: translate(-160px, -310px);
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 460px;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+				transform: translateX(-130px);
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(-12px, 24px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.4;
+					transform: translate(-380px, -476px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -160px 0 -170px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
 				width: 100%;
 				height: auto;
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
 				align-items: center;
-				gap: 24px;
 				margin-bottom: 48px;
 				box-sizing: border-box;
 
-				.pagetheme-framework {
-					width: 374px;
+
+				.pagetheme-rightInfo-top {
+					width: 574px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(92px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
 				}
 
-				.gradualArrow {
-					width: 36px;
-				}
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.8;
+					transform: translate(90px, -76px);
 
-				.pagetheme-page {
-					width: 374px;
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
 				}
 			}
-		}
-	}	
+		}	
+	}
 }
+
+
+@media screen and (max-width: 880px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -160px 0 -170px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.7;
+					transform: translate(70px, -76px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -200px 0 -240px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.6;
+					transform: translate(40px, -206px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 740px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -60px 0 -300px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.55;
+					transform: translate(40px, -266px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 640px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -100px 0 -360px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.46;
+					transform: translate(50px, -366px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -140px 0 -440px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 124px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.4;
+					transform: translate(80px, -486px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -140px 0 -440px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 54px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.48;
+					transform: translate(62px, -336px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+@media screen and (max-width: @mediaWidth-Iphone) {
+	.pagetheme-main-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		overflow: visible;
+		margin: -140px 0 -540px 0;
+
+		.circleRipple {
+			position: absolute;
+			top: -108px;
+			left: -136px;
+			width: 456px;
+		}
+
+		.pagetheme-main-container-inside {
+			width: 100%;
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 0px;
+			padding: 54px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+			justify-items: center;
+
+			// 左侧图片
+			.pageThemePic {
+				width: 452px;
+				scale: 0.58;
+				// transform: translate(-160px, -310px);
+				display: none;
+			}
+
+			// 右侧信息
+			.pagetheme-rightInfo-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+
+				.pagetheme-rightInfo-top {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					transform: translate(142px, 20px);
+
+					.pagetheme-rightInfo-container-title {
+						width: 100%;
+						height: auto;
+						text-align: left;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize;
+						color: @text-color;
+					}
+
+					.pagetheme-rightInfo-container-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+					}
+				}
+
+				.pagetheme-rightInfo-bottom {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					margin-bottom: 48px;
+					box-sizing: border-box;
+					scale: 0.325;
+					transform: translate(120px, -676px);
+
+					.pagetheme-framework {
+						width: 374px;
+					}
+
+					.gradualArrow {
+						width: 36px;
+					}
+
+					.pagetheme-page {
+						width: 374px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+
+
