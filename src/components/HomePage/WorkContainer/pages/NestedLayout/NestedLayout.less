@@ -26,108 +26,110 @@
 
 
 
-.nestedLayout-main-container {
-	width: 100%;
-	height: auto;
-	position: relative;
-	padding: 124px;
-	display: flex;
-	gap: 24px;
-	box-sizing: border-box;
-	flex-direction: row;
-	align-items: center;
-	position: relative;
-
-	// 左侧信息
-	.nestedLayout-mainLeft-container {
+@media screen and (max-width: @mediaWidth-Max) {
+	.nestedLayout-main-container {
 		width: 100%;
 		height: auto;
+		position: relative;
+		padding: 124px;
 		display: flex;
-		flex-direction: column;
-		align-items: start;
 		gap: 24px;
 		box-sizing: border-box;
-
-		.nestedLayout-mainLeft-title {
-			height: auto;
-			text-align: left;
-			font-family: 'GTEestiProText-Bold';
-			font-size: @text-TitleSize;
-			color: @text-color;
-		}	
-
-		.nestedLayout-mainLeft-des {
-			margin: 0;
-			text-align: left;
-			width: 80%;
-			font-family: 'GTEestiProText-Regular';
-			font-size: @text-DescriptionSize;
-			line-height: 1.6;
-			color: @description-color;
-		}
-	}
-
-	// 右侧图片
-	.nestedLayout-mainRight-container {
-		width: 100%;
-		height: auto;
-		display: flex;
 		flex-direction: row;
-		align-items: start;
-		gap: 24px;
-		box-sizing: border-box;
+		align-items: center;
+		position: relative;
 
-		.nestedLayout-nestedLogic {
+		// 左侧信息
+		.nestedLayout-mainLeft-container {
 			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: column;
 			align-items: start;
 			gap: 24px;
-			margin-bottom: 48px;
 			box-sizing: border-box;
 
-			.nestedLogicTop {
-				width: 400px;
-			}
+			.nestedLayout-mainLeft-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}	
 
-			.nestedLogicBottom {
-				width: 400px;
+			.nestedLayout-mainLeft-des {
+				margin: 0;
+				text-align: left;
+				width: 80%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
 			}
 		}
 
-		.nestedLayout-actualResult {
+		// 右侧图片
+		.nestedLayout-mainRight-container {
 			width: 100%;
 			height: auto;
-			display: grid;
+			display: flex;
 			flex-direction: row;
 			align-items: start;
 			gap: 24px;
-			margin-bottom: 48px;
 			box-sizing: border-box;
 
-			.actualResultTop {
-				width: 400px;
-				grid-column-start: 1;//横 1
-				grid-column-end: 3;//横 3
-				grid-row-start: 1;//纵 1
-				grid-row-end: 2;//纵 2
+			.nestedLayout-nestedLogic {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 48px;
+				box-sizing: border-box;
+
+				.nestedLogicTop {
+					width: 400px;
+				}
+
+				.nestedLogicBottom {
+					width: 400px;
+				}
 			}
 
-			.actualResultBottomLeft {
-				width: 188px;
-				grid-column-start: 1;//横 1
-				grid-column-end: 2;//横 2
-				grid-row-start: 2;//纵 2
-				grid-row-end: 4;//纵 4
-			}
+			.nestedLayout-actualResult {
+				width: 100%;
+				height: auto;
+				display: grid;
+				flex-direction: row;
+				align-items: start;
+				gap: 24px;
+				margin-bottom: 48px;
+				box-sizing: border-box;
 
-			.actualResultBottomRight {
-				width: 188px;
-				grid-column-start: 2;//横 2
-				grid-column-end: 3;//横 3
-				grid-row-start: 2;//纵 2
-				grid-row-end: 4;//纵 4
+				.actualResultTop {
+					width: 400px;
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 1;//纵 1
+					grid-row-end: 2;//纵 2
+				}
+
+				.actualResultBottomLeft {
+					width: 188px;
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 2;//纵 2
+					grid-row-end: 4;//纵 4
+				}
+
+				.actualResultBottomRight {
+					width: 188px;
+					grid-column-start: 2;//横 2
+					grid-column-end: 3;//横 3
+					grid-row-start: 2;//纵 2
+					grid-row-end: 4;//纵 4
+				}
 			}
 		}
 	}

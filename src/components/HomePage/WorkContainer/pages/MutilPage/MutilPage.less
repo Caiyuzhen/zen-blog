@@ -25,122 +25,1631 @@
 }
 
 
-.mutilPage-main-container {
-	width: 100%;
-	height: auto;
-	position: relative;
-	padding: 124px;
-	display: flex;
-	gap: 24px;
-	box-sizing: border-box;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
 
-	.mutilPage-main-topInfo {
+@media screen and (max-width: @mediaWidth-Max) {
+	.mutilPage-main-container {
 		width: 100%;
 		height: auto;
+		position: relative;
+		padding: 124px;
 		display: flex;
-		flex-direction: column;
-		align-items: start;
 		gap: 24px;
-		margin-bottom: 48px;
 		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 
-		.mutilPage-main-topInfo-title {
+		.mutilPage-main-topInfo {
+			width: 100%;
 			height: auto;
-			text-align: left;
-			font-family: 'GTEestiProText-Bold';
-			font-size: @text-TitleSize;
-			color: @text-color;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
 		}
 
-		.mutilPage-main-topInfo-des{
-			margin: 0;
-			text-align: left;
-			width: 100%;
-			font-family: 'GTEestiProText-Regular';
-			font-size: @text-DescriptionSize;
-			line-height: 1.6;
-			color: @description-color;
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			transform: translateY(20px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
 		}
 	}
+}
 
-	.mutilPage-main-bottomPage {
-		width: 1336px;
-		height: 600px;
+
+@media screen and (max-width: 1560px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
 		position: relative;
-		left: 12px;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 
-		.slidesOne {
-			width: 320px;
-			height: 428px;
-			position: absolute;
-			box-shadow: 
-				0px 10px 10px 0px rgba(65, 68, 126, 0.12);
-			z-index: 1;
-			left: 208px; //核心位移
-			top: 32px;
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
 		}
 
-		.slidesTwo {
-			width: 320px;
-			height: 428px;
-			position: absolute;
-			box-shadow: 
-				0px 10px 10px 0px rgba(65, 68, 126, 0.12);
-			z-index: 2;
-			left: 332px; //核心位移
-			top: 32px;
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.9;
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
 		}
-		
-		.slidesThree {
-			width: 368px;
-			height: 492px;
-			position: absolute;
-			box-shadow: 
-				0px 10px 10px 0px rgba(65, 68, 126, 0.12);
-			z-index: 3;
-			left: 462px; //核心位移
+	}
+}
+
+
+@media screen and (max-width: 1420px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
 		}
 
-		.slidesFour {
-			width: 412px;
-			height: 550px;
-			position: absolute;
-			box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
-			box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
-			box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
-			z-index: 4;
-			left: 612px; //核心位移
-			top: -32px;
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.8;
+			transform: translateY(-20px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
 		}
 
-		.slidesFive {
-			width: 456px;
-			height: 604px;
-			position: absolute;
-			box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
-			box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
-			box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
-			z-index: 6;
-			left: 742px; //核心位移
-			top: -60px;
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.75;
+			transform: translateY(-60px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
 		}
 
-		.slidesSix {
-			width: 320px;
-			height: 428px;
-			position: absolute;
-			z-index: 5;
-			left: 1000px; //核心位移
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.7;
+			transform: translateY(-100px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1120px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
 		}
 
-		.frameWorkPage {
-			width: 734px;
-			height: 460px;
-			position: absolute;
-			left: 0px;
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.6;
+			transform: translateY(-180px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 980px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.52;
+			transform: translateY(-250px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.45;
+			transform: translateY(-380px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		margin-top: -100px;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.4;
+			transform: translateY(-480px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 700px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		margin-top: -300px;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.32;
+			transform: translateY(-680px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 620px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 124px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		margin-top: -280px;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.3;
+			transform: translateY(-830px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 54px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		margin-top: -320px;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.3;
+			transform: translateY(-830px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: @mediaWidth-Iphone) {
+	.mutilPage-main-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		padding: 54px;
+		display: flex;
+		gap: 24px;
+		box-sizing: border-box;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		margin-top: -340px;
+
+		.mutilPage-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 24px;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			.mutilPage-main-topInfo-title {
+				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+
+			.mutilPage-main-topInfo-des{
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+		}
+
+		.mutilPage-main-bottomPage {
+			width: 1336px;
+			height: 600px;
+			position: relative;
+			left: 12px;
+			scale: 0.22;
+			margin-right: 16px;
+			transform: translateY(-1230px);
+
+			.slidesOne {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 1;
+				left: 208px; //核心位移
+				top: 32px;
+			}
+
+			.slidesTwo {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 2;
+				left: 332px; //核心位移
+				top: 32px;
+			}
+			
+			.slidesThree {
+				width: 368px;
+				height: 492px;
+				position: absolute;
+				box-shadow: 
+					0px 10px 10px 0px rgba(65, 68, 126, 0.12);
+				z-index: 3;
+				left: 462px; //核心位移
+			}
+
+			.slidesFour {
+				width: 412px;
+				height: 550px;
+				position: absolute;
+				box-shadow: 0px 18px 20px 0px rgba(65, 68, 126, 0.06);
+				box-shadow: 0px 6px 12px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.06);
+				z-index: 4;
+				left: 612px; //核心位移
+				top: -32px;
+			}
+
+			.slidesFive {
+				width: 456px;
+				height: 604px;
+				position: absolute;
+				box-shadow: 0px 22px 32px 0px rgba(65, 68, 126, 0.12);
+				box-shadow: 0px 18px 16px 0px rgba(94, 97, 252, 0.04);
+				box-shadow: 0px 36px 140px 0px rgba(0, 0, 0, 0.1);
+				z-index: 6;
+				left: 742px; //核心位移
+				top: -60px;
+			}
+
+			.slidesSix {
+				width: 320px;
+				height: 428px;
+				position: absolute;
+				z-index: 5;
+				left: 1000px; //核心位移
+			}
+
+			.frameWorkPage {
+				width: 734px;
+				height: 460px;
+				position: absolute;
+				left: 0px;
+			}
 		}
 	}
 }
