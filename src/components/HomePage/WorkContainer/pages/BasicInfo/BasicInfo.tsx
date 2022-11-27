@@ -14,7 +14,6 @@ type IOptions = {
 
 export const BasicInfo = () => {
 
-
 	// // 交叉观察器
 	// function useEleOnScreen(options: IOptions): [React.MutableRefObject<HTMLDivElement | null>, boolean] { //目标元素 执行的动画
 
@@ -64,7 +63,7 @@ export const BasicInfo = () => {
 
 	const bottom_containerRef = useRef<HTMLDivElement>(null)
 	const [Bottom_isVisible, setBottom_isVisible] = useState<boolean>(false)
-	const [bottomIsVisible] = useEleOnScreen(bottom_containerRef, Bottom_isVisible, setBottom_isVisible)//解构赋值
+	const [bottomIsVisible] = useEleOnScreen(bottom_containerRef, Bottom_isVisible, setBottom_isVisible)//解构赋值, 传入对象跟 hook 返回是否可见的值
 
 	return (
 		<>

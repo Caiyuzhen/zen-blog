@@ -77,8 +77,6 @@ export const UserTypeInfo = () => {
 
 	
 
-
-
 	return (
 		<>
 			<div className="main-container">

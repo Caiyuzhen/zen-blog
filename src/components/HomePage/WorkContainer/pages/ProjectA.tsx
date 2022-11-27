@@ -56,7 +56,6 @@ export const ProjectA = () => {
 		}, [])
 
 		console.log(scrollY) 
-
 		return scrollY	//返回页面滚动的距离
 	}
 	// getScrollY()
