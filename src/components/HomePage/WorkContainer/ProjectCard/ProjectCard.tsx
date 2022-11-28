@@ -25,13 +25,17 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 
 	const navigate = useNavigate()
 
-	function goProjectA(target: HTMLElement): void {
+	function goProject(target: HTMLElement): void {
 
-		// 🔥在上游把 index 传递下来, 设置到元素的 data-XXX 属性身上了！所以可以根据这个值来判断要跳转到哪个路由详情页！
+		// 🔥在上游 (MainContainer) 把 index 传递下来, 设置到元素的 data-XXX 属性身上了！所以可以根据这个值来判断要跳转到哪个路由详情页！
 		if (target.dataset.index === '0') {
 			navigate('/homepage/works/projectA')
 			// console.log('A')
-		} 
+		} else if (target.dataset.index === '1') {
+			navigate('/homepage/works/projectB')
+			// console.log('B')
+		}
+
 		// 🔥打印 target 元素身上设置的数据
 		console.log(target.dataset.index)
 	}
@@ -43,9 +47,9 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 				 id={content!.id}
 				 onMouseEnter={() => cursorChangeHandler('hovered')}
 				 onMouseLeave={() => cursorChangeHandler('')}
-				 onClick={ (e)=>{goProjectA(e.currentTarget as HTMLElement)} } //🔥注意，需要通过 e.currentTarget 才能拿到 data-index 的dataset 数据！！并且不能为驼峰命名！！
+				 onClick={ (e)=>{goProject(e.currentTarget as HTMLElement)} } //🔥注意，需要通过 e.currentTarget 才能拿到 data-index 的 dataset 数据！！并且不能为驼峰命名！！
 				 ref={projectRef}
-				 data-index={index}
+				 data-index={index} //🔥设置 data-index 属性为上游 MainContainer 的 index ，用来判断点击的是哪个项目卡片
 			>
 				{/* 非空断言！ */}
 				<div className="project-card-top">

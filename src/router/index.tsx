@@ -7,6 +7,7 @@ import MainContainer from '../../src/components/HomePage/WorkContainer/MainConta
 import AboutMe from '../components/HomePage/AboutMe/AboutMe'
 import NotFound from '../../src/components/NotFound/NotFound'
 import ProjectA from '../components/HomePage/WorkContainer/pages/ProjectA'
+import { ProjectB } from '../components/HomePage/WorkContainer/pages/ProjectB'
 
 
 // 生成路由实例(管路径，管组件渲染 【Link to 更改路径】、【Outlet 路由渲染】)
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
 	{
 		path: '/homepage/works/projectA',
 		element: <ProjectA/>
+	},
+	{
+		path: '/homepage/works/projectB',
+		element: <ProjectB/>
 	},
 	{
 		path: '*',
