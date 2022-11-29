@@ -10,6 +10,7 @@ import { BasicInfoPrpjectB } from './BasicInfoPrpjectB/BasicInfoPrpjectB'
 import { DividerLight } from './DividerLight/DividerLight'
 import UserNPS from './UserNPS/UserNPS'
 import { PjbStategy } from './PjbStategy/PjbStategy'
+import UXFrameWork from './UXFrameWork/UXFrameWork'
 
 
 export const ProjectB = () => {
@@ -47,6 +48,9 @@ export const ProjectB = () => {
 
 				{/* UX Stategy */}
 				<PjbStategy />
+
+				{/* UX FrameWork */}
+				<UXFrameWork />
 			</div>
 		</>
 	)
