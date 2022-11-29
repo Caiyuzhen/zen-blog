@@ -8,6 +8,8 @@ import './ProjectB.less'
 import backIcon from '../../../../assets/svg/icon-back-dm.svg'
 import { BasicInfoPrpjectB } from './BasicInfoPrpjectB/BasicInfoPrpjectB'
 import { DividerLight } from './DividerLight/DividerLight'
+import UserNPS from './UserNPS/UserNPS'
+import { PjbStategy } from './PjbStategy/PjbStategy'
 
 
 export const ProjectB = () => {
@@ -37,6 +39,14 @@ export const ProjectB = () => {
 				{/* 分割线 */}
 				<DividerLight />
 				
+				{/* 用户 NPS */}
+				<UserNPS />
+
+				{/* 分割线 */}
+				<DividerLight />
+
+				{/* UX Stategy */}
+				<PjbStategy />
 			</div>
 		</>
 	)
