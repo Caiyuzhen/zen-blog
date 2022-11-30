@@ -1,0 +1,5862 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+@media screen and (max-width: @mediaWidth-Max) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 824px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 824px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1920px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1680px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+		transform: translateY(-64px);
+		margin-bottom: -32px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.9;
+			transform: translateX(36px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.9;
+			transform: translateX(-36px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1520px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+		transform: translateY(-84px);
+		margin-bottom: -62px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.8;
+			transform: translateX(88px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.8;
+			transform: translateX(-88px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1340px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+		transform: translateY(-114px);
+		margin-bottom: -122px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.7;
+			transform: translateX(148px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.7;
+			transform: translateX(-148px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1200px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+		transform: translateY(-144px);
+		margin-bottom: -162px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.65;
+			transform: translateX(188px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.65;
+			transform: translateX(-188px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1200px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 48px;
+		box-sizing: border-box;
+		transform: translateY(-144px);
+		margin-bottom: -162px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.65;
+			transform: translateX(188px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.65;
+			transform: translateX(-188px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1120px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 32px;
+		box-sizing: border-box;
+		transform: translateY(-204px);
+		margin-bottom: -262px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.55;
+			transform: translateX(278px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.55;
+			transform: translateX(-278px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1000px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 24px;
+		box-sizing: border-box;
+		transform: translateY(-244px);
+		margin-bottom: -292px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.5;
+			transform: translateX(348px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.5;
+			transform: translateX(-348px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 950px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 80px;
+		box-sizing: border-box;
+		transform: translateY(-164px);
+		margin-bottom: -122px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 1;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 1;
+			transform: translateX(0px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 950px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 80px;
+		box-sizing: border-box;
+		transform: translateY(-164px);
+		margin-bottom: -122px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 1;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 1;
+			transform: translateX(0px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 40px;
+		box-sizing: border-box;
+		transform: translateY(-204px);
+		margin-bottom: -182px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.85;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.85;
+			transform: translateX(0px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 0px;
+		box-sizing: border-box;
+		transform: translateY(-184px);
+		margin-bottom: -222px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.72;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.72;
+			transform: translateY(-120px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 700px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 0px;
+		box-sizing: border-box;
+		transform: translateY(-214px);
+		margin-bottom: -482px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.62;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.62;
+			transform: translateY(-230px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 650px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 0px;
+		box-sizing: border-box;
+		transform: translateY(-284px);
+		margin-bottom: -582px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.53;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.53;
+			transform: translateY(-400px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px;
+		gap: 0px;
+		box-sizing: border-box;
+		transform: translateY(-324px);
+		margin-bottom: -742px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.45;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.45;
+			transform: translateY(-620px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 54px;
+		gap: 0px;
+		box-sizing: border-box;
+		transform: translateY(-184px);
+		margin-bottom: -442px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.58;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.58;
+			transform: translateY(-340px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px) { 
+	.UXFramework-main-container {
+		width: 100%;
+		// height: 820px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 54px;
+		gap: 0px;
+		box-sizing: border-box;
+		transform: translateY(-234px);
+		margin-bottom: -742px;
+
+		// 左内容
+		.UXFramework-left-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.38;
+			transform: translateX(0px);
+
+			.UXFramework-left-container-topInfoContainer {
+				width: 700px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-left-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-left-container-topDesContainer {
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					display: flex;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_1 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+
+		// 右内容
+		.UXFramework-right-container {
+			width: 700px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			scale: 0.38;
+			transform: translateY(-870px);
+
+			.UXFramework-right-container-topInfoContainer {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				box-sizing: border-box;
+				position: relative;
+				margin-bottom: 40px;
+
+				.UXFramework-right-container-topInfoContainer-title {
+					width: 100%;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize; //32px
+					text-align: left;
+					line-height: 72px;
+					margin: 0;
+				}
+
+				// 4 项优劣
+				.UXFramework-right-container-topDesContainer {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					box-sizing: border-box;
+					font-size: 14px;
+					gap: 24px;
+					margin-top: -6px;
+
+					.UXFramework-Conversion {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-SignalToNoise {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-MigrationCosts {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+
+					.UXFramework-UXsatisfaction {
+						width: 100%;
+						align-items: center;
+						justify-content: start;
+						display: flex;
+						flex-direction: row;
+						box-sizing: border-box;
+						gap: 4px;
+
+						> p {
+							width: 100%;
+							margin: 0;
+							white-space: nowrap;
+							text-align: left;
+							font-family: 'GTEestiProText-Regular';
+							color: rgb(103, 103, 113);
+						}
+
+						// 第二个字元素
+						:nth-child(2) {
+							font-family: 'GTEestiProText-Bold';
+							color: @text-color-normal;
+						}
+					}
+				}
+			}
+
+			.UXFrameworkLeft_2 {
+				border-radius: 16px;
+				width: 100%;
+				height: auto;
+				box-shadow: 0px 14px 14px  #41447E1F;
+				-moz-box-shadow: 0px 14px 14px  #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+			}
+		}
+	}
+}

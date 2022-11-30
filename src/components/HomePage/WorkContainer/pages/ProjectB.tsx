@@ -11,6 +11,7 @@ import { DividerLight } from './DividerLight/DividerLight'
 import UserNPS from './UserNPS/UserNPS'
 import { PjbStategy } from './PjbStategy/PjbStategy'
 import UXFrameWork from './UXFrameWork/UXFrameWork'
+import EmotionalModel from './EmotionalModel/EmotionalModel'
 
 
 export const ProjectB = () => {
@@ -51,6 +52,9 @@ export const ProjectB = () => {
 
 				{/* UX FrameWork */}
 				<UXFrameWork />
+
+				{/* 个性化设计模型 */}
+				<EmotionalModel />
 			</div>
 		</>
 	)
