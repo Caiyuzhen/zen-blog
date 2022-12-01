@@ -13,6 +13,7 @@ import { PjbStategy } from './PjbStategy/PjbStategy'
 import UXFrameWork from './UXFrameWork/UXFrameWork'
 import EmotionalModel from './EmotionalModel/EmotionalModel'
 import VirtualAvatar from './VirtualAvatar/VirtualAvatar'
+import PfWidget from './PfWidget/PfWidget'
 
 
 export const ProjectB = () => {
@@ -36,16 +37,16 @@ export const ProjectB = () => {
 					<img src={topImg} alt="" />
 				</div>
 
-				{/* 项目介绍 */}
+				{/* project intro */}
 				<BasicInfoPrpjectB />
 
-				{/* 分割线 */}
+				{/* divider */}
 				<DividerLight />
 				
 				{/* 用户 NPS */}
 				<UserNPS />
 
-				{/* 分割线 */}
+				{/* divider */}
 				<DividerLight />
 
 				{/* UX Stategy */}
@@ -54,11 +55,14 @@ export const ProjectB = () => {
 				{/* UX FrameWork */}
 				<UXFrameWork />
 
-				{/* 个性化设计模型 */}
+				{/* design model */}
 				<EmotionalModel />
 
-				{/* 虚拟形象 */}
+				{/* avatar */}
 				<VirtualAvatar />
+
+				{/* Profile */}
+				<PfWidget />
 			</div>
 		</>
 	)
