@@ -1,0 +1,883 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+
+@media screen and (max-width: @mediaWidth-Max) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 1452px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobileFramework {
+				width:244px;
+			}
+
+			.mobileCoverDefault {
+				width:244px;
+			}
+
+			.mobileCoverDark {
+				width:244px;
+			}
+
+			.mobileCoverLight {
+				width:244px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1680px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobileFramework {
+				width:244px;
+			}
+
+			.mobileCoverDefault {
+				width:244px;
+			}
+
+			.mobileCoverDark {
+				width:244px;
+			}
+
+			.mobileCoverLight {
+				width:244px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1320px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobileFramework {
+				width:204px;
+			}
+
+			.mobileCoverDefault {
+				width:204px;
+			}
+
+			.mobileCoverDark {
+				width:204px;
+			}
+
+			.mobileCoverLight {
+				width:204px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1160px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.mobileFramework {
+				width:184px;
+			}
+
+			.mobileCoverDefault {
+				width:184px;
+			}
+
+			.mobileCoverDark {
+				width:184px;
+			}
+
+			.mobileCoverLight {
+				width:184px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 0px;
+			margin-top: -40px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+			}
+
+			.mobileCoverDefault {
+				width:164px;
+			}
+
+			.mobileCoverDark {
+				width:164px;
+			}
+
+			.mobileCoverLight {
+				width:164px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 940px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 0px;
+			margin-top: -120px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width:184px;
+			}
+
+			.mobileCoverDark {
+				width:184px;
+			}
+
+			.mobileCoverLight {
+				width:184px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 840px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 0px;
+			margin-top: -70px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width:164px;
+			}
+
+			.mobileCoverDark {
+				width:164px;
+			}
+
+			.mobileCoverLight {
+				width:164px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 760px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 0px;
+			margin-top: -70px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width:144px;
+			}
+
+			.mobileCoverDark {
+				width:144px;
+			}
+
+			.mobileCoverLight {
+				width:144px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 700px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 0px;
+			margin-top: -70px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width:124px;
+			}
+
+			.mobileCoverDark {
+				width:124px;
+			}
+
+			.mobileCoverLight {
+				width:124px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 620px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 12px;
+			margin-top: -70px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width:104px;
+			}
+
+			.mobileCoverDark {
+				width:104px;
+			}
+
+			.mobileCoverLight {
+				width:104px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 54px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 12px;
+			margin-top: -10px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width: 124px;
+			}
+
+			.mobileCoverDark {
+				width:124px;
+			}
+
+			.mobileCoverLight {
+				width: 124px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px) {  
+	.mobile-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 54px;
+		box-sizing: border-box;
+		gap: 28px;
+
+		.mobile-main-topInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			box-sizing: border-box;
+			gap: 12px;
+			margin-top: -10px;
+
+			.mobile-main-top-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}	
+			.mobile-main-top-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+			}
+		}
+
+		.mobile-main-bottomPic {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			box-sizing: border-box;
+			gap: 24px;
+			margin-top: -4px;
+
+			.mobileFramework {
+				width:164px;
+				display: none;
+			}
+
+			.mobileCoverDefault {
+				width: 74px;
+			}
+
+			.mobileCoverDark {
+				width:74px;
+			}
+
+			.mobileCoverLight {
+				width: 74px;
+			}
+		}
+	}
+}

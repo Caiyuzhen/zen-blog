@@ -14,6 +14,8 @@ import UXFrameWork from './UXFrameWork/UXFrameWork'
 import EmotionalModel from './EmotionalModel/EmotionalModel'
 import VirtualAvatar from './VirtualAvatar/VirtualAvatar'
 import PfWidget from './PfWidget/PfWidget'
+import IMCover from './IMCover/IMCover'
+import MobileCover from './MobileCover/MobileCover'
 
 
 export const ProjectB = () => {
@@ -63,6 +65,12 @@ export const ProjectB = () => {
 
 				{/* Profile */}
 				<PfWidget />
+
+				{/* IMCover */}
+				<IMCover />
+
+				{/* Mobile */}
+				<MobileCover />
 			</div>
 		</>
 	)
