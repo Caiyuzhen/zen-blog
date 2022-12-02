@@ -1,5 +1,5 @@
 import React from 'react'
-import gradualArrow from '../../../../../assets/svg/icon-gradualArrow.svg'
+import gradualArrow from '../../../../../assets/svg/icon-gradualArrowBlue.svg'
 import './BasicInfoPrpjectB.less'
 import IncubateIcon from '../../../../../assets/svg/icon-Incubate.svg'
 import lookForInnovationIcon from '../../../../../assets/svg/icon-lookForInnovation.svg'

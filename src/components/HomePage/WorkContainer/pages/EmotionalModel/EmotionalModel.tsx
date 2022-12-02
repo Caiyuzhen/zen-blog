@@ -1,6 +1,6 @@
 import React from 'react'
 import './EmotionalModel.less'
-import gradualArrow from '../../../../../assets/svg/icon-gradualArrow.svg'
+import gradualArrow from '../../../../../assets/svg/icon-gradualArrowBlue.svg'
 import bendingLine from '../../../../../assets/svg/line-bendingLine.svg'
 
 
