@@ -22,8 +22,8 @@ export const MobileCover = () => {
 				<div className="mobile-main-bottomPic">
 					<img src={mobileFramework} alt="" className="mobileFramework"/>
 					<img src={mobileCoverDefault} alt="" className="mobileCoverDefault"/>
-					<img src={mobileCoverDark} alt="" className="mobileCoverDark"/>
 					<img src={mobileCoverLight} alt="" className="mobileCoverLight"/>
+					<img src={mobileCoverDark} alt="" className="mobileCoverDark"/>
 				</div>
 			</div>
 		</>

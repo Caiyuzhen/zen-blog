@@ -16,6 +16,7 @@ import VirtualAvatar from './VirtualAvatar/VirtualAvatar'
 import PfWidget from './PfWidget/PfWidget'
 import IMCover from './IMCover/IMCover'
 import MobileCover from './MobileCover/MobileCover'
+import AiGenerare from './AiGenerare/AiGenerare'
 
 
 export const ProjectB = () => {
@@ -71,6 +72,9 @@ export const ProjectB = () => {
 
 				{/* Mobile */}
 				<MobileCover />
+
+				{/* Ai */}
+				<AiGenerare />
 			</div>
 		</>
 	)
