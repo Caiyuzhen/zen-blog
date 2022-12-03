@@ -50,7 +50,7 @@ export const BasicInfoPrpjectB = () => {
 						</div>
 					</div>
 
-					<img src={gradualArrow} alt="" className='gradualArrow-right'/>
+					<img src={gradualArrow} alt="" className="gradualArrow-right"/>
 
 					<div className="basic-projectB-right">
 						<p>basic info describe basic info</p>

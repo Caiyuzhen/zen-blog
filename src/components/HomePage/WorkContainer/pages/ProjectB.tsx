@@ -17,6 +17,8 @@ import PfWidget from './PfWidget/PfWidget'
 import IMCover from './IMCover/IMCover'
 import MobileCover from './MobileCover/MobileCover'
 import AiGenerare from './AiGenerare/AiGenerare'
+import VcConcept from './VcConcept/VcConcept'
+import { VcStructure } from './VcStructure/VcStructure'
 
 
 export const ProjectB = () => {
@@ -75,6 +77,12 @@ export const ProjectB = () => {
 
 				{/* Ai */}
 				<AiGenerare />
+
+				{/* VC Concept */}
+				<VcConcept />
+
+				{/* VC Structure */}
+				<VcStructure />
 			</div>
 		</>
 	)
