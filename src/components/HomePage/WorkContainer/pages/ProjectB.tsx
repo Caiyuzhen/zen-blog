@@ -19,6 +19,8 @@ import MobileCover from './MobileCover/MobileCover'
 import AiGenerare from './AiGenerare/AiGenerare'
 import VcConcept from './VcConcept/VcConcept'
 import { VcStructure } from './VcStructure/VcStructure'
+import PjbData from './PjbData/PjbData'
+import BackToTopDark from './BackToTopDark/BackToTopDark'
 
 
 export const ProjectB = () => {
@@ -83,6 +85,15 @@ export const ProjectB = () => {
 
 				{/* VC Structure */}
 				<VcStructure />
+
+				{/* divider */}
+				<DividerLight />
+
+				{/* 数据 */}
+				<PjbData />
+
+				{/* 返回顶部 */}
+				<BackToTopDark />
 			</div>
 		</>
 	)

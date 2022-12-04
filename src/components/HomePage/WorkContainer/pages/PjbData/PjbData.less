@@ -1,0 +1,2927 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+// 引入谷歌字体
+@font-face {
+	font-family: 'Readex-Pro-medium';
+	src: url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap');
+}
+
+
+@media screen and (max-width: @mediaWidth-Max) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 1680px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 560px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 560px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 1680px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 70%;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 70%;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.geometricBg {
+			width: 350px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1920px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 880px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 70%;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 560px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 880px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+
+			justify-content: space-around;
+			box-sizing: border-box;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 560px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 40px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 560px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 70%;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.geometricBg {
+			width: 350px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1580px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+		margin-bottom: 100px;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 580px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 70%;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 580px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.geometricBg {
+			width: 350px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1240px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+		margin-bottom: 100px;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.95;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 360px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 360px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 360px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 360px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 360px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.95;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 400px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 350px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1170px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+		margin-bottom: 100px;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.9;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 360px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 360px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 360px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 360px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 360px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.9;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 400px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 350px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+		margin: -50px 0 80px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.8;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 360px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 360px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 360px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(40px);
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 360px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 360px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.8;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(40px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 400px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 310px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1000px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 40px;
+		position: relative;
+		margin: -50px 0 80px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.75;
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(-60px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 360px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(80px);
+
+				.arrGreenDown {
+					width: 68px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			box-sizing: border-box;
+			margin-right: 80px;
+			scale: 0.75;
+
+			// NPS
+			.PjbData-nps-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(-60px);
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 360px;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(80px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 400px;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 310px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		gap: 20px;
+		position: relative;
+		margin: -80px 0 30px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			scale: 0.95;
+			transform: translateX(70px);
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 64px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				box-sizing: border-box;
+				transform: translateX(37px);
+
+				.arrGreenDown {
+					width: 64px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			// margin-right: 80px;
+			scale: 0.95;
+			transform: translateX(70px);
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 310px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 760px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		// gap: 20px;
+		position: relative;
+		margin: -120px 0 -10px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			scale: 0.85;
+			transform: translateX(10px);
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 64px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				box-sizing: border-box;
+				transform: translateX(37px);
+
+				.arrGreenDown {
+					width: 64px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			// margin-right: 80px;
+			scale: 0.85;
+			transform: translate(10px, -20px);
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 310px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 124px;
+		box-sizing: border-box;
+		// gap: 20px;
+		position: relative;
+		margin: -120px 0 -10px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			scale: 0.76;
+			transform: translateX(30px);
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 64px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				box-sizing: border-box;
+				transform: translateX(37px);
+
+				.arrGreenDown {
+					width: 64px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			// margin-right: 80px;
+			scale: 0.76;
+			transform: translate(33px, -70px);
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 280px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 54px;
+		box-sizing: border-box;
+		// gap: 20px;
+		position: relative;
+		margin: -120px 0 -10px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			scale: 0.76;
+			transform: translateX(10px);
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 64px;
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrGreenDown {
+					width: 64px;
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			// margin-right: 80px;
+			scale: 0.76;
+			transform: translate(7px, -70px);
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+				
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 68px;
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 240px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px) {	 
+	.PjbData-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 54px;
+		box-sizing: border-box;
+		// gap: 20px;
+		position: relative;
+		margin: -130px 0 -120px 0;
+
+		// 顶部数据
+		.PjbData-top-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			scale: 0.6;
+			transform: translateX(-30px);
+
+			// 满意度
+			.PjbData-user-statisfaction-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 64px;
+					transform: translateX(-2px);
+				}
+
+				.PjbData-user-statisfaction-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 信噪问题
+			.PjbData-noiserRatio-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(35px);
+
+				.arrGreenDown {
+					width: 64px;
+					transform: translateX(2px);
+				}
+
+				.PjbData-noiserRatio-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		// 底部数据
+		.PjbData-bottom-dataContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+			// margin-right: 80px;
+			scale: 0.6;
+			transform: translate(-27px, -160px);
+
+			// NPS
+			.PjbData-nps-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+				
+				.arrUp {
+					width: 68px;
+					transform: translateX(-6px);
+				}
+
+				.PjbData-nps-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+
+			// 可用性测试
+			.PjbData-usability-container {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: 24px;
+				box-sizing: border-box;
+				transform: translateX(36px);
+
+				.arrUp {
+					width: 68px;
+					transform: translateX(-6px);
+				}
+
+				.PjbData-usability-rightContainer {
+					width: 100%;
+					height: auto;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+					gap: 12px;
+					box-sizing: border-box;
+					
+					:nth-child(1) {
+						width: 400px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: #5F647C;
+						text-align: left;
+						margin: 0;
+					}
+
+					:nth-child(2) {
+						width: 400px;
+						font-family: 'GTEestiProText-Bold';
+						font-size: @text-TitleSize; //32px
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						text-align: left;
+						line-height: 1.25;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		
+		.geometricBg {
+			width: 240px;
+			position: absolute;
+			top: 20px;
+			right: -80px;
+		}
+	}
+}
