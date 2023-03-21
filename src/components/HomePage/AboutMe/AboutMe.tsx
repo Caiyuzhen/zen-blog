@@ -11,7 +11,7 @@ import zhiHu from '../../../assets/svg/icon-zhihu.svg'
 import dribble from '../../../assets/svg/icon-dribble.svg'
 import discord from '../../../assets/svg/icon-discord.svg'
 import jueJin from '../../../assets/svg/icon-jueJin.svg'
-import ZenoAvatar from '../../../assets/img/ZenoAvatar-normal.png'
+import ZenoAvatar from '../../../assets/img/avatar/ZenoAvatar-normal.png'
 import changeIcon from '../../../assets/svg/icon-tran.svg'
 import contactInfo from '../../../assets/svg/icon-contact.svg'
 import book from '../../../assets/svg/icon-book.svg'
@@ -48,6 +48,7 @@ const AboutMe:FC = () => {
 			</div>
 
 			<div className="bottom-container">
+				{/* Basic info toggle effect */}
 				<div className="card-personal"
 					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
 					onMouseLeave={ ()=>cursorChangeHandler('') }
@@ -60,6 +61,7 @@ const AboutMe:FC = () => {
 						<p>I'm a UX designer  and Front-end development enthusiasts from HongKong, Now I live in Shenzhen. My previous experience has focused on efficiency tools and communication tools. I'm also interested in some development libraries, so please feel free to share with me! 👏 </p>
 					</div>
 				</div>
+				
 				<div className="card-github"
 					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
 					onMouseLeave={ ()=>cursorChangeHandler('') }

@@ -1,2 +1,5 @@
-# 启动项目
-npm run dev
+# RunPrj
+- node server
+- npm run dev
+
+ 

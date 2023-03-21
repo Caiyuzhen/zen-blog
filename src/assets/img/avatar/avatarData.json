@@ -1,0 +1,27 @@
+//写一个关于头像的 json 格式 avatar-01
+{
+	"avatar-01": {
+		"name": "avatar-01",
+		"url": "assets/img/avatar/avatar-01.png"
+  	},
+	  	"avatar-02": {
+		"name": "avatar-02",
+		"url": "assets/img/avatar/avatar-02.png"
+  	},
+	  	"avatar-03": {
+		"name": "avatar-03",
+		"url": "assets/img/avatar/avatar-03.png"
+  	},
+	  	"avatar-04": {
+		"name": "avatar-04",
+		"url": "assets/img/avatar/avatar-04.png"
+  	},
+	  	"avatar-05": {
+		"name": "avatar-05",
+		"url": "assets/img/avatar/avatar-05.png"
+  	},
+	  	"avatar-06": {
+		"name": "avatar-06",
+		"url": "assets/img/avatar/avatar-06.png"
+  	}
+}
