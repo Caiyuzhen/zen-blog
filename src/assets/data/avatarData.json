@@ -1,33 +1,38 @@
-//写一个关于头像的 json 格式 avatar-01
-{
-	"avatar-01": {
+[
+	{
+		"id": 0,
 		"name": "avatar-01",
-		"url": "assets/img/avatar/avatar-01.png",
-		"describe": "this is some description."
+		"url": "../../../../../src/assets/img/avatar/avatar-01.png",
+		"describe": "I'm a UX designer  and Front-end development enthusiasts from HongKong, Now I live in Shenzhen. My previous experience has focused on efficiency tools and communication tools. I'm also interested in some development libraries, so please feel free to share with me! 👏 "
   	},
-	  	"avatar-02": {
+	{
+		"id": 1,
 		"name": "avatar-02",
-		"url": "assets/img/avatar/avatar-02.png",
-		"describe": "this is some description."
+		"url": "../../../../../src/assets/img/avatar/avatar-02.png",
+		"describe": "this is some description 2."
   	},
-	  	"avatar-03": {
+	{
+		"id": 2,
 		"name": "avatar-03",
-		"url": "assets/img/avatar/avatar-03.png",
-		"describe": "this is some description."
+		"url": "../../../../../src/assets/img/avatar/avatar-03.png",
+		"describe": "this is some description 3."
   	},
-	  	"avatar-04": {
+	{
+		"id": 3,
 		"name": "avatar-04",
-		"url": "assets/img/avatar/avatar-04.png",
-		"describe": "this is some description."
+		"url": "../../../../../src/assets/img/avatar/avatar-04.png",
+		"describe": "this is some description 4."
   	},
-	  	"avatar-05": {
+	{
+		"id": 4,
 		"name": "avatar-05",
-		"url": "assets/img/avatar/avatar-05.png",
-		"describe": "this is some description."
+		"url": "../../../../../src/assets/img/avatar/avatar-05.png",
+		"describe": "this is some description 5."
   	},
-	  	"avatar-06": {
+	{
+		"id": 5,
 		"name": "avatar-06",
-		"url": "assets/img/avatar/avatar-06.png",
-		"describe": "this is some description."
+		"url": "../../../../../src/assets/img/avatar/avatar-06.png",
+		"describe": "this is some description 6."
   	}
-}
+]
