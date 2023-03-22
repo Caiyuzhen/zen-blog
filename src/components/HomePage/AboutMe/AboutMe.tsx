@@ -18,7 +18,7 @@ import book from '../../../assets/svg/icon-book.svg'
 import download from '../../../assets/svg/icon-download.svg'
 import profilePDF from '../../../assets/pdf/test.pdf'
 import { MouseContext } from '../../Mouse/useMouseContext'
-
+import {PersonalCard} from './personalCard/personalCard'
 
 const AboutMe:FC = () => {
 
@@ -49,7 +49,9 @@ const AboutMe:FC = () => {
 
 			<div className="bottom-container">
 				{/* Basic info toggle effect */}
-				<div className="card-personal"
+				{/* PersonalCard 的实例 */}
+				{/* <PersonalCard /> */}
+				{/* <div className="card-personal"
 					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
 					onMouseLeave={ ()=>cursorChangeHandler('') }
 				> 
@@ -60,7 +62,7 @@ const AboutMe:FC = () => {
 					<div className="personal-descrip">
 						<p>I'm a UX designer  and Front-end development enthusiasts from HongKong, Now I live in Shenzhen. My previous experience has focused on efficiency tools and communication tools. I'm also interested in some development libraries, so please feel free to share with me! 👏 </p>
 					</div>
-				</div>
+				</div> */}
 				
 				<div className="card-github"
 					onMouseEnter={ ()=>cursorChangeHandler('hovered') }
