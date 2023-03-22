@@ -69,9 +69,8 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 			// 获得 avatar 元素
 			const avatar = document.querySelector('#avatar') as HTMLImageElement
 			const btn = document.querySelector('.changeAvatar') as HTMLImageElement
-			avatar.style.transform = 'scale(0.9)'
-			btn.style.transform = 'scale(0.9)'
-			btn.style.transform = 'rotate(720deg)'
+			avatar.style.transform = 'scale(0.9) rotate(-12deg)'
+			btn.style.transform = 'scale(0.9) rotate(720deg)'
 		}
 	}
 
@@ -81,9 +80,8 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 			// 获得 avatar 元素
 			const avatar = document.querySelector('#avatar') as HTMLImageElement
 			const btn = document.querySelector('.changeAvatar') as HTMLImageElement
-			avatar.style.transform = 'scale(1)'
-			btn.style.transform = 'scale(1)'
-			btn.style.transform = 'rotate(360deg)'
+			avatar.style.transform = 'scale(1) rotate(0deg)'
+			btn.style.transform = 'scale(1) rotate(360deg)'
 		}
 	}
 
