@@ -2,7 +2,7 @@ import React from 'react'
 import { MouseContext } from '../../../Mouse/useMouseContext'
 import changeIcon from '../../../../../src/assets/svg/icon-tran.svg'
 import ZenoAvatar from '../../../../../src/assets/img/avatar/ZenoAvatar-normal.png' //默认头像
-
+import './personalCard.less'
 
 interface ICursor {
 	cursorType: string;
@@ -48,20 +48,53 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 		}
 		// 修改 state 内的随机数
 		this.setState({num: newRandomNum})
-
 		// const {url} = this.state.allAvatarData[randomNum] //随机数对应的 url , 解构赋值
 		// const {describe} = this.state.allAvatarData[randomNum] //随机数对应的 describe , 解构赋值
 		// console.log(url, describe);
+	}
+
+	handleRotateIn() {
+		const btn = document.querySelector('.changeAvatar') as HTMLImageElement
+		btn.style.transform = 'rotate(360deg)'
+	}
+
+	handleRotateOut() {
+		const btn = document.querySelector('.changeAvatar') as HTMLImageElement
+		btn.style.transform = 'rotate(-360deg)'
+	}
+
+	handleAvatarMouseDown() {
+		// 如果有数据才执行
+		if(this.state.allAvatarData.length > 0) {
+			// 获得 avatar 元素
+			const avatar = document.querySelector('#avatar') as HTMLImageElement
+			const btn = document.querySelector('.changeAvatar') as HTMLImageElement
+			avatar.style.transform = 'scale(0.9)'
+			btn.style.transform = 'scale(0.9)'
+			btn.style.transform = 'rotate(720deg)'
+		}
+	}
+
+	handleAvatarMouseUp() {
+		// 如果有数据才执行
+		if(this.state.allAvatarData.length > 0) {
+			// 获得 avatar 元素
+			const avatar = document.querySelector('#avatar') as HTMLImageElement
+			const btn = document.querySelector('.changeAvatar') as HTMLImageElement
+			avatar.style.transform = 'scale(1)'
+			btn.style.transform = 'scale(1)'
+			btn.style.transform = 'rotate(360deg)'
+		}
 	}
 
 	
 	render(){
 		// console.log(this.state.allAvatarData[1]); // 测试 fetch 到的数据
 		if(this.state.allAvatarData.length === 0) return null //如果没有数据, 就不渲染, 因为是异步函数！
-		const {url, describe} = this.state.allAvatarData[this.state.num]
+		const {url, describe} = this.state.allAvatarData[this.state.num] //随机数对应的 url , 解构赋值
 		// console.log(url, describe)
 
-		const { cursorType, cursorChangeHandler } = this.props
+		const { cursorType, cursorChangeHandler } = this.props //从函数组件中传入的 props 数据
 	
         return(
             <div className="card-personal"
@@ -69,12 +102,18 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 					onMouseLeave={ ()=>cursorChangeHandler('') }
 				> 
 					<div className="avatar-container">
-						<img className="avatar" src={url} alt="" />
-						{/* changeIcon */}
+						<img className="avatar" id="avatar" src={url} alt="" />
 						<img 
 							className="changeAvatar" src={changeIcon} alt="" 
-							// 点击
-							onClick={this.handleChangeAvatar.bind(this)}
+							onClick={ () => { //箭头函就不需要 bind(this) 了
+								this.handleChangeAvatar()}
+							}
+							onMouseEnter={ ()=>this.handleRotateIn()}
+							onMouseLeave={ ()=>this.handleRotateOut()}
+							onMouseDown={ ()=>this.handleAvatarMouseDown()
+							}
+							onMouseUp={ ()=>this.handleAvatarMouseUp()
+							}
 						/> 
 					</div>
 					<div className="personal-description">
