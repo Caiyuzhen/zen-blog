@@ -40,6 +40,7 @@ export type IArticleList = {
 	date: string,
 	hashTag: string,
 	img? : string, //string 类型
+	// clickHandler?: (id: string) => void
 }
 
 

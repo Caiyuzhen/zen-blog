@@ -11,9 +11,7 @@ import { MouseContext } from '../../Mouse/useMouseContext'
 import axios from 'axios' //导入 axios 库
 import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/global' //导入全局类型
 import {InspireNavContext} from '../../../utils/Tabcontext'
-// import img1 from '../../../../src/assets/img/article-img-01.jpg'
-
-
+// import img1 from '../../../../src/assets/img/article-img-01.jpg'=
 
 
 const Articles = () => {
@@ -49,17 +47,16 @@ const Articles = () => {
 
 	// 【💎第一步 - 获得全量数据】获取灵感卡片的数据
 	const [allinspireContextData, setallinspireContextData] = useState<IinspireCardContent[]>([]) //存放所有数据
-	
-	async function getInspiraCardList() {
-		const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
-		const inspireCard = res.data.data
-		setallinspireContextData(inspireCard)
-	}
+
 
 	useEffect(() => {
+		async function getInspiraCardList() {
+			const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
+			const inspireCard = res.data.data
+			setallinspireContextData(inspireCard)
+		}
 		getInspiraCardList()
 	},[])
-
 
 
 
@@ -67,7 +64,7 @@ const Articles = () => {
 	//【💎第二步 - 定义改变页数的 hook】定义改变当前页的工具函数, 然后【🔥🔥需要把这个工具函数暴露给 Nav 组件, 以便 Nav 组件可以改变当前页】
 	const [currentPage, setCurrentPage] = useState(function() { //初始值为函数的返回值
 		return {
-			current: 0, //当前渲染哪一页, 🔥取值需要通过【currentPage.current】！, 默认为第一页 0, 然后需要传递给下面的 div 渲染来判断渲染哪一页！
+			current: 0, //当前默认渲染哪一页, 🔥取值需要通过【currentPage.current】！, 默认为第一页 0, 然后需要传递给下面的 div 渲染来判断渲染哪一页！
 		}
 	})
 	// 包裹【缓存分页处理函数返回的数据】, 传入为最新的值
@@ -108,14 +105,29 @@ const Articles = () => {
 	}
 
 	useEffect(() => {
-		createNewArr(allinspireContextData, 3)//执行切割方法
+		createNewArr(allinspireContextData, 3)//执行切割方法, 分为 3 份
 		// console.log('最终的数据:',inspireArr[0]);
 		// console.log(inspireArr[2])//最终每个 tab 的数据
 	}, [allinspireContextData])//获得 api 数据后再切割
 	// const designTab = allinspireContextData.slice(0,3) //切分为四组内容
 
 
+
+
 	
+	const [mdText, setMdText] = useState("")
+
+// 🔥🔥这部错了，不能一直发送请求
+	function getMdText() {
+		const mdPathArr = articleData.des //md 路径
+							
+			axios.get(mdPathArr).then(res => {	// 发送 axios 获得 md 内的字符串, 并把所有数据保存到一个变量中
+				setMdText(res.data)
+				// console.log(res.data)
+		})
+	}
+	
+
 
 	return (
 		<div className="article-main-container">
@@ -135,12 +147,16 @@ const Articles = () => {
 					{/* 渲染 [文章列表] 数据 */}
 					{
 						articleList && articleList.map((articleData, index:number) => {
+
+				
+
+
 							return (
 								<div key={index}>
 									<ArticleCard 
 										id={articleData.id}
 										title={articleData.title}
-										des={articleData.des}
+										des={mdText}
 										date={articleData.date}
 										hashTag={articleData.hashTag}
 										img={articleData.img}

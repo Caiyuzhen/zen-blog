@@ -8,3 +8,9 @@ declare module '*.module.less' {
   //引入第三方库需要声明一下！
 declare module '*.less'
 declare module 'react-tilty' 
+// declare module 'react-markdown'
+// declare module 'marked'
+// declare module 'marked' {
+// 	const marked: any;
+// 	export default marked;
+// }

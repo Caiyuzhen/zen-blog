@@ -245,3 +245,115 @@
 	}
 }
 
+// 页面展开情况的类 ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+.article-card-fullPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:28px;
+	padding: 128px;
+	transition: all 0.15s ease-out;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(90px);
+	width: 100vw;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999 !important;
+	transition: all 0.25s ease-out;
+	box-sizing: border-box;
+
+
+	> img {
+		width:400px;
+		height: auto;
+		border-radius: 10px;
+		box-shadow: 
+			0px 0px 1px rgba(32, 28, 94, 0.1),
+			4px 8px 16px rgba(32, 28, 94, 0.2);
+	}
+
+	.right-container {
+		padding-top: 12px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		color: #22233D;
+
+		.title {
+			margin: 0;
+			text-align: left;
+			width: 100%;
+			font-family: 'RammettoOne';
+			font-size: 22px;
+			line-height: 1.6;
+			text-align: center;
+			//👇最多 2 行，超过则 ...
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		p {
+			margin: 16px 0 12px 0;
+			text-align: left;
+			width: 100%;
+			text-align: center;
+			//👇最多 3 行，超过则 ...
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 16px;
+			font-family: 'GTEestiProText-Regular';
+		}
+
+		.metaInfo {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			.inline-author {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-weight: 600;
+
+				img {
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					margin-bottom: 2px; //视觉居中
+				}
+
+				.author {
+					font-size: 14px;
+					font-family: 'GTEestiProText-Medium';
+				}
+			}
+
+			.time {
+				font-size: 14px;
+				color: #f2f2f2;
+				font-family: 'GTEestiProText-Medium';
+			}
+
+			.hashTag {
+				font-size: 14px;
+				padding: 2px 6px 2px 6px;
+				width: auto;
+				border-radius: 6px;
+				background-color:  rgba(172, 171, 255, 0.4);
+				backdrop-filter: blur(10px);//🔥毛玻璃效果
+				font-family: 'GTEestiProText-Medium';
+			}
+		}
+		
+	}
+}
+
