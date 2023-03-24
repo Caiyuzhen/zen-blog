@@ -110,22 +110,6 @@ const Articles = () => {
 		// console.log(inspireArr[2])//最终每个 tab 的数据
 	}, [allinspireContextData])//获得 api 数据后再切割
 	// const designTab = allinspireContextData.slice(0,3) //切分为四组内容
-
-
-
-
-	
-	const [mdText, setMdText] = useState("")
-
-// 🔥🔥这部错了，不能一直发送请求
-	function getMdText() {
-		const mdPathArr = articleData.des //md 路径
-							
-			axios.get(mdPathArr).then(res => {	// 发送 axios 获得 md 内的字符串, 并把所有数据保存到一个变量中
-				setMdText(res.data)
-				// console.log(res.data)
-		})
-	}
 	
 
 
@@ -148,15 +132,15 @@ const Articles = () => {
 					{
 						articleList && articleList.map((articleData, index:number) => {
 
-				
-
+							console.log(articleData.id)
+							const mdPathArr = articleData.des //得到所有 md 路径
 
 							return (
 								<div key={index}>
 									<ArticleCard 
 										id={articleData.id}
 										title={articleData.title}
-										des={mdText}
+										des={mdPathArr}
 										date={articleData.date}
 										hashTag={articleData.hashTag}
 										img={articleData.img}
@@ -188,7 +172,7 @@ const Articles = () => {
 					 onMouseLeave={ ()=>{cursorChangeHandler('')} }
 				>
 
-					{/* 🚗二：打包要传递 useContext 的值！🔥🔥记得把 <SideNav/> 组件包裹进去！不然它不能获得数据！！ */}
+					{/* 🚗二：打包要传递 useContext 的值！👉记得把 <SideNav/> 组件包裹进去！不然它不能获得数据！！ */}
 					<InspireNavContext.Provider value={value} >
 						<SideNav />
 						<div className="content-container">
