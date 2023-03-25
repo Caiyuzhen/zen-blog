@@ -15,7 +15,8 @@ export const InspiraCard: FC<IProps> = ({
 	content, 
 	time, 
 	author,
-	hashTag})  => {
+	hashTag,
+	title})  => {
 
 	const [isfullPage, setFullPage] = useState(false) 
 	const [cardTop, setCardTop] = useState(0) //记录卡片相对页面顶部的距离, 用于返回时滚动回去
@@ -50,6 +51,9 @@ export const InspiraCard: FC<IProps> = ({
 					</div>
 				)}
 
+				{isfullPage && ( //详情页才展示标题
+					<div className="inspire-title">{title}</div>
+				)}
 				<p> {content} </p>
 				<div className="metaInfo">
 					<div className="inline-author">

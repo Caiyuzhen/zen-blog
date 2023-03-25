@@ -169,6 +169,7 @@ const Articles = () => {
 						}
 					</div>
 				</div>
+				</articleClickContext.Provider> 
 
 
 				{/* 分割线 */}
@@ -206,6 +207,7 @@ const Articles = () => {
 														time={inspireCardData.time}
 														author={inspireCardData.author}
 														hashTag={inspireCardData.hashTag}
+														title={inspireCardData.title}
 													/>
 												</div>
 											)
@@ -218,8 +220,6 @@ const Articles = () => {
 				</div>
 
 				<img src={rightGridImg} alt="" className="rightGridImg"/>
-
-			</articleClickContext.Provider> 
 		</div>
 	)
 }

@@ -10,11 +10,11 @@ export default defineConfig({
 		// port: 3005,
 		// open: true, // 在服务器启动时自动在浏览器中打开应用程序
 		proxy: { //代理配置以避免跨域问题
-				'/api': {
-					target: 'http://localhost:3005',  //代理接口
-					changeOrigin: true,
-					rewrite: (path) => path.replace(/^\/api/, '')
-				},		
-			},
+			'/api': {
+				target: 'http://localhost:3005',  //代理接口
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/api/, '')
+			},		
+		},
 	},
 })

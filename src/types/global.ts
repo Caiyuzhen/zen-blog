@@ -58,6 +58,7 @@ export type IinspireCardContent = {
 	time: string,
 	author: string,
 	hashTag: string,
+	title: string,
 }
 
 // 交叉观察器的类型

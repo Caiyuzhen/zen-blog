@@ -35,9 +35,10 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 		<div className={isfullPage ? "article-card-fullPage" : "article-card"}
 			id={id}
 			onClick={() => {
-					// 把 articleCardClick 改为 true, 用来改变 inspired-container 的 z-index 层级, 本质上是上一层组件把一个 hook 工具通过 context 的方式传过来了👀
-					setArticleCardClick(true)
-					if(!isfullPage) {setFullPage(!isfullPage)}} //点击卡片进入详情, 进入详情后只能点击返回按钮
+				// 把 articleCardClick 改为 true, 用来改变 inspired-container 的 z-index 层级, 本质上是上一层组件把一个 hook 工具通过 context 的方式传过来了👀
+				setArticleCardClick(true)
+				window.scrollTo(0, 0) // 滚动到页面顶部
+				if(!isfullPage) {setFullPage(!isfullPage)}} //点击卡片进入详情, 进入详情后只能点击返回按钮
 			}>
 
 			{isfullPage && (//详情页才展示返回按钮

@@ -104,38 +104,88 @@
 	display: flex;
 	flex-direction: column;
 	padding: 24px;
-	border-radius: 24px;
 	transition: all 0.15s ease-out;
 	width: 100vw;
 	height: 100%;
+	padding: 128px 280px;
 	background: rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(90px);
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1000 !important;
+	box-sizing: border-box;
 
-
-	p {
+	// 返回按钮
+	.article-backIcon-wrapper {
 		width: 100%;
-		margin: 16px 0 12px 0;
-		color: #f2f2f2;
-		text-align: left;
-		//👇最多 3 行，超过则 ...
+		display: flex;
+		position: absolute;
+		justify-content: flex-start;
+		left: 52px;
+		top: 48px;
+		cursor: pointer;
+
+		.article-back-circle {
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			border: 1px solid #22233D;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			.article-back-line {
+				position: absolute;
+				left: 20px;
+				transition: all 0.15s ease-out;
+			}
+		}
+	}
+
+	.inspire-title {
+		margin: 0;
+		width: 100%;
+		font-family: 'RammettoOne';
+		font-size: 32px;
+		line-height: 1.6;
+		text-align: center;
+		//👇最多 2 行，超过则 ...
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
 		overflow: hidden;
+		color: #22233D;
 		text-overflow: ellipsis;
+	}
+
+	p {
+		margin: 16px 0 12px 0;
+		text-align: left;
+		width: 70vw;
 		font-size: 16px;
-		font-family: 'GTEestiProText-Medium';
+		line-height: 1.75;
+		color: #22233D;
+		font-family: 'GTEestiProText-Regular';
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: rgba(77, 71, 142, 0.3);
+			margin: 48px 0;
+		}
 	}
 
 	.metaInfo {
 		width: 100%;
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		justify-content: center;
+		gap: 48px;
+		// margin-top: 48px;
 
 		.inline-author {
 			display: flex;
@@ -144,37 +194,32 @@
 			font-weight: 600;
 
 			img {
-				width: 16px;
-				height: 16px;
+				width: 24px;
+				height: auto;
 				border-radius: 50%;
 				margin-bottom: 2px; //视觉居中
 			}
 
 			.author {
-				font-size: 12px;
-				color: #f2f2f2;
-				font-size: 14px;
+				font-size: 16px;
 				font-family: 'GTEestiProText-Medium';
 			}
 		}
 
 		.time {
-			font-size: 12px;
-			color: #f2f2f2;
-			font-size: 14px;
+			font-size: 16px;
+			color: #22233D;
 			font-family: 'GTEestiProText-Medium';
 		}
 
 		.hashTag {
-			font-size: 12px;
+			font-size: 16px;
 			padding: 2px 6px 2px 6px;
 			width: auto;
 			border-radius: 6px;
-			background-color:  rgba(172, 171, 255, 0.4);
-			backdrop-filter: blur(10px);//🔥毛玻璃效果
-			color: #f2f2f2;
-			font-size: 14px;
+			background-color:  rgba(255, 255, 255, 0.4);
 			font-family: 'GTEestiProText-Medium';
+			white-space: nowrap;
 		}
 	}
 }

@@ -45,6 +45,7 @@ const TitleBar:FC<IProps> = ():ReactElement => {
 			<div className="main-nav">
 				<div className="page-logo">
 					<img src={ZenAvatar} decoding="async" alt="" width="40px"/>
+					<span className="page-logo-text">👀 Hi~</span>
 				</div>
 				{/* 判断 filter 是否选中了, 🔥点击后【传值】给子组件，跟【传方法】给子组件 */}
 				<FilterTabs 
