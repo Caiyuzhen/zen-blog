@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useCallback } from 'react'
+import React, { useContext, useEffect, useState, useCallback, createContext, useMemo } from 'react'
 import './Articles.less'
 import { ArticleCard } from './ArticleCard/ArticleCard'
 import rightGridImg from '../../../assets/img/rightGrid.png'
@@ -11,14 +11,30 @@ import { MouseContext } from '../../Mouse/useMouseContext'
 import axios from 'axios' //导入 axios 库
 import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/global' //导入全局类型
 import {InspireNavContext} from '../../../utils/Tabcontext'
-// import img1 from '../../../../src/assets/img/article-img-01.jpg'=
 
 
+// 传递 articleCard 被点击时, article-inspired-container 的 z-index 降低 5 层的数据
+interface iArticleCardClick {
+	articleCardClick: boolean 
+	setArticleCardClick: (data: boolean) => void 
+}
+
+export const articleClickContext = createContext<iArticleCardClick>({ //创建上下文组件来跨组件传递数据 👀
+	articleCardClick: false,
+	setArticleCardClick: () => {}
+})
+
+
+// 核心文章页面
 const Articles = () => {
+
+	// 使用 articleClickContext 上下文数据 👀// 修改 articleCardClick 的值, 用来改变 inspired-container 的 z-index 层级
+	const { articleCardClick, setArticleCardClick } = useContext(articleClickContext)
+	const [articleHasClickHandler_, setArticleHasClickHandler_] = useState<boolean>(articleCardClick) 
+
 
 	// 鼠标圆圈放大效果
 	const { cursorChangeHandler } = useContext(MouseContext)
-
 
 	// 获取文章数据
 	const [articleList, setArticleList] = useState<IArticleList[]>([])
@@ -33,7 +49,6 @@ const Articles = () => {
 	}, [])
 
 
-
 	/*
 	💎前端分页思路:  reference: https://juejin.cn/post/6993273415163445278
 		1. 通过 axios 获取【所有数据】，用 hook 存放 allinspireContextData
@@ -42,7 +57,6 @@ const Articles = () => {
 		4. map 3 中的 hook 来渲染数组, 本质上是通过 -> hook 数组【0】 等取到哪组数据！！
 		5. 在 SideNav 组件中去改变 3 中的 hook 来实现切换内容
 	*/
-
 
 
 	// 【💎第一步 - 获得全量数据】获取灵感卡片的数据
@@ -114,92 +128,98 @@ const Articles = () => {
 
 
 	return (
+
 		<div className="article-main-container">
-
-			{/* 分割线 */}
-			<div className="article-top-trim">
-				<img src={doubleCircle} alt="" className="doubleCircle"/>
-				<span></span>
-			</div>
-
-			<div className="article-top-container">
-				<div className="article-top-leftText">Blogs</div>
-				<div className="article-top-rightContainer"
-					onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
-					onMouseLeave={ ()=>cursorChangeHandler('') }
-				>
-					{/* 渲染 [文章列表] 数据 */}
-					{
-						articleList && articleList.map((articleData, index:number) => {
-
-							// console.log(articleData.id)
-							const mdPathArr = articleData.des //得到所有 md 路径
-
-							return (
-								<div key={index} className="article-card-container">
-									<ArticleCard 
-										id={articleData.id}
-										title={articleData.title}
-										des={mdPathArr}
-										date={articleData.date}
-										hashTag={articleData.hashTag}
-										img={articleData.img}
-									/>
-								</div>
-							)
-						})
-					}
+			{/* 本质上是把这一层的 useState 工具函数传给下一层, 🔥 articleHasClick_ || false 表示如果 articleHasClick_ 是 undefined, 那么就取 false!!*/}
+			<articleClickContext.Provider value={{ articleCardClick: articleHasClickHandler_ || false, setArticleCardClick: setArticleHasClickHandler_}}>  
+				{/* 分割线 */}
+				<div className="article-top-trim">
+					<img src={doubleCircle} alt="" className="doubleCircle"/>
+					<span></span>
 				</div>
-			</div>
 
 
+				{/* 文章列表 */}
+				<div className="article-top-container">
+					<div className="article-top-leftText">Blogs</div>
+					<div className="article-top-rightContainer"
+						onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
+						onMouseLeave={ ()=>cursorChangeHandler('') }
+					>
+						{/* 渲染 [文章列表] 数据 */}
+						{
+							articleList && articleList.map((articleData, index:number) => {
+
+								// console.log(articleData.id)
+								const mdPathArr = articleData.des //得到所有 md 路径
+
+								return (
+									<div key={index} className="article-card-container">
+										<ArticleCard 
+											id={articleData.id}
+											title={articleData.title}
+											des={mdPathArr}
+											date={articleData.date}
+											hashTag={articleData.hashTag}
+											img={articleData.img}
+										/>
+									</div>
+								)
+							})
+						}
+					</div>
+				</div>
 
 
-			{/* 分割线 */}
-			<div className="article-bottom-trim">
-				<span></span>
-				<img src={quota} alt="" className="quota"/>
-			</div>
-			
-
-
-
-			<div className="article-bottom-container">
-				<div className="article-bottom-rightText">Inspiration</div>
+				{/* 分割线 */}
+				<div className="article-bottom-trim">
+					<span></span>
+					<img src={quota} alt="" className="quota"/>
+				</div>
 				
-				<div className="article-inspired-container"
-					 onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
-					 onMouseLeave={ ()=>{cursorChangeHandler('')} }
-				>
 
-					{/* 🚗二：打包要传递 useContext 的值！👉记得把 <SideNav/> 组件包裹进去！不然它不能获得数据！！ */}
-					<InspireNavContext.Provider value={value} >
-						<SideNav />
-						<div className="content-container">
-							{/* 【💎第四步 - 根据 ‘当前页’ 的 hook 来显示哪一页（本质是显示哪一组数组）】, 最终实现渲染（灵感卡片） 数据的渲染*/}
-							{
-								inspireArr[currentPage.current] && inspireArr[currentPage.current].map((inspireCardData: IinspireCardContent, index: number) => {
-									// if(index <= currentPage.current) { //🔥只渲染前 X 个(分页), 也就是 currentPage.current 的值
-										return (
-											<div key={index}>
-												<InspiraCard 
-													id={inspireCardData.id}
-													content={inspireCardData.content}
-													time={inspireCardData.time}
-													author={inspireCardData.author}
-													hashTag={inspireCardData.hashTag}
-												/>
-											</div>
-										)
-									// } else return (null)
-								})
-							}
-						</div>
-					</InspireNavContext.Provider>
+				<div className="article-bottom-container" 
+					/*如果被点击了, 就修改 z-index*/
+					style={{zIndex: articleHasClickHandler_ ? 90 : 99}}> 
+					<div className="article-bottom-rightText">Inspiration</div>
 					
+					{/* 当上面的 articleCard 被点击时, article-inspired-container 的 z-index 降低 5 层 */}
+					<div className="article-inspired-container"
+						onMouseEnter={ ()=>{cursorChangeHandler('hovered')} }
+						onMouseLeave={ ()=>{cursorChangeHandler('')} }
+					>
+						{/* 🚗二：打包要传递 useContext 的值！👉记得把 <SideNav/> 组件包裹进去！不然它不能获得数据！！ */}
+						<InspireNavContext.Provider value={value} >
+							<SideNav />
+							<div className="inspire-content-container">
+								{/* 【💎第四步 - 根据 ‘当前页’ 的 hook 来显示哪一页（本质是显示哪一组数组）】, 最终实现渲染（灵感卡片） 数据的渲染*/}
+								{
+									inspireArr[currentPage.current] && inspireArr[currentPage.current].map((inspireCardData: IinspireCardContent, index: number) => {
+										// if(index <= currentPage.current) { //🔥只渲染前 X 个(分页), 也就是 currentPage.current 的值
+											return (
+												<div key={index} className="inspira-card-container"
+													onMouseEnter={ ()=>{setArticleHasClickHandler_(false)} }
+												>
+													<InspiraCard 
+														id={inspireCardData.id}
+														content={inspireCardData.content}
+														time={inspireCardData.time}
+														author={inspireCardData.author}
+														hashTag={inspireCardData.hashTag}
+													/>
+												</div>
+											)
+										// } else return (null)
+									})
+								}
+							</div>
+						</InspireNavContext.Provider>
+					</div>
 				</div>
-			</div>
-			<img src={rightGridImg} alt="" className="rightGridImg"/>
+
+				<img src={rightGridImg} alt="" className="rightGridImg"/>
+
+			</articleClickContext.Provider> 
 		</div>
 	)
 }

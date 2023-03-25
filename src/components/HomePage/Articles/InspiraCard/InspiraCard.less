@@ -25,6 +25,7 @@
 	padding: 24px;
 	border-radius: 24px;
 	transition: all 0.15s ease-out;
+	z-index: 100;
 
 	&:hover {
 		transition: all 0.15s ease-out;
@@ -33,6 +34,87 @@
 		border-radius: 24px;
 		cursor: pointer;
 	}
+
+	p {
+		width: 100%;
+		margin: 16px 0 12px 0;
+		color: #f2f2f2;
+		text-align: left;
+		//👇最多 3 行，超过则 ...
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 16px;
+		font-family: 'GTEestiProText-Medium';
+	}
+
+	.metaInfo {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		.inline-author {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-weight: 600;
+
+			img {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				margin-bottom: 2px; //视觉居中
+			}
+
+			.author {
+				font-size: 12px;
+				color: #f2f2f2;
+				font-size: 14px;
+				font-family: 'GTEestiProText-Medium';
+			}
+		}
+
+		.time {
+			font-size: 12px;
+			color: #f2f2f2;
+			font-size: 14px;
+			font-family: 'GTEestiProText-Medium';
+		}
+
+		.hashTag {
+			font-size: 12px;
+			padding: 2px 6px 2px 6px;
+			width: auto;
+			border-radius: 6px;
+			background-color:  rgba(172, 171, 255, 0.4);
+			backdrop-filter: blur(10px);//🔥毛玻璃效果
+			color: #f2f2f2;
+			font-size: 14px;
+			font-family: 'GTEestiProText-Medium';
+		}
+	}
+}
+
+
+// 展开详情页情况
+.inspired-card-fullPage {
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	border-radius: 24px;
+	transition: all 0.15s ease-out;
+	width: 100vw;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(90px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000 !important;
+
 
 	p {
 		width: 100%;

@@ -8,7 +8,7 @@ import React , { createContext, FC, useState } from 'react'
 */
 
 
-// 上下文函数的类型
+// 上下文函数的类型(配合 useState 使用, useState 用来改变值， 改变后的值用 MouseContext 来传递给子组件)
 type IMouseContextType = {
 	cursorType: string,
 	cursorChangeHandler: (cursorType: string) => void
