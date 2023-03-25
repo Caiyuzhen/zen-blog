@@ -3,7 +3,8 @@ import React, { FC, useContext, useEffect, useState } from 'react'
 import ProjectThree from '../../../../assets/img/work-3.jpg'
 import Zeno from '../../../../assets/img/Zen.png'
 import { IArticleList } from '../../../../types/global'
-import './ArticleCard.less'   
+import './ArticleCard.less'  
+import backIcon  from '../../../../assets/svg/icon-arrowOnly.svg'
 
 // IArticleList 为全局类型, 包含 id, title, des, date, hashTag
 export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
@@ -28,11 +29,24 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 	},[])
 	
 	return (
-		<>
-			<div className={isfullPage ? "article-card-fullPage" : "article-card"}
-				id={id}
-				onClick={ () => {setFullPage(!isfullPage)}}
+		<div className={isfullPage ? "article-card-fullPage" : "article-card"}
+			id={id}
+			onClick={ 
+				() => {if(!isfullPage) {setFullPage(!isfullPage)}} //点击进入详情, 进入详情后只能点击返回按钮
+			}
+			>
+
+			{isfullPage && (//详情页才展示返回按钮
+				<div className="article-backIcon-wrapper"
+					onClick={() => {setFullPage(!isfullPage)}}
 				>
+					<div className="article-back-circle">
+					<img className="article-back-line" src={backIcon}></img>
+					</div>
+				</div>
+			)}
+
+			<div className="article-wrapper">
 				<img src={img} alt="" />
 				<div className="right-container">
 					<p className="title">{title}</p>
@@ -50,6 +64,6 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }

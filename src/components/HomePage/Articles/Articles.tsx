@@ -132,11 +132,11 @@ const Articles = () => {
 					{
 						articleList && articleList.map((articleData, index:number) => {
 
-							console.log(articleData.id)
+							// console.log(articleData.id)
 							const mdPathArr = articleData.des //得到所有 md 路径
 
 							return (
-								<div key={index}>
+								<div key={index} className="article-card-container">
 									<ArticleCard 
 										id={articleData.id}
 										title={articleData.title}
