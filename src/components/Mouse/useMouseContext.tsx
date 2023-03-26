@@ -1,4 +1,4 @@
-// 🌟🌟工具函数, 用于在平行组件中传递数据, 类比鼠标 hover 放大效果, 相当于自己造一个父组件去嵌套别人！
+// 🌟用于在平行组件中传递数据, 类比鼠标 hover 放大效果, 相当于自己造一个父组件去嵌套别人~
 import React , { createContext, FC, useState } from 'react'
 
 

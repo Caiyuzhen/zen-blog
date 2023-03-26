@@ -26,7 +26,7 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 		super(props)
 		this.state = {
 			num: 0,
-			allAvatarData: [] //state 保存 avatar 数据
+			allAvatarData: [] //state 保存所有 avatar 数据
 		}
 	}
 
@@ -89,7 +89,7 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 	render(){
 		// console.log(this.state.allAvatarData[1]); // 测试 fetch 到的数据
 		if(this.state.allAvatarData.length === 0) return null //如果没有数据, 就不渲染, 因为是异步函数！
-		const {url, describe} = this.state.allAvatarData[this.state.num] //随机数对应的 url , 解构赋值
+		const {url, describe} = this.state.allAvatarData[this.state.num] //从 state 的索引中 {解构赋值} 取得头像, 通过随机数修改这个索引就可以切换头像, 
 		// console.log(url, describe)
 
 		const { cursorType, cursorChangeHandler } = this.props //从函数组件中传入的 props 数据

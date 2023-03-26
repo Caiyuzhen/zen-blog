@@ -14,6 +14,10 @@ const MouseDot = () => {
 	const { x, y } = getMousePosition() //【 🏹️（3）】从 hook 中获得鼠标的 X , Y 坐标
 	// console.log(x,y)
 
+	// 如果 cursorType 变化了就打印出来
+	React.useEffect(()=>{
+		console.log('cursorType 的类型', cursorType)
+	},[cursorType])
 	
 	return (
 		<>

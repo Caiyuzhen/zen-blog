@@ -3,7 +3,8 @@ import './App.less'
 import HomePage from './components/HomePage/HomePage'
 import MainContainer from './components/HomePage/WorkContainer/MainContainer'
 import {Test2} from './api/hygraph'
-import MouseDot from './components/Mouse/MouseDot'
+// import MouseDot from './components/Mouse/MouseDot'
+import MouseContextProvider from './components/Mouse/useMouseContext'
 
 
 function App() {
@@ -12,13 +13,13 @@ function App() {
 		const threeScript = document.createElement('script')
 		threeScript.setAttribute('id', 'threeScript')
 		threeScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js')
-		document.getElementsByTagName('head')[0].appendChild(threeScript)//🔥🔥把脚本添加到head中
+		document.getElementsByTagName('head')[0].appendChild(threeScript)//🔥🔥把脚本添加到 head 中
 	},[])
 
 	return (
 		<div className="App">
 			{/* <Test2/> */}
-			<MouseDot/>
+			{/* <MouseDot/> */}
 			<HomePage/>
 		</div>
 	)

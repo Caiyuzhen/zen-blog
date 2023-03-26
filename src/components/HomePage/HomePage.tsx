@@ -9,6 +9,7 @@ import AboutMe from './AboutMe/AboutMe' ;
 import Articles from './Articles/Articles';
 import TabContext from '../../utils/Tabcontext'
 import { Outlet } from 'react-router-dom';
+import MouseDot from '../Mouse/MouseDot';
 
 
 
@@ -19,7 +20,7 @@ interface IProps  {
 
 
 
-// 爷组件
+// 祖父组件
 const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 	
 
@@ -45,7 +46,7 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 		}
 	}
 
-	//⚡️问题：为什么返回 null 了？(因为不需要通过 stringify 转换成字符串，直接返回就行了，其次是上一次的色块的位置是通过 e.target 算出来的，再次加载的时候需要通过 useEffect 执行一下)
+	// 问题：为什么返回 null 了？(因为不需要通过 stringify 转换成字符串，直接返回就行了，其次是上一次的色块的位置是通过 e.target 算出来的，再次加载的时候需要通过 useEffect 执行一下)
 	useEffect(() => {
 		loadState()//需要执行一下，否则不会显示上一次的 tab
 		console.log(loadState())
@@ -99,11 +100,13 @@ const HomePage:FC<IProps> = (props: IProps):ReactElement => {
 
 	return (
 		<div className='home-page'>
+			{/* 因为初始页面跟路由页面不是一个页面, <App/> 会被卸载掉, 所以 MouseDot 要渲染到这里 */}
+			<MouseDot/> 
 			<div className='home-page-container'>
 				{/* 📦用 Context 包裹来传递给下层数据(优雅一点的写法) */}
 				<TabContext.Provider value={{showPage, changePage}}>
 					<TitleBar/>
-					{/* ⚡️下面为二级路由的出口, 因为不是用 Link to 指定的跳转链接, 所以不用加路由出口 */}
+					{/* ⚡️下面为二级路由, 因为不是用 Link to 指定的跳转链接, 所以不用加路由出口 */}
 					{/* <Outlet /> */}
 					{showPage==='tab1' ? <AboutMe/> : ''}
 					{showPage==='tab2' ? <MainContainer/> : ''}
