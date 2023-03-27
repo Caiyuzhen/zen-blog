@@ -20,19 +20,20 @@ const MainContainer:FC = ():ReactElement => {
 	//声明个 hook 来获取 ProjectData 的数据(api 的数据)
 	const [projectData, setData] = useState<ProjectData>() //api 内, projectData 是 Iitem[] 类型
 
-	//定义调用服务端 api 的函数, 给 notion 的 db 发送请求来获取数据
-	async function getBlogData() {
-		const res = await fetch('/api/getTitles', {
-			method: 'GET',
-		})
-		const data = await res.json()
-		console.log(data) //一个数组对象 [{}, {}, {}]
-		setData(data)
-		// const title = data[0].title
-	}
 
 	//调用 api 函数，发送请求来获取数据
 	useEffect(()=>{
+		//定义调用服务端 api 的函数, 给 notion 的 db 发送请求来获取数据
+		async function getBlogData() {
+			const res = await fetch('/api/getTitles', {
+				method: 'GET',
+			})
+			const data = await res.json()
+			console.log(data) //一个数组对象 [{}, {}, {}]
+			setData(data)
+			// const title = data[0].title
+		}
+
 		getBlogData()
 		// .catch((err) => {
 		// 	alert(err)
