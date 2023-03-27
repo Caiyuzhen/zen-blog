@@ -1,6 +1,11 @@
 import { useNavigate } from "react-router-dom"
 import { BackToTopDark } from "./BackToTopDark/BackToTopDark"
 import createHeaderFn from "./utils/createHeader"
+import topImgC from '../../../../assets/img/ProjectC-topImg.jpg'
+import backIcon from '../../../../assets/svg/icon-back.svg'
+import './ProjectC.less'
+import BaseInfoProjectC from "./ProjectC_Ele/BaseInfoProjectC/BaseInfoProjectC"
+
 
 export const ProjectC = () => {
 
@@ -12,20 +17,20 @@ export const ProjectC = () => {
 	// 实例化详情页的 header
 	const projectC_Header = createHeaderFn({
 		routerFn: goBack,
-		imgClassName: "backIcon",
+		projectName: "MIGU Music",
+		imgClassName: backIcon,
 		projectContainerName: "top-img-pjC",
 		navClassName: "top-nav-pjC",
 		topImgIcon: topImgC,
 	  });
 
 	return (
-		<>
+		<div className="projectC-container">
 			{/* 创建 header 的公共 createHeaderFn 方法 */}
 			{projectC_Header }
-
-			{/* 返回顶部 */}
+			<BaseInfoProjectC />
 			<BackToTopDark />
-		</>
+		</div>
 	)
 }
 
