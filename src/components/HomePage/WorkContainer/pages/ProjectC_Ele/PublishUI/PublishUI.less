@@ -1,0 +1,71 @@
+.publishUI-main-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	padding: 124px;
+	flex-direction: row;
+	justify-content: center;
+	box-sizing: border-box;
+	position: relative;
+
+	.publishUI-wrapper {
+		max-width: 1500px;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		box-sizing: border-box;
+		position: relative;
+
+		.publishUI-textWithLine-container {
+			position: absolute;
+			display: flex;
+			flex-direction: row;
+			gap: 28px;
+			transform: translate(320px, 60px);
+
+			.publishUI-text {
+				display: flex;
+				width: 400px;
+				height: auto;
+				align-items: start;
+				flex-direction: column;
+				box-sizing: border-box;
+				gap:  12px;
+
+				// 第一个子元素
+				> p:first-child {
+					width: 100%;
+					margin: 0;
+					font-family: GT Eesti Pro Text;
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 24px;
+					font-weight: 500;
+					color:  rgb(255, 255, 255);
+				}
+
+				// 第二个子元素
+				> p:nth-child(2) {
+					width: 100%;
+					margin: 0;
+					font-family: GT Eesti Pro Text;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 14px;
+					font-weight: 300;
+					color:  rgba(185, 213, 254, 1);
+				}
+			}
+		}
+
+		// UI
+		> img {
+			width: 1200px;
+		}
+	}
+}

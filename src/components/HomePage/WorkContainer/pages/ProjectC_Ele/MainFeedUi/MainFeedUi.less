@@ -6,18 +6,19 @@
 	width: 100%;
 	height: auto;
 	box-sizing: border-box;
-	padding: 12px 124px;
+	padding: 80px 124px;
 	z-index: 2;
 
 	.migufeedUI-main-container {
 		display: flex;
 		width: 100%;
+		max-width: 1500px;
 		height: auto;
 		align-items: center;
 		box-sizing: border-box;
 		flex-direction: row;
+		padding: 0 112px;
 		gap: 48px;
-		// justify-content: space-around;
 
 		// 左侧描述
 		.migufeedUI-left-container {
@@ -25,8 +26,9 @@
 			width: 100%;
 			height: auto;
 			flex-direction: column;
-			gap:  180px;
+			gap:  80px;
 			box-sizing: border-box;
+			transform: translateY(40px);
 
 			// 子子层级的共同属性
 			.miguFeedUI-left-miguMall, 
@@ -76,18 +78,22 @@
 				width: 100%;
 				position: relative;
 
-				.migu-leftTop-line {
+				.migu-leftTop-line { //线
 					position: absolute;
+					right: -80px;
 				}
 
 			}
 
+			// 左中
 			.leftMedium-withLineContainer {
 				width: 100%;
 				position: relative;
+				transform: translateY(60px);
 
-				.migu-leftMedium-line{
+				.migu-leftMedium-line{ //线
 					position: absolute;
+					right: -80px;
 				}
 			}
 
@@ -100,6 +106,7 @@
 		// 中间 feed UI
 		.mainFeedUI-pic {
 			width: 280px;
+			z-index: 2;
 		}
 
 		// 右侧描述
@@ -108,10 +115,11 @@
 			width: 100%;
 			height: auto;
 			flex-direction: column;
-			gap:  180px;
+			gap:  80px;
 			box-sizing: border-box;
 			align-items: flex-end;
 
+			// 子子层级的共同属性
 			.miguFeedUI-right-coreCategory,
 			.miguFeedUI-left-funShot {
 				display: flex;
@@ -152,9 +160,38 @@
 				}
 			}
 
-			// 按钮图
+			// 右上
+			.rightTop-withLineContainer {
+				width: 100%;
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				transform: translateY(72px);
+
+				.migu-rightTop-line { //线
+					position: absolute;
+					left: -80px;
+				}
+			}
+
+			// 右中
+			.rightMedium-withLineContainer {
+				width: 100%;
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				transform: translateY(230px);
+
+				.migu-rightMedium-line { //线
+					position: absolute;
+					left: -80px;
+				}
+			}
+
+			// 右下
 			> img {
 				width: 320px;
+				transform: translate(-20px, 120px);
 			}
 		}
 	}
@@ -162,9 +199,9 @@
 
 	.main-miguFeedUI-linearBg {
 		position: absolute;
-		width: 100%;
-		top: 0;
-		left: 0;
+		width: 1120px;
+		left: 50%;
+		transform: translateX(-50%);
 		z-index: 1;
 	}
 }

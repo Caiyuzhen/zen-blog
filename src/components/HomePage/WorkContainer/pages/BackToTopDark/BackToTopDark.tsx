@@ -1,6 +1,7 @@
 import React from 'react'
 import backToTopDark from '../../../../../assets/svg/icon-backToTopDark.svg'
 import './BackToTopDark.less'
+import allUI from '../../../../../assets/img/migu-allUI.png'
 
 
 export const BackToTopDark = () => {
@@ -20,6 +21,8 @@ export const BackToTopDark = () => {
 			>
 				<p>Back to top</p>
 				<img src={backToTopDark} alt="" className="backToTopDark"/>
+
+				<img src={allUI} alt="" className="allUI"/>
 			</div>
 		</>
 	)

@@ -1,3 +1,6 @@
+import { useContext } from "react"
+import { useCardYPosContext } from "../../ProjectCard/ProjectCard"
+
 //抽象出来构建页面顶部的通用方法
 type ConfigHeader = {
 	routerFn: () => void
@@ -17,15 +20,23 @@ export default function createHeaderFn({
 	projectContainerName,
     navClassName,
 	topImgIcon
-
 }: ConfigHeader) {
+
+	const {pageYPos,setPageYPos } = useContext(useCardYPosContext)
+
 	return (
 		<>
 			{/* 头图 */}
 			<div className={projectContainerName}>
 				{/* 导航 */}
 				<div className={navClassName}>
-					<img src={imgClassName} alt="" onClick={ routerFn }/>
+					<img src={imgClassName} alt="" 
+						 onClick={ ()=>{
+							routerFn
+							// 打印 
+							console.log(pageYPos)
+						}}
+					/>
 					<p>{projectName}</p>
 				</div>
 				<img src={topImgIcon} alt="" />

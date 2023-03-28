@@ -17,11 +17,11 @@ export const MainFeedUi = () => {
 							<circle cx="10.8257" cy="10.8257" r="10.8257" transform="matrix(1 0 0 -1 3.21777 25.9155)" fill="#A4DEFF"/>
 							</g>
 							<g filter="url(#filter1_d_439_50681)">
-							<path d="M14.0435 15.164H217.948" stroke="#73C6F6" stroke-width="1.20285" stroke-dasharray="3.61"/>
+							<path d="M14.0435 15.164H217.948" stroke="#73C6F6" strokeWidth="1.20285" strokeDasharray="3.61"/>
 							</g>
 							<defs>
-							<filter id="filter0_d_439_50681" x="0.812064" y="0.655596" width="26.4628" height="26.4628" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<filter id="filter0_d_439_50681" x="0.812064" y="0.655596" width="26.4628" height="26.4628" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 							<feOffset dy="-1.20285"/>
 							<feGaussianBlur stdDeviation="1.20285"/>
@@ -29,8 +29,8 @@ export const MainFeedUi = () => {
 							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_439_50681"/>
 							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_439_50681" result="shape"/>
 							</filter>
-							<filter id="filter1_d_439_50681" x="11.6377" y="12.1568" width="206.928" height="6.01454" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<filter id="filter1_d_439_50681" x="11.6377" y="12.1568" width="206.928" height="6.01454" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 							<feOffset/>
 							<feGaussianBlur stdDeviation="1.20285"/>
@@ -55,11 +55,11 @@ export const MainFeedUi = () => {
 							<circle cx="10.8257" cy="10.8257" r="10.8257" transform="matrix(1 0 0 -1 3.21777 25.9155)" fill="#A4DEFF"/>
 							</g>
 							<g filter="url(#filter1_d_439_50681)">
-							<path d="M14.0435 15.164H217.948" stroke="#73C6F6" stroke-width="1.20285" stroke-dasharray="3.61"/>
+							<path d="M14.0435 15.164H217.948" stroke="#73C6F6" strokeWidth="1.20285" strokeDasharray="3.61"/>
 							</g>
 							<defs>
-							<filter id="filter0_d_439_50681" x="0.812064" y="0.655596" width="26.4628" height="26.4628" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<filter id="filter0_d_439_50681" x="0.812064" y="0.655596" width="26.4628" height="26.4628" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 							<feOffset dy="-1.20285"/>
 							<feGaussianBlur stdDeviation="1.20285"/>
@@ -67,8 +67,8 @@ export const MainFeedUi = () => {
 							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_439_50681"/>
 							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_439_50681" result="shape"/>
 							</filter>
-							<filter id="filter1_d_439_50681" x="11.6377" y="12.1568" width="206.928" height="6.01454" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<filter id="filter1_d_439_50681" x="11.6377" y="12.1568" width="206.928" height="6.01454" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 							<feOffset/>
 							<feGaussianBlur stdDeviation="1.20285"/>
@@ -92,14 +92,82 @@ export const MainFeedUi = () => {
 				{/* 手机 uI 图 */}
 				<img src={mainFeedUI} alt="" className="mainFeedUI-pic"/>
 				<div className="migufeedUI-right-container">
-					<div className="miguFeedUI-right-coreCategory">
-						<p>Core Category Module</p>
-						<p>MIGU's core business segment, expanding secondary content and secondary social circles around short videos.</p>
+					{/* 右上 */}
+					<div className="rightTop-withLineContainer">
+						<div className="migu-rightTop-line">
+							<svg width="140" height="27" viewBox="0 0 140 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.2" filter="url(#filter0_d_439_50672)">
+							<circle cx="10.8257" cy="10.8257" r="10.8257" transform="matrix(-1 0 0 1 136.648 4.09717)" fill="#A4DEFF"/>
+							</g>
+							<g filter="url(#filter1_d_439_50672)">
+							<path d="M125.822 14.8486L0.943838 14.8486" stroke="#73C6F6" strokeWidth="1.20285" strokeDasharray="3.61"/>
+							</g>
+							<defs>
+							<filter id="filter0_d_439_50672" x="112.591" y="0.488603" width="26.4628" height="26.4628" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dy="-1.20285"/>
+							<feGaussianBlur stdDeviation="1.20285"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.33327 0 0 0 0 0.349698 0 0 0 0 1 0 0 0 0.5 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_439_50672"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_439_50672" result="shape"/>
+							</filter>
+							<filter id="filter1_d_439_50672" x="0.322073" y="11.8414" width="127.906" height="6.01454" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset/>
+							<feGaussianBlur stdDeviation="1.20285"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.666667 0 0 0 0 0.831373 0 0 0 0 0.92549 0 0 0 1 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_439_50672"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_439_50672" result="shape"/>
+							</filter>
+							</defs>
+							</svg>
+						</div>
+						<div className="miguFeedUI-right-coreCategory">
+							<p>Core Category Module</p>
+							<p>MIGU's core business segment, expanding secondary content and secondary social circles around short videos.</p>
+						</div>
 					</div>
-					<div className="miguFeedUI-left-funShot">
-						<p>Fun Shot Button</p>
-						<p>Guide users to shoot content based on recommend matching level.</p>
+
+					{/* 右中 */}
+					<div className="rightMedium-withLineContainer">
+						<div className="migu-rightMedium-line">
+							<svg width="140" height="27" viewBox="0 0 140 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.2" filter="url(#filter0_d_439_50672)">
+							<circle cx="10.8257" cy="10.8257" r="10.8257" transform="matrix(-1 0 0 1 136.648 4.09717)" fill="#A4DEFF"/>
+							</g>
+							<g filter="url(#filter1_d_439_50672)">
+							<path d="M125.822 14.8486L0.943838 14.8486" stroke="#73C6F6" strokeWidth="1.20285" strokeDasharray="3.61"/>
+							</g>
+							<defs>
+							<filter id="filter0_d_439_50672" x="112.591" y="0.488603" width="26.4628" height="26.4628" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dy="-1.20285"/>
+							<feGaussianBlur stdDeviation="1.20285"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.33327 0 0 0 0 0.349698 0 0 0 0 1 0 0 0 0.5 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_439_50672"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_439_50672" result="shape"/>
+							</filter>
+							<filter id="filter1_d_439_50672" x="0.322073" y="11.8414" width="127.906" height="6.01454" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+							<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset/>
+							<feGaussianBlur stdDeviation="1.20285"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0.666667 0 0 0 0 0.831373 0 0 0 0 0.92549 0 0 0 1 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_439_50672"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_439_50672" result="shape"/>
+							</filter>
+							</defs>
+							</svg>
+						</div>
+						<div className="miguFeedUI-left-funShot">
+							<p>Fun Shot Button</p>
+							<p>Guide users to shoot content based on recommend matching level.</p>
+						</div>
 					</div>
+					{/* 右下 */}
 					<img src={funShotBtn} alt="" />
 				</div>
 			</div>
@@ -110,8 +178,8 @@ export const MainFeedUi = () => {
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M42.4166 765.817C-7.58192 679.263 16.8154 568.853 98.6299 511.426L753.066 52.0631C845.758 -13.0001 974.295 15.4027 1030.94 113.466V113.466C1080.94 200.02 1056.54 310.429 974.728 367.857L320.293 827.22C227.6 892.283 99.0632 863.88 42.4166 765.817V765.817Z" fill="url(#paint0_linear_439_50781)"/>
 				</g>
 				<defs>
-				<filter id="filter0_f_439_50781" x="0.182178" y="0.668598" width="1072.99" height="877.946" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-				<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+				<filter id="filter0_f_439_50781" x="0.182178" y="0.668598" width="1072.99" height="877.946" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+				<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 				<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 				<feGaussianBlur stdDeviation="8.17425" result="effect1_foregroundBlur_439_50781"/>
 				</filter>

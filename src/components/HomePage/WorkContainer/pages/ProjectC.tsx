@@ -9,6 +9,8 @@ import { DataInfo } from "./ProjectC_Ele/DataInfo/DataInfo"
 import { UserGender } from "./ProjectC_Ele/UserGender/UserGender"
 import { UserJourney } from "./ProjectC_Ele/UserJourney/userJourney"
 import { MainFeedUi } from "./ProjectC_Ele/MainFeedUi/MainFeedUi"
+import { TopUserUI } from "./ProjectC_Ele/TopUserUI/TopUserUI"
+import { PublishUI } from "./ProjectC_Ele/PublishUI/PublishUI"
 
 
 export const ProjectC = () => {
@@ -37,6 +39,8 @@ export const ProjectC = () => {
 			<UserGender />
 			<UserJourney />
 			<MainFeedUi />
+			<TopUserUI />
+			<PublishUI />
 			<BackToTopDark />
 		</div>
 	)

@@ -15,13 +15,13 @@ export const UserGender = () => {
 					</div>
 					<div className="progressBar-male">
 						<svg width="608" height="120" viewBox="0 0 608 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect opacity="0.4" width="575.614" height="30" rx="15" transform="matrix(1 0 0 -1 32.0465 75.2017)" fill="#B9D5FE" fill-opacity="0.6"/>
+						<rect opacity="0.4" width="575.614" height="30" rx="15" transform="matrix(1 0 0 -1 32.0465 75.2017)" fill="#B9D5FE" fillOpacity="0.6"/>
 						<g filter="url(#filter0_d_439_50803)">
 						<rect width="237.139" height="30" rx="15" transform="matrix(1 0 0 -1 32.0465 75.2017)" fill="#B9D5FE"/>
 						</g>
 						<defs>
-						<filter id="filter0_d_439_50803" x="0.7489" y="0.490791" width="326.56" height="119.422" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<filter id="filter0_d_439_50803" x="0.7489" y="0.490791" width="326.56" height="119.422" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+						<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 						<feOffset dx="13.4133"/>
 						<feGaussianBlur stdDeviation="22.3554"/>
@@ -44,13 +44,13 @@ export const UserGender = () => {
 					</div>
 					<div className="progressBar-female">
 						<svg width="607" height="120" viewBox="0 0 607 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="575.611" height="30" rx="15" transform="matrix(1 0 0 -1 31.0499 74.9829)" fill="#97719D" fill-opacity="0.5"/>
+						<rect width="575.611" height="30" rx="15" transform="matrix(1 0 0 -1 31.0499 74.9829)" fill="#97719D" fillOpacity="0.5"/>
 						<g filter="url(#filter0_d_439_50802)">
 						<rect width="380.561" height="30" rx="15" transform="matrix(1 0 0 -1 31.0498 74.9829)" fill="#C165D0"/>
 						</g>
 						<defs>
-						<filter id="filter0_d_439_50802" x="0.202477" y="0.915298" width="468.696" height="118.135" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-						<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+						<filter id="filter0_d_439_50802" x="0.202477" y="0.915298" width="468.696" height="118.135" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+						<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 						<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 						<feOffset dx="13.2203"/>
 						<feGaussianBlur stdDeviation="22.0338"/>
