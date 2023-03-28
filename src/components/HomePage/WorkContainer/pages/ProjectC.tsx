@@ -8,6 +8,7 @@ import BaseInfoProjectC from "./ProjectC_Ele/BaseInfoProjectC/BaseInfoProjectC"
 import { DataInfo } from "./ProjectC_Ele/DataInfo/DataInfo"
 import { UserGender } from "./ProjectC_Ele/UserGender/UserGender"
 import { UserJourney } from "./ProjectC_Ele/UserJourney/userJourney"
+import { MainFeedUi } from "./ProjectC_Ele/MainFeedUi/MainFeedUi"
 
 
 export const ProjectC = () => {
@@ -35,6 +36,7 @@ export const ProjectC = () => {
 			<DataInfo />
 			<UserGender />
 			<UserJourney />
+			<MainFeedUi />
 			<BackToTopDark />
 		</div>
 	)
