@@ -5,30 +5,110 @@
 	box-sizing: border-box;
 
 	.migu-userGender-container-bg {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		border-radius: 38px;
 		box-sizing: border-box;
-		padding: 12px 32px;
+		padding: 12px 60px;
 		background: 
-		linear-gradient(144.12deg, #170029 0%, #1A0037 40.2%, rgba(0, 30, 75, 0.18) 95.28%),
-		linear-gradient(193.68deg, rgba(42, 5, 79, 0.2) 7.07%, rgba(18, 60, 50, 0.07) 90.21%);
+			linear-gradient(144.12deg, #170029 0%, #1A0037 40.2%, rgba(0, 30, 75, 0.18) 95.28%),
+			linear-gradient(193.68deg, rgba(42, 5, 79, 0.2) 7.07%, rgba(18, 60, 50, 0.07) 90.21%);
 
 		.userGender-container-top {
 			display: flex;
 			flex-direction: row;
+			justify-content: space-around;
 
 			.male-icon-container {
 				display: flex;
 				flex-direction: row;
+				align-items: center;
+				flex: 1;
+				gap: 20px;
+
+				> img {
+					width: 36px;
+				}
+
+				> p {
+					font-family: GT Eesti Pro Text;
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 18px;
+					font-weight: 500;
+					white-space: nowrap;
+					color:  rgba(185, 213, 254, 1);
+				}
+			}
+
+			.progressBar-male {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+				
+				> span {
+					font-family: GT Eesti Pro Text;
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 18px;
+					font-weight: 500;
+					white-space: nowrap;
+					color:  rgba(185, 213, 254, 1);
+				}
 			}
 		}	
 
 		.userGender-container-bottom {
 			display: flex;
 			flex-direction: row;
+			justify-content: space-around;
 
 			.female-icon-container {
 				display: flex;
 				flex-direction: row;
+				align-items: center;
+				flex: 1;
+				gap: 20px;
+
+				> img {
+					width: 36px;
+				}
+
+				> p {
+					font-family: GT Eesti Pro Text;
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 18px;
+					font-weight: 500;
+					white-space: nowrap;
+					color:  rgba(185, 213, 254, 1);
+				}
+			}
+
+			.progressBar-female {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+				
+				> span {
+					font-family: GT Eesti Pro Text;
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 18px;
+					font-weight: 500;
+					white-space: nowrap;
+					color:  rgba(185, 213, 254, 1);
+				}
 			}
 		}
 	}
