@@ -22,25 +22,29 @@ export default function createHeaderFn({
 	topImgIcon
 }: ConfigHeader) {
 
-	const {pageYPos,setPageYPos } = useContext(useCardYPosContext)
+	// 👇一次性取值?
+	const { pageYPos } = useContext(useCardYPosContext)
 
 	return (
 		<>
-			{/* 头图 */}
-			<div className={projectContainerName}>
-				{/* 导航 */}
-				<div className={navClassName}>
-					<img src={imgClassName} alt="" 
-						 onClick={ ()=>{
-							routerFn
-							// 打印 
-							console.log(pageYPos)
-						}}
-					/>
-					<p>{projectName}</p>
-				</div>
-				<img src={topImgIcon} alt="" />
-			</div>
+			{/* <useCardYPosContext.Consumer>	 */}
+				{/* {({ pageYPos }) => ( */}
+					<div className={projectContainerName}>
+						{/* 导航 */}
+						<div className={navClassName}>
+							<img src={imgClassName} alt="" 
+								onClick={ ()=>{
+									routerFn
+									// 打印 
+									console.log('pageYPos 值:', pageYPos)
+								}}
+							/>
+							<p>{projectName}</p>
+						</div>
+						<img src={topImgIcon} alt="" />
+					</div>
+				{/* )} */}
+			{/* </useCardYPosContext.Consumer> */}
 		</>
 	)
 }

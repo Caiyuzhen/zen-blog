@@ -21,9 +21,14 @@ enum NavigatorPath {
 	ProjectC = '/homepage/works/projectC'
 }
 
+// useCointext 的接口
+interface CardYPosContextValue {
+	pageYPos: number;
+	setPageYPos: (pageYPos: number) => void;
+}
 
 // 用来传递数据(页面位置)
-export const useCardYPosContext = createContext({
+export const useCardYPosContext = createContext<CardYPosContextValue>({
 	pageYPos: 0,//默认位置为 0
 	setPageYPos: (pageYPos: number) => {} // 修改 pageTPos 的方法
 })
@@ -32,19 +37,26 @@ export const useCardYPosContext = createContext({
 const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 
 	const { cursorType, cursorChangeHandler } = useContext(MouseContext)//引入工具, 添加鼠标样式
-	const [ cardYPos, setCardYPos ] = useState<number>(0) // 记录当前停留的位置, 从详情页回来后, 滚动回去
+	const [ cardYPos, setCardYPos ] = useState<number>(11) // 记录当前停留的位置, 从详情页回来后, 滚动回去
+	
+	const { pageYPos, setPageYPos } = useContext(useCardYPosContext);
 
-	// 拿到快递的 pageYPos , 并对其进行修改
-	const { pageYPos,setPageYPos } = useContext(useCardYPosContext) 
-	const value = {
-		pageYPos: pageYPos,
-		setPageYPos: setPageYPos
-	}
+
+	// const newValue = {
+	// 	pageYPos: cardYPos, //传入的是 useState 的值！
+	// 	setPageYPos: setCardYPos //传入的是 useState 的方法！！
+	// }
+
+
 	useEffect(()=>{
-		console.log('卡片高度:',cardYPos) //👈为什么变成 0 了 ？
+		window.scrollTo(0, 0) // 滚动到页面顶部
+		// console.log('卡片高度:',cardYPos) //👈路由跳转前可以获得真正的卡片相对页面顶部高度
 		if(cardYPos !== 0) {
-			// 修改 pageYPos 的值
-			setPageYPos(cardYPos)
+			// 修改 useCardYPosContext 内 pageYPos 的值
+			setCardYPos(cardYPos)
+			const newY = cardYPos
+			setPageYPos(newY)
+			console.log('context 的值被更新了:', pageYPos);
 		}
 	},[cardYPos])
 
@@ -80,18 +92,15 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 	return (
 		<>	
 			{/* Provider 传递 cardYPosContext */}
-			<useCardYPosContext.Provider value={value}>
+			{/* <useCardYPosContext.Provider value={newValue}> */}
 
 				<div className='project-card'
 					id={content!.id}
 					onMouseEnter={() => cursorChangeHandler('hovered')}
 					onMouseLeave={() => cursorChangeHandler('')}
 					onClick={ (e)=>{
-						const targerPos = e.currentTarget.offsetTop //获取位置
-						setCardYPos(targerPos ?? 0), //储存位置
-						window.scrollTo(0, 0), // 滚动到页面顶部
-
-						goProject(e.currentTarget as HTMLElement)//🔥注意，需要通过 e.currentTarget 才能拿到 data-index 的 dataset 数据！！并且不能为驼峰命名！！
+						setCardYPos(e.currentTarget.offsetTop) //储存位置
+						// goProject(e.currentTarget as HTMLElement)//🔥注意，需要通过 e.currentTarget 才能拿到 data-index 的 dataset 数据！！并且不能为驼峰命名！！
 					}} 
 					ref={projectRef}
 					data-index={index} //🔥设置 data-index 属性为上游 MainContainer 的 index ，用来判断点击的是哪个项目卡片
@@ -109,7 +118,7 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 					{/* <p>{content!.description}</p> */}
 				</div>
 
-			</useCardYPosContext.Provider>
+			{/* </useCardYPosContext.Provider> */}
 		</>
 	)
 }
