@@ -1,5 +1,5 @@
-import React, { FC, ReactElement, useEffect, useState } from 'react'
-import ProjectCard from './ProjectCard/ProjectCard'
+import React, { createContext, FC, ReactElement, useEffect, useState } from 'react'
+import ProjectCard, { UseYPosProvider } from './ProjectCard/ProjectCard'
 import './MainContainer.less'
 import { ProjectData, Iitem } from '../../../../src/types/global'
 import {WorkTopInfo} from './WorkTopInfo/WorkTopInfo'
@@ -42,35 +42,44 @@ const MainContainer:FC = ():ReactElement => {
 	},[])
 
 
+	const [ YPos, setYPos ] = useState<number>(0) // 用来存储卡片距离, 从详情页回来后, 滚动回去
+	const updateYPosFn = (newYPos: number) => {
+		setYPos(newYPos);
+	}
+
 	return (
 		<>
-			<div className="context-container">
-				<WorkTopInfo />
-				<Tilty 
-					className="tilty" 
-					style={{zIndex: 10, padding:0, width:'100%', transformStyle: "preserve-3d"}}
-					settings={{
-						glare: true,
-						"max-glare": 0.5
-					  }}
-				>
-					<BannerCard />
-				</Tilty>
-				<div className="works-container">
-					{
-						// 遍历接从 notion api 接收回来的 work 数据并进行渲染
-						projectData && projectData.map((item:Iitem, index:number) => {
-							return (
-								// 传入 id，用于判读路由 Link 哪一页
-								<ProjectCard content={item} key={index} index={index}/>
-							)
-						})
-					}
-				</div>
-				<img src={BgCircle} alt="" className="BgCircle"/>
-				<img src={squareGraphicIcon} alt="" className="squareIcon"/>
-				<img src={gear} alt="" className="gear"/>
-			</div>
+			<UseYPosProvider>
+				{/* <useCardYPosContext.Provider value={{ YPos, updateYPosFn }}> */}
+					<div className="context-container">
+						<WorkTopInfo />
+						<Tilty 
+							className="tilty" 
+							style={{zIndex: 10, padding:0, width:'100%', transformStyle: "preserve-3d"}}
+							settings={{
+								glare: true,
+								"max-glare": 0.5
+							}}
+						>
+							<BannerCard />
+						</Tilty>
+						<div className="works-container">
+							{
+								// 遍历接从 notion api 接收回来的 work 数据并进行渲染
+								projectData && projectData.map((item:Iitem, index:number) => {
+									return (
+										// 传入 id，用于判读路由 Link 哪一页
+										<ProjectCard content={item} key={index} index={index}/>
+									)
+								})
+							}
+						</div>
+						<img src={BgCircle} alt="" className="BgCircle"/>
+						<img src={squareGraphicIcon} alt="" className="squareIcon"/>
+						<img src={gear} alt="" className="gear"/>
+					</div>
+				{/* </useCardYPosContext.Provider> */}
+			</UseYPosProvider>
 		</>
 	)
 }

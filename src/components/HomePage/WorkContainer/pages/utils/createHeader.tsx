@@ -1,5 +1,7 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useCardYPosContext } from "../../ProjectCard/ProjectCard"
+
+
 
 //抽象出来构建页面顶部的通用方法
 type ConfigHeader = {
@@ -22,28 +24,31 @@ export default function createHeaderFn({
 	topImgIcon
 }: ConfigHeader) {
 
-	// 👇一次性取值?
-	const { pageYPos } = useContext(useCardYPosContext)
+	// const { YPos,updateYPosFn } = useContext(useCardYPosContext) //获取跨组件快递来的值 ❌ 切换路由了, 值就没了
+
+	// 读取会话储存空间中的值
+	const YPos = JSON.parse(sessionStorage.getItem('YPos') || '0')
+	
 
 	return (
 		<>
 			{/* <useCardYPosContext.Consumer>	 */}
-				{/* {({ pageYPos }) => ( */}
+				{/* {({ YPos }) => ( */}
 					<div className={projectContainerName}>
 						{/* 导航 */}
 						<div className={navClassName}>
 							<img src={imgClassName} alt="" 
-								onClick={ ()=>{
-									routerFn
-									// 打印 
-									console.log('pageYPos 值:', pageYPos)
+								onClick={ ()=> {
+									routerFn(),
+									window.scrollTo(0, YPos), // 返回到上次的位置
+									console.log('YPos 值:', YPos) // 打印 
 								}}
 							/>
 							<p>{projectName}</p>
 						</div>
 						<img src={topImgIcon} alt="" />
 					</div>
-				{/* )} */}
+				{/* )}   */}
 			{/* </useCardYPosContext.Consumer> */}
 		</>
 	)

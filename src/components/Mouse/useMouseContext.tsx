@@ -17,7 +17,7 @@ type IMouseContextType = {
 
 // 工具 1 - 定义创建一个上下文 context 的函数来包裹上下文 --- one 快递车 MouseContext,实际传送的值就是这个【MouseContext】
 //（⚡️本质上是包裹了一个 hooks！用 cursorChangeHandler 去改变 cursorType 的值）, cursorType 是当 onMouseEnter 时要添加的 class
-export const MouseContext = createContext<IMouseContextType>({
+export const MouseContext = createContext<IMouseContextType>({ //👈MouseContext 不是 useState!!!
 	cursorType: "", 
 	cursorChangeHandler: () => {},
 });
@@ -34,16 +34,16 @@ type IMouseContextProps = {
 
 // 工具 2 - 获得实际的值
 const MouseContextProvider = ( {children}:IMouseContextProps ) => {
-	const [cursorType, setCursorType] = useState<string>('')
+	const [cursorType_, setCursorType] = useState<string>('') //👈本质上用的是 useState 的 hook ！
 
-	const cursorChangeHandler = (cursorType:string) => {//执行这个函数就会把值设置进上面的 hooks 内
+	const cursorChangeHandler_ = (cursorType:string) => {//执行这个函数就会把值设置进上面的 hooks 内
 		setCursorType(cursorType)
 	}
 
 	// 定义个对象来接收最终的值，更方便些
 	const value = {
-		cursorType: cursorType, //hook 的值
-		cursorChangeHandler: cursorChangeHandler //上面的函数, 给到子组件去执行
+		cursorType: cursorType_, //hook 函数的值！
+		cursorChangeHandler: cursorChangeHandler_ //上面的函数, 给到子组件去执行
 	}
 
 	return (

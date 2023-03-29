@@ -11,6 +11,7 @@ import { UserJourney } from "./ProjectC_Ele/UserJourney/userJourney"
 import { MainFeedUi } from "./ProjectC_Ele/MainFeedUi/MainFeedUi"
 import { TopUserUI } from "./ProjectC_Ele/TopUserUI/TopUserUI"
 import { PublishUI } from "./ProjectC_Ele/PublishUI/PublishUI"
+import { useCardYPosContext } from "../ProjectCard/ProjectCard"
 
 
 export const ProjectC = () => {

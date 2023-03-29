@@ -16,7 +16,7 @@ const MouseDot = () => {
 
 	// 如果 cursorType 变化了就打印出来
 	React.useEffect(()=>{
-		console.log('cursorType 的类型', cursorType)
+		// console.log('cursorType 的类型', cursorType)
 	},[cursorType])
 	
 	return (
