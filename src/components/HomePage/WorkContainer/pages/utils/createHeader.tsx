@@ -24,10 +24,10 @@ export default function createHeaderFn({
 	topImgIcon
 }: ConfigHeader) {
 
-	// const { YPos,updateYPosFn } = useContext(useCardYPosContext) //获取跨组件快递来的值 ❌ 切换路由了, 值就没了
+	const { YPos,updateYPosFn } = useContext(useCardYPosContext) //获取跨组件快递来的值 ❌ 切换路由了, 值就没了
 
-	// 读取会话储存空间中的值
-	const YPos = JSON.parse(sessionStorage.getItem('YPos') || '0')
+	// 读取会话储存空间中的值 (比较搓)
+	// const YPos = JSON.parse(sessionStorage.getItem('YPos') || '0')
 	
 
 	return (

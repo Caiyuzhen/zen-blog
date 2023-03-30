@@ -46,9 +46,8 @@ export const UseYPosProvider = ( {children}:IYpos ) => {
 
 	function updateYPosFn_(_YPos_: number) {
 		setYPos(_YPos_)
-		// 把 _YPos_ 保存到会话储存空间中, 然后给到详情页
-		sessionStorage.setItem('YPos', JSON.stringify(_YPos_))
-		
+		// 把 _YPos_ 保存到会话储存空间中, 然后给到详情页 (比较搓)
+		// sessionStorage.setItem('YPos', JSON.stringify(_YPos_))
 	}
 
 	const value = {
@@ -98,8 +97,8 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 	const navigate = useNavigate()
 
 	function goProject(target: HTMLElement): void {
-		// 🔥在上游 (MainContainer) 把 index 传递下来, 设置到元素的 data-XXX 属性身上了！所以可以根据这个值来判断要跳转到哪个路由详情页！
-		// 👇抽象过后
+		// 在上游 (MainContainer) 把 index 传递下来, 设置到元素的 data-XXX 属性身上了！所以可以根据这个值来判断要跳转到哪个路由详情页！
+		// 抽象过后
 		const index = target.dataset.index
 		const path = index === '0' ? NavigatorPath.ProjectA : 
 					 index === '1' ? NavigatorPath.ProjectB :
@@ -109,7 +108,7 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 			navigate(path)
 		}
 
-		// 👇未抽象前
+		// 未抽象前
 		// if (target.dataset.index === '0') {
 		// 	navigate('/homepage/works/projectA')
 		// 	// console.log('A')

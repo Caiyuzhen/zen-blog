@@ -7,6 +7,7 @@ import store from './store'
 import MouseContextProvider from './components/Mouse/useMouseContext'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import router from './router/index'
+import { UseYPosProvider } from './components/HomePage/WorkContainer/ProjectCard/ProjectCard'
 
 
 
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 		{/* 【 🏹️（（5）】在全局内传递鼠标坐标的 provider */}
 		<MouseContextProvider>
     		{/* <App /> */}
-			<RouterProvider router={router}/>
+			<UseYPosProvider>
+				<RouterProvider router={router}/>
+			</UseYPosProvider>
 		</MouseContextProvider>
 	</Provider>
 )

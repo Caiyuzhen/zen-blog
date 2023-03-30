@@ -49,7 +49,7 @@ const MainContainer:FC = ():ReactElement => {
 
 	return (
 		<>
-			<UseYPosProvider>
+			{/* <UseYPosProvider> */}
 				{/* <useCardYPosContext.Provider value={{ YPos, updateYPosFn }}> */}
 					<div className="context-container">
 						<WorkTopInfo />
@@ -79,7 +79,7 @@ const MainContainer:FC = ():ReactElement => {
 						<img src={gear} alt="" className="gear"/>
 					</div>
 				{/* </useCardYPosContext.Provider> */}
-			</UseYPosProvider>
+			{/* </UseYPosProvider> */}
 		</>
 	)
 }
