@@ -7,7 +7,7 @@ import funShotBtn from '../../../../../../assets/img/miguFeedUI-funShotBtn.png'
 export const MainFeedUi = () => {
 	return (
 		<div className="main-miguFeedUI-container">
-			<div className="migufeedUI-main-container">
+			<div className="migufeedUI-container">
 				<div className="migufeedUI-left-container">
 					{/* 左上 */}
 					<div className="leftTop-withLineContainer">

@@ -9,7 +9,7 @@
 	padding: 80px 124px;
 	z-index: 2;
 
-	.migufeedUI-main-container {
+	.migufeedUI-container {
 		display: flex;
 		width: 100%;
 		max-width: 1500px;
@@ -189,7 +189,7 @@
 				}
 			}
 
-			// 右下
+			// 右下图
 			> img {
 				width: 320px;
 				transform: translate(-20px, 120px);
@@ -204,5 +204,112 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 1;
+	}
+}
+
+
+@media screen and (max-width: 1220px) {
+
+	.main-miguFeedUI-container {
+
+		.migufeedUI-container {
+			
+			// 左侧
+			.migufeedUI-left-container {
+				width: 200px;
+				gap:  12px;
+				transform: translateY(30px);
+
+				// 左上
+				.leftTop-withLineContainer {
+
+					.migu-leftTop-line {
+						scale: 0.8;
+						right: -130px;
+					}
+
+					.miguFeedUI-left-miguMall {
+						width: 200px;
+
+						> p {
+							width: 100%;
+						}
+					}
+				}
+
+				// 左中
+				.leftMedium-withLineContainer {
+					transform: translateY(56px);
+
+					.migu-leftMedium-line {
+						scale: 0.8;
+						right: -130px;
+					}
+
+					.miguFeedUI-left-popUp {
+						width: 200px;
+
+						> p {
+							width: 100%;
+						}
+					}
+				}
+
+				// 左下评论图
+				> img {
+					width: 120px;
+					transform: translateY(56px);
+				}
+			}
+
+			// 中间 feed UI
+			.mainFeedUI-pic {
+				width: 220px;
+			}
+
+			// 右侧
+			.migufeedUI-right-container {
+				width: 200px;
+				gap:  12px;
+				transform: translate(32px, -20px);
+				z-index: 3;
+
+				// 右上
+				.rightTop-withLineContainer {
+
+					.migu-rightTop-line {
+						scale: 0.8;
+						left: -140px;
+					}
+
+					.miguFeedUI-right-coreCategory {
+						> p {
+							width: 100%;
+						}
+					}
+				}
+
+				// 右中
+				.rightMedium-withLineContainer {
+					transform: translateY(166px);
+
+					.migu-rightMedium-line {
+						scale: 0.8;
+						left: -140px;
+					}
+					.miguFeedUI-left-funShot{
+						> p {
+							width: 100%;
+						}
+					}
+				}
+
+				// 右下图
+				> img {
+					width: 200px;
+					transform: translate(-40px, 146px);
+				}
+			}
+		}
 	}
 }
