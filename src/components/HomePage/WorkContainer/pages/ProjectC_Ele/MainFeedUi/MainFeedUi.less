@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	width: 100%;
 	height: auto;
 	box-sizing: border-box;
@@ -11,7 +11,6 @@
 
 	.migufeedUI-container {
 		display: flex;
-		width: 100%;
 		max-width: 1500px;
 		height: auto;
 		align-items: center;
@@ -95,6 +94,7 @@
 				.migu-leftMedium-line{ //线
 					position: absolute;
 					right: -80px;
+					z-index: 3;
 				}
 			}
 
@@ -208,8 +208,7 @@
 }
 
 
-@media screen and (max-width: 1220px) {
-
+@media screen and (max-width: 1280px) {
 	.main-miguFeedUI-container {
 
 		.migufeedUI-container {
@@ -272,7 +271,6 @@
 				width: 200px;
 				gap:  12px;
 				transform: translate(32px, -20px);
-				z-index: 3;
 
 				// 右上
 				.rightTop-withLineContainer {
@@ -311,5 +309,267 @@
 				}
 			}
 		}
+
+		.main-miguFeedUI-linearBg > svg {
+				width: 800px;
+		}
+		
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	.main-miguFeedUI-container {
+		padding: 32px 124px;
+
+		.migufeedUI-container {
+			
+			// 左侧
+			.migufeedUI-left-container {
+				width: 160px;
+				gap:  64px;
+				transform: translateY(0px);
+
+				// 左上
+				.leftTop-withLineContainer {
+
+					.migu-leftTop-line {
+						scale: 0.6;
+						right: -150px;
+						bottom: -4px
+					}
+
+					.miguFeedUI-left-miguMall {
+						width: 100%;
+
+						> p {
+							width: 100%;
+							font-size: 18px;
+						}
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 左中
+				.leftMedium-withLineContainer {
+					transform: translateY(56px);
+
+					.migu-leftMedium-line {
+						scale: 0.6;
+						right: -180px;
+					}
+
+					.miguFeedUI-left-popUp {
+						width: 100%;
+
+						> p {
+							width: 100%;
+							font-size: 18px;
+						}
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 左下评论图
+				> img {
+					width: 120px;
+					transform: translateY(8px);
+				}
+			}
+
+			// 中间 feed UI
+			.mainFeedUI-pic {
+				width: 160px;
+			}
+
+			// 右侧
+			.migufeedUI-right-container {
+				width: 160px;
+				gap:  12px;
+				transform: translate(32px, -88px);
+
+				// 右上
+				.rightTop-withLineContainer {
+
+					.migu-rightTop-line {
+						scale: 0.6;
+						left: -130px;
+					}
+
+					.miguFeedUI-right-coreCategory {
+						> p {
+							width: 100%;
+							font-size: 18px;
+						}
+
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 右中
+				.rightMedium-withLineContainer {
+					transform: translateY(212px);
+
+					.migu-rightMedium-line {
+						scale: 0.6;
+						left: -130px;
+					}
+					.miguFeedUI-left-funShot{
+						> p {
+							width: 100%;
+							font-size: 18px;
+						}
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 右下图
+				> img {
+					width: 200px;
+					transform: translate(0px, 190px);
+				}
+			}
+		}
+
+		.main-miguFeedUI-linearBg > svg {
+			width: 600px;
+	}
+	}
+}
+
+
+@media screen and (max-width: 720px) {
+	.main-miguFeedUI-container {
+		padding: 32px 124px;
+
+		.migufeedUI-container {
+			
+			// 左侧
+			.migufeedUI-left-container {
+				width: 120px;
+				gap:  44px;
+				transform: translateY(0px);
+
+				// 左上
+				.leftTop-withLineContainer {
+
+					.migu-leftTop-line {
+						scale: 0.6;
+						right: -150px;
+						bottom: -4px
+					}
+
+					.miguFeedUI-left-miguMall {
+						width: 100%;
+
+						> p {
+							width: 100%;
+							font-size: 14px;
+						}
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 左中
+				.leftMedium-withLineContainer {
+					transform: translateY(56px);
+
+					.migu-leftMedium-line {
+						scale: 0.6;
+						right: -180px;
+					}
+
+					.miguFeedUI-left-popUp {
+						width: 100%;
+
+						> p {
+							width: 100%;
+							font-size: 14px;
+						}
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 左下评论图
+				> img {
+					width: 100px;
+					transform: translateY(18px);
+				}
+			}
+
+			// 中间 feed UI
+			.mainFeedUI-pic {
+				width: 120px;
+			}
+
+			// 右侧
+			.migufeedUI-right-container {
+				width: 120px;
+				gap:  12px;
+				transform: translate(32px, -78px);
+
+				// 右上
+				.rightTop-withLineContainer {
+
+					.migu-rightTop-line {
+						scale: 0.6;
+						left: -130px;
+					}
+
+					.miguFeedUI-right-coreCategory {
+						> p {
+							width: 100%;
+							line-height: 1.5;
+							font-size: 14px;
+						}
+
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 右中
+				.rightMedium-withLineContainer {
+					transform: translateY(174px);
+
+					.migu-rightMedium-line {
+						scale: 0.6;
+						left: -130px;
+					}
+					.miguFeedUI-left-funShot{
+						> p {
+							width: 100%;
+							font-size: 14px;
+						}
+						:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+
+				// 右下图
+				> img {
+					width: 160px;
+					transform: translate(8px, 152px);
+				}
+			}
+		}
+
+		.main-miguFeedUI-linearBg > svg {
+			width: 400px;
+	}
 	}
 }
