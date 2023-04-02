@@ -10,12 +10,7 @@ import { BasicInfoPrpjectB } from './BasicInfoPrpjectB/BasicInfoPrpjectB'
 import { DividerLight } from './DividerLight/DividerLight'
 import UserNPS from './UserNPS/UserNPS'
 import { PjbStategy } from './PjbStategy/PjbStategy'
-import UXFrameWork from './UXFrameWork/UXFrameWork'
-import EmotionalModel from './EmotionalModel/EmotionalModel'
 import VirtualAvatar from './VirtualAvatar/VirtualAvatar'
-import PfWidget from './PfWidget/PfWidget'
-import IMCover from './IMCover/IMCover'
-import MobileCover from './MobileCover/MobileCover'
 import AiGenerare from './AiGenerare/AiGenerare'
 import VcConcept from './VcConcept/VcConcept'
 import { VcStructure } from './VcStructure/VcStructure'
@@ -54,23 +49,9 @@ export const ProjectB = () => {
 				{/* UX Stategy */}
 				<PjbStategy />
 
-				{/* UX FrameWork */}
-				<UXFrameWork />
-
-				{/* design model */}
-				<EmotionalModel />
 
 				{/* avatar */}
 				<VirtualAvatar />
-
-				{/* Profile */}
-				<PfWidget />
-
-				{/* IMCover */}
-				<IMCover />
-
-				{/* Mobile */}
-				<MobileCover />
 
 				{/* Ai */}
 				<AiGenerare />

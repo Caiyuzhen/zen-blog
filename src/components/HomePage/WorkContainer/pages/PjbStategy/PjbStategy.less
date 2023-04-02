@@ -17,7 +17,7 @@
 	margin-top: -40px;
 	
 	.pjb-UXStategy-insideContainer {
-		width: 1632px;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -57,6 +57,9 @@
 				box-shadow: 0px 6px 12px 0px #5E61FC05;
 				text-align: center;
 				line-height: 72px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 			.pjb-UXStategy-leftObjectives-items {
@@ -97,6 +100,9 @@
 				box-shadow: 0px 6px 12px 0px #5E61FC05;
 				text-align: center;
 				line-height: 72px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 			.pjb-UXStategy-rightStategy-items {
@@ -161,7 +167,7 @@
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
-				height: 254px !important;
+				// height: 254px !important;
 
 
 				.pjb-UXStategy-leftObjectives-title {
@@ -191,14 +197,13 @@
 
 @media screen and (max-width: 1400px) {
 	.pjb-UXStategy-main-container {
-		padding: 54px 124px;
+		padding: 84px 124px;
 		
 		.pjb-UXStategy-insideContainer {
 			gap:48px;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
-				height: 254px !important;
 
 				.pjb-UXStategy-leftObjectives-title {
 					font-size: 20px;
@@ -212,7 +217,6 @@
 
 			// 右侧策略
 			.pjb-UXStategy-rightStategy {
-				height: 254px !important;
 
 				.pjb-UXStategy-rightStategy-title {
 					font-size: 20px;
@@ -239,12 +243,14 @@
 
 		
 		.pjb-UXStategy-insideContainer {
-			width: 1140px;
+			// width: 1140px;
 			gap:48px;
 			scale: 0.9;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
+				height: 224px !important;
+				width: 464px;
 
 				.pjb-UXStategy-leftObjectives-title {
 					font-size: 20px;
@@ -258,7 +264,8 @@
 
 			// 右侧策略
 			.pjb-UXStategy-rightStategy {
-
+				height: 224px !important;
+				width: 464px;
 
 				.pjb-UXStategy-rightStategy-title {
 					font-size: 20px;
@@ -286,12 +293,11 @@
 		margin-bottom: -24px;
 		
 		.pjb-UXStategy-insideContainer {
-			width: 1140px;
 			gap:40px;
-			scale: 0.8;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
+				min-width: 30%;
 				height: 254px !important;
 
 				.pjb-UXStategy-leftObjectives-title {
@@ -308,6 +314,8 @@
 
 			// 右侧策略
 			.pjb-UXStategy-rightStategy {
+				min-width: 30%;
+				height: 254px !important;
 
 				.pjb-UXStategy-rightStategy-title {
 					font-size: 20px;
@@ -327,17 +335,18 @@
 }
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1100px) {
 	.pjb-UXStategy-main-container {
 		margin-top: -108px;
 		margin-bottom: -44px;
 		
 		.pjb-UXStategy-insideContainer {
-			scale: 0.73;
+			// scale: 0.73;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
-				height: 254px !important;
+				min-width: 32%;
+				height: 224px !important;
 
 				.pjb-UXStategy-leftObjectives-title {
 					font-size: 20px;
@@ -345,13 +354,15 @@
 				}
 
 				.pjb-UXStategy-leftObjectives-items {
-					font-size: 18px;
+					font-size: 16px;
 					white-space: nowrap;
 				}
 			}
 
 			// 右侧策略
 			.pjb-UXStategy-rightStategy {
+				min-width: 32%;
+				height: 224px !important;
 
 				.pjb-UXStategy-rightStategy-title {
 					font-size: 20px;
@@ -359,7 +370,7 @@
 				}
 
 				.pjb-UXStategy-rightStategy-items {
-					font-size: 18px;
+					font-size: 16px;
 				}
 			}
 		}
@@ -380,12 +391,13 @@
 		.pjb-UXStategy-insideContainer {
 			width: 132%;
 			flex-direction: column;
-			gap:128px;
-			scale: 0.75;
+			gap: 68px;
+			padding: 0 68px;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
-				height: 254px !important;
+				width: 100%;
+				height: 224px !important;
 
 				.pjb-UXStategy-leftObjectives-title {
 					font-size: 24px;
@@ -393,7 +405,7 @@
 
 				.pjb-UXStategy-leftObjectives-items {
 					font-family: 'GTEestiProText-Regular';
-					font-size: 22px;
+					font-size: 20px;
 					white-space: nowrap;
 					margin-top: 20px;
 				}
@@ -401,6 +413,7 @@
 
 			// 右侧策略
 			.pjb-UXStategy-rightStategy {
+				width: 100%;
 
 				.pjb-UXStategy-rightStategy-title {
 					font-size: 24px;
@@ -408,7 +421,7 @@
 				}
 
 				.pjb-UXStategy-rightStategy-items {
-					font-size: 22px;
+					font-size: 20px;
 					margin-top: 20px;
 				}
 			}
@@ -429,7 +442,6 @@
 		
 		.pjb-UXStategy-insideContainer {
 			gap:88px;
-			scale: 0.75;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
@@ -475,10 +487,10 @@
 	.pjb-UXStategy-main-container {
 		margin-top: -188px;
 		margin-bottom: -144px;
+		padding: 54px 80px 80px 80px;
 		
 		.pjb-UXStategy-insideContainer {
 			gap:88px;
-			scale: 0.75;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
@@ -509,8 +521,8 @@
 		}
 
 		.dbBottomArrowIcon {
-			width: 92px;
-			transform: translateY(-148px);
+			width: 72px;
+			transform: translateY(-108px);
 		}
 	}
 }
@@ -518,12 +530,11 @@
 
 @media screen and (max-width: 640px) {
 	.pjb-UXStategy-main-container {
-		margin-top: -188px;
-		margin-bottom: -164px;
+		margin-top: -158px;
+		margin-bottom: -124px;
 		
 		.pjb-UXStategy-insideContainer {
 			gap:68px;
-			scale: 0.75;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
@@ -531,10 +542,11 @@
 
 				.pjb-UXStategy-leftObjectives-title {
 					font-size: 22px;
+					height: 60px;
 				}
 
 				.pjb-UXStategy-leftObjectives-items {
-					font-size: 14px;
+					font-size: 16px;
 					white-space: nowrap;
 					margin-top: 20px;
 				}
@@ -547,18 +559,19 @@
 				.pjb-UXStategy-rightStategy-title {
 					font-size: 22px;
 					top: -28px;
+					height: 60px;
 				}
 
 				.pjb-UXStategy-rightStategy-items {
-					font-size: 14px;
+					font-size: 16px;
 					margin-top: 20px;
 				}
 			}
 		}
 
 		.dbBottomArrowIcon {
-			width: 92px;
-			transform: translateY(-148px);
+			width: 70px;
+			transform: translateY(-128px);
 		}
 	}
 }
@@ -566,13 +579,13 @@
 
 @media screen and (max-width: 600px) {
 	.pjb-UXStategy-main-container {
-		margin-top: -228px;
-		margin-bottom: -174px;
+		margin-top: -158px;
+		margin-bottom: -104px;
+		padding: 84px;
 		
 		.pjb-UXStategy-insideContainer {
 			width: 155%;
-			gap:88px;
-			scale: 0.65;
+			gap:78px;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
@@ -586,7 +599,7 @@
 				}
 
 				.pjb-UXStategy-leftObjectives-items {
-					font-size: 14px;
+					font-size: 16px;
 					white-space: nowrap;
 					margin-top: 20px;
 				}
@@ -602,15 +615,15 @@
 				}
 
 				.pjb-UXStategy-rightStategy-items {
-					font-size: 14px;
+					font-size: 16px;
 					margin-top: 20px;
 				}
 			}
 		}
 
 		.dbBottomArrowIcon {
-			width: 80px;
-			transform: translateY(-168px);
+			width: 60px;
+			transform: translateY(-98px);
 		}
 	}
 }
@@ -618,13 +631,61 @@
 
 @media screen and (max-width: 520px) {
 	.pjb-UXStategy-main-container {
-		padding: 54px;
-		margin-top: -128px;
+		padding: 54px 74px;
+		margin-top: -168px;
 		margin-bottom: -124px;
 		
 		.pjb-UXStategy-insideContainer {
-			gap:88px;
-			scale: 0.75;
+			gap:68px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 164px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 18px;
+					top: -26px;
+					height: 60px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 14px;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				height: 164px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 18px;
+					top: -26px;
+					height: 60px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 14px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			transform: translateY(-138px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.pjb-UXStategy-main-container {
+		padding: 54px  42px;
+		margin-top: -148px;
+		margin-bottom: -124px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:48px;
 
 			// 左侧目标
 			.pjb-UXStategy-leftObjectives {
@@ -638,7 +699,6 @@
 				.pjb-UXStategy-leftObjectives-items {
 					font-size: 12px;
 					margin-top: 20px;
-					scale: 0.83;
 				}
 			}
 
@@ -654,14 +714,10 @@
 				.pjb-UXStategy-rightStategy-items {
 					font-size: 12px;
 					margin-top: 20px;
-					scale: 0.83;
 				}
 			}
 		}
 
-		.dbBottomArrowIcon {
-			width: 80px;
-			transform: translateY(-138px);
-		}
 	}
 }
+
