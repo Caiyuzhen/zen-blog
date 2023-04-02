@@ -10,22 +10,20 @@ export const PjbStategy = () => {
 				<div className="pjb-UXStategy-insideContainer">
 					<div className="pjb-UXStategy-leftObjectives">
 						<div className="pjb-UXStategy-leftObjectives-title">
-							🎯 Design Objectives
+							😄 Personal
 						</div>
 						<div className="pjb-UXStategy-leftObjectives-items">
-							<p>Xxxx xxxxxx xxx xx xxxxxxx xxxxxx xxxxx xx xxxx xxxx xxx</p>
-							<p>Xxxxx x xx xxxx xxxx xx xxxxxxxxxx xx xxxxxx xxxxx xxxxxx xx xxxxx</p>
-							<p>Xxxx xxxxxx xx xxxxxxxxxx xx xx xxxxxxx xxxxxx xx xxxxxxxx xxx</p>
+							<p>Incorporate a unique interactive experience</p>
+							<p>Build a unique identity expression</p>
 						</div>
 					</div>
 					<div className="pjb-UXStategy-rightStategy">
 						<div className="pjb-UXStategy-rightStategy-title">
-							✏️ Experience Strategy
+							🤲 Teams
 						</div>
 						<div className="pjb-UXStategy-rightStategy-items">
-							<p>Xxxx xxxxxx xxx xx xxxxxxx xxxxxx xxxxx xx xxxx xxxx xxxxxx xx xxxxx</p>
-							<p>Xxxx xxxxxx xx xxxxxxxxxx xx xx xxxxxxx xxxxxx xx xxxxxxxx xxx</p>
-							<p>Xxxxx x xx xxxx xxxx xx xxxxxxxxxx xx xxxxxx xxxxx xxxxxx xx xxxxx</p>
+							<p>Enhance personalization and emotional expression</p>
+							<p>Strengthen the atmosphere of the group</p>
 						</div>
 					</div>
 				</div>
