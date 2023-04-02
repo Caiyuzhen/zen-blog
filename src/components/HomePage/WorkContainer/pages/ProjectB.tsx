@@ -47,14 +47,9 @@ export const ProjectB = () => {
 				{/* project intro */}
 				<BasicInfoPrpjectB />
 
-				{/* divider */}
-				<DividerLight />
 				
 				{/* 用户 NPS */}
 				<UserNPS />
-
-				{/* divider */}
-				<DividerLight />
 
 				{/* UX Stategy */}
 				<PjbStategy />

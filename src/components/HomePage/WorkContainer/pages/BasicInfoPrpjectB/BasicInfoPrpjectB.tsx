@@ -7,7 +7,6 @@ import linearBg from '../../../../../assets/svg/bg-linearBg.svg'
 import colorFulLinear from '../../../../../assets/svg/bg-colorFulLinear.svg'
 
 export const BasicInfoPrpjectB = () => {
-
 	return (
 		<>
 			<div className="basic-projectB-info">
