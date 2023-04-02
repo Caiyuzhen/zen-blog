@@ -1,6 +1,7 @@
 import React from 'react'
 import './PublishUI.less'
 import publishUI from '../../../../../../assets/img/migu-PublishUI.png'
+import musicTexture from '../../../../../../assets/img/migu-musicTexture.png'
 
 export const PublishUI = () => {
 	return (
@@ -45,6 +46,7 @@ export const PublishUI = () => {
 				{/* 发布状态 UI */}
 				<img src={publishUI} alt="" />
 			</div>
+			<img src={musicTexture} alt="" className="musicTexture"/>
 		</div>
 	)
 }

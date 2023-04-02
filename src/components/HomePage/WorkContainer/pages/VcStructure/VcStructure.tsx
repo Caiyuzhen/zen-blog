@@ -4,7 +4,7 @@ import catalogCard from '../../../../../assets/img/page-catalogCard.jpg'
 import timeLine from '../../../../../assets/img/page-timeline.jpg'
 import videoDoc from '../../../../../assets/img/page-videoDoc.jpg'
 import videoLine from '../../../../../assets/img/page-videoLine.jpg'
-import AuroraGradientBG from '../../../../../assets/svg/bg-AuroraGradient.svg'
+import AuroraGradientBG from '../../../../../assets/svg/bg-colorFulLinear.svg'
 import gradualArrow from '../../../../../assets/svg/icon-gradualArrowBlue.svg'
 
 

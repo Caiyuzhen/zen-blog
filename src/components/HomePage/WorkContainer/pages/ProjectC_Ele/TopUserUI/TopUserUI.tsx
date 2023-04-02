@@ -3,6 +3,7 @@ import './TopUserUI'
 import topUserUI from '../../../../../../assets/img/Migu-Top20.png'
 import topHobbit from '../../../../../../assets/img/topHobbit.png'
 import topStar from '../../../../../../assets/img/topStar.png'
+import musicTexture from '../../../../../../assets/img/migu-musicTexture.png'
 import './TopUserUI.less'
 
 export const TopUserUI = () => {
@@ -28,6 +29,7 @@ export const TopUserUI = () => {
 					</div>
 				</div>
 			</div>
+			<img src={musicTexture} alt="" className="musicTexture"/>
 		</div>
 	)
 }

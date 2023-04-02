@@ -8,6 +8,13 @@
 	box-sizing: border-box;
 	position: relative;
 
+	.musicTexture {
+		position: absolute;
+		width: 620px;
+		transform: translate(80%, 75%);
+		z-index: 0;
+	}
+
 	.topUserUI-wrapper {
 		max-width: 1500px;
 		width: 100%;
@@ -17,6 +24,7 @@
 		justify-content: center;
 		box-sizing: border-box;
 		position: relative;
+		z-index: 1;
 		
 		.topUser-left-container {
 			max-width: 404px;
@@ -141,6 +149,11 @@
 
 @media screen and (max-width: 1280px) {
 	.topUserUI-container {
+
+		.musicTexture {
+			width: 500px;
+			transform: translate(80%, 75%);
+		}
 	
 		.topUserUI-wrapper {
 			
@@ -215,6 +228,10 @@
 
 @media screen and (max-width: 1080px) {
 	.topUserUI-container {
+		.musicTexture {
+			width: 460px;
+			transform: translate(70%, 45%);
+		}
 	
 		.topUserUI-wrapper {
 			
@@ -293,6 +310,11 @@
 @media screen and (max-width: 800px) {
 	.topUserUI-container {
 		padding: 124px 124px 84px 124px;
+
+		.musicTexture {
+			width: 450px;
+			transform: translate(38%, 35%);
+		}
 	
 		.topUserUI-wrapper {
 			
@@ -364,6 +386,17 @@
 }
 
 
+@media screen and (max-width: 580px) {
+	.topUserUI-container {
+
+		.musicTexture {
+			width: 340px;
+			transform: translate(38%, 35%);
+		}
+	}
+}
+
+
 @media screen and (max-width: 500px) {
 	.topUserUI-container {
 		padding: 54px;
@@ -422,6 +455,11 @@
 @media screen and (max-width: 400px) {
 	.topUserUI-container {
 		padding: 54px;
+
+		.musicTexture {
+			width: 300px;
+			transform: translate(22%, 35%);
+		}
 	
 		.topUserUI-wrapper {
 			

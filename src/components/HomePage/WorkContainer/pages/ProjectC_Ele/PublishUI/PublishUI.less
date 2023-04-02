@@ -8,6 +8,13 @@
 	box-sizing: border-box;
 	position: relative;
 
+	.musicTexture {
+		position: absolute;
+		width: 620px;
+		transform: translate(-80%, 275%);
+		z-index: 0;
+	}
+
 	.publishUI-wrapper {
 		max-width: 1200px;
 		width: 100%;
@@ -17,6 +24,7 @@
 		justify-content: center;
 		box-sizing: border-box;
 		position: relative;
+		z-index: 1;
 
 		.publishUI-textWithLine-container {
 			position: absolute;
@@ -76,6 +84,11 @@
 	.publishUI-main-container {
 		padding: 124px 124px 72px 124px;
 
+		.musicTexture {
+			width: 460px;
+			transform: translate(-70%, 305%);
+		}
+
 		.publishUI-wrapper {
 			max-width: 900px;
 
@@ -103,6 +116,11 @@
 @media screen and (max-width: 1080px) {
 	.publishUI-main-container {
 		padding: 124px 124px 72px 124px;
+
+		.musicTexture {
+			width: 460px;
+			transform: translate(-60%, 205%);
+		}
 
 		.publishUI-wrapper {
 			max-width: 640px;
@@ -143,6 +161,11 @@
 	.publishUI-main-container {
 		padding: 84px 124px 72px 124px;
 
+		.musicTexture {
+			width: 460px;
+			transform: translate(-32%, 165%);
+		}
+
 		.publishUI-wrapper {
 			max-width: 640px;
 
@@ -180,6 +203,11 @@
 	.publishUI-main-container {
 		padding: 64px 124px 72px 124px;
 
+		.musicTexture {
+			width: 340px;
+			transform: translate(-22%, 165%);
+		}
+
 		.publishUI-wrapper {
 			max-width: 640px;
 
@@ -216,6 +244,11 @@
 @media screen and (max-width: 380px) {
 	.publishUI-main-container {
 		padding: 24px 54px 22px 54px;
+
+		.musicTexture {
+			width: 280px;
+			transform: translate(-22%, 135%);
+		}
 
 		.publishUI-wrapper {
 			max-width: 640px;
