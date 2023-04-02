@@ -1,183 +1,186 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
-@font-face {
-	font-family: 'RammettoOne';
-	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
-}
 
-@font-face {
-	font-family: 'GTEestiProText-Bold';
-	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
-}
+.virtualAvatar-main-container {
+	width: 100%;
+	height: 980px;
+	margin-top: 120px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding: 124px;
+	box-sizing: border-box;
+	background: url('../../../../../assets/img/bg-auroraBg.jpg') no-repeat;
+	overflow: hidden;
 
-@font-face {
-	font-family: 'GTEestiProText-Book';
-	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Medium';
-	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Regular';
-	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
-}
-
-
-@media screen and (max-width: @mediaWidth-Max) { 
-	.virtualAvatar-main-container {
-		width: 100%;
-		height: 980px;
-		margin-top: 120px;
+	// 左侧信息
+	.virtualAvatar-left-infoContainer {
+		// 最大宽度
+		max-width: 50%;
 		display: flex;
-		flex-direction: row;
 		align-items: center;
-		justify-content: space-around;
-		padding: 124px;
+		justify-content: space-between;
+		flex-direction: row;
 		box-sizing: border-box;
-		background: url('../../../../../assets/img/bg-auroraBg.jpg') no-repeat;
-		overflow: hidden;
+		position: relative;
 
-		// 左侧信息
-		.virtualAvatar-left-infoContainer {
-			// 最大宽度
-			max-width: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			flex-direction: row;
-			box-sizing: border-box;
+		// 大标题
+		> span {
+			position: absolute;
+			width: 57%;
+			font-family: 'GTEestiProText-Bold';
+			font-size: 32px;
+			text-align: left;
+			line-height: 1.25;
+			margin: 0;
+			top: 124px;
+		}
+
+		// 头像
+		.avatarPic {
+			width: 88px;
+		}
+
+		// 左描述
+		.virtualAvatar-left-des-container {
+			width: 100%;
+			margin: 0 0 130px 24px;
+
+			.virtualAvatar-left-des {
+				width: 220px;
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+
+				> p {
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					color: #757D99;
+					text-align: left;
+					line-height: 1.3;
+				}
+
+				// 向右虚线
+				.trianArrowRight-right {
+					width: 94%;
+					height: 1px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					z-index: 2;
+					transform: rotate(0deg) translateX(-1px); 
+
+					.dotted-line-right {
+						width: 100%;
+						height: 1px;
+						border-radius: 0;
+						border-bottom: 1px dashed #5F647C; //虚线
+					}
+					.trianArrow-right-01 {
+						border:6px solid @text-color;
+						border-radius: 0;
+						border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+						border-color: transparent transparent transparent #5F647C;
+					}
+				}
+			}
+		}
+
+		// 虚拟角色
+		.avatarMan-container {
+			width: 414px;
 			position: relative;
 
-			// 头像
-			.avatarPic {
-				width: 88px;
+			// 渐变光圈
+			.halo-circle-1 {
+				position: absolute;
+				z-index: 5;
+				left: -2%;
+				top: 428px;
 			}
 
-			// 左描述
-			.virtualAvatar-left-des-container {
-				width: 100%;
-				margin: 0 0 130px 24px;
-
-				.virtualAvatar-left-des {
-					width: 220px;
-					display: flex;
-					flex-direction: column;
-					gap: 4px;
-
-					> p {
-						font-family: 'GTEestiProText-Regular';
-						font-size: 16px;
-						color: #757D99;
-						text-align: left;
-						line-height: 1.3;
-					}
-
-					// 向右虚线
-					.trianArrowRight-right {
-						width: 94%;
-						height: 1px;
-						display: flex;
-						align-items: center;
-						justify-content: space-between;
-						z-index: 2;
-						transform: rotate(0deg) translateX(-1px); 
-
-						.dotted-line-right {
-							width: 100%;
-							height: 1px;
-							border-radius: 0;
-							border-bottom: 1px dashed #5F647C; //虚线
-						}
-						.trianArrow-right-01 {
-							border:6px solid @text-color;
-							border-radius: 0;
-							border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
-							border-color: transparent transparent transparent #5F647C;
-						}
-					}
-				}
+			.halo {
+				position: absolute;
+				z-index: 5;
+				left: -18%;
+				top: 508px;
 			}
 
-			// 虚拟角色
-			.avatarMan-container {
+			// 小光圈
+			.halo-circle-2 {
+				position: absolute;
+				z-index: 5;
+				left: 16%;
+				top: 788px;
+			}
+
+			//虚拟角色
+			.avatarMan {
 				width: 414px;
-				position: relative;
-
-				// 渐变光圈
-				.halo {
-					position: absolute;
-					z-index: 5;
-					left: -18%;
-					top: 488px;
-				}
-
-				//虚拟角色
-				.avatarMan {
-					width: 414px;
-					transform: translateY(240px);
-				}
-			}
-
-			// 右描述
-			.virtualAvatar-right-des-container {
-				width: 100%;
-				margin: 0 24px 130px 24px;
-
-				.virtualAvatar-right-des {
-					width: 220px;
-					display: flex;
-					flex-direction: column;
-					gap: 4px;
-
-					> p {
-						font-family: 'GTEestiProText-Regular';
-						font-size: 16px;
-						color: #757D99;
-						text-align: left;
-						line-height: 1.3;
-					}
-
-					// 向左虚线
-					.trianArrowRight-left {
-						width: 94%;
-						height: 1px;
-						display: flex;
-						align-items: center;
-						justify-content: space-between;
-						z-index: 2;
-						transform: rotate(0deg) translateX(-1px); 
-
-						.dotted-line-left {
-							width: 100%;
-							height: 1px;
-							border-radius: 0;
-							border-bottom: 1px dashed #5F647C; //虚线
-						}
-						.trianArrow-left-01 {
-							border:6px solid @text-color;
-							border-radius: 0;
-							border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
-							border-color: transparent transparent transparent #5F647C;
-						}
-					}
-				}
+				transform: translateY(240px);
 			}
 		}
 
-		// 右侧信息
-		.avatarSetting {
-			width: 464px;
-			height: auto;
-			border-radius: 18px;
-			margin: 80px 0 0 80px;
-			box-shadow: 0px 14px 14px  #41447E1F;
-			-moz-box-shadow: 0px 14px 14px  #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+		// 右描述
+		.virtualAvatar-right-des-container {
+			width: 100%;
+			margin: 0 24px 130px 24px;
+
+			.virtualAvatar-right-des {
+				width: 220px;
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+
+				> p {
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					color: #757D99;
+					text-align: left;
+					line-height: 1.3;
+				}
+
+				// 向左虚线
+				.trianArrowRight-left {
+					width: 94%;
+					height: 1px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					z-index: 2;
+					transform: rotate(0deg) translateX(-1px); 
+
+					.dotted-line-left {
+						width: 100%;
+						height: 1px;
+						border-radius: 0;
+						border-bottom: 1px dashed #5F647C; //虚线
+					}
+					.trianArrow-left-01 {
+						border:6px solid @text-color;
+						border-radius: 0;
+						border-width: 4px 2px 4px 10px; //等腰三角形, 扁一些
+						border-color: transparent transparent transparent #5F647C;
+					}
+				}
+			}
 		}
 	}
+
+	// 右侧信息
+	.avatarSetting {
+		width: 464px;
+		height: auto;
+		border-radius: 18px;
+		margin: 120px 0 0 80px;
+		box-shadow: 0px 14px 14px  #41447E1F;
+		-moz-box-shadow: 0px 14px 14px  #41447E1F;
+		-webkit-box-shadow: 0px 14px 14px  #41447E1F;
+	}
 }
+
+
+
 
 
 @media screen and (max-width: 1920px) { 

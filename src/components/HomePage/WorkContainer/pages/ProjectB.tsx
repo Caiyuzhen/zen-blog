@@ -41,14 +41,12 @@ export const ProjectB = () => {
 
 				{/* project intro */}
 				<BasicInfoPrpjectB />
-
 				
 				{/* 用户 NPS */}
 				<UserNPS />
 
 				{/* UX Stategy */}
 				<PjbStategy />
-
 
 				{/* avatar */}
 				<VirtualAvatar />
