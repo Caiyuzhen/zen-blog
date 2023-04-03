@@ -1,178 +1,125 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
 
-@media screen and (max-width: @mediaWidth-Max) {  
-	.AiGenerate-main-container {
+.AiGenerate-main-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 124px;
+	box-sizing: border-box;
+	gap: 40px;
+	position: relative;
+	margin: 200px 0 200px 0;
+
+	.AiGenerate-left-contentContainer {
 		width: 100%;
 		height: auto;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
 		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 200px 0 200px 0;
+		gap: 24px;
+		z-index: 5;
 
-		.AiGenerate-left-contentContainer {
-			width: 100%;
+		.AiGenerate-left-infoContainer {
+			width: 80%;
 			height: auto;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			justify-content: space-around;
+			justify-content: center;
 			box-sizing: border-box;
 			gap: 24px;
-			z-index: 5;
 
-			.AiGenerate-left-infoContainer {
-				width: 80%;
+			.AiGenerate-left-title {
+				width: 70%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+			}
+			.AiGenerate-left-des {
+				width: 70%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+				margin-bottom: 40px;
+			}
+
+			.AiGenerate-left-picContainer {
+				width: 100%;
 				height: auto;
 				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
 				box-sizing: border-box;
 				gap: 24px;
 
-				.AiGenerate-left-title {
-					width: 70%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
-				.AiGenerate-left-des {
-					width: 70%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 40px;
+				.ColorPickerCard {
+					width: 466px;
+					border-radius: 12px;
+					box-shadow: 0px 14px 24px #41447e1f;
+					-moz-box-shadow: 0px 14px 24px #41447E1F;
+					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 				}
 
-				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
-
-					.ColorPickerCard {
-						width: 466px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					}
-
-					.AiGenerateCard {
-						width: 466px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					}
+				.AiGenerateCard {
+					width: 466px;
+					border-radius: 12px;
+					box-shadow: 0px 14px 24px #41447e1f;
+					-moz-box-shadow: 0px 14px 24px #41447E1F;
+					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 				}
 			}
 		}
+	}
 
-		.AiGenerate-right-framework {
-			width: 1064px;
-			position: absolute;
-			// right: -340px;
-			right: -2%;
-			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
-		}
+	.AiGenerate-right-framework {
+		width: 1064px;
+		position: absolute;
+		right: -2%;
+		border-radius: 18px;
+		box-shadow: 0px 14px 24px #41447e1f;
+		-moz-box-shadow: 0px 14px 24px #41447E1F;
+		-webkit-box-shadow: 0px 14px 14px #41447e1f;
 	}
 }
 
 
 @media screen and (max-width: 2300px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
 		gap: 40px;
-		position: relative;
 		margin: 200px 0 200px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
 			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 70%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
 				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 57%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 57%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 40px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 426px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 426px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
@@ -180,13 +127,6 @@
 
 		.AiGenerate-right-framework {
 			width: 1064px;
-			position: absolute;
-			// right: -340px;
-			right: -2%;
-			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -194,81 +134,27 @@
 
 @media screen and (max-width: 1940px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 200px 0 200px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 80%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 55%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 55%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 40px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 406px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 406px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
@@ -276,13 +162,6 @@
 
 		.AiGenerate-right-framework {
 			width: 1064px;
-			position: absolute;
-			margin-bottom: -18px;
-			right: -2%;
-			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -290,81 +169,28 @@
 
 @media screen and (max-width: 1870px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: 100px 0 100px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 55%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 55%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 40px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 386px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 386px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
@@ -372,13 +198,6 @@
 
 		.AiGenerate-right-framework {
 			width: -340px;
-			position: absolute;
-			right: -2%;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -386,81 +205,28 @@
 
 @media screen and (max-width: 1680px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: 100px 0 100px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 55%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 55%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 40px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 386px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 386px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
@@ -472,9 +238,6 @@
 			right: -160px;
 			margin-bottom: -14px;
 			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -482,81 +245,28 @@
 
 @media screen and (max-width: 1460px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 100px 0 100px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 55%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
+				
 				.AiGenerate-left-des {
 					width: 55%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 40px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 366px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 366px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
@@ -568,9 +278,6 @@
 			right: -240px;
 			margin-bottom: -14px;
 			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -578,95 +285,38 @@
 
 @media screen and (max-width: 1340px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 100px 0 100px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 65%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
+
 				.AiGenerate-left-des {
 					width: 65%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
 					margin-bottom: 20px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
 					gap: 24px;
 
 					.ColorPickerCard {
 						width: 346px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 346px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
 		}
 
 		.AiGenerate-right-framework {
-			width: -340px;
 			position: absolute;
 			right: -340px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -674,95 +324,38 @@
 
 @media screen and (max-width: 1270px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 100px 0 100px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			gap: 24px;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 24px;
 
 				.AiGenerate-left-title {
 					width: 65%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 65%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: @text-color-normal;
-					text-align: left;
 					margin-bottom: 20px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 316px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 316px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
 		}
 
 		.AiGenerate-right-framework {
-			position: absolute;
 			right: -340px;
 			margin-bottom: -14px;
 			border-radius: 18px;
 			scale: 0.9;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -770,94 +363,25 @@
 
 @media screen and (max-width: 1200px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 100px 0 100px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
 				gap: 20px;
 
 				.AiGenerate-left-title {
 					width: 65%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 28px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 65%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 16px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 20px;
-				}
-
-				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
-
-					.ColorPickerCard {
-						width: 316px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					}
-
-					.AiGenerateCard {
-						width: 316px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					}
 				}
 			}
 		}
 
 		.AiGenerate-right-framework {
-			position: absolute;
 			right: -400px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.9;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -865,94 +389,38 @@
 
 @media screen and (max-width: 1100px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: 50px 0 50px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
 					width: 65%;
-					font-family: 'GTEestiProText-Bold';
 					font-size: 28px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
+
 				.AiGenerate-left-des {
 					width: 65%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 16px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 20px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 286px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 286px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
 		}
 
 		.AiGenerate-right-framework {
-			position: absolute;
 			right: -440px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.9;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -960,94 +428,41 @@
 
 @media screen and (max-width: 1040px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: 20px 0 20px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 60%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
 					width: 65%;
-					font-family: 'GTEestiProText-Bold';
 					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 65%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 20px;
+
 				}
 
 				.AiGenerate-left-picContainer {
 					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 246px;
 						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 246px;
 						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
 		}
 
 		.AiGenerate-right-framework {
-			position: absolute;
-			right: -440px;
-			margin-bottom: -14px;
-			border-radius: 18px;
 			scale: 0.8;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1055,95 +470,43 @@
 
 @media screen and (max-width: 940px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -60px 0 40px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
 				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
 					width: 100%;
-					font-family: 'GTEestiProText-Bold';
 					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
 					margin-bottom: 20px;
 				}
 
 				.AiGenerate-left-picContainer {
 					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
 					gap: 24px;
 
 					.ColorPickerCard {
 						width: 312px;
 						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 312px;
 						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
+
 					}
 				}
 			}
 		}
 
 		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
 			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1151,95 +514,30 @@
 
 @media screen and (max-width: 860px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -60px 0 60px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
 					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 				.AiGenerate-left-des {
 					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 282px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 282px;
-						border-radius: 12px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1247,68 +545,21 @@
 
 @media screen and (max-width: 800px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -60px 0 60px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
-				.AiGenerate-left-title {
-					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
+
 				.AiGenerate-left-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
+					margin-bottom: 10px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
-						width: 252px;
+						width: 262px;
 						border-radius: 10px;
 						box-shadow: 0px 14px 24px #41447e1f;
 						-moz-box-shadow: 0px 14px 24px #41447E1F;
@@ -1316,7 +567,7 @@
 					}
 
 					.AiGenerateCard {
-						width: 252px;
+						width: 262px;
 						border-radius: 10px;
 						box-shadow: 0px 14px 24px #41447e1f;
 						-moz-box-shadow: 0px 14px 24px #41447E1F;
@@ -1324,18 +575,6 @@
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1343,95 +582,29 @@
 
 @media screen and (max-width: 740px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -80px 0 60px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
-				.AiGenerate-left-title {
-					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
 				.AiGenerate-left-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
+					margin-bottom: 8px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 232px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 232px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1439,95 +612,25 @@
 
 @media screen and (max-width: 690px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -80px 0 60px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
-
-				.AiGenerate-left-title {
-					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
-				.AiGenerate-left-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
-				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 202px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 202px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1535,95 +638,32 @@
 
 @media screen and (max-width: 640px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -80px 0 60px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
-					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
+					font-size: 18px; 
 				}
 				.AiGenerate-left-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 162px;
 						border-radius: 6px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 162px;
 						border-radius: 6px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
@@ -1631,191 +671,68 @@
 
 @media screen and (max-width: 520px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 54px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: 20px 0 60px 0;
+		padding: 68px;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
-					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
+					font-size: 18px; 
 				}
 				.AiGenerate-left-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
 				}
 
+
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
+					flex-direction: column;
 
 					.ColorPickerCard {
-						width: 192px;
+						width: 372px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
-						width: 192px;
+						width: 372px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }
 
 
-@media screen and (max-width: 375px) {  
+@media screen and (max-width: 400px) {  
 	.AiGenerate-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 54px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
 		margin: -10px 0 60px 0;
 
 		.AiGenerate-left-contentContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: space-around;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.AiGenerate-left-infoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				box-sizing: border-box;
-				gap: 20px;
 
 				.AiGenerate-left-title {
-					width: 100%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px; 
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
+					font-size: 18px; 
 				}
 				.AiGenerate-left-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: @text-color-normal;
-					text-align: left;
-					margin-bottom: 0px;
 				}
 
 				.AiGenerate-left-picContainer {
-					width: 100%;
-					height: auto;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					box-sizing: border-box;
-					gap: 24px;
 
 					.ColorPickerCard {
 						width: 262px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 
 					.AiGenerateCard {
 						width: 262px;
 						border-radius: 8px;
-						box-shadow: 0px 14px 24px #41447e1f;
-						-moz-box-shadow: 0px 14px 24px #41447E1F;
-						-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					}
 				}
 			}
-		}
-
-		.AiGenerate-right-framework {
-			position: absolute;
-			right: -460px;
-			margin-bottom: -14px;
-			border-radius: 18px;
-			scale: 0.8;
-			display: none;
-			box-shadow: 0px 14px 24px #41447e1f;
-			-moz-box-shadow: 0px 14px 24px #41447E1F;
-			-webkit-box-shadow: 0px 14px 14px #41447e1f;
 		}
 	}
 }

@@ -13,7 +13,7 @@ export const VirtualAvatar = () => {
 				{/* 左侧信息 */}
 				<div className="virtualAvatar-left-infoContainer">
 					<span className="virtualAvatar-maintitle"> Virtual Avatar </span>
-					<p>Virtual AvatarVirtual AvatarVirtual AvatarVirtual Avatar AvatarVirtual Avatar AvatarVirtual Avatar</p>
+					<p>Profile is the most personalized business portal for users, and we have tried different innovative designs for it.</p>
 
 					{/* 头像 */}
 					<img src={avatarPic} alt="" className="avatarPic"/>
