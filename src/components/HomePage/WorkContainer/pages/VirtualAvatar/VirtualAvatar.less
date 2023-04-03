@@ -47,6 +47,7 @@
 			left: 0;
 			margin: 0;
 			top: 174px;
+			line-height: 1.5;
 		}
 
 		// 头像
@@ -260,15 +261,6 @@
 		.virtualAvatar-left-infoContainer {
 			transform: translateY(-60px);
 	
-			// 大标题
-			> span {
-		
-			}
-			
-			> p {
-
-			}
-	
 			// 头像
 			.avatarPic {
 				width: 72px;
@@ -276,24 +268,13 @@
 	
 			// 左描述
 			.virtualAvatar-left-des-container {
-	
+
 				.virtualAvatar-left-des {
 					width: 120px;
+					margin-left: calc(4vw - 20px);
 	
 					> p {
 						font-size: 12px;
-					}
-	
-					// 向右虚线
-					.trianArrowRight-right {
-
-	
-						.dotted-line-right {
-
-						}
-						.trianArrow-right-01 {
-
-						}
 					}
 				}
 			}
@@ -325,31 +306,18 @@
 				//虚拟角色
 				.avatarMan {
 					width: 180px;
-					transform: translateY(160px);
+					transform: translateY(138px);
 				}
 			}
 	
 			// 右描述
 			.virtualAvatar-right-des-container {
-				margin: 100px 0 0 24px;
 	
 				.virtualAvatar-right-des {
 					width: 120px;
 	
 					> p {
 						font-size: 12px;
-					}
-	
-					// 向左虚线
-					.trianArrowRight-left {
-
-	
-						.dotted-line-left {
-
-						}
-						.trianArrow-left-01 {
-
-						}
 					}
 				}
 			}
@@ -363,6 +331,469 @@
 		}
 	}
 }
+
+
+
+@media screen and (max-width: 1120px) { 
+	.virtualAvatar-main-container {
+	
+		// 中心信息
+		.virtualAvatar-left-infoContainer {
+			transform: translateY(-60px);
+	
+			// 大标题
+			> span {
+				font-size: 20px;
+			}
+			
+			> p {
+				font-size: 14px;
+				top: 164px;
+			}
+	
+			// 头像
+			.avatarPic {
+				width: 62px;
+				transform: translateY(44px);
+			}
+	
+			// 左描述
+			.virtualAvatar-left-des-container {
+
+	
+				.virtualAvatar-left-des {
+					width: 120px;
+					margin-left: calc(4vw - 20px);
+	
+					> p {
+						display: none;
+					}
+				}
+			}
+	
+			// 虚拟角色区域
+			.avatarMan-container {
+
+				// 上光圈
+				.halo-circle-1 {
+					left: -70%;
+					top: 226px;
+					scale: 0.45;
+				}
+	
+				// 蓝色光圈
+				.halo {
+					left: -32%;
+    				width: 276px;
+    				top: 284px;
+				}
+	
+				// 下光圈
+				.halo-circle-2 {
+					left: -30%;
+    				top: 382px;
+    				scale: 0.6;
+				}
+	
+				//虚拟角色
+				.avatarMan {
+					width: 180px;
+					transform: translate(-4px, 132px);
+				}
+			}
+	
+			// 右描述
+			.virtualAvatar-right-des-container {
+	
+				.virtualAvatar-right-des {
+					width: 120px;
+	
+					> p {
+						display: none;
+					}
+				}
+			}
+	
+			// profile card
+			.avatarSetting {
+				width:240px;
+				border-radius: 14px;
+				margin: 120px 0 0 20px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1000px) { 
+	.virtualAvatar-main-container {
+		padding: 64px 124px;
+		height: 600px;
+		margin-top: 20px;
+		
+		// 中心信息
+		.virtualAvatar-left-infoContainer {
+	
+			// 头像
+			.avatarPic {
+				width: 52px;
+			}
+
+			// 左描述
+			.virtualAvatar-left-des-container {
+
+				.virtualAvatar-left-des {
+					width: 80px;
+					margin-left: calc(4vw - 40px);
+				}
+			}
+		
+			// 虚拟角色区域
+			.avatarMan-container {
+
+				// 上光圈
+				.halo-circle-1 {
+					left: -60%;
+					top: 276px;
+					scale: 0.45;
+				}
+	
+				// 蓝色光圈
+				.halo {
+					left: -26%;
+    				width: 286px;
+    				top: 334px;
+				}
+	
+				// 下光圈
+				.halo-circle-2 {
+					left: -24%;
+    				top: 442px;
+    				scale: 0.6;
+				}
+	
+				//虚拟角色
+				.avatarMan {
+					width: 200px;
+					transform: translate(-10px, 192px);
+				}
+			}
+
+			.virtualAvatar-right-des-container {
+	
+				.virtualAvatar-right-des {
+					width: 80px;
+				}
+			}
+	
+	
+			// profile card
+			.avatarSetting {
+				width:230px;
+				border-radius: 12px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 860px) { 
+	.virtualAvatar-main-container {
+		padding: 64px 124px;
+		height: 580px;
+		
+		// 中心信息
+		.virtualAvatar-left-infoContainer {
+	
+
+			// 左描述
+			.virtualAvatar-left-des-container {
+
+				.virtualAvatar-left-des {
+					width: 50px;
+					margin-left: calc(4vw - 40px);
+				}
+			}
+		
+			// 虚拟角色区域
+			.avatarMan-container {
+
+				// 上光圈
+				.halo-circle-1 {
+					left: -76%;
+					top: 276px;
+					scale: 0.45;
+				}
+	
+				// 蓝色光圈
+				.halo {
+					left: -30%;
+    				width: 286px;
+    				top: 334px;
+				}
+	
+				// 下光圈
+				.halo-circle-2 {
+					left: -32%;
+    				top: 442px;
+    				scale: 0.6;
+				}
+	
+				//虚拟角色
+				.avatarMan {
+					width: 180px;
+					transform: translate(-10px, 202px);
+				}
+			}
+
+			.virtualAvatar-right-des-container {
+	
+				.virtualAvatar-right-des {
+					width: 50px;
+				}
+			}
+	
+	
+			// profile card
+			.avatarSetting {
+				width:200px;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+
+
+
+@media screen and (max-width: 760px) { 
+	.virtualAvatar-main-container {
+		padding: 64px 124px;
+		height: 580px;
+
+		// 头像
+		.avatarPic {
+			display: none;
+		}
+		
+		// 中心信息
+		.virtualAvatar-left-infoContainer {
+
+			> p {
+				width: 42%;
+			}
+	
+
+			// 左描述
+			.virtualAvatar-left-des-container {
+				display: none;
+			}
+		
+			// 虚拟角色区域
+			.avatarMan-container {
+
+				// 上光圈
+				.halo-circle-1 {
+					left: -60%;
+					top: 276px;
+					scale: 0.45;
+				}
+	
+				// 蓝色光圈
+				.halo {
+					left: -26%;
+    				width: 286px;
+    				top: 334px;
+				}
+	
+				// 下光圈
+				.halo-circle-2 {
+					left: -24%;
+    				top: 442px;
+    				scale: 0.6;
+				}
+	
+				//虚拟角色
+				.avatarMan {
+					width: 200px;
+					transform: translate(-10px, 212px);
+				}
+			}
+
+			.virtualAvatar-right-des-container {
+	
+				.virtualAvatar-right-des {
+					width: 50px;
+				}
+			}
+	
+	
+			// profile card
+			.avatarSetting {
+				width:220px;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 660px) { 
+	.virtualAvatar-main-container {
+
+		// 中心信息
+		.virtualAvatar-left-infoContainer {
+
+			> span {
+				transform: translateY(-60px);
+			}
+
+			> p {
+				display: none;
+			}
+
+			// 虚拟角色区域
+			.avatarMan-container {
+
+				// 上光圈
+				.halo-circle-1 {
+					left: -86%;
+					top: 146px;
+					scale: 0.45;
+				}
+	
+				// 蓝色光圈
+				.halo {
+					left: -46%;
+    				width: 286px;
+    				top: 204px;
+				}
+	
+				// 下光圈
+				.halo-circle-2 {
+					left: -42%;
+    				top: 312px;
+    				scale: 0.6;
+				}
+	
+				//虚拟角色
+				.avatarMan {
+					width: 160px;
+					transform: translate(-10px, 92px);
+				}
+			}
+
+			.virtualAvatar-right-des-container {
+	
+				.virtualAvatar-right-des {
+					width: 50px;
+				}
+			}
+	
+	
+			// profile card
+			.avatarSetting {
+				width:160px;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) { 
+	.virtualAvatar-main-container {
+		height: 520px;
+		padding: 54px 94px 54px 94px;
+
+	
+		// 中心信息
+		.virtualAvatar-left-infoContainer {
+
+			> span {
+				text-align: center;
+				font-size: 20px;
+			}
+
+			// 虚拟角色区域
+			.avatarMan-container {
+
+				// 上光圈
+				.halo-circle-1 {
+					display: none;
+				}
+	
+				// 蓝色光圈
+				.halo {
+					transform: translateX(calc(-12vw));
+    				width: 286px;
+    				top: 84px;
+				}
+	
+				// 下光圈
+				.halo-circle-2 {
+					display: none;
+				}
+	
+				//虚拟角色
+				.avatarMan {
+					display: none;
+				}
+			}
+
+			.virtualAvatar-right-des-container {
+	
+				.virtualAvatar-right-des {
+					display: none;
+				}
+			}
+	
+	
+			// profile card
+			.avatarSetting {
+				width:220px;
+				border-radius: 10px;
+				transform: translateX(calc(-14vw));
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
