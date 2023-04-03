@@ -21,12 +21,12 @@ export const VirtualAvatar = () => {
 					{/* 左描述 */}
 					<div className="virtualAvatar-left-des-container">
 						<div className="virtualAvatar-left-des">
-							<p>Staff can do it during the onboard stage phase Generate unique avatars from photos</p>
 							{/* 向右虚线 */}
 							<div className="trianArrowRight-right">
 								<span className="dotted-line-right"></span>
 								<span className="trianArrow-right-01"></span>
 							</div>
+							<p>Staff can do it during the onboard stage phase Generate unique avatars from photos</p>
 						</div>
 					</div>
 
@@ -71,18 +71,20 @@ export const VirtualAvatar = () => {
 					{/* 右描述 */}
 					<div className="virtualAvatar-right-des-container">
 						<div className="virtualAvatar-right-des">
-						<p>Avatar will be used in video conferencing and IM communication</p>
 							{/* 向右虚线 */}
 							<div className="trianArrowRight-left">
 								<span className="dotted-line-left"></span>
 								<span className="trianArrow-left-01"></span>
 							</div>
+							<p>Avatar will be used in video conferencing and IM communication</p>
 						</div>
 					</div>
+
+					<img src={avatarSetting} alt="" className="avatarSetting"/>
 				</div>
 
 				{/* 右侧面板 */}
-				<img src={avatarSetting} alt="" className="avatarSetting"/>
+				{/* <img src={avatarSetting} alt="" className="avatarSetting"/> */}
 			</div>
 		</>
 	)
