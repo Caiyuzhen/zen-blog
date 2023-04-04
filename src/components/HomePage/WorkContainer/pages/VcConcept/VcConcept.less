@@ -1,330 +1,118 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
-@font-face {
-	font-family: 'GTEestiProText-Bold';
-	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Book';
-	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Medium';
-	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Regular';
-	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
-}
 
 
-@media screen and (max-width: @mediaWidth-Max) {  
-	.VcConcept-main-container {
+.VcConcept-main-container {
+	max-width: 1500px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 124px;
+	box-sizing: border-box;
+	gap: 40px;
+	position: relative;
+	margin: 200px 0 200px 0;
+	z-index: 5;
+
+	.VcConcept-main-insideContainer {
 		width: 100%;
-		height: auto;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		padding: 124px;
 		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 200px 0 200px 0;
+		gap: 48px;
 		z-index: 5;
 
-		.VcConcept-main-insideContainer {
+		.VcConcept-leftContainer {
 			width: 100%;
-			height: 100%;
+			height: 700px;
 			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
+			flex-direction: column;
+			justify-content: space-between;
 			box-sizing: border-box;
-			gap: 48px;
 			z-index: 5;
+			gap: 134px;
 
-			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
-				gap: 134px;
-
-				.VcConcept-main-title {
-					width: 80%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
-
-				.catalogCard {
-					width: 880px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-				}
+			.VcConcept-main-title {
+				width: 80%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
 			}
 
-			.VcConcept-rightContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
-
-				.VcConcept-main-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: white;
-					text-align: left;
-					z-index: 5;
-				}
-
-				.timeLine {
-					width: 880px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
-				}
-
-				.videoBg {
-					width: 1624px;
-					top: -100px;
-					// right: -140px;
-					left: -340px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
-					transform: translateY(-80px);
-				}
-			}
-		}	
-	}
-}
-
-
-@media screen and (max-width: 2060px) {  
-	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 200px 0 200px 0;
-		z-index: 5;
-
-		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
-
-			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
-				gap: 134px;
-
-				.VcConcept-main-title {
-					width: 80%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
-
-				.catalogCard {
-					width: 780px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-				}
-			}
-
-			.VcConcept-rightContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
-
-				.VcConcept-main-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: white;
-					text-align: left;
-					z-index: 5;
-				}
-
-				.timeLine {
-					width: 780px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
-				}
-
-				.videoBg {
-					width: 1624px;
-					top: -100px;
-					// right: -140px;
-					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
-					transform: translateY(-80px);
-				}
+			.catalogCard {
+				width: 880px;
+				border-radius: 16px;
+				box-shadow: 0px 14px 24px #41447e1f;
+				-moz-box-shadow: 0px 14px 24px #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px #41447e1f;
 			}
 		}
-	}
+
+		.VcConcept-rightContainer {
+			width: 100%;
+			height: 700px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			box-sizing: border-box;
+			position: relative;
+
+			.VcConcept-main-des {
+				width: 100%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: white;
+				text-align: left;
+				z-index: 5;
+			}
+
+			.timeLine {
+				width: 880px;
+				border-radius: 16px;
+				box-shadow: 0px 14px 24px #41447e1f;
+				-moz-box-shadow: 0px 14px 24px #41447E1F;
+				-webkit-box-shadow: 0px 14px 14px #41447e1f;
+				position: absolute;
+				top: 214px;
+				z-index: 5;
+			}
+
+			.videoBg {
+				width: 1624px;
+				top: -100px;
+				// right: -140px;
+				left: -340px;
+				position: absolute;
+				// 左上圆角
+				border-top-left-radius: 24px;
+				// 左下圆角
+				border-bottom-left-radius: 24px;
+				transform: translateY(-80px);
+			}
+		}
+	}	
 }
 
 
 @media screen and (max-width: 1840px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 200px 0 200px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
-
-				.VcConcept-main-title {
-					width: 80%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
-				}
 
 				.catalogCard {
 					width: 680px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					margin-bottom: 190px;
-				}
-			}
-
-			.VcConcept-rightContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
-
-				.VcConcept-main-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: white;
-					text-align: left;
-					z-index: 5;
-				}
-
-				.timeLine {
-					width: 680px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
-				}
-
-				.videoBg {
-					width: 1624px;
-					top: -100px;
-					// right: -140px;
-					left: -160px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
-					transform: translateY(-80px);
 				}
 			}
 		}	
@@ -334,101 +122,24 @@
 
 @media screen and (max-width: 1620px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 200px 0 200px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 80%;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
 					width: 600px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
-
-				.VcConcept-main-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: white;
-					text-align: left;
-					z-index: 5;
-				}
-
+	
 				.timeLine {
 					width: 600px;
-					border-radius: 16px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
-				}
-
-				.videoBg {
-					width: 1624px;
-					top: -100px;
-					// right: -140px;
-					left: -120px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
-					transform: translateY(-80px);
 				}
 			}
 		}
@@ -438,102 +149,32 @@
 
 @media screen and (max-width: 1440px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 40px;
-		position: relative;
-		margin: 140px 0 140px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 528px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize; //32px
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
 					width: 540px;
 					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					margin-bottom: 190px;
 					transform: translateY(40px);
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
-
-				.VcConcept-main-des {
-					width: 100%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					color: white;
-					text-align: left;
-					z-index: 5;
-				}
 
 				.timeLine {
 					width: 540px;
-					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translateY(40px);
 				}
 
 				.videoBg {
 					width: 1324px;
-					top: -100px;
-					// right: -140px;
-					left: -160px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translateY(-50px);
 				}
 			}
@@ -545,102 +186,42 @@
 @media screen and (max-width: 1220px) {  
 	.VcConcept-main-container {
 		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: 100px 0 00px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
 				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 528px;
-					font-family: 'GTEestiProText-Bold';
 					font-size: 28px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
 					width: 508px;
-					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					margin-bottom: 190px;
 					transform: translateY(40px);
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 100%;
 				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 120%;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 16px;
-					color: white;
-					text-align: left;
-					z-index: 5;
 					transform: translateX(-48px);
 				}
 
 				.timeLine {
 					width: 508px;
 					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translate(-48px, 30px);
 				}
 
 				.videoBg {
 					width: 1224px;
-					top: -100px;
-					// right: -140px;
 					left: -140px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translateY(-40px);
 				}
 			}
@@ -651,54 +232,18 @@
 
 @media screen and (max-width: 1110px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: 100px 0 00px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 528px;
-					font-family: 'GTEestiProText-Bold';
 					font-size: 28px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
 					width: 440px;
-					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					margin-bottom: 190px;
 					transform: translateY(12px);
 				}
@@ -706,48 +251,26 @@
 
 			.VcConcept-rightContainer {
 				width: 120%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 864px;
 					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 16px;
 					color: #22233D;
-					text-align: left;
-					z-index: 5;
 					transform: translate(-576px, 88px);
 				}
 
 				.timeLine {
 					width: 440px;
-					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
 					top: 214px;
-					z-index: 5;
 					transform: translate(-88px, 32px);
 				}
 
 				.videoBg {
 					width: 1124px;
 					top: -100px;
-					// right: -140px;
 					left: -220px;
-					position: absolute;
-					// 左上圆角
 					border-top-left-radius: 24px;
-					// 左下圆角
 					border-bottom-left-radius: 24px;
 					transform: translateY(-10px);
 				}
@@ -759,104 +282,39 @@
 
 @media screen and (max-width: 980px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: 100px 0 00px 0;
-		z-index: 5;
+		margin: 100px 0 0px 0;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 528px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 24px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
+					font-size: 26px;
 				}
 
 				.catalogCard {
 					width: 400px;
 					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
 					transform: translateY(-12px);
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 120%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 704px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 16px;
-					color: #22233D;
-					text-align: left;
-					z-index: 5;
 					transform: translate(-576px, 88px);
 				}
 
 				.timeLine {
 					width: 400px;
-					border-radius: 12px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translate(-128px, 32px);
 				}
 
 				.videoBg {
 					width: 1024px;
-					top: -100px;
-					// right: -140px;
-					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translateY(-10px);
 				}
 			}
@@ -867,104 +325,40 @@
 
 @media screen and (max-width: 880px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
 		position: relative;
-		margin: 100px 0 00px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 
 			.VcConcept-leftContainer {
-				width: 100%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
-					width: 528px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 28px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
+					font-size: 26px;
 				}
 
 				.catalogCard {
 					width: 380px;
 					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
 					transform: translateY(-22px);
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 120%;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 624px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: #22233D;
-					text-align: left;
-					z-index: 5;
+					font-size: 14px;
 					transform: translate(-576px, 88px);
 				}
 
 				.timeLine {
 					width: 380px;
 					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translate(-168px,36px);
 				}
 
 				.videoBg {
 					width: 1084px;
-					top: -100px;
-					// right: -140px;
 					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translate(-100px, -10px);
 				}
 			}
@@ -975,94 +369,34 @@
 
 @media screen and (max-width: 780px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: -50px 0 -50px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 			scale: 0.9;
 			transform: translateX(20px);
 
 			.VcConcept-leftContainer {
 				width: 528px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
 				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 528px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 28px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
 					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
 					transform: translateY(-40px);
 				}
 			}
 
 			.VcConcept-rightContainer {
 				width: 528px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
-					width: 508px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: #22233D;
-					z-index: 5;
-					text-align: left;
-					// right: -554px;
-					// transform: translate(-548px, 88px);
+					width: 70vw;
 				}
 
 				.timeLine {
 					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translate(-228px,56px);
 				}
 
@@ -1071,11 +405,6 @@
 					top: -100px;
 					// right: -140px;
 					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translate(-160px, -10px);
 				}
 			}
@@ -1086,47 +415,17 @@
 
 @media screen and (max-width: 728px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: -50px 0 -50px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 			transform: translateX(30px);
 
 			.VcConcept-leftContainer {
 				width: 528px;
 				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 528px;
-					font-family: 'GTEestiProText-Bold';
 					font-size: 26px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
@@ -1142,51 +441,20 @@
 
 			.VcConcept-rightContainer {
 				width: 528px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 508px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 14px;
-					color: #22233D;
-					z-index: 5;
-					text-align: left;
-					// right: -554px;
-					// transform: translate(-548px, 88px);
 				}
 
 				.timeLine {
 					width: 320px;
 					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translate(-228px,56px);
 				}
 
 				.videoBg {
 					width: 1024px;
-					top: -100px;
-					// right: -140px;
-					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
-					transform: translate(-160px, -10px);
+					transform: translate(-160px, -20px);
 				}
 			}
 		}
@@ -1196,106 +464,40 @@
 
 @media screen and (max-width: 680px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 124px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: -100px 0 -100px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
-			transform: translateX(0px);
 
 			.VcConcept-leftContainer {
 				width: 420px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 420px;
 					font-family: 'GTEestiProText-Bold';
 					font-size: 26px;
-					text-align: left;
-					line-height: 1.25;
-					margin: 0;
 				}
 
 				.catalogCard {
 					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
 					margin-bottom: 190px;
-					transform: translateY(-40px);
+					transform: translateY(-30px);
 				}
 			}
 
 			.VcConcept-rightContainer {
 				width: 420px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 420px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 14px;
-					color: #22233D;
-					z-index: 5;
-					text-align: left;
 					right: -528px;
-					// transform: translate(-548px, 88px);
 				}
 
 				.timeLine {
 					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
-					top: 214px;
-					z-index: 5;
 					transform: translate(-128px,56px);
 				}
 
 				.videoBg {
 					width: 1024px;
-					top: -100px;
-					// right: -140px;
-					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translate(-160px, -10px);
 				}
 			}
@@ -1306,91 +508,35 @@
 
 @media screen and (max-width: 520px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
 		padding: 54px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: 124px 0 124px 0;
-		z-index: 5;
 
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 			transform: translateX(30px);
 
 			.VcConcept-leftContainer {
-				width: 420px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
-				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 420px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px;
-					text-align: left;
-					line-height: 1.25;
+					font-size: 18px;
 					margin: 0;
 				}
 
 				.catalogCard {
 					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
 					transform: translateY(-40px);
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 420px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width: 420px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: #22233D;
-					z-index: 5;
-					text-align: left;
-					right: -528px;
-					// transform: translate(-548px, 88px);
+					transform: translate(-576px, 60px);
 				}
 
 				.timeLine {
 					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
 					top: 214px;
 					z-index: 5;
 					transform: translate(-128px,56px);
@@ -1399,13 +545,7 @@
 				.videoBg {
 					width: 1024px;
 					top: -100px;
-					// right: -140px;
 					left: -220px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translate(-160px, -10px);
 				}
 			}
@@ -1414,48 +554,18 @@
 }
 
 
-@media screen and (max-width: 375px) {  
+@media screen and (max-width: 400px) {  
 	.VcConcept-main-container {
-		width: 100%;
-		height: auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		padding: 54px;
-		box-sizing: border-box;
-		gap: 24px;
-		position: relative;
-		margin: -54px 0 -54px 0;
-		z-index: 5;
-
 		.VcConcept-main-insideContainer {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			box-sizing: border-box;
-			gap: 48px;
-			z-index: 5;
 			transform: translateX(30px);
 
 			.VcConcept-leftContainer {
 				width: 268px;
-				height: 700px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				box-sizing: border-box;
 				z-index: 5;
 
 				.VcConcept-main-title {
 					width: 278px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px;
-					text-align: left;
-					line-height: 1.35;
+					font-size: 16px;
 					margin: 0;
 				}
 
@@ -1473,36 +583,17 @@
 			.VcConcept-rightContainer {
 				width: 278px;
 				height: 700px;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				box-sizing: border-box;
-				// gap: 80px;
-				position: relative;
 
 				.VcConcept-main-des {
 					width:278px;
-					position: absolute;
-					margin: 0;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 14px;
-					color: #22233D;
-					z-index: 5;
-					text-align: left;
 					right: -538px;
-					top: 24px
+					top: 2px;
 				}
 
 				.timeLine {
 					width: 268px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					position: absolute;
 					top: 214px;
-					z-index: 5;
 					transform: translate(-248px,286px);
 				}
 
@@ -1511,11 +602,6 @@
 					top: -100px;
 					// right: -140px;
 					left: -180px;
-					position: absolute;
-					// 左上圆角
-					border-top-left-radius: 24px;
-					// 左下圆角
-					border-bottom-left-radius: 24px;
 					transform: translate(-160px, 60px);
 				}
 			}
