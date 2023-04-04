@@ -12,6 +12,7 @@ import { MainFeedUi } from "./ProjectC_Ele/MainFeedUi/MainFeedUi"
 import { TopUserUI } from "./ProjectC_Ele/TopUserUI/TopUserUI"
 import { PublishUI } from "./ProjectC_Ele/PublishUI/PublishUI"
 import { useCardYPosContext } from "../ProjectCard/ProjectCard"
+import allMigulUI from '../../../../assets/img/migu-allUI.png'
 
 
 export const ProjectC = () => {
@@ -42,7 +43,10 @@ export const ProjectC = () => {
 			<MainFeedUi />
 			<TopUserUI />
 			<PublishUI />
-			<BackToTopDark />
+			<BackToTopDark 
+				content="Back to Top"
+				imgURL={allMigulUI}
+			/>
 		</div>
 	)
 }

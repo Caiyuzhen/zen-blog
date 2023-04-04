@@ -14,7 +14,7 @@ export const VcStructure = () => {
 			<div className="VcStructure-main-container">
 				<div className="VcStructure-inside-container">
 					<div className="VcStructure-top-document">
-						<div className="VcStructure-top-circle">xxx xxxxxx xx xxxxxxx</div>
+						<div className="VcStructure-top-circle">Based on presentation topicsConvert to structured document</div>
 						<img src={gradualArrow} alt="" className="gradualArrow-right"/>
 						<img src={catalogCard} alt="" className="video-catalogCard"/>
 						{/* 右虚线 */}
@@ -25,10 +25,9 @@ export const VcStructure = () => {
 						<img src={videoDoc} alt="" className="video-doc"/>
 					</div>
 
-					<div className="VcStructure-medium-circle">xxx xxxxxx xx xxxxxxx</div>
 
 					<div className="VcStructure-bottom-timeline">
-						<div className="VcStructure-bottom-circle">xxx xxxxxx xx xxxxxxx</div>
+						<div className="VcStructure-bottom-circle">Video-based collateral information Conversion to structured tables</div>
 						<img src={gradualArrow} alt="" className="gradualArrow-right"/>
 						<img src={timeLine} alt="" className="video-timeLine"/>
 						{/* 右虚线 */}

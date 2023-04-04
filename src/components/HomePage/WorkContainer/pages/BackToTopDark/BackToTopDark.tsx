@@ -1,10 +1,16 @@
 import React from 'react'
 import backToTopDark from '../../../../../assets/svg/icon-backToTopDark.svg'
 import './BackToTopDark.less'
-import allUI from '../../../../../assets/img/migu-allUI.png'
 
 
-export const BackToTopDark = () => {
+
+interface IBackToTopProps {
+	content: string;
+	imgURL?: string; //因为 URL 需要可以传递对象, 所以需要是解构赋值的形式
+}
+
+
+export const BackToTopDark = ({content, imgURL} : IBackToTopProps) => {
 
 	//滚动回页面顶部的方法
 	function scrollToTop() {
@@ -19,10 +25,10 @@ export const BackToTopDark = () => {
 			<div className="backToTop-container-dark"
 				 onClick={ scrollToTop }
 			>
-				<p>Back to top</p>
+				<p>{content}</p>
 				<img src={backToTopDark} alt="" className="backToTopDark"/>
 
-				<img src={allUI} alt="" className="allUI"/>
+				<img src={imgURL} alt="" className="allUI"/>
 			</div>
 		</>
 	)

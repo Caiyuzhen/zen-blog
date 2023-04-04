@@ -2,7 +2,6 @@
 
 
 .VcConcept-main-container {
-	max-width: 1500px;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -38,12 +37,17 @@
 			gap: 134px;
 
 			.VcConcept-main-title {
-				width: 80%;
+				width: 50%;
 				font-family: 'GTEestiProText-Bold';
 				font-size: @text-TitleSize; //32px
 				text-align: left;
 				line-height: 1.25;
 				margin: 0;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2; //行数
+				line-clamp: 2;
+				-webkit-box-orient: vertical;
 			}
 
 			.catalogCard {
@@ -73,6 +77,7 @@
 				color: white;
 				text-align: left;
 				z-index: 5;
+				line-height: 1.5;
 			}
 
 			.timeLine {
@@ -111,7 +116,6 @@
 			.VcConcept-leftContainer {
 
 				.catalogCard {
-					width: 680px;
 					margin-bottom: 190px;
 				}
 			}
@@ -132,14 +136,56 @@
 				}
 
 				.catalogCard {
-					width: 600px;
+					width: 640px;
 				}
 			}
 
 			.VcConcept-rightContainer {
 	
 				.timeLine {
-					width: 600px;
+					width: 640px;
+				}
+
+				.videoBg {
+					width: 1400px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1530px) {  
+	.VcConcept-main-container {
+
+		.VcConcept-main-insideContainer {
+			gap: 8px;
+
+			.VcConcept-leftContainer {
+
+				.VcConcept-main-title {
+					width: 528px;
+				}
+
+				.catalogCard {
+					width: 560px;
+					border-radius: 12px;
+					margin-bottom: 190px;
+					transform: translateY(-20px);
+				}
+			}
+
+			.VcConcept-rightContainer {
+
+				.timeLine {
+					width: 560px;
+					border-radius: 12px;
+					transform: translateY(-20px);
+				}
+
+				.videoBg {
+					width: 1204px;
+					transform: translateY(-50px);
 				}
 			}
 		}
@@ -151,6 +197,7 @@
 	.VcConcept-main-container {
 
 		.VcConcept-main-insideContainer {
+			gap: 8px;
 
 			.VcConcept-leftContainer {
 
@@ -159,22 +206,23 @@
 				}
 
 				.catalogCard {
-					width: 540px;
+					width: 520px;
 					border-radius: 12px;
 					margin-bottom: 190px;
-					transform: translateY(40px);
+					transform: translateY(-20px);
 				}
 			}
 
 			.VcConcept-rightContainer {
 
 				.timeLine {
-					width: 540px;
-					transform: translateY(40px);
+					width: 520px;
+					border-radius: 12px;
+					transform: translateY(-20px);
 				}
 
 				.videoBg {
-					width: 1324px;
+					width: 1204px;
 					transform: translateY(-50px);
 				}
 			}
@@ -183,7 +231,7 @@
 }
 
 
-@media screen and (max-width: 1220px) {  
+@media screen and (max-width: 1340px) {  
 	.VcConcept-main-container {
 		width: 100%;
 
@@ -193,14 +241,15 @@
 				height: 700px;
 
 				.VcConcept-main-title {
-					width: 528px;
+					width: 428px;
 					font-size: 28px;
 				}
 
 				.catalogCard {
-					width: 508px;
+					width: 468px;
 					margin-bottom: 190px;
-					transform: translateY(40px);
+					border-radius: 10px;
+					transform: translateY(-24px);
 				}
 			}
 
@@ -208,15 +257,15 @@
 				height: 700px;
 
 				.VcConcept-main-des {
-					width: 120%;
+					width: 91%;
 					font-size: 16px;
-					transform: translateX(-48px);
+					transform: translateX(-8px);
 				}
 
 				.timeLine {
-					width: 508px;
-					border-radius: 12px;
-					transform: translate(-48px, 30px);
+					width: 468px;
+					border-radius: 10px;
+					transform: translate(-8px, -20px);
 				}
 
 				.videoBg {
@@ -230,7 +279,55 @@
 }
 
 
-@media screen and (max-width: 1110px) {  
+@media screen and (max-width: 1240px) {  
+	.VcConcept-main-container {
+		width: 100%;
+
+		.VcConcept-main-insideContainer {
+
+			.VcConcept-leftContainer {
+				height: 700px;
+
+				.VcConcept-main-title {
+					width: 428px;
+					font-size: 28px;
+				}
+
+				.catalogCard {
+					width: 420px;
+					margin-bottom: 190px;
+					border-radius: 10px;
+					transform: translateY(-54px);
+				}
+			}
+
+			.VcConcept-rightContainer {
+				height: 700px;
+
+				.VcConcept-main-des {
+					width: 91%;
+					font-size: 16px;
+					transform: translateX(0px);
+				}
+
+				.timeLine {
+					width: 420px;
+					border-radius: 10px;
+					transform: translate(0px, -20px);
+				}
+
+				.videoBg {
+					width: 1044px;
+					left: -140px;
+					transform: translateY(-40px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1120px) {  
 	.VcConcept-main-container {
 
 		.VcConcept-main-insideContainer {
@@ -243,9 +340,9 @@
 				}
 
 				.catalogCard {
-					width: 440px;
+					width: 400px;
 					margin-bottom: 190px;
-					transform: translateY(12px);
+					transform: translateY(-34px);
 				}
 			}
 
@@ -257,13 +354,13 @@
 					position: absolute;
 					font-size: 16px;
 					color: #22233D;
-					transform: translate(-576px, 88px);
+					transform: translate(-532px, 88px);
 				}
 
 				.timeLine {
-					width: 440px;
+					width: 400px;
 					top: 214px;
-					transform: translate(-88px, 32px);
+					transform: translate(-72px, 12px);
 				}
 
 				.videoBg {
@@ -272,6 +369,50 @@
 					left: -220px;
 					border-top-left-radius: 24px;
 					border-bottom-left-radius: 24px;
+					transform: translateY(-10px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {  
+	.VcConcept-main-container {
+		margin: 100px 0 0px 0;
+
+		.VcConcept-main-insideContainer {
+
+			.VcConcept-leftContainer {
+
+				.VcConcept-main-title {
+					width: 528px;
+					font-size: 26px;
+				}
+
+				.catalogCard {
+					width: 380px;
+					border-radius: 8px;
+					transform: translateY(-56px);
+				}
+			}
+
+			.VcConcept-rightContainer {
+
+				.VcConcept-main-des {
+					width: 78vw;
+					font-size: 16px;
+					transform: translate(-534px, 88px);
+				}
+
+				.timeLine {
+					width: 380px;
+					border-radius: 8px;
+					transform: translate(-128px, 2px);
+				}
+
+				.videoBg {
+					width: 1024px;
 					transform: translateY(-10px);
 				}
 			}
@@ -294,23 +435,24 @@
 				}
 
 				.catalogCard {
-					width: 400px;
-					border-radius: 12px;
-					transform: translateY(-12px);
+					width: 340px;
+					border-radius: 8px;
+					transform: translateY(-82px);
 				}
 			}
 
 			.VcConcept-rightContainer {
 
 				.VcConcept-main-des {
-					width: 704px;
+					width: 78vw;
 					font-size: 16px;
-					transform: translate(-576px, 88px);
+					transform: translate(-534px, 88px);
 				}
 
 				.timeLine {
-					width: 400px;
-					transform: translate(-128px, 32px);
+					width: 340px;
+					border-radius: 8px;
+					transform: translate(-168px, 2px);
 				}
 
 				.videoBg {
@@ -336,9 +478,9 @@
 				}
 
 				.catalogCard {
-					width: 380px;
+					width: 300px;
 					border-radius: 8px;
-					transform: translateY(-22px);
+					transform: translateY(-118px);
 				}
 			}
 
@@ -347,13 +489,13 @@
 				.VcConcept-main-des {
 					width: 624px;
 					font-size: 14px;
-					transform: translate(-576px, 88px);
+					transform: translate(-534px, 88px);
 				}
 
 				.timeLine {
-					width: 380px;
+					width: 300px;
 					border-radius: 8px;
-					transform: translate(-168px,36px);
+					transform: translate(-208px,-10px);
 				}
 
 				.videoBg {
@@ -367,24 +509,25 @@
 }
 
 
-@media screen and (max-width: 780px) {  
+@media screen and (max-width: 800px) {  
 	.VcConcept-main-container {
+		width: 100%;
+		margin: 64px 0 0px 0;
 
 		.VcConcept-main-insideContainer {
-			scale: 0.9;
-			transform: translateX(20px);
 
 			.VcConcept-leftContainer {
-				width: 528px;
+				width: 80vw;
 				z-index: 5;
 
 				.VcConcept-main-title {
-					width: 528px;
+					width: 60vw;
 				}
 
 				.catalogCard {
-					width: 320px;
-					transform: translateY(-40px);
+					width: 544px;
+					border-radius: 12px;
+					transform: translateY(20px);
 				}
 			}
 
@@ -393,160 +536,108 @@
 
 				.VcConcept-main-des {
 					width: 70vw;
+					margin-left: -18px;
 				}
 
 				.timeLine {
-					width: 320px;
-					transform: translate(-228px,56px);
+					width: 544px;
+					border-radius: 12px;
+					transform: translate(-536px, 374px);
 				}
 
 				.videoBg {
-					width: 1024px;
-					top: -100px;
-					// right: -140px;
-					left: -220px;
-					transform: translate(-160px, -10px);
-				}
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: 728px) {  
-	.VcConcept-main-container {
-
-		.VcConcept-main-insideContainer {
-			transform: translateX(30px);
-
-			.VcConcept-leftContainer {
-				width: 528px;
-				height: 700px;
-
-				.VcConcept-main-title {
-					width: 528px;
-					font-size: 26px;
-				}
-
-				.catalogCard {
-					width: 320px;
-					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
-					transform: translateY(-40px);
-				}
-			}
-
-			.VcConcept-rightContainer {
-				width: 528px;
-
-				.VcConcept-main-des {
-					width: 508px;
-				}
-
-				.timeLine {
-					width: 320px;
-					border-radius: 8px;
-					transform: translate(-228px,56px);
-				}
-
-				.videoBg {
-					width: 1024px;
-					transform: translate(-160px, -20px);
-				}
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: 680px) {  
-	.VcConcept-main-container {
-
-		.VcConcept-main-insideContainer {
-
-			.VcConcept-leftContainer {
-				width: 420px;
-
-				.VcConcept-main-title {
-					width: 420px;
-					font-family: 'GTEestiProText-Bold';
-					font-size: 26px;
-				}
-
-				.catalogCard {
-					width: 320px;
-					margin-bottom: 190px;
-					transform: translateY(-30px);
-				}
-			}
-
-			.VcConcept-rightContainer {
-				width: 420px;
-
-				.VcConcept-main-des {
-					width: 420px;
-					right: -528px;
-				}
-
-				.timeLine {
-					width: 320px;
-					transform: translate(-128px,56px);
-				}
-
-				.videoBg {
-					width: 1024px;
-					transform: translate(-160px, -10px);
-				}
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: 520px) {  
-	.VcConcept-main-container {
-		padding: 54px;
-
-		.VcConcept-main-insideContainer {
-			transform: translateX(30px);
-
-			.VcConcept-leftContainer {
-
-				.VcConcept-main-title {
-					width: 420px;
-					font-size: 18px;
-					margin: 0;
-				}
-
-				.catalogCard {
-					width: 320px;
-					transform: translateY(-40px);
-				}
-			}
-
-			.VcConcept-rightContainer {
-
-				.VcConcept-main-des {
-					width: 420px;
-					font-size: 14px;
-					transform: translate(-576px, 60px);
-				}
-
-				.timeLine {
-					width: 320px;
-					top: 214px;
-					z-index: 5;
-					transform: translate(-128px,56px);
-				}
-
-				.videoBg {
-					width: 1024px;
+					width: 1684px;
 					top: -100px;
 					left: -220px;
 					transform: translate(-160px, -10px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 700px) {  
+	.VcConcept-main-container {
+		width: 100%;
+		margin: 64px 0 0px 0;
+
+		.VcConcept-main-insideContainer {
+
+			.VcConcept-leftContainer {
+				width: 418px;
+				z-index: 5;
+
+				.VcConcept-main-title {
+					width: 418px;
+					color: white;
+				}
+
+				.catalogCard {
+					width:404px;
+					transform: translateY(0px);
+				}
+			}
+
+			.VcConcept-rightContainer {
+				width: 418px;
+
+				.VcConcept-main-des {
+					width: 418px;
+					margin-left: 108px;
+					color: white;
+				}
+
+				.timeLine {
+					width: 404px;
+					transform: translate(-426px, 324px);
+				}
+
+				.videoBg {
+					width: 1504px;
+					transform: translate(-360px, -10px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 560px) {  
+	.VcConcept-main-container {
+
+		.VcConcept-main-insideContainer {
+
+			.VcConcept-leftContainer {
+				z-index: 5;
+
+				.VcConcept-main-title {
+					width: 384px;
+				}
+
+				.catalogCard {
+					width: 384px;
+					border-radius: 12px;
+					transform: translateY(0px);
+				}
+			}
+
+			.VcConcept-rightContainer {
+				width: 100%;
+
+				.VcConcept-main-des {
+					width: 384px;
+					margin-left: 142px;
+				}
+
+				.timeLine {
+					width: 384px;
+					transform: translate(-392px, 324px);
+				}
+
+				.videoBg {
+					width: 1440px;
+					transform: translate(-360px, -10px);
 				}
 			}
 		}
@@ -556,55 +647,51 @@
 
 @media screen and (max-width: 400px) {  
 	.VcConcept-main-container {
+		width: 100%;
+		margin: 64px 0 0px 0;
+		padding: 74px 54px;
+
 		.VcConcept-main-insideContainer {
-			transform: translateX(30px);
 
 			.VcConcept-leftContainer {
-				width: 268px;
+				width: 288px;
 				z-index: 5;
 
 				.VcConcept-main-title {
-					width: 278px;
-					font-size: 16px;
-					margin: 0;
+					width: 288px;
+					margin-left: 6px;
 				}
 
 				.catalogCard {
-					width: 268px;
+					width: 276px;
 					border-radius: 8px;
-					box-shadow: 0px 14px 24px #41447e1f;
-					-moz-box-shadow: 0px 14px 24px #41447E1F;
-					-webkit-box-shadow: 0px 14px 14px #41447e1f;
-					margin-bottom: 190px;
-					transform: translateY(50px);
+					transform: translate(10px, -4px);
 				}
 			}
 
 			.VcConcept-rightContainer {
-				width: 278px;
-				height: 700px;
+				width: 100%;
 
 				.VcConcept-main-des {
-					width:278px;
-					font-size: 14px;
-					right: -538px;
-					top: 2px;
+					width: 288px;
+					margin-left: 248px;
+					margin-top: 26px;
 				}
 
 				.timeLine {
-					width: 268px;
-					top: 214px;
-					transform: translate(-248px,286px);
+					width: 276px;
+					border-radius: 8px;
+					transform: translate(-286px, 314px);
 				}
 
 				.videoBg {
-					width: 964px;
+					width: 1360px;
 					top: -100px;
-					// right: -140px;
-					left: -180px;
-					transform: translate(-160px, 60px);
+					left: -220px;
+					transform: translate(-360px, -10px);
 				}
 			}
 		}
 	}
 }
+

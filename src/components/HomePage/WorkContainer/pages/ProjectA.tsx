@@ -33,6 +33,7 @@ import PageTheme from '../pages/PageTheme/PageTheme'
 import WebsitePage from '../pages/WebsitePage/WebsitePage'
 import BackToTop from '../pages/BackToTop/BackToTop'
 import BG from '../../../../assets/img/project-A-bg.jpg'
+import BackToTopDark from './BackToTopDark/BackToTopDark'
 
 // background: url('../../../../assets/img/project-A-bg.jpg') center center no-repeat;
 
@@ -160,7 +161,9 @@ export const ProjectA = () => {
 				<WebsitePage />
 
 				{/* 返回顶部 */}
-				<BackToTop />
+				<BackToTopDark 
+					content="Back to Top"
+				/>
 
 				<img src={BG} alt="" className="projectA-BG"/>
 			</div>

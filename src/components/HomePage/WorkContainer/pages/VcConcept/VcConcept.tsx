@@ -14,14 +14,14 @@ export const VcConcept = () => {
 
 					<div className="VcConcept-leftContainer">
 						<div className="VcConcept-main-title">
-							XXXXXXX XXXXX XXXXXXX XXXXXX XXXXXXXXX
+						Structured Video Conference Innovative Concept
 						</div>
 						<img src={catalogCard} alt="" className="catalogCard"/>
 					</div>
 
 					<div className="VcConcept-rightContainer">
 						<div className="VcConcept-main-des">
-							xxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxx xx xxxxxxxxx NPS xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxx xx xxxxxxx xxxxxxxxx xxxxxxxxx xxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xxxxxx xx xxxxxxxxx NPS xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxx xx xxxxxxx xxxxxxxxx xxxxxxxxx xxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xx xxxxxxx xxxxxxxxx xxxxxxxxx xxxxxx xxxxxxxxxxxx xxxxxxxxxxxx xx xxxxxxx xxxxxxxxx xxxxxxxxx 
+						Based on the combined concept of timeline + slides, video conferencing can be disassembled into a combined media stream of countless screens, so we proposed the concept of video structuring. After a meeting, the user can create a document like a document, and the video is automatically deconstructed into multiple small particles to facilitate the flow of information after the meeting.
 						</div> 
 						<img src={timeLine} alt="" className="timeLine"/>
 						{/* 背景 */}

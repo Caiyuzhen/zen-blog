@@ -14,7 +14,6 @@ import VirtualAvatar from './VirtualAvatar/VirtualAvatar'
 import AiGenerare from './AiGenerare/AiGenerare'
 import VcConcept from './VcConcept/VcConcept'
 import { VcStructure } from './VcStructure/VcStructure'
-import PjbData from './PjbData/PjbData'
 import BackToTopDark from './BackToTopDark/BackToTopDark'
 
 
@@ -63,11 +62,10 @@ export const ProjectB = () => {
 				{/* divider */}
 				<DividerLight />
 
-				{/* 数据 */}
-				<PjbData />
-
 				{/* 返回顶部 */}
-				<BackToTopDark />
+				<BackToTopDark 
+					content="Back to Top"
+				/>
 			</div>
 		</>
 	)
