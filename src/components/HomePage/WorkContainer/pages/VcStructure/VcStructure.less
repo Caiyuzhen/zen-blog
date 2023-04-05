@@ -19,6 +19,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		box-sizing: border-box;
 		gap: 42px;
 		width: 100%;
 	
@@ -35,18 +36,20 @@
 
 			// ⚡️上圆
 			.VcStructure-top-circle {
-				height: 134px;
-				border-radius: 50%;
+				width: 508px;
+				min-width: 200px;
+				height: auto;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				padding: 28px;
+				padding: 28px 60px;
 				background: 
 					linear-gradient(314deg, #E7F6FF 16%, #D2EBFF 48%, #B8CCFF 84%);
 				font-family: 'GTEestiProText-Bold';
-				font-size: 22px;
-				text-align: center;
-				line-height: 1.15;
+				font-size: 16px;
+				text-align: left;
+				line-height: 1.5;
+				border-radius: 80px;
 				margin: 0;
 			}
 
@@ -55,9 +58,7 @@
 			}
 
 			.video-catalogCard {
-				// width: 36%;
 				width: 646px;
-				border-radius: 20px;
 				border-radius: 16px;
 				box-shadow: 0px 14px 24px #41447e1f;
 				-moz-box-shadow: 0px 14px 24px #41447E1F;
@@ -67,6 +68,7 @@
 			// 右箭头
 			.VcStructure-trianArrowRight-right {
 				width: 180px;
+				min-width: 80px;
 				height: 1px;
 				display: flex;
 				align-items: center;
@@ -94,7 +96,6 @@
 			}
 
 			.video-doc {
-				// width: 36%;
 				width: 646px;
 				border-radius: 20px;
 				border-radius: 16px;
@@ -118,19 +119,20 @@
 
 			// ⚡️下圆
 			.VcStructure-bottom-circle {
-				width: 228px;
-				height: 134px;
-				border-radius: 50%;
+				width: 508px;
+				min-width: 200px;
+				height: auto;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				padding: 28px;
+				padding: 28px 60px;
 				background: 
 					linear-gradient(314deg, #E7F6FF 16%, #D2EBFF 48%, #B8CCFF 84%);
 				font-family: 'GTEestiProText-Bold';
-				font-size: 22px;
-				text-align: center;
-				line-height: 1.15;
+				font-size: 16px;
+				text-align: left;
+				line-height: 1.5;
+				border-radius: 80px;
 				margin: 0;
 			}
 
@@ -151,6 +153,7 @@
 			// 右箭头
 			.VcStructure-trianArrowRight-right {
 				width: 180px;
+				min-width: 80px;
 				height: 1px;
 				display: flex;
 				align-items: center;
@@ -197,4 +200,512 @@
 	}
 }
 
+
+
+@media screen and (max-width: 2100px) { 
+	.VcStructure-main-container {
+		.VcStructure-inside-container {
+			
+			.VcStructure-top-document {
+				gap: 28px;
+
+				// ⚡️ 上圆
+				.VcStructure-top-circle {
+					width: 408px;
+					min-width: 160px;
+				}
+	
+				.video-catalogCard {
+					width: 580px;
+				}
+	
+				.video-doc {
+					width: 580px;
+				}
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 28px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					width: 408px;
+					min-width: 160px;
+				}
+	
+				.video-timeLine {
+					width: 580px;
+				}
+	
+				.video-structure {
+					width: 580px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1920px) { 
+	.VcStructure-main-container {
+		margin: 128px 0 0 0;
+
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				gap: 28px;
+
+				.gradualArrow-right {
+					width: 32px;
+				}
+	
+				.video-catalogCard {
+					width: 480px;
+				}
+	
+				.video-doc {
+					width: 480px;
+				}
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 28px;
+	
+				.gradualArrow-right {
+					width: 32px;
+				}
+	
+				.video-timeLine {
+					width: 480px;
+				}
+	
+				.video-structure {
+					width: 480px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1720px) { 
+	.VcStructure-main-container {
+		margin-top: 80px !important;
+
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				gap: 28px;
+	
+				.gradualArrow-right {
+					width: 28px;
+				}
+	
+				.video-catalogCard {
+					width: 400px;
+					border-radius: 14px;
+				}
+	
+				.video-doc {
+					width: 400px;
+					border-radius: 14px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				min-width: 40px !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 28px;
+	
+				.gradualArrow-right {
+					width: 28px;
+				}
+	
+				.video-timeLine {
+					width: 400px;
+					border-radius: 14px;
+				}
+	
+				.video-structure {
+					width: 400px;
+					border-radius: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1620px) { 
+	.VcStructure-main-container {
+		margin-top: -80px !important;
+	}
+}
+
+
+@media screen and (max-width: 1530px) { 
+	.VcStructure-main-container {
+		margin-top: -150px !important;
+	}
+}
+
+
+
+@media screen and (max-width: 1460px) { 
+	.VcStructure-main-container {
+		margin-top: -180px !important;
+
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				gap: 24px;
+
+				// ⚡️上圆
+				.VcStructure-top-circle {
+					font-size: 14px;
+					padding: 24px 42px;
+				}
+	
+				.gradualArrow-right {
+					width: 24px;
+				}
+	
+				.video-catalogCard {
+					width: 340px;
+					border-radius: 10px;
+				}
+	
+				.video-doc {
+					width: 340px;
+					border-radius: 10px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				min-width: 40px !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 24px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					font-size: 14px;
+					padding: 24px 42px;
+				}
+	
+				.gradualArrow-right {
+					width: 24px;
+				}
+	
+				.video-timeLine {
+					width: 340px;
+					border-radius: 10px;
+				}
+	
+				.video-structure {
+					width: 340px;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1240px) { 
+	.VcStructure-main-container {
+		margin-top: -320px !important;
+	}
+}
+
+
+@media screen and (max-width: 1280px) { 
+	.VcStructure-main-container {
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				gap: 20px;
+
+				// ⚡️上圆
+				.VcStructure-top-circle {
+					font-size: 14px;
+					padding: 24px 42px;
+				}
+	
+				.gradualArrow-right {
+					width: 20px;
+				}
+	
+				.video-catalogCard {
+					width: 300px;
+					border-radius: 10px;
+				}
+	
+				.video-doc {
+					width: 300px;
+					border-radius: 10px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				min-width: 32px !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 20px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					font-size: 14px;
+					padding: 24px 42px;
+				}
+	
+				.gradualArrow-right {
+					width: 20px;
+				}
+	
+				.video-timeLine {
+					width: 300px;
+					border-radius: 10px;
+				}
+	
+				.video-structure {
+					width: 300px;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1180px) { 
+	.VcStructure-main-container {
+		margin-top: -350px !important;
+
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				gap: 20px;
+
+				// ⚡️上圆
+				.VcStructure-top-circle {
+					font-size: 14px;
+					padding: 24px 42px;
+				}
+	
+				.gradualArrow-right {
+					width: 20px;
+				}
+	
+				.video-catalogCard {
+					width: 260px;
+				}
+	
+				.video-doc {
+					width: 260px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				min-width: 32px !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 20px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					font-size: 14px;
+					padding: 24px 42px;
+				}
+	
+				.gradualArrow-right {
+					width: 20px;
+				}
+	
+				.video-timeLine {
+					width: 260px;
+				}
+	
+				.video-structure {
+					width: 260px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1120px) { 
+	.VcStructure-main-container {
+		margin-top: -400px !important;
+
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				min-width: 860px;
+				gap: 20px;
+
+				// ⚡️上圆
+				.VcStructure-top-circle {
+					display: none;
+				}
+	
+				.gradualArrow-right {
+					width: 32px;
+				}
+	
+				.video-catalogCard {
+					width: 360px;
+				}
+	
+				.video-doc {
+					width: 360px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				display: none !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				min-width: 860px;
+				gap: 20px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					display: none;
+				}
+	
+				.gradualArrow-right {
+					width: 32px;
+				}
+	
+				.video-timeLine {
+					width: 360px;
+				}
+	
+				.video-structure {
+					width: 360px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) { 
+	.VcStructure-main-container {
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				min-width: none;
+				justify-content: space-around;
+				gap: 20px;
+
+				// ⚡️上圆
+				.VcStructure-top-circle {
+					display: none;
+				}
+	
+				.gradualArrow-right {
+					width: 24px;
+				}
+	
+				.video-catalogCard {
+					width: 300px;
+				}
+	
+				.video-doc {
+					width: 300px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				display: none !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				min-width: none;
+				justify-content: space-around;
+				gap: 20px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					display: none;
+				}
+	
+				.gradualArrow-right {
+					width: 24px;
+				}
+	
+				.video-timeLine {
+					width: 300px;
+				}
+	
+				.video-structure {
+					width: 300px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1000px) { 
+	.VcStructure-main-container {
+		.VcStructure-inside-container {
+			.VcStructure-top-document {
+				gap: 20px;
+
+				// ⚡️上圆
+				.VcStructure-top-circle {
+					display: none;
+				}
+	
+				.gradualArrow-right {
+					width: 24px;
+				}
+	
+				.video-catalogCard {
+					width: 260px;
+				}
+	
+				.video-doc {
+					width: 260px;
+				}
+			}
+
+			// 右箭头
+			.VcStructure-trianArrowRight-right {
+				display: none !important;
+			}
+	
+			.VcStructure-bottom-timeline {
+				gap: 20px;
+
+				// ⚡️下圆
+				.VcStructure-bottom-circle {
+					display: none;
+				}
+	
+				.gradualArrow-right {
+					width: 24px;
+				}
+	
+				.video-timeLine {
+					width: 260px;
+				}
+	
+				.video-structure {
+					width: 260px;
+				}
+			}
+		}
+	}
+}
 
