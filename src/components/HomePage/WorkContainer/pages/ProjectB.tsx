@@ -59,8 +59,6 @@ export const ProjectB = () => {
 				{/* VC Structure */}
 				<VcStructure />
 
-				{/* divider */}
-				<DividerLight />
 
 				{/* 返回顶部 */}
 				<BackToTopDark 
