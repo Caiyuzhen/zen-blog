@@ -2,309 +2,240 @@
 
 
 // 首屏主要的文案内容
-//响应式布局
-@media screen and (max-width: @mediaWidth-Max) {	//4200px
-	.basic-info {
+.basic-info {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 124px;
+	gap: 24px;
+	box-sizing: border-box;
+
+
+	.main-bigTitle {
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-
-
-		.main-bigTitle {
-			font-family: 'RammettoOne';
-			font-size: @text-TitleSize;
-			color: @text-color;
-		}
-
-		.basic-container {
-			display: flex;
-			flex-direction: column;
-			gap: 68px;
-			width: 100%;
-
-
-			.basic-info-topContainer {
-				display: flex;
-				flex-direction: row;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50x
-
-
-				.basic-info-topLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
-
-					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
-						color: @text-color;
-					}
-
-					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
-						line-height: 1.6;
-						color: @description-color;
-					}
-				}
-
-				.basic-info-topRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-
-
-					.circle {
-						width: 140px;  //1 比 1 正圆形
-						height: 140px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
-
-						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
-						}
-					}
-
-					> img {
-						width: 32px;
-					}
-				}
-			}
-
-
-			.basic-info-bottomContainer {
-				display: flex;
-				flex-direction: row;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				transform: scale(1);
-				transition: all .3s ease-in-out;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50px
-
-
-				
-				.basic-info-bottomLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
-
-					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
-						color: @text-color;
-					}
-
-					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
-						color: @description-color;
-					}
-				}
-
-				.basic-info-bottomRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-					
-
-					.circle {
-						width: 140px;  //1 比 1 正圆形
-						height: 140px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
-
-
-						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
-						}
-					}
-
-					> img {
-						width: 32px;
-					}
-				}
-			}
-		}
-
+		font-family: 'RammettoOne';
+		text-align: left;
+		font-size: @text-TitleSize;
+		color: @text-color;
 	}
+
+	.basic-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 68px;
+		width: 100%;
+
+
+		.basic-info-topContainer {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			text-align: left;
+			align-items: center;
+			gap: 48px;
+			justify-content: space-between;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 动画向下位移 50x
+
+
+			.basic-info-topLeft {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				width: 100%;
+
+				.main-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+				}
+
+				.main-content {
+					max-width: 1200px;
+					width: 100%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					line-height: 1.6;
+					color: @description-color;
+				}
+			}
+
+			.basic-info-topRight {
+				max-width: 700px;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				gap: 20px;
+				justify-content: space-evenly;
+				margin-left: -12px;
+				width: 100%;
+
+
+				.circle {
+					width: 140px;  //1 比 1 正圆形
+					height: 140px;  //1 比 1 正圆形
+					aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
+					border-radius: 50%;
+					border: 2px solid @text-color;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					> p {
+						color: @text-color;
+						text-align: center; //文字内容本身水平居中
+						font-weight: bold;
+					}
+				}
+
+				> img {
+					width: 32px;
+				}
+			}
+		}
+
+
+		.basic-info-bottomContainer {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			text-align: left;
+			align-items: center;
+			gap: 48px;
+			justify-content: space-between;
+			transform: scale(1);
+			transition: all .3s ease-in-out;
+			opacity: 0.2;// 透明度动画
+			transform: translateY(50px);// 动画向下位移 50px
+
+
+			
+			.basic-info-bottomLeft {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				width: 100%;
+
+				.main-title {
+					font-family: 'GTEestiProText-Bold';
+					font-size: 24px;
+					color: @text-color;
+				}
+
+				.main-content {
+					width: 100%;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					color: @description-color;
+				}
+			}
+
+			.basic-info-bottomRight {
+				max-width: 700px;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				gap: 20px;
+				justify-content: space-evenly;
+				margin-left: -12px;
+				width: 100%;
+				
+
+				.circle {
+					width: 140px;  //1 比 1 正圆形
+					height: 140px;  //1 比 1 正圆形
+					aspect-ratio: 1/1; //1 比 1 正圆形
+					border-radius: 50%;
+					border: 2px solid @text-color;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+
+					> p {
+						color: @text-color;
+						text-align: center; //文字内容本身水平居中
+						font-weight: bold;
+					}
+				}
+
+				> img {
+					width: 32px;
+				}
+			}
+		}
+	}
+
 }
+
 
 @media screen and (max-width: @mediaWidth-Medium) {	  //1280px
 	.basic-info {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-
 
 		.main-bigTitle {
-			font-family: 'RammettoOne';
 			font-size: @text-TitleSize;
-			color: @text-color;
 		}
 
 		.basic-container {
-			display: flex;
-			flex-direction: column;
-			gap: 68px;
-			width: 100%;
-
 
 			.basic-info-topContainer {
-				display: flex;
 				flex-direction: column;
-				text-align: left;
-				align-items: center;
 				gap: 48px;
-				justify-content: space-between;
 				opacity: 0.2;// 透明度动画
 				transform: translateY(50px);// 动画向下位移 50x
 
 
 				.basic-info-topLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
+						font-size: 20px;
 						color: @text-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
-						line-height: 1.6;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-topRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
 					margin-left: -12px;
-					width: 100%;
-
 
 					.circle {
-						width: 140px;  //1 比 1 正圆形
-						height: 140px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
 
 						> p {
 							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 						}
 					}
 
 					> img {
-						width: 32px;
+						width: 28px;
 					}
 				}
 			}
 
 
 			.basic-info-bottomContainer {
-				display: flex;
 				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				transform: scale(1);
-				transition: all .3s ease-in-out;
 				opacity: 0.2;// 透明度动画
 				transform: translateY(50px);// 动画向下位移 50px
-
-
 				
 				.basic-info-bottomLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
 						color: @text-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-bottomRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-					
 
 					.circle {
-						width: 140px;  //1 比 1 正圆形
-						height: 140px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
 
 
 						> p {
@@ -314,7 +245,7 @@
 					}
 
 					> img {
-						width: 32px;
+						width: 28px;
 					}
 				}
 			}
@@ -323,160 +254,62 @@
 	}
 }
 
-@media screen and (max-width: @mediaWidth-Small) {	  //1280px
+@media screen and (max-width: @mediaWidth-Small) {	  //800px
 	.basic-info {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-
 
 		.main-bigTitle {
-			font-family: 'RammettoOne';
-			font-size: @text-TitleSize;
+			font-size: 24px;
 			color: @text-color;
 		}
 
 		.basic-container {
-			display: flex;
-			flex-direction: column;
-			gap: 68px;
-			width: 100%;
-
 
 			.basic-info-topContainer {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50x
-
 
 				.basic-info-topLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
+						font-size: 18px;
 						color: @text-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
-						line-height: 1.6;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-topRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-
 
 					.circle {
-						width: 120px;  //1 比 1 正圆形
-						height: 120px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
 
 						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 							font-size: 14px;
 						}
-					}
-
-					> img {
-						width: 32px;
 					}
 				}
 			}
 
 
 			.basic-info-bottomContainer {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				transform: scale(1);
-				transition: all .3s ease-in-out;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50px
-
-
 				
 				.basic-info-bottomLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
 						color: @text-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-bottomRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-					
 
 					.circle {
-						width: 120px;  //1 比 1 正圆形
-						height: 120px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
-
 
 						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 							font-size: 14px;
 						}
-					}
-
-					> img {
-						width: 32px;
 					}
 				}
 			}
@@ -486,85 +319,32 @@
 }
 
 
-@media screen and (max-width: @mediaWidth-Min) {	  //1280px
+@media screen and (max-width: @mediaWidth-Min) {	//520px
 	.basic-info {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 		padding: 52px;
-		gap: 24px;
-		box-sizing: border-box;
-
-
-		.main-bigTitle {
-			font-family: 'RammettoOne';
-			font-size: @text-TitleSize;
-			color: @text-color;
-		}
 
 		.basic-container {
-			display: flex;
-			flex-direction: column;
-			gap: 68px;
-			width: 100%;
-
 
 			.basic-info-topContainer {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50x
-
 
 				.basic-info-topLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
-						color: @text-color;
+						color: @description-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
-						line-height: 1.6;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-topRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-
 
 					.circle {
-						width: 120px;  //1 比 1 正圆形
-						height: 120px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
+						width: 132px;  //1 比 1 正圆形
+						height: 132px;  //1 比 1 正圆形
 
 						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 							font-size: 14px;
 						}
 					}
@@ -577,63 +357,22 @@
 
 
 			.basic-info-bottomContainer {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 48px;
-				justify-content: space-between;
-				transform: scale(1);
-				transition: all .3s ease-in-out;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50px
-
-
 				
 				.basic-info-bottomLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
-					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
-						color: @text-color;
-					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-bottomRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-					
 
 					.circle {
-						width: 120px;  //1 比 1 正圆形
-						height: 120px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
-
+						width: 132px;  //1 比 1 正圆形
+						height: 132px;  //1 比 1 正圆形
 
 						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 							font-size: 14px;
 						}
 					}
@@ -649,22 +388,9 @@
 }
 
 
-@media screen and (max-width: @mediaWidth-Iphone) {	  //1280px
+@media screen and (max-width: 400px) {	  //400px
 	.basic-info {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 		padding: 52px;
-		gap: 24px;
-		box-sizing: border-box;
-
-
-		.main-bigTitle {
-			font-family: 'RammettoOne';
-			font-size: @text-TitleSize;
-			color: @text-color;
-		}
 
 		.basic-container {
 			display: flex;
@@ -674,60 +400,27 @@
 
 
 			.basic-info-topContainer {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 20px;
-				justify-content: space-between;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50x
-
 
 				.basic-info-topLeft {
-					display: flex;
-					flex-direction: column;
-					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
+						line-height: 1.5;
 						color: @text-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
 						line-height: 1.6;
 						color: @description-color;
 					}
 				}
 
 				.basic-info-topRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-
 
 					.circle {
 						width: 80px;  //1 比 1 正圆形
 						height: 80px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
 
 						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 							font-size: 12px;
 							scale: 0.8;
 							line-height: 1.35;
@@ -735,70 +428,34 @@
 					}
 
 					> img {
-						width: 32px;
+						width: 18px;
 					}
 				}
 			}
 
 
 			.basic-info-bottomContainer {
-				display: flex;
-				flex-direction: column;
-				text-align: left;
-				align-items: center;
-				gap: 20px;
-				justify-content: space-between;
-				transform: scale(1);
-				transition: all .3s ease-in-out;
-				opacity: 0.2;// 透明度动画
-				transform: translateY(50px);// 动画向下位移 50px
-
-
-				
+	
 				.basic-info-bottomLeft {
-					display: flex;
-					flex-direction: column;
 					gap: 20px;
-					width: 100%;
 
 					.main-title {
-						font-family: 'GTEestiProText-Bold';
-						font-size: 24px;
+						line-height: 1.5;
 						color: @text-color;
 					}
 
 					.main-content {
-						width: 100%;
-						font-family: 'GTEestiProText-Regular';
-						font-size: @text-DescriptionSize;
 						color: @description-color;
 					}
 				}
 
-				.basic-info-bottomRight {
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					gap: 20px;
-					justify-content: space-evenly;
-					margin-left: -12px;
-					width: 100%;
-					
+				.basic-info-bottomRight {	
 
 					.circle {
 						width: 80px;  //1 比 1 正圆形
 						height: 80px;  //1 比 1 正圆形
-						aspect-ratio: 1/1; //1 比 1 正圆形
-						border-radius: 50%;
-						border: 2px solid @text-color;
-						display: flex;
-						align-items:center;
-						justify-content:center;
-
 
 						> p {
-							color: @text-color;
-							text-align: center; //文字内容本身水平居中
 							font-size: 12px;
 							scale: 0.8;
 							line-height: 1.35;
@@ -806,7 +463,7 @@
 					}
 
 					> img {
-						width: 32px;
+						width: 18px;
 					}
 				}
 			}

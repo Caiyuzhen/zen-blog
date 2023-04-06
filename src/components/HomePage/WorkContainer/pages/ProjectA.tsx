@@ -71,7 +71,11 @@ export const ProjectA = () => {
 
 	return (
 		<>
-			<div className='projectA-container'>
+			<div className='projectA-container'
+				 style={{
+					boxSizing: 'border-box',
+				 }}
+			>
 				{/* 头图 */}
 				<div className="top-img">
 					{/* 导航 */}

@@ -24,10 +24,12 @@ export const BackToTopDark = ({content, fontColor = 'black', imgURL} : IBackToTo
 	return (
 		<>
 			<div className="backToTop-container-dark"
-				 onClick={ scrollToTop }>
+				 onClick={ scrollToTop }
+				 style={{height: 'auto'}}
+				>
 				<p
 					style={{
-						color: `${fontColor}`
+						color: `${fontColor}`,
 					}}
 				>{content}</p>
 				<img src={backToTopDark} alt="" className="backToTopDark"/>

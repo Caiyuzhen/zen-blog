@@ -84,9 +84,9 @@ export const BasicInfo = () => {
 							<div className="main-content">The black swan event of the epidemic has quickly transformed the organization's collaboration mode from the traditional offline mode to a remote office mode, followed by a change in the entire organization's collaboration mode, which has also triggered companies to re-engineer their own workflow. Review, use tools to improve business efficiency, increase business effects, and improve business benefits.</div>
 						</div>
 						<div className="basic-info-topRight">
-							<div className="circle"><p>Single product <br/> Create tool</p></div>
+							<div className="circle"><p> Attachment to <br/> Organization </p></div>
 							<img src={gradualArrow} alt="" />
-							<div className="circle"><p>Compound <br/> Create tool</p></div>
+							<div className="circle"><p> Free Individual <br/> Productivity </p></div>
 						</div>
 					</div>
 
@@ -105,9 +105,9 @@ export const BasicInfo = () => {
 							<div className="main-content">In the era of Web 2.0, big platforms monopolized the ownership of content, but in the era of Web 3.0, the ownership of content will return to creators, and the environment has also spawned more freelancers. We also found that more and more The NCLC platform has sprung up like mushrooms after a rain, and the entire industry has ushered in a bonus period.</div>
 						</div>
 						<div className="basic-info-bottomRight">
-							<div className="circle"><p>Centralized <br/> Edit mode</p></div>
+							<div className="circle"><p> Single product of <br/> Creation Tools </p></div>
 							<img src={gradualArrow} alt="" />
-							<div className="circle"><p>Decentralization <br/> Creative mode</p></div>
+							<div className="circle"><p> Composite <br/> Creation Tools </p></div>
 						</div>
 					</div>
 				</div>

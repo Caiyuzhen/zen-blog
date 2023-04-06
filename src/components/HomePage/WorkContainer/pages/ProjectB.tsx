@@ -59,7 +59,6 @@ export const ProjectB = () => {
 				{/* VC Structure */}
 				<VcStructure />
 
-
 				{/* 返回顶部 */}
 				<BackToTopDark 
 					content="Back to Top"
