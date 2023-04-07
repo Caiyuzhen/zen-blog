@@ -101,7 +101,7 @@ export const UserTypeInfo = () => {
 					 ref={Link_Ref}
 					 css={Link_isVisible && css`
 					 	opacity: 1 !important;
-						 transform: translateY(0px) !important;// 交叉观察器 isVisible 后，就位移
+						transform: translateY(-50px) !important;// 交叉观察器 isVisible 后，就位移
 						transition: all .35s ease-in-out !important; //因为这个远一点，所以位移时间要加长一些
 						transition-delay: 0.35s !important; //延迟一小会儿出现, 因为 link 的 height 短，所以很容易就交叉超过一半，所以更延迟一些
 					 `}
