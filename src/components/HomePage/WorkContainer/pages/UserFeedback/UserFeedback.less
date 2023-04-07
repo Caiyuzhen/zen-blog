@@ -230,7 +230,9 @@
 						height: 500px;
 						width: 500px;
 						border-radius: 50%;
+						aspect-ratio: 1/1;
 						background: #352f67;
+						transition: all 0.25s ease-in-out;
 					}
 			
 					.big-circle-1 {
@@ -238,25 +240,30 @@
 						justify-content: center;
 						align-items: center;
 						transform: translateX(40px);
+						transition: all 0.25s ease-in-out;
 
 						.medium-circle-1 {
 							width: 334px;
 							height: 334px;
+							aspect-ratio: 1/1;
 							border-radius: 50%;
 							background: rgba(233, 232, 246, .15);
 							display: flex;
 							justify-content: center;
 							align-items: center;
+							transition: all 0.25s ease-in-out;
 
 							.small-circle-1 {
 								width: 228px;
 								height: 228px;
+								aspect-ratio: 1/1;
 								background: rgb(217, 215, 247);
 								border-radius: 50%;
 								display: flex;
 								justify-content: center;
 								align-items: center;
 								flex-direction: column;
+								transition: all 0.2s ease-in-out;
 
 								> img {
 									width: 48px;
@@ -280,11 +287,13 @@
 						.medium-circle-2 {
 							width: 334px;
 							height: 334px;
+							aspect-ratio: 1/1;
 							border-radius: 50%;
 							background: rgba(233, 232, 246, .15);
 							display: flex;
 							justify-content: center;
 							align-items: center;
+							transition: all 0.25s ease-in-out;
 
 							.small-circle-2 {
 								width: 228px;
@@ -392,103 +401,55 @@
 				.popRightBottom { //比较 hack 的写法
 					left: 706px;
 					top: 302px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 					width: 356px;
 					height: 94px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-RightBottom.svg') center center no-repeat;
-					// backdrop-filter: blur(2px);//毛玻璃效果
 					transform: translateX(22px);
-					opacity: 0;
 
 					> p {
 						width: 268px;
 						margin-bottom: 14px;
 						margin-left: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color-normal;
 					}
 				}
 
 				.popRightTop { //比较 hack 的写法
 					left: 706px;
 					top: 118px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 					width: 356px;
-					height: 94px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-RightTop.svg') center center no-repeat;
-					// backdrop-filter: blur(2px);//毛玻璃效果
 					transform: translateX(22px);
-					opacity: 0;
 
 					> p {
 						width: 268px;
 						margin-bottom: 14px;
 						margin-left: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color;
 					}
 				}
 
 				.circle-container {
 					width: 800px;
-					height: auto;
-					position: relative;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 			
 					.big-circle {
 						height: 450px;
 						width: 450px;
-						aspect-ratio: 1/1;
-						border-radius: 50%;
-						background: #352f67;
 					}
 			
 					.big-circle-1 {
-						display: flex;
-						justify-content: center;
-						align-items: center;
 						transform: translateX(40px);
 
 						.medium-circle-1 {
 							width: 290px;
 							height: 290px;
-							aspect-ratio: 1/1;
-							border-radius: 50%;
-							background: rgba(233, 232, 246, .15);
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							transition: all 0.25s ease-in-out;
 
 							.small-circle-1 {
 								width: 208px;
 								height: 208px;
-								aspect-ratio: 1/1;
-								background: rgb(217, 215, 247);
-								border-radius: 50%;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								flex-direction: column;
-								transition: all 0.2s ease-in-out;
-
+								
 								> img {
 									width: 48px;
 									height: 48px;
 								}
 
 								> p {
-									font-family: 'GTEestiProText-Bold';
 									font-size: 20px;
 								}
 							}
@@ -496,33 +457,15 @@
 					}
 			
 					.big-circle-2 {
-						display: flex;
-						justify-content: center;
-						align-items: center;
 						transform: translateX(-40px);
 						
 						.medium-circle-2 {
 							width: 290px;
 							height: 290px;
-							aspect-ratio: 1/1;
-							border-radius: 50%;
-							background: rgba(233, 232, 246, .15);
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							transition: all 0.25s ease-in-out;
 
 							.small-circle-2 {
 								width: 208px;
 								height: 208px;
-								aspect-ratio: 1/1;
-								background: rgb(217, 215, 247);
-								border-radius: 50%;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								flex-direction: column;
-								transition: all 0.2s ease-in-out;
 
 								> img {
 									width: 48px;
@@ -530,7 +473,6 @@
 								}
 
 								> p {
-									font-family: 'GTEestiProText-Bold';
 									font-size: 20px;
 								}
 							}
@@ -544,146 +486,52 @@
 
 
 @media screen and (max-width: 1400px) {	
-	.main-fb-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
-		
+	.main-fb-container {	
 		.main-bg {
-			// position: absolute;
-			height: 814px;
-			width: 100%;
-			left: 44px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
-			background: linear-gradient(to bottom right, rgba(46, 43, 97, 0.5), rgba(17,15,56,0.2) );
-			border-radius: 36px;
-			box-sizing: border-box;
-
 			.circle-text-container {
-				position: relative;
-				
 				.popLeftTop { //比较 hack 的写法
 					left: -212px;
-					top: 128px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 300px;
-					height: 76px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-leftTop.svg') center center no-repeat;
-					backdrop-filter: blur(2px);//毛玻璃效果
 					scale: 0.9;
-					transform: translateX(-22px);
-					opacity: 0;
 
 					> p {
-						width: 228px;
 						margin-right: 12px;
-						margin-bottom: 0;
-						margin-top: 0;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color-normal;
 					}
 				}
 
 				.popTopLeft { //比较 hack 的写法
 					left: 32px;
 					top: -8px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 334px;
-					height: 76px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-TopLeft.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateY(-22px);
-					opacity: 0;
 
 					> p {
-						width: 280px;
 						margin-bottom: 14px;
-						margin-top: 0;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color;
 					}
 				}
 
 				.popTopRight { //比较 hack 的写法
 					left:442px;
 					top: -18px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 338px;
-					height: 82px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-TopRight.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateY(-26px);
-					opacity: 0;
 
 					> p {
-						width: 220px;
 						margin-bottom: 14px;
-						margin-top: 0;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color-normal;
 					}
 				}
 
 				.popLeftBottom { //比较 hack 的写法
 					left: -214px;
 					top: 300px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 310px;
-					height: 76px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-leftBottom.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateX(-22px);
-					opacity: 0;
 
 					> p {
-						width: 228px;
 						margin-right: 12px;
-						margin-bottom: 0;
-						margin-top: 0;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color;
 					}
 				}
 
 				.popBottomLeft { //比较 hack 的写法
 					left: -10px;
 					top: 408px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 312px;
-					height: 86px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-BottomLeft.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateY(26px);
-					opacity: 0;
 
 					> p {
 						width: 268px;
@@ -697,124 +545,48 @@
 				.popBottomRight { //比较 hack 的写法
 					left: 464px;
 					top: 408px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 352px;
-					height: 86px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-BottomRight.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateY(28px);
-					opacity: 0;
 
 					> p {
-						width: 268px;
-						margin-bottom: 0;
 						margin-top: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color;
 					}
 				}
 
 				.popRightBottom { //比较 hack 的写法
 					left: 686px;
-					top: 302px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 356px;
-					height: 94px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-RightBottom.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateX(22px);
-					opacity: 0;
 
 					> p {
-						width: 268px;
 						margin-bottom: 14px;
-						margin-left: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color-normal;
 					}
 				}
 
 				.popRightTop { //比较 hack 的写法
 					left: 678px;
-					top: 118px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 356px;
-					height: 94px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-RightTop.svg') center center no-repeat;
 					scale: 0.9;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateX(22px);
-					opacity: 0;
 
 					> p {
-						width: 268px;
 						margin-bottom: 14px;
-						margin-left: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color;
 					}
 				}
 
 				.circle-container {
 					width: 800px;
-					height: auto;
-					position: relative;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 			
 					.big-circle {
 						height: 450px;
 						width: 450px;
-						aspect-ratio: 1/1;
-						border-radius: 50%;
-						background: #352f67;
-						transition: all 0.25s ease-in-out;
 					}
 			
 					.big-circle-1 {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						transform: translateX(40px);
-						transition: all 0.25s ease-in-out;
 
 						.medium-circle-1 {
 							width: 290px;
 							height: 290px;
-							aspect-ratio: 1/1;
-							border-radius: 50%;
-							background: rgba(233, 232, 246, .15);
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							transition: all 0.25s ease-in-out;
 
 							.small-circle-1 {
 								width: 208px;
 								height: 208px;
-								aspect-ratio: 1/1;
-								background: rgb(217, 215, 247);
-								border-radius: 50%;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								flex-direction: column;
-								transition: all 0.25s ease-in-out;
 
 								> img {
 									width: 48px;
@@ -822,7 +594,6 @@
 								}
 
 								> p {
-									font-family: 'GTEestiProText-Bold';
 									font-size: 20px;
 								}
 							}
@@ -830,33 +601,16 @@
 					}
 			
 					.big-circle-2 {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						transform: translateX(-40px);
 						
 						.medium-circle-2 {
 							width: 290px;
 							height: 290px;
-							aspect-ratio: 1/1;
-							border-radius: 50%;
-							background: rgba(233, 232, 246, .15);
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							transition: all 0.25s ease-in-out;
 
 							.small-circle-2 {
 								width: 208px;
 								height: 208px;
-								aspect-ratio: 1/1;
 								background: rgb(217, 215, 247);
-								border-radius: 50%;
-								display: flex;
-								justify-content: center;
-								align-items: center;
 								flex-direction: column;
-								transition: all 0.25s ease-in-out;
 
 								> img {
 									width: 48px;
@@ -864,7 +618,6 @@
 								}
 
 								> p {
-									font-family: 'GTEestiProText-Bold';
 									font-size: 20px;
 								}
 							}
@@ -879,94 +632,38 @@
 
 @media screen and (max-width: 1280px) {	
 	.main-fb-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
 		
 		.main-bg {
-			// position: absolute;
 			height: 614px;
-			width: 100%;
 			left: 44px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
-			background: linear-gradient(to bottom right, rgba(46, 43, 97, 0.5), rgba(17,15,56,0.2) );
-			border-radius: 36px;
-			box-sizing: border-box;
 
 			.circle-text-container {
-				position: relative;
 				
 				.popLeftTop { //比较 hack 的写法
 					left: -102px;
 					top: 88px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 300px;
-					height: 76px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-leftTop.svg') center center no-repeat;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					scale: 0.7;
-					transform: translateX(-22px);
-					opacity: 0;
 
 					> p {
-						width: 228px;
 						margin-right: 12px;
-						margin-bottom: 0;
-						margin-top: 0;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color-normal;
 					}
 				}
 
 				.popTopLeft { //比较 hack 的写法
 					left: 32px;
 					top: 36px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					width: 334px;
-					height: 76px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-TopLeft.svg') center center no-repeat;
 					scale: 0.7;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateY(-22px);
-					opacity: 0;
 
 					> p {
-						width: 280px;
 						margin-bottom: 14px;
-						margin-top: 0;
-						font-family: 'GTEestiProText-Regular';
-						color: @text-color;
 					}
 				}
 
 				.popTopRight { //比较 hack 的写法
 					left:442px;
 					top: 32px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 					width: 338px;
 					height: 82px;
-					position: absolute;
-					z-index: 11;
-					background: url('../../../../../assets/svg/pop-TopRight.svg') center center no-repeat;
 					scale: 0.7;
-					// backdrop-filter: blur(2px);//毛玻璃效果
-					transform: translateY(-26px);
-					opacity: 0;
 
 					> p {
 						width: 220px;
