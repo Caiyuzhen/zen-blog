@@ -24,7 +24,7 @@ export const BusinessGoals = () => {
 							</div>
 							<span className="dotted-line"></span>
 							<div className="tranglesTop-container">
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p> Gaining market <br/> in overseas and  <br/> Verify PMF </p>
 								<img src={tranglesTop} alt="" className="tranglesTop-des"/>
 							</div>
 						</div>
@@ -33,9 +33,9 @@ export const BusinessGoals = () => {
 							<p>Tactics</p>
 							<span className="dotted-line"></span>
 							<div className="tranglesMedium-container">
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p> Create product  <br/> differentiation  <br/> competitiveness </p>
+								<p> Build a Open  <br/> APAAS-like  <br/> platform </p>
+								<p> Establishing user  <br/> reputation and <br/> Create network effect </p>
 								<img src={tranglesMedium} alt="" className="tranglesMedium-des"/>
 							</div>
 						</div>
@@ -47,13 +47,13 @@ export const BusinessGoals = () => {
 							</div>
 							<span className="dotted-line"></span>
 							<div className="tranglesBottom-container">
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p> Innovative Interaction  <br/> of Collaborative Editor</p>
+								<p> Build application-based  <br/> capabilities based on the <br/> underlying Database </p>
+								<p> Establishing social  <br/> media exposure for  <br/> products Channels </p>
 								<span className="dotted-line"></span>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
-								<p>Text placeholder <br/>Text placeholder <br/>Text placeholder</p>
+								<p> with real-time, interactive, fun <br/> and visual product power </p>
+								<p> Deep integration with third-party <br/> applications that Connecting <br/> multiple data sources </p>
+								<p> Get a quantitative amount of <br/> active team users and <br/> Active Users Individual Users </p>
 								<img src={tranglesBottom} alt="" className="tranglesBottom-des"/>
 							</div>
 						</div>

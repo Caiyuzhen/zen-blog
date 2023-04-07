@@ -1,274 +1,272 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
 
-@media screen and (max-width: @mediaWidth-Max) {	
-	.business-goal-container {
+.business-goal-container {
+	display: flex;
+	padding: 124px;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-between;
+
+	.business-goal-text-container {
 		display: flex;
-		padding: 124px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+		width: 640px;
 
-		.business-goal-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 640px;
-
-			.goal-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size:@text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.goal-description {
-				width: 1056px;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				line-height: 1.6;
-				margin: 0;
-			}
+		.goal-title {
+			font-family: 'GTEestiProText-Bold';
+			font-size:@text-TitleSize;
+			color: @text-color;
+			margin: 0;
 		}
 
-		.business-goal-graphic-container {
+		.goal-description {
+			width: 1056px;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			color: @description-color;
+			text-align: start;
+			line-height: 1.6;
+			margin: 0;
+		}
+	}
+
+	.business-goal-graphic-container {
+		display: flex;
+
+
+		.goal-modelGraphic {
 			display: flex;
-
-
-			.goal-modelGraphic {
+			flex-direction: column;
+			
+			.model-graphic-top {
 				display: flex;
-				flex-direction: column;
-				
-				.model-graphic-top {
-					display: flex;
-					align-items: center;
+				align-items: center;
 
-					// 顶部的文字 + 下面的渐变三角形
-					.graphic-top-textContainer {
+				// 顶部的文字 + 下面的渐变三角形
+				.graphic-top-textContainer {
 
-						> p {
-							width: 92px;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							color: @text-color;
-							margin-top: 58px;
-							margin-left: 26px; 
-						}
-
-						> img {
-							margin-top: 2px;
-							margin-left: 26px; 
-						}
-					}
-
-					.dotted-line {
-						width: 290px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-						margin-left: 24px;
-					}
-
-					.tranglesTop-container {
-						position: relative;
-
-						> p {
-							top: 42px;
-							width: 100%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						.tranglesTop-des {
-							height: 120px;
-						}
-					}
-				}
-
-				.model-graphic-medium {
-					display: flex;
-					align-items: center;
-
-					// 中间的文字，对齐一下
 					> p {
 						width: 92px;
 						font-family: 'GTEestiProText-Regular';
-						font-size: 16px;
+						font-size: @text-DescriptionSize;
 						color: @text-color;
-						margin-left: 26px; margin-right: 24px;
+						margin-top: 58px;
+						margin-left: 26px; 
 					}
 
-					// 虚线
-					.dotted-line {
-						width: 192px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-					}
-					
-					.tranglesMedium-container {
-						position: relative;
-
-						:nth-child(1) {
-							top: 16px;
-							left: 46px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(2) {
-							top: 16px;
-							left: 148px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(3) {
-							top: 16px;
-							right: 46px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-					
-						.tranglesMedium-des {
-							height: 90px;
-						}
+					> img {
+						margin-top: 2px;
+						margin-left: 26px; 
 					}
 				}
 
-				.model-graphic-bottom {
-					display: flex;
-					align-items: center;
+				.dotted-line {
+					width: 290px;
+					height: 2px;
+					border-bottom: 1px dashed @description-color;
+					margin-left: 24px;
+				}
 
-					// 底部的文字 + 下面的渐变三角形
-					.graphic-bottom-textContainer {
-						margin-bottom: 28px;
+				.tranglesTop-container {
+					position: relative;
 
-						> p {
-							font-family: 'GTEestiProText-Regular';
-							font-size: 16px;
-							color: @text-color;
-							margin-bottom: 48px;
-						}
-
-						> img {
-							height: 62px;
-							margin-top: 2px;
-						}
+					> p {
+						top: 42px;
+						width: 100%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
 					}
 
-					.dotted-line {
-						width: 32px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-						margin-top: 12px;
+					.tranglesTop-des {
+						height: 120px;
+					}
+				}
+			}
+
+			.model-graphic-medium {
+				display: flex;
+				align-items: center;
+
+				// 中间的文字，对齐一下
+				> p {
+					width: 92px;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					color: @text-color;
+					margin-left: 26px; margin-right: 24px;
+				}
+
+				// 虚线
+				.dotted-line {
+					width: 192px;
+					height: 2px;
+					border-bottom: 1px dashed @description-color;
+				}
+				
+				.tranglesMedium-container {
+					position: relative;
+
+					:nth-child(1) {
+						top: 16px;
+						left: 46px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
 					}
 
-					.tranglesBottom-container {
-						position: relative;
+					:nth-child(2) {
+						top: 16px;
+						left: 148px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
 
-						:nth-child(1) {
-							top: 10px;
-							left: 96px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
+					:nth-child(3) {
+						top: 16px;
+						right: 46px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+				
+					.tranglesMedium-des {
+						height: 90px;
+					}
+				}
+			}
 
-						:nth-child(2) {
-							top: 10px;
-							left: 254px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
+			.model-graphic-bottom {
+				display: flex;
+				align-items: center;
 
-						:nth-child(3) {
-							top: 10px;
-							right: 96px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
+				// 底部的文字 + 下面的渐变三角形
+				.graphic-bottom-textContainer {
+					margin-bottom: 28px;
 
-						:nth-child(4) {//分割线
-							top: 76px;
-							left: 92px;
-							width: 576px;
-							position: absolute;
-							margin: 0;
-						}
+					> p {
+						font-family: 'GTEestiProText-Regular';
+						font-size: 16px;
+						color: @text-color;
+						margin-bottom: 48px;
+					}
 
-						:nth-child(5) { 
-							bottom: 22px;
-							left: 48px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
+					> img {
+						height: 62px;
+						margin-top: 2px;
+					}
+				}
 
-						:nth-child(6) {
-							bottom: 22px;
-							left:254px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
+				.dotted-line {
+					width: 32px;
+					height: 2px;
+					border-bottom: 1px dashed @description-color;
+					margin-top: 12px;
+				}
 
-						:nth-child(7) {
-							bottom: 22px;
-							right: 48px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-						
-						.tranglesBottom-des {
-							height: 160px;
-						}
+				.tranglesBottom-container {
+					position: relative;
+
+					:nth-child(1) {
+						top: 20px;
+						left: 96px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(2) {
+						top: 10px;
+						left: 254px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(3) {
+						top: 10px;
+						right: 96px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(4) {//分割线
+						top: 76px;
+						left: 92px;
+						width: 576px;
+						position: absolute;
+						margin: 0;
+					}
+
+					:nth-child(5) { 
+						bottom: 30px;
+						left: 48px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(6) {
+						bottom: 22px;
+						left:254px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(7) {
+						bottom: 22px;
+						right: 48px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+					
+					.tranglesBottom-des {
+						height: 160px;
 					}
 				}
 			}
@@ -277,188 +275,36 @@
 }
 
 
+
 @media screen and (max-width: 2280px) {	
 	.business-goal-container {
-		display: flex;
-		padding: 124px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
 
 		.business-goal-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
 			gap: 20px;
-			width: 640px;
 
 			.goal-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size:@text-TitleSize;
-				color: @text-color;
 				margin: 0;
 			}
 
 			.goal-description {
 				width: 932px;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				line-height: 1.6;
-				margin: 0;
 			}
 		}
 
 		.business-goal-graphic-container {
-			display: flex;
-
 
 			.goal-modelGraphic {
-				display: flex;
-				flex-direction: column;
-				
-				.model-graphic-top {
-					display: flex;
-					align-items: center;
-
-					// 顶部的文字 + 下面的渐变三角形
-					.graphic-top-textContainer {
-
-						> p {
-							width: 92px;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							color: @text-color;
-							margin-top: 58px;
-							margin-left: 26px; 
-						}
-
-						> img {
-							margin-top: 2px;
-							margin-left: 26px; 
-						}
-					}
-
-					.dotted-line {
-						width: 290px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-						margin-left: 24px;
-					}
-
-					.tranglesTop-container {
-						position: relative;
-
-						> p {
-							top: 42px;
-							width: 100%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						.tranglesTop-des {
-							height: 120px;
-						}
-					}
-				}
 
 				.model-graphic-medium {
-					display: flex;
-					align-items: center;
-
-					// 中间的文字，对齐一下
-					> p {
-						width: 92px;
-						font-family: 'GTEestiProText-Regular';
-						font-size: 16px;
-						color: @text-color;
-						margin-left: 26px; margin-right: 24px;
-					}
 
 					// 虚线
 					.dotted-line {
 						width: 192px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
 					}
-					
-					.tranglesMedium-container {
-						position: relative;
-
-						:nth-child(1) {
-							top: 16px;
-							left: 46px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(2) {
-							top: 16px;
-							left: 148px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(3) {
-							top: 16px;
-							right: 46px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-					
-						.tranglesMedium-des {
-							height: 90px;
-						}
-					}
+				
 				}
 
 				.model-graphic-bottom {
-					display: flex;
-					align-items: center;
-
-					// 底部的文字 + 下面的渐变三角形
-					.graphic-bottom-textContainer {
-						margin-bottom: 28px;
-
-						> p {
-							font-family: 'GTEestiProText-Regular';
-							font-size: 16px;
-							color: @text-color;
-							margin-bottom: 48px;
-						}
-
-						> img {
-							height: 62px;
-							margin-top: 2px;
-						}
-					}
-
-					.dotted-line {
-						width: 32px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-						margin-top: 12px;
-					}
 
 					.tranglesBottom-container {
 						position: relative;
@@ -478,73 +324,28 @@
 						:nth-child(2) {
 							top: 10px;
 							left: 254px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
 						}
 
 						:nth-child(3) {
 							top: 10px;
 							right: 96px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
 						}
 
 						:nth-child(4) {//分割线
 							top: 76px;
 							left: 92px;
-							width: 576px;
-							position: absolute;
-							margin: 0;
 						}
 
 						:nth-child(5) { 
 							bottom: 22px;
-							left: 48px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
 						}
 
 						:nth-child(6) {
 							bottom: 22px;
-							left:254px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
 						}
 
 						:nth-child(7) {
 							bottom: 22px;
-							right: 48px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-						
-						.tranglesBottom-des {
-							height: 160px;
 						}
 					}
 				}
@@ -556,273 +357,40 @@
 
 @media screen and (max-width: 2060px) {	
 	.business-goal-container {
-		display: flex;
-		padding: 124px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
 
 		.business-goal-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 640px;
 
 			.goal-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size:@text-TitleSize;
-				color: @text-color;
 				margin: 0;
 			}
 
 			.goal-description {
 				width: 632px;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				line-height: 1.6;
-				margin: 0;
 			}
 		}
 
 		.business-goal-graphic-container {
-			display: flex;
-
 
 			.goal-modelGraphic {
-				display: flex;
-				flex-direction: column;
 				
 				.model-graphic-top {
-					display: flex;
-					align-items: center;
-
-					// 顶部的文字 + 下面的渐变三角形
-					.graphic-top-textContainer {
-
-						> p {
-							width: 92px;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							color: @text-color;
-							margin-top: 58px;
-							margin-left: 26px; 
-						}
-
-						> img {
-							margin-top: 2px;
-							margin-left: 26px; 
-						}
-					}
-
-					.dotted-line {
-						width: 290px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-						margin-left: 24px;
-					}
 
 					.tranglesTop-container {
-						position: relative;
 
 						> p {
 							top: 42px;
-							width: 100%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						.tranglesTop-des {
-							height: 120px;
-						}
-					}
-				}
-
-				.model-graphic-medium {
-					display: flex;
-					align-items: center;
-
-					// 中间的文字，对齐一下
-					> p {
-						width: 92px;
-						font-family: 'GTEestiProText-Regular';
-						font-size: 16px;
-						color: @text-color;
-						margin-left: 26px; margin-right: 24px;
-					}
-
-					// 虚线
-					.dotted-line {
-						width: 192px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-					}
-					
-					.tranglesMedium-container {
-						position: relative;
-
-						:nth-child(1) {
-							top: 16px;
-							left: 46px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(2) {
-							top: 16px;
-							left: 148px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(3) {
-							top: 16px;
-							right: 46px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-					
-						.tranglesMedium-des {
-							height: 90px;
 						}
 					}
 				}
 
 				.model-graphic-bottom {
-					display: flex;
-					align-items: center;
-
-					// 底部的文字 + 下面的渐变三角形
-					.graphic-bottom-textContainer {
-						margin-bottom: 28px;
-
-						> p {
-							font-family: 'GTEestiProText-Regular';
-							font-size: 16px;
-							color: @text-color;
-							margin-bottom: 48px;
-						}
-
-						> img {
-							height: 62px;
-							margin-top: 2px;
-						}
-					}
-
-					.dotted-line {
-						width: 32px;
-						height: 2px;
-						border-bottom: 1px dashed @description-color;
-						margin-top: 12px;
-					}
 
 					.tranglesBottom-container {
-						position: relative;
-
-						:nth-child(1) {
-							top: 10px;
-							left: 96px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(2) {
-							top: 10px;
-							left: 254px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(3) {
-							top: 10px;
-							right: 96px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(4) {//分割线
-							top: 76px;
-							left: 92px;
-							width: 576px;
-							position: absolute;
-							margin: 0;
-						}
 
 						:nth-child(5) { 
 							bottom: 22px;
-							left: 48px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(6) {
-							bottom: 22px;
-							left:254px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
-						}
-
-						:nth-child(7) {
-							bottom: 22px;
-							right: 48px;
-							width: 33%;
-							position: absolute;
-							color: @text-color;
-							font-size: 12px;
-							line-height: 1.6;
-							margin: 0;
-							font-family: 'GTEestiProText-Regular';
 						}
 						
-						.tranglesBottom-des {
-							height: 160px;
-						}
 					}
 				}
 			}
