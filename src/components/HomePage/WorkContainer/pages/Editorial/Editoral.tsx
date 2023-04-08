@@ -8,7 +8,6 @@ import HomePageRightCard from '../../../../../assets/img/bg-homePage-rightCard.j
 import Pointer from '../../../../../assets/img/3D-Pointer.png'
 
 
-
 export const Editoral = () => {
 	return (
 		<>
@@ -16,18 +15,18 @@ export const Editoral = () => {
 				{/* 左边内容 */}
 				<div className="editoral-left-container">
 					<div className="editoral-text-container">
-						<div className="editoral-title">Flow way of editorial</div>
-						<p>editorial description editorial description editorial description editorial description editorial description editorial description editorial description editorial description editorial description editorial description editorial description editorial description</p>
+						<div className="editoral-title">Modular of create content</div>
+						<p>We define "blocks" as basic creative units. Modules are like Lego building blocks. Users are like playing Lego building blocks. After a simple drag and drop, an exquisite document will be created naturally. Just like playing Lego building blocks, users can freely assemble their own content.</p>
 					</div>
 
 					<div className="editoral-graphic-container">
-						<div className="editoral-graphic">text text</div>
+						<div className="editoral-graphic">Basic Block</div>
 						{/* 箭头 */}
 						<img src={gradualArrow} alt="" style={{transform: 'rotateY(180deg)'}}/>
-						<div className="editoral-graphic">text text</div>
+						<div className="editoral-graphic">Block Modular</div>
 						{/* 箭头 */}
 						<img src={gradualArrow} alt="" />
-						<div className="editoral-graphic">text text</div>
+						<div className="editoral-graphic">Extension Block</div>
 					</div>
 				</div>
 
