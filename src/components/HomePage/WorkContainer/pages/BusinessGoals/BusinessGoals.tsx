@@ -45,7 +45,7 @@ export const BusinessGoals = () => {
 							<img src={upArrow} alt="" />
 								<p>Campaign</p>
 							</div>
-							<span className="dotted-line"></span>
+							<span className="dotted-line dotted-line-left"></span>
 							<div className="tranglesBottom-container">
 								<p> Innovative Interaction  <br/> of Collaborative Editor</p>
 								<p> Build application-based  <br/> capabilities based on the <br/> underlying Database </p>
