@@ -26,12 +26,12 @@ export const UxStategy = () => {
 									<p>Think & Plan</p>
 								</div>
 								<div className="ux-stategy-content">
-									<p>text placeholder</p>
-									<p>text placeholder</p>
-									<p>text placeholder</p>
+									<p>Increase the creator's heart flow</p>
+									<p>Building block construction mode</p>
+									<p>Easily extensible editing capabilities</p>
 								</div>
 							</div>
-							<div className="ux-stategy-text">UX stategy description</div>
+							<div className="ux-stategy-text">Flow way of editorial</div>
 						</div>
 
 						{/* 箭头 */}
@@ -43,12 +43,12 @@ export const UxStategy = () => {
 									<p>Interaction & <br/> Collaboration</p>	
 								</div>
 								<div className="ux-stategy-content">
-									<p>text placeholder</p>
-									<p>text placeholder</p>
-									<p>text placeholder</p>
+									<p>Multi-modal view collaboration</p>
+									<p>Automated instant flow of info</p>
+									<p>Real-time collaboration awareness</p>
 								</div>
 							</div>
-							<div className="ux-stategy-text">UX stategy description</div>
+							<div className="ux-stategy-text">Non loss of context flow</div>
 						</div>
 
 						{/* 箭头 */}
@@ -60,12 +60,12 @@ export const UxStategy = () => {
 									<p>Archive & <br/> Accumulate</p>
 								</div>
 								<div className="ux-stategy-content">
-									<p>text placeholder</p>
-									<p>text placeholder</p>
-									<p>text placeholder</p>
+									<p>Real-time content update mode</p>
+									<p>More natural KM process</p>
+									<p>Simplified whole info management</p>
 								</div>
 							</div>
-							<div className="ux-stategy-text">UX stategy description</div>
+							<div className="ux-stategy-text">Growth of KM experience</div>
 						</div>
 						
 						{/* 箭头 */}
@@ -77,12 +77,12 @@ export const UxStategy = () => {
 									<p>Share & Browse</p>
 								</div>
 								<div className="ux-stategy-content">
-									<p>text placeholder</p>
-									<p>text placeholder</p>
-									<p>text placeholder</p>
+									<p>More expressive</p>
+									<p>Personalized publish mode</p>
+									<p>Emotional interaction style</p>
 								</div>
 							</div>
-							<div className="ux-stategy-text">UX stategy description</div>
+							<div className="ux-stategy-text">Web-based publish mode</div>
 						</div>
 					</div>
 				</div>

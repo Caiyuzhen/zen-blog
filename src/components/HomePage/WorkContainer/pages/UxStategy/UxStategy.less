@@ -1,171 +1,148 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
-@font-face {
-	font-family: 'RammettoOne';
-	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
-}
 
-@font-face {
-	font-family: 'GTEestiProText-Bold';
-	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
-}
+.ux-stategy-main-container {
+	display: flex;
+	flex-direction: column;
+	padding: 124px;
+	margin-top: 48px;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-between;
 
-@font-face {
-	font-family: 'GTEestiProText-Book';
-	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Medium';
-	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Regular';
-	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
-}
-
-
-@media screen and (max-width: @mediaWidth-Max) {
-	.ux-stategy-main-container {
+	// 顶部标题
+	.ux-stategy-text-container {
 		display: flex;
 		flex-direction: column;
-		padding: 124px;
-		margin-top: 48px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
+		align-items: start;
+		gap: 20px;
+		width: 100%;
 
-		// 顶部标题
-		.ux-stategy-text-container {
+		.ux-stategy-title {
+			font-family: 'GTEestiProText-Bold';
+			font-size: @text-TitleSize;
+			color: @text-color;
+			margin: 0;
+		}
+
+		.ux-stategy-des {
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			color: @description-color;
+			text-align: start;
+			margin: 0;
+		}
+	}	
+
+	// 底部流程图
+	.ux-stategy-state-flow {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		justify-content: start;
+		gap: 36px;
+
+		.ux-stategy-textContainer {
 			display: flex;
 			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
+			align-items: center;
+			gap: 128px;
+			margin-top: 206px;
 
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
+			> p {
+				font: @text-DescriptionSize;
 				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
+				font-size: 18px;
 				color: @description-color;
 				text-align: start;
 				margin: 0;
 			}
-		}	
+		}
 
-		// 底部流程图
-		.ux-stategy-state-flow {
+		.ux-stategy-flowGraphic-container {
 			width: 100%;
 			display: flex;
 			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 36px;
+			justify-content: space-between;
+			gap: 28px;
 
-			.ux-stategy-textContainer {
+			> img {
+				width: 46px;
+			}
+
+			.ux-stategy-flow {
+				width: 258px;
+				height: 100%;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				gap: 128px;
-				margin-top: 206px;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 18px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
+				gap: 28px;
+				background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
 			}
 
-			.ux-stategy-flowGraphic-container {
-				width: 100%;
+			.ux-stategy-flow {
 				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				gap: 28px;
-
-				> img {
-					width: 46px;
-				}
-
-				.ux-stategy-flow {
-					width: 258px;
-					height: 100%;
+				flex-direction: column;
+				
+				.stategy-flow-container {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
+					gap: 24px;
+					margin-top: 136px;
 
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
-					
-					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						gap: 24px;
-						margin-top: 136px;
-
-						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 156px;
-							height: 156px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 20px;
-								color: @text-color;
-								margin: 0;
-							}
-						}
-
-						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 8px;
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-							}
-						}
-					}
-
-					.ux-stategy-text {
+					.ux-stategy-circle {
 						display: flex;
 						align-items: center;
 						justify-content: center;
-						width: 234px;
-						height: 64px;
-						background: #7777EA;
 						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: @text-DescriptionSize;
-						margin-top: 64px;
-						border-radius: 10px;
+						width: 156px;
+						height: 156px;
+						aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
+						background: #170645;
+						border-radius: 50%;
+
+						> p {
+							font-family: 'GTEestiProText-Bold';
+							font-size: 20px;
+							color: @text-color;
+							margin: 0;
+						}
 					}
+
+					.ux-stategy-content {
+						display: flex;
+						flex-direction: column;
+						gap: 8px;
+
+						> * {
+							font-family: 'GTEestiProText-Regular';
+							font-size: 15px;
+							color: @text-color-normal;
+							text-align: center;
+							margin: 0;
+						}
+					}
+				}
+
+				.ux-stategy-text {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 264px;
+					height: 64px;
+					background: #7777EA;
+					color: @text-color;
+					font-family: 'GTEestiProText-Medium';
+					font-size: 18px;
+					margin-top: 64px;
+					border-radius: 10px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
 				}
 			}
 		}
@@ -173,72 +150,25 @@
 }
 
 
+
 @media screen and (max-width: 1600px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px;
-		margin-top: 48px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
+		 
 			transform: translateY(-40px);
 
 			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
 				gap: 110px;
 				margin-top: 206px;
 
 				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 18px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
 				}
 			}
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
 				gap: 0px;
 
 				> img {
@@ -247,73 +177,31 @@
 
 				.ux-stategy-flow {
 					width: 208px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
 				}
 
 				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
-					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						gap: 24px;
+					.stategy-flow-container {	
 						margin-top: 136px;
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
 							width: 136px;
 							height: 136px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 20px;
-								color: @text-color;
-								margin: 0;
-							}
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 8px;
+							gap: 2px;
 
 							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
+								font-size: 12px;
 							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
 						width: 210px;
-						height: 64px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: @text-DescriptionSize;
-						margin-top: 64px;
 						border-radius: 10px;
+						font-size: 14px;
 						transform: translateY(-20px);
 					}
 				}
@@ -325,147 +213,31 @@
 
 @media screen and (max-width: 1280px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px;
-		margin-top: 48px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
+		margin-bottom: -160px;
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
 			transform: translateY(-40px);
 
 			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
 				margin-top: 206px;
 
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
+				> p { 
 					font-size: 18px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
 				}
 			}
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
 				gap: 24px;
 
 				> img {
-					width: 34px;
 					display: none;
 				}
 
 				.ux-stategy-flow {
-					width: 208px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
-					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						gap: 24px;
+					.stategy-flow-container {						
 						margin-top: 136px;
-
-						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 136px;
-							height: 136px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 20px;
-								color: @text-color;
-								margin: 0;
-							}
-						}
-
-						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 8px;
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-							}
-						}
-					}
-
-					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 210px;
-						height: 64px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: @text-DescriptionSize;
-						margin-top: 64px;
-						border-radius: 10px;
-						transform: translateY(-20px);
 					}
 				}
 			}
@@ -476,147 +248,84 @@
 
 @media screen and (max-width: 1180px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px;
-		margin-top: 48px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
 			transform: translateY(-40px);
 
 			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 206px;
 				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 18px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
 			}
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
 				gap: 24px;
-
-				> img {
-					width: 34px;
-					display: none;
-				}
 
 				.ux-stategy-flow {
 					width: 188px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
 				}
 
 				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						gap: 24px;
 						margin-top: 136px;
+						gap: 32px;
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
 							width: 126px;
 							height: 126px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
 
 							> p {
-								font-family: 'GTEestiProText-Bold';
 								font-size: 16px;
-								color: @text-color;
-								margin: 0;
 							}
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
 							gap: 4px;
 							transform: translateY(-8px);
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								font-size: 16px;
-							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
+						width: 100%;
+						font-size: 13px;
+						transform: translateY(-40px);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.ux-stategy-main-container {
+		margin-top: 28px;
+		margin-bottom: -40px;
+
+		// 底部流程图
+		.ux-stategy-state-flow {		 
+
+			.ux-stategy-flowGraphic-container {
+				transform: translateY(-40px);
+
+				.ux-stategy-flow {
+					
+					.stategy-flow-container {
+
+						.ux-stategy-circle {
+							width: 138px;
+							height: 138px;
+							transform: translateY(8px);
+						}
+
+						.ux-stategy-content {
+							transform: translateY(-4px);
+						}
+					}
+
+					.ux-stategy-text {
 						width: 190px;
 						height: 64px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 14px;
 						margin-top: 64px;
 						border-radius: 10px;
 						transform: translateY(-40px);
@@ -628,278 +337,33 @@
 }
 
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 980px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px;
-		margin-top: 28px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
-
+	
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
-			transform: translateY(-40px);
-
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 206px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 18px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
+			transform: translateY(-10px);
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
 				gap: 24px;
 
-				> img {
-					width: 34px;
-					display: none;
+				.ux-stategy-flow {
+					width: 148px;				
 				}
 
 				.ux-stategy-flow {
-					width: 168px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 24px;
-						margin-top: 136px;
-
-						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 108px;
-							height: 108px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-							transform: translateY(8px);
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 16px;
-								color: @text-color;
-								margin: 0;
-							}
-						}
-
-						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 4px;
-							transform: translateY(-4px);
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								font-size: 16px;
-							}
-						}
-					}
-
-					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 160px;
-						height: 64px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 14px;
-						margin-top: 64px;
-						border-radius: 10px;
-						transform: translateY(-40px);
-					}
-				}
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: 900px) {
-	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px;
-		margin-top: 8px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
-
-		// 底部流程图
-		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
-			transform: translateY(-40px);
-
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 206px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
-
-			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				gap: 24px;
-
-				> img {
-					width: 34px;
-					display: none;
-				}
-
-				.ux-stategy-flow {
-					width: 148px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
-					
-					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
 						margin-top: 64px;
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
 							width: 88px;
 							height: 88px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
 							transform: translateY(56px);
 
-							> p {
-								font-family: 'GTEestiProText-Bold';
+							> p {	
 								font-size: 13px;
 								line-height:1.4;
-								color: @text-color;
-								margin: 0;
 							}
 						}
 
@@ -910,30 +374,19 @@
 							transform: translateY(-4px);
 
 							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
 								line-height: 1.4;
-								font-size: 14px;
+								scale: 0.75;
+								white-space: nowrap;
 								transform: translateY(52px);
 							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 140px;
+						width: 150px;
 						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
 						font-size: 12px;
 						margin-top: 104px;
-						border-radius: 10px;
 						transform: translateY(-30px);
 					}
 				}
@@ -945,157 +398,50 @@
 
 @media screen and (max-width: 800px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px;
-		margin-top: 8px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
-
+	
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
 			transform: translateY(-40px);
 
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 186px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
-
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
 				gap: 24px;
-
-				> img {
-					width: 34px;
-					display: none;
-				}
 
 				.ux-stategy-flow {
 					width: 118px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
 				}
 
 				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
 						margin-top: 64px;
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
 							width: 78px;
 							height: 78px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
 							transform: translateY(56px);
 
-							> p {
-								font-family: 'GTEestiProText-Bold';
+							> p {	
 								font-size: 12px;
-								line-height:1.4;
-								color: @text-color;
-								margin: 0;
 							}
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 4px;
-							transform: translateY(-4px);
 
 							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								line-height: 1.2;
-								font-size: 12px;
-								transform: translateY(58px);
+								line-height: 1;
+								transform: translateY(78px);
+								scale: 0.6;
 							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 120px;
+						width: 150px;
 						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 12px;
-						scale: 0.9;
+						scale: 0.7;
 						padding: 4px 8px;
-						margin-top: 104px;
 						border-radius: 10px;
-						transform: translateY(-30px);
+						transform: translateY(-60px);
 					}
 				}
 			}
@@ -1106,162 +452,54 @@
 
 @media screen and (max-width: 750px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
 		padding: 124px 124px 42px 124px;
 		margin-top: -10px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
 
 		// 顶部标题
 		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			text-align: left;
 			line-height: 1.4;
-			gap: 20px;
-			width: 100%;
 
 			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
+				white-space: nowrap;
 			}
 
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
+	
 		}	
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
 			transform: translateY(-80px);
 
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 186px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
-
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
 				gap: 16px;
 				scale: 0.9;
 				transform: translateX(-24px);
 
-				> img {
-					width: 34px;
-					display: none;
+				.ux-stategy-flow {
+					width: 118px;				
 				}
 
 				.ux-stategy-flow {
-					width: 118px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
 						margin-top: 64px;
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 78px;
-							height: 78px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-							transform: translateY(56px);
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 12px;
-								line-height:1.4;
-								color: @text-color;
-								margin: 0;
-							}
+							width: 98px;
+							height: 98px;
+							scale: 0.9;
+							transform: translateY(74px);
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 4px;
 							transform: translateY(-4px);
-							// display: none;
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								line-height: 1.2;
-								font-size: 12px;
-								transform: translateY(58px);
-							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 120px;
+						width: 136px;
 						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 12px;
-						scale: 0.9;
-						padding: 0px 8px;
-						margin-top: 104px;
-						border-radius: 10px;
-						transform: translateY(-40px);
+						scale: 0.8;
 					}
 				}
 			}
@@ -1270,332 +508,75 @@
 }
 
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 630px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
 		padding: 124px 124px 42px 124px;
 		margin-top: -10px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
+		margin-bottom: 380px;
 
 		// 顶部标题
 		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			text-align: left;
 			line-height: 1.4;
 			gap: 20px;
 			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
-
-		// 底部流程图
-		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
-			gap: 24px;
-			transform: translateY(-80px);
-
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 186px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
-
-			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				gap: 16px;
-				scale: 0.82;
-				transform: translateX(-48px);
-
-				> img {
-					width: 34px;
-					display: none;
-				}
-
-				.ux-stategy-flow {
-					width: 118px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
-					
-					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
-						margin-top: 64px;
-
-						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 78px;
-							height: 78px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-							transform: translateY(56px);
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 12px;
-								line-height:1.4;
-								color: @text-color;
-								margin: 0;
-							}
-						}
-
-						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 4px;
-							transform: translateY(-4px);
-							// display: none;
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								line-height: 1.2;
-								font-size: 12px;
-								transform: translateY(58px);
-							}
-						}
-					}
-
-					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 120px;
-						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 12px;
-						scale: 0.9;
-						padding: 0px 8px;
-						margin-top: 104px;
-						border-radius: 10px;
-						transform: translateY(-40px);
-					}
-				}
-			}
-		}
-	}
-}
-
-
-@media screen and (max-width: 580px) {
-	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 124px 124px 42px 124px;
-		margin-top: -10px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			text-align: left;
-			line-height: 1.4;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
 		}	
 
 		// 底部流程图
 		.ux-stategy-state-flow {
 			margin-bottom: 448px;
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: auto;
-			justify-content: start;
-			gap: 24px;
-			transform: translateY(-80px);
+			transform: translateY(-40px);
 
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 186px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
 				flex-direction: column;
-				justify-content: space-between;
-				gap: 124px;
-				scale: 1.25;
-				margin-top: 124px;
-				transform: translate(14px, 180px);
-
-				> img {
-					width: 34px;
-					display: none;
-				}
+				justify-content: center;
+				align-items: center;
+				gap: 144px;
+				scale: 1.26;
+				transform: translateY(280px);
 
 				.ux-stategy-flow {
 					width: 268px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
 				}
 
 				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
 						margin-top: 4px;
 						transform: translateY(-24px);
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
 							width: 168px;
 							height: 168px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
+
 							transform: translateY(56px);
 
 							> p {
-								font-family: 'GTEestiProText-Bold';
+								scale: 1.2;	
 								font-size: 18px;
 								line-height:1.4;
-								color: @text-color;
-								margin: 0;
 							}
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 12px;
 							transform: translateY(-4px);
-							// display: none;
 
 							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
 								line-height: 1.4;
-								font-size: 16px;
-								transform: translateY(68px);
+								scale: 1;
+								font-size: 14px;
+								transform: translateY(48px);
 							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
 						width: 214px;
 						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 14px;
 						scale: 1;
+						font-size: 18px;
 						padding: 8px 12px;
 						margin-top: 4px;
-						border-radius: 10px;
 						transform: translateY(88px);
 					}
 				}
@@ -1607,95 +588,29 @@
 
 @media screen and (max-width: 520px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
 		padding: 52px;
-		margin-top: -10px;
-		margin-bottom: 318px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
+		margin-top: 10px;
 
 		// 顶部标题
 		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			text-align: left;
-			line-height: 1.4;
-			gap: 20px;
-			width: 100%;
-
 			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
+				font-size: 24px;
 			}
 		}	
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 100%;
-			justify-content: start;
 			gap: 24px;
 			transform: translateY(-80px);
 
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 86px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
-
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
 				gap: 124px;
 				scale: 1.35;
 				margin-top: 124px;
-				transform: translate(34px, 240px);
-
-				> img {
-					width: 34px;
-					display: none;
-				}
+				transform: translate(-20px, 240px);
 
 				.ux-stategy-flow {
-					width: 268px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
+					width: 268px;	
 				}
 
 				.ux-stategy-flow {
@@ -1704,69 +619,15 @@
 					margin-left: 28px;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
-						margin-top: 4px;
 						transform: translateY(-24px);
-
-						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 168px;
-							height: 168px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
-							transform: translateY(56px);
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 18px;
-								line-height:1.4;
-								color: @text-color;
-								margin: 0;
-							}
-						}
-
-						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
-							gap: 12px;
-							transform: translateY(-4px);
-							// display: none;
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								line-height: 1.4;
-								font-size: 16px;
-								transform: translateY(78px);
-							}
-						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
 						width: 214px;
-						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 14px;
-						scale: 1;
-						padding: 8px 12px;
-						margin-top: 4px;
-						border-radius: 10px;
-						transform: translateY(88px);
+						height: 32px;
+						font-size: 16px;
+						margin-top: 40px;
+						transform: translateY(68px);
 					}
 				}
 			}
@@ -1777,166 +638,73 @@
 
 @media screen and (max-width: 420px) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 52px;
-		margin-top: -10px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
 
 		// 顶部标题
 		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			text-align: left;
-			line-height: 1.4;
-			gap: 20px;
-			width: 100%;
-
 			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
+				font-size: 24px;
 			}
 		}	
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			height: 1480px;
-			justify-content: start;
+			height: 1280px;
 			gap: 24px;
 			transform: translateY(-80px);
-			margin-bottom: 780px;
+			margin-bottom: 620px;
 
 			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 186px;
-				display: none;
-
 				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
 					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
 				}
 			}
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 				gap: 124px;
 				scale: 1.15;
-				margin-top: 224px;
-				transform: translateX(8px);
-
-				> img {
-					width: 34px;
-					display: none;
-				}
+				margin-top: 204px;
+				transform: translateX(-2px);
 
 				.ux-stategy-flow {
 					width: 268px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
 				}
 
 				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					transform: translateX(-14px);
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
 						margin-top: 4px;
 						transform: translateY(-24px);
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
 							width: 168px;
 							height: 168px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
 							transform: translateY(56px);
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 18px;
-								line-height:1.4;
-								color: @text-color;
-								margin: 0;
-							}
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
 							gap: 12px;
 							transform: translateY(-4px);
-							// display: none;
 
 							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
 								line-height: 1.4;
-								font-size: 16px;
-								transform: translateY(68px);
+								font-size: 14px;
+								transform: translateY(48px);
 							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
 						width: 214px;
-						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
+						height: 32px;
 						font-size: 14px;
 						scale: 1;
 						padding: 8px 12px;
 						margin-top: 4px;
 						border-radius: 10px;
-						transform: translateY(88px);
+						transform: translateY(68px);
 					}
 				}
 			}
@@ -1947,166 +715,38 @@
 
 @media screen and (max-width: @mediaWidth-Iphone) {
 	.ux-stategy-main-container {
-		display: flex;
-		flex-direction: column;
-		padding: 52px;
-		margin-top: -10px;
-		box-sizing: border-box;
-		align-items: center;
-		justify-content: space-between;
-		margin-bottom: -20px;
-
-		// 顶部标题
-		.ux-stategy-text-container {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			text-align: left;
-			line-height: 1.4;
-			gap: 20px;
-			width: 100%;
-
-			.ux-stategy-title {
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				margin: 0;
-			}
-
-			.ux-stategy-des {
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				color: @description-color;
-				text-align: start;
-				margin: 0;
-			}
-		}	
+		margin-bottom: 600px;
 
 		// 底部流程图
 		.ux-stategy-state-flow {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			// height: 100%;
 			margin-bottom: 480px;
-			justify-content: start;
 			gap: 24px;
-			transform: translate(-10px, -80px);
+			transform: translate(2px, -80px);
 
-			.ux-stategy-textContainer {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 110px;
-				margin-top: 186px;
-				display: none;
-
-				> p {
-					font: @text-DescriptionSize;
-					font-family: 'GTEestiProText-Regular';
-					font-size: 16px;
-					color: @description-color;
-					text-align: start;
-					margin: 0;
-				}
-			}
 
 			.ux-stategy-flowGraphic-container {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				gap: 124px;
-				scale: 1;
-				margin-top: 124px;
-				transform: translateX(-4px);
-
-				> img {
-					width: 34px;
-					display: none;
-				}
 
 				.ux-stategy-flow {
-					width: 268px;
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					gap: 28px;
-					background-image: url('../../../../../assets/svg/bg-uxStategy.svg');
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-
-				.ux-stategy-flow {
-					display: flex;
-					flex-direction: column;
 					
 					.stategy-flow-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						gap: 12px;
 						margin-top: 4px;
 						transform: translateY(-24px);
 
 						.ux-stategy-circle {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							width: 168px;
-							height: 168px;
-							aspect-ratio: 1/1; //1 比 1 正圆形 （固定长宽比）
-							background: #170645;
-							border-radius: 50%;
+							width: 188px;
+							height: 188px;
 							transform: translateY(56px);
-
-							> p {
-								font-family: 'GTEestiProText-Bold';
-								font-size: 18px;
-								line-height:1.4;
-								color: @text-color;
-								margin: 0;
-							}
 						}
 
 						.ux-stategy-content {
-							display: flex;
-							flex-direction: column;
 							gap: 12px;
 							transform: translateY(-4px);
-							// display: none;
-
-							> * {
-								font-family: 'GTEestiProText-Regular';
-								font-size: @text-DescriptionSize;
-								color: @text-color-normal;
-								text-align: center;
-								margin: 0;
-								line-height: 1.4;
-								font-size: 16px;
-								transform: translateY(68px);
-							}
 						}
 					}
 
 					.ux-stategy-text {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 214px;
-						height: 52px;
-						background: #7777EA;
-						color: @text-color;
-						font-family: 'GTEestiProText-Medium';
-						font-size: 14px;
-						scale: 1;
-						padding: 8px 12px;
-						margin-top: 4px;
 						border-radius: 10px;
-						transform: translateY(88px);
+						transform: translateY(68px);
 					}
 				}
 			}
