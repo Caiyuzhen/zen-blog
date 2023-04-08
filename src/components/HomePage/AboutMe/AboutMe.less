@@ -71,7 +71,6 @@
 	@media screen and (max-width: 4200px) {	
 		//上方大标题以及描述文案
 		.top-container {
-
 			margin-top: 80px;
 			display: flex;
 			flex-direction: column;
@@ -139,13 +138,6 @@
 							background-color: #f0f0f0;
 							border-radius: 50%;
 							transition: all 0.2s ease-in-out;
-
-							// hover 时旋转一圈
-							// &:hover {
-							// 	background-color: #e5e0ea;
-							// 	transform: rotate(360deg);
-							// 	// animation: rotate 1s linear infinite;
-							// }
 						}
 					}
 
@@ -364,31 +356,16 @@
 	@media screen and (max-width: 1095px) {	
 		//上方大标题以及描述文案
 		.top-container {
-			margin-top: 80px;
-			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
-			gap: 2rem;
 
 			.title {
 				width: 528px;
-				height: auto;
-				// 字体行高
-				line-height: 1.35;
-				color: white;
-				font-size: 80px;
-				font-weight: 900;
-				font-family: 'RammettoOne';
 				text-align: left;
 			}
 
 			.description {
 				height: auto;
 				width: 380px;
-				color: white;
-				font-size: 16px;
-				text-align: left;
-				font-family: 'GTEestiProText-Book';
 			}
 		}
 
@@ -399,58 +376,9 @@
 				.card-base-styles();
 			}
 
-			margin-top: 80px;
-			display: grid; 
 			grid-template-columns: repeat(3, 1fr); //占 4 列 ，列的宽度为 1 fr
 			grid-template-rows: repeat(7, 280px); //占 5 行, 每行高度为 280px 
-			column-gap: 28px; //列间距
-			row-gap: 28px; //行间距
-			// grid-template-areas: "... ... ...";
 
-				.card-personal {
-					display: flex;
-					flex-direction: column;
-					align-items: flex-start;
-					background-color:  rgba(240, 240, 240, 0.8);
-					grid-column-start: 1;//横 1
-					grid-column-end: 3;//横 3
-					grid-row-start: 1;//纵 1
-					grid-row-end: 2;//纵 2
-
-					.avatar-container{
-						width: 100%;
-						display: flex;
-						justify-content: space-between;
-
-						> .avatar { //avatar
-							width: 56px;	
-						}
-
-						// hover 时,changeAvatar 旋转360度
-						> .changeAvatar {
-							width: 24px;
-							height: 24px;
-							padding: 16px;
-							background-color: #F0F0F0;
-							border-radius: 50%;
-							transition: all 0.2s ease-in-out;
-						}
-					}
-
-					.personal-descrip {
-						// 文字居左
-						text-align: left;
-						font-family: 'GTEestiProText-Book';
-					}
-				}
-
-				.card-github {
-					background-color:  rgba(16, 16, 16, 0.7);
-					grid-column-start: 3;//横 1
-					grid-column-end: 4;//横 2
-					grid-row-start: 1;//纵 2
-					grid-row-end: 2;//纵 2
-				}
 
 				.card-twitter {
 					background-color:  rgba(37, 173, 236, 0.7);
@@ -497,25 +425,6 @@
 							font-family: 'GTEestiProText-Medium';
 						}
 					}
-					.detail-info{
-						margin-top: 12px;
-						display: flex;
-						flex-direction: column;
-						font-family: 'GTEestiProText-Book';
-
-						.info{
-							height: 44px;
-							font-weight: 600;
-							display: flex;
-							flex-direction: row;
-							align-items: center;
-
-							.info-text {
-								font-weight: 400;
-								font-family: 'GTEestiProText-Regular';
-							}
-						}
-					}
 				}
 				
 				.card-facebook {
@@ -540,30 +449,6 @@
 					grid-column-end: 4;//横 4
 					grid-row-start: 4;//纵 4
 					grid-row-end: 5;//纵 5
-
-					.title-pdfDL {
-						display: flex;
-						flex-direction: row;
-						align-items: center;
-						gap: 0.5em;
-
-						// 第二个子元素(也就是标题字）
-						> :nth-child(2) {
-							font-weight: 800;
-							font-size: 20px;
-							font-family: 'GTEestiProText-Medium';
-						}
-					}
-
-					> img {
-						z-index: 10;
-						width: 48px;
-						height: 48px;
-						padding: 16px;
-						background-color: #F0F0F0;
-						border-radius: 50%;
-						transition: all 0.2s ease-in-out;
-					}
 				}
 
 				.card-tikTok {
@@ -612,30 +497,17 @@
 	@media screen and (max-width: 750px) {	
 		//上方大标题以及描述文案
 		.top-container {
-			margin-top: 80px;
-			display: flex;
-			flex-direction: column;
 			gap: 0.05rem;
 
 			.title {
 				width: 628px;
-				height: auto;
-				// 字体行高
-				line-height: 1.35;
-				color: white;
 				font-size: 61px;
-				font-weight: 900;
-				font-family: 'RammettoOne';
 				text-align: left;
 			}
 
 			.description {
 				height: auto;
 				width: 100%;
-				color: white;
-				font-size: 16px;
-				text-align: left;
-				font-family: 'GTEestiProText-Book';
 			}
 		}
 
@@ -647,49 +519,8 @@
 			}
 
 			margin-top: 40px;
-			display: grid; 
 			grid-template-columns: repeat(2, 1fr); //占 2 列 ，列的宽度为 1 fr
 			grid-template-rows: repeat(10, 280px); //占 10 行, 每行高度为 280px 
-			column-gap: 28px; //列间距
-			row-gap: 28px; //行间距
-			// grid-template-areas: "... ... ...";
-
-				.card-personal {
-					display: flex;
-					flex-direction: column;
-					align-items: flex-start;
-					background-color:  rgba(240, 240, 240, 0.8);
-					grid-column-start: 1;//横 1
-					grid-column-end: 3;//横 3
-					grid-row-start: 1;//纵 1
-					grid-row-end: 2;//纵 2
-
-					.avatar-container{
-						width: 100%;
-						display: flex;
-						justify-content: space-between;
-
-						> .avatar { //avatar
-							width: 56px;	
-						}
-
-						// hover 时,changeAvatar 旋转360度
-						> .changeAvatar {
-							width: 24px;
-							height: 24px;
-							padding: 16px;
-							background-color: #F0F0F0;
-							border-radius: 50%;
-							transition: all 0.2s ease-in-out;
-						}
-					}
-
-					.personal-descrip {
-						// 文字居左
-						text-align: left;
-						font-family: 'GTEestiProText-Book';
-					}
-				}
 
 				.card-github {
 					background-color:  rgba(16, 16, 16, 0.7);
@@ -744,25 +575,6 @@
 							font-family: 'GTEestiProText-Medium';
 						}
 					}
-					.detail-info{
-						margin-top: 12px;
-						display: flex;
-						flex-direction: column;
-
-						.info{
-							height: 44px;
-							font-weight: 600;
-							display: flex;
-							flex-direction: row;
-							align-items: center;
-							font-family: 'GTEestiProText-Book';
-
-							.info-text {
-								font-weight: 400;
-								font-family: 'GTEestiProText-Regular';
-							}
-						}
-					}
 				}
 				
 				.card-facebook {
@@ -800,16 +612,6 @@
 							font-size: 20px;
 							font-family: 'GTEestiProText-Medium';
 						}
-					}
-
-					> img {
-						z-index: 10;
-						width: 48px;
-						height: 48px;
-						padding: 16px;
-						background-color: #F0F0F0;
-						border-radius: 50%;
-						transition: all 0.2s ease-in-out;
 					}
 				}
 
@@ -860,29 +662,17 @@
 		//上方大标题以及描述文案
 		.top-container {
 			margin-top: 60px;
-			display: flex;
-			flex-direction: column;
 			gap: 0.05rem;
 
 			.title {
 				width: 287px;
-				height: auto;
-				// 字体行高
-				line-height: 1.35;
-				color: white;
 				font-size: 61px;
-				font-weight: 900;
-				font-family: 'RammettoOne';
-				text-align: left;
 			}
 
 			.description {
 				height: auto;
 				width: 100%;
 				color: white;
-				font-size: 16px;
-				text-align: left;
-				font-family: 'GTEestiProText-Book';
 			}
 		}
 
@@ -894,12 +684,8 @@
 			}
 
 			margin-top: 40px;
-			display: grid; 
 			grid-template-columns: repeat(1, 1fr); //占 1 列 ，列的宽度为 1 fr
 			grid-template-rows: repeat(15, 280px); //占 14 行, 每行高度为 280px 
-			// column-gap: 28px; //列间距
-			row-gap: 28px; //行间距
-			// grid-template-areas: "... ... ...";
 
 				.card-personal {
 					display: flex;
@@ -911,25 +697,6 @@
 					grid-row-start: 1;//纵 1
 					grid-row-end: 3;//纵 2
 
-					.avatar-container{
-						width: 100%;
-						display: flex;
-						justify-content: space-between;
-
-						> .avatar { //avatar
-							width: 56px;	
-						}
-
-						// hover 时,changeAvatar 旋转360度
-						> .changeAvatar {
-							width: 24px;
-							height: 24px;
-							padding: 16px;
-							background-color: #F0F0F0;
-							border-radius: 50%;
-							transition: all 0.2s ease-in-out;
-						}
-					}
 
 					.personal-descrip {
 						// 文字居左
@@ -991,25 +758,6 @@
 							font-family: 'GTEestiProText-Medium';
 						}
 					}
-					.detail-info{
-						margin-top: 12px;
-						display: flex;
-						flex-direction: column;
-
-						.info{
-							height: 44px;
-							font-weight: 600;
-							display: flex;
-							flex-direction: row;
-							align-items: center;
-							font-family: 'GTEestiProText-Book';
-
-							.info-text {
-								font-weight: 400;
-								font-family: 'GTEestiProText-Regular';
-							}
-						}
-					}
 				}
 				
 				.card-facebook {
@@ -1047,16 +795,6 @@
 							font-size: 20px;
 							font-family: 'GTEestiProText-Medium';
 						}
-					}
-
-					> img {
-						z-index: 10;
-						width: 48px;
-						height: 48px;
-						padding: 16px;
-						background-color: #F0F0F0;
-						border-radius: 50%;
-						transition: all 0.2s ease-in-out;
 					}
 				}
 

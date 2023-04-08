@@ -19,8 +19,8 @@ export const DefinitionBlock = () => {
 				<div className="definitionBlock-inside-container">
 					{/* 顶部标题 */}
 					<div className="definitionBlock-topContainer">
-						<div className="DefinitionBlock-title">Titles Titles</div>
-						<p>description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock</p>
+						<div className="DefinitionBlock-title">Definition of Modularity Block</div>
+						<p>The Block is the smallest unit of creation, and all content is built and assembled from the Block.</p>
 					</div>
 					{/* 底部内容 */}
 					<div className="definitionBlock-bottomContent">
