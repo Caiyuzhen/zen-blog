@@ -749,147 +749,6 @@
 }
 
 
-// @media screen and (max-width: 640px) {	
-// 	.intergation-container {
-		 
-
-// 		// 左侧的描述跟数据 
-// 		.intergation-info-container {
-// 			width: 100%;
-// 			display: flex;
-// 			flex-direction: column;
-// 			justify-content: center;
-// 			gap: 64px;
-// 			transform: translateY(-180px);
-
-// 			.intergation-info-text { 
-// 				justify-content: center;
-// 				gap: 24px;
-
-// 				.intergation-title {
-// 					font-family: 'GTEestiProText-Bold';
-// 					font-size: @text-TitleSize;
-// 					color: @text-color;
-// 					margin: 0;
-// 					text-align: left;
-// 				} 
-// 			}
-
-// 			// 下面整组数据
-// 			.intergation-number-mainContainer {
-// 				width: 100%;
-// 				height: auto;
-// 				display: flex;
-// 				align-items: center;
-// 				justify-content: center;
-// 				flex-direction: column;
-// 				scale: 0.8;
-// 				transform: translateY(150px);
-
-
-// 				// 数据
-// 				.intergation-number-TopContainer {
-// 					width: 100%;
-// 					display: flex;
-// 					flex-direction: row;
-// 					align-items: center;
-// 					justify-content: center;
-
-// 					.numberTopLeft {
-// 						width: 100%; 
-// 						justify-content: center;
-// 						gap: 22px; 
-
-// 						> img {//下降箭头
-// 							width: 36px;
-// 						}
-// 					}
-
-// 					.numberTopCenter {
-// 						width: 20px;
-// 						margin-right: 12px;
-// 					}
-
-// 					.numberTopRight {
-// 						width: 100%; 
-// 						justify-content: center;
-// 						gap: 22px;
-// 						transform: translateX(-20px); 
-
-// 						> img {//上升箭头
-// 							width: 36px;
-// 						}
-// 					}
-// 				}
-
-// 				.intergation-number-BottomContainer {
-// 					width: 100%;
-// 					display: flex;
-// 					flex-direction: row;
-// 					gap: 40px;
-// 					gap: 40px;
-// 					transform: translate(-10px, 144px);
-
-// 					.numberTopLeft { //箭头
-// 						width: 100%; 
-// 						gap: 22px;
-// 						margin-left: 22px; 
-						
-// 						> img {//下降箭头
-// 							width: 36px;
-// 						}
-// 					}
-
-// 					.numberBottomCenter { //箭头
-// 						width: 100%;
-// 						width: 20px;
-// 						margin-right: 36px;
-// 					}
-
-// 					.numberBottomRight {
-// 						width: 100%; 
-// 						justify-content: center;
-// 						gap: 22px;
-// 						transform: translate(-36px, -60px); 
-
-// 						> img {//上升箭头
-// 							width: 36px;
-// 							transform: translateX(4px);
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-
-// 		// 右侧的 page
-// 		.intergation-info-pageContainer { 
-// 			width: 400px; 
-// 			gap: 64px;
-// 			margin-top: -100px;
-// 			scale: 0.95;
-// 			transform: translate(0px, -444px); 
-
-// 			.intergation-info-pageJira {
-// 				position: relative;
-
-// 				.jiraIcon {
-// 					width: 25%;
-// 					position: absolute;
-// 					bottom: 12px;
-// 					left: -64px
-// 				}
-
-// 				> img {
-// 					width: 400px;// 改为固定的尺寸
-// 					height: auto;
-// 					border-radius: 12px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-
 @media screen and (max-width: 580px) {	
 	.intergation-container {
 		padding: 24px 54px 54px 54px;
@@ -899,6 +758,7 @@
 			transform: translateY(-180px);
 
 			.intergation-info-text { 
+				width: 72%;
 
 				.intergation-title {
 					font-size: 24px;
@@ -957,6 +817,20 @@
 		.intergation-info-pageContainer { 
 			scale: 0.95;
 			transform: translate(0px, -444px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {	
+	.intergation-container {
+
+		// 左侧的描述跟数据 
+		.intergation-info-container {
+
+			.intergation-info-text { 
+				width: 100%;
+			}
 		}
 	}
 }
