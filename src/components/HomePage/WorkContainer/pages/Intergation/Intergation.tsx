@@ -15,7 +15,7 @@ export const Intergation = () => {
 					<div className="intergation-info-container">
 						<div className="intergation-info-text">
 							<div className="intergation-title">Improve the efficiency of the admin</div>
-							<div className="intergation-sub">We provide users with an automated way to interact with bulk slack account associations and bulk Jira Issue imports, greatly simplifying the interaction steps.</div>
+							<div className="intergation-sub">We provide users with an automated way to interact with bulk slack account associations and bulk Jira Issue imports, greatly simplifying the interaction step.</div>
 						</div>
 						<div className="intergation-number-mainContainer">
 							{/* 数据 */}
