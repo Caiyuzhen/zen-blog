@@ -22,8 +22,8 @@ export const ExpandPlayground = () => {
 					{/* 右边的图形+文字 */}
 					<div className="expandPlayground-main-rightContainer">
 						<div className="expandPlayground-right-baseinfo">
-							<div className="expandPlayground-right-baseinfo-title">Expand XXX XXX </div>
-							<p className="expandPlayground-right-baseinfo-des">description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock</p>
+							<div className="expandPlayground-right-baseinfo-title"> Expand block by Playground </div>
+							<p className="expandPlayground-right-baseinfo-des"> We define "block" as the basic authoring unit. A module is like a Lego block, where the user plays with it like a Lego block, and then simply drags and drops it to create an elaborate document, just like playing with Lego blocks. </p>
 						</div>
 						<div className="expandPlayground-right-Graphic">
 							<span className="expandPlayground-right-Graphic-leftText">Developers Make Block</span>
@@ -31,7 +31,7 @@ export const ExpandPlayground = () => {
 							{/* 箭头+文字 */}
 							<div className="tranArrAndText-all-container-01">
 								<div className="tranArrAndText-container-01">
-									<p>Shared Ecology</p>
+									<p> Developers Make Block </p>
 									<div className="trianArrowRight-01">
 										<span className="dotted-line"></span>
 										<span className="trianArrow-01"></span>
@@ -42,11 +42,11 @@ export const ExpandPlayground = () => {
 										<span className="trianArrow-02"></span>
 										<span className="dotted-line"></span>
 									</div>
-									<p>Provide revenue</p>
+									<p> User Use Block </p>
 								</div>
 							</div>
 
-							<span className="expandPlayground-right-Graphic-centerText">XXXXXX</span>
+							<span className="expandPlayground-right-Graphic-centerText"> Playground <br/> Center </span>
 							
 								{/* 箭头+文字 */}
 								<div className="tranArrAndText-all-container-01">
