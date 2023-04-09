@@ -17,8 +17,8 @@ export const Automation = () => {
 			<div className="automation-main-container">
 				<div className="automation-inside-content">
 					<div className="automation-topContainer">
-						<div className="automation-title">XXXXXXX</div>
-						<p className="automation-des">description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock</p>
+						<div className="automation-title">Close-knit of Context flow</div>
+						<p className="automation-des">As a Digital Hub for individuals or teams, Innos can act as a "connector". On the one hand, it can link itself to various mainstream third-party tools through integration capabilities. On the other hand, it can also automate the flow of integrated information through Automation capabilities. Innos itself becomes the middle layer of information, making information more seamless from IM to innos to PMTS tools.</p>
 					</div>
 					
 					<div className="automation-bottomContainer">

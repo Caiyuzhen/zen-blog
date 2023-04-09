@@ -18,36 +18,10 @@ export const CanvasBlock = () => {
 					<div className="canvasBlock-baseInfo-container">
 						{/* 文字 */}
 						<div className="canvasBlock-baseInfo">
-							<div className="canvasBlock-baseInfo-title">XXX Canvas</div>
-							<p className="canvasBlock-baseInfo-des">description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock description of DefinitionBlock</p>
+							<div className="canvasBlock-baseInfo-title">Docs Interchange to Canvas</div>
+							<p className="canvasBlock-baseInfo-des">The document is a top-down y-axis editing stream, while the whiteboard is a dual-position x- and y-axis editing stream that maximizes the user's creativity.</p>
 						</div>
 
-						{/* 流程图 */}
-						<div className="canvasBlock-graphic-container">
-							{/* 左圆 */}
-							<span className="circleLeft">XXXXXX</span>
-
-							{/* 箭头+文字 */}
-							<div className="tranArrAndText-all-container-01">
-									<div className="tranArrAndText-container-01">
-										<p>XXXXXXXXXXXX</p>
-										<div className="trianArrowRight-01">
-											<span className="dotted-line"></span>
-											<span className="trianArrow-01"></span>
-										</div>
-									</div>
-									<div className="tranArrAndText-container-02">
-										<div className="trianArrowRight-02">
-											<span className="trianArrow-02"></span>
-											<span className="dotted-line"></span>
-										</div>
-										<p>XXXXXXXXXXXX</p>
-									</div>
-								</div>
-
-							{/* 右圆 */}
-							<span className="circleRight">XXXXXX</span>
-						</div>
 					</div>
 
 					{/* 右边的 page + 协同头像*/}

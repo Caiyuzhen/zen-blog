@@ -22,10 +22,10 @@ import Intergation from '../pages/Intergation/Intergation'
 import AutoStep from '../pages/AutoStep/AutoStep'
 import KMGrowth from '../pages/KMGrowth/KMGrowth'
 import BlockReference from '../pages/BlockReference/BlockReference'
-import HashtagDM from '../pages/HashtagDM/HashtagDM'
+// import HashtagDM from '../pages/HashtagDM/HashtagDM'
 import KnowledgeGraphic from '../pages/KnowledgeGraphic/KnowledgeGraphic'
 import PublishAbility from '../pages/PublishAbility/PublishAbility'
-import Interactive from '../pages/Interactive/Interactive'
+// import Interactive from '../pages/Interactive/Interactive'
 import MutilPage from '../pages/MutilPage/MutilPage'
 import NestedLayout from '../pages/NestedLayout/NestedLayout'
 import PageLinkStyle from '../pages/PageLinkStyle/PageLinkStyle'
@@ -138,7 +138,7 @@ export const ProjectA = () => {
 				<BlockReference />
 
 				{/* Hashtag 页面 */}
-				<HashtagDM />
+				{/* <HashtagDM /> */}
 
 				{/* 图谱 */}
 				<KnowledgeGraphic />
@@ -147,7 +147,7 @@ export const ProjectA = () => {
 				<PublishAbility />
 
 				{/* 互动能力 */}
-				<Interactive />
+				{/* <Interactive /> */}
 
 				{/* 多页 */}
 				<MutilPage />
