@@ -1,98 +1,196 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
 
-@media screen and (max-width: @mediaWidth-Max) {
-	.publishAbility-main-container {
+.publishAbility-main-container {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 124px;
+	gap: 24px;
+	box-sizing: border-box;
+	flex-direction: column;
+	position: relative;
+	margin-bottom: 100px;
+
+	// 顶部信息
+	.publishAbility-topInfo-container {
 		width: 100%;
 		height: auto;
-		position: relative;
-		padding: 124px;
+		display: flex;
+		flex-direction: row;
+		align-items: space-between;
+		gap: 18px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		.publishAbility-topInfo-title {
+			flex: 3;
+			height: auto;
+			text-align: left;
+			font-family: 'GTEestiProText-Bold';
+			font-size: @text-TitleSize;
+			color: @text-color;
+			line-height: 1.5;
+		}
+		
+		.publishAbility-topInfo-des {
+			flex: 7;
+			margin: 0;
+			text-align: left;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.6;
+			color: @description-color;
+		}
+	}
+
+	// 底部信息
+	.publishAbility-bottomInfo-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		gap: 24px;
 		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
 
-		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
+		.publishAbility-bottomInfo-leftItem {
+			flex: 2;
 			height: auto;
 			display: flex;
-			flex-direction: row;
-			align-items: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				flex: 3;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
-
-		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			align-items: center;
 			gap: 24px;
 			box-sizing: border-box;
 
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
+			:nth-child(1),:nth-child(2)  {
+				font-size: 18px;
+				font-family: 'GTEestiProText-Regular';
+				color: rgba(255, 255, 255, 0.6);
+				white-space: nowrap;
+			}
+		}
+
+		.publishAbility-bottomInfo-centerItem {
+			width: 636px;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			border-radius: 800px;
+			border: 3px dashed @description-color;
+			padding: 18px;
+			gap: 24px;
+			position: relative;
+
+			.dashDotLeft {
+				position: absolute;
+				left: -90px;
+				top: 48%;
+			}
+
+			.dashDotRight {
+				position: absolute;
+				right: -90px;
+				top: 48%;
+			}
+
+			// 左圆
+			.publishAbility-bottomInfo-leftCircle {
+				width: 306px;
+				height: 306px;
+				aspect-ratio: 1/1;
+				border-radius: 50%;
+				background: #E9E8F5;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
+				justify-content: center;
+				z-index: 5;
 
-				:nth-child(1),:nth-child(2)  {
+				> p {
+					color: #170645;
+					font-family: 'GTEestiProText-Bold';
 					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
 				}
 			}
 
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
+			// hover 的渐变色
+			.shadowBgLeft {
+				width: 412px;
+				height: 412px;
+				border-radius: 50%;
+				position: absolute;
+				left: -36px;
+				top: -28px;
+				opacity: 0;
+				transition: all .3s ease-in-out !important;
+				transform-origin: 50% 50%;
+			}
+
+			// 右圆
+			.publishAbility-bottomInfo-rightCircle {
+				width: 306px;
+				height: 306px;
+				aspect-ratio: 1/1;
+				border-radius: 50%;
+				background: #170645;
 				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-				// border: 1px dashed transparent;
-				// background: linear-gradient(white,white) padding-box,
-				// repeating-linear-gradient(-45deg,#ccc 0, #ccc 0.25em,white 0,white 0.75em);
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				z-index: 5;
 
-				// transform:scale(4);
-				// background-image: linear-gradient(to right, black 0%, black 50%, transparent 50%);
-				// background-size: 8px 1px;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
+				> p {
+					color: @text-color;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 22px;
 				}
+			}
+
+			// hover 的渐变色
+			.shadowBgRight {
+				width: 412px;
+				height: 412px;
+				border-radius: 50%;
+				position: absolute;
+				right: -36px;
+				top: -28px;
+				opacity: 0;
+				transform-origin: 50% 50%;
+				transition: all .3s ease-in-out !important;
+			}
+		}
+
+		.publishAbility-bottomInfo-rightItem {
+			flex: 2;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+			box-sizing: border-box;
+
+			:nth-child(1),:nth-child(2)  {
+				font-size: 18px;
+				font-family: 'GTEestiProText-Regular';
+				color: @text-color;
+				color: rgba(255, 255, 255, 0.6);
+				white-space: nowrap;
+			}
+		}
+
+	}
+}
+
+
+
+@media screen and (max-width: 1380px) {
+	.publishAbility-main-container {
+
+		// 底部信息
+		.publishAbility-bottomInfo-container {  
+
+			.publishAbility-bottomInfo-centerItem {
+				width: 636px;  
 
 				.dashDotRight {
 					position: absolute;
@@ -102,359 +200,43 @@
 
 				// 左圆
 				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
+					width: 266px;
+					height: 266px;  
+				} 
 
 				// 右圆
 				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
+					width: 266px;
+					height: 266px;  
+				} 
 
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
+				.shadowBgLeft {
+					width: 382px;
+					height: 382px;
 				}
 
-				// hover 的渐变色
 				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
+					width: 382px;
+					height: 382px;
 				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+			} 
 		}
 	}
 }
 
 
 @media screen and (max-width: 1280px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -260px;
-
-		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				flex: 3;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
-
-		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-		}
-	}
-}
-
-
-@media screen and (max-width: 1080px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
+	.publishAbility-main-container { 
+		margin-bottom: -10px;
 		margin-top: -280px;
 
-		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				flex: 3;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
-
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
+		.publishAbility-bottomInfo-container { 
 			scale: 0.95;
-			transform: translateX(-50px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
+			transform: translateX(-50px); 
 
 			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
+				width: 636px;  
 
 				.dashDotRight {
 					position: absolute;
@@ -464,995 +246,144 @@
 
 				// 左圆
 				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
+					width: 226px;
+					height: 226px;  
 
 					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
+						font-size: 18px;
+					}	
+				} 
 
 				// 右圆
 				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
+					width: 226px;
+					height: 226px;  
 
 					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
+						font-size: 18px;
 					}
+				} 
+
+				.shadowBgLeft {
+					width: 332px;
+					height: 332px;
 				}
 
-				// hover 的渐变色
 				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
+					width: 332px;
+					height: 332px;
 				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+			} 
 		}
 	}
 }
 
 
-@media screen and (max-width: 980px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
+@media screen and (max-width: 1180px) {
+	.publishAbility-main-container { 
+
+		// 底部信息
+		.publishAbility-bottomInfo-container { 
+			scale: 0.85;
+			transform: translateX(-50px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+	.publishAbility-main-container { 
+		margin-bottom: -60px;
 		margin-top: -380px;
 
 		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
+		.publishAbility-topInfo-container { 
+			flex-direction: column;  
 		}
 
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
-			scale: 0.87;
-			transform: translateX(-70px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-		}
-	}
-}
-
-
-@media screen and (max-width: 880px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -400px;
-
-		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
-
-		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
+		.publishAbility-bottomInfo-container { 
 			scale: 0.75;
-			transform: translate(-120px,-38px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+			transform: translateX(-70px) translateX(-80px); 
 		}
 	}
 }
 
 
-@media screen and (max-width: 780px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -400px;
+@media screen and (max-width: 910px) {
+	.publishAbility-main-container { 
+		margin-bottom: -160px;
+		margin-top: -300px;
 
 		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
+		.publishAbility-topInfo-container { 
+			flex-direction: column;  
 		}
 
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
+		.publishAbility-bottomInfo-container { 
+			scale: 0.68;
+			transform: translate(-200px,-38px);  
+		}
+	}
+}
+
+
+@media screen and (max-width: 820px) {
+	.publishAbility-main-container { 
+
+		// 底部信息
+		.publishAbility-bottomInfo-container { 
 			scale: 0.6;
-			transform: translate(-180px,-78px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+			transform: translate(-230px,-78px);  
 		}
 	}
 }
 
 
-@media screen and (max-width: 680px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -400px;
-
-		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+@media screen and (max-width: 760px) {
+	.publishAbility-main-container { 
+		margin-bottom: -200px;
 
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
+		.publishAbility-bottomInfo-container { 
 			scale: 0.5;
-			transform: translate(-280px,-158px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+			transform: translate(-290px,-158px);  
 		}
 	}
 }
 
 
-@media screen and (max-width: 580px) {
-	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 124px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -380px;
-
-		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+@media screen and (max-width: 600px) {
+	.publishAbility-main-container { 
+		margin-bottom: 50px;
 
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
-			scale: 0.4;
-			transform: translate(-280px,-258px);
-
+		.publishAbility-bottomInfo-container { 
+			transform: scale(1.3) translate(-140px,-108px);  
+			
 			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
 				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
+					display: none;
 				}
 			}
 
 			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
 				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
+					display: none;
 				}
-
+	
 				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
+					display: none;
 				}
 			}
 
 			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
+	
 				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
+					display: none;
 				}
 			}
-
 		}
 	}
 }
@@ -1460,181 +391,17 @@
 
 @media screen and (max-width: 520px) {
 	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
 		padding: 54px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -510px;
+		margin-bottom: 240px;
 
 		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
+		.publishAbility-topInfo-container { 
+			flex-direction: column;  
 		}
 
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
-			scale: 0.4;
-			transform: translate(-280px,-258px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+		.publishAbility-bottomInfo-container { 
+			transform: scale(1.5) translate(-100px,-68px);  
 		}
 	}
 }
@@ -1642,185 +409,17 @@
 
 @media screen and (max-width: @mediaWidth-Iphone) {
 	.publishAbility-main-container {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 54px;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-bottom: 100px;
-		margin-top: -510px;
+		margin-bottom: 200px;
 
 		// 顶部信息
-		.publishAbility-topInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 24px;
-			box-sizing: border-box;
-
-			.publishAbility-topInfo-title {
-				// flex: 35%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-				line-height: 1.5;
-			}
-			
-			.publishAbility-topInfo-des {
-				// flex: 7;
-				margin: 0;
-				text-align: left;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
+		.publishAbility-topInfo-container { 
+			flex-direction: column;  
 		}
 
 		// 底部信息
-		.publishAbility-bottomInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 24px;
-			box-sizing: border-box;
-			scale: 0.4;
-			transform: translate(-206px,-258px);
-
-			.publishAbility-bottomInfo-leftItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				display: none;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
-			.publishAbility-bottomInfo-centerItem {
-				width: 636px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				border-radius: 800px;
-				border: 3px dashed @description-color;
-				padding: 18px;
-				gap: 24px;
-				position: relative;
-
-				.dashDotLeft {
-					position: absolute;
-					left: -90px;
-					top: 48%;
-					display: none;
-				}
-
-				.dashDotRight {
-					position: absolute;
-					right: -90px;
-					top: 48%;
-					display: none;
-				}
-
-				// 左圆
-				.publishAbility-bottomInfo-leftCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #E9E8F5;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: #170645;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgLeft {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					left: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-
-				// 右圆
-				.publishAbility-bottomInfo-rightCircle {
-					width: 306px;
-					height: auto;
-					aspect-ratio: 1/1;
-					border-radius: 50%;
-					background: #170645;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					z-index: 5;
-
-					> p {
-						color: @text-color;
-						font-family: 'GTEestiProText-Bold';
-						font-size: 22px;
-					}
-				}
-
-				// hover 的渐变色
-				.shadowBgRight {
-					width: 412px;
-					height: 412px;
-					border-radius: 50%;
-					position: absolute;
-					right: -36px;
-					top: -28px;
-					opacity: 0;
-					transition: all .3s ease-in-out !important;
-				}
-			}
-
-			.publishAbility-bottomInfo-rightItem {
-				flex: 2;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				display: none;
-
-				:nth-child(1),:nth-child(2)  {
-					font-size: 22px;
-					font-family: 'GTEestiProText-Regular';
-					color: @text-color;
-				}
-			}
-
+		.publishAbility-bottomInfo-container { 
+			transform: scale(1.1) translate(-150px,-158px);  
 		}
+
 	}
 }

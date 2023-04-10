@@ -35,14 +35,16 @@ export const PublishAbility = () => {
 			<div className="publishAbility-main-container">
 				{/* 顶部信息 */}
 				<div className="publishAbility-topInfo-container">
-					<div className="publishAbility-topInfo-title">Web-based of Build & Publish Ability</div>
-					<p className="publishAbility-topInfo-des">XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX</p>
+					<div className="publishAbility-topInfo-title">Web-based of Build & Publish</div>
+					<p className="publishAbility-topInfo-des">
+						Based on the design perspective to give the product more differentiated value, we creatively proposed the "web-based" design strategy, the core goal is to make the document expression ability more similar to the web page, everyone can easily get started, without the complex skills of making web pages, can achieve the web-level production and browsing experience.
+					</p>
 				</div>
 				{/* 底部信息 */}
 				<div className="publishAbility-bottomInfo-container">
 					<div className="publishAbility-bottomInfo-leftItem">
-						<p>infoinfo</p>
-						<p>infoinfo</p>
+						<p>Multi-page View mode</p>
+						<p>Polymorphic Card Display Form</p>
 					</div>
 					{/* 中间两个圆 */}
 					<div className="publishAbility-bottomInfo-centerItem">
@@ -57,7 +59,7 @@ export const PublishAbility = () => {
 							 onMouseLeave={()=>{setIsHover({left: false, right: false})}}
 						>
 							<img src={webBrowsing} alt="" />
-							<p>XXX XXX <br/>experience</p>
+							<p> Web-level browsing <br/> experience </p>
 						</div>
 						<img src={shadowBg} alt="" 
 							 className="shadowBgLeft" 
@@ -75,7 +77,7 @@ export const PublishAbility = () => {
 							 onMouseLeave={()=>{setIsHover({left: false, right: false})}}
 						>
 							<img src={webBuilding} alt="" />
-							<p>XXX XXX<br/>cabilities</p>
+							<p> Web-level site building  <br/> capability </p>
 						</div>
 						<img src={shadowBg} alt="" 
 							 className="shadowBgRight" 
@@ -86,8 +88,8 @@ export const PublishAbility = () => {
 						/>
 					</div>
 					<div className="publishAbility-bottomInfo-rightItem">
-						<p>infoinfo</p>
-						<p>infoinfo</p>
+						<p>Column nesting layout capability</p>
+						<p>Configurable of page structure</p>
 					</div>
 				</div>
 
