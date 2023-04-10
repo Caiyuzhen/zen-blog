@@ -7,7 +7,7 @@ export const BaseInfoProjectC = () => {
 
 	return (
 		<div className="migu-main-container">
-			<p className="migu-main-title">MIGU Video</p>
+			<p className="migu-main-title">MIGU Music</p>
 			<div className="migu-bottom-container">
 				<div className="migu-svg-container">
 					<svg width="109" height="69" viewBox="0 0 109 69" fill="none" xmlns="http://www.w3.org/2000/svg">

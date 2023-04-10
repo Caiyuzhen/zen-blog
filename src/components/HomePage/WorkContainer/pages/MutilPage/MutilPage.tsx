@@ -16,8 +16,10 @@ export const MutilPage = () => {
 		<>
 			<div className="mutilPage-main-container">
 				<div className="mutilPage-main-topInfo">
-					<div className="mutilPage-main-topInfo-title">XXX XXX mode</div>
-					<p className="mutilPage-main-topInfo-des">XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX</p>
+					<div className="mutilPage-main-topInfo-title">Multi-page View mode</div>
+					<p className="mutilPage-main-topInfo-des">
+						With the multi-page capability, users can open different types of pages at the same time for multitasking. More advanced users are able to use our different product capabilities in combination, such as Graph combined with page content, Discussion combined with topic details, etc., combined with All page view, etc. Multi-page has also become one of the most praised designs of Innos by users.
+					</p>
 				</div>
 				<div className="mutilPage-main-bottomPage">
 					<img src={slidesOne} alt="" className="slidesOne"/>

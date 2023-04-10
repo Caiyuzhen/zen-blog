@@ -80,7 +80,7 @@ export const ProjectA = () => {
 					{/* 导航 */}
 					<div className="top-nav">
 						<img src={backIcon} alt="" onClick={ ()=>goBack() }/>
-						<p>Project A Name</p>
+						<p>Innos Note</p>
 					</div>
 					<img src={topImg} alt="" />
 				</div>

@@ -33,7 +33,7 @@ export const ProjectB = () => {
 					{/* 导航 */}
 					<div className="top-nav-pjB">
 						<img src={backIcon} alt="" onClick={ ()=>goBack() }/>
-						<p>Project B Name</p>
+						<p>Design Innovation</p>
 					</div>
 					<img src={topImg} alt="" />
 				</div>

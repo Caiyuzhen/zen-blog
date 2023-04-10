@@ -68,7 +68,7 @@ export const BasicInfo = () => {
 	return (
 		<>
 			<div className="basic-info">
-				<p className="main-bigTitle">Project A</p>
+				<p className="main-bigTitle">Innos Note</p>
 
 				<div className="basic-container">
 					<div className="basic-info-topContainer"

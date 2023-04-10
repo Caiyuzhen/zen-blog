@@ -10,7 +10,7 @@ export const BasicInfoPrpjectB = () => {
 	return (
 		<>
 			<div className="basic-projectB-info">
-				<p className="main-projectB-bigTitle">UX Innovation</p>
+				<p className="main-projectB-bigTitle">Design Innovation</p>
 
 				<div className="basic-projectB-container">
 					<div className="basic-projectB-left">
