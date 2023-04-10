@@ -13,8 +13,8 @@ export const BlockReference = () => {
 				{/* 第一组 pages */}
 				<div className="blockReference-topContainer">
 					<div className="blockReference-topContainer-leftInfoContainer">
-						<div className="blockReference-topLeftInfo-title">XXXX XXXXXXXX</div>
-						<p className="blockReference-topLeftInfo-des">XXX XX XXX XX XXX XXX XXX XXXXX XXX XXXXX XXXXX XX XXXXXX XX XXXXXX XXXXX XXXXXX</p>
+						<div className="blockReference-topLeftInfo-title">Block Referenced</div>
+						<p className="blockReference-topLeftInfo-des">Analogous to designing components, the repeated creation of wheels can be reduced by the invocation of components. The same is true for real-time references, where past content can be referenced at any time during the creation process, and updates on both sides are synchronized.</p>
 					</div>
 					<div className="blockReference-topContainer-rightPageContainer">
 						<img src={ReferpageOne} alt="" className="ReferpageOne"/>
@@ -28,8 +28,8 @@ export const BlockReference = () => {
 						<img src={ReferpageThree} alt="" className="ReferpageThree"/>
 					</div>
 					<div className="blockReference-topContainer-bottomRightInfo">
-						<div className="blockReference-bottomRightInfo-title">XXXX XXXXX</div>
-						<p className="blockReference-bottomRightInfo-des">XXX XX XXX XX XXX XXX XXX XXXXX XXX XXXXX XXXXX XX XXXXXX XX XXXXXX XXXXX XXXXXX</p>
+						<div className="blockReference-bottomRightInfo-title">Bidirectional link</div>
+						<p className="blockReference-bottomRightInfo-des">The content displayed by the two-way links is also part of the current page content, which helps the user to review what pages are linked to the current page and consolidate the creator's knowledge structure, and also helps the creator to discover more content through Unlinked references to pages that are not linked to.</p>
 						<div className="blockReference-bottomRightInfo-graphic">
 							<div className="blockReference-bottomRightInfo-topGroup">
 								<span className="blockReference-bottomRightInfo-circle">Recommended links</span>

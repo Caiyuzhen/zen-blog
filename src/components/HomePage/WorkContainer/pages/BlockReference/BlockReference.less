@@ -1,931 +1,381 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
 
-@media screen and (max-width: @mediaWidth-Max) {	
-	.blockReference-mainContainer {
+.blockReference-mainContainer {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 52px;
+	box-sizing: border-box;
+	flex-direction: column;
+	position: relative;
+
+	// 顶部信息
+	.blockReference-topContainer{
 		width: 100%;
 		height: auto;
-		position: relative;
-		padding: 52px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 48px;
+		margin-bottom: 48px;
+		padding: 48px;
 		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
+		z-index: 5;
 
-		// 顶部信息
-		.blockReference-topContainer{
+		.blockReference-topContainer-leftInfoContainer {
 			width: 100%;
 			height: auto;
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
+			gap: 24px;
 			box-sizing: border-box;
-			z-index: 5;
 
-			.blockReference-topContainer-leftInfoContainer {
+			.blockReference-topLeftInfo-title {
+				line-height: 1.35;
 				width: 100%;
 				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
 			}
-
-			.blockReference-topContainer-rightPageContainer {
+			.blockReference-topLeftInfo-des {
+				line-height: 1.5;
 				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				margin-left: 20px;
-				gap: 36px;
-
-				.ReferpageOne { //页面
-					border-radius: 12px;
-					width: 300px;
-					margin-bottom: 48px;
-					z-index: 5;
-				}
-
-				.ReferpageTwo { //页面
-					border-radius: 12px;
-					width: 300px;
-					margin-top: 48px;
-					z-index: 5;
-				}
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
 			}
 		}
 
-		// 底部信息
-		.blockReference-bottomContainer {
+		.blockReference-topContainer-rightPageContainer {
 			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+			margin-left: 20px;
+			gap: 36px;
 
-
-			.blockReference-bottomContainer-leftPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
-
-				.ReferpageThree {//页面
-					width: 666px;
-					z-index: 5;
-				}
+			.ReferpageOne { //页面
+				border-radius: 12px;
+				width: 300px;
+				margin-bottom: 48px;
+				z-index: 5;
 			}
 
-			.blockReference-topContainer-bottomRightInfo {
+			.ReferpageTwo { //页面
+				border-radius: 12px;
+				width: 300px;
+				margin-top: 48px;
+				z-index: 5;
+			}
+		}
+	}
+
+	// 底部信息
+	.blockReference-bottomContainer {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 48px;
+		margin-bottom: 48px;
+		padding: 48px;
+		box-sizing: border-box;
+		z-index: 5;
+
+
+		.blockReference-bottomContainer-leftPageContainer {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+
+			.ReferpageThree {//页面
+				width: 666px;
+				z-index: 5;
+			}
+		}
+
+		.blockReference-topContainer-bottomRightInfo {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 24px;
+			box-sizing: border-box;
+			
+			.blockReference-bottomRightInfo-title {
 				width: 100%;
 				height: auto;
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
+			}
+	
+			.blockReference-bottomRightInfo-des {
+				width: 100%;
+				margin: 0;
+				text-align: left;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.6;
+				color: @description-color;
+			}
+
+			.blockReference-bottomRightInfo-graphic {
 				display: flex;
+				width: 100%;
+				height: auto;
 				flex-direction: column;
 				align-items: center;
 				gap: 24px;
 				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
 
-				.blockReference-bottomRightInfo-graphic {
+				// 底部图形描述 1
+				.blockReference-bottomRightInfo-topGroup {
 					display: flex;
 					width: 100%;
 					height: auto;
-					flex-direction: column;
+					flex-direction: row;
 					align-items: center;
 					gap: 24px;
 					box-sizing: border-box;
+					font-size: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: white;
+					white-space: nowrap;
 
-					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
+					.blockReference-bottomRightInfo-circle {
+						width: 192px;
+						height: 60px;
+						border-radius: 200px;
+						border: 2px solid @text-color;
 						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
 						align-items: center;
-						gap: 24px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-
-						.blockReference-bottomRightInfo-circle {
-							width: 192px;
-							height: 60px;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+						justify-content: center;
+						white-space: nowrap;
+						color: @text-color;
 					}
 
-					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
+					.blockReference-spanA {
+						width: 18px;
+						height: 18px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
 						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
 						align-items: center;
-						gap: 24px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
+						justify-content: center;
+						color: @text-color;
+					}
 
-						.blockReference-bottomRightInfo-circle {
-							width: 192px;
-							height: 60px;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+					.blockReference-spanB {
+						width: 12px;
+						height: 12px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
 
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+					.blockReference-spanC {
+						width: 8px;
+						height: 8px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+				}
 
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+				// 底部图形描述 2
+				.blockReference-bottomRightInfo-bottomGroup {
+					display: flex;
+					width: 100%;
+					height: auto;
+					flex-direction: row;
+					align-items: center;
+					gap: 24px;
+					box-sizing: border-box;
+					font-size: 14px;
+					font-family: 'GTEestiProText-Regular';
+					color: white;
+					white-space: nowrap;
 
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+					.blockReference-bottomRightInfo-circle {
+						width: 192px;
+						height: 60px;
+						border-radius: 200px;
+						border: 2px solid @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						white-space: nowrap;
+						color: @text-color;
+					}
+
+					.blockReference-spanA {
+						width: 18px;
+						height: 18px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanB {
+						width: 12px;
+						height: 12px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
+					}
+
+					.blockReference-spanC {
+						width: 8px;
+						height: 8px;
+						aspect-ratio: 1/1;
+						border-radius: 200px;
+						background-color: @text-color;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: @text-color;
 					}
 				}
 			}
 		}
+	}
 
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+	// 底部的色块
+	.tiBg {
+		width: 100%;
+		top: 828px;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		position: absolute;  
+		z-index: 0;
+		padding: 44px;
+		box-sizing: border-box;
 	}
 }
 
 
+
 @media screen and (max-width: 1440px) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-
-		// 顶部信息
-		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
-
-			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
-
-			.blockReference-topContainer-rightPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 36px;
-
-				.ReferpageOne { //页面
-					border-radius: 12px;
-					width: 300px;
-					margin-bottom: 48px;
-					z-index: 5;
-				}
-
-				.ReferpageTwo { //页面
-					border-radius: 12px;
-					width: 300px;
-					margin-top: 48px;
-					z-index: 5;
-				}
-			}
-		}
 
 		// 底部信息
-		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+		.blockReference-bottomContainer { 
 
+			.blockReference-topContainer-bottomRightInfo {  
 
-			.blockReference-bottomContainer-leftPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
-
-				.ReferpageThree {//页面
-					width: 666px;
-					z-index: 5;
-				}
-			}
-
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
+				.blockReference-bottomRightInfo-graphic { 
 					scale: 0.8;
 					transform: translate(-62px);
-
-					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
-
-					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
 				}
 			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }
 
 
 @media screen and (max-width: 1320px) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
 
 		// 顶部信息
-		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
-
-			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
+		.blockReference-topContainer{  
 
 			.blockReference-topContainer-rightPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 28px;
 
 				.ReferpageOne { //页面
-					border-radius: 12px;
 					width: 260px;
-					margin-bottom: 48px;
-					z-index: 5;
 				}
 
 				.ReferpageTwo { //页面
-					border-radius: 12px;
 					width: 260px;
-					margin-top: 48px;
-					z-index: 5;
 				}
 			}
 		}
 
 		// 底部信息
-		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
-
+		.blockReference-bottomContainer { 
 
 			.blockReference-bottomContainer-leftPageContainer {
-				width: 1160px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
+				width: 1160px; 
 
 				.ReferpageThree {//页面
 					width: 520px;
-					z-index: 5;
 				}
 			}
 
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
+			.blockReference-topContainer-bottomRightInfo {  
 
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
+				.blockReference-bottomRightInfo-graphic { 
 					scale: 0.75;
 					transform: translate(-82px);
 
 					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						// display: none;
+					.blockReference-bottomRightInfo-topGroup { 
 
 						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+							width: 208px; 
+							height: 48px; 
+						} 
 					}
 
 					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						// display: none;
+					.blockReference-bottomRightInfo-bottomGroup { 
 
 						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+							width: 192px; 
+							height: 48px; 
+						} 
 					}
 				}
 			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }
 
 
 @media screen and (max-width: 1220px) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
 
 		// 顶部信息
-		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+		.blockReference-topContainer{  
 
-			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
-
-			.blockReference-topContainer-rightPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
+			.blockReference-topContainer-rightPageContainer { 
 				gap: 16px;
 
 				.ReferpageOne { //页面
 					border-radius: 12px;
 					width: 250px;
 					margin-bottom: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 
@@ -933,31 +383,16 @@
 					border-radius: 12px;
 					width: 250px;
 					margin-top: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 			}
 		}
 
 		// 底部信息
-		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+		.blockReference-bottomContainer { 
 
 			.blockReference-bottomContainer-leftPageContainer {
-				width: 1160px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
+				width: 1160px; 
 
 				.ReferpageThree {//页面
 					width: 480px;
@@ -965,293 +400,58 @@
 				}
 			}
 
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
+			.blockReference-topContainer-bottomRightInfo {  
 
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
+				.blockReference-bottomRightInfo-graphic { 
 					scale: 0.75;
 					transform: translate(-82px);
 
 					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						// display: none;
+					.blockReference-bottomRightInfo-topGroup { 
 
 						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+							width: 192px; 
+						} 
 					}
 
 					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						// display: none;
+					.blockReference-bottomRightInfo-bottomGroup { 
 
 						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
+							width: 192px; 
+						} 
 					}
 				}
 			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }
 
 
 @media screen and (max-width: 1110px) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
 
 		// 顶部信息
-		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+		.blockReference-topContainer{ 
 
-			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
-
-			.blockReference-topContainer-rightPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
+			.blockReference-topContainer-rightPageContainer { 
 				gap: 16px;
 
-				.ReferpageOne { //页面
-					border-radius: 12px;
-					width: 250px;
-					margin-bottom: 48px;
-					z-index: 5;
+				.ReferpageOne { //页面 
 					scale: 0.95;
 				}
 
 				.ReferpageTwo { //页面
-					border-radius: 12px;
-					width: 250px;
-					margin-top: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 			}
 		}
 
 		// 底部信息
-		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 48px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+		.blockReference-bottomContainer { 
 
 			.blockReference-bottomContainer-leftPageContainer {
-				width: 1160px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
+				width: 1160px; 
 
 				.ReferpageThree {//页面
 					width: 480px;
@@ -1259,272 +459,53 @@
 				}
 			}
 
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
+			.blockReference-topContainer-bottomRightInfo { 
+
+				.blockReference-bottomRightInfo-des {
 					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
 				}
 
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
+				.blockReference-bottomRightInfo-graphic { 
 					scale: 0.75;
-					transform: translate(-82px);
+					transform: translate(-82px); 
 
 					// 底部图形描述 1
 					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
 						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
 					}
 
 					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
+					.blockReference-bottomRightInfo-bottomGroup { 
 						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
 					}
 				}
 			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }
 
 
 @media screen and (max-width: 1000px) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
 
 		// 顶部信息
 		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
 			flex-direction: column;
-			align-items: center;
-			gap: 24px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+			gap: 8px;
 
-			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
-
-			.blockReference-topContainer-rightPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
+			.blockReference-topContainer-rightPageContainer { 
 				gap: 16px;
 				transform: translateX(-16px);
 
 				.ReferpageOne { //页面
 					border-radius: 12px;
 					width: 50%;
-					margin-bottom: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 
 				.ReferpageTwo { //页面
 					border-radius: 12px;
 					width: 50%;
-					margin-top: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 			}
@@ -1532,295 +513,49 @@
 
 		// 底部信息
 		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
 			flex-direction: column-reverse;
-			align-items: center;
-			gap: 24px;
-			margin-bottom: 48px;
-			padding: 48px;
-			box-sizing: border-box;
-			z-index: 5;
+			gap: 8px;
 
 			.blockReference-bottomContainer-leftPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
+				width: 100%; 
 				// transform: translate(82px);
 
 				.ReferpageThree {//页面
 					width: 100%;
-					z-index: 5;
 				}
 			}
-
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
-
-					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
-
-					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
-				}
-			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }
 
 
 @media screen and (max-width: 520px) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		// padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
+		margin-top: -100px;
 
 		// 顶部信息
 		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
 			flex-direction: column;
-			align-items: center;
 			gap: 24px;
-			// margin-bottom: 48px;
 			padding: 0px;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-
 				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
+					font-size: 24px;
 				}
 			}
 
-			.blockReference-topContainer-rightPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
+			.blockReference-topContainer-rightPageContainer { 
 				gap: 16px;
 				transform: translateX(-16px);
 
 				.ReferpageOne { //页面
 					border-radius: 7px;
-					width: 50%;
-					margin-bottom: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 
 				.ReferpageTwo { //页面
 					border-radius: 7px;
-					width: 50%;
-					margin-top: 48px;
-					z-index: 5;
 					scale: 0.95;
 				}
 			}
@@ -1828,23 +563,11 @@
 
 		// 底部信息
 		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
 			flex-direction: column-reverse;
-			align-items: center;
-			gap: 24px;
-			// margin-bottom: 48px;
 			padding: 0px;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.blockReference-bottomContainer-leftPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
+				width: 100%; 
 				// transform: translate(82px);
 
 				.ReferpageThree {//页面
@@ -1853,271 +576,35 @@
 				}
 			}
 
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
+			.blockReference-topContainer-bottomRightInfo { 	
 				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
-
-					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
-
-					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
+					font-size: 24px;
 				}
 			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }
 
 
 @media screen and (max-width: @mediaWidth-Iphone) {	
 	.blockReference-mainContainer {
-		width: 100%;
-		height: auto;
-		position: relative;
-		// padding: 52px;
-		box-sizing: border-box;
-		flex-direction: column;
-		position: relative;
-		margin-top: -440px;
+		margin-top: -460px;
 
 		// 顶部信息
 		.blockReference-topContainer{
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 24px;
-			// margin-bottom: 48px;
-			padding: 0px;
-			box-sizing: border-box;
-			z-index: 5;
-
-			.blockReference-topContainer-leftInfoContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-
-
-				.blockReference-topLeftInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-				.blockReference-topLeftInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.blockReference-topContainer-rightPageContainer {
 				width: 268px;
-				height: auto;
-				display: flex;
-				flex-direction: row;
 				gap: 8px;
 				transform: translateX(-12px);
 
 				.ReferpageOne { //页面
-					border-radius:4px;
-					width: 50%;
-					margin-bottom: 48px;
-					z-index: 5;
+					border-radius: 5px;
 					scale: 0.95;
 				}
 
 				.ReferpageTwo { //页面
-					border-radius: 4px;
-					width: 50%;
-					margin-top: 48px;
-					z-index: 5;
+					border-radius: 5px;
 					scale: 0.95;
 				}
 			}
@@ -2125,24 +612,9 @@
 
 		// 底部信息
 		.blockReference-bottomContainer {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column-reverse;
-			align-items: center;
-			gap: 24px;
-			// margin-bottom: 48px;
-			padding: 0px;
-			box-sizing: border-box;
-			z-index: 5;
 
 			.blockReference-bottomContainer-leftPageContainer {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: row;
-				gap: 48px;
-				// transform: translate(82px);
+				width: 100%; 
 
 				.ReferpageThree {//页面
 					width: 260px;
@@ -2150,191 +622,6 @@
 				}
 			}
 
-			.blockReference-topContainer-bottomRightInfo {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 24px;
-				box-sizing: border-box;
-				
-				.blockReference-bottomRightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-					line-height: 1.4;
-				}
-		
-				.blockReference-bottomRightInfo-des{
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-
-				.blockReference-bottomRightInfo-graphic {
-					display: flex;
-					width: 100%;
-					height: auto;
-					flex-direction: column;
-					align-items: center;
-					gap: 20px;
-					box-sizing: border-box;
-
-					// 底部图形描述 1
-					.blockReference-bottomRightInfo-topGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
-
-					// 底部图形描述 2
-					.blockReference-bottomRightInfo-bottomGroup {
-						display: flex;
-						width: 100%;
-						height: auto;
-						flex-direction: row;
-						align-items: center;
-						gap: 16px;
-						box-sizing: border-box;
-						font-size: 14px;
-						font-family: 'GTEestiProText-Regular';
-						color: @description-color;
-						white-space: nowrap;
-						display: none;
-
-						.blockReference-bottomRightInfo-circle { //胶囊
-							width: 192px;
-							height: 48px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							border: 1px solid @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-							white-space: nowrap;
-							padding: 0 8px;
-						}
-
-						.blockReference-spanA {
-							width: 18px;
-							height: 18px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanB {
-							width: 12px;
-							height: 12px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-
-						.blockReference-spanC {
-							width: 8px;
-							height: 8px;
-							aspect-ratio: 1/1;
-							border-radius: 200px;
-							background-color: @text-color;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							color: @text-color;
-						}
-					}
-				}
-			}
-		}
-
-		// 底部的色块
-		.tiBg {
-			width: 100%;
-			top: 828px;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			position: absolute;  
-			z-index: 0;
-			padding: 44px;
-			box-sizing: border-box;
-		}
+		} 
 	}
 }

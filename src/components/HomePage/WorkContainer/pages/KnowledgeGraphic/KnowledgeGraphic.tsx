@@ -12,11 +12,10 @@ export const KnowledgeGraphic = () => {
 				{/* 顶部信息 */}
 				<div className="knowledgeGraphic-main-container-topInfo">
 					<div className="knowledgeGraphic-topInfo-title">
-						Title information
+					Knowledge graph View
 					</div>
 					<div className="knowledgeGraphic-topInfo-des">
-						We provide users with an automated way to interact with bulk slack account associations and bulk Jira Issue imports, greatly simplifying the interaction steps.
-						We provide users with an automated way to interact with bulk slack account associations and bulk Jira Issue imports, greatly simplifying the interaction steps.
+						The core concept of Innos' knowledge management is connection. After users "grow" their knowledge based on real-time references, tags, two-way links, etc., the final precipitation is a personal or team knowledge map. Therefore, we provide a mapping browsing mode, so that users can freely explore knowledge connections, or discover some important knowledge nodes and review some important contents.
 					</div>
 				</div>
 
