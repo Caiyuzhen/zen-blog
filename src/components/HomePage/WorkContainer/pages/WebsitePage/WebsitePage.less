@@ -1,28 +1,4 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
-@font-face {
-	font-family: 'RammettoOne';
-	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Bold';
-	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Book';
-	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Medium';
-	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Regular';
-	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
-}
 
 // 引入谷歌字体
 @font-face {
@@ -30,159 +6,156 @@
 	src: url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap');
 }
 
+.webSitePage-main-container {
+	width: 100%;
+	height: auto;
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	padding: 124px 124px 124px 0;
+	margin-bottom: 48px;
+	box-sizing: border-box;
+	position: relative;
 
-@media screen and (max-width: @mediaWidth-Max) {
-	.webSitePage-main-container {
+	// 左侧页面
+	.webSitePage-leftPage {
+		width: 45%;
+	}
+
+	// 右侧信息
+	.webSitePage-rightInfo-Container {
 		width: 100%;
 		height: auto;
-		flex-direction: row;
+		flex-direction: column;
 		display: flex;
-		align-items: center;
 		gap: 48px;
-		padding: 124px 124px 124px 0;
 		margin-bottom: 48px;
 		box-sizing: border-box;
-		position: relative;
 
-		// 左侧页面
-		.webSitePage-leftPage {
-			width: 45%;
-		}
-
-		// 右侧信息
-		.webSitePage-rightInfo-Container {
+		.webSitePage-rightInfo-top {
 			width: 100%;
 			height: auto;
 			flex-direction: column;
 			display: flex;
-			gap: 48px;
-			margin-bottom: 48px;
+			gap: 18px;
 			box-sizing: border-box;
 
-			.webSitePage-rightInfo-top {
-				width: 100%;
+			.webSitePage-rightInfo-title {
 				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					margin: 0;
-					text-align: left;
-					width: 100%;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
+				text-align: left;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize;
+				color: @text-color;
 			}
 
-			.webSitePage-rightInfo-bottom {
+			.webSitePage-rightInfo-des {
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				line-height: 1.5;
+				color: @description-color;
+			}
+		}
+
+		.webSitePage-rightInfo-bottom {
+			width: 100%;
+			height: auto;
+			flex-direction: row;
+			display: flex;
+			gap: 48px;
+			box-sizing: border-box;
+			justify-content: space-between;
+
+			.webSitePage-register-container {
 				width: 100%;
 				height: auto;
 				flex-direction: row;
 				display: flex;
-				gap: 48px;
+				align-items: center;
+				gap: 16px;
 				box-sizing: border-box;
-				justify-content: space-between;
 
-				.webSitePage-register-container {
-					width: 100%;
+				.register-text {
+					width: 50%;
 					height: auto;
-					flex-direction: row;
+					flex-direction: column;
 					display: flex;
-					align-items: center;
-					gap: 16px;
 					box-sizing: border-box;
 
-					.register-text {
-						width: 50%;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 40px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
-						}
+					.register-numTitle {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						font-size: 32px;
+						line-height: 1.6;
+						color: @text-color;
+						white-space: nowrap;// 文字不折行
 					}
 
-					.arrUp {
-						width: 58px;
+					.register-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+						white-space: nowrap;// 文字不折行
 					}
 				}
 
-				.webSitePage-upVoteUser-container {
-					width: 100%;
+				.arrUp {
+					width: 58px;
+				}
+			}
+
+			.webSitePage-upVoteUser-container {
+				width: 100%;
+				height: auto;
+				flex-direction: row;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-sizing: border-box;
+
+				.upVoteUser-text {
+					width: 50%;
 					height: auto;
-					flex-direction: row;
+					flex-direction: column;
 					display: flex;
-					justify-content: center;
-					align-items: center;
 					box-sizing: border-box;
 
-					.upVoteUser-text {
-						width: 50%;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 40px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
-						}
+					.upVote-numTitle {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'Readex-Pro-medium';
+						font-weight: 700;
+						font-size: 32px;
+						line-height: 1.6;
+						color: @text-color;
+						white-space: nowrap;// 文字不折行
 					}
 
-					.arrUp {
-						width: 58px;
+					.upVote-des {
+						margin: 0;
+						text-align: left;
+						width: 100%;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						line-height: 1.6;
+						color: @description-color;
+						white-space: nowrap;// 文字不折行
 					}
+				}
+
+				.arrUp {
+					width: 58px;
 				}
 			}
 		}
@@ -190,160 +163,12 @@
 }
 
 
+
 @media screen and (max-width: 1440px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: row;
-		display: flex;
-		align-items: center;
-		gap: 48px;
-		padding: 124px 124px 124px 0;
-		margin-bottom: 48px;
-		box-sizing: border-box;
-		position: relative;
-
 		// 左侧页面
 		.webSitePage-leftPage {
 			width: 560px;
-		}
-
-		// 右侧信息
-		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			gap: 48px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					margin: 0;
-					text-align: left;
-					width: 100%;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
-
-			.webSitePage-rightInfo-bottom {
-				width: 100%;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-				justify-content: space-between;
-
-				.webSitePage-register-container {
-					width: 100%;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
-
-					.register-text {
-						width: 50%;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 40px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
-						}
-					}
-
-					.arrUp {
-						width: 58px;
-					}
-				}
-
-				.webSitePage-upVoteUser-container {
-					width: 100%;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
-
-					.upVoteUser-text {
-						width: 50%;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 40px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
-						}
-					}
-
-					.arrUp {
-						width: 58px;
-					}
-				}
-			}
 		}
 	}
 }
@@ -351,159 +176,11 @@
 
 @media screen and (max-width: 1380px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: row;
-		display: flex;
-		align-items: center;
-		gap: 48px;
-		padding: 124px 124px 124px 0;
-		margin-bottom: 48px;
-		box-sizing: border-box;
-		position: relative;
+		margin-bottom: -20px;
 
 		// 左侧页面
 		.webSitePage-leftPage {
 			width: 45%;
-		}
-
-		// 右侧信息
-		.webSitePage-rightInfo-Container {
-			width: 50%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			gap: 48px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
-
-			.webSitePage-rightInfo-bottom {
-				width: 100%;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-				justify-content: space-between;
-
-				.webSitePage-register-container {
-					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
-
-					.register-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 40px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
-						}
-					}
-
-					.arrUp {
-						width: 58px;
-					}
-				}
-
-				.webSitePage-upVoteUser-container {
-					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
-
-					.upVoteUser-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 40px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: @text-DescriptionSize;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
-						}
-					}
-
-					.arrUp {
-						width: 58px;
-					}
-				}
-			}
 		}
 	}
 }
@@ -511,108 +188,28 @@
 
 @media screen and (max-width: 1180px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: row;
-		display: flex;
-		align-items: center;
-		gap: 48px;
-		padding: 124px 124px 124px 0;
-		margin-bottom: 48px;
-		margin-top: -424px;
-		box-sizing: border-box;
-		position: relative;
+		margin-top: -264px;
 
 		// 左侧页面
 		.webSitePage-leftPage {
-			// width: 45%;
 			width: 440px;
 		}
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
 			width: 50%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			gap: 48px;
-			margin-bottom: 48px;
 			box-sizing: border-box;
 
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
-				width: 494px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-				justify-content: space-between;
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
-						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 32px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
+						// 描述文案
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 14px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -623,41 +220,12 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
-						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
-							font-size: 32px;
-							line-height: 1.6;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
+						// 描述文案
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 14px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
 						}
 					}
 
@@ -673,111 +241,31 @@
 
 @media screen and (max-width: 1000px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
 		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 12px;
+		gap: 20px;
 		padding: 124px 124px 124px 124px;
 		margin-bottom: 48px;
 		margin-top: -10px;
-		box-sizing: border-box;
-		position: relative;
 
 		// 左侧页面
 		.webSitePage-leftPage {
-			// width: 100%;
 			width: 580px;
-
 		}
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
 			width: 100%;
-			height: auto;
 			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
 			gap: 32px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
-				width: 494px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-				justify-content: space-between;
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 28px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 14px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -788,41 +276,10 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
-
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 28px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
-						}
-
-						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 14px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
 						}
 					}
 
@@ -838,110 +295,29 @@
 
 @media screen and (max-width: 780px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 12px;
-		padding: 124px 124px 124px 124px;
-		margin-bottom: 48px;
-		margin-top: 60px;
-		box-sizing: border-box;
-		position: relative;
 
 		// 左侧页面
 		.webSitePage-leftPage {
-			// width: 100%;
 			width: 500px;
 		}
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
-				width: 494px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-				justify-content: space-between;
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -952,41 +328,15 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
-						width: 144px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
+							font-size: 12px;// 文字不折行
 						}
 					}
 
@@ -1002,18 +352,7 @@
 
 @media screen and (max-width: 680px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0px;
-		padding: 124px 124px 124px 124px;
-		margin-bottom: 48px;
 		margin-top: -280px;
-		box-sizing: border-box;
-		position: relative;
 
 		// 左侧页面
 		.webSitePage-leftPage {
@@ -1023,89 +362,22 @@
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
-				width: 100%;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-				justify-content: space-between;
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -1116,41 +388,16 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
+							font-size: 12px;// 文字不折行
 						}
 					}
 
@@ -1166,110 +413,34 @@
 
 @media screen and (max-width: 640px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0px;
-		padding: 124px 124px 124px 124px;
 		margin-bottom: 48px;
-		margin-top: -320px;
-		box-sizing: border-box;
-		position: relative;
+		margin-top: -360px;
 
 		// 左侧页面
 		.webSitePage-leftPage {
-			// width: 100%;
 			width: 360px;
 		}
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
 				width: 386px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
 				justify-content: space-between;
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -1280,41 +451,16 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
+							font-size: 12px;// 文字不折行
 						}
 					}
 
@@ -1330,18 +476,8 @@
 
 @media screen and (max-width: 580px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0px;
-		padding: 124px 124px 124px 124px;
 		margin-bottom: 48px;
 		margin-top: -320px;
-		box-sizing: border-box;
-		position: relative;
 
 		// 左侧页面
 		.webSitePage-leftPage {
@@ -1352,91 +488,26 @@
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
 				width: 386px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
 				justify-content: space-between;
 				scale: 0.9;
 				transform: translateX(-24px);
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -1447,41 +518,16 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
+							font-size: 12px;// 文字不折行
 						}
 					}
 
@@ -1497,18 +543,11 @@
 
 @media screen and (max-width: 520px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
 		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		gap: 0px;
 		padding: 54px;
 		margin-bottom: 48px;
-		margin-top: -300px;
-		box-sizing: border-box;
-		position: relative;
+		margin-top: 140px;
 
 		// 左侧页面
 		.webSitePage-leftPage {
@@ -1519,91 +558,34 @@
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 
+			// 大标题
 			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
 
 				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
+					font-size: 24px;
 				}
 			}
 
+
 			.webSitePage-rightInfo-bottom {
 				width: 386px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
 				justify-content: space-between;
 				scale: 0.9;
 				transform: translateX(-24px);
 
 				.webSitePage-register-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -1614,41 +596,16 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
 						width: 104px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
+							font-size: 12px;// 文字不折行
 						}
 					}
 
@@ -1662,115 +619,39 @@
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
 	.webSitePage-main-container {
-		width: 100%;
-		height: auto;
-		flex-direction: column-reverse;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0px;
-		padding: 54px;
-		margin-bottom: 48px;
-		margin-top: -300px;
-		box-sizing: border-box;
-		position: relative;
+		margin-bottom: 88px;
+		margin-top: 140px;
 
 		// 左侧页面
 		.webSitePage-leftPage {
-			// width: 100%;
-			width: 260px;
+			width: 280px;
 			margin-top: -10px;
 		}
 
 		// 右侧信息
 		.webSitePage-rightInfo-Container {
-			width: 100%;
-			height: auto;
-			flex-direction: column;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.webSitePage-rightInfo-top {
-				width: 100%;
-				height: auto;
-				flex-direction: column;
-				display: flex;
-				gap: 48px;
-				box-sizing: border-box;
-
-				.webSitePage-rightInfo-title {
-					width: 100%;
-					height: auto;
-					text-align: left;
-					font-family: 'GTEestiProText-Bold';
-					font-size: @text-TitleSize;
-					color: @text-color;
-				}
-
-				.webSitePage-rightInfo-des {
-					width: 100%;
-					margin: 0;
-					text-align: left;
-					font-family: 'GTEestiProText-Regular';
-					font-size: @text-DescriptionSize;
-					line-height: 1.6;
-					color: @description-color;
-				}
-			}
 
 			.webSitePage-rightInfo-bottom {
 				width: 386px;
-				height: auto;
-				flex-direction: row;
-				display: flex;
 				gap: 8px;
-				box-sizing: border-box;
 				justify-content: space-between;
 				scale: 0.8;
 				transform: translateX(-48px);
 
 				.webSitePage-register-container {
 					width: 134px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					align-items: center;
-					gap: 16px;
-					box-sizing: border-box;
 
 					.register-text {
 						width: 94px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.register-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.register-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
 							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;
 						}
 					}
 
@@ -1781,41 +662,16 @@
 
 				.webSitePage-upVoteUser-container {
 					width: 296px;
-					height: auto;
-					flex-direction: row;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					box-sizing: border-box;
 
 					.upVoteUser-text {
 						width: 94px;
-						height: auto;
-						flex-direction: column;
-						display: flex;
-						box-sizing: border-box;
 
 						.upVote-numTitle {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'Readex-Pro-medium';
-							font-weight: 500;
 							font-size: 24px;
-							line-height: 1.2;
-							color: @text-color;
-							white-space: nowrap;// 文字不折行
 						}
 
 						.upVote-des {
-							margin: 0;
-							text-align: left;
-							width: 100%;
-							font-family: 'GTEestiProText-Regular';
-							font-size: 12px;
-							line-height: 1.6;
-							color: @description-color;
-							white-space: nowrap;// 文字不折行
+							font-size: 12px;// 文字不折行
 						}
 					}
 

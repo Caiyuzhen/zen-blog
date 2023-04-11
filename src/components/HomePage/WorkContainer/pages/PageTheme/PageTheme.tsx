@@ -23,9 +23,9 @@ export const PageTheme = () => {
 					<div className="pagetheme-rightInfo-container">
 						
 						<div className="pagetheme-rightInfo-top">
-							<div className="pagetheme-rightInfo-container-title">XXX config</div>
+							<div className="pagetheme-rightInfo-container-title">Page theme config</div>
 							<p className="pagetheme-rightInfo-container-des">
-								XXX description of the config XXX description of the config XXX description of the config XXX description of the config XXX description of the config XXX description of the config XXX description of the config XXX description of the config XXX description of the config 
+							We wanted to make the application of the page not only limited to the document, if the user can customize the structure of the page, then the document itself will become very large space for expansion. So our designers creatively came up with the idea of "web-based", where users can customize the structure of the page, so that the document can be transformed into a personal blog, personal profile, home navigation page, etc.
 							</p>
 						</div>
 

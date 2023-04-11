@@ -1,402 +1,147 @@
 @import '../../../../../design/color/Global.less'; //引入全局样式库
 
-@media screen and (max-width: @mediaWidth-Max) {
-	.pageLinkStyle-main-container {
-		width: 100%;
+
+.pageLinkStyle-main-container {
+	width: 100%;
+	height: auto;
+	padding: 124px;
+	display: flex;
+	gap: 48px;
+	box-sizing: border-box;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+
+	.pageLinkStyle-leftPagesInfo-container {
+		width: 724px;
 		height: auto;
-		padding: 124px;
 		display: flex;
-		gap: 48px;
-		box-sizing: border-box;
 		flex-direction: row;
-		align-items: center;
-		position: relative;
+		align-items: start;
+		gap: 36px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 724px;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
+		// 左页
+		.pageLinkStyle-leftDetailPages-group {
 			width: 100%;
 			height: auto;
 			display: flex;
 			flex-direction: column;
-			align-items: start;
-			gap: 24px;
+			align-items: center;
 			margin-bottom: 48px;
 			box-sizing: border-box;
 
-			.pageLinkStyle-rightInfo-title {
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
+			> p {
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 22px;
 			}
 
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
+			.pageThemeBefore {
+				width: 344px;
+				height: 504px;
 			}
+		}
+
+		// 右页
+		.pageLinkStyle-rightDetailPages-group {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 48px;
+			box-sizing: border-box;
+
+			> p {
+				font-family: 'GTEestiProText-Regular';
+				color: @description-color;
+				font-size: 22px;
+			}
+
+			.pageThemeAfter {
+				width: 344px;
+				height: 504px;
+			}
+		}
+	}	
+	
+	.pageLinkStyle-rightInfo {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 18px;
+		margin-bottom: 48px;
+		box-sizing: border-box;
+
+		.pageLinkStyle-rightInfo-title {
+			height: auto;
+			text-align: left;
+			font-family: 'GTEestiProText-Bold';
+			font-size: @text-TitleSize;
+			color: @text-color;
+			line-height: 1.35;
+		}
+
+		.pageLinkStyle-rightInfo-des {
+			margin: 0;
+			text-align: left;
+			width: 100%;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.5;
+			color: @description-color;
 		}
 	}
 }
 
 
+
 @media screen and (max-width: 1440px) {
 	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		gap: 48px;
-		box-sizing: border-box;
-		flex-direction: row;
-		align-items: center;
-		position: relative;
 
 		.pageLinkStyle-leftPagesInfo-container {
 			width: 640px;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 			scale: 0.9;
 			transform: translateX(-40px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.pageLinkStyle-rightInfo-title {
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+		}	 
 	}
 }
 
 
 @media screen and (max-width: 1280px) {
 	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		gap: 28px;
-		box-sizing: border-box;
-		flex-direction: row;
-		align-items: center;
-		position: relative;
+		margin-top: -120px;
+		margin-bottom: -120px;
 
 		.pageLinkStyle-leftPagesInfo-container {
 			width: 640px;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 			scale: 0.85;
 			transform: translateX(-58px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-
-			.pageLinkStyle-rightInfo-title {
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+		}	 
 	}
 }
 
 
 @media screen and (max-width: 1200px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: row;
-		align-items: center;
-		position: relative;
+	.pageLinkStyle-main-container { 
+		margin-top: -240px;
+		margin-bottom: -200px;
 
 		.pageLinkStyle-leftPagesInfo-container {
 			width: 640px;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 			scale: 0.75;
 			transform: translateX(-108px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
 		}	
 		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-			transform: translateX(-62px);
-
-			.pageLinkStyle-rightInfo-title {
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
+		.pageLinkStyle-rightInfo { 
+			transform: translateX(-62px); 
 
 			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
 				width: 140%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
 			}
 		}
 	}
@@ -404,102 +149,20 @@
 
 
 @media screen and (max-width: 1120px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		gap: 24px;
-		box-sizing: border-box;
-		flex-direction: row;
-		align-items: center;
-		position: relative;
-		margin-top: -200px;
+	.pageLinkStyle-main-container { 
+		margin-top: -260px;
+		margin-bottom: -200px;
 
 		.pageLinkStyle-leftPagesInfo-container {
-			width: 640px;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: start;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
 			scale: 0.7;
 			transform: translateX(-148px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
 		}	
 		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			gap: 24px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
-			transform: translateX(-102px);
+		.pageLinkStyle-rightInfo { 
+			transform: translateX(-102px); 
 
-			.pageLinkStyle-rightInfo-title {
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 160%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
+			.pageLinkStyle-rightInfo-des { 
+				width: 160%; 
 			}
 		}
 	}
@@ -507,104 +170,29 @@
 
 
 @media screen and (max-width: 1080px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		margin-top: -140px;
+	.pageLinkStyle-main-container { 
+		flex-direction: column-reverse; 
+		margin-top: -260px;
+		margin-bottom: -200px;
 
-		.pageLinkStyle-leftPagesInfo-container {
+		.pageLinkStyle-leftPagesInfo-container { 
 			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
 			gap: 36px;
 			margin-bottom: 48px;
-			box-sizing: border-box;
 			scale: 1;
 			margin-top: -40px;
 			margin-left: 280px;
-			// transform: translateX(-138px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
 		}	
 		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
+		.pageLinkStyle-rightInfo { 
 			margin-left: 220px;
 
-
 			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
+				width: 100%; 
 			}
 
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
+			.pageLinkStyle-rightInfo-des { 
+				width: 100%; 
 			}
 		}
 	}
@@ -612,464 +200,79 @@
 
 
 @media screen and (max-width: 980px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		margin-top: -140px;
+	.pageLinkStyle-main-container { 
+		margin-top: -340px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 36px;
+		.pageLinkStyle-leftPagesInfo-container { 
 			margin-bottom: 48px;
-			box-sizing: border-box;
 			scale: 0.8;
 			margin-top: -110px;
-			margin-left: 160px;
-			// transform: translateX(-138px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
+			margin-left: 200px;
 		}	
 		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
-
-			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
+		.pageLinkStyle-rightInfo {  
 		}
 	}
 }
 
 
-@media screen and (max-width: 800px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		margin-top: -300px;
+@media screen and (max-width: 840px) {
+	.pageLinkStyle-main-container { 
+		margin-top: -400px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
+		.pageLinkStyle-leftPagesInfo-container { 
 			scale: 0.7;
-			margin-top: -140px;
-			margin-left: 78px;
-			// transform: translateX(-138px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
-
-			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+			margin-top: -160px;
+			margin-left: 84px;
+		}	 
 	}
 }
 
 
 @media screen and (max-width: 700px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
+	.pageLinkStyle-main-container { 
+		flex-direction: column-reverse; 
 		margin-top: -440px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
+		.pageLinkStyle-leftPagesInfo-container { 
 			scale: 0.6;
-			margin-top: -170px;
+			margin-top: -200px;
 			margin-left: 0px;
-			// transform: translateX(-138px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
-
-			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+		}	 
 	}
 }
 
 
 @media screen and (max-width: 620px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
+	.pageLinkStyle-main-container { 
+		flex-direction: column-reverse; 
 		margin-top: -540px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
+		.pageLinkStyle-leftPagesInfo-container { 
 			scale: 0.5;
-			margin-top: -210px;
+			margin-top: -230px;
 			margin-left: -40px;
-			// transform: translateX(-138px);
-
-			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeBefore {
-					width: 344px;
-					height: 504px;
-				}
-			}
-
-			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 100%;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 48px;
-				box-sizing: border-box;
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
-			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
-
-			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+		}	 
 	}
 }
 
 
 @media screen and (max-width: 580px) {
-	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 124px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
+	.pageLinkStyle-main-container { 
+		flex-direction: column-reverse; 
 		margin-top: -540px;
+		margin-bottom: -260px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
+		.pageLinkStyle-leftPagesInfo-container { 
 			scale: 0.45;
 			margin-top: -230px;
 			margin-left: -40px;
-			// transform: translateX(-138px);
 
 			// 左页
 			.pageLinkStyle-leftDetailPages-group {
 				width: 144px;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
 				margin-bottom: 48px;
-				box-sizing: border-box;
-				transform: translateX(88px);
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
+				transform: translateX(88px); 
 
 				.pageThemeBefore {
 					width: 344px;
@@ -1080,102 +283,30 @@
 			// 右页
 			.pageLinkStyle-rightDetailPages-group {
 				width: 144px;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
 				margin-bottom: 48px;
-				box-sizing: border-box;
-				transform: translateX(288px);
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
-
-				.pageThemeAfter {
-					width: 344px;
-					height: 504px;
-				}
+				transform: translateX(288px); 
 			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
-
-			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+		}	 
 	}
 }
 
 
 @media screen and (max-width: 520px) {
 	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
 		padding: 54px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		margin-top: -400px;
+		margin-top: -460px;
+		margin-bottom: -180px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 36px;
-			margin-bottom: 48px;
-			box-sizing: border-box;
+		.pageLinkStyle-leftPagesInfo-container { 
 			scale: 0.55;
 			margin-top: -200px;
 			margin-left: -8px;
-			// transform: translateX(-138px);
 
 			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 144px;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+			.pageLinkStyle-leftDetailPages-group { 
 				margin-bottom: 48px;
 				box-sizing: border-box;
-				transform: translateX(88px);
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
+				transform: translateX(88px); 
 
 				.pageThemeBefore {
 					width: 344px;
@@ -1184,21 +315,10 @@
 			}
 
 			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 144px;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+			.pageLinkStyle-rightDetailPages-group { 
 				margin-bottom: 48px;
 				box-sizing: border-box;
-				transform: translateX(288px);
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
+				transform: translateX(288px); 
 
 				.pageThemeAfter {
 					width: 344px;
@@ -1208,31 +328,9 @@
 		}	
 		
 		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
 
 			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
+				font-size: 24px;
 			}
 		}
 	}
@@ -1241,47 +339,20 @@
 
 @media screen and (max-width: @mediaWidth-Iphone) {
 	.pageLinkStyle-main-container {
-		width: 100%;
-		height: auto;
-		padding: 54px;
-		display: flex;
-		box-sizing: border-box;
-		flex-direction: column-reverse;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		margin-top: -400px;
 
-		.pageLinkStyle-leftPagesInfo-container {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
+		.pageLinkStyle-leftPagesInfo-container { 
 			gap: 36px;
 			margin-bottom: 48px;
 			box-sizing: border-box;
 			scale: 0.38;
-			margin-top: -240px;
+			margin-top: -260px;
 			margin-left: -54px;
-			// transform: translateX(-138px);
 
 			// 左页
-			.pageLinkStyle-leftDetailPages-group {
-				width: 144px;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+			.pageLinkStyle-leftDetailPages-group { 
 				margin-bottom: 48px;
 				box-sizing: border-box;
-				transform: translateX(88px);
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
+				transform: translateX(88px); 
 
 				.pageThemeBefore {
 					width: 344px;
@@ -1290,56 +361,15 @@
 			}
 
 			// 右页
-			.pageLinkStyle-rightDetailPages-group {
-				width: 144px;
-				height: auto;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+			.pageLinkStyle-rightDetailPages-group { 
 				margin-bottom: 48px;
-				box-sizing: border-box;
-				transform: translateX(288px);
-
-				> p {
-					font-family: 'GTEestiProText-Regular';
-					color: @description-color;
-					font-size: 22px;
-				}
+				transform: translateX(288px); 
 
 				.pageThemeAfter {
 					width: 344px;
 					height: 504px;
 				}
 			}
-		}	
-		
-		.pageLinkStyle-rightInfo {
-			width: 100%;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			box-sizing: border-box;
-			margin-left: 220px;
-
-			.pageLinkStyle-rightInfo-title {
-				width: 100%;
-				height: auto;
-				text-align: left;
-				font-family: 'GTEestiProText-Bold';
-				font-size: @text-TitleSize;
-				color: @text-color;
-			}
-
-			.pageLinkStyle-rightInfo-des {
-				margin: 0;
-				text-align: left;
-				width: 100%;
-				font-family: 'GTEestiProText-Regular';
-				font-size: @text-DescriptionSize;
-				line-height: 1.6;
-				color: @description-color;
-			}
-		}
+		}	 
 	}
 }

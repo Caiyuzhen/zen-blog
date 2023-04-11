@@ -13,8 +13,10 @@ export const NestedLayout = () => {
 		<>
 			<div className="nestedLayout-main-container">
 				<div className="nestedLayout-mainLeft-container">
-					<div className="nestedLayout-mainLeft-title">XXX Title</div>
-					<p className="nestedLayout-mainLeft-des">XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX</p>
+					<div className="nestedLayout-mainLeft-title">Nested Layout ability</div>
+					<p className="nestedLayout-mainLeft-des">
+						One of the main features of web-based content is the ability to change responsively according to the width of the web page, we make it possible to support self-nesting on the basis of the column layout capabilities, and integrate the configuration of the Flex layout for the column, the goal is to be able to maximize the ability to approach the layout of the web page, so that users can achieve almost web-like expression through the nesting capabilities of the container itself.
+					</p>
 				</div>
 				<div className="nestedLayout-mainRight-container">
 					<div className="nestedLayout-nestedLogic">

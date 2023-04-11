@@ -21,8 +21,10 @@ export const PageLinkStyle = () => {
 					</div> 
 				</div>
 				<div className="pageLinkStyle-rightInfo">
-					<div className="pageLinkStyle-rightInfo-title">XXX Titles</div>
-					<p className="pageLinkStyle-rightInfo-des">XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX something that XXXXX</p> 
+					<div className="pageLinkStyle-rightInfo-title">PageCard with Full type</div>
+					<p className="pageLinkStyle-rightInfo-des">
+					The traditional inline Page is a link url, but many web pages are presented in the form of cards, so we provide the document card state style settings, the user can freely drag and drop to change the card aspect ratio, and even set some simple animation effects, so that the entire document like a "live" web page.
+					</p> 
 				</div>
 			</div>
 		</>
