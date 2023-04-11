@@ -17,10 +17,6 @@
 		height: 252px;
 		overflow: hidden;
 		z-index: 12;
-		box-sizing: border-box;
-		display: flex;
-		align-items: center;
-		justify-content: center;		
 
 		.top-nav-pjB {
 			width: 100%;
@@ -34,8 +30,30 @@
 			box-sizing: border-box;
 			padding: 48px 52px;
 
-			> img {
+			.back-circle-container {
 				cursor: pointer;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				border: 2px solid #22233D;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+
+				> img {
+					position: absolute;
+					left: 20px;
+					transition: all 0.25s ease-out;
+				}
+			}
+
+			.back-circle-container:hover {
+				img {
+					transition: all 0.25s ease-out;
+					left: 4px;
+					cursor: pointer;
+				}
 			}
 
 			> p {

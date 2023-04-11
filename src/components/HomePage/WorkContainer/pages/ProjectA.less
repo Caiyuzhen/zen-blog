@@ -1,48 +1,23 @@
 @import '../../../../design/color/Global.less'; //引入全局样式库
-@font-face {
-	font-family: 'RammettoOne';
-	src: url('../../../../assets/font/RammettoOne-Regular.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Bold';
-	src: url('../../../../assets/font/GTEestiProText-Bold.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Book';
-	src: url('../../../../assets/font/GTEestiProText-Book.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Medium';
-	src: url('../../../../assets/font/GTEestiProText-Medium.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Regular';
-	src: url('../../../../assets/font/GTEestiProText-Regular.ttf');
-}
 
 
 .projectA-container {
 	width: 100%;
-	position: relative;
 	height: 100%;
+	position: relative;
 	overflow: hidden;
 	box-sizing: border-box;
 
-
 	// 头图
-	.top-img {
+	.top-img-pjA {
 		position: relative;
 		top: 0;
 		width: 100%;
 		height: 252px;
 		overflow: hidden;
-		
+		z-index: 12;
 
-		.top-nav {
+		.top-nav-pjA {
 			width: 100%;
 			height: auto;
 			display: flex;
@@ -54,14 +29,36 @@
 			box-sizing: border-box;
 			padding: 48px 52px;
 
-			> img {
+			.back-circle-container {
 				cursor: pointer;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				border: 2px solid #d5d4dd;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+
+				> img {
+					position: absolute;
+					left: 20px;
+					transition: all 0.25s ease-out;
+				}
+			}
+
+			.back-circle-container:hover {
+				img {
+					transition: all 0.25s ease-out;
+					left: 4px;
+					cursor: pointer;
+				}
 			}
 
 			> p {
 				font-family: 'GTEestiProText-Bold';
 				font-size: 24px;
-				color: @text-color;
+				color: #d5d4dd;
 			}
 		}
 

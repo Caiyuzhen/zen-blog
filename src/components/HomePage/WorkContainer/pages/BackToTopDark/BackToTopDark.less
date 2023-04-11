@@ -5,12 +5,11 @@
 }
 
 
-.backToTop-container-dark {
+.backToTop-container {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	align-items: center;
-	cursor: pointer;
 	margin: 680px 0 0 0;
 	position: relative;
 	
@@ -22,10 +21,18 @@
 		transform: translateY(-520px);
 	}
 
-	.backToTopDark {
-		width: 58px;
-		z-index: 3;
-		transform: translateY(-520px);
+	.backToTop-circle-container {
+		top: -448px;
+
+		.backToTopArrow {
+			top: 14px
+		}
+	}
+
+	.backToTop-circle-container:hover {
+		.backToTopArrow {
+			top: -22px;
+		}
 	}
 
 	.allUI {
@@ -36,9 +43,10 @@
 	}
 }
 
+
 @media screen and (max-width: 1080px) {
 	.backToTop-container-dark {
-		margin: 580px 0 0 0;
+		margin: 580px 0 0;
 
 		> p {
 			transform: translateY(-420px);

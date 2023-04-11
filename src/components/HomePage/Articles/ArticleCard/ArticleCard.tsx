@@ -4,7 +4,7 @@ import ProjectThree from '../../../../assets/img/work-3.jpg'
 import Zeno from '../../../../assets/img/Zen.png'
 import { IArticleList } from '../../../../types/global'
 import './ArticleCard.less'  
-import backIcon  from '../../../../assets/svg/icon-arrowOnly.svg'
+import backIcon from '../../../../assets/svg/icon-arrowOnly.svg'
 import { articleClickContext } from '../Articles'
 
 

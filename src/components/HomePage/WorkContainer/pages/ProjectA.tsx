@@ -2,8 +2,10 @@
 import { css } from '@emotion/react'
 // 通过注释来动态的引入 babel 的翻译器，用 emotion 的翻译器！
 import React, { RefObject, useEffect, useRef, useState } from 'react'
-import topImg from '../../../../assets/img/ProjectA-topImg.jpg'
-import backIcon from '../../../../assets/svg/icon-back.svg'
+import InnosUX from '../../../../assets/img/ProjectA-topImg.png'
+import backIconLight from '../../../../assets/svg/icon-arrowOnly-Light.svg'
+import backToTopLight from '../../../../assets/svg/icon-arrowOnlyTop-Light.svg'
+// import backIcon from '../../../../assets/svg/icon-back.svg'
 import './ProjectA.less'
 import { useNavigate } from 'react-router-dom'
 import Trottle from '../../../../utils/Trottle'
@@ -33,6 +35,7 @@ import WebsitePage from '../pages/WebsitePage/WebsitePage'
 import BackToTop from '../pages/BackToTop/BackToTop'
 import BG from '../../../../assets/img/project-A-bg.jpg'
 import BackToTopDark from './BackToTopDark/BackToTopDark'
+import createHeaderFn from './utils/createHeader'
 
 // background: url('../../../../assets/img/project-A-bg.jpg') center center no-repeat;
 
@@ -61,6 +64,17 @@ export const ProjectA = () => {
 	// getScrollY()
 
 
+	// 实例化详情页的 header
+	const projectA_Header = createHeaderFn({
+		routerFn: goBack,
+		projectName: "Innos Note",
+		imgClassName: backIconLight,
+		projectContainerName: "top-img-pjA",
+		navClassName: "top-nav-pjA",
+		topImgUrl: InnosUX,
+	});
+
+
 	// 返回上一页的函数
 	const navigate = useNavigate()
 	function goBack(): void {
@@ -76,96 +90,47 @@ export const ProjectA = () => {
 				 }}
 			>
 				{/* 头图 */}
-				<div className="top-img">
-					{/* 导航 */}
+				{/* <div className="top-img">
 					<div className="top-nav">
 						<img src={backIcon} alt="" onClick={ ()=>goBack() }/>
 						<p>Innos Note</p>
 					</div>
-					<img src={topImg} alt="" />
+					<img src={InnosUX} alt="" />
 				</div>
-				
-				{/* 首屏 */}
+				 */}
+				{projectA_Header }
 				<BasicInfo />
-
-				{/* 分割线 */}
 				<Border />
-
-				{/* UserType */}
 				<UserTypeInfo />
-
-				{/* 用户反馈 */}
 				<UserFeedback />
-
-				{/* 业务目标 */}
 				<BusinessGoals />
-
-				{/* 分割线 */}
 				<Border />
-
-				{/* 设计策略 */}
 				<UxStategy />
-
-				{/* Editorial */}
 				<Editoral />
-
-				{/* DefinitionBlock */}
 				<DefinitionBlock />
-
-				{/* Expand playground */}
 				<ExpandPlayground />
-
-				{/* Canvas block  */}
 				<CanvasBlock />
-
-				{/* 分割线 */}
 				{/* <Border /> */}
-
 				{/* automation */}
 				<Automation />
-
-				{/* 集成 */}
 				<Intergation />
-
-
-				{/* KMGrowth, Circle Graphic */}
 				<KMGrowth />
-
-				{/* Block Reference and Bidirectional link */}
 				<BlockReference />
-
-				{/* Hashtag 页面 */}
 				{/* <HashtagDM /> */}
-
-				{/* 图谱 */}
 				<KnowledgeGraphic />
-
-				{/* 建站能力 */}
 				<PublishAbility />
-
-				{/* 互动能力 */}
 				{/* <Interactive /> */}
-
-				{/* 多页 */}
 				<MutilPage />
-
-				{/* 页面主题 */}
 				<PageLinkStyle />
-
-				{/* 多栏 */}
 				<NestedLayout />
-
-				{/* 页面主题 */}
 				<PageTheme />
-
-				{/* 官网页面 */}
 				<WebsitePage />
-
-				{/* 返回顶部 */}
 				<BackToTopDark 
 					content="Back to Top"
+					fontColor='#d5d4dd'
+					borderColor='#d5d4dd'
+					backToTopArrow={backToTopLight}
 				/>
-
 				<img src={BG} alt="" className="projectA-BG"/>
 			</div>
 		</>
