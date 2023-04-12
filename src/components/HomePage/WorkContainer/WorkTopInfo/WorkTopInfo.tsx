@@ -24,7 +24,7 @@ export const WorkTopInfo:FC = () => {
 			<div className="timeLine-container">
 				<div className="timeline-Step-one timeline">
 					<p className="timeline-title">2019-2023</p>
-					<p className="timeline-des">XXX Product Designer</p>
+					<p className="timeline-des">Product Designer</p>
 				</div>
 				<div className="circle"></div>
 				<div className="timeline-Step-two timeline">

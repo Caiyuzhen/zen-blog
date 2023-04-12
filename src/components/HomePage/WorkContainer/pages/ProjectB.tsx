@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 // 通过注释来动态的引入 babel 的翻译器，用 emotion 的翻译器！
 import React, { RefObject, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import UXInnovationUI from '../../../../assets/img/ProjectB-topImg.jpg'
+import UXInnovationUI from '../../../../assets/img/ProjectB-topImg.png'
 import './ProjectB.less'
 // import backIcon from '../../../../assets/svg/icon-back-dm.svg'
 import backToTopDark from '../../../../assets/svg/icon-arrowOnlyTop-Dark.svg'

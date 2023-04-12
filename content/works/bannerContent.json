@@ -2,18 +2,18 @@
 	"data": [
 	  {
 		"id": 1,
-		"title": "UI&UX Design-01",
-		"des": "A simple note app, some desctiptions, and some examples of how to use it.A simple note app, some desctiptions, and some examples of how to use it."
+		"title": "Innos Note",
+		"des": "An innovative document product developed by the innovation design team from 0 to 1, taking the document portal as the entry point to create an advanced first-class All in one knowledge creation tool, in which I was the main designer of several core modules."
 	  },
 	  {
 		"id": 2,
-		"title": "UI&UX Design-02",
-		"des": "Weaving from the beginning as seen on a primitive loom is a binary operation, similar to what we have in computers."
+		"title": "Innovation UX Design",
+		"des": "The innovation team's experimental design exploration provides forward-looking innovative design extrapolation for the suite's communication tools, helping the suite to enhance its competitiveness on the product."
 	  },
 	  {
 		"id": 3,
-		"title": "UI&UX Design-03",
-		"des": "Jacquard machine and current boolean logic both involve the use of binary code to represent information."
+		"title": "MIGU Video App",
+		"des": "MIGU Video is a vertical short video product launched by MIGU, a subsidiary of China Mobile Group, which provides users with secondary anime entertainment content around short videos, as well as related derivative merchandise."
 	  }
 	]
   }
