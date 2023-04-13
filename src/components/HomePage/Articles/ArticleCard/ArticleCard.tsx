@@ -21,11 +21,20 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 
 	useEffect(()=>{
 		async function getMdText(mdPath:string) {
-			const res = await axios.get(mdPath).then(res => {	// 发送 axios 获得 md 内的字符串, 并把所有数据保存到一个变量中
-				setMdText(res.data)
-				// console.log('请求 1 次')
-				// console.log(res.data)
-			})
+			const res = await axios.get(mdPath)
+			const regex = /^.*(I\.|II\.|III\.|IV\.|V\.|VI\.|VII\.|VIII\.|IX\.|X).*$/gm // 使用正则表达式来提取带数字的字符串
+			const matchesTitlesText = res.data.match(regex)
+			let replacedText = res.data
+
+			if (matchesTitlesText) {
+				matchesTitlesText.forEach((match: string) => {
+					// const headerStyles = { fontSize: "64px", fontWeight: "bold" } //给匹配到的元素设置样式, 类似 css module 的写法
+					const replaceHeaderText = `<div style=font-size:32px>${match}</div>`  // 如果有匹配到带数字的字符串，就将其加粗为 h3 样式
+					replacedText = replacedText.replace(match, replaceHeaderText);
+				})
+			}
+
+			setMdText(replacedText)
 		}
 		getMdText(des)
 		// console.log(mdText)
@@ -60,7 +69,16 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 				<img src={img} alt="" />
 				<div className="right-container">
 					<p className="title">{title}</p>
-					<p>{mdText}</p>	
+					{/* 方法二:
+						<pre>{mdText}</pre>
+					 */}
+					{/* 方法一: 增加 pre-wrap 的样式属性 */}
+					<p
+						style={{ whiteSpace: 'pre-wrap' }}
+						dangerouslySetInnerHTML={{ __html: mdText }}
+					>
+						{/* {mdText} */}
+					</p>	
 
 					<div className="metaInfo">
 						<div className="inline-author">
@@ -70,7 +88,7 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 
 						<div className="time">{date}</div>
 						
-						<div className="hashTag">{hashTag}</div>
+						<div className="hashTag"># {hashTag}</div>
 					</div>
 				</div>
 			</div>
