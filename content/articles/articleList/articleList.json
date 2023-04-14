@@ -10,18 +10,18 @@
 	  },
 	  {
 		"id": 2,
-		"title": "Notion dead? A new generation of knowledge management tools",
-		"date": "28 Jun 2022",
+		"title": "Getting Started with B-Side Products",
+		"date": "02 Aug 2021",
 		"des": "../../../../content/articles/articleList/articleTwo.md",
 		"hashTag": "Design Thinking",
 		"img": "../../../../src/assets/img/article/article-img-02.jpg"
 	  },
 	  {
 		"id": 3,
-		"title": "Apple just challenged Figma",
-		"date": "05 Jun 2022",
+		"title": "Netflix Corporate Archaeology",
+		"date": "16 Jan 2021",
 		"des": "../../../../content/articles/articleList/articleThree.md",
-		"hashTag": "Design Thinking",
+		"hashTag": "Business Thinking",
 		"img": "../../../../src/assets/img/article/article-img-03.jpg"
 	  }
 	]
