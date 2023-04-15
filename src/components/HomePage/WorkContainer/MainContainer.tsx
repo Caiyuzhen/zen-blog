@@ -13,25 +13,42 @@ import Tilty from 'react-tilty'
 // import {ProjectData, Iitem, getProjectData} from '../../../api/hygraph'
 
 
+// 骨架图
+const SkeletonCard = () => {
+	return (
+		<div className="skeleton-card">
+			{/* 占位符样式，可以使用动画等效果增加用户体验 */}
+			<div className="skeleton-card-placeholder" />
+		</div>
+	)
+}
+
 
 // 这一层用来发送请求，接收数据
 const MainContainer:FC = ():ReactElement => {
 
-	//声明个 hook 来获取 ProjectData 的数据(api 的数据)
-	const [projectData, setData] = useState<ProjectData>() //api 内, projectData 是 Iitem[] 类型
+	//声明个 hook 来获取 ProjectData 的数据(api 的数据). 在 api 内, projectData 是 Iitem[] 类型, 需要定义默认值为 [], 不然会报错 -> projectData 可能为未定义
+	const [projectData, setData] = useState<ProjectData>([]) 
+	const [isLoading, setIsLoading] = useState(true) //判断数据是否获取完毕
 
 
 	//调用 api 函数，发送请求来获取数据
 	useEffect(()=>{
 		//定义调用服务端 api 的函数, 给 notion 的 db 发送请求来获取数据
 		async function getBlogData() {
-			const res = await fetch('/api/getTitles', {
-				method: 'GET',
-			})
-			const data = await res.json()
-			console.log(data) //一个数组对象 [{}, {}, {}]
-			setData(data)
-			// const title = data[0].title
+			try {
+				const res = await fetch('/api/getTitles', {
+					method: 'GET',
+				})
+				const data = await res.json()
+				console.log(data) //一个数组对象 [{}, {}, {}]
+				setData(data)
+				setIsLoading(false)
+				// const title = data[0].title
+			} catch(error) {
+				console.log(error)
+			}
+	
 		}
 
 		getBlogData()
@@ -64,14 +81,21 @@ const MainContainer:FC = ():ReactElement => {
 							<BannerCard />
 						</Tilty>
 						<div className="works-container">
-							{
-								// 遍历接从 notion api 接收回来的 work 数据并进行渲染
-								projectData && projectData.map((item:Iitem, index:number) => {
-									return (
-										// 传入 id，用于判读路由 Link 哪一页
-										<ProjectCard content={item} key={index} index={index}/>
-									)
-								})
+							{	
+								isLoading ? 
+								// 如果数据还没加载完，则显示骨架图 （写死数组长度为 3, 然后进行遍历, 生成 3 个占位符）
+								(Array.from({ length: 3 }, (_, index) => (
+									<SkeletonCard key={index} />))
+								):(
+									// 如果数据加载完毕, 则遍历接从 notion api 接收回来的 work 数据并进行渲染
+									// projectData && projectData.map((item:Iitem, index:number) => {
+									projectData.map((item:Iitem, index:number) => {
+										return (
+											// 传入 id，用于判读路由 Link 哪一页
+											<ProjectCard content={item} key={index} index={index}/>
+										)
+									})
+								)
 							}
 						</div>
 						<img src={BgCircle} alt="" className="BgCircle"/>

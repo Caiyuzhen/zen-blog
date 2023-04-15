@@ -14,73 +14,106 @@ import { IBannerCard, ApiResponse } from '../../../../types/global'
 import { BannerText } from './BannerText'
 
 
-
 export const BannerCard:FC = () => {
-
 	const [dotIndex, setDotIndex] = useState(0) //最开始是第 0 张 | 用来定位圆点的样式
 	const dots = document.querySelectorAll('.dot') //获取所有的圆点
 	const dotsArr = [...dots] //把原点数量转换成数组
 	const work0 = document.querySelector('.work-0') as HTMLImageElement
 	const work1 = document.querySelector('.work-1') as HTMLImageElement
 	const work2 = document.querySelector('.work-2') as HTMLImageElement
-
 	const { cursorChangeHandler } = useContext(MouseContext)//【 🏹️（（6）】用来改变 cursorType ，在下面的 render 中监听鼠标进入了哪个元素
-
-	
 
 	//【第一步】改变 bannerDots 的 store
 	const dispatch = useDispatch() //引入方法
 
 	function changeDotState(dotStateValue: number): void {
-		// 🔥执行改变 store 中的 tabName 的方法
-		dispatch({
+		dispatch({ // 🔥执行改变 store 中的 tabName 的方法
 			type: IBannerDotStateActionType.CHANGE,//记得在上方导入 enum 枚举接口
 			payload: { //传入最新的 dotState 值（记得在下面的 div 内传参）
 				bannerDotValue: dotStateValue
 			}
 		})
 	}
-
 	// console.log(dotsArr)
-
 	
-	//【第二步】【🔥实时的】监听 Store 内 State 的变化, 根据改变后的【状态】来进行轮播方法
-	setInterval(()=>{
+	//【第二步】【🔥实时的】监听 Store 内 State 的变化, 根据改变后的【状态】来进行轮播方法 (很耗性能！)
+	// setInterval(()=>{
 		// console.log('监听中')
-		store.subscribe(() => {
-			const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据
+		// store.subscribe(() => {
+			// const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据
 	
-			if(bannerDotState === 0){ //点了第一张, 因为是实时监听的数据，所以会直接变
-				if(work0 !== null) {
-					work0.style.transform = `translate(0px)`
-					work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState+1)}px)`
-					work2.style.transform = `translate(-${work2.offsetWidth * (bannerDotState+1)}px)`
-					setDotIndex(0)
-					return
-				}
-			} 
-			else if (bannerDotState === 1) { //点了第二张, 因为是实时监听的数据，所以会直接变
-				if(work1 !== null) {
-					work1.style.transform = `translate(0px)`
-					work0.style.transform = `translate(-${work0.offsetWidth * bannerDotState}px)`
-					work2.style.transform = `translate(-${work2.offsetWidth * bannerDotState}px)`
-					setDotIndex(1)
-					return
-				}
-			}
-			else if (bannerDotState === 2) { //点了第三张, 因为是实时监听的数据，所以会直接变
-				if(work2 !== null) {
-					work2.style.transform = `translate(0px)`
-					work0.style.transform = `translate(-${work0.offsetWidth * (bannerDotState-1)}px)`
-					work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState-1)}px)` //只向左移一格就好了，所以 -1
-					setDotIndex(2)
-					return
-				}
-			}
-		})
-	},2500)
-	
+			// if(bannerDotState === 0){ //点了第一张, 因为是实时监听的数据，所以会直接变
+			// 	if(work0 !== null) {
+			// 		work0.style.transform = `translate(0px)`
+			// 		work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState+1)}px)`
+			// 		work2.style.transform = `translate(-${work2.offsetWidth * (bannerDotState+1)}px)`
+			// 		setDotIndex(0)
+			// 		return
+			// 	}
+			// } 
+			// else if (bannerDotState === 1) { //点了第二张, 因为是实时监听的数据，所以会直接变
+			// 	if(work1 !== null) {
+			// 		work1.style.transform = `translate(0px)`
+			// 		work0.style.transform = `translate(-${work0.offsetWidth * bannerDotState}px)`
+			// 		work2.style.transform = `translate(-${work2.offsetWidth * bannerDotState}px)`
+			// 		setDotIndex(1)
+			// 		return
+			// 	}
+			// }
+			// else if (bannerDotState === 2) { //点了第三张, 因为是实时监听的数据，所以会直接变
+			// 	if(work2 !== null) {
+			// 		work2.style.transform = `translate(0px)`
+			// 		work0.style.transform = `translate(-${work0.offsetWidth * (bannerDotState-1)}px)`
+			// 		work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState-1)}px)` //只向左移一格就好了，所以 -1
+			// 		setDotIndex(2)
+			// 		return
+			// 	}
+			// }
+		// })
+	// },2500)
 
+	// 【第二步】监听 Store 内 State 的变化, 根据改变后的【状态】来进行轮播方法
+	// const bannerDotState = store.getState().bannerDots.bannerDotValue //实时绑定 store 中的数据 , 在 DOM 改变时不会获得新的 store!!
+	const bannerDotState = useSelector((state: rootState) => state.bannerDots.bannerDotValue) //在 DOM 改变时会获得新的 store!!
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			const nextBannerDotValue = (bannerDotState + 1) % 3 // 计算下一个 bannerDotState 的值 (🌟自动进行轮播！)
+			changeDotState(nextBannerDotValue)
+		}, 2500)
+			return () => clearInterval(interval)
+	  }, [bannerDotState, dispatch])
+
+	useEffect(()=>{
+		if(bannerDotState === 0){ //点了第一张, 因为是实时监听的数据，所以会直接变
+			if(work0 !== null) {
+				work0.style.transform = `translate(0px)`
+				work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState+1)}px)`
+				work2.style.transform = `translate(-${work2.offsetWidth * (bannerDotState+1)}px)`
+				setDotIndex(0)
+				return
+			}
+		} 
+		else if (bannerDotState === 1) { //点了第二张, 因为是实时监听的数据，所以会直接变
+			if(work1 !== null) {
+				work1.style.transform = `translate(0px)`
+				work0.style.transform = `translate(-${work0.offsetWidth * bannerDotState}px)`
+				work2.style.transform = `translate(-${work2.offsetWidth * bannerDotState}px)`
+				setDotIndex(1)
+				return
+			}
+		}
+		else if (bannerDotState === 2) { //点了第三张, 因为是实时监听的数据，所以会直接变
+			if(work2 !== null) {
+				work2.style.transform = `translate(0px)`
+				work0.style.transform = `translate(-${work0.offsetWidth * (bannerDotState-1)}px)`
+				work1.style.transform = `translate(-${work1.offsetWidth * (bannerDotState-1)}px)` //只向左移一格就好了，所以 -1
+				setDotIndex(2)
+				return
+			}
+		}
+	},[bannerDotState])
+	
 
 	//切换显示大 dot 的方法
 	useEffect(() => {
@@ -113,7 +146,6 @@ export const BannerCard:FC = () => {
 		getBannerCardData()
 		// console.log('bannerDara',bannerData)
 	},[])
-
 
 
 	return (

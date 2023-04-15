@@ -1,15 +1,22 @@
+.skeleton-card-placeholder {
+	// 骨架图样式
+	height: 498px;
+	padding: 1.5rem;
+	border-radius: 18px;
+	transition: all 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	background-color: white;
+}
+
+
 .context-container {
 	display: flex;
 	flex-direction: column;
 	gap: 28px;
 	padding: 8px;
 	align-items: center;
-	
-	// display: grid;
-	// grid-template-columns: 1fr 1fr 1fr;
-	// grid-gap:1rem 1rem;  //行间距 列间距
-	// place-items: center; //flex 内元素全部居中	
-	// float: left;
 
 	// 装饰
 	.BgCircle {
@@ -37,51 +44,35 @@
 	}
 
 	// work 卡片的响应式布局
-	@media screen and (max-width: 4200px) {
-		.works-container {
-			display: grid;
-			width: 100%;
-			grid-template-columns: repeat(auto-fit, minmax(422px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
-			grid-template-rows: repeat(2, auto-fit);
-			grid-gap: 24px 24px;  //行间距 列间距
-			justify-content: space-between;
-			z-index: 5;
-		}
+	.works-container {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(422px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
+		grid-template-rows: repeat(2, auto-fit);
+		grid-gap: 24px 24px;  //行间距 列间距
+		justify-content: space-between;
+		z-index: 5;
 	}
+
 
 	@media screen and (max-width: 1095px) {
 		.works-container {
-			display: grid;
-			width: 100%;
 			grid-template-columns: repeat(auto-fit, minmax(352px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
-			grid-template-rows: repeat(2, auto-fit);
-			grid-gap: 24px 24px;  //行间距 列间距
-			justify-content: space-between;
-			z-index: 5;
+			grid-template-rows: repeat(2, auto-fit); 
 		}
 	}
 
 	@media screen and (max-width: 750px) {
 		.works-container {
-			display: grid;
-			width: 100%;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
-			grid-template-rows: repeat(2, auto-fit);
-			grid-gap: 24px 24px;  //行间距 列间距
-			justify-content: space-between;
-			z-index: 5;
+			grid-template-rows: repeat(2, auto-fit); 
 		}
 	}
 
 	@media screen and (max-width: 520px) {
 		.works-container {
-			display: grid;
-			width: 100%;
 			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); //auto-fit 表示自适应数量, minmax(320px, 1fr) 表示最小 320px，最大 1fr， 可以实现完美的自适应宽度
-			grid-template-rows: repeat(1, auto-fit);
-			grid-gap: 24px 24px;  //行间距 列间距
-			justify-content: space-between;
-			z-index: 5;
+			grid-template-rows: repeat(1, auto-fit); 
 		}
 	}
 

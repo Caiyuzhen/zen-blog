@@ -71,7 +71,6 @@ export const UseYPosProvider = ( {children}:IYpos ) => {
 
 
 
-
 // 渲染项目卡片的组件
 const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 
@@ -82,7 +81,7 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 	useEffect(()=>{
 		const projectCard = document.querySelectorAll('.project-card')[0]
 		if(projectCard) {
-			const _CardYPos = Math.floor(projectCard.getBoundingClientRect().top + window.pageYOffset) //向下取整
+			const _CardYPos = Math.floor(projectCard.getBoundingClientRect().top + window.pageYOffset) //向下取整, 返回时定位到此处
 			if(_CardYPos >= 0) {
 				// console.log(_CardYPos)
 				console.log(YPos)
@@ -124,7 +123,6 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 		<>	
 			{/* Provider 传递 cardYPosContext */}
 			{/* <useCardYPosContext.Provider value={newPosValue}> */}
-
 				<div className='project-card'
 					id={content!.id}
 					onMouseEnter={() => cursorChangeHandler('hovered')}
@@ -148,7 +146,6 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 					{/* <p>{content!.content}</p> */}
 					{/* <p>{content!.description}</p> */}
 				</div>
-
 			{/* </useCardYPosContext.Provider> */}
 		</>
 	)
