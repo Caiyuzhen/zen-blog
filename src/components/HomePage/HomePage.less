@@ -25,15 +25,21 @@
 	}
 	.home-page-container {
 		position: relative;
-		padding: 24px 52px 24px 52px;
+		padding: 24px 124px 24px 124px;
 		height: auto;
 		overflow: hidden;
 	}
 }
 
 @media screen and (max-width: 520px) {	
-	.vanta-bg {
-		// 🔥🔥在移动端时,隐藏 three.js 这个渐变背景元素,不然打不开
-		display: none;
+	.home-page{
+		.vanta-bg {
+			// 🔥🔥在移动端时,隐藏 three.js 这个渐变背景元素,不然打不开
+			display: none;
+		}
+
+		.home-page-container {
+			padding: 24px 54px 24px 54px;
+		}
 	}
 }

@@ -2,102 +2,63 @@
 @filter-selector: rgba(255, 255, 255, 0.5);
 @tab-font-normal: rgba(77, 74, 117);
 @tab-font-selector: rgba(18, 16, 51);
-@font-face {
-	font-family: 'RammettoOne-Regular';
-	src: url('../../../../assets/font/RammettoOne-Regular.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Bold';
-	src: url('../../../../assets/font/GTEestiProText-Bold.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Book';
-	src: url('../../../../assets/font/GTEestiProText-Book.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Medium';
-	src: url('../../../../assets/font/GTEestiProText-Medium.ttf');
-}
-
-@font-face {
-	font-family: 'GTEestiProText-Regular';
-	src: url('../../../../assets/font/GTEestiProText-Regular.ttf');
-}
 
 
-@media screen and (max-width: 4200px) {	
-	.filter-container{
-		display: flex;
-		// gap: 1.5em; //⚡️设置的话会影响 tab 底部颜色的距离
-		background-color:@filter-container-bg;
-		padding: .5rem 0.45rem .5rem .45rem;
-		border-radius: 4rem;
-		transition: all 0.3s ease-in-out;
-		backdrop-filter: blur(10px);//🔥毛玻璃效果
-		cursor: pointer;
-	
-		// tab 底部颜色
-		.filter-bg{
-			position: absolute;
-			left: 0;
-			transform: translate(8px, -4px);//🔥不能删除，不然一开始会在底部然后滑过去!! tab 底部色块的初始距离, 与 tab 的 padding 还有 margin 相关，需要细调！
-			transition: transform .3s ease-in-out;
-			z-index: -1;
-			width: 4rem;
-			height: 2rem;
-			border-radius: 2rem;
-			background-color: rgb(255, 255, 255);
-			box-shadow: 36px 36px 42px rgba(176, 112, 63, 0.2);	
+.filter-container{
+	display: flex;
+	// gap: 1.5em; //⚡️设置的话会影响 tab 底部颜色的距离
+	background-color:@filter-container-bg;
+	padding: .5rem 0.45rem .5rem .45rem;
+	border-radius: 4rem;
+	transition: all 0.3s ease-in-out;
+	backdrop-filter: blur(10px);//🔥毛玻璃效果
+	cursor: pointer;
+
+	// tab 底部颜色
+	.filter-bg{
+		position: absolute;
+		left: 0;
+		transform: translate(8px, -4px);//🔥不能删除，不然一开始会在底部然后滑过去!! tab 底部色块的初始距离, 与 tab 的 padding 还有 margin 相关，需要细调！
+		transition: transform .3s ease-in-out;
+		z-index: -1;
+		width: 4rem;
+		height: 2rem;
+		border-radius: 2rem;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 36px 36px 42px rgba(176, 112, 63, 0.2);	
+	}
+
+	.tab-styles{
+		width: 3rem;
+		margin: 0 0.5rem;
+		font-family: 'GTEestiProText-Medium';
+	}
+
+	//Tab 未选中
+	.filter-option{
+		color: @tab-font-normal;
+		font-weight: 600;
+		> a {
+			color:@tab-font-normal;
 		}
-	
-		.tab-styles{
-			width: 3rem;
-			margin: 0 0.5rem;
-			font-family: 'GTEestiProText-Medium';
-		}
-	
-		//Tab 未选中
-		.filter-option{
-			color: @tab-font-normal;
-			font-weight: 600;
-		// 	transition: all 0.3s ease-in-out;
-			> a {
-				color:@tab-font-normal;
-			}
-			
-		}
-	
-		//Tab 已选中
-		.filter-option-active{
-			color: @tab-font-selector;
-			font-weight: 600;
-			// transition: all 0.3s ease-in-out;
-			// background-color:@filter-selector;
-			// border-radius: 4rem;
-			// height: 100%;
-			// width: 44px;
-			> a {
-				color:@tab-font-selector;
-			}
+		
+	}
+
+	//Tab 已选中
+	.filter-option-active{
+		color: @tab-font-selector;
+		font-weight: 600;
+		> a {
+			color:@tab-font-selector;
 		}
 	}
 }
 
 
+
 // 最小手机尺寸
 @media screen and (max-width: 520px) {	
 	.filter-container{
-		display: flex;
-		// gap: 1.5em; //⚡️设置的话会影响 tab 底部颜色的距离
-		background-color:@filter-container-bg;
-		padding: .5rem 0.45rem .5rem .45rem;
-		border-radius: 4rem;
-		transition: all 0.3s ease-in-out;
-		backdrop-filter: blur(10px);//🔥毛玻璃效果
-		cursor: pointer;
 	
 		// tab 底部颜色
 		.filter-bg{
@@ -112,32 +73,18 @@
 			background-color: rgb(255, 255, 255);
 			box-shadow: 36px 36px 42px rgba(176, 112, 63, 0.2);	
 		}
+
+		// tab 底部颜色
+		.filter-bg{
+			position: absolute;
+			width: 4.5rem;
+			margin-left: -0.5rem;
+		}
 	
 		.tab-styles{
-			width: 2rem;
-			margin: 0 0.5rem;
+			width: 3rem;
+			margin: 0 1rem;
 			font-family: 'GTEestiProText-Medium';
-		}
-	
-		//Tab 未选中
-		.filter-option{
-			color: @tab-font-normal;
-			font-weight: 600;
-			font-size: 12px;
-		// 	transition: all 0.3s ease-in-out;
-			
-		}
-	
-		//Tab 已选中
-		.filter-option-active{
-			color: @tab-font-selector;
-			font-weight: 600;
-			font-size: 12px;
-			// transition: all 0.3s ease-in-out;
-			// background-color:@filter-selector;
-			// border-radius: 4rem;
-			// height: 100%;
-			// width: 44px;
 		}
 	}
 }

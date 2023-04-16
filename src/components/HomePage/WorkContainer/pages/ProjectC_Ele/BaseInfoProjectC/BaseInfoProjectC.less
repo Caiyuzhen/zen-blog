@@ -1,4 +1,28 @@
 @import '../../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
 
 @keyframes lineMove {
 	0%, 32% { /*0 % ~ 50%*/
@@ -12,7 +36,7 @@
 		stroke-dashoffset: -210px;
 	}
 }
-@media screen and (max-width: 4000px) {
+
 .migu-main-container {
 	width: 100%;
 	height: auto;
@@ -76,7 +100,7 @@
 			width: calc(100% - 442px); // container 宽度 - Img（442px）
 			vertical-align: middle; // 字体中心属性
 			text-align: left;
-			font-family: 'GT Eesti Pro Text';
+			font-family: 'GTEestiProText-Regular';
 			font-style: normal;
 			font-weight: 500;
 			font-size: 18px;
@@ -100,7 +124,7 @@
 		}
 	}
 }
-}
+
 
 
 @media screen and (max-width: 900px) {

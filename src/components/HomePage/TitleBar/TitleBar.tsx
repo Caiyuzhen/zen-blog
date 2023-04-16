@@ -40,6 +40,14 @@ const TitleBar:FC<IProps> = ():ReactElement => {
 	}
 
 
+	// 📧点击 Contact 按钮, 跳转到邮箱
+	function handleContactClick() {
+		// ⚡️ mailto: 协议, 用于发送邮件
+		// window.location.href = "mailto:caiyuzhen00@gail.com";
+		window.open("mailto:caiyuzhen00@gail.com", "_blank");
+	  }
+
+
 	return (
 		<>
 			<div className="main-nav">
@@ -52,7 +60,14 @@ const TitleBar:FC<IProps> = ():ReactElement => {
 					isActive={isActive} //变量 跟 方法传递给子组件
 					onChangeTab={changeTab}
 					/>
-				<div className="contact"><p>Contact</p></div>
+				<div className="contact"
+					 style={{
+						 cursor: 'pointer',
+					 }}
+					 onClick={handleContactClick}
+				>
+					<p>Contact</p>
+				</div>
 			</div>
 		</>
 	)

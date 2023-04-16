@@ -12,6 +12,15 @@ import { MouseContext } from '../../../Mouse/useMouseContext'
 import axios from 'axios'
 import { IBannerCard, ApiResponse } from '../../../../types/global'
 import { BannerText } from './BannerText'
+import { useNavigate } from 'react-router-dom'
+
+
+// 路由的枚举
+enum NavigatorPath {
+	ProjectA = '/homepage/works/projectA',
+	ProjectB = '/homepage/works/projectB',
+	ProjectC = '/homepage/works/projectC'
+}
 
 
 export const BannerCard:FC = () => {
@@ -148,6 +157,19 @@ export const BannerCard:FC = () => {
 	},[])
 
 
+	// 跳转路由的方法
+	const navigate = useNavigate()
+	function goProject(routerIndex: number) : void {
+		const path = routerIndex === 0 ? NavigatorPath.ProjectA : 
+					routerIndex === 1 ? NavigatorPath.ProjectB : 
+					routerIndex === 2 ? NavigatorPath.ProjectC : 
+					null
+		if(path) {
+			navigate(path)
+		}
+	}
+
+
 	return (
 		<>
 			<div className="mainWork-banner-container"
@@ -159,9 +181,9 @@ export const BannerCard:FC = () => {
 				{/*  用 mask 来规定显示的尺寸大小 */}
 				<div className="imgMask-box">
 					{/* 所有图片 */}
-					<img src={mainWork0} alt="" className="mainWork work-0" />
-					<img src={mainWork1} alt="" className="mainWork work-1" />
-					<img src={mainWork2} alt="" className="mainWork work-2" />
+					<img src={mainWork0} alt="" className="mainWork work-0" onClick={ () => goProject(dotIndex)}/>
+					<img src={mainWork1} alt="" className="mainWork work-1" onClick={ () => goProject(dotIndex)}/>
+					<img src={mainWork2} alt="" className="mainWork work-2" onClick={ () => goProject(dotIndex)}/>
 					{/* 放第一张用来循环 */}
 					{/* <img src={mainWork0} alt="" className="mainWork work-0" /> */}
 				</div>

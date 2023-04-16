@@ -38,7 +38,7 @@ export const DefinitionBlock = () => {
 						<div className="wbAndData-container">
 							<img src={Whiteboard} alt="" className="Whiteboard"/>
 							<img src={Data} alt="" className="Data"/>
-						</div>µ
+						</div>
 					</div>
 				</div>
 			</div>

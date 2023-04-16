@@ -74,6 +74,7 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 					 */}
 					{/* 方法一: 增加 pre-wrap 的样式属性 */}
 					<p
+						className='article-detail-info'
 						style={{ whiteSpace: 'pre-wrap' }}
 						dangerouslySetInnerHTML={{ __html: mdText }}
 					>

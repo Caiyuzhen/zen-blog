@@ -91,11 +91,12 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 	},[])
 
 
-	// 路由跳转方法
 	const projectRef = useRef<HTMLDivElement>(null)
+	// 路由跳转方法
 	const navigate = useNavigate()
 
 	function goProject(target: HTMLElement): void {
+
 		// 在上游 (MainContainer) 把 index 传递下来, 设置到元素的 data-XXX 属性身上了！所以可以根据这个值来判断要跳转到哪个路由详情页！
 		// 抽象过后
 		const index = target.dataset.index
@@ -139,7 +140,20 @@ const ProjectCard:FC<IProps> = ({content, index}): ReactElement => {
 						<div className='project-card-title'>{content!.title}</div>
 						<div className="right-action">
 							<img src={GoInToIcon} alt="" className="project-card-icon"/>
-							<div className="project-card-time">2019</div>
+							{
+								index === 0 && (
+									<div className="project-card-time">2021</div>
+								) 
+							}
+							{	index === 1 && (
+									<div className="project-card-time">2022</div>
+								)
+							}
+							{
+								index === 2 && (
+									<div className="project-card-time">2019</div>
+								)
+							}
 						</div>
 					</div>
 					<img src={content!.cover} alt="" className="project-image"/>

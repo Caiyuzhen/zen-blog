@@ -1,3 +1,28 @@
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
 .main-miguFeedUI-container {
 	position: relative;
 	display: flex;
@@ -51,7 +76,7 @@
 					// 第一个子元素
 					> p:first-child {
 						width: 100%;
-						font-family: GT Eesti Pro Text;
+						font-family: 'GT Eesti Pro Text';
 						font-weight: 500;
 						line-height: 1.5;
 						letter-spacing: 0em;
@@ -64,7 +89,7 @@
 					// 第二个子元素
 					> p:nth-child(2) {
 						width: 100%;
-						font-family: GT Eesti Pro Text;
+						font-family: 'GT Eesti Pro Text';
 						line-height: 1.9;
 						letter-spacing: 0em;
 						text-align: left;
@@ -86,8 +111,14 @@
 				}
 
 				.miguFeedUI-left-miguMall {
-					> p {
+					//第一个子元素
+					> p:first-child {
+						font-family: 'GTEestiProText-Medium';
 						line-height: 1.9;
+					}
+
+					> p:nth-child(2) {
+						font-family: 'Avenir Light';
 					}
 				}
 			}
@@ -106,8 +137,14 @@
 				}
 
 				.miguFeedUI-left-popUp {
-					> p {
+					//第一个子元素
+					> p:first-child {
+						font-family: 'GTEestiProText-Medium';
 						line-height: 1.9;
+					}
+
+					> p:nth-child(2) {
+						font-family: 'Avenir Light';
 					}
 				}
 			}
@@ -149,7 +186,6 @@
 				> p:first-child {
 					margin: 0;
 					width: 100%;
-					font-family: GT Eesti Pro Text;
 					font-weight: 500;
 					letter-spacing: 0em;
 					text-align: left;
@@ -157,18 +193,19 @@
 					font-size: 24px;
 					font-weight: 500;
 					color:  rgb(255, 255, 255);
+					font-family: 'GTEestiProText-Medium';
 				}
 
 				// 第二个子元素
 				> p:nth-child(2) {
 					margin: 0;
 					padding: 0;
-					font-family: GT Eesti Pro Text;
 					letter-spacing: 0em;
 					text-align: left;
 					font-size: 14px;
 					font-weight: 300;
 					color:  rgba(185, 213, 254, 1);
+					font-family: 'Avenir Light';
 				}
 			}
 

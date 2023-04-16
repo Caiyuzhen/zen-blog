@@ -88,7 +88,24 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 	
 	render(){
 		// console.log(this.state.allAvatarData[1]); // 测试 fetch 到的数据
-		if(this.state.allAvatarData.length === 0) return null //如果没有数据, 就不渲染, 因为是异步函数！
+		// if(this.state.allAvatarData.length === 0) return null //如果没有数据, 就不渲染, 因为是异步函数！
+		if(this.state.allAvatarData.length === 0) {
+			return (
+				<div className="card-personal skeleton">
+					<div className="avatar-container">
+						<div className="avatar-skeleton" />
+						<div className="change-avatar-skeleton" />
+					</div>
+					<div className="text-container">
+						<div className="name-skeleton" />
+						<div className="description-skeleton" />
+					</div>
+				</div>
+			)
+		}
+
+
+
 		const {url, describe} = this.state.allAvatarData[this.state.num] //从 state 的索引中 {解构赋值} 取得头像, 通过随机数修改这个索引就可以切换头像, 
 		// console.log(url, describe)
 

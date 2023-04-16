@@ -62,6 +62,7 @@
 			color: #f2f2f2;
 			font-size: 14px;
 			font-family: 'GTEestiProText-Medium';
+			white-space: nowrap;
 		}
 
 		.hashTag {
@@ -74,9 +75,39 @@
 			color: #f2f2f2;
 			font-size: 14px;
 			font-family: 'GTEestiProText-Medium';
+			white-space: nowrap;
 		}
 	}
 }
+
+
+@media screen and (max-width: 780px) {
+	.card-container {
+	
+		.metaInfo {
+			justify-content: space-between;
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.card-container {
+		.metaInfo {
+			width: 98%;
+			align-items: space-between;
+			gap: 22vw;
+	
+			.time {
+				display: none;
+			}
+
+		}
+	}
+}
+
+
+
 
 
 // 展开详情页情况
@@ -139,6 +170,7 @@
 		overflow: hidden;
 		color: #22233D;
 		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	p {
@@ -164,8 +196,9 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
+		box-sizing: border-box;
 		gap: 48px;
-		justify-content: space-between;
+		justify-content: space-around;
 		// margin-top: 48px;
 
 		.inline-author {
@@ -185,6 +218,7 @@
 				font-size: 16px;
 				color: #22233D;
 				font-family: 'GTEestiProText-Medium';
+				white-space: nowrap;
 			}
 		}
 
@@ -192,6 +226,7 @@
 			font-size: 16px;
 			color: #22233D;
 			font-family: 'GTEestiProText-Medium';
+			white-space: nowrap;
 		}
 
 		.hashTag {
@@ -201,7 +236,74 @@
 			border-radius: 6px;
 			background-color:  rgba(255, 255, 255, 0.4);
 			font-family: 'GTEestiProText-Medium';
+			color: #22233D;
 			white-space: nowrap;
+		}
+	}
+}
+
+
+
+
+
+// 展开详情页的响应式
+@media screen and (max-width: 1040px) {
+	.inspired-card-fullPage {
+		overflow-x: hidden;
+		padding: 54px 0;
+
+		.inspire-title {
+			margin-top: 80px;
+		}
+
+		.metaInfo {
+			padding: 0px 154px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.inspired-card-fullPage {
+		overflow-x: hidden;
+		padding: 54px 0;
+
+		.inspire-title {
+			font-size: 24px;
+		}
+
+		.metaInfo {
+			padding: 0px 154px;
+			box-sizing: border-box;
+
+			.time {
+				display: none;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.inspired-card-fullPage {
+		overflow-x: hidden;
+		padding: 54px 0;
+		background: rgb(248, 243, 255);
+
+
+		.inspire-title {
+			font-size: 20px;
+		}
+
+		p {
+			min-height: 400px;
+		}
+
+
+		.metaInfo {
+			padding: 0px 154px;
+			gap: 22vw;
+			justify-content: center;
 		}
 	}
 }

@@ -30,7 +30,6 @@
 		}
 
 
-
 		// 右侧显示一行话
 		.page-logo-text {
 			opacity: 0;
@@ -83,29 +82,11 @@
 // 最小手机尺寸
 @media screen and (max-width: 520px) {	
 	.main-nav{
-		display: flex;
 		justify-content: space-around;
-		place-items: center; //flex 内元素全部居中
-		gap: 0.5em;//最小间距
 		padding: 1.5rem .25rem 1rem .25rem;
-		position: sticky; //子元素吸顶，记住，父元素不能设置 overflow-x:hidden;
-		top: 0; //子元素吸顶，记住，父元素不能设置 overflow-x:hidden;
-		z-index: 10;
-		// align-items: center;    
-		// position: fixed;
-		// top: 40px;
-		// z-index: 10;
 
 		.page-logo{
-			img {
-				width: 24px;
-				height: 24px;
-				//增加圆角
-				border-radius: 0.5rem;
-				box-shadow: 
-					0px 0px 1px rgba(32, 28, 94, 0.1),
-					4px 8px 16px rgba(32, 28, 94, 0.2);
-			}
+			display: none;
 		}
 
 		.contact{

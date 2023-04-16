@@ -80,7 +80,7 @@ export const BasicInfo = () => {
 					   `}
 					>
 						<div className="basic-info-topLeft">
-							<div className="main-title">Hybrid Working background</div>
+							<div className="main-title">Hybrid working Background</div>
 							<div className="main-content">The black swan event of the epidemic has quickly transformed the organization's collaboration mode from the traditional offline mode to a remote office mode, followed by a change in the entire organization's collaboration mode, which has also triggered companies to re-engineer their own workflow. Review, use tools to improve business efficiency, increase business effects, and improve business benefits.</div>
 						</div>
 						<div className="basic-info-topRight">

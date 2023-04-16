@@ -1,4 +1,4 @@
-import React, { createContext, FC, ReactElement, useEffect, useState } from 'react'
+import React, { createContext, FC, ReactElement, useEffect, useRef, useState } from 'react'
 import ProjectCard, { UseYPosProvider } from './ProjectCard/ProjectCard'
 import './MainContainer.less'
 import { ProjectData, Iitem } from '../../../../src/types/global'
@@ -34,6 +34,9 @@ const MainContainer:FC = ():ReactElement => {
 
 	//调用 api 函数，发送请求来获取数据
 	useEffect(()=>{
+		// 🔢 从本地存储中读取数据
+		const cachedData = localStorage.getItem('projectData')
+
 		//定义调用服务端 api 的函数, 给 notion 的 db 发送请求来获取数据
 		async function getBlogData() {
 			try {
@@ -51,12 +54,46 @@ const MainContainer:FC = ():ReactElement => {
 	
 		}
 
-		getBlogData()
+		// 🔢 先判断是否有缓存, 再判断缓存是否过期了
+		if(cachedData) {
+			// 🔢 如果缓存中有数据，直接使用缓存数据
+			const { projectData, timestamp, expireTime } = JSON.parse(cachedData) //取出 work 数据、 时间戳、过期时间 3 个数据
+
+			if(new Date().getTime() < expireTime) { // 🔢 缓存未过期, 使用缓存中的数据
+				setData(projectData)  // 把缓存中的 projectData 数据保存到 hook 上进行渲染
+				setIsLoading(false)  // 这里要手动清除骨架图, 因为没有走发送请求的 getBlogData() !
+				return
+			} else if(new Date().getTime() >= expireTime)  { // 🔢 缓存过期了，移除数据并重新发送请求
+				localStorage.removeItem('projectData')
+				getBlogData()
+				return
+			}
+		} else {
+			// 🔢 如果缓存中没有数据，发送请求获取数据
+			getBlogData()
+			return
+		  }
+
+		// getBlogData()
 		// .catch((err) => {
 		// 	alert(err)
 		// })
 		// console.log('🌞得到数据了'+projectData)
 	},[])
+
+
+	// 🔢  缓存 work data 数据到本地
+	useEffect(() => {
+		const now = new Date().getTime()
+		const data = { 
+			projectData: projectData, 
+			timestamp: now, 
+			expireTime: now + 15 * 60 * 1000  // 🔢 缓存时间为 15 分钟
+			
+		} 
+		localStorage.setItem('projectData', JSON.stringify(data)) //key, value
+		// localStorage.setItem('projectData', JSON.stringify(projectData))
+	},[projectData])
 
 
 	const [ YPos, setYPos ] = useState<number>(0) // 用来存储卡片距离, 从详情页回来后, 滚动回去

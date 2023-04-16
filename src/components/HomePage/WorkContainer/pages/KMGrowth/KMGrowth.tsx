@@ -14,7 +14,7 @@ export const KMGrowth = () => {
 				{/* 顶部信息 */}
 				<div className="KMGrowth-main-container-topInfo">
 					<div className="KMGrowth-topInfo-title">
-						Title information
+						Growth of KM experience
 					</div>
 					<div className="KMGrowth-topInfo-des">
 					The traditional folder content management model is building walls, which has high requirements for knowledge organizers, and the hierarchy of folders will be very deep after a long time, resulting in knowledge being shelved, forgotten, and very difficult to reuse. We hope to solve the current problem from a more fundamental aspect, and there are two knowledge organization models on the market, namely 'tree' and 'net', which are not opposing and have their own advantages and disadvantages. It is not a choice between the two. Our design goal is to turn the creation process into an organizing process, so that users can know the knowledge network more efficiently and review their knowledge structure more conveniently.

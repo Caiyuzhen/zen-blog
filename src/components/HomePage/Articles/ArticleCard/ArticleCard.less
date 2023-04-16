@@ -2,26 +2,34 @@
 // 最大屏的情况
 
 .article-card {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	gap:28px;
 	padding: 24px;
 	border-radius: 24px;
 	transition: all 0.15s ease-out;
-
+	box-sizing: border-box;
+	overflow: hidden !important;
 
 	.article-wrapper {
+		max-width: 100%;
 		display: flex;
 		flex-direction: row;
-		gap:28px;
+		gap:32px;
 		// padding: 24px;
 		border-radius: 24px;
 		transition: all 0.15s ease-out;
+		box-sizing: border-box;
+		webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		> img {
 			width: 268px;
 			height: 168px;
-			border-radius: 10px;
+			border-radius: 24px;
 			box-shadow: 
 				0px 0px 1px rgba(32, 28, 94, 0.1),
 				4px 8px 16px rgba(32, 28, 94, 0.2);
@@ -29,7 +37,8 @@
 
 		.right-container {
 			padding-top: 12px;
-			width: 100%;
+			max-width: 100%;
+			// max-width: 30vw;
 			display: flex;
 			flex-direction: column;
 			color: white;
@@ -50,6 +59,7 @@
 			}
 
 			p {
+				width: 100%;
 				margin: 16px 0 12px 0;
 				text-align: left;
 				width: 100%;
@@ -62,6 +72,10 @@
 				text-overflow: ellipsis;
 				font-size: 16px;
 				font-family: 'GTEestiProText-Regular';
+			}
+
+			.article-detail-info {
+				overflow: hidden !important;
 			}
 
 			.metaInfo {
@@ -93,6 +107,7 @@
 					font-size: 14px;
 					color: #f2f2f2;
 					font-family: 'GTEestiProText-Medium';
+					white-space: nowrap;
 				}
 
 				.hashTag {
@@ -103,6 +118,7 @@
 					background-color:  rgba(172, 171, 255, 0.4);
 					backdrop-filter: blur(10px);//🔥毛玻璃效果
 					font-family: 'GTEestiProText-Medium';
+					white-space: nowrap;
 					white-space: nowrap;
 				}
 			}
@@ -122,13 +138,72 @@
 
 
 
+
+@media screen and (max-width: 2100px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 42vw;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1800px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 37vw;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1640px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 33vw;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1480px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 26vw;
+				width: 26vw;
+			}
+		}
+	}
+}
+
+
+
 //屏幕较小, 显示为垂直卡片
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1080px) {
 	.article-card {
 		flex-direction: column;
 
 		.article-wrapper {
+			width: 100%;
 			flex-direction: column;
+
+			.right-container {
+				max-width: 100%;
+				width: 100%;
+				box-sizing: border-box;
+
+				.metaInfo {
+					width: 90%;
+					padding: 0 24px;
+					justify-content: space-between;
+				}
+			}
 			
 			> img {
 				width: 100%;
@@ -147,12 +222,15 @@
 
 		.article-wrapper {
 			gap:12px;
-
+			border-radius: 0px;
 
 			.right-container {
+				.title {
+					font-size: 22px;
+				}
 
 				.metaInfo {
-					width: 100%;
+					width: 98%;
 					gap: 12px;
 
 					.inline-author {
@@ -187,6 +265,60 @@
 }
 
 
+@media screen and (max-width: 400px) {
+	.article-card {
+		border-radius: 16px;
+
+		.article-wrapper {
+	
+			> img {
+				border-radius: 24px;
+			}
+	
+			.right-container {
+	
+				.title {
+					font-size: 18px;
+					margin-bottom: 16px;
+				}
+	
+				p {
+					display: none;
+					font-size: 16px;
+				}
+	
+				.article-detail-info {
+					overflow: hidden !important;
+				}
+	
+				.metaInfo {
+					gap: 12px;
+					padding: 2px;
+	
+					.inline-author {
+						gap: 10px;
+						font-weight: 600;
+	
+						img {
+							width: 16px;
+							height: 16px;
+						}
+	
+						.author {
+							font-size: 14px;
+						}
+					}
+	
+					.hashTag {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 
 //——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -211,6 +343,8 @@
 	transition: all 0.25s ease-out;
 	box-sizing: border-box;
 	overflow-y: auto;
+	// 禁止横向滚动
+	overflow-x: hidden;
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -367,7 +501,7 @@
 }
 
 
-// 详情页（移动端）
+// 详情页小屏幕
 @media screen and (max-width: 560px) {
 	.article-card-fullPage {
 		padding: 120px 40px;
@@ -444,7 +578,36 @@
 
 
 @media screen and (max-width: 400px) {
-	.time {
-		display: none;
+	.article-card-fullPage {
+		background: rgb(248, 243, 255);
+
+
+		.article-wrapper {
+		
+			> img {
+				width: 400px;
+			}
+
+			.right-container {
+
+				.metaInfo {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 48px;
+					// margin-top: 48px;
+
+
+					.time {
+						display: none;
+					}
+
+				}
+				
+			}
+		}
 	}
 }
+
+

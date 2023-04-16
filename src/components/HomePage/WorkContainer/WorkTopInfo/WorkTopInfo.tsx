@@ -8,7 +8,9 @@ export const WorkTopInfo:FC = () => {
 		<div className="workTopInfo-container">
 			{/* 顶部基础信息 */}
 			<div className="baseInfo-container">
-				<p>Main desctiptions and something, Now I Live in Shenzhen.My previous exerience has focus onn efficiency tools and main description adn something blablabla.</p>
+				<p>
+				I've experienced TocC and different types of ToB projects in my career, and in recent years I've mainly been working on SAAS products, so if you're interested, you can browse my work, thanks a lot 🙏!
+				</p>
 				<img src={nextIcon} alt="" 
 					 style={{
 						transform: 'rotate(45deg)',
