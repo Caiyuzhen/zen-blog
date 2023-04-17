@@ -83,7 +83,8 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 			// .then(res => res.json()) //转为 json 数据
 			// .then(data => {this.setState({allAvatarData: data})}) //{} 转为数组  -> 到 data 并转为一个数组
 			// 存入 avatarData 数据
-			this.setState({allAvatarData: avatarData})	
+			const avatarJson = JSON.stringify(avatarData)
+  			this.setState({allAvatarData: JSON.parse(avatarJson)})
 	}
 
 
