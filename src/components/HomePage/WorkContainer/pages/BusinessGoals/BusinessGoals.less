@@ -1,0 +1,721 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+
+.business-goal-container {
+	display: flex;
+	padding: 124px;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-between;
+
+	.business-goal-text-container {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+		width: 640px;
+
+		.goal-title {
+			font-family: 'GTEestiProText-Bold';
+			font-size:@text-TitleSize;
+			color: @text-color;
+			margin: 0;
+		}
+
+		.goal-description {
+			width: 1056px;
+			font-family: 'GTEestiProText-Regular';
+			font-size: 16px;
+			color: @description-color;
+			text-align: start;
+			line-height: 1.6;
+			margin: 0;
+		}
+	}
+
+	.business-goal-graphic-container {
+		display: flex;
+
+		.goal-modelGraphic {
+			display: flex;
+			flex-direction: column;
+			
+			.model-graphic-top {
+				display: flex;
+				align-items: center;
+
+				// 顶部的文字 + 下面的渐变三角形
+				.graphic-top-textContainer {
+
+					> p {
+						width: 92px;
+						font-family: 'GTEestiProText-Regular';
+						font-size: @text-DescriptionSize;
+						color: @text-color;
+						margin-top: 58px;
+						margin-left: 26px; 
+					}
+
+					> img {
+						margin-top: 2px;
+						margin-left: 26px; 
+					}
+				}
+
+				.dotted-line {
+					width: 290px;
+					height: 2px;
+					border-bottom: 1px dashed @description-color;
+					margin-left: 24px;
+				}
+
+				.tranglesTop-container {
+					position: relative;
+
+					> p {
+						top: 42px;
+						width: 100%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					.tranglesTop-des {
+						height: 120px;
+					}
+				}
+			}
+
+			.model-graphic-medium {
+				display: flex;
+				align-items: center;
+
+				// 中间的文字，对齐一下
+				> p {
+					width: 92px;
+					font-family: 'GTEestiProText-Regular';
+					font-size: 16px;
+					color: @text-color;
+					margin-left: 26px; margin-right: 24px;
+				}
+
+				// 虚线
+				.dotted-line {
+					width: 192px;
+					height: 2px;
+					border-bottom: 1px dashed @description-color;
+				}
+				
+				.tranglesMedium-container {
+					position: relative;
+
+					:nth-child(1) {
+						top: 16px;
+						left: 46px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(2) {
+						top: 16px;
+						left: 148px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(3) {
+						top: 16px;
+						right: 46px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+				
+					.tranglesMedium-des {
+						height: 90px;
+					}
+				}
+			}
+
+			.model-graphic-bottom {
+				display: flex;
+				align-items: center;
+
+				// 底部的文字 + 下面的渐变三角形
+				.graphic-bottom-textContainer {
+					margin-bottom: 28px;
+
+					> p {
+						font-family: 'GTEestiProText-Regular';
+						font-size: 16px;
+						color: @text-color;
+						margin-bottom: 48px;
+					}
+
+					> img {
+						height: 62px;
+						margin-top: 2px;
+					}
+				}
+
+				.dotted-line {
+					width: 32px;
+					height: 2px;
+					border-bottom: 1px dashed @description-color;
+					margin-top: 12px;
+				}
+
+				.tranglesBottom-container {
+					position: relative;
+
+					:nth-child(1) {
+						z-index: 1;
+						top: 20px;
+						left: 96px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(2) {
+						z-index: 1;
+						top: 10px;
+						left: 254px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(3) {
+						z-index: 1;
+						top: 10px;
+						right: 96px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(4) {//分割线
+						z-index: 1;
+						top: 76px;
+						left: 92px;
+						width: 576px;
+						position: absolute;
+						margin: 0;
+					}
+
+					:nth-child(5) { 
+						z-index: 1;
+						bottom: 30px;
+						left: 48px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(6) {
+						z-index: 1;
+						bottom: 22px;
+						left:254px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+
+					:nth-child(7) {
+						z-index: 1;
+						bottom: 22px;
+						right: 48px;
+						width: 33%;
+						position: absolute;
+						color: @text-color;
+						font-size: 12px;
+						line-height: 1.6;
+						margin: 0;
+						font-family: 'GTEestiProText-Regular';
+					}
+					
+					.tranglesBottom-des {
+						height: 160px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 2280px) {	
+	.business-goal-container {
+
+		.business-goal-text-container {
+			gap: 20px;
+
+			.goal-title {
+				margin: 0;
+			}
+
+			.goal-description {
+				width: 932px;
+			}
+		}
+
+		.business-goal-graphic-container {
+
+			.goal-modelGraphic {
+
+				.model-graphic-medium {
+
+					// 虚线
+					.dotted-line {
+						width: 192px;
+					}
+			
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 2060px) {	
+	.business-goal-container {
+
+		.business-goal-text-container {
+
+			.goal-title {
+				margin: 0;
+			}
+
+			.goal-description {
+				width: 632px;
+			}
+		}
+
+		.business-goal-graphic-container {
+
+			.goal-modelGraphic {
+				
+				.model-graphic-top {
+
+					.tranglesTop-container {
+
+						> p {
+							top: 42px;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1800px) {	
+	.business-goal-container {
+
+		.business-goal-text-container {
+
+			.goal-description {
+				width: 632px;
+			}
+		}
+
+		.business-goal-graphic-container {
+
+			.goal-modelGraphic {
+				scale: 0.9;
+				transform: translateX(-40px);
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1680px) {	
+	.business-goal-container {
+
+		.business-goal-text-container {
+			width: 482px;
+
+			.goal-description {
+				width: 482px;
+			}
+		}
+
+		.business-goal-graphic-container {
+
+			.goal-modelGraphic {
+				scale: 0.9;
+				transform: translateX(-40px);
+				
+				.model-graphic-top {
+					// 顶部的文字 + 下面的渐变三角形
+					.graphic-top-textContainer {
+
+						> img {
+							width: 74px;
+						}
+					}
+				}
+
+				.model-graphic-medium {
+					
+					.tranglesMedium-container {
+
+						:nth-child(1) {
+							left: 46px;
+						}
+					}
+				}
+
+				.model-graphic-bottom {
+					// 底部的文字 + 下面的渐变三角形
+					.graphic-bottom-textContainer {
+
+						> img {
+							margin-top: 2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1560px) {	
+	.business-goal-container {
+
+		.business-goal-text-container {
+			width: 482px;
+
+			.goal-description {
+				width: 482px;
+			}
+		}
+
+		.business-goal-graphic-container {
+
+			.goal-modelGraphic {
+				scale: 0.85;
+				transform: translateX(-80px);
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1440px) {	
+	.business-goal-container {
+
+		.business-goal-text-container {
+
+			.goal-title {
+				margin: 0;
+			}	 
+		}
+
+		.business-goal-graphic-container {
+			width: 80%;
+			transform: scale(0.9) translateX(-40px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 1308px) {	
+	.business-goal-container {
+		 
+		.business-goal-text-container {
+			margin-bottom: 24px;
+			margin-right: 48px;
+
+			.goal-description {
+				width: 400px;
+			}
+		}
+
+		.business-goal-graphic-container {
+			transform: scale(0.8) translateX(-140px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 1168px) {	
+	.business-goal-container {
+		 
+		.business-goal-text-container {		 
+			margin-right: 48px;
+
+			.goal-description {
+				width: 360px;
+			}
+		}
+
+		.business-goal-graphic-container {
+			transform: scale(0.75) translateX(-180px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {	
+	.business-goal-container {
+		flex-direction: column;
+
+		.business-goal-text-container {
+			margin: 0;
+			width: 100%;
+
+			.goal-description {
+				width: 100%;
+			}
+		}
+
+		.business-goal-graphic-container {
+			width: 100%;
+			transform: scale(0.9) translateX(-20px); 
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 980px) {	
+	.business-goal-container {
+
+		.business-goal-graphic-container {
+			transform: scale(0.9) translateX(30px); 
+
+			.goal-modelGraphic {
+				
+				.model-graphic-top {
+
+					// 顶部的文字 + 下面的渐变三角形
+					.graphic-top-textContainer {
+						display: none;
+					}
+
+					.dotted-line {
+						display: none;
+					}
+
+					.tranglesTop-container {
+						transform: translateX(278px);
+						margin-bottom: 8px;
+					}
+				}
+
+				.model-graphic-medium {
+
+					// 中间的文字，对齐一下
+					> p {
+						display: none;
+					}
+
+					// 虚线
+					.dotted-line {
+						display: none;
+					}
+					
+					.tranglesMedium-container {
+						transform: translateX(180px);
+						
+
+						:nth-child(1) {
+							top: 16px;
+							left: 46px;
+						}
+
+						:nth-child(2) {
+							top: 16px;
+							left: 148px;
+						}
+
+						:nth-child(3) {
+							top: 16px;
+							right: 46px; 
+						}
+					
+						.tranglesMedium-des {
+							height: 90px;
+							margin-bottom: 10px;
+						}
+					}
+				}
+
+				.model-graphic-bottom {
+
+					// 底部的文字 + 下面的渐变三角形
+					.graphic-bottom-textContainer {
+						display: none;
+					}
+
+					.dotted-line.dotted-line-left {
+						display: none;
+					}
+
+					.tranglesBottom-container {
+						transform: translateX(22px);
+
+						:nth-child(1) {
+							top: 20px;
+						}
+
+						:nth-child(5) { 
+							bottom: 32px;
+							left: 48px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {	
+	.business-goal-container {
+		.business-goal-graphic-container {
+			transform: scale(0.8) translateX(-20px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {	
+	.business-goal-container {
+		padding: 124px 124px 64px 124px;
+
+		.business-goal-graphic-container {
+			transform: scale(0.75) translateX(-60px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {	
+	.business-goal-container {
+
+		.business-goal-graphic-container {
+			transform: scale(0.7) translateX(-118px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 640px) {	
+	.business-goal-container {
+
+		.business-goal-graphic-container {
+			transform: scale(0.6) translateX(-148px) translateY(-48px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 560px) {	
+	.business-goal-container {
+		margin-top: 20px;	 
+		height: 660px;
+
+		.business-goal-graphic-container {
+			transform: scale(0.55) translateX(-178px) translateY(-108px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {	
+	.business-goal-container {
+		padding: 54px 54px 4px 54px;
+		margin-top: 24px;
+		margin-bottom: -80px;
+		height: 600px;
+
+		.business-goal-text-container {
+			margin-bottom: 32px;
+		}
+
+		.business-goal-graphic-container {
+			transform: scale(0.55) translateX(-138px) translateY(-168px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: 440px) {	
+	.business-goal-container {
+		margin-top: 24px;
+		margin-bottom: -24px;
+		height: 550px;
+
+		.business-goal-text-container {
+			margin-bottom: 24px;
+
+			.goal-title {
+				font-size: 24px;
+			}
+		}
+
+		.business-goal-graphic-container {
+			transform: scale(0.45) translateX(-188px) translateY(-208px); 
+		}
+	}
+}
+
+
+@media screen and (max-width: @mediaWidth-Iphone) {	
+	.business-goal-container {
+		height: 540px;
+		margin-bottom: -24px;
+
+		.business-goal-text-container {
+			margin-bottom: -20px;
+		}
+
+		.business-goal-graphic-container {
+			transform: scale(0.4) translateX(-218px) translateY(-208px); 
+		}
+	}
+}

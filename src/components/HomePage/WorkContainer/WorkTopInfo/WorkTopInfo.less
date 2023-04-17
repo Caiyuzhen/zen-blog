@@ -1,0 +1,163 @@
+@import '../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+@mainTitlecolor: linear-gradient( rgba(61, 12, 255), rgba(61, 12, 255) ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+.workTopInfo-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 128px;
+	margin-bottom: 68px;
+
+	.baseInfo-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 24px;
+	
+		> p {
+			color: @text-color;
+			width: 800px;
+			text-align: left;	
+			font-size: 16px;
+			font-family: 'GTEestiProText-Regular';
+		}
+	}
+	
+	.bigTitle-container {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		align-items: flex-start;
+	
+
+
+		> .bigTitle{
+			position: absolute;
+			font-family: 'RammettoOne';
+			background-image: linear-gradient(to right, #f0f5ff, #e8f0ff, #e4d3ff);
+			-webkit-background-clip: text;
+			color: transparent;
+			font-size: 60px;
+			height: 60px;
+			line-height: 68px;
+		}
+
+	
+		.trim {
+			margin-top: 52px;
+			display: block;
+			height: 6px;
+			width: 100%;
+			background: linear-gradient(to right, #f0f5ff, #B1CBFF, #8C45FF);
+		}
+	}
+	
+	
+	.timeLine-container {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: space-between;
+	
+		.timeline {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 8px;
+	
+			.timeline-title {
+				color: @text-color;
+				margin: 0;
+				font-size: 24px;
+				font-family: 'GTEestiProText-Bold';
+			}
+		
+			.timeline-des {
+				color: @description-color;
+				font-family: 'GTEestiProText-Regular';
+				margin: 0;
+			}
+		}
+
+		.circle {
+			// 圆形
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: @text-color;
+			opacity: 0.4;
+		}
+
+		.timeline-Step-two, .timeline-Step-three, .timeline-Step-four {
+			// 透明度变为 0.5
+			opacity: 0.4;
+		}
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 520px) {
+	.workTopInfo-container {
+		gap: 68px;
+		margin-bottom: 24px;
+
+		.baseInfo-container {
+			display: none;
+		}
+		
+		.bigTitle-container {
+
+			> .bigTitle{
+				color: transparent;
+				font-size: 60px;
+				height: 60px;
+				line-height: 72px;
+				word-wrap: break-word; //折行
+				width: 70%;
+				height: auto;
+				text-align: left;
+				margin: 54px 0 ;
+			}
+
+		
+			.trim {
+				margin-top: 182px;
+			}
+		}
+		
+		
+		.timeLine-container {
+			display: none;
+		}
+	}
+}

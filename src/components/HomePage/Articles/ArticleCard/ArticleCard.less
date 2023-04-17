@@ -1,0 +1,613 @@
+
+// 最大屏的情况
+
+.article-card {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap:28px;
+	padding: 24px;
+	border-radius: 24px;
+	transition: all 0.15s ease-out;
+	box-sizing: border-box;
+	overflow: hidden !important;
+
+	.article-wrapper {
+		max-width: 100%;
+		display: flex;
+		flex-direction: row;
+		gap:32px;
+		// padding: 24px;
+		border-radius: 24px;
+		transition: all 0.15s ease-out;
+		box-sizing: border-box;
+		webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		> img {
+			width: 268px;
+			height: 168px;
+			border-radius: 24px;
+			box-shadow: 
+				0px 0px 1px rgba(32, 28, 94, 0.1),
+				4px 8px 16px rgba(32, 28, 94, 0.2);
+		}
+
+		.right-container {
+			padding-top: 12px;
+			max-width: 100%;
+			// max-width: 30vw;
+			display: flex;
+			flex-direction: column;
+			color: white;
+
+			.title {
+				margin: 0;
+				text-align: left;
+				width: 100%;
+				font-family: 'RammettoOne';
+				font-size: 22px;
+				line-height: 1.6;
+				//👇最多 2 行，超过则 ...
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			p {
+				width: 100%;
+				margin: 16px 0 12px 0;
+				text-align: left;
+				width: 100%;
+				line-height: 1.5;
+				//👇最多 3 行，超过则 ...
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-size: 16px;
+				font-family: 'GTEestiProText-Regular';
+			}
+
+			.article-detail-info {
+				overflow: hidden !important;
+			}
+
+			.metaInfo {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 12px;
+
+				.inline-author {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					font-weight: 600;
+
+					img {
+						width: 16px;
+						height: 16px;
+						border-radius: 50%;
+						margin-bottom: 2px; //视觉居中
+					}
+
+					.author {
+						font-size: 14px;
+						font-family: 'GTEestiProText-Medium';
+					}
+				}
+
+				.time {
+					font-size: 14px;
+					color: #f2f2f2;
+					font-family: 'GTEestiProText-Medium';
+					white-space: nowrap;
+				}
+
+				.hashTag {
+					font-size: 14px;
+					padding: 2px 6px 2px 6px;
+					width: auto;
+					border-radius: 6px;
+					background-color:  rgba(172, 171, 255, 0.4);
+					backdrop-filter: blur(10px);//🔥毛玻璃效果
+					font-family: 'GTEestiProText-Medium';
+					white-space: nowrap;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}
+
+.article-card:hover {
+	transition: all 0.15s ease-out;
+	background-color:  rgba(44, 18, 132, 0.25);
+	backdrop-filter: blur(10px);//🔥毛玻璃效果
+	padding: 24px;
+	border-radius: 24px;
+	cursor: pointer;
+	transition: all 0.15s ease-out;
+}
+
+
+
+
+@media screen and (max-width: 2100px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 42vw;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1800px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 37vw;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1640px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 33vw;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1480px) {
+	.article-card {
+		.article-wrapper {
+			.right-container {
+				max-width: 26vw;
+				width: 26vw;
+			}
+		}
+	}
+}
+
+
+
+//屏幕较小, 显示为垂直卡片
+@media screen and (max-width: 1080px) {
+	.article-card {
+		flex-direction: column;
+
+		.article-wrapper {
+			width: 100%;
+			flex-direction: column;
+
+			.right-container {
+				max-width: 100%;
+				width: 100%;
+				box-sizing: border-box;
+
+				.metaInfo {
+					width: 90%;
+					padding: 0 24px;
+					justify-content: space-between;
+				}
+			}
+			
+			> img {
+				width: 100%;
+				height: auto;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+
+//屏幕超小（移动端）, 显示为垂直卡片
+@media screen and (max-width: 500px) {
+	.article-card {
+		// padding: 4px;
+
+		.article-wrapper {
+			gap:12px;
+			border-radius: 0px;
+
+			.right-container {
+				.title {
+					font-size: 22px;
+				}
+
+				.metaInfo {
+					width: 98%;
+					gap: 12px;
+
+					.inline-author {
+						gap: 4px;
+						font-weight: 600;
+						font-size: 12px;
+
+						img {
+							width: 16px;
+							height: 16px;
+							border-radius: 50%;
+							margin-bottom: 2px; //视觉居中
+						}
+
+						.author {
+							font-size: 12px;
+						}
+					}
+
+					.time {
+						display: none;
+					}
+
+					.hashTag {
+						font-size: 12px;
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.article-card {
+		border-radius: 16px;
+
+		.article-wrapper {
+	
+			> img {
+				border-radius: 24px;
+			}
+	
+			.right-container {
+	
+				.title {
+					font-size: 18px;
+					margin-bottom: 16px;
+				}
+	
+				p {
+					display: none;
+					font-size: 16px;
+				}
+	
+				.article-detail-info {
+					overflow: hidden !important;
+				}
+	
+				.metaInfo {
+					gap: 12px;
+					padding: 2px;
+	
+					.inline-author {
+						gap: 10px;
+						font-weight: 600;
+	
+						img {
+							width: 16px;
+							height: 16px;
+						}
+	
+						.author {
+							font-size: 14px;
+						}
+					}
+	
+					.hashTag {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+//——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+
+
+// 展开详情页(大屏幕） 
+.article-card-fullPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:28px;
+	padding: 128px 280px;
+	transition: all 0.15s ease-out;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(90px);
+	width: 100vw;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 998 !important;
+	transition: all 0.25s ease-out;
+	box-sizing: border-box;
+	overflow-y: auto;
+	// 禁止横向滚动
+	overflow-x: hidden;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.article-card:hover { 
+		transition: all 0.15s ease-out;
+	}
+
+	// 返回按钮
+	.article-backIcon-wrapper {
+		width: 100%;
+		display: flex;
+		position: absolute;
+		justify-content: flex-start;
+		left: 52px;
+		top: 48px;
+		cursor: pointer;
+
+		.article-back-circle {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			border: 2px solid #22233D;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			.article-back-line {
+				position: absolute;
+				left: 20px;
+				transition: all 0.15s ease-out;
+			}
+		}
+
+		//article-backIcon-wrapper 被 hover 时候，改变 article-back-line 的位置
+		&:hover {
+			.article-back-line {
+				transition: all 0.15s ease-out;
+				left: 4px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.article-wrapper {
+		width: 70vw;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 64px;
+	
+		> img {
+			width: 400px;
+			height: auto;
+			border-radius: 10px;
+		}
+
+		.right-container {
+			padding-top: 12px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			color: #22233D;
+			box-sizing: border-box;
+
+			.title {
+				margin: 0;
+				width: 100%;
+				font-family: 'RammettoOne';
+				font-size: 32px;
+				line-height: 1.6;
+				text-align: center;
+				//👇最多 2 行，超过则 ...
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				color: #22233D;
+				text-overflow: ellipsis;
+			}
+
+			p {
+				margin: 16px 0 12px 0;
+				text-align: left;
+				width: 100%;
+				font-size: 16px;
+				line-height: 1.75;
+				color: #22233D;
+				font-family: 'GTEestiProText-Regular';
+
+				&::after {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 1px;
+					background-color: rgba(77, 71, 142, 0.3);
+					margin: 48px 0;
+				}
+			}
+
+			.metaInfo {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 48px;
+				// margin-top: 48px;
+
+				.inline-author {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					font-weight: 600;
+
+					img {
+						width: 24px;
+						height: auto;
+						border-radius: 50%;
+						margin-bottom: 2px; //视觉居中
+					}
+
+					.author {
+						font-size: 16px;
+						font-family: 'GTEestiProText-Medium';
+					}
+				}
+
+				.time {
+					width: 100%;
+					font-size: 16px;
+					color: #22233D;
+					font-family: 'GTEestiProText-Medium';
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+				.hashTag {
+					font-size: 16px;
+					padding: 2px 6px 2px 6px;
+					width: auto;
+					border-radius: 6px;
+					background-color:  rgba(255, 255, 255, 0.4);
+					font-family: 'GTEestiProText-Medium';
+					white-space: nowrap;
+				}
+			}
+			
+		}
+	}
+}
+
+
+// 详情页小屏幕
+@media screen and (max-width: 560px) {
+	.article-card-fullPage {
+		padding: 120px 40px;
+
+		.article-card:hover { 
+			transition: all 0.15s ease-out;
+		}
+
+		// 返回按钮
+		.article-backIcon-wrapper {
+
+			.article-back-circle {
+				width: 40px;
+				height: 40px;
+
+				.article-back-line {
+					width: 48px;
+				}
+			}
+
+			//article-backIcon-wrapper 被 hover 时候，改变 article-back-line 的位置
+		}
+
+		.article-wrapper {
+			gap: 5vw;
+		
+			> img {
+				width: 70vw;
+			}
+
+			.right-container {
+
+				.title {
+					font-size: 24px;
+					width: 100%;
+					text-align: left;
+					overflow: hidden;
+				}
+
+				p {
+					margin: 16px 0 12px 0;
+					line-height: 1.65;
+				}
+
+				.metaInfo {
+					justify-content: space-around;
+					padding: 0;
+					gap: 5vw;
+
+					.inline-author {
+
+						img {
+							width: 24px;
+						}
+
+						.author {
+							font-size: 14px;
+						}
+					}
+
+					.time {
+						font-size: 14px;
+					}
+
+					.hashTag {
+						font-size: 14px;
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.article-card-fullPage {
+		background: rgb(248, 243, 255);
+
+
+		.article-wrapper {
+		
+			> img {
+				width: 400px;
+			}
+
+			.right-container {
+
+				.metaInfo {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 48px;
+					// margin-top: 48px;
+
+
+					.time {
+						display: none;
+					}
+
+				}
+				
+			}
+		}
+	}
+}
+
+

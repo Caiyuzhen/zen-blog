@@ -1,0 +1,385 @@
+@import '../../../../../../design/color/Global.less'; //引入全局样式库
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+@keyframes lineMove {
+	0%, 32% { /*0 % ~ 50%*/
+		stroke-dashoffset: 210px;
+	}
+	32%, 66% { /* 50% ~ 100% */
+		stroke-dashoffset: 0px;
+	}
+	/* 往回画, 恢复 */
+	66%, 100% {
+		stroke-dashoffset: -210px;
+	}
+}
+
+.migu-main-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+	box-sizing: border-box;
+	position: relative;
+	padding: 80px 124px 72px 124px;
+
+	.migu-main-title {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		font-family: 'RammettoOne';
+		font-size: @text-TitleSize;
+		color: white;
+	}
+
+	.migu-bottom-container {
+		position: relative;
+		width: 100%;
+		height: 294px;
+		background: 
+			linear-gradient(256.05deg, rgba(32, 4, 45, 0.2) 21.68%, rgba(53, 57, 148, 0.0802083) 44.6%, rgba(76, 50, 180, 0) 59.95%), 
+			linear-gradient(111.07deg, #1B053E 0%, #1F004B 40.25%);
+		box-shadow: 0px 100px 100px rgba(23, 128, 224, 0.05);
+		border-radius: 38px;
+		display: flex;
+		align-items: center;
+		padding: 0 0 0 64px;
+		box-sizing: border-box;
+
+		.migu-svg-container {
+			position: absolute;
+			right: 180px;
+			top: 20px;
+			
+			// svg 动画
+			#svg-anim-1 {
+				stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+				stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+				animation: lineMove 2.8s ease-in-out infinite;
+			}
+
+			#svg-anim-2 {
+				stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+				stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+				animation: lineMove 2.7s ease-in-out infinite;
+			}
+
+			#svg-anim-3 {
+				stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+				stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+				animation: lineMove 2.6s ease-in-out infinite;
+			}
+		}
+
+		> p {
+			width: calc(100% - 442px); // container 宽度 - Img（442px）
+			vertical-align: middle; // 字体中心属性
+			text-align: left;
+			font-family: 'GTEestiProText-Regular';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 28px;
+			color: #B9D5FE;
+			// 最多三行，超过则 ...
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+		}
+
+		.migu-baseInfo-imgContainer {
+			> img {
+				height: 284px;
+				position: absolute;
+				right: 20px;
+				top: 48px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 900px) {
+	.migu-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		box-sizing: border-box;
+		position: relative;
+		padding: 80px 124px 72px 124px;
+	
+		.migu-main-title {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			font-family: 'RammettoOne';
+			font-size: @text-TitleSize;
+			color: white;
+		}
+	
+		.migu-bottom-container {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			background: 
+				linear-gradient(256.05deg, rgba(32, 4, 45, 0.2) 21.68%, rgba(53, 57, 148, 0.0802083) 44.6%, rgba(76, 50, 180, 0) 59.95%), 
+				linear-gradient(111.07deg, #1B053E 0%, #1F004B 40.25%);
+			box-shadow: 0px 100px 100px rgba(23, 128, 224, 0.05);
+			border-radius: 38px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			padding: 0 0 0 64px;
+			box-sizing: border-box;
+			padding: 24px 48px;
+	
+			.migu-svg-container {
+				position: absolute;
+				right: 25vw;
+				top: 160px;
+				
+				// svg 动画
+				#svg-anim-1 {
+					stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+					stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+					animation: lineMove 2.8s ease-in-out infinite;
+				}
+	
+				#svg-anim-2 {
+					stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+					stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+					animation: lineMove 2.7s ease-in-out infinite;
+				}
+	
+				#svg-anim-3 {
+					stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+					stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+					animation: lineMove 2.6s ease-in-out infinite;
+				}
+			}
+	
+			> p {
+				width: 100%;
+				height:200px;
+				vertical-align: middle; // 字体中心属性
+				text-align: left;
+				font-family: 'GT Eesti Pro Text';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 28px;
+				color: #B9D5FE;
+				margin: 0;
+			}
+	
+			.migu-baseInfo-imgContainer {
+				width: 200px;
+				height: 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				> img {
+					right: -13vw;
+					bottom: 24px;
+					width: 400px;
+					height: auto;
+					// transform: translate(-5%, 60%);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.migu-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		box-sizing: border-box;
+		position: relative;
+		padding: 80px 124px 72px 124px;
+	
+		.migu-main-title {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			font-family: 'RammettoOne';
+			font-size: @text-TitleSize;
+			color: white;
+		}
+	
+		.migu-bottom-container {
+			position: relative;
+			width: 100%;
+			height: 420px;
+			background: 
+				linear-gradient(256.05deg, rgba(32, 4, 45, 0.2) 21.68%, rgba(53, 57, 148, 0.0802083) 44.6%, rgba(76, 50, 180, 0) 59.95%), 
+				linear-gradient(111.07deg, #1B053E 0%, #1F004B 40.25%);
+			box-shadow: 0px 100px 100px rgba(23, 128, 224, 0.05);
+			border-radius: 38px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			padding: 0 0 0 64px;
+			box-sizing: border-box;
+			padding: 24px 48px;
+	
+			.migu-svg-container {
+				position: absolute;
+				right: 16vw;
+				top: 200px;
+				
+				// svg 动画
+				#svg-anim-1 {
+					scale: 0.75;
+					stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+					stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+					animation: lineMove 2.8s ease-in-out infinite;
+				}
+	
+				#svg-anim-2 {
+					scale: 0.75;
+					stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+					stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+					animation: lineMove 2.7s ease-in-out infinite;
+				}
+	
+				#svg-anim-3 {
+					scale: 0.75;
+					stroke-dasharray: 210px; /*🔥变为虚线, 为了模拟路径生长动画*/	
+					stroke-dashoffset: 10px; /*🔥虚线的偏移值, 为了做出画线的效果*/
+					animation: lineMove 2.6s ease-in-out infinite;
+				}
+			}
+	
+			> p {
+				width: 100%;
+				height:320px;
+				vertical-align: middle; // 字体中心属性
+				text-align: left;
+				font-family: 'GT Eesti Pro Text';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 28px;
+				color: #B9D5FE;
+				margin: 0;
+			}
+	
+			.migu-baseInfo-imgContainer {
+				width: 200px;
+				height: 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				> img {
+					transform: translateY(-20px);
+					right: -6vw;
+					width: 280px;
+					height: auto;
+					// transform: translate(-5%, 60%);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.migu-main-container {
+		padding: 32px 54px 24px 54px;
+		gap: 12px;
+	}
+}
+
+
+@media screen and (max-width: 380px) {
+	.migu-main-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 32px 54px 24px 54px;
+		gap: 12px;
+		box-sizing: border-box;
+		position: relative;
+	
+		.migu-main-title {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			font-family: 'RammettoOne';
+			font-size: 28px;
+			color: white;
+		}
+	
+		.migu-bottom-container {
+	
+			.migu-svg-container {
+				position: absolute;
+				right: 10vw;
+				top: 210px;
+			}
+	
+			.migu-baseInfo-imgContainer {
+				width: 200px;
+				height: 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				> img {
+					transform: translateY(0px);
+					right: -6vw;
+					width: 240px;
+					height: auto;
+					// transform: translate(-5%, 60%);
+				}
+			}
+		}
+	}
+}

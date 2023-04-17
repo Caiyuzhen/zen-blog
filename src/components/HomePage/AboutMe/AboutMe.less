@@ -1,0 +1,846 @@
+
+// 卡片的公共样式
+@card-height: 280px;
+@card-borderRadius: 20px;
+@card-padding: 24px;
+
+.card-base-styles(){
+	border-radius: 20px;
+	padding: 24px;
+	backdrop-filter: blur(10px);//🔥毛玻璃效果
+	cursor: pointer;
+	position: relative;//水平居中-1
+	// hover 后卡片变大
+	&:hover{
+		transform: scale(1.025);
+	}
+	transition: all 0.25s ease-in-out;
+
+	> img{ //卡片的所有子 svg
+		width: 78px;
+		height: 78px;
+		top: 0;//垂直居中-1
+		bottom: 0;//垂直居中-2
+		margin: auto;//垂直居中-3
+		position: absolute;
+		left: 50%;//水平居中-2
+  		transform: translateX(-50%);//水平居中	-3
+	}
+}
+
+// 卡片的最大最小宽高
+@card-width-M: 325px;
+@card-width-L: 734px;
+@card-height-M: 280px;
+@card-height-L: 636px;
+
+
+
+// 具体实现
+.aboutMe-container {
+	// overflow: auto;
+	height: 100%;//对齐父元素的宽度
+	width: 100%;//对齐父元素的宽度
+	
+
+	//响应式布局
+
+	//上方大标题以及描述文案
+	.top-container {
+		margin-top: 80px;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		.title {
+			height: auto;
+			color: white;
+			line-height: 1.35;
+			font-size: 80px;
+			font-weight: 900;
+			font-family: 'RammettoOne';
+			background-image: linear-gradient(to right, #f0f5ff, #e8f0ff, #e4d3ff);
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+
+		.description {
+			height: 48px;
+			color: white;
+			font-size: 16px;
+			font-family: 'GTEestiProText-Book';
+		}
+	}
+
+	//底部的社交卡片
+	.bottom-container {
+		//给所有子 card 添加公共样式
+		& > * {
+			.card-base-styles();
+		}
+
+		margin-top: 80px;
+		display: grid; 
+		grid-template-columns: repeat(4, 1fr); //占 4 列 ，列的宽度为 1 fr
+		grid-template-rows: repeat(5, 280px); //占 5 行, 每行高度为 280px 
+		column-gap: 28px; //列间距
+		row-gap: 28px; //行间距
+		// grid-template-areas: "... ... ...";
+		
+			.card-personal {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(240, 240, 240, 0.8);
+				// grid-area: 1 / 1 / 2 / 3;
+				grid-column-start: 1;//横 1
+				grid-column-end: 3;//横 3
+				grid-row-start: 1;//纵 1
+				grid-row-end: 2;//纵 2
+
+				.avatar-container{
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+
+					> .avatar { //avatar
+						width: 56px;	
+					}
+
+					// hover 时,changeAvatar 旋转360度
+					> .changeAvatar {
+						width: 24px;
+						height: 24px;
+						padding: 16px;
+						background-color: #f0f0f0;
+						border-radius: 50%;
+						transition: all 0.2s ease-in-out;
+					}
+				}
+
+				.personal-descrip {
+					// 文字居左
+					text-align: left;
+					font-family: 'GTEestiProText-Book';
+				}
+			}
+
+			.card-github {
+				// height: @card-height-M;
+				// width:@card-width-M;
+				// background-color:  rgba(16, 16, 16, 0.7);
+				background-color:  rgba(43, 72, 236, 0.7);
+				// grid-area: 1 / 3 / 2 / 4;
+				grid-column-start: 3;//横 3
+				grid-column-end: 4;//横 4
+				grid-row-start: 1;//纵 1
+				grid-row-end: 2;//纵 2
+			}
+
+			.card-twitter {
+				// height: @card-height-L;
+				// width: @card-width-M;
+				background-color:  rgba(37, 173, 236, 0.7);
+				// grid-area: 1 / 4 / 3 / 5;
+				grid-column-start: 4;//横 4
+				grid-column-end: 5;//横 4
+				grid-row-start: 1;//纵 1
+				grid-row-end: 3;//纵 3
+			}
+
+			.card-okJike {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(224, 218, 50, 0.994);
+				// grid-area: 2 / 1 / 3 / 2;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2;//横 2
+				grid-row-start: 2;//纵 2
+				grid-row-end: 3;//纵 3
+			}
+
+			.card-instagram {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				// grid-area: 2 / 2 / 3 / 3;
+				grid-column-start: 2;//横 2
+				grid-column-end: 3;//横 3
+				grid-row-start: 2;//纵 2
+				grid-row-end: 3;//纵 3
+
+			}
+
+			.card-contactInfo {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(240, 240, 240, 0.8);
+				// grid-area: 2 / 3 / 3 / 4;
+				grid-column-start: 3;//横 3
+				grid-column-end: 4;//横 4
+				grid-row-start: 2;//纵 2
+				grid-row-end: 3;//纵 3
+
+				.title-contact{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 0.5em;
+
+					// 第二个子元素(也就是标题字）
+					> :nth-child(2) {
+						font-weight: 800;
+						font-size: 20px;
+						font-family: 'GTEestiProText-Medium';
+						color: #22233D;
+					}
+				}
+				.detail-info{
+					margin-top: 12px;
+					display: flex;
+					flex-direction: column;
+					font-family: 'GTEestiProText-Book';
+					color: #22233D;
+
+					.info{
+						height: 44px;
+						font-weight: 600;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+
+						.info-text {
+							font-weight: 400;
+							font-family: 'GTEestiProText-Regular';
+							color: #22233D;
+						}
+					}
+				}
+			}
+			
+			.card-facebook {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(43, 72, 236, 0.7);
+				// grid-area: 3 / 1 / 4 / 2;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2;//横 2
+				grid-row-start: 3;//纵 3
+				grid-row-end: 4;//纵 4
+			}
+
+			.card-whatApp {
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(42, 227, 88, 0.7);
+				// grid-area: 3 / 2 / 4 / 4;
+				grid-column-start: 2;//横 2
+				grid-column-end: 4;//横 4
+				grid-row-start: 3;//纵 3
+				grid-row-end: 4;//纵 4
+			}
+
+			.card-profilePDF {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(240, 240, 240, 0.8);
+				// grid-area: 3 / 4 / 4 / 5;
+				grid-column-start: 4;//横 4
+				grid-column-end: 5;//横 5
+				grid-row-start: 3;//纵 3
+				grid-row-end: 4;//纵 4
+
+				.title-pdfDL {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 0.5em;
+
+					// 第二个子元素(也就是标题字）
+					> :nth-child(2) {
+						font-weight: 800;
+						font-size: 20px;
+						font-family: 'GTEestiProText-Medium';
+						color: #22233D;
+					}
+				}
+
+				> img {
+					z-index: 10;
+					width: 48px;
+					height: 48px;
+					padding: 16px;
+					background-color: #F0F0F0;
+					border-radius: 50%;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+
+			.card-tikTok {
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(16, 16, 16, 0.7);
+				// grid-area: 4 / 1 / 5 / 3;
+				grid-column-start: 1;//横 1
+				grid-column-end: 3;//横 3
+				grid-row-start: 4;//纵 4
+				grid-row-end: 5;//纵 5
+			}
+
+			.card-zhiHu {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(43, 72, 236, 0.7);
+				// grid-area: 4 / 3 / 5 / 4;
+				grid-column-start: 3;//横 3
+				grid-column-end: 4;//横 4
+				grid-row-start: 4;//纵 4
+				grid-row-end: 5;//纵 5
+			}
+
+			.card-dribble {
+				// height: @card-height-L;
+				// width: @card-width-M;
+				background-color:  rgba(236, 49, 139, 0.7);
+				// grid-area: 4 / 4 / 6 / 5;
+				grid-column-start: 4;//横 4
+				grid-column-end: 5;//横 5
+				grid-row-start: 4;//纵 4
+				grid-row-end: 6;//纵 6
+			}
+
+			.card-discord {
+				// height: @card-height-M;
+				// width: @card-width-M;
+				background-color:  rgba(103, 56, 245, 0.7);
+				// grid-area: 5 / 1 / 6 / 2;
+				grid-column-start: 1;//横 1
+				grid-column-end: 2 ;//横 2
+				grid-row-start: 5;//纵 5
+				grid-row-end: 6;//纵 6	
+			}
+
+			.card-jueJin {
+				// height: @card-height-M;
+				// width: @card-width-L;
+				background-color:  rgba(37, 173, 236, 0.7);
+				// grid-area: 5 / 2 / 6 / 4;
+				grid-column-start: 2;//横 2
+				grid-column-end: 4 ;//横 4
+				grid-row-start: 5;//纵 6
+				grid-row-end: 5;//纵 6
+			}
+	}
+
+
+	@media screen and (max-width: 1380px) {	
+
+		//底部的社交卡片
+		.bottom-container {
+				.card-contactInfo {
+
+					.detail-info{
+	
+						.info{
+	
+							.info-text {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+		}
+	}
+
+
+	@media screen and (max-width: 1095px) {	
+		//上方大标题以及描述文案
+		.top-container {
+			flex-direction: row;
+
+			.title {
+				width: 528px;
+				text-align: left;
+			}
+
+			.description {
+				height: auto;
+				width: 380px;
+			}
+		}
+
+		//底部的社交卡片
+		.bottom-container {
+	
+			grid-template-columns: repeat(3, 1fr); //占 4 列 ，列的宽度为 1 fr
+			grid-template-rows: repeat(7, 280px); //占 5 行, 每行高度为 280px 
+
+
+				.card-twitter {
+					background-color:  rgba(37, 173, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 2;//纵 2
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-okJike {
+					background-color:  rgba(224, 218, 50, 0.994);
+					grid-column-start: 2;//横 2
+					grid-column-end: 3;//横 3
+					grid-row-start: 2;//纵 2
+					grid-row-end: 3;//纵 3
+				}
+
+				.card-instagram {
+					background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					grid-column-start: 3;//横 3
+					grid-column-end: 4;//横 4
+					grid-row-start: 2;//纵 2
+					grid-row-end: 3;//纵 3
+				}
+
+				.card-contactInfo {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 2;//横 2
+					grid-column-end: 3;//横 3
+					grid-row-start: 3;//纵 3
+					grid-row-end: 4;//纵 4
+
+					.title-contact{
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.5em;
+
+						// 第二个子元素(也就是标题字）
+						> :nth-child(2) {
+							font-weight: 800;
+							font-size: 20px;
+						}
+					}
+
+					.detail-info{
+	
+						.info{
+	
+							.info-text {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+				
+				.card-facebook {
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 3;//横 3
+					grid-column-end: 4;//横 4
+					grid-row-start: 3;//纵 3
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-whatApp {
+					background-color:  rgba(42, 227, 88, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 4;//纵 4
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-profilePDF {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 3;//横 3
+					grid-column-end: 4;//横 4
+					grid-row-start: 4;//纵 4
+					grid-row-end: 5;//纵 5
+				}
+
+				.card-tikTok {
+					background-color:  rgba(16, 16, 16, 0.7);
+					grid-column-start: 2;//横 2
+					grid-column-end: 4;//横 4
+					grid-row-start: 5;//纵 5
+					grid-row-end: 6;//纵 6
+				}
+
+				.card-zhiHu {
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 5;//纵 5
+					grid-row-end: 6;//纵 6
+				}
+
+				.card-dribble {
+					background-color:  rgba(236, 49, 139, 0.7);
+					grid-column-start: 3;//横 3
+					grid-column-end: 4;//横 4
+					grid-row-start: 6;//纵 6
+					grid-row-end: 8;//纵 8
+				}
+
+				.card-discord {
+					background-color:  rgba(103, 56, 245, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 7;//纵 7
+					grid-row-end: 8;//纵 8
+				}
+
+				.card-jueJin {
+					background-color:  rgba(37, 173, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 6;//纵 6
+					grid-row-end: 7;//纵 7
+				}
+		}
+	}
+
+
+	@media screen and (max-width: 750px) {	
+		//上方大标题以及描述文案
+		.top-container {
+			gap: 0.05rem;
+
+			.title {
+				width: 628px;
+				font-size: 61px;
+				text-align: left;
+			}
+
+			.description {
+				height: auto;
+				width: 100%;
+			}
+		}
+
+		//底部的社交卡片
+		.bottom-container {
+
+			margin-top: 40px;
+			grid-template-columns: repeat(2, 1fr); //占 2 列 ，列的宽度为 1 fr
+			grid-template-rows: repeat(10, 280px); //占 10 行, 每行高度为 280px 
+
+				.card-github {
+					// background-color:  rgba(16, 16, 16, 0.7);
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 2;//纵 2
+					grid-row-end: 3;//纵 3
+				}
+
+				.card-twitter {
+					background-color:  rgba(37, 173, 236, 0.7);
+					grid-column-start: 2;//横 2
+					grid-column-end: 3;//横 3
+					grid-row-start: 2;//纵 2
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-okJike {
+					background-color:  rgba(224, 218, 50, 0.994);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 3;//纵 3
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-instagram {
+					background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 3;//纵 3
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-contactInfo {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 4;//纵 4
+					grid-row-end: 5;//纵 5
+
+					.title-contact{
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.5em;
+
+						// 第二个子元素(也就是标题字）
+						> :nth-child(2) {
+							font-weight: 800;
+							font-size: 20px;
+						}
+					}
+				}
+				
+				.card-facebook {
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 2;//横 2
+					grid-column-end: 3;//横 3
+					grid-row-start: 5;//纵 5
+					grid-row-end: 6;//纵 6
+				}
+
+				.card-whatApp {
+					background-color:  rgba(42, 227, 88, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 6;//纵 6
+					grid-row-end: 7;//纵 7
+				}
+
+				.card-profilePDF {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 5;//纵 5
+					grid-row-end: 6;//纵 6
+
+					.title-pdfDL {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.5em;
+
+						// 第二个子元素(也就是标题字）
+						> :nth-child(2) {
+							font-weight: 800;
+							font-size: 20px;
+						}
+					}
+				}
+
+				.card-tikTok {
+					background-color:  rgba(16, 16, 16, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 9;//纵 9
+					grid-row-end: 10;//纵 10
+				}
+
+				.card-zhiHu {
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 7;//纵 7
+					grid-row-end: 8;//纵 8
+				}
+
+				.card-dribble {
+					background-color:  rgba(236, 49, 139, 0.7);
+					grid-column-start: 2;//横 2
+					grid-column-end: 3;//横 3
+					grid-row-start: 7;//纵 7
+					grid-row-end: 9;//纵 9
+				}
+
+				.card-discord {
+					background-color:  rgba(103, 56, 245, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 8;//纵 8
+					grid-row-end: 9;//纵 9
+				}
+
+				.card-jueJin {
+					background-color:  rgba(37, 173, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 3;//横 3
+					grid-row-start: 6;//纵 6
+					grid-row-end: 7;//纵 7
+				}
+		}
+	}
+
+	// 最小手机尺寸
+	@media screen and (max-width: 520px) {	
+		//上方大标题以及描述文案
+		.top-container {
+			margin-top: 60px;
+			gap: 0.05rem;
+
+			.title {
+				width: 287px;
+				font-size: 61px;
+			}
+
+			.description {
+				display: none;
+			}
+		}
+
+		//底部的社交卡片
+		.bottom-container {
+			margin-top: 40px;
+			grid-template-columns: repeat(1, 1fr); //占 1 列 ，列的宽度为 1 fr
+			grid-template-rows: repeat(15, 280px); //占 14 行, 每行高度为 280px 
+
+				.card-personal {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 3
+					grid-row-start: 1;//纵 1
+					grid-row-end: 3;//纵 3
+
+
+					.personal-descrip {
+						// 文字居左
+						text-align: left;
+					}
+				}
+
+				.card-github {
+					// background-color:  rgba(16, 16, 16, 0.7);
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 3;//纵 3
+					grid-row-end: 4;//纵 4
+				}
+
+				.card-twitter {
+					background-color:  rgba(37, 173, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 4;//纵 4
+					grid-row-end: 5;//纵 5
+				}
+
+				.card-okJike {
+					background-color:  rgba(224, 218, 50, 0.994);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 5;//纵 5
+					grid-row-end: 6;//纵 6
+				}
+
+				.card-instagram {
+					background: -webkit-linear-gradient(to right top, #95008A, #eba800, #451cec);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right top,  #eba800, #95008A, #451cec); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 10;//纵 10
+					grid-row-end: 11;//纵 11
+				}
+
+				.card-contactInfo {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 7;//纵 7
+					grid-row-end: 8;//纵 8
+
+					.title-contact{
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.5em;
+
+						// 第二个子元素(也就是标题字）
+						> :nth-child(2) {
+							font-weight: 800;
+							font-size: 20px;
+						}
+					}
+				}
+				
+				.card-facebook {
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 8;//纵 8
+					grid-row-end: 9;//纵 9
+				}
+
+				.card-whatApp {
+					background-color:  rgba(42, 227, 88, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 6;//纵 6
+					grid-row-end: 7;//纵 7
+				}
+
+				.card-profilePDF {
+					background-color:  rgba(240, 240, 240, 0.8);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 9;//纵 9
+					grid-row-end: 10;//纵 10
+
+					.title-pdfDL {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.5em;
+
+						// 第二个子元素(也就是标题字）
+						> :nth-child(2) {
+							font-weight: 800;
+							font-size: 20px;
+							font-family: 'GTEestiProText-Medium';
+						}
+					}
+				}
+
+				.card-tikTok {
+					background-color:  rgba(16, 16, 16, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 14;//纵 9
+					grid-row-end: 15;//纵 10
+				}
+
+				.card-zhiHu {
+					background-color:  rgba(43, 72, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 11;//纵 11
+					grid-row-end: 12;//纵 12
+				}
+
+				.card-dribble {
+					background-color:  rgba(236, 49, 139, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 12;//纵 12
+					grid-row-end: 13;//纵 13
+				}
+
+				.card-discord {
+					background-color:  rgba(103, 56, 245, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 13;//纵 13
+					grid-row-end: 14;//纵 14
+				}
+
+				.card-jueJin {
+					background-color:  rgba(37, 173, 236, 0.7);
+					grid-column-start: 1;//横 1
+					grid-column-end: 2;//横 2
+					grid-row-start: 15;//纵 6
+					grid-row-end: 16;//纵 7
+				}
+		}
+	}
+}
+
+
+// 最小手机尺寸
+@media screen and (max-width: 520px) {	
+
+	.aboutMe-container {
+		//底部的社交卡片
+		.bottom-container {
+			grid-template-rows: repeat(15, 268px); //占 5 行, 每行高度为 268px 
+		}
+	}
+}
