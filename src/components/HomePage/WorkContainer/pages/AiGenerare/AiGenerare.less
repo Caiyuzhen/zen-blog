@@ -1,0 +1,742 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+
+.AiGenerate-main-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 124px;
+	box-sizing: border-box;
+	gap: 40px;
+	position: relative;
+	margin: 200px 0 200px 0;
+
+	.AiGenerate-left-contentContainer {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
+		box-sizing: border-box;
+		gap: 24px;
+		z-index: 5;
+
+		.AiGenerate-left-infoContainer {
+			width: 80%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			box-sizing: border-box;
+			gap: 24px;
+
+			.AiGenerate-left-title {
+				width: 70%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: @text-TitleSize; //32px
+				text-align: left;
+				line-height: 1.25;
+				margin: 0;
+				color: #22233D;
+			}
+			.AiGenerate-left-des {
+				width: 70%;
+				margin: 0;
+				font-family: 'GTEestiProText-Regular';
+				font-size: @text-DescriptionSize;
+				color: @text-color-normal;
+				text-align: left;
+				margin-bottom: 40px;
+				color: #757D99;
+			}
+
+			.AiGenerate-left-picContainer {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				box-sizing: border-box;
+				gap: 24px;
+
+				.ColorPickerCard {
+					width: 466px;
+					border-radius: 12px;
+					box-shadow: 0px 14px 24px #41447e1f;
+					-moz-box-shadow: 0px 14px 24px #41447E1F;
+					-webkit-box-shadow: 0px 14px 14px #41447e1f;
+				}
+
+				.AiGenerateCard {
+					width: 466px;
+					border-radius: 12px;
+					box-shadow: 0px 14px 24px #41447e1f;
+					-moz-box-shadow: 0px 14px 24px #41447E1F;
+					-webkit-box-shadow: 0px 14px 14px #41447e1f;
+				}
+			}
+		}
+	}
+
+	.AiGenerate-right-framework {
+		width: 1064px;
+		position: absolute;
+		right: -2%;
+		border-radius: 18px;
+		box-shadow: 0px 14px 24px #41447e1f;
+		-moz-box-shadow: 0px 14px 24px #41447E1F;
+		-webkit-box-shadow: 0px 14px 14px #41447e1f;
+	}
+}
+
+
+@media screen and (max-width: 2300px) {  
+	.AiGenerate-main-container {
+		gap: 40px;
+		margin: 200px 0 200px 0;
+
+		.AiGenerate-left-contentContainer {
+			z-index: 5;
+
+			.AiGenerate-left-infoContainer {
+				width: 70%;
+				gap: 24px;
+
+				.AiGenerate-left-title {
+					width: 57%;
+				}
+				.AiGenerate-left-des {
+					width: 57%;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 426px;
+					}
+
+					.AiGenerateCard {
+						width: 426px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			width: 1064px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1940px) {  
+	.AiGenerate-main-container {
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 80%;
+
+				.AiGenerate-left-title {
+					width: 55%;
+				}
+				.AiGenerate-left-des {
+					width: 55%;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 406px;
+					}
+
+					.AiGenerateCard {
+						width: 406px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			width: 1064px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1870px) {  
+	.AiGenerate-main-container {
+		margin: 100px 0 100px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 55%;
+				}
+				.AiGenerate-left-des {
+					width: 55%;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 386px;
+					}
+
+					.AiGenerateCard {
+						width: 386px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			width: -340px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1680px) {  
+	.AiGenerate-main-container {
+		margin: 100px 0 100px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 55%;
+				}
+				.AiGenerate-left-des {
+					width: 55%;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 386px;
+					}
+
+					.AiGenerateCard {
+						width: 386px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			width: -340px;
+			position: absolute;
+			right: -160px;
+			margin-bottom: -14px;
+			border-radius: 18px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1460px) {  
+	.AiGenerate-main-container {
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 55%;
+				}
+				
+				.AiGenerate-left-des {
+					width: 55%;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 366px;
+					}
+
+					.AiGenerateCard {
+						width: 366px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			width: -340px;
+			position: absolute;
+			right: -240px;
+			margin-bottom: -14px;
+			border-radius: 18px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1340px) {  
+	.AiGenerate-main-container {
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 65%;
+				}
+
+				.AiGenerate-left-des {
+					width: 65%;
+					margin-bottom: 20px;
+				}
+
+				.AiGenerate-left-picContainer {
+					gap: 24px;
+
+					.ColorPickerCard {
+						width: 346px;
+					}
+
+					.AiGenerateCard {
+						width: 346px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			position: absolute;
+			right: -340px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1270px) {  
+	.AiGenerate-main-container {
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 65%;
+				}
+				.AiGenerate-left-des {
+					width: 65%;
+					margin-bottom: 20px;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 316px;
+					}
+
+					.AiGenerateCard {
+						width: 316px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			right: -340px;
+			margin-bottom: -14px;
+			border-radius: 18px;
+			scale: 0.9;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1200px) {  
+	.AiGenerate-main-container {
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+				gap: 20px;
+
+				.AiGenerate-left-title {
+					width: 65%;
+				}
+				.AiGenerate-left-des {
+					width: 65%;
+					font-size: 16px;
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			right: -400px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1100px) {  
+	.AiGenerate-main-container {
+		margin: 50px 0 50px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 65%;
+					font-size: 28px; 
+				}
+
+				.AiGenerate-left-des {
+					width: 65%;
+					font-size: 16px;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 286px;
+					}
+
+					.AiGenerateCard {
+						width: 286px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			right: -440px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1040px) {  
+	.AiGenerate-main-container {
+		margin: 20px 0 20px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 60%;
+
+				.AiGenerate-left-title {
+					width: 65%;
+					font-size: 26px; 
+				}
+				.AiGenerate-left-des {
+					width: 65%;
+					font-size: 14px;
+
+				}
+
+				.AiGenerate-left-picContainer {
+					width: 100%;
+
+					.ColorPickerCard {
+						width: 246px;
+						border-radius: 12px;
+					}
+
+					.AiGenerateCard {
+						width: 246px;
+						border-radius: 12px;
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			scale: 0.8;
+		}
+	}
+}
+
+
+@media screen and (max-width: 940px) {  
+	.AiGenerate-main-container {
+		margin: -60px 0 40px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+				width: 100%;
+
+				.AiGenerate-left-title {
+					width: 100%;
+					font-size: 26px; 
+				}
+				.AiGenerate-left-des {
+					width: 100%;
+					font-size: 14px;
+					margin-bottom: 20px;
+				}
+
+				.AiGenerate-left-picContainer {
+					width: 100%;
+					gap: 24px;
+
+					.ColorPickerCard {
+						width: 312px;
+						border-radius: 12px;
+					}
+
+					.AiGenerateCard {
+						width: 312px;
+						border-radius: 12px;
+
+					}
+				}
+			}
+		}
+
+		.AiGenerate-right-framework {
+			display: none;
+		}
+	}
+}
+
+
+@media screen and (max-width: 860px) {  
+	.AiGenerate-main-container {
+		margin: -60px 0 60px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+				.AiGenerate-left-title {
+					width: 100%;
+				}
+				.AiGenerate-left-des {
+					width: 100%;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 282px;
+					}
+
+					.AiGenerateCard {
+						width: 282px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 800px) {  
+	.AiGenerate-main-container {
+		margin: -60px 0 60px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+
+				.AiGenerate-left-des {
+					margin-bottom: 10px;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 262px;
+						border-radius: 10px;
+						box-shadow: 0px 14px 24px #41447e1f;
+						-moz-box-shadow: 0px 14px 24px #41447E1F;
+						-webkit-box-shadow: 0px 14px 14px #41447e1f;
+					}
+
+					.AiGenerateCard {
+						width: 262px;
+						border-radius: 10px;
+						box-shadow: 0px 14px 24px #41447e1f;
+						-moz-box-shadow: 0px 14px 24px #41447E1F;
+						-webkit-box-shadow: 0px 14px 14px #41447e1f;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 740px) {  
+	.AiGenerate-main-container {
+		margin: -80px 0 60px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+				.AiGenerate-left-des {
+					margin-bottom: 8px;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 232px;
+						border-radius: 8px;
+					}
+
+					.AiGenerateCard {
+						width: 232px;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 690px) {  
+	.AiGenerate-main-container {
+		margin: -80px 0 60px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 202px;
+						border-radius: 8px;
+					}
+
+					.AiGenerateCard {
+						width: 202px;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 640px) {  
+	.AiGenerate-main-container {
+		margin: -80px 0 60px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+				.AiGenerate-left-title {
+					font-size: 18px; 
+				}
+				.AiGenerate-left-des {
+					font-size: 14px;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 162px;
+						border-radius: 6px;
+					}
+
+					.AiGenerateCard {
+						width: 162px;
+						border-radius: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {  
+	.AiGenerate-main-container {
+		margin: 20px 0 60px 0;
+		padding: 68px;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+				.AiGenerate-left-title {
+					font-size: 18px; 
+				}
+				.AiGenerate-left-des {
+					font-size: 14px;
+				}
+
+
+				.AiGenerate-left-picContainer {
+					flex-direction: column;
+
+					.ColorPickerCard {
+						width: 372px;
+						border-radius: 8px;
+					}
+
+					.AiGenerateCard {
+						width: 372px;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {  
+	.AiGenerate-main-container {
+		margin: -10px 0 60px 0;
+
+		.AiGenerate-left-contentContainer {
+
+			.AiGenerate-left-infoContainer {
+
+				.AiGenerate-left-title {
+					font-size: 18px; 
+				}
+				.AiGenerate-left-des {
+					font-size: 14px;
+				}
+
+				.AiGenerate-left-picContainer {
+
+					.ColorPickerCard {
+						width: 262px;
+						border-radius: 8px;
+					}
+
+					.AiGenerateCard {
+						width: 262px;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+

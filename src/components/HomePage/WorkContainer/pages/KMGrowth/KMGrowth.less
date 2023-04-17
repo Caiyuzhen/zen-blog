@@ -1,0 +1,1038 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+
+
+// 核心样式
+.KMGrowth-main-container {
+	// 旋转动画
+	@keyframes CircleAnimation {
+		0% {
+			transform: rotate(0deg);
+			}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 52px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	// 顶部文字
+	.KMGrowth-main-container-topInfo {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		margin-bottom: 12px;
+		padding: 48px;
+		box-sizing: border-box;
+
+		.KMGrowth-topInfo-title {
+			width: 100%;
+			height: auto;
+			font-family: 'GTEestiProText-Bold';
+			font-size: @text-TitleSize;
+			color: @text-color;
+		}
+
+		.KMGrowth-topInfo-des {
+			width: 100%;
+			font-family: 'GTEestiProText-Regular';
+			font-size: @text-DescriptionSize;
+			line-height: 1.6;
+			color: @description-color;
+		}
+	}
+
+	// 底部图形容器
+	.KMGrowth-main-container-bottomInfo {
+		height: 714px;
+		width: 100%;
+		left: 44px;
+		display: flex;
+		padding: 0 32px;
+		justify-content: center;
+		align-items: center;
+		// background: url('../../../../../assets/svg/bg-userFeedBack.svg');
+		background: linear-gradient(to bottom right, rgba(74, 43, 97, 0.3), rgba(40, 15, 56, 0.2) );
+		border-radius: 36px;
+		box-sizing: border-box;
+		position: relative;
+		left: 0;
+
+		// 左信息
+		.KMGrowth-bottomInfo-textAndGraphic-left {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			z-index: 5;
+			// 👇这两个是给无序列表的样式！
+			font-family: 'GTEestiProText-Regular';
+			color: @description-color;
+			font-size: 18px;
+			text-align: left;
+			margin: 0;
+
+			.KMGrowth-bottomInfo-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				color: @text-color;
+				margin: 0 0 0 20px;
+			}
+		}
+
+		// 中间图形
+		.KMGrowth-bottomInfo-circleGraphic {
+			position: relative;
+			width: 780px;
+			box-sizing: border-box;
+			left: 2px;
+			z-index: 5;
+			height: auto;
+
+			// 中心圆
+			.KMGrowth-centerCircle {
+				position: absolute;
+				left: 8px; 
+				top: 0; 
+				right: 0; 
+				bottom: 0;
+				margin: auto;  /* 有了这个就自动居中了 */
+				width: 264px;
+				height: 264px;
+				border-radius: 50%;
+				aspect-ratio: 1/1;
+				background-color: #170645;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				> p {
+					width: auto;
+					font-family: 'GTEestiProText-Bold';
+					font-size: 28px;
+					line-height: 1.3;
+					text-align: center;
+					color: @text-color;
+				}
+			}
+		}
+
+		// 右信息
+		.KMGrowth-bottomInfo-textAndGraphic-right {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			z-index: 5;
+			// 👇这两个是给无序列表的样式！
+			font-family: 'GTEestiProText-Regular';
+			color: @description-color;
+			font-size: 18px;
+			text-align: left;
+			margin: 0;
+
+			.KMGrowth-bottomInfo-title {
+				width: 100%;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				color: @text-color;
+				margin: 0 0 0 20px;
+			}
+		}
+
+		// 放射线
+		.radiaLine {
+			width: 1100px;
+			position: absolute;
+			left: -40px; 
+			top: 0; 
+			right: 0; 
+			bottom: 0;
+			margin: auto;  /* 有了这个就自动居中了 */
+		}
+
+		// 圆环
+		.insideLine {
+			width: 322px;
+			height: 322px;
+			aspect-ratio: 1/1;
+			position: absolute;
+			left: -14px; 
+			top: 0; 
+			right: 0; 
+			bottom: 0;
+			margin: auto;  /* 有了这个就自动居中了 */
+		}
+
+		// 圆环
+		.centerLine {
+			width: 454px;
+			height: 454px;
+			aspect-ratio: 1/1;
+			position: absolute;
+			left: 2px; 
+			top: 0; 
+			right: 0; 
+			bottom: 0;
+			margin: auto;  /* 有了这个就自动居中了 */
+			animation: CircleAnimation 40s infinite linear;
+		}
+
+		// 圆环
+		.outLine {
+			width: 556px;
+			height: 556px;
+			aspect-ratio: 1/1;
+			position: absolute;
+			left: 0; 
+			top: 0; 
+			right: 0; 
+			bottom: 0;
+			margin: auto;  /* 有了这个就自动居中了 */
+		}
+
+		// 标签以及小圆
+		.hashTagLeftTop {
+			width: 110px;
+			height: 40px;
+			aspect-ratio: 1/1;
+			background: rgba(160, 226, 246, 1);
+			padding: 2px 6px;
+			border-radius: 88px;
+			font-family: 'GTEestiProText-regular';
+			color: rgb(21, 91, 112);
+			box-shadow: 
+				0px 8px 24px 0px rgba(176, 240, 232, 0.3);
+			position: absolute;
+			top: 234px;
+			left: -40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 7;
+			font-size: 12px;
+			line-height: 1.3;
+		}
+
+		.hashTagLeftBottom {
+			width: 110px;
+			height: 40px;
+			aspect-ratio: 1/1;
+			background: rgb(246, 218, 194);
+			padding: 2px 6px;
+			border-radius: 88px;
+			font-family: 'GTEestiProText-regular';
+			color: rgb(189, 111, 47);
+			box-shadow: 
+				0px 8px 24px 0px rgba(255, 233, 214, 0.3);
+			position: absolute;
+			top: 396px;
+			left: -2px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 7;
+			font-size: 12px;
+			line-height: 1.3;
+		}
+
+		.hashTagRightTop {
+			width: 110px;
+			height: 40px;
+			aspect-ratio: 1/1;
+			background: rgba(160, 227, 220, 1);
+			padding: 2px 6px;
+			border-radius: 88px;
+			font-family: 'GTEestiProText-regular';
+			color: rgb(23, 105, 97);
+			box-shadow: 
+				0px 8px 24px 0px rgba(160, 227, 220, 0.3);
+			position: absolute;
+			top: 118px;
+			left: 388px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 7;
+			font-size: 12px;
+			line-height: 1.3;
+		}
+
+		.hashTagRightBottom {
+			width: 110px;
+			height: 40px;
+			aspect-ratio: 1/1;
+			background: rgba(214, 215, 255, 1);
+			padding: 2px 6px;
+			border-radius: 88px;
+			font-family: 'GTEestiProText-regular';
+			color: rgb(53, 30, 129);
+			box-shadow: 
+				0px 8px 24px 0px rgba(128, 95, 247, 0.3);
+			position: absolute;
+			top: 410px;
+			left: 414px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 7;
+			font-size: 12px;
+			line-height: 1.3;
+		}
+
+
+
+		.KMGrowth-hashTagAndDotsGroup {
+			width: 556px;
+			height: 556px;
+			position: absolute;
+			left: 0; 
+			top: 0; 
+			right: 0; 
+			bottom: 0;
+			margin: auto;  /* 有了这个就自动居中了 */
+			// background-color: #4b445e;//测试位置
+
+			// 左小圆
+			.KMGrowth-leftDot {
+				width: 96px;
+				height: 96px;
+				aspect-ratio: 1/1;
+				position: relative;
+				z-index: 6;
+				background-color: #170645;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				left: 52px;
+				top: 94px;
+				color: @text-color;
+				font-family: 'GTEestiProText-regular';
+				font-size: 12px;
+				line-height: 1.5;
+			}
+
+			// 右小圆
+			.KMGrowth-rightDot {
+				width: 96px;
+				height: 96px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				z-index: 6;
+				background-color: #170645;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				left: 446px;
+				top: 238px;
+				color: @text-color;
+				font-family: 'GTEestiProText-regular';
+				font-size: 12px;
+				line-height: 1.5;
+			}
+
+			// 左下小圆
+			.KMGrowth-bottomDot {
+				width: 96px;
+				height: 96px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				z-index: 6;
+				background-color: #170645;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				left: 190px;
+				top: 454px;
+				color: @text-color;
+				font-family: 'GTEestiProText-regular';
+				font-size: 12px;
+				line-height: 1.5;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1660px) {
+	.KMGrowth-main-container {  
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			padding: 0 20px;
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				scale: 0.85;
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic {
+				// 中心圆
+				.KMGrowth-centerCircle {
+					left: 2px; 
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				scale: 0.85;
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 1100px;
+				position: absolute;
+				left: -40px;  
+			}
+ 
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				left: 0;  
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px; 
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px; 
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px; 
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px; 
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.KMGrowth-main-container {  
+		
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px; 
+			left: 0;
+
+			// 左信息
+			.KMGrowth-bottomInfo-textAndGraphic-left {
+				display: none; 
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic { 
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0; 
+				}
+			}
+
+			// 右信息
+			.KMGrowth-bottomInfo-textAndGraphic-right {
+				display: none; 
+			}
+
+			// 放射线
+			.radiaLine {
+				width: 1100px;
+				scale: 0.9;
+				position: absolute;
+				left: -40px;  
+			}
+
+			// 圆环
+			.insideLine {
+				left: 2px; 
+			}
+ 
+			// 圆环
+			.outLine {
+				width: 556px;
+				height: 556px; 
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				width: 110px;
+				height: 40px; 
+			}
+
+			.hashTagLeftBottom {
+				width: 110px;
+				height: 40px; 
+			}
+
+			.hashTagRightTop {
+				width: 110px;
+				height: 40px; 
+			}
+
+			.hashTagRightBottom {
+				width: 110px;
+				height: 40px; 
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1180px) {
+	.KMGrowth-main-container {  
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px; 
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic { 
+
+				// 中心圆
+				.KMGrowth-centerCircle {
+					position: absolute;
+					left: 0;  	 
+				}
+			} 
+
+			// 放射线
+			.radiaLine {
+				width: 900px;
+				scale: 0.9;
+			} 
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.KMGrowth-main-container {  
+		margin-top: -500px;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+
+			.KMGrowth-topInfo-title {
+				text-align: left;
+			}
+
+			.KMGrowth-topInfo-des {
+				text-align: left;
+			}
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 614px;  
+
+			// 放射线
+			.radiaLine {
+				width: 800px;
+				scale: 0.9;
+			} 
+			
+			.hashTagLeftBottom {
+				top: 436px;
+				left: 42px;
+			}
+
+			.hashTagRightTop {
+				top: 118px;
+				left: 418px;
+			}
+
+			.KMGrowth-hashTagAndDotsGroup {
+				scale: 0.9;
+				z-index: 4; 
+
+				// 左上小圆
+				.KMGrowth-leftDot {
+					left: 24px;
+					top: 84px;
+				}
+
+				// 右小圆
+				.KMGrowth-rightDot {
+					left: 476px;
+					top: 238px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot { 
+					left: 220px;
+					top: 474px; 
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 880px) {
+	.KMGrowth-main-container { 
+		// 旋转动画
+		@keyframes CircleAnimation {
+			0% {
+				transform: rotate(0deg);
+				scale: 0.8;
+				}
+			100% {
+				transform: rotate(360deg);
+				scale: 0.8;
+			}
+		}
+
+		justify-content: center;
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			padding: 0px 48px 0px 48px;
+		}
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			transform: scale(0.9);
+ 
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic { 
+				transform: scale(0.8);
+			}
+ 
+			// 放射线
+			.radiaLine {
+				width: 680px;
+				transform: scale(1.38) translateX(-12px); 
+			}
+
+			// 圆环
+			.insideLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				transform: scale(0.8);
+				animation: CircleAnimation 40s infinite linear;
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.8);
+			}
+
+
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.8);
+				
+				// 标签以及小圆
+				.hashTagLeftTop {
+					transform: scale(0.75);
+				}
+
+				.hashTagLeftBottom {
+					transform: scale(0.75);
+				}
+
+				.hashTagRightTop {
+					transform: scale(0.75);
+				}
+
+				.hashTagRightBottom {
+					transform: scale(0.8);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 820px) {
+	.KMGrowth-main-container { 
+		margin-top: -140px;
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	.KMGrowth-main-container { 
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo {
+			height: 564px; 
+			transform: scale(0.8);
+
+ 
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic { 
+				transform: scale(0.8);
+			} 
+
+			// 圆环
+			.insideLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.hashTagLeftTop {
+				transform: scale(0.75);
+			}
+
+			.hashTagLeftBottom { 
+				transform: scale(0.75);
+			}
+
+			.hashTagRightTop {
+				transform: scale(0.75);
+			}
+
+			.hashTagRightBottom {
+				transform: scale(0.8);
+			}
+
+
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.8);
+ 
+				// 右小圆
+				.KMGrowth-rightDot { 
+					left: 476px;
+				}
+
+				// 左下小圆
+				.KMGrowth-bottomDot { 
+					top: 474px; 
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {
+	.KMGrowth-main-container { 
+		margin-top: -260px;
+
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo { 
+			width: 570px;
+			transform: scale(0.8);
+			margin-top: -20px;
+ 
+			// 放射线
+			.radiaLine {
+				display: none;
+			}
+
+			// 中间图形
+			.KMGrowth-bottomInfo-circleGraphic { 
+				transform: scale(0.8);	 
+			} 
+
+			// 圆环
+			.insideLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.8);
+			}
+
+			// 标签以及小圆
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.8);
+
+				.hashTagLeftTop { 
+					transform: scale(0.75);
+				}
+	
+				.hashTagLeftBottom { 
+					transform: scale(0.75);
+				}
+	
+				.hashTagRightTop { 
+					transform: scale(0.75);
+				}
+	
+				.hashTagRightBottom { 
+					transform: scale(0.8);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 620px) {
+	.KMGrowth-main-container { 
+ 
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo { 
+			width: 518px;
+
+			// 圆环
+			.insideLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.centerLine {
+				transform: scale(0.8);
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.8) translateX(-24px);
+			}
+
+			// 标签以及小圆
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.8) translateX(-32px);
+
+				.hashTagLeftTop { 
+					transform: scale(0.75);
+				}
+	
+				.hashTagLeftBottom { 
+					transform: scale(0.75);
+				}
+	
+				.hashTagRightTop { 
+					transform: scale(0.75);
+				}
+	
+				.hashTagRightBottom { 
+					transform: scale(0.8);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.KMGrowth-main-container { 
+		margin-top: -400px;
+
+		// 旋转动画
+		@keyframes CircleAnimation {
+			0% {
+				transform: rotate(0deg);
+				scale: 0.7;
+				}
+			100% {
+				transform: rotate(360deg);
+				scale: 0.7;
+			}
+		}
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			.KMGrowth-topInfo-title {
+				font-size: 24px;
+			}
+		}
+ 
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo { 
+			width: 470px;
+
+			// 圆环
+			.insideLine {
+				left: -2px;
+				transform: scale(0.75);
+			}
+
+			// 圆环
+			.centerLine {
+				left: -4px;
+				transform: scale(0.75);
+				animation: CircleAnimation 40s infinite linear;
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.7) translateX(-62px);
+			}
+
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.72) translateX(-60px);
+
+				// 标签以及小圆
+				.hashTagLeftTop { 
+					transform: scale(0.7);
+				}
+
+				.hashTagLeftBottom { 
+					transform: scale(0.7);
+				}
+
+				.hashTagRightTop { 
+					transform: scale(0.7);
+				}
+
+				.hashTagRightBottom { 
+					transform: scale(0.7);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 540px) {
+	.KMGrowth-main-container { 
+		margin-top: -400px;
+		margin-bottom: -80px;
+
+		// 旋转动画
+		@keyframes CircleAnimation {
+			0% {
+				transform: rotate(0deg);
+				scale: 0.6;
+				}
+			100% {
+				transform: rotate(360deg);
+				scale: 0.6;
+			}
+		}
+
+ 
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo { 
+			width: 436px;
+
+			// 圆环
+			.insideLine {
+				left: -2px;
+				transform: scale(0.7);
+			}
+
+			// 圆环
+			.centerLine {
+				left: -12px;
+				transform: scale(0.75);
+				animation: CircleAnimation 40s infinite linear;
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.65) translateX(-96px);
+			}
+
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.67) translateX(-100px);
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.KMGrowth-main-container { 
+
+		// 顶部文字
+		.KMGrowth-main-container-topInfo {
+			padding: 0px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.KMGrowth-main-container { 
+		margin-top: -640px;
+		margin-bottom: 400px;
+
+		// 旋转动画
+		@keyframes CircleAnimation {
+			0% {
+				transform: rotate(0deg);
+				scale: 0.52;
+				}
+			100% {
+				transform: rotate(360deg);
+				scale: 0.52;
+			}
+		}
+
+ 
+		// 底部图形容器
+		.KMGrowth-main-container-bottomInfo { 
+			width: 386px;
+			height: 386px;
+			left: -46px;
+
+			// 圆环
+			.insideLine {
+				left: -2px;
+				transform: scale(0.6);
+			}
+
+			.KMGrowth-bottomInfo-circleGraphic {
+				.KMGrowth-centerCircle {
+					width: 200px;
+					height: 200px;
+					
+					> p {
+						font-size: 18px;
+					}
+				}
+			}
+
+			// 圆环
+			.centerLine {
+				left: -34px;
+				animation: CircleAnimation 40s infinite linear;
+			}
+
+			// 圆环
+			.outLine {
+				transform: scale(0.56) translateX(-146px);
+			}
+
+			.KMGrowth-hashTagAndDotsGroup { 
+				transform: scale(0.58) translateX(-152px);
+			}
+		}
+	}
+}

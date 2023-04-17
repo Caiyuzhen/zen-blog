@@ -1,0 +1,265 @@
+Date : 2022-11-16 00:13:29
+Directory : /Users/aic/Desktop/zen-blog
+Total : 175 files,  38261 codes, 1166 comments, 1770 blanks, all 41197 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          8 |     28,461 |          0 |          3 |     28,464 |
+| Less               |         33 |      5,507 |        321 |        886 |      6,714 |
+| TypeScript React   |         47 |      2,236 |        432 |        589 |      3,257 |
+| JavaScript         |         15 |      1,372 |        393 |        197 |      1,962 |
+| XML                |         63 |        516 |          0 |         60 |        576 |
+| TypeScript         |          4 |         70 |         17 |         21 |        108 |
+| CSS                |          1 |         60 |          3 |         10 |         73 |
+| JSON with Comments |          1 |         22 |          0 |          1 |         23 |
+| HTML               |          1 |         13 |          0 |          1 |         14 |
+| Markdown           |          2 |          4 |          0 |          2 |          6 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                           | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                              |        175 |     38,261 |      1,166 |      1,770 |     41,197 |
+| api                                                                                                            |          1 |         35 |          9 |         17 |         61 |
+| config                                                                                                         |         10 |        967 |        327 |        112 |      1,406 |
+| config/jest                                                                                                    |          3 |         65 |          7 |         14 |         86 |
+| config/webpack                                                                                                 |          1 |          7 |          0 |          3 |         10 |
+| config/webpack/persistentCache                                                                                 |          1 |          7 |          0 |          3 |         10 |
+| content                                                                                                        |          4 |        159 |          0 |          0 |        159 |
+| content/articles                                                                                               |          3 |        140 |          0 |          0 |        140 |
+| content/articles/articleList                                                                                   |          1 |         28 |          0 |          0 |         28 |
+| content/articles/inspireList                                                                                   |          2 |        112 |          0 |          0 |        112 |
+| content/works                                                                                                  |          1 |         19 |          0 |          0 |         19 |
+| public                                                                                                         |          1 |          1 |          0 |          0 |          1 |
+| scripts                                                                                                        |          3 |        332 |         45 |         49 |        426 |
+| src                                                                                                            |        147 |      8,375 |        769 |      1,565 |     10,709 |
+| src/api                                                                                                        |          1 |         65 |         12 |         24 |        101 |
+| src/assets                                                                                                     |         62 |        515 |          0 |         60 |        575 |
+| src/assets/svg                                                                                                 |         61 |        514 |          0 |         60 |        574 |
+| src/components                                                                                                 |         66 |      7,384 |        663 |      1,333 |      9,380 |
+| src/components/Border                                                                                          |          2 |         17 |          1 |          3 |         21 |
+| src/components/HomePage                                                                                        |         60 |      7,259 |        637 |      1,289 |      9,185 |
+| src/components/HomePage/AboutMe                                                                                |          2 |      1,035 |         94 |        152 |      1,281 |
+| src/components/HomePage/Articles                                                                               |          8 |        965 |        101 |        203 |      1,269 |
+| src/components/HomePage/Articles/ArticleCard                                                                   |          2 |        235 |          7 |         43 |        285 |
+| src/components/HomePage/Articles/InspiraCard                                                                   |          2 |        112 |          3 |         20 |        135 |
+| src/components/HomePage/Articles/SideNav                                                                       |          2 |        212 |         47 |         50 |        309 |
+| src/components/HomePage/TitleBar                                                                               |          4 |        281 |         78 |         71 |        430 |
+| src/components/HomePage/TitleBar/FilterTabs                                                                    |          2 |        171 |         59 |         46 |        276 |
+| src/components/HomePage/WorkContainer                                                                          |         44 |      4,878 |        339 |        830 |      6,047 |
+| src/components/HomePage/WorkContainer/BannerCard                                                               |          3 |        434 |         31 |         83 |        548 |
+| src/components/HomePage/WorkContainer/ProjectCard                                                              |          2 |        110 |         12 |         28 |        150 |
+| src/components/HomePage/WorkContainer/WorkTopInfo                                                              |          2 |        226 |          7 |         45 |        278 |
+| src/components/HomePage/WorkContainer/pages                                                                    |         35 |      3,982 |        225 |        648 |      4,855 |
+| src/components/HomePage/WorkContainer/pages/AutoStep                                                           |          2 |        148 |          7 |         25 |        180 |
+| src/components/HomePage/WorkContainer/pages/Automation                                                         |          2 |        161 |          3 |         27 |        191 |
+| src/components/HomePage/WorkContainer/pages/BasicInfo                                                          |          2 |        214 |         40 |         53 |        307 |
+| src/components/HomePage/WorkContainer/pages/BlockReference                                                     |          2 |        318 |          8 |         39 |        365 |
+| src/components/HomePage/WorkContainer/pages/BusinessGoals                                                      |          2 |        314 |          4 |         51 |        369 |
+| src/components/HomePage/WorkContainer/pages/CanvasBlock                                                        |          2 |        257 |         17 |         45 |        319 |
+| src/components/HomePage/WorkContainer/pages/DefinitionBlock                                                    |          2 |        154 |          6 |         28 |        188 |
+| src/components/HomePage/WorkContainer/pages/Editorial                                                          |          2 |        181 |         10 |         30 |        221 |
+| src/components/HomePage/WorkContainer/pages/ExpandPlayground                                                   |          2 |        301 |         12 |         41 |        354 |
+| src/components/HomePage/WorkContainer/pages/HashtagDM                                                          |          2 |        223 |         21 |         30 |        274 |
+| src/components/HomePage/WorkContainer/pages/Intergation                                                        |          2 |        228 |          8 |         32 |        268 |
+| src/components/HomePage/WorkContainer/pages/KMGrowth                                                           |          2 |        370 |         25 |         40 |        435 |
+| src/components/HomePage/WorkContainer/pages/KnowledgeGraphic                                                   |          2 |          8 |          0 |          4 |         12 |
+| src/components/HomePage/WorkContainer/pages/UserFeedback                                                       |          2 |        340 |         11 |         58 |        409 |
+| src/components/HomePage/WorkContainer/pages/UserTypeInfo                                                       |          2 |        398 |         20 |         62 |        480 |
+| src/components/HomePage/WorkContainer/pages/UxStategy                                                          |          2 |        227 |          6 |         33 |        266 |
+| src/components/Mouse                                                                                           |          3 |        101 |         25 |         38 |        164 |
+| src/components/NotFound                                                                                        |          1 |          7 |          0 |          3 |         10 |
+| src/design                                                                                                     |          1 |          8 |          3 |          2 |         13 |
+| src/design/color                                                                                               |          1 |          8 |          3 |          2 |         13 |
+| src/hooks                                                                                                      |          1 |         18 |         32 |         25 |         75 |
+| src/router                                                                                                     |          1 |         41 |          2 |          5 |         48 |
+| src/store                                                                                                      |          5 |         94 |         27 |         44 |        165 |
+| src/store/reducers                                                                                             |          4 |         82 |         19 |         33 |        134 |
+| src/types                                                                                                      |          2 |         49 |         11 |         16 |         76 |
+| src/utils                                                                                                      |          3 |         53 |          9 |         18 |         80 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                       | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/aic/Desktop/zen-blog/README.md                                                                          | Markdown           |          2 |          0 |          1 |          3 |
+| /Users/aic/Desktop/zen-blog/api/index.js                                                                       | JavaScript         |         35 |          9 |         17 |         61 |
+| /Users/aic/Desktop/zen-blog/config/env.js                                                                      | JavaScript         |         59 |         35 |         11 |        105 |
+| /Users/aic/Desktop/zen-blog/config/getHttpsConfig.js                                                           | JavaScript         |         51 |          7 |          9 |         67 |
+| /Users/aic/Desktop/zen-blog/config/jest/babelTransform.js                                                      | JavaScript         |         25 |          0 |          5 |         30 |
+| /Users/aic/Desktop/zen-blog/config/jest/cssTransform.js                                                        | JavaScript         |          9 |          3 |          3 |         15 |
+| /Users/aic/Desktop/zen-blog/config/jest/fileTransform.js                                                       | JavaScript         |         31 |          4 |          6 |         41 |
+| /Users/aic/Desktop/zen-blog/config/modules.js                                                                  | JavaScript         |         80 |         30 |         25 |        135 |
+| /Users/aic/Desktop/zen-blog/config/paths.js                                                                    | JavaScript         |         55 |         10 |         13 |         78 |
+| /Users/aic/Desktop/zen-blog/config/webpack.config.js                                                           | JavaScript         |        587 |        180 |         30 |        797 |
+| /Users/aic/Desktop/zen-blog/config/webpack/persistentCache/createEnvironmentHash.js                            | JavaScript         |          7 |          0 |          3 |         10 |
+| /Users/aic/Desktop/zen-blog/config/webpackDevServer.config.js                                                  | JavaScript         |         63 |         58 |          7 |        128 |
+| /Users/aic/Desktop/zen-blog/content/articles/articleList/articleList.json                                      | JSON               |         28 |          0 |          0 |         28 |
+| /Users/aic/Desktop/zen-blog/content/articles/inspireList/InspireNavSidebar.json                                | JSON               |         24 |          0 |          0 |         24 |
+| /Users/aic/Desktop/zen-blog/content/articles/inspireList/inspireCardContent.json                               | JSON               |         88 |          0 |          0 |         88 |
+| /Users/aic/Desktop/zen-blog/content/works/bannerContent.json                                                   | JSON               |         19 |          0 |          0 |         19 |
+| /Users/aic/Desktop/zen-blog/index.html                                                                         | HTML               |         13 |          0 |          1 |         14 |
+| /Users/aic/Desktop/zen-blog/package-lock.json                                                                  | JSON               |     28,146 |          0 |          1 |     28,147 |
+| /Users/aic/Desktop/zen-blog/package.json                                                                       | JSON               |        144 |          0 |          1 |        145 |
+| /Users/aic/Desktop/zen-blog/public/vite.svg                                                                    | XML                |          1 |          0 |          0 |          1 |
+| /Users/aic/Desktop/zen-blog/scripts/build.js                                                                   | JavaScript         |        174 |         21 |         23 |        218 |
+| /Users/aic/Desktop/zen-blog/scripts/start.js                                                                   | JavaScript         |        122 |         17 |         16 |        155 |
+| /Users/aic/Desktop/zen-blog/scripts/test.js                                                                    | JavaScript         |         36 |          7 |         10 |         53 |
+| /Users/aic/Desktop/zen-blog/server.js                                                                          | JavaScript         |         38 |         12 |         19 |         69 |
+| /Users/aic/Desktop/zen-blog/src/App.less                                                                       | Less               |         45 |          0 |         14 |         59 |
+| /Users/aic/Desktop/zen-blog/src/App.tsx                                                                        | TypeScript React   |         21 |          2 |          5 |         28 |
+| /Users/aic/Desktop/zen-blog/src/api/hygraph.tsx                                                                | TypeScript React   |         65 |         12 |         24 |        101 |
+| /Users/aic/Desktop/zen-blog/src/assets/react.svg                                                               | XML                |          1 |          0 |          0 |          1 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/Icon-doubleCircle.svg                                               | XML                |         13 |          0 |          1 |         14 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-automation.svg                                                   | XML                |         37 |          0 |          1 |         38 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-pageBg.svg                                                       | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-radia-dottedLine.svg                                             | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-radia-normalLine.svg                                             | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-radia-outLine.svg                                                | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-radia.svg                                                        | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-tiltBg.svg                                                       | XML                |         10 |          0 |          0 |         10 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-userFeedBack.svg                                                 | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/bg-uxStategy.svg                                                    | XML                |         11 |          0 |          1 |         12 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/graphic-doubleSquare.svg                                            | XML                |          9 |          0 |          1 |         10 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/graphic-tranglesBottom.svg                                          | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/graphic-tranglesMedium.svg                                          | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/graphic-tranglesTop.svg                                             | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-Quota.svg                                                      | XML                |         13 |          0 |          1 |         14 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-arrDown.svg                                                    | XML                |         11 |          0 |          1 |         12 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-arrUp.svg                                                      | XML                |         11 |          0 |          1 |         12 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-back.svg                                                       | XML                |         18 |          0 |          1 |         19 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-book.svg                                                       | XML                |          5 |          0 |          1 |          6 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-business.svg                                                   | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-circle.svg                                                     | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-colorBorder.svg                                                | XML                |         11 |          0 |          1 |         12 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-contact.svg                                                    | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-desLine.svg                                                    | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-designIcon.svg                                                 | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-detail.svg                                                     | XML                |         12 |          0 |          1 |         13 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-discord.svg                                                    | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-download.svg                                                   | XML                |          4 |          0 |          1 |          5 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-dribble.svg                                                    | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-facebook.svg                                                   | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-fun.svg                                                        | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-gear.svg                                                       | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-github.svg                                                     | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-gointo.svg                                                     | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-gradualArrow.svg                                               | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-instagram.svg                                                  | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-jueJin.svg                                                     | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-next.svg                                                       | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-okjike.svg                                                     | XML                |         14 |          0 |          1 |         15 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-personal.svg                                                   | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-product.svg                                                    | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-squareGraphic.svg                                              | XML                |         11 |          0 |          1 |         12 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-tiktok.svg                                                     | XML                |         16 |          0 |          1 |         17 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-titter.svg                                                     | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-tran.svg                                                       | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-upArrow.svg                                                    | XML                |          9 |          0 |          1 |         10 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-user.svg                                                       | XML                |          5 |          0 |          1 |          6 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-whatApp.svg                                                    | XML                |         10 |          0 |          1 |         11 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/icon-zhihu.svg                                                      | XML                |          3 |          0 |          1 |          4 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/link-blue.svg                                                       | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/link-green.svg                                                      | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/link-orange.svg                                                     | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/link-purple.svg                                                     | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-BottomLeft.svg                                                  | XML                |         17 |          0 |          1 |         18 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-BottomRight.svg                                                 | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-RightBottom.svg                                                 | XML                |         17 |          0 |          1 |         18 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-RightTop.svg                                                    | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-TopLeft.svg                                                     | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-TopRight.svg                                                    | XML                |         17 |          0 |          1 |         18 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-leftBottom.svg                                                  | XML                |          7 |          0 |          1 |          8 |
+| /Users/aic/Desktop/zen-blog/src/assets/svg/pop-leftTop.svg                                                     | XML                |         17 |          0 |          1 |         18 |
+| /Users/aic/Desktop/zen-blog/src/components/Border/Border.less                                                  | Less               |          5 |          1 |          0 |          6 |
+| /Users/aic/Desktop/zen-blog/src/components/Border/Border.tsx                                                   | TypeScript React   |         12 |          0 |          3 |         15 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/AboutMe/AboutMe.less                                       | Less               |        888 |         93 |        140 |      1,121 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/AboutMe/AboutMe.tsx                                        | TypeScript React   |        147 |          1 |         12 |        160 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/ArticleCard/ArticleCard.less                      | Less               |        208 |          6 |         34 |        248 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/ArticleCard/ArticleCard.tsx                       | TypeScript React   |         27 |          1 |          9 |         37 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/Articles.less                                     | Less               |        277 |         14 |         41 |        332 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/Articles.tsx                                      | TypeScript React   |        129 |         30 |         49 |        208 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/InspiraCard/InspiraCard.less                      | Less               |         84 |          2 |         13 |         99 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/InspiraCard/InspiraCard.tsx                       | TypeScript React   |         28 |          1 |          7 |         36 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/SideNav/SideNav.less                              | Less               |        141 |         34 |         24 |        199 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/Articles/SideNav/SideNav.tsx                               | TypeScript React   |         71 |         13 |         26 |        110 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/HomePage.less                                              | Less               |         29 |          5 |          4 |         38 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/HomePage.tsx                                               | TypeScript React   |         71 |         20 |         29 |        120 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/TitleBar/FilterTabs/Filter.less                            | Less               |        104 |         21 |         18 |        143 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/TitleBar/FilterTabs/FilterTabs.tsx                         | TypeScript React   |         67 |         38 |         28 |        133 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/TitleBar/TitleBar.less                                     | Less               |         71 |         11 |         12 |         94 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/TitleBar/TitleBar.tsx                                      | TypeScript React   |         39 |          8 |         13 |         60 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/BannerCard/BannerCard.less                   | Less               |        295 |         10 |         49 |        354 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/BannerCard/BannerCard.tsx                    | TypeScript React   |        123 |         21 |         28 |        172 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/BannerCard/BannerText.tsx                    | TypeScript React   |         16 |          0 |          6 |         22 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/MainContainer.less                           | Less               |         70 |          9 |         10 |         89 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/MainContainer.tsx                            | TypeScript React   |         56 |         55 |         16 |        127 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/ProjectCard/ProjectCard.less                 | Less               |         67 |          2 |         15 |         84 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/ProjectCard/ProjectCard.tsx                  | TypeScript React   |         43 |         10 |         13 |         66 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/WorkTopInfo/WorkTopInfo.less                 | Less               |        188 |          4 |         42 |        234 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/WorkTopInfo/WorkTopInfo.tsx                  | TypeScript React   |         38 |          3 |          3 |         44 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/AutoStep/AutoStep.less                 | Less               |        111 |          4 |         20 |        135 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/AutoStep/AutoStep.tsx                  | TypeScript React   |         37 |          3 |          5 |         45 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/Automation/Automation.less             | Less               |        126 |          3 |         18 |        147 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/Automation/Automation.tsx              | TypeScript React   |         35 |          0 |          9 |         44 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/BasicInfo/BasicInfo.less               | Less               |        150 |          1 |         34 |        185 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/BasicInfo/BasicInfo.tsx                | TypeScript React   |         64 |         39 |         19 |        122 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/BlockReference/BlockReference.less     | Less               |        267 |          5 |         32 |        304 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/BlockReference/BlockReference.tsx      | TypeScript React   |         51 |          3 |          7 |         61 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/BusinessGoals/BusinessGoals.less       | Less               |        253 |          4 |         43 |        300 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/BusinessGoals/BusinessGoals.tsx        | TypeScript React   |         61 |          0 |          8 |         69 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/CanvasBlock/CanvasBlock.less           | Less               |        208 |          8 |         32 |        248 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/CanvasBlock/CanvasBlock.tsx            | TypeScript React   |         49 |          9 |         13 |         71 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/DefinitionBlock/DefinitionBlock.less   | Less               |        111 |          4 |         23 |        138 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/DefinitionBlock/DefinitionBlock.tsx    | TypeScript React   |         43 |          2 |          5 |         50 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/Editorial/Editoral.less                | Less               |        143 |          6 |         23 |        172 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/Editorial/Editoral.tsx                 | TypeScript React   |         38 |          4 |          7 |         49 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/ExpandPlayground/ExpandPlayground.less | Less               |        235 |          8 |         33 |        276 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/ExpandPlayground/ExpandPlayground.tsx  | TypeScript React   |         66 |          4 |          8 |         78 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/HashtagDM/HashtagDM.less               | Less               |        179 |         15 |         24 |        218 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/HashtagDM/HashtagDM.tsx                | TypeScript React   |         44 |          6 |          6 |         56 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/Intergation/Intergation.less           | Less               |        172 |          4 |         29 |        205 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/Intergation/Intergation.tsx            | TypeScript React   |         56 |          4 |          3 |         63 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/KMGrowth/KMGrowth.less                 | Less               |        312 |         18 |         32 |        362 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/KMGrowth/KMGrowth.tsx                  | TypeScript React   |         58 |          7 |          8 |         73 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/KnowledgeGraphic/KnowledgeGraphic.less | Less               |          0 |          0 |          1 |          1 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/KnowledgeGraphic/KnowledgeGraphic.tsx  | TypeScript React   |          8 |          0 |          3 |         11 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/ProjectA.less                          | Less               |         61 |          1 |         15 |         77 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/ProjectA.tsx                           | TypeScript React   |         77 |         26 |         34 |        137 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/UserFeedback/UserFeedback.less         | Less               |        279 |          9 |         39 |        327 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/UserFeedback/UserFeedback.tsx          | TypeScript React   |         61 |          2 |         19 |         82 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/UserTypeInfo/UserTypeInfo.less         | Less               |        227 |          8 |         39 |        274 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/UserTypeInfo/UserTypeInfo.tsx          | TypeScript React   |        171 |         12 |         23 |        206 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/UxStategy/UxStategy.less               | Less               |        147 |          2 |         22 |        171 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/UxStategy/UxStategy.tsx                | TypeScript React   |         80 |          4 |         11 |         95 |
+| /Users/aic/Desktop/zen-blog/src/components/HomePage/WorkContainer/pages/readme.md                              | Markdown           |          2 |          0 |          1 |          3 |
+| /Users/aic/Desktop/zen-blog/src/components/Mouse/MouseDot.less                                                 | Less               |         46 |          6 |          9 |         61 |
+| /Users/aic/Desktop/zen-blog/src/components/Mouse/MouseDot.tsx                                                  | TypeScript React   |         27 |          7 |         10 |         44 |
+| /Users/aic/Desktop/zen-blog/src/components/Mouse/useMouseContext.tsx                                           | TypeScript React   |         28 |         12 |         19 |         59 |
+| /Users/aic/Desktop/zen-blog/src/components/NotFound/NotFound.tsx                                               | TypeScript React   |          7 |          0 |          3 |         10 |
+| /Users/aic/Desktop/zen-blog/src/design/color/Global.less                                                       | Less               |          8 |          3 |          2 |         13 |
+| /Users/aic/Desktop/zen-blog/src/hooks/getMousePosition.tsx                                                     | TypeScript React   |         18 |         32 |         25 |         75 |
+| /Users/aic/Desktop/zen-blog/src/index.css                                                                      | CSS                |         60 |          3 |         10 |         73 |
+| /Users/aic/Desktop/zen-blog/src/main.tsx                                                                       | TypeScript React   |         16 |          3 |          6 |         25 |
+| /Users/aic/Desktop/zen-blog/src/router/index.tsx                                                               | TypeScript React   |         41 |          2 |          5 |         48 |
+| /Users/aic/Desktop/zen-blog/src/store/index.tsx                                                                | TypeScript React   |         12 |          8 |         11 |         31 |
+| /Users/aic/Desktop/zen-blog/src/store/reducers/bannerDots.tsx                                                  | TypeScript React   |         24 |          5 |         10 |         39 |
+| /Users/aic/Desktop/zen-blog/src/store/reducers/index.tsx                                                       | TypeScript React   |          5 |          2 |          3 |         10 |
+| /Users/aic/Desktop/zen-blog/src/store/reducers/inspireNavs.tsx                                                 | TypeScript React   |         24 |          5 |          5 |         34 |
+| /Users/aic/Desktop/zen-blog/src/store/reducers/tabs.tsx                                                        | TypeScript React   |         29 |          7 |         15 |         51 |
+| /Users/aic/Desktop/zen-blog/src/types/global.ts                                                                | TypeScript         |         45 |          9 |         13 |         67 |
+| /Users/aic/Desktop/zen-blog/src/types/vanta.birds.min.d.ts                                                     | TypeScript         |          4 |          2 |          3 |          9 |
+| /Users/aic/Desktop/zen-blog/src/utils/Tabcontext.tsx                                                           | TypeScript React   |          9 |          3 |          6 |         18 |
+| /Users/aic/Desktop/zen-blog/src/utils/Trottle.tsx                                                              | TypeScript React   |         13 |          1 |          5 |         19 |
+| /Users/aic/Desktop/zen-blog/src/utils/useEleOnScreen.tsx                                                       | TypeScript React   |         31 |          5 |          7 |         43 |
+| /Users/aic/Desktop/zen-blog/src/vite-env.d.ts                                                                  | TypeScript         |          6 |          2 |          3 |         11 |
+| /Users/aic/Desktop/zen-blog/tsconfig.json                                                                      | JSON with Comments |         22 |          0 |          1 |         23 |
+| /Users/aic/Desktop/zen-blog/tsconfig.node.json                                                                 | JSON               |          9 |          0 |          1 |         10 |
+| /Users/aic/Desktop/zen-blog/vercel.json                                                                        | JSON               |          3 |          0 |          0 |          3 |
+| /Users/aic/Desktop/zen-blog/vite.config.ts                                                                     | TypeScript         |         15 |          4 |          2 |         21 |
+| Total                                                                                                          |                    |     38,261 |      1,166 |      1,770 |     41,197 |
++----------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

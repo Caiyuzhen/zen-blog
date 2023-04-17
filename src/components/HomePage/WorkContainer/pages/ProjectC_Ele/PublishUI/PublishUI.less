@@ -1,0 +1,288 @@
+.publishUI-main-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	padding: 124px;
+	flex-direction: row;
+	justify-content: center;
+	box-sizing: border-box;
+	position: relative;
+
+	.musicTexture {
+		position: absolute;
+		width: 620px;
+		transform: translate(-80%, 275%);
+		z-index: 0;
+	}
+
+	.publishUI-wrapper {
+		max-width: 1200px;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 1;
+
+		.publishUI-textWithLine-container {
+			position: absolute;
+			display: flex;
+			flex-direction: row;
+			gap: 28px;
+			transform: translate(228px, 120px);
+
+			.publishUI-text {
+				display: flex;
+				width: 400px;
+				height: auto;
+				align-items: start;
+				flex-direction: column;
+				box-sizing: border-box;
+				gap:  12px;
+
+				// 第一个子元素
+				> p:first-child {
+					width: 100%;
+					margin: 0;
+					font-family: 'GTEestiProText-Medium';
+					font-weight: 500;
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 24px;
+					font-weight: 500;
+					color:  rgb(255, 255, 255);
+				}
+
+				// 第二个子元素
+				> p:nth-child(2) {
+					width: 100%;
+					margin: 0;
+					font-family: 'Avenir Light';
+					line-height: 28px;
+					letter-spacing: 0em;
+					text-align: left;
+					line-height: 1.9;
+					font-size: 14px;
+					font-weight: 300;
+					color:  rgba(185, 213, 254, 1);
+				}
+			}
+		}
+
+		// UI
+		> img {
+			max-width: 1100px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.publishUI-main-container {
+		padding: 124px 124px 72px 124px;
+
+		.musicTexture {
+			width: 460px;
+			transform: translate(-70%, 305%);
+		}
+
+		.publishUI-wrapper {
+			max-width: 900px;
+
+			.publishUI-textWithLine-container {
+				transform: translate(160px, 32px);
+				gap: 8px;
+
+				.publishUI-text {
+					width: 200px;
+				}
+
+				.publishUI-line {
+					scale: 0.85;
+				}
+			}
+
+			> img {
+				width: 900px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.publishUI-main-container {
+		padding: 124px 124px 72px 124px;
+
+		.musicTexture {
+			width: 460px;
+			transform: translate(-60%, 205%);
+		}
+
+		.publishUI-wrapper {
+			max-width: 640px;
+
+			.publishUI-textWithLine-container {
+				transform: translate(138px, 8px);
+				gap: 0px;
+
+				.publishUI-text {
+					width: 200px;
+					transform: translateX(-32px);
+
+					> p:first-child {
+						font-size: 20px;
+					}
+
+					> p:nth-child(2) {
+						font-size: 12px;
+						line-height: 1.9;
+					}
+				}
+
+				.publishUI-line {
+					scale: 0.7;
+				}
+			}
+
+			> img {
+				width: 640px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 800px) {
+	.publishUI-main-container {
+		padding: 84px 124px 72px 124px;
+
+		.musicTexture {
+			width: 460px;
+			transform: translate(-32%, 165%);
+		}
+
+		.publishUI-wrapper {
+			max-width: 640px;
+
+			.publishUI-textWithLine-container {
+				transform: translate(128px, 15px);
+				gap: 0px;
+
+				.publishUI-text {
+					width: 200px;
+
+					> p:first-child {
+						font-size:18px;
+						transform: translate(-22px, 2px);
+					}
+
+					> p:nth-child(2) {
+						display: none;
+					}
+				}
+
+				.publishUI-line {
+					scale: 0.5;
+				}
+			}
+
+			> img {
+				width: 500px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.publishUI-main-container {
+		padding: 64px 124px 72px 124px;
+
+		.musicTexture {
+			width: 340px;
+			transform: translate(-22%, 165%);
+		}
+
+		.publishUI-wrapper {
+			max-width: 640px;
+
+			.publishUI-textWithLine-container {
+				transform: translate(128px, 8px);
+				gap: 0px;
+
+				.publishUI-text {
+					width: 200px;
+
+					> p:first-child {
+						font-size: 14px;
+						transform: translate(-46px, 2px);
+					}
+
+					> p:nth-child(2) {
+						display: none;
+					}
+				}
+
+				.publishUI-line {
+					scale: 0.4;
+				}
+			}
+
+			> img {
+				width: 400px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 380px) {
+	.publishUI-main-container {
+		padding: 24px 54px 22px 54px;
+
+		.musicTexture {
+			width: 280px;
+			transform: translate(-22%, 135%);
+		}
+
+		.publishUI-wrapper {
+			max-width: 640px;
+
+			.publishUI-textWithLine-container {
+				transform: translate(128px, 8px);
+				gap: 0px;
+
+				.publishUI-text {
+					width: 200px;
+
+					> p:first-child {
+						font-size: 12px;
+						transform: translate(-70px, -2px);
+					}
+
+					> p:nth-child(2) {
+						display: none;
+					}
+				}
+
+				.publishUI-line {
+					scale: 0.34;
+					transform: translate(-40px, -10px);
+				}
+			}
+
+			> img {
+				width: 280px;
+			}
+		}
+	}
+}
+
+
+
+

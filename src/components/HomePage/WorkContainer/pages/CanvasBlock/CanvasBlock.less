@@ -1,0 +1,598 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+
+@keyframes RedPointerAnimation {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	25% {
+		transform: translate(40px, -60px);
+	}
+
+	50% {
+		transform: translate(80px, -20px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+} 
+
+@keyframes YellowPointerAnimation {
+	0% {
+		transform: translate(-20px, -20px);
+	}
+	25% {
+		transform: translate(20px, -10px);
+	}
+
+	50% {
+		transform: translate(80px, -20px);
+	}
+	100% {
+		transform: translate(-20px, -20px);
+	}
+} 
+
+@keyframes BluePointerAnimation {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	25% {
+		transform: translate(50px, 16px);
+	}
+
+	50% {
+		transform: translate(68px, -38px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+} 
+
+
+.canvasBlock-main-container {
+	width: 100%;
+	height: 720px;
+	margin-top: 80px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.canvasBlock-inside-container {
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 13vw;
+		padding: 124px;
+		margin-top: 80px;
+
+		// 文字+流程图
+		.canvasBlock-baseInfo-container {
+			width: 800px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+
+			.canvasBlock-baseInfo {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: start;
+				gap: 20px;
+
+				.canvasBlock-baseInfo-title {
+					text-align: left;
+					line-height:1.2;
+					font-family: 'GTEestiProText-Bold';
+					font-size: @text-TitleSize;
+					color: @text-color;
+					margin: 0;
+				}
+
+				.canvasBlock-baseInfo-des {
+					font-family: 'GTEestiProText-Regular';
+					font-size: @text-DescriptionSize;
+					color: @description-color;
+					text-align: start;
+					line-height: 1.6;
+					margin: 0;
+				}
+			}
+		}
+
+		// 页面 page
+		.canvas-page-group {
+			overflow: visible;
+			width: 742px;
+			height: 458px;
+			position: relative;
+
+			.cursor-red {
+				position: absolute;
+				top: -56px;
+				left: 2px;
+				width: 136px;
+				z-index: 5;
+				animation: RedPointerAnimation 4s infinite linear;
+			}
+
+			.cursor-yellow {
+				position: absolute;
+				bottom: -46px;
+				right: 420px;
+				width: 268px;
+				z-index: 5;
+				animation: YellowPointerAnimation 4s infinite linear;
+			}
+
+			.cursor-blue {
+				position: absolute;
+				right: -284px;
+				bottom: -16px;
+				width: 208px;
+				z-index: 5;
+				animation: BluePointerAnimation 5s infinite linear;
+			}
+
+			.canvas-page{
+				position: absolute;
+				width: 742px;
+				height: 458px;
+				right: -30%;
+				scale: 1.25;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1560px) {
+	.canvasBlock-main-container {
+		margin-top: -100px;
+
+		.canvasBlock-inside-container {
+		 
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				width: 600px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+
+				 
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+				position: relative;
+
+				.cursor-red {
+					position: absolute;
+					top: -56px;
+					left: -132px;
+					width: 136px;
+					z-index: 5;
+				}
+
+				.cursor-yellow {
+					position: absolute;
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+					z-index: 5;
+				}
+
+				.cursor-blue {
+					position: absolute;
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+				}
+
+				.canvas-page{
+					position: absolute;
+					 
+					scale: 1.15;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1340px) {
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 720px;
+		margin-top: 80px;
+		box-sizing: border-box;
+		position: relative;
+
+		.canvasBlock-inside-container {
+
+			// 页面 page
+			.canvas-page-group {
+				width: 742px;
+				height: 458px;
+
+				.cursor-red {
+					top: -56px;
+					left: -132px;
+					width: 136px;
+				}
+
+				.cursor-yellow {
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+				}
+
+				.cursor-blue {
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+				}
+
+				.canvas-page{	 
+					scale: 1.05;
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.canvasBlock-main-container {
+		height: 720px;
+		margin-top: -130px;
+
+		.canvasBlock-inside-container {
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+
+				.cursor-red {
+					top: -56px;
+					left: -132px;
+					width: 136px;
+					transform: scale(0.9);
+				}
+
+				.cursor-yellow {
+					bottom: -46px;
+					right: 320px;
+					width: 268px;
+					transform: scale(0.9);
+				}
+
+				.cursor-blue {
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					transform: scale(0.9);
+				}
+
+				.canvas-page{
+					scale: 0.9;
+					transform: translateX(200px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.canvasBlock-main-container {
+		height: 720px;
+		margin-top: 80px;
+		margin-bottom: 220px;
+
+		.canvasBlock-inside-container {
+			flex-direction: column;
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				 
+				gap: 24px;				 
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 458px;
+
+				.cursor-red {
+					position: absolute;
+					top: -26px;
+					left: -82px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.cursor-yellow {
+					bottom: -46px;
+					right: 520px;
+					width: 268px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.cursor-blue {
+					right: -114px;
+					bottom: -16px;
+					width: 208px;
+					z-index: 5;
+					transform: scale(0.9);
+				}
+
+				.canvas-page{	 
+					scale: 0.9;
+					transform: translateX(-260px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 920px) {
+	.canvasBlock-main-container {
+		height: 620px;
+		margin-top: -20px;
+		margin-bottom: -20px;
+
+		.canvasBlock-inside-container {
+			gap: 64px;
+			padding: 124px;
+			margin-top: 80px;
+
+			// 页面 page
+			.canvas-page-group {
+				width: 742px;
+				height: 458px;
+
+				.cursor-red {
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					transform: scale(0.8);
+				}
+
+				.cursor-yellow {
+					transform: scale(0.8);
+				}
+
+				.cursor-blue {
+					right: -30px;
+					bottom: 26px;
+					transform: scale(0.8);
+				}
+
+				.canvas-page{
+					scale: 0.8;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	.canvasBlock-main-container {
+		height: 620px;
+		margin-top: -120px;
+
+		.canvasBlock-inside-container {
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {	
+				width: 100%; 
+				gap: 24px; 
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				width: 742px;
+				height: 458px;
+				scale: 0.85;
+
+				.cursor-red {
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					transform: scale(0.8) translate(0, -100px);
+				}
+
+				.cursor-yellow {
+					transform: scale(0.8) translate(0, -100px);
+				}
+
+				.cursor-blue {
+					transform: scale(0.8) translate(0, -100px);
+				}
+
+				.canvas-page{
+					transform: translate(-300px, -100px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 420px;
+		margin-top: -180px;
+		margin-bottom: 20px;
+
+		.canvasBlock-inside-container {
+			gap: 0px;
+			padding: 124px;
+
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {
+				gap: 24px;				 
+			}
+
+			// 页面 page
+			.canvas-page-group {
+				overflow: visible;
+				width: 742px;
+				height: 358px;
+				position: relative;
+				scale: 0.75;
+
+				.cursor-red {
+					transform: scale(0.8);
+				}
+
+				.cursor-yellow {
+					transform: scale(0.8);
+				}
+
+				.cursor-blue {
+					transform: scale(0.8);
+				}
+
+				.canvas-page{	 
+					scale: 0.75;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.canvasBlock-main-container {
+		.canvasBlock-inside-container {
+			// 文字+流程图
+			.canvasBlock-baseInfo-container {				 
+				.canvasBlock-baseInfo {
+					.canvasBlock-baseInfo-title {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.canvasBlock-main-container {
+		width: 100%;
+		height: 520px;
+		margin-top: -160px;
+		margin-bottom: -80px;
+
+		.canvasBlock-inside-container {
+			padding: 54px;
+			margin-top: 80px;
+
+			// 页面 page
+			.canvas-page-group {
+				width: 742px;
+				height: 458px;
+				scale: 0.65;
+				transform: translateY(-80px);
+
+				.cursor-red {
+					top: 6px;
+					left: 2px;
+					width: 136px;
+					z-index: 5;
+					transform: scale(0.8) translate(40px, -260px);
+				}
+
+				.cursor-yellow {
+					transform: scale(0.8) translate(60px, -260px);
+				}
+
+				.cursor-blue {
+					transform: scale(0.8) translate(-20px, -260px);
+				}
+
+				.canvas-page{
+					scale: 0.8;
+					transform: translate(-280px, -30px);
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {	//4200px
+	.canvasBlock-main-container {
+		height: 220px;
+		margin-top: 400px;
+		margin-bottom: 20px;
+
+		.canvasBlock-inside-container {
+			gap: 64px;
+			padding: 54px;
+
+			// 页面 page
+			.canvas-page-group {
+				width: 742px;
+				height: 458px;
+				margin-top: 40px;
+
+				.cursor-red {
+					width: 90px;
+					top: -142px;
+					left: 100px;
+				}
+
+				.cursor-yellow {
+					width: 160px;
+					top: 40px;
+					left: 120px;
+					transform: scale(0.65);
+				}
+
+				.cursor-blue {
+					width: 180px;
+					right: 140px;
+					top: 20px;
+					transform: scale(0.5);
+				}
+
+				.canvas-page{
+					scale: 0.6;
+					transform: translate(-372px, -460px);
+				}
+			}
+		}
+	}
+}
+
+

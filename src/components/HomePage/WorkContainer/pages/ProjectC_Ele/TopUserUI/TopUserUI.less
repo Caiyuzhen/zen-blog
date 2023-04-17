@@ -1,0 +1,536 @@
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../../../../assets/font/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Bold';
+	src: url('../../../../../assets/font/GTEestiProText-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Book';
+	src: url('../../../../../assets/font/GTEestiProText-Book.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Medium';
+	src: url('../../../../../assets/font/GTEestiProText-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'GTEestiProText-Regular';
+	src: url('../../../../../assets/font/GTEestiProText-Regular.ttf');
+}
+
+.topUserUI-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	padding: 124px;
+	flex-direction: row;
+	justify-content: center;
+	box-sizing: border-box;
+	position: relative;
+
+	.musicTexture {
+		position: absolute;
+		width: 620px;
+		transform: translate(80%, 75%);
+		z-index: 0;
+	}
+
+	.topUserUI-wrapper {
+		max-width: 1500px;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 1;
+		
+		.topUser-left-container {
+			max-width: 404px;
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			position: absolute;
+			transform: translate(-348px, 66px);
+			box-sizing: border-box;
+
+			> img {
+				max-width: 404px;
+				width: 80%;
+			}
+
+			.topUser-leftText-container {
+				display: flex;
+				width: 100%;
+				height: auto;
+				align-items: start;
+				flex-direction: column;
+				box-sizing: border-box;
+				gap:  12px;
+
+				// 第一个子元素
+				> p:first-child {
+					width: 100%;
+					margin: 0;
+					font-family: 'GTEestiProText-Medium';
+					font-weight: 500;
+					line-height: 1.5;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 24px;
+					font-weight: 500;
+					color:  rgb(255, 255, 255);
+				}
+
+				// 第二个子元素
+				> p:nth-child(2) {
+					width: 50%;
+					margin: 0;
+					line-height: 1.9;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 14px;
+					font-weight: 300;
+					color:  rgba(185, 213, 254, 1);
+				}
+			}
+		}
+
+		// 中心的 UI
+		> img {
+			// max-width: 660px;
+			width: 580px;
+			box-shadow: 0px 8px 38px 0px rgba(21, 8, 49, 0.8);
+		}
+
+		.topUser-right-container {
+			width: auto;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 0px;
+			position: absolute;
+			bottom: 0;
+			transform: translate(428px, 96px);
+			box-sizing: border-box;
+
+			.topUser-rightText-container {
+				display: flex;
+				width: 400px;
+				height: auto;
+				align-items: start;
+				flex-direction: column;
+				box-sizing: border-box;
+				gap:  12px;
+
+				// 第一个子元素
+				> p:first-child {
+					width: 100%;
+					margin: 0;
+					margin-left: 36px;
+					font-family: 'GTEestiProText-Medium';
+					font-weight: 500;
+					line-height: 1.5;	
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 24px;
+					font-weight: 500;
+					color:  rgb(255, 255, 255);
+				}
+
+				// 第二个子元素
+				> p:nth-child(2) {
+					width: 100%;
+					margin: 0;
+					margin-left: 36px;
+					font-family: 'Avenir Light';
+					line-height: 1.9;
+					letter-spacing: 0em;
+					text-align: left;
+					font-size: 14px;
+					font-weight: 300;
+					color:  rgba(185, 213, 254, 1);
+				}
+			}
+
+			> img {
+				width: 484px;
+			}
+		}
+	}
+}
+
+
+
+
+@media screen and (max-width: 1280px) {
+	.topUserUI-container {
+
+		.musicTexture {
+			width: 500px;
+			transform: translate(80%, 75%);
+		}
+	
+		.topUserUI-wrapper {
+			
+			.topUser-left-container {
+				transform: translate(-222px, 60px);
+	
+				> img {
+					max-width: 254px;
+					width: 80%;
+				}
+	
+				.topUser-leftText-container {
+	
+					// 第一个子元素
+					> p:first-child {
+						font-weight: 500;
+						line-height: 1.5;
+						font-size: 24px;
+					}
+	
+					// 第二个子元素
+					> p:nth-child(2) {
+						width: 40%;
+						line-height: 1.9;
+						font-size: 14px;
+					}
+				}
+			}
+	
+			// 中心的 UI
+			> img {
+				// max-width: 660px;
+				width: 430px;
+			}
+	
+			.topUser-right-container {
+				transform: translate(330px, 158px);
+	
+				.topUser-rightText-container {
+					width: 400px;
+					gap:  12px;
+	
+					// 第一个子元素
+					> p:first-child {
+						width: 100%;
+						margin: 0;
+						margin-left: 36px;
+						line-height: 1.5;
+						font-size: 24px;
+
+					}
+	
+					// 第二个子元素
+					> p:nth-child(2) {
+						width: 60%;
+						margin: 0;
+						margin-left: 36px;
+						line-height: 1.9;
+						font-size: 14px;
+					}
+				}
+	
+				> img {
+					width: 334px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1080px) {
+	.topUserUI-container {
+		.musicTexture {
+			width: 460px;
+			transform: translate(70%, 45%);
+		}
+	
+		.topUserUI-wrapper {
+			
+			.topUser-left-container {
+				transform: translate(-122px, 44px);
+	
+				// 左图
+				> img {
+					max-width: 204px;
+					width: 80%;
+				}
+	
+				.topUser-leftText-container {
+					transform: translateY(-18px);
+	
+					// 第一个子元素
+					> p:first-child {
+						width: 40%;
+						font-weight: 500;
+						line-height: 1.5;	
+						font-size: 20px;
+					}
+	
+					// 第二个子元素
+					> p:nth-child(2) {
+						width: 35%;
+						line-height: 1.9;
+						font-size: 14px;
+					}
+				}
+			}
+	
+			// 中心的 UI
+			> img {
+				// max-width: 660px;
+				width: 320px;
+			}
+	
+			// 右边内容
+			.topUser-right-container {
+				transform: translate(280px, 164px);
+	
+				.topUser-rightText-container {
+					width: 400px;
+					gap:  12px;
+	
+					// 第一个子元素
+					> p:first-child {
+						width: 50%;
+						margin: 0;
+						margin-left: 36px;
+						line-height: 1.5;
+						font-size: 20px;
+
+					}
+	
+					// 第二个子元素
+					> p:nth-child(2) {
+						width: 50%;
+						margin: 0;
+						margin-left: 36px;
+						line-height: 1.9;
+						font-size: 14px;
+					}
+				}
+	
+				> img {
+					width: 254px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	.topUserUI-container {
+		padding: 124px 124px 84px 124px;
+
+		.musicTexture {
+			width: 450px;
+			transform: translate(38%, 35%);
+		}
+	
+		.topUserUI-wrapper {
+			
+			.topUser-left-container {
+				width: 800px;
+				transform: translate(-52px, 12px);
+	
+				// 左图
+				> img {
+					width: 164px;
+				}
+	
+				.topUser-leftText-container {
+					width: 280px;
+					// transform: translateY(-18px);
+	
+					// 第一个子元素
+					> p:first-child {
+						width: 40%;
+						font-weight: 500;
+						margin-left: 2px;
+						line-height: 1.5;	
+						font-size: 14px;
+					}
+	
+					// 第二个子元素
+					> p:nth-child(2) {
+						display: none;
+					}
+				}
+			}
+	
+			// 中心的 UI
+			> img {
+				// max-width: 660px;
+				width: 260px;
+			}
+	
+			// 右边内容
+			.topUser-right-container {
+				transform: translate(220px, 64px);
+	
+				.topUser-rightText-container {
+					width: 280px;
+					gap:  12px;
+	
+					// 第一个子元素
+					> p:first-child {
+						width: 50%;
+						margin: 0;
+						margin-left: 14px;
+						line-height: 1.5;
+						font-size: 14px;
+
+					}
+	
+					// 第二个子元素
+					> p:nth-child(2) {
+						display: none;
+					}
+				}
+	
+				> img {
+					width: 184px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 580px) {
+	.topUserUI-container {
+
+		.musicTexture {
+			width: 340px;
+			transform: translate(38%, 35%);
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.topUserUI-container {
+		padding: 54px;
+	
+		.topUserUI-wrapper {
+			
+			.topUser-left-container {
+				width: 300px;
+				transform: translate(-42px, 12px);
+	
+				// 左图
+				> img {
+					width: 124px;
+				}
+	
+				.topUser-leftText-container {
+					width: 280px;
+					// transform: translateY(-18px);
+	
+					// 第一个子元素
+					> p:first-child {
+						display: none;
+					}
+				}
+			}
+	
+			// 中心的 UI
+			> img {
+				// max-width: 660px;
+				width: 200px;
+			}
+	
+			// 右边内容
+			.topUser-right-container {
+				transform: translate(200px, 44px);
+	
+				.topUser-rightText-container {
+					width: 280px;
+					gap:  12px;
+	
+					// 第一个子元素
+					> p:first-child {
+						display: none;
+					}
+				}
+	
+				> img {
+					width: 144px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.topUserUI-container {
+		padding: 54px;
+
+		.musicTexture {
+			width: 300px;
+			transform: translate(22%, 35%);
+		}
+	
+		.topUserUI-wrapper {
+			
+			.topUser-left-container {
+				width: 300px;
+				transform: translate(2px, 12px);
+	
+				// 左图
+				> img {
+					width: 84px;
+				}
+	
+				.topUser-leftText-container {
+					width: 280px;
+					// transform: translateY(-18px);
+	
+					// 第一个子元素
+					> p:first-child {
+						display: none;
+					}
+				}
+			}
+	
+			// 中心的 UI
+			> img {
+				// max-width: 660px;
+				width: 180px;
+			}
+	
+			// 右边内容
+			.topUser-right-container {
+				transform: translate(200px, 34px);
+	
+				.topUser-rightText-container {
+					width: 280px;
+					gap:  12px;
+	
+					// 第一个子元素
+					> p:first-child {
+						display: none;
+					}
+				}
+	
+				> img {
+					width: 124px;
+				}
+			}
+		}
+	}
+}

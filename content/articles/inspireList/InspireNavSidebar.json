@@ -1,0 +1,24 @@
+{
+	"data": [
+		{
+			"id": 0,
+			"item": "Design",
+			"icon": "../../../../src/assets/svg/icon-designIcon.svg"
+		},
+		{
+			"id": 1,
+			"item": "Marketing",
+			"icon": "../../../../src/assets/svg/icon-business.svg"
+		},
+		{
+			"id": 2,
+			"item": "Product",
+			"icon": "../../../../src/assets/svg/icon-product.svg"
+		},
+		{
+			"id": 3,
+			"item": "Others",
+			"icon": "../../../../src/assets/svg/icon-fun.svg"
+		}
+	]
+}

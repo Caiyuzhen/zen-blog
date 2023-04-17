@@ -1,0 +1,729 @@
+@import '../../../../../design/color/Global.less'; //引入全局样式库
+
+
+.pjb-UXStategy-main-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 84px 124px;
+	box-sizing: border-box;
+	position: relative;
+	gap: 124px;
+	box-sizing: border-box;
+	position: relative;
+	margin-top: -40px;
+	
+	.pjb-UXStategy-insideContainer {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		gap:64px;
+
+		// 左侧目标
+		.pjb-UXStategy-leftObjectives {
+			position: relative;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			height: 278px;
+			background: 
+				linear-gradient(314.03deg, #E7F6FF 15.69%, #D2EBFF 49.75%, #B8CCFF 84.15%);
+
+			border-radius: 14px;
+			padding: 0 24px;
+
+			.pjb-UXStategy-leftObjectives-title {
+				top: -36px;
+				position: absolute;
+				width: 75%;
+				height: 72px;
+				background: white;
+				color: #22233D;
+				box-shadow: 
+					0px 12px 16px 0px #41447E14,
+					0px 6px 12px 0px #5E61FC05;
+				border-radius: 12px;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				box-shadow: 0px 12px 16px 0px #41447E14;
+				box-shadow: 0px 6px 12px 0px #5E61FC05;
+				text-align: center;
+				line-height: 72px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.pjb-UXStategy-leftObjectives-items {
+				font-family: 'GTEestiProText-Regular';
+				font-size: 22px;
+				white-space: nowrap;
+				text-align: left;
+				color: #22233D;
+			}
+		}
+
+		// 右侧策略
+		.pjb-UXStategy-rightStategy {
+			position: relative;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			height: 278px;
+			background:
+				linear-gradient(314.03deg, #E7F6FF 15.69%, #D2EBFF 49.75%, #B8CCFF 84.15%);
+			border-radius: 14px;
+			padding: 0 24px;
+
+			.pjb-UXStategy-rightStategy-title {
+				top: -36px;
+				position: absolute;
+				width: 75%;
+				height: 72px;
+				background: white;
+				color: #22233D;
+				box-shadow: 
+					0px 12px 16px 0px #41447E14,
+					0px 6px 12px 0px #5E61FC05;
+				border-radius: 12px;
+				font-family: 'GTEestiProText-Bold';
+				font-size: 24px;
+				box-shadow: 0px 12px 16px 0px #41447E14;
+				box-shadow: 0px 6px 12px 0px #5E61FC05;
+				text-align: center;
+				line-height: 72px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.pjb-UXStategy-rightStategy-items {
+				font-family: 'GTEestiProText-Regular';
+				font-size: 22px;
+				white-space: nowrap;
+				text-align: left;
+				color: #22233D;
+			}
+		}
+	}
+
+	.dbBottomArrowIcon {
+		width: 132px;
+	}
+}
+
+
+
+@media (max-width: 1880px) {
+	.pjb-UXStategy-main-container {
+		
+		.pjb-UXStategy-insideContainer {
+			width: 100%;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				padding: 0 24px;
+
+				.pjb-UXStategy-leftObjectives-title {
+					width: 75%;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 22px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				padding: 0 24px;
+
+				.pjb-UXStategy-rightStategy-title {
+					width: 75%;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 22px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 132px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1540px) {
+	.pjb-UXStategy-main-container {
+		
+		.pjb-UXStategy-insideContainer {
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				// height: 254px !important;
+
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 22px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 22px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 22px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1400px) {
+	.pjb-UXStategy-main-container {
+		padding: 84px 124px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:48px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 20px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 20px;
+					white-space: nowrap;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 20px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 132px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1320px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -68px;
+		margin-bottom: -24px;
+
+		
+		.pjb-UXStategy-insideContainer {
+			// width: 1140px;
+			gap:48px;
+			scale: 0.9;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 224px !important;
+				width: 464px;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 20px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				height: 224px !important;
+				width: 464px;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 20px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 20px;
+					white-space: nowrap;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 112px;
+			transform: translateY(-24px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 1180px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -68px;
+		margin-bottom: -24px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:40px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				min-width: 30%;
+				height: 254px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 20px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-family: 'GTEestiProText-Regular';
+					font-size: 18px;
+					white-space: nowrap;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				min-width: 30%;
+				height: 254px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 20px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 18px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 112px;
+			transform: translateY(-48px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 1100px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -108px;
+		margin-bottom: -44px;
+		
+		.pjb-UXStategy-insideContainer {
+			// scale: 0.73;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				min-width: 32%;
+				height: 224px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 20px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 16px;
+					white-space: nowrap;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				min-width: 32%;
+				height: 224px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 20px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 16px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 92px;
+			transform: translateY(-68px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 980px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -158px;
+		margin-bottom: -68px;
+		
+		.pjb-UXStategy-insideContainer {
+			width: 132%;
+			flex-direction: column;
+			gap: 68px;
+			padding: 0 68px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				width: 100%;
+				height: 224px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 24px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-family: 'GTEestiProText-Regular';
+					font-size: 20px;
+					white-space: nowrap;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				width: 100%;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 24px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 20px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 92px;
+			transform: translateY(-108px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -178px;
+		margin-bottom: -144px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:88px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 224px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 22px;
+					top: -28px;
+					width: 75%;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 16px;
+					white-space: nowrap;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 22px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 16px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 92px;
+			transform: translateY(-128px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 680px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -188px;
+		margin-bottom: -144px;
+		padding: 54px 80px 80px 80px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:88px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 22px;
+					top: -28px;
+					position: absolute;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 16px;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+
+				.pjb-UXStategy-rightStategy-title {
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 16px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 72px;
+			transform: translateY(-108px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 640px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -158px;
+		margin-bottom: -124px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:68px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 204px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 22px;
+					height: 60px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 16px;
+					white-space: nowrap;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				height: 204px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 22px;
+					top: -28px;
+					height: 60px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 16px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 70px;
+			transform: translateY(-128px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.pjb-UXStategy-main-container {
+		margin-top: -158px;
+		margin-bottom: -104px;
+		padding: 84px;
+		
+		.pjb-UXStategy-insideContainer {
+			width: 155%;
+			gap:78px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 204px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 22px;
+					top: -28px;
+					position: absolute;
+					width: 75%;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 16px;
+					white-space: nowrap;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				height: 204px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 22px;
+					top: -28px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 16px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			width: 60px;
+			transform: translateY(-98px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 520px) {
+	.pjb-UXStategy-main-container {
+		padding: 54px 74px;
+		margin-top: -168px;
+		margin-bottom: -124px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:68px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 164px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 18px;
+					top: -26px;
+					height: 60px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 14px;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				height: 164px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 18px;
+					top: -26px;
+					height: 60px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 14px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.dbBottomArrowIcon {
+			transform: translateY(-138px);
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	.pjb-UXStategy-main-container {
+		padding: 54px  42px;
+		margin-top: -148px;
+		margin-bottom: -124px;
+		
+		.pjb-UXStategy-insideContainer {
+			gap:48px;
+
+			// 左侧目标
+			.pjb-UXStategy-leftObjectives {
+				height: 164px !important;
+
+				.pjb-UXStategy-leftObjectives-title {
+					font-size: 18px;
+					top: -26px;
+				}
+
+				.pjb-UXStategy-leftObjectives-items {
+					font-size: 12px;
+					margin-top: 20px;
+				}
+			}
+
+			// 右侧策略
+			.pjb-UXStategy-rightStategy {
+				height: 164px !important;
+
+				.pjb-UXStategy-rightStategy-title {
+					font-size: 18px;
+					top: -26px;
+				}
+
+				.pjb-UXStategy-rightStategy-items {
+					font-size: 12px;
+					margin-top: 20px;
+				}
+			}
+		}
+
+	}
+}
+

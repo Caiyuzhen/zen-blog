@@ -1,0 +1,61 @@
+
+@keyframes loadingAnmi {
+	to {
+		background-position-x: -20%; /*🔥扫到右侧为值变小！*/
+	}
+}
+
+.card-personal.skeleton {
+	background: linear-gradient(
+		100deg, /*渐变角度*/
+		rgba(255, 255, 255, 0) , /*渐变光起始颜色*/
+		rgba(255, 255, 255, 0.5) 50%, /*渐变光中间颜色*/
+		rgba(255, 255, 255, 0) 60% /*渐变光结束颜色*/
+	) #e5e0ea; /*基础的背景色*/
+	background-size: 200% 100%; /*🔥渐变光的宽度和高度*/
+	background-position-x: 180%; /*🔥渐变从 100% 左侧开始, 0% 从到右侧, + 多 80% 让光从外侧扫入, 控制这个变量来调整扫描过去的范围！*/
+	animation: 1s loadingAnmi ease-in-out infinite; /*🔥动画效果*/
+}
+
+.card-personal {
+
+	.avatar-container {
+		.avatar {
+			width: 98px !important;
+			height: 98px !important;
+			transition: all 0.25s ease-in-out;
+		}
+	}
+
+	.personal-description p {
+		text-align: left;
+		font-family: 'GTEestiProText-Regular';
+		color: #22233D;
+	}
+
+
+	.changeAvatar:hover {
+		background-color: #e5e0ea;
+		transform: rotate(360deg);
+	}
+}
+
+
+
+@media screen and (max-width: 1380px) {
+	.card-personal {
+
+		.avatar-container {
+			.avatar {
+				width: 80px !important;
+				height: 80px !important;
+			}
+		}
+	
+		.personal-description p {
+			font-size: 14px;
+		}
+	
+	}
+}
+// card-personal
