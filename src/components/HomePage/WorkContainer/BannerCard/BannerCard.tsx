@@ -142,7 +142,7 @@ export const BannerCard:FC = () => {
 
 	async function getBannerCardData() {
 		// 🌟 范型 ApiResponse 内的 data 是 IBannerCard 类型的数组[], 参考 https://juejin.cn/post/7084490905616384008
-		const res = await axios.get<ApiResponse<IBannerCard[]>>('../../../../../content/works/bannerContent.json')
+		const res = await axios.get<ApiResponse<IBannerCard[]>>('../../../../../src/assets/content/works/bannerContent.json')
 		if(res !== undefined) {
 			// console.log(res.data.data);
 			const resBannerCardData = res.data.data

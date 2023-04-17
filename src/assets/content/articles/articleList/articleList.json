@@ -1,0 +1,28 @@
+{
+	"data": [
+	  {
+		"id": 1,
+		"title": "Bi-direction Archaeology Notes",
+		"date": "29 Jun 2022",
+		"des": "/src/assets/content/articles/articleList/articleOne.md",
+		"hashTag": "Design Thinking",
+		"img": "/src/assets/img/article/article-img-01.jpg"
+	  },
+	  {
+		"id": 2,
+		"title": "Getting Started with B-Side Products",
+		"date": "02 Aug 2021",
+		"des": "/src/assets/content/articles/articleList/articleTwo.md",
+		"hashTag": "Design Thinking",
+		"img": "/src/assets/img/article/article-img-02.jpg"
+	  },
+	  {
+		"id": 3,
+		"title": "Netflix Corporate Archaeology",
+		"date": "16 Jan 2021",
+		"des": "/src/assets/content/articles/articleList/articleThree.md",
+		"hashTag": "Business Thinking",
+		"img": "/src/assets/img/article/article-img-03.jpg"
+	  }
+	]
+}

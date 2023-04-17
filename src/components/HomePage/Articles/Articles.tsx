@@ -38,7 +38,9 @@ const Articles = () => {
 	// 获取文章数据
 	const [articleList, setArticleList] = useState<IArticleList[]>([])
 	async function getArticleListData(): Promise<void> {
-		const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleList/articleList.json')
+		// const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleList/articleList.json')
+		const res = await axios.get<ApiResponse<IArticleList[]>>('/src/assets/content/articles/articleList/articleList.json ')
+		
 		const listData = res.data.data ? res.data.data : []
 		setArticleList(listData)
 		// console.log('得到 articleList', articleList)//获得数据
@@ -64,7 +66,8 @@ const Articles = () => {
 
 	useEffect(() => {
 		async function getInspiraCardList() {
-			const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
+			// const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
+			const res = await axios.get<ApiResponse<IinspireCardContent[]>>("/src/assets/content/articles/inspireList/inspireCardContent.json")
 			const inspireCard = res.data.data
 			setallinspireContextData(inspireCard)
 		}

@@ -66,7 +66,7 @@ export const SideNav:FC = () => {
 	// 获取 nav 的渲染数据
 	const [inspireNavItem, setInspireNavItem] = useState<IinspireNav[]>([])
 	async function getNavItem() {
-		const res = await axios.get<ApiResponse<IinspireNav[]>>("../../../../../content/articles/inspireList/InspireNavSidebar.json")
+		const res = await axios.get<ApiResponse<IinspireNav[]>>("/src/assets/content/articles/inspireList/InspireNavSidebar.json")
 		const navItem = res.data.data
 		// console.log('得到 navItem', navItem)
 		setInspireNavItem(navItem)

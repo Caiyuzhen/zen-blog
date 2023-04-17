@@ -1,6 +1,6 @@
 ToB (Business) products are systems used internally by enterprises or operators, which are quite different from the ToC (Consumer) products that we contact every day. When we use C-end products, we can feel the advantages and disadvantages of a product, and experience is king; but not when it comes to B-end products, which are mainly used to standardize and modularize some existing business processes and migrate them online, simplify business processes to improve efficiency and generate value for the enterprise's profit chain and contribute to the production and operation of the enterprise. Therefore, the greater the contribution of the product to the business, the more valuable it is. Common ToB products in China include 1688, Jingdong Cloud, Ali Cloud Services, Enterprise WeChat, etc., while abroad there are Slack, Google Office Suite, Trello, etc.
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/model.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/model.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
 
 
@@ -15,7 +15,7 @@ ERP: management of resources within the enterprise such as goods in and out of w
 
 SAAS: Enterprise open services and products, such as nail, is an OA application system for small and medium-sized enterprises, time and attendance is one of the general functions. For example, Teambition or Lark is also a document online communication and collaboration function, in addition to Baidu Intelligent Cloud, Ali Cloud and other web hosting systems, Youzan, Little Goose Boy, Kingdee Cloud, etc.
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/productType.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/productType.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
 
 
@@ -44,7 +44,7 @@ The core purpose is to occupy the user's mind and improve the business conversio
 
 ToB operations need to optimize the exposure rate (SEM, SEO), as well as expand enterprise sales business, to achieve the performance indicators
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/profucttable.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/profucttable.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
 
 
@@ -53,7 +53,7 @@ III. How to start the design of ToB products?
 01. Business research:
 The key to ToB product design lies in the understanding of business logic. Generally speaking, different departments have different usage scenarios, business flows and roles, and product designers need to target business combing to have an in-depth knowledge of the business, and generally the output of this stage is a flow chart. The common processes are: business model, business process, functional process, operational process, page process, data process etc., we can target the combing.
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/productmodel.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/productmodel.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
 
 02. User research:
@@ -69,7 +69,7 @@ WHAT: The organizational relationship between roles and roles, such as superiors
 
 HOW: The operation rights corresponding to different roles in the organizational structure, and the hierarchical division should be considered, for example, if A submits requirements to B for approval, B is the role with approval rights, and the roles with different rights may have different display pages.
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/userPermission.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/userPermission.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
 
 
@@ -83,10 +83,10 @@ A good process can not only form a closed loop in terms of functionality to meet
 
 The process must not be made too complicated, otherwise it will raise the learning cost of users.
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/uxflow.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/uxflow.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
 
 After we have the basic prototype, we can start to organize feasibility tests, let business people use our product or interaction prototype, observe their waiting points, decision points and failure points in the process of use, listen to their feedback and record them, gain insight into users' concerns, reflect on the process that can be optimized or improved, and ensure that our solution not only meets the needs of business people but also Enhance and improve business efficiency.
 <div style=text-align:center>
-	<img src="../../../../../content/articles/articleList/img/articleB/textFlow.jpg" style=width:100%;border-radius:12px;width:600px></img>
+	<img src="/src/assets/content/articles/articleList/img/articleB/textFlow.jpg" style=width:100%;border-radius:12px;width:600px></img>
 </div>
