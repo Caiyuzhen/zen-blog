@@ -3,6 +3,7 @@ import { MouseContext } from '../../../Mouse/useMouseContext'
 import changeIcon from '../../../../../src/assets/svg/icon-tran.svg'
 import ZenoAvatar from '../../../../../src/assets/img/avatar/ZenoAvatar-normal.png' //默认头像
 import './personalCard.less'
+import avatarData from '../../../../../src/assets/data/avatarData.json'
 
 interface ICursor {
 	cursorType: string;
@@ -32,10 +33,12 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 
 	// 组件挂载完成后, 发送请求, 获取头像数据, 并更新 state
 	componentDidMount() {
-		// 发送异步请求
-		fetch('../../../../../src/assets/data/avatarData.json')
-			.then(res => res.json()) //转为 json 数据
-			.then(data => {this.setState({allAvatarData: data})}) //{} 转为数组  -> 到 data 并转为一个数组
+		// // 发送异步请求
+		// fetch('../../../../../src/assets/data/avatarData.json')
+			// .then(res => res.json()) //转为 json 数据
+			// .then(data => {this.setState({allAvatarData: data})}) //{} 转为数组  -> 到 data 并转为一个数组
+			// 存入 avatarData 数据
+			this.setState({allAvatarData: avatarData})	
 	}
 
 
