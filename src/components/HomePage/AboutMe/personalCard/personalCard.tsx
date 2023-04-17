@@ -72,12 +72,18 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 		super(props)
 		this.state = {
 			num: 0,
-			allAvatarData: [] //state 保存所有 avatar 数据
+			// allAvatarData: [] //state 保存所有 avatar 数据
+			allAvatarData: avatarData
 		}
 	}
 
+	// 打印 allAvatarData
+	componentDidUpdate() {
+		console.log(this.state.allAvatarData)
+	}
+
 	// 组件挂载完成后, 发送请求, 获取头像数据, 并更新 state
-	componentDidMount() {
+	// componentDidMount() {
 		// // 发送异步请求
 		// fetch('../../../../../src/assets/data/avatarData.json')
 			// .then(res => res.json()) //转为 json 数据
@@ -85,9 +91,9 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 			// 存入 avatarData 数据
 			// const avatarJson = JSON.stringify(avatarData)
   			// this.setState({allAvatarData: JSON.parse(avatarJson)})
-			this.setState({allAvatarData: avatarData})
-			console.log(this.state.allAvatarData)
-	}
+			// this.setState({allAvatarData: avatarData})
+			// console.log(this.state.allAvatarData)
+	// }
 
 
 	handleChangeAvatar() {
