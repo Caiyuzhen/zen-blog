@@ -1,7 +1,7 @@
 import React from 'react'
 import { MouseContext } from '../../../Mouse/useMouseContext'
 import changeIcon from '../../../../../src/assets/svg/icon-tran.svg'
-import ZenoAvatar from '../../../../../src/assets/img/avatar/ZenoAvatar-normal.png' //默认头像
+// import ZenoAvatar from '../../../../../src/assets/img/avatar/ZenoAvatar-normal.png' //默认头像
 import './personalCard.less'
 // import avatarData from '../../../../../src/assets/data/avatarData.json'
 
@@ -83,8 +83,10 @@ export class PersonalCard extends React.Component<ICursor, IPersonalCardState> {
 			// .then(res => res.json()) //转为 json 数据
 			// .then(data => {this.setState({allAvatarData: data})}) //{} 转为数组  -> 到 data 并转为一个数组
 			// 存入 avatarData 数据
-			const avatarJson = JSON.stringify(avatarData)
-  			this.setState({allAvatarData: JSON.parse(avatarJson)})
+			// const avatarJson = JSON.stringify(avatarData)
+  			// this.setState({allAvatarData: JSON.parse(avatarJson)})
+			this.setState({allAvatarData: avatarData})
+			console.log(this.state.allAvatarData)
 	}
 
 
