@@ -114,11 +114,15 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 					{/* 🔥 渲染详情页 */}
 					<div 
 						className='detail-page'
-						style={{
+						css={css`
 							// 高度根据是否是详情页来判断
-							height: isfullPage ? "100%" : "68px",
-							marginTop: 0
-						}}>
+							height: ${isfullPage ? "100%" : "68px"};
+							margin-top: 0;
+		  
+							@media (max-width: 400px) {
+								height: ${isfullPage ? "100%" : "0px"};
+							}`}
+						>
 
 						{/* 渲染 articleOneTemp 组件 */}
 						{des()}
