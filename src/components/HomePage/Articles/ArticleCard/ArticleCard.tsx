@@ -79,7 +79,15 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 			<div className="article-wrapper">
 				<img src={img} alt="" />
 				<div className="right-container">
-					<p className="title">{title}</p>
+					<p className="title"
+						style={{
+							borderBottom: isfullPage ? "1px solid #9984ac" : "none",
+							marginBottom: isfullPage ? "40px" : "0",
+							lineHeight: isfullPage ? "120px" : "auto"//撑开底部分割线
+						}}
+					>
+							
+					{title}</p>
 					{/* 方法二:
 						<pre>{mdText}</pre>
 					 */}
