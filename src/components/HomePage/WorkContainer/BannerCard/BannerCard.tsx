@@ -13,6 +13,7 @@ import axios from 'axios'
 import { IBannerCard, ApiResponse } from '../../../../types/global'
 import { BannerText } from './BannerText'
 import { useNavigate } from 'react-router-dom'
+import bannerInfo from '../../../../../src/assets/content/works/bannerContent.json'
 
 
 // 路由的枚举
@@ -142,12 +143,17 @@ export const BannerCard:FC = () => {
 
 	async function getBannerCardData() {
 		// 🌟 范型 ApiResponse 内的 data 是 IBannerCard 类型的数组[], 参考 https://juejin.cn/post/7084490905616384008
-		const res = await axios.get<ApiResponse<IBannerCard[]>>('../../../../../src/assets/content/works/bannerContent.json')
+		// const res = await axios.get<ApiResponse<IBannerCard[]>>('../../../../../src/assets/content/works/bannerContent.json')
+		// const res = await axios.get<ApiResponse<IBannerCard[]>>(bannerInfoData)
+
+		const res = bannerInfo
 		if(res !== undefined) {
-			// console.log(res.data.data);
-			const resBannerCardData = res.data.data
-			// console.log(resBannerCardData)
+			console.log('数据', res.data)
+			const resBannerCardData = res.data
 			setBannerData(resBannerCardData)
+			// const resBannerCardData = res.data.data
+			// console.log(resBannerCardData)
+			// setBannerData(resBannerCardData)
 		}
 	}
 

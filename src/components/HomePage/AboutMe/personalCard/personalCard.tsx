@@ -4,45 +4,51 @@ import changeIcon from '../../../../../src/assets/svg/icon-tran.svg'
 // import ZenoAvatar from '../../../../../src/assets/img/avatar/ZenoAvatar-normal.png' //默认头像
 import './personalCard.less'
 // import avatarData from '../../../../../src/assets/data/avatarData.json'
+import avatarOne from '../../../../../src/assets/img/avatar/avatar-01.png'
+import avatarTwo from '../../../../../src/assets/img/avatar/avatar-02.png'
+import avatarThree from '../../../../../src/assets/img/avatar/avatar-03.png'
+import avatarFour from '../../../../../src/assets/img/avatar/avatar-04.png'
+import avatarFive from '../../../../../src/assets/img/avatar/avatar-05.png'
+import avatarSix from '../../../../../src/assets/img/avatar/avatar-06.png'
 
 const avatarData = [
 	{
-	  id: 0,
-	  name: "avatar-01",
-	  url: "/src/assets/img/avatar/avatar-01.png",
-	  describe:"I'm a UX designer and Front-end development enthusiasts from ShenZhen. My previous experience has focused on efficiency tools and communication tools. I'm also interested in some development libraries, so please feel free to share with me! 👏",
+		id: 0,
+		name: "avatar-01",
+		url: avatarOne,
+		describe:"I'm a UX designer and Front-end development enthusiasts from ShenZhen. My previous experience has focused on efficiency tools and communication tools. I'm also interested in some development libraries, so please feel free to share with me! 👏",
 	},
 	{
-	  id: 1,
-	  name: "avatar-02",
-	  url: "/src/assets/img/avatar/avatar-02.png",
-	  describe:"My best work day is in the morning and evening, and my best work week is on Wednesday, if you want to discuss very important events with me you can refer to these times, of course there is no sleepiness or tiredness that a cup of coffee can not solve ☕️",
+		id: 1,
+		name: "avatar-02",
+		url: avatarTwo,
+		describe:"My best work day is in the morning and evening, and my best work week is on Wednesday, if you want to discuss very important events with me you can refer to these times, of course there is no sleepiness or tiredness that a cup of coffee can not solve ☕️",
 	},
 	{
-	  id: 2,
-	  name: "avatar-03",
-	  url: "/src/assets/img/avatar/avatar-03.png",
-	  describe:"In life, there are two cats accompany me, One is a silver gradient cat and one is a cream cat, they add more color to my life. If you are also a cat lover, welcome to communicate with me about the fun of cats 😄",
+		id: 2,
+		name: "avatar-03",
+		url: avatarThree,
+		describe:"In life, there are two cats accompany me, One is a silver gradient cat and one is a cream cat, they add more color to my life. If you are also a cat lover, welcome to communicate with me about the fun of cats 😄",
 	},
 	{
-	  id: 3,
-	  name: "avatar-04",
-	  url: "/src/assets/img/avatar/avatar-04.png",
-	  describe:"I usually record my thoughts in Article and also share them on different social media to make more friends, of course most of them are unstructured personal reflections, the intention is to give people more information input. Welcome for follow my social media if you are interested 🌚",
+		id: 3,
+		name: "avatar-04",
+		url: avatarFour,
+		describe:"I usually record my thoughts in Article and also share them on different social media to make more friends, of course most of them are unstructured personal reflections, the intention is to give people more information input. Welcome for follow my social media if you are interested 🌚",
 	},
 	{
-	  id: 4,
-	  name: "avatar-05",
-	  url: "/src/assets/img/avatar/avatar-05.png",
-	  describe:"My preference is for interactive experiences and programming techniques that are a good bridge to the world. I believe that programming technology is the underlying code that makes the world run, and design is an effective means of pushing the boundaries of perception 🌍",
+		id: 4,
+		name: "avatar-05",
+		url: avatarFive,
+		describe:"My preference is for interactive experiences and programming techniques that are a good bridge to the world. I believe that programming technology is the underlying code that makes the world run, and design is an effective means of pushing the boundaries of perception 🌍",
 	},
 	{
-	  id: 5,
-	  name: "avatar-06",
-	  url: "/src/assets/img/avatar/avatar-06.png",
-	  describe:"I am rather nerdy, not good at sports, the only sport is playing badminton, if you also have this hobby welcome to find a weekend with me to play badminton, of course, I am not particularly good at badminton 😂",
+		id: 5,
+		name: "avatar-06",
+		url: avatarSix,
+		describe:"I am rather nerdy, not good at sports, the only sport is playing badminton, if you also have this hobby welcome to find a weekend with me to play badminton, of course, I am not particularly good at badminton 😂",
 	},
-  ];
+]
 
 interface ICursor {
 	cursorType: string;
