@@ -12,7 +12,7 @@ import { rootState } from '../../../../store'
 import store from '../../../../store'
 import { InspireNavContext } from '../../../../utils/Tabcontext'
 import { MouseContext } from '../../../Mouse/useMouseContext'
-
+import allInspireNavData from '../../../../assets/content/articles/inspireList/InspireNavSidebar.json'
 
 
 
@@ -66,10 +66,12 @@ export const SideNav:FC = () => {
 	// 获取 nav 的渲染数据
 	const [inspireNavItem, setInspireNavItem] = useState<IinspireNav[]>([])
 	async function getNavItem() {
-		const res = await axios.get<ApiResponse<IinspireNav[]>>("/src/assets/content/articles/inspireList/InspireNavSidebar.json")
-		const navItem = res.data.data
+		const res = allInspireNavData.data
+		setInspireNavItem(res)
+		// const res = await axios.get<ApiResponse<IinspireNav[]>>("/src/assets/content/articles/inspireList/InspireNavSidebar.json")
+		// const navItem = res.data.data
 		// console.log('得到 navItem', navItem)
-		setInspireNavItem(navItem)
+		// setInspireNavItem(navItem)
 	}
 
 	useEffect(() => {
