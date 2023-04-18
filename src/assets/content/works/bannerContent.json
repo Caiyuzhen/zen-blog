@@ -1,17 +1,17 @@
 {
 	"data": [
 	  {
-		"id": 1,
+		"id": "1",
 		"title": "Innos Note",
 		"des": "An innovative document product developed by the innovation design team from 0 to 1, taking the document portal as the entry point to create an advanced first-class All in one knowledge creation tool, in which I was the main designer of several core modules."
 	  },
 	  {
-		"id": 2,
+		"id": "2",
 		"title": "Innovation UX Design",
 		"des": "The innovation team's experimental design exploration provides forward-looking innovative design extrapolation for the suite's communication tools, helping the suite to enhance its competitiveness on the product."
 	  },
 	  {
-		"id": 3,
+		"id": "3",
 		"title": "MIGU Video App",
 		"des": "MIGU Video is a vertical short video product launched by MIGU, a subsidiary of China Mobile Group, which provides users with secondary anime entertainment content around short videos, as well as related derivative merchandise."
 	  }

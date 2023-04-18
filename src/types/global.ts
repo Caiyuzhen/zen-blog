@@ -20,7 +20,7 @@ export type ProjectData = Iitem[]
 
 // BannerCard 组件的数据类型， IBannerCard[]
 export type IBannerCard = {
-	id: number,
+	id: string,
 	title: string,
 	des : string,
 }
