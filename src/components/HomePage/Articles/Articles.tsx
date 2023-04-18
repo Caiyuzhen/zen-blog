@@ -10,6 +10,8 @@ import { MouseContext } from '../../Mouse/useMouseContext'
 import axios from 'axios' //导入 axios 库
 import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/global' //导入全局类型
 import {InspireNavContext} from '../../../utils/Tabcontext'
+import allArticleData from '../../../assets/content/articles/articleList/articleList.json'
+import allInspireData from '../../../assets/content/articles/inspireList/inspireCardContent.json'
 
 
 // 传递 articleCard 被点击时, article-inspired-container 的 z-index 降低 5 层的数据
@@ -38,11 +40,11 @@ const Articles = () => {
 	// 获取文章数据
 	const [articleList, setArticleList] = useState<IArticleList[]>([])
 	async function getArticleListData(): Promise<void> {
+		const res = allArticleData.data
+		setArticleList(res)
 		// const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleList/articleList.json')
-		const res = await axios.get<ApiResponse<IArticleList[]>>('/src/assets/content/articles/articleList/articleList.json ')
-		
-		const listData = res.data.data ? res.data.data : []
-		setArticleList(listData)
+		// const listData = res.data.data ? res.data.data : [] //有数据则存入, 无则是空数组
+		// setArticleList(listData)
 		// console.log('得到 articleList', articleList)//获得数据
 	}
 	useEffect(() => {
@@ -66,10 +68,11 @@ const Articles = () => {
 
 	useEffect(() => {
 		async function getInspiraCardList() {
-			// const res = await axios.get<ApiResponse<IinspireCardContent[]>>("../../../../content/articles/inspireList/inspireCardContent.json")
-			const res = await axios.get<ApiResponse<IinspireCardContent[]>>("/src/assets/content/articles/inspireList/inspireCardContent.json")
-			const inspireCard = res.data.data
-			setallinspireContextData(inspireCard)
+			const res = allInspireData.data
+			setallinspireContextData(res)
+			// const res = await axios.get<ApiResponse<IinspireCardContent[]>>("/src/assets/content/articles/inspireList/inspireCardContent.json")
+			// const inspireCard = res.data.data
+			// setallinspireContextData(inspireCard)
 		}
 		getInspiraCardList()
 	},[])
