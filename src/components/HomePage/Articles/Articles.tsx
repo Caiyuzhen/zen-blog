@@ -10,9 +10,41 @@ import { MouseContext } from '../../Mouse/useMouseContext'
 import axios from 'axios' //导入 axios 库
 import { ApiResponse, IArticleList, IinspireCardContent} from '../../../types/global' //导入全局类型
 import {InspireNavContext} from '../../../utils/Tabcontext'
-import allArticleData from '../../../assets/content/articles/articleList/articleList.json'
+// import allArticleData from '../../../assets/content/articles/articleList/articleList.json'
 import allInspireData from '../../../assets/content/articles/inspireList/inspireCardContent.json'
+import articleOneTempDetail from '../../../assets/content/articles/articleList/articleOne'
+import articleTwoTempDetail from '../../../assets/content/articles/articleList/articleTwo'
+import articleThreeTempDetail from '../../../assets/content/articles/articleList/articleThree'
+import articleImgOne from '../../../assets/img/article/article-img-01.jpg'
+import articleImgTwo from '../../../assets/img/article/article-img-02.jpg'
+import articleImgThree from '../../../assets/img/article/article-img-03.jpg'
 
+const articleDetailData = [
+	{
+		id: "1",
+		title: "Bi-direction Archaeology Notes",
+		date: "29 Jun 2022",
+		des: articleOneTempDetail,
+		hashTag: "Design Thinking",
+		img: articleImgOne,
+	  },
+	  {
+		id: "2",
+		title: "Getting Started with B-Side Products",
+		date: "02 Aug 2021",
+		des: articleTwoTempDetail,
+		hashTag: "Design Thinking",
+		img: articleImgTwo,
+	  },
+	  {
+		id: "3",
+		title: "Netflix Corporate Archaeology",
+		date: "16 Jan 2021",
+		des: articleThreeTempDetail,
+		hashTag: "Business Thinking",
+		img: articleImgThree,
+	  }
+]
 
 // 传递 articleCard 被点击时, article-inspired-container 的 z-index 降低 5 层的数据
 interface iArticleCardClick {
@@ -40,7 +72,8 @@ const Articles = () => {
 	// 获取文章数据
 	const [articleList, setArticleList] = useState<IArticleList[]>([])
 	async function getArticleListData(): Promise<void> {
-		const res = allArticleData.data
+		// const res = allArticleData.data
+		const res = articleDetailData
 		setArticleList(res)
 		// const res = await axios.get<ApiResponse<IArticleList[]>>('../../../../content/articles/articleList/articleList.json')
 		// const listData = res.data.data ? res.data.data : [] //有数据则存入, 无则是空数组
@@ -156,14 +189,15 @@ const Articles = () => {
 							articleList && articleList.map((articleData, index:number) => {
 
 								// console.log(articleData.id)
-								const mdPathArr = articleData.des //得到所有 md 路径
+								// const mdPathArr = articleData.des //得到所有 md 路径
+								const detailArr = articleData.des //得到所有文章模块 路径
 
 								return (
 									<div key={index} className="article-card-container">
 										<ArticleCard 
 											id={articleData.id}
 											title={articleData.title}
-											des={mdPathArr}
+											des={detailArr}
 											date={articleData.date}
 											hashTag={articleData.hashTag}
 											img={articleData.img}
