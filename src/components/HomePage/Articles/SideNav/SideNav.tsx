@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState, createContext, useContext } from 'react'
 import './SideNav.less'
-import designIcon from '../../../../assets/svg/icon-designIcon.svg'
 import iconBusiness from '../../../../assets/svg/icon-business.svg'
 import iconFun from '../../../../assets/svg/icon-fun.svg'
 import iconProduct from '../../../../assets/svg/icon-product.svg'
@@ -13,11 +12,37 @@ import store from '../../../../store'
 import { InspireNavContext } from '../../../../utils/Tabcontext'
 import { MouseContext } from '../../../Mouse/useMouseContext'
 import allInspireNavData from '../../../../assets/content/articles/inspireList/InspireNavSidebar.json'
+import designIcon from '../../../../assets/svg/icon-designIcon.svg'
+import businessIcon from '../../../../assets/svg/icon-business.svg'
+import productIcon from '../../../../assets/svg/icon-product.svg'
+import funIcon from '../../../../assets/svg/icon-fun.svg'
 
 
+
+const sideBarData = [
+	{
+		id: "0",
+		item: "Design",
+		icon: designIcon
+	},
+	{
+		id: "1",
+		item: "Marketing",
+		icon: businessIcon
+	},
+	{
+		id: "2",
+		item: "Product",
+		icon: productIcon
+	},
+	{
+		id: "3",
+		item: "Others",
+		icon: funIcon
+	}
+]
 
 export const SideNav:FC = () => {
-
 
 	// 鼠标圆圈放大效果
 	const { cursorChangeHandler } = useContext(MouseContext)
@@ -66,7 +91,8 @@ export const SideNav:FC = () => {
 	// 获取 nav 的渲染数据
 	const [inspireNavItem, setInspireNavItem] = useState<IinspireNav[]>([])
 	async function getNavItem() {
-		const res = allInspireNavData.data
+		// const res = allInspireNavData.data
+		const res = sideBarData
 		setInspireNavItem(res)
 		// const res = await axios.get<ApiResponse<IinspireNav[]>>("/src/assets/content/articles/inspireList/InspireNavSidebar.json")
 		// const navItem = res.data.data

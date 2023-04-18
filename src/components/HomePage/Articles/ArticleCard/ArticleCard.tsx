@@ -6,7 +6,7 @@ import { IArticleList } from '../../../../types/global'
 import './ArticleCard.less'  
 import backIcon from '../../../../assets/svg/icon-arrowOnly.svg'
 import { articleClickContext } from '../Articles'
-
+import articleOneTempDetail from '../../../../assets/content/articles/articleList/articleOne'
 
 // IArticleList 为全局类型, 包含 id, title, des, date, hashTag
 export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
@@ -42,11 +42,13 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 	// },[])
 
 	// 获取 详情页数据
-	const [detailPage, setDetailPage] = useState("")
+	const [detailPage, setDetailPage] = useState<React.ReactNode>(null)
 
 	useEffect(()=>{
 		// 渲染 des 详情页
-		setDetailPage(des)
+		console.log(des())
+		setDetailPage(des())
+		// console.log(des())
 	},[])
 	
 	return (
@@ -90,9 +92,15 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 						 {mdText} 
 					</p>	 */}
 					{/* 渲染详情页 */}
-					<p>
-						{detailPage}
+					<p style={{
+						// 高度根据是否是详情页来判断
+						height: isfullPage ? "100%" : "72px",
+						marginTop: 0
+						}}>
+						{des()}
+						{/* 渲染  articleOneTemp 组件*/}
 					</p>
+
 
 					<div className="metaInfo">
 						<div className="inline-author">

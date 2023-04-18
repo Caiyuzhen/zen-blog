@@ -46,6 +46,7 @@ const articleDetailData = [
 	  }
 ]
 
+
 // 传递 articleCard 被点击时, article-inspired-container 的 z-index 降低 5 层的数据
 interface iArticleCardClick {
 	articleCardClick: boolean 
@@ -101,7 +102,7 @@ const Articles = () => {
 
 	useEffect(() => {
 		async function getInspiraCardList() {
-			const res = allInspireData.data
+			const res = allInspireData.data //用本地导入，不然无法部署
 			setallinspireContextData(res)
 			// const res = await axios.get<ApiResponse<IinspireCardContent[]>>("/src/assets/content/articles/inspireList/inspireCardContent.json")
 			// const inspireCard = res.data.data

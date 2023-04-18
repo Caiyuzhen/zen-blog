@@ -36,7 +36,7 @@ export interface ApiResponse<T> {
 export type IArticleList = {
 	id: string,
 	title: string,
-	des: () => string,
+	des: () => React.ReactNode,
 	date: string,
 	hashTag: string,
 	img? : string, //string 类型
