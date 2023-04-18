@@ -9,8 +9,58 @@ import sonOfnet from '../../../../../src/assets/content/articles/articleList/img
 import roam from '../../../../../src/assets/content/articles/articleList/img/articleA/roam.png'
 import trillium from '../../../../../src/assets/content/articles/articleList/img/articleA/trillium.png'
 import ubiquitousLink from '../../../../../src/assets/content/articles/articleList/img/articleA/ubiquitousLink.png'
+import backToTopDarkArrow from '../../../../assets/svg/icon-arrowOnlyTop-Dark.svg'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
+import { useEffect, useState } from 'react'
+
+
+// function BackToTopButton() {
+// 	const [visible, setVisible] = useState(false)
+// 	const [scrollContainer, setScrollContainer] = useState<HTMLDivElement | null>(null)
+  
+// 	useEffect(() => {
+// 		const mainContainer = document.getElementsByClassName('article-card-fullPage')[0] as HTMLDivElement
+// 		setScrollContainer(mainContainer)
+// 	}, [])
+  
+// 	const handleClick = () => {
+// 		if (window.pageYOffset === 0) {
+// 			return
+// 		}
+		
+// 		if(scrollContainer) {
+// 			//将整个内容滚动到最顶部
+// 			window.scrollTo({
+// 				top: 0,
+// 				behavior: 'smooth'
+// 			})
+// 		}
+// 		console.log('dian')
+// 	}
+  
+// 	return (
+// 	  <div 
+// 		style={{
+// 			width: 120,
+// 			height: 120,
+// 			cursor: 'pointer',
+// 			borderRadius: '50%',
+// 			alignItems: 'center',
+// 			justifyContent: 'center',
+// 			// position: 'fixed',//⚡️⚡️设置了不是文档流的元素后, 就无法点击返回顶部！！
+// 			zIndex: 999,
+// 			bottom: 80,
+// 			right: 80,
+// 			backgroundColor: '#421a69',
+// 			transition: 'all 0.3s ease-in-out',
+// 		}}
+// 		onClick={()=>{handleClick()}}
+// 		>
+// 		<img src={backToTopDarkArrow} alt="back-to-top"></img>
+// 		</div>
+// 	)
+// }
 
 
 export default function articleOneTempDetail () {
@@ -257,8 +307,8 @@ export default function articleOneTempDetail () {
 
 			> The Breaker </p>
 
+			<h3 style={{margin:0, textAlign: 'left'}}>One man:</h3>
 			<p>
-				<h3 style={{margin:0}}>One man:</h3>
 				In this case, a breakthrough man emerged -- Aaron Swartz (founder of Reddit), who downloaded millions of academic journal papers through MIT's intranet and shared them for free across the Internet without any trial, eventually being accused by the federal government of online piracy and e-fraud, leading him to hang himself. He is also known as the son of the Internet. You can watch a documentary called "Son of the Internet", which is a biography of Swartz's life.
 			</p>
 
@@ -285,9 +335,9 @@ export default function articleOneTempDetail () {
 				}`}
 
 			> The Breaker </p>
-
+			
+			<h3 style={{margin:0, textAlign: 'left'}}>An product:</h3>
 			<p>
-				<h3 style={{margin:0}}>An product:</h3>
 				Until a few years ago, the whole Internet content ecosystem seemed to change again when Roam, an authoring tool based on a two-way linking model, appeared on the market, and released a "Roam White Paper" to try to break the silos and monopolies of information with an unprecedented, more open source authoring model. In fact, from the perspective of today's technology, two-way linking is not a particularly difficult technological innovation, but more of a humanistic one.
 			</p>
 
@@ -365,6 +415,7 @@ export default function articleOneTempDetail () {
 					}`}
 				/>
 			</div>
+			<BackToTopButton/>
 
 		</div>
 	)

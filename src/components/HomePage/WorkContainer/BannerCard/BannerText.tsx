@@ -13,8 +13,8 @@ export const BannerText:FC<IProps> = (props: IProps) => {
 
 	return (
 		<div className="banner-text-container" id={id}>
-			<p className="content-title">{title}</p>
-			<p className="content-subtitle">{subTitle}</p>
+			<p className="content-title"  style={{lineHeight: 1.3}}>{title}</p>
+			<p className="content-subtitle" style={{marginTop: 12, fontSize: 17}}>{subTitle}</p>
 		</div>
 
 	)

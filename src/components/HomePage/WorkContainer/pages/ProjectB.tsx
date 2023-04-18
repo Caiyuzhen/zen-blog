@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import UXInnovationUI from '../../../../assets/img/ProjectB-topImg.png'
 import './ProjectB.less'
 // import backIcon from '../../../../assets/svg/icon-back-dm.svg'
-import backToTopDark from '../../../../assets/svg/icon-arrowOnlyTop-Dark.svg'
+import backToTopDarkArrow from '../../../../assets/svg/icon-arrowOnlyTop-Dark.svg'
 import backIconDark from '../../../../assets/svg/icon-arrowOnly.svg'
 import { BasicInfoPrpjectB } from './BasicInfoPrpjectB/BasicInfoPrpjectB'
 import { DividerLight } from './DividerLight/DividerLight'
@@ -63,7 +63,7 @@ export const ProjectB = () => {
 					content="Back to Top"
 					fontColor='#211F3C'
 					borderColor='#211F3C'
-					backToTopArrow={backToTopDark}
+					backToTopArrow={backToTopDarkArrow}
 				/>
 			</div>
 		</>

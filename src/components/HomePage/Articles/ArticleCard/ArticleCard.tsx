@@ -7,6 +7,9 @@ import './ArticleCard.less'
 import backIcon from '../../../../assets/svg/icon-arrowOnly.svg'
 import { articleClickContext } from '../Articles'
 import articleOneTempDetail from '../../../../assets/content/articles/articleList/articleOne'
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
+
 
 // IArticleList 为全局类型, 包含 id, title, des, date, hashTag
 export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
@@ -79,15 +82,23 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 			<div className="article-wrapper">
 				<img src={img} alt="" />
 				<div className="right-container">
-					<p className="title"
-						style={{
-							borderBottom: isfullPage ? "1px solid #9984ac" : "none",
-							marginBottom: isfullPage ? "40px" : "0",
-							lineHeight: isfullPage ? "120px" : "auto"//撑开底部分割线
-						}}
-					>
+					<div className="title">
+						{/* fullPage 时, 渲染多一条分割线 */}
+						{isfullPage && 
+							<span className="fullPage-line" 
+							css={css`
+								display: inline-block;
+								width: 100%;
+								height: 1px;
+								background-color: #9984ac;
+								margin-bottom: 40px;
+		  
+								@media (max-width: 520px) {
+									display: none;
+								}`}
+							></span>}
 							
-					{title}</p>
+					{title}</div>
 					{/* 方法二:
 						<pre>{mdText}</pre>
 					 */}
@@ -99,15 +110,19 @@ export const ArticleCard:FC<IArticleList> = (props: IArticleList) => {
 					>
 						 {mdText} 
 					</p>	 */}
-					{/* 渲染详情页 */}
-					<p style={{
-						// 高度根据是否是详情页来判断
-						height: isfullPage ? "100%" : "72px",
-						marginTop: 0
+
+					{/* 🔥 渲染详情页 */}
+					<div 
+						className='detail-page'
+						style={{
+							// 高度根据是否是详情页来判断
+							height: isfullPage ? "100%" : "68px",
+							marginTop: 0
 						}}>
+
+						{/* 渲染 articleOneTemp 组件 */}
 						{des()}
-						{/* 渲染  articleOneTemp 组件*/}
-					</p>
+					</div>
 
 
 					<div className="metaInfo">
