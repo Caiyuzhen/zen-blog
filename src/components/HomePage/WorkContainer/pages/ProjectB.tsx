@@ -55,7 +55,7 @@ export const ProjectB = () => {
 				<BasicInfoPrpjectB />
 				<UserNPS />
 				<PjbStategy />
-				<VirtualAvatar />
+				{/* <VirtualAvatar /> */}
 				<AiGenerare />
 				<VcConcept />
 				<VcStructure />
